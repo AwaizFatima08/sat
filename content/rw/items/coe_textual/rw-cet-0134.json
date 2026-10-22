@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Oduya's argument?",
   "choices": {
-    "A": "Propagules of the inland species planted in the seaward zone died at the same rate whether or not crabs could reach them.",
-    "B": "Propagules of the inland species planted in the seaward zone mostly survived if caged against crabs but were mostly eaten if not.",
-    "C": "Crab burrows let oxygen reach deep into the mud, which helps the roots of adult mangrove trees grow.",
-    "D": "The seaward species can survive longer periods of flooding by seawater than the inland species can."
+    "A": "Crab burrows let oxygen reach deep into the mud, which helps the roots of adult mangrove trees grow.",
+    "B": "The seaward species can survive longer periods of flooding by seawater than the inland species can.",
+    "C": "Inland-species propagules planted in the seaward zone mostly survived if caged against crabs but not if left uncaged.",
+    "D": "Propagules of the inland species planted in the seaward zone died at the same rate whether or not crabs could reach them."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Oduya claims that crabs, not just flooding and salt, decide where each species can establish itself. To support this, a finding must show that a species could grow in a zone where it is normally absent if crabs were kept away. The caging result shows that conditions in the seaward zone allow inland propagules to survive; crabs are what remove them.",
-    "A": "Incorrect. If protection from crabs made no difference, something other than crabs, such as flooding, would be keeping the species out; this weakens the argument.",
-    "B": "Correct. The inland species survived in the seaward zone only when crabs were kept out, so crabs, rather than the zone's conditions, limit where it grows.",
-    "C": "Incorrect. This shows crabs affect mangroves in another way, by helping adult trees, not by deciding which species become established.",
-    "D": "Incorrect. A difference in flooding tolerance supports the usual explanation that Oduya questions, not her argument about crabs."
+    "A": "Incorrect. This shows crabs affect mangroves in another way, by helping adult trees, not by deciding which species become established.",
+    "B": "Incorrect. A difference in flooding tolerance supports the usual explanation that Oduya questions, not her argument about crabs.",
+    "C": "Correct. The inland species survived in the seaward zone only when crabs were kept out, so crabs, rather than the zone's conditions, limit where it grows.",
+    "D": "Incorrect. If protection from crabs made no difference, something other than crabs, such as flooding, would be keeping the species out; this weakens the argument."
   },
   "traps": {
-    "A": "reversed",
-    "C": "true_irrelevant",
-    "D": "true_irrelevant"
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0142",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "American crows often gather noisily around a dead crow, a behavior some researchers think helps the birds learn about threats. In one experiment, volunteers wearing one of two equally unfamiliar masks stood at feeding sites where crows regularly ate. Volunteers in the first mask stood beside a dead crow; volunteers in the second stood beside a dead pigeon. On later days, the volunteers returned to the sites without any dead birds. Crows refused to approach food near volunteers in the first mask and scolded them loudly, but they approached food near volunteers in the second mask normally. These results suggest that crows ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "learn to treat a person as dangerous after seeing that person near a dead crow.",
+    "B": "avoid any person wearing an unfamiliar mask, regardless of what they have seen before.",
+    "C": "avoid any feeding site where they have seen a dead bird of any kind.",
+    "D": "gather around dead crows mainly to feed on them once other birds leave."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The two groups of volunteers differed only in what they had stood beside: a dead crow or a dead pigeon. Later, crows avoided only the people who had been seen with a dead crow. So the crows linked those particular people with danger because of the dead crow.",
+    "A": "Correct. Only people seen with a dead crow were later avoided and scolded.",
+    "B": "Incorrect. Crows approached volunteers in the second mask normally, so masks alone did not cause avoidance.",
+    "C": "Incorrect. Crows fed normally where a dead pigeon had been, so not every dead bird caused avoidance.",
+    "D": "Incorrect. The text never suggests crows feed on dead crows."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

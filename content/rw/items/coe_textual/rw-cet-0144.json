@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Perera's argument?",
   "choices": {
-    "A": "Ola manuscripts that were kept in closed wooden boxes lasted longer than those stored on open shelves.",
-    "B": "Many surviving ola manuscripts contain notes that later readers added in the margins of the leaves.",
-    "C": "Texts never used in teaching were recopied about as often as the texts most widely used in teaching.",
-    "D": "Texts listed in records of monastery teaching survive in far more copies than untaught texts of similar age."
+    "A": "Ola manuscripts kept wrapped in cloth inside closed wooden boxes lasted longer than those stored on open shelves.",
+    "B": "Texts listed in records of monastery teaching survive in far more copies than untaught texts of similar age.",
+    "C": "Many surviving ola manuscripts contain notes that later readers added in the margins of the leaves.",
+    "D": "Texts never used in teaching were recopied about as often as the texts most widely used in teaching."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Perera's argument links a text's survival through recopying to its use in teaching. Support must compare taught and untaught texts. If texts used in teaching survive in many more copies than comparable untaught texts, teaching use was driving the recopying.",
     "A": "Incorrect. How storage affected the life of a manuscript does not show which texts scribes chose to recopy.",
-    "B": "Incorrect. Notes in the margins show that manuscripts were read, but not that teaching use decided which texts were copied.",
-    "C": "Incorrect. If untaught texts were recopied as often as taught ones, teaching use would not explain the choice; this weakens the argument.",
-    "D": "Correct. Taught texts survive in far more copies than untaught texts of similar age, which fits the idea that teaching use drove recopying."
+    "B": "Correct. Taught texts survive in far more copies than untaught texts of similar age, which fits the idea that teaching use drove recopying.",
+    "C": "Incorrect. Notes in the margins show that manuscripts were read, but not that teaching use decided which texts were copied.",
+    "D": "Incorrect. If untaught texts were recopied as often as taught ones, teaching use would not explain the choice; this weakens the argument."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

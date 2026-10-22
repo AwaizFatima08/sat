@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Specifically,",
-    "B": "For example,",
+    "A": "For example,",
+    "B": "In other words,",
     "C": "Nevertheless,",
-    "D": "In other words,"
+    "D": "Specifically,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The second sentence explains in detail that the building's parts came in standard sizes, were made in factories, and were bolted together on site. The last sentence sums up that same idea in a single image: the building was a kit. A restatement transition is needed.",
-    "A": "Incorrect. \"Specifically\" would introduce a narrower, more detailed point, but the last sentence is a broader summary of the detail that came before. This is the closest near miss.",
-    "B": "Incorrect. The idea of a kit is not one example of standardized parts; it describes the whole building's design.",
+    "A": "Incorrect. The idea of a kit is not one example of standardized parts; it describes the whole building's design.",
+    "B": "Correct. \"In other words\" signals that the last sentence restates the point about standardized, factory-made parts as the idea of a kit.",
     "C": "Incorrect. \"Nevertheless\" signals something true despite the previous point, but calling the building a kit agrees with the description of standard, bolted parts. It is tempting because the kit image seems to downplay the building's grandeur.",
-    "D": "Correct. \"In other words\" signals that the last sentence restates the point about standardized, factory-made parts as the idea of a kit."
+    "D": "Incorrect. \"Specifically\" would introduce a narrower, more detailed point, but the last sentence is a broader summary of the detail that came before. This is the closest near miss."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Afterward,",
-    "B": "Nevertheless,",
-    "C": "Until then,",
-    "D": "In other words,"
+    "A": "Nevertheless,",
+    "B": "In other words,",
+    "C": "Afterward,",
+    "D": "Until then,"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The last sentence uses \"had believed,\" which describes what Oksana thought before she read the letter. The transition must mark that earlier time and show that the letter ended her old belief.",
-    "A": "Incorrect. \"Afterward\" would place her belief after reading the letter, but the letter showed that the teacher remembered her with pride, so the belief must come before it.",
-    "B": "Incorrect. \"Nevertheless\" would mean Oksana held her belief in spite of the letter, but the past perfect \"had believed\" refers to the time before the letter. This is the closest near miss.",
-    "C": "Correct. \"Until then\" shows that Oksana held this belief up to the moment she read the letter.",
-    "D": "Incorrect. Her belief that the teacher had forgotten her is not a restatement of the letter's message; it is the opposite."
+    "A": "Incorrect. \"Nevertheless\" would mean Oksana held her belief in spite of the letter, but the past perfect \"had believed\" refers to the time before the letter. This is the closest near miss.",
+    "B": "Incorrect. Her belief that the teacher had forgotten her is not a restatement of the letter's message; it is the opposite.",
+    "C": "Incorrect. \"Afterward\" would place her belief after reading the letter, but the letter showed that the teacher remembered her with pride, so the belief must come before it.",
+    "D": "Correct. \"Until then\" shows that Oksana held this belief up to the moment she read the letter."
   },
   "traps": {
     "A": "wrong_logic",
     "B": "wrong_logic",
-    "D": "wrong_logic"
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

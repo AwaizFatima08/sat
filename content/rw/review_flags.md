@@ -49,3 +49,11 @@ were unsure about. Tick or fix each one during review.
 | rw-cid-0551, rw-cid-0546 | Subtle literary readings. |
 | rw-bnd-0507 | Fixed after blind solve (D "loaves and he" → "loaves, and, he"). |
 | rw-ctc-0109 / rw-tsp-0521 | Both about Napoleon's height: duplicate topic, rewrite one. |
+| rw-inf-0140 | Interpretive literary inference (red ink in ledger). |
+| rw-inf-0146 | Possibly real egg-color study detail credited to invented researcher: anonymize. |
+| rw-cid-0150 | Fairy circles debate: key "both may apply" vs current consensus. |
+| rw-wic-0211, 0213, 0215 | "apocryphal" vs "allegorical"; distractor strength at level 4. |
+| rw-tsp-0149 | Names Denise Schmandt-Besserat for her real token theory (no quotes). |
+| rw-trn-0553, 0560, rw-rhs-0560 | Close transition distinctions; 1890 census timing worded loosely. |
+| rw-trn-0167, 0175, 0179, 0184, 0185, 0189 | Deliberate fine transition distinctions (Specifically vs For example etc.). |
+| rw-rhs-0546 | Key B rewritten to use only note facts (was adding an unstated reason). |

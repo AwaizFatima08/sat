@@ -15,17 +15,17 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "Nevertheless,",
-    "B": "Consequently,",
+    "B": "In other words,",
     "C": "Similarly,",
-    "D": "In other words,"
+    "D": "Consequently,"
   },
   "answer": "A",
   "explanation": {
     "why": "The first two sentences describe problems with the notebooks: results without proof, some mistakes, and missing reasoning. The last sentence reports that most of the results turned out to be correct. The transition must signal that this was true in spite of the problems just listed.",
     "A": "Correct. \"Nevertheless\" shows that the results proved largely correct in spite of the missing proofs and occasional errors.",
-    "B": "Incorrect. \"Consequently\" would mean the missing proofs and errors caused the results to be correct, which reverses the logic.",
+    "B": "Incorrect. \"In other words\" would restate the problems, but the last sentence reaches the opposite verdict.",
     "C": "Incorrect. \"Similarly\" would mean the correctness of the results resembles the problems just described, but it goes against them.",
-    "D": "Incorrect. \"In other words\" would restate the problems, but the last sentence reaches the opposite verdict."
+    "D": "Incorrect. \"Consequently\" would mean the missing proofs and errors caused the results to be correct, which reverses the logic."
   },
   "traps": {
     "B": "wrong_logic",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

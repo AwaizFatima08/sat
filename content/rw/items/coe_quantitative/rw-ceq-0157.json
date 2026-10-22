@@ -1,0 +1,97 @@
+{
+  "id": "rw-ceq-0157",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Arctic char, cold-water relatives of salmon, live in many lakes in Greenland. In some lakes the char stay small, feeding mostly on insect larvae and tiny crustaceans, while in others a few individuals grow very large. Many ecologists have assumed that lake size explains the difference, since bigger lakes offer more food of every kind. Freshwater ecologist Aaju Lynge, who netted fish in five lakes, argues instead that what allows char to grow large is the presence of sticklebacks, small fish that large char can eat.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Largest Arctic Char Caught in Five Greenland Lakes",
+    "columns": [
+      "Lake",
+      "Area (square km)",
+      "Sticklebacks present",
+      "Largest char (cm)"
+    ],
+    "rows": [
+      [
+        "1",
+        2.2,
+        "Yes",
+        58
+      ],
+      [
+        "2",
+        2.3,
+        "No",
+        31
+      ],
+      [
+        "3",
+        9.8,
+        "Yes",
+        71
+      ],
+      [
+        "4",
+        0.6,
+        "No",
+        24
+      ],
+      [
+        "5",
+        5.1,
+        "Yes",
+        63
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Lynge's argument?",
+  "choices": {
+    "A": "Lake 2 had larger char than Lake 1, even though the two lakes were almost exactly the same size.",
+    "B": "Lake 4, the smallest of the five lakes and one without sticklebacks, also had the smallest char, at 24 centimeters.",
+    "C": "Lake 3, the largest of the five lakes sampled, also had the largest char, at 71 centimeters.",
+    "D": "Lakes 1 and 2 were nearly equal in size, but their largest char were 58 cm with sticklebacks and 31 cm without them."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Lynge must show that sticklebacks matter apart from lake size. Because larger lakes in the table also tend to have sticklebacks, the best evidence compares lakes of the same size that differ only in whether sticklebacks are present. Lakes 1 and 2 are almost identical in size, yet the lake with sticklebacks has char nearly twice as long.",
+    "A": "Incorrect. The largest char in Lake 2 (31 cm) were smaller than those in Lake 1 (58 cm), not larger.",
+    "B": "Incorrect. Lake 4 is small and lacks sticklebacks, so its small char fit either explanation equally well.",
+    "C": "Incorrect. Lake 3 is large and has sticklebacks, so its big char fit the lake-size explanation as well as Lynge's.",
+    "D": "Correct. With lake size held nearly equal, only the lake with sticklebacks produced large char, which points to sticklebacks rather than size."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

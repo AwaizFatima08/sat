@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Walker's hypothesis?",
   "choices": {
-    "A": "Kea that heard a recording of the warbling call began playing even when no other kea were nearby.",
-    "B": "Young kea give the warbling call more often than adult kea do, and they also play more often.",
-    "C": "Play bouts that began without the warbling call turned into real fights more often than bouts that began with it.",
-    "D": "Real fights broke out after play bouts as often when the warbling call had been given as when it had not."
+    "A": "Play bouts that began without the warbling call turned into real fights more often than bouts that began with it.",
+    "B": "Kea that heard a recording of the warbling call began playing even when no other kea were anywhere nearby to play with.",
+    "C": "Real fights broke out after play bouts as often when the warbling call had been given as when it had not.",
+    "D": "Young kea give the warbling call more often than adult kea do, and they also play more often."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Walker's hypothesis goes beyond the known finding that the call spreads play: he claims the call marks rough behavior as harmless and so prevents fights. Support must connect the call to fewer fights. A comparison showing that bouts without the call escalate into fights more often does this directly.",
-    "A": "Incorrect. This shows only that the call puts kea in a mood to play, the earlier finding Walker says is not the whole story; it says nothing about preventing fights.",
-    "B": "Incorrect. Who calls and plays most often does not show whether the call keeps play from becoming aggression.",
-    "C": "Correct. Bouts that lacked the call were more likely to become real fights, which fits the idea that the call signals that the rough behavior is play.",
-    "D": "Incorrect. If the call made no difference to how often fights broke out, the hypothesis would be weakened."
+    "A": "Correct. Bouts that lacked the call were more likely to become real fights, which fits the idea that the call signals that the rough behavior is play.",
+    "B": "Incorrect. This shows only that the call puts kea in a mood to play, the earlier finding Walker says is not the whole story; it says nothing about preventing fights.",
+    "C": "Incorrect. If the call made no difference to how often fights broke out, the hypothesis would be weakened.",
+    "D": "Incorrect. Who calls and plays most often does not show whether the call keeps play from becoming aggression."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "true_irrelevant",
-    "D": "reversed"
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

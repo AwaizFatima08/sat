@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Haddad's hypothesis?",
   "choices": {
-    "A": "Tomato plants close their stomata more quickly in hot, dry air than they do in cool, humid air.",
-    "B": "Watered plants closed their stomata when given soil water from pots of drought-stressed plants but not from pots of watered ones.",
-    "C": "Neighbors of drought-stressed plants closed their stomata only after the soil around their own roots had begun to dry.",
-    "D": "Drought-stressed tomato plants produce smaller fruit than tomato plants that receive plenty of water."
+    "A": "Drought-stressed tomato plants produce smaller fruit than tomato plants that receive plenty of water.",
+    "B": "Tomato plants close their stomata more quickly in hot, dry air than they do in cool, humid air.",
+    "C": "Neighbors of drought-stressed plants closed their stomata only after the soil around their own roots had begun to dry out.",
+    "D": "Watered plants closed their stomata when given soil water from stressed plants' pots, but not from watered plants' pots."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
-    "why": "Haddad claims that a chemical signal from stressed roots, not drier soil, makes neighbors close their stomata. Support must separate the chemical from the moisture. In choice B, every plant stays well watered, and only the source of the added soil water differs, so any response must come from something the stressed plants put into the soil.",
-    "A": "Incorrect. A response to dry air is a different trigger and does not involve signals from a neighbor's roots.",
-    "B": "Correct. The receiving plants were all well watered, so their closing stomata must have been caused by something in the water from stressed plants' pots.",
+    "why": "Haddad claims that a chemical signal from stressed roots, not drier soil, makes neighbors close their stomata. Support must separate the chemical from the moisture. In choice D, every plant stays well watered, and only the source of the added soil water differs, so any response must come from something the stressed plants put into the soil.",
+    "A": "Incorrect. Smaller fruit is another effect of drought on the stressed plant itself and says nothing about signals to neighbors.",
+    "B": "Incorrect. A response to dry air is a different trigger and does not involve signals from a neighbor's roots.",
     "C": "Incorrect. If neighbors reacted only once their own soil dried, a change in moisture rather than a chemical signal would explain the response; this weakens the hypothesis.",
-    "D": "Incorrect. Smaller fruit is another effect of drought on the stressed plant itself and says nothing about signals to neighbors."
+    "D": "Correct. The receiving plants were all well watered, so their closing stomata must have been caused by something in the water from stressed plants' pots."
   },
   "traps": {
     "A": "true_irrelevant",
-    "C": "reversed",
-    "D": "true_irrelevant"
+    "B": "true_irrelevant",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

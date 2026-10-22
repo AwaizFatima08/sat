@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Similarly,",
-    "B": "Specifically,",
-    "C": "For example,",
+    "A": "Specifically,",
+    "B": "For example,",
+    "C": "Similarly,",
     "D": "Nonetheless,"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The second sentence makes a general claim about \"several\" of the Begums: they invested in education. The last sentence describes one of them, Sultan Jahan Begum, and her work for education. A transition that introduces one case of a general claim is needed.",
-    "A": "Incorrect. \"Similarly\" would introduce a separate case like one already described, but no individual ruler has been described before this sentence.",
-    "B": "Incorrect. \"Specifically\" would mean the sentence identifies exactly who the \"several\" rulers were, but it names only one of them. This is the closest near miss.",
-    "C": "Correct. \"For example\" introduces Sultan Jahan Begum as one of the rulers who invested in education.",
+    "A": "Incorrect. \"Specifically\" would mean the sentence identifies exactly who the \"several\" rulers were, but it names only one of them. This is the closest near miss.",
+    "B": "Correct. \"For example\" introduces Sultan Jahan Begum as one of the rulers who invested in education.",
+    "C": "Incorrect. \"Similarly\" would introduce a separate case like one already described, but no individual ruler has been described before this sentence.",
     "D": "Incorrect. Her work supports the claim about the Begums' interest in education; it does not go against it."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

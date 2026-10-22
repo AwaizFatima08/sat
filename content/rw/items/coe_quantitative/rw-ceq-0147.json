@@ -1,0 +1,113 @@
+{
+  "id": "rw-ceq-0147",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many people listen to podcasts while traveling to work, so it might seem that the longer a person's commute, the more podcasts that person will hear. Media researcher Inês Carvalho surveyed commuters in Porto, Portugal, and argues that this is true only for people who ride public transit. For drivers, she found, the length of the commute makes little difference, perhaps because drivers must keep their attention on the road and often switch to music or the radio instead.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Weekly Podcast Listening by Commute Length in Porto",
+    "x_label": "One-way commute (minutes)",
+    "y_label": "Weekly listening (minutes)",
+    "series": [
+      {
+        "name": "Public transit riders",
+        "points": [
+          [
+            "0–15",
+            40
+          ],
+          [
+            "15–30",
+            85
+          ],
+          [
+            "30–45",
+            140
+          ],
+          [
+            "45–60",
+            190
+          ],
+          [
+            "Over 60",
+            230
+          ]
+        ]
+      },
+      {
+        "name": "Drivers",
+        "points": [
+          [
+            "0–15",
+            70
+          ],
+          [
+            "15–30",
+            80
+          ],
+          [
+            "30–45",
+            78
+          ],
+          [
+            "45–60",
+            85
+          ],
+          [
+            "Over 60",
+            82
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Carvalho's argument?",
+  "choices": {
+    "A": "Drivers' weekly listening rose more steeply as commutes grew longer than transit riders' weekly listening did.",
+    "B": "Drivers with the shortest commutes listened to more podcasts each week than transit riders with the shortest commutes did.",
+    "C": "Transit riders with commutes of more than 60 minutes listened to more podcasts than any other group surveyed.",
+    "D": "As commutes lengthened, transit riders' weekly listening rose from 40 to 230 minutes; drivers' stayed between 70 and 85."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Carvalho's argument contrasts two groups: listening rises with commute length for transit riders but not for drivers. Support must describe how both lines change as commutes get longer. The transit line climbs from 40 to 230 minutes, while the driver line stays nearly flat between 70 and 85.",
+    "A": "Incorrect. The drivers' line is nearly flat, while the transit riders' line rises steeply, so this reverses the data.",
+    "B": "Incorrect. This is true (70 versus 40 minutes), but it compares only the shortest commutes and says nothing about how listening changes with commute length.",
+    "C": "Incorrect. This is true, but a single high value does not show that drivers' listening stays flat while transit riders' rises.",
+    "D": "Correct. Listening rose steadily with commute length for transit riders but barely changed for drivers, the contrast Carvalho describes."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

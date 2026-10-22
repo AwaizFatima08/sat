@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0136",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the era of hand-operated presses, printers often corrected errors in the middle of printing a book: a proofreader would spot a mistake partway through the run, the press would stop, and the type would be fixed. Paper was costly, so sheets printed before the correction were not thrown away but were bound into copies along with corrected ones. Book historian Aiko Tanaka compared two copies of a 1640 edition of a book of sermons, one held in Edinburgh and one in Boston, and found that a single word on one page differs between them. In every other respect, including typeface, layout, and misprints elsewhere in the book, the two copies are identical. Tanaka can reasonably conclude that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "printers of the 1640s rarely corrected their errors once they had started printing a book.",
+    "B": "the Boston copy must be a later forgery that was made by imitating the Edinburgh copy.",
+    "C": "the copies probably come from one printing, with one holding a sheet printed before a correction.",
+    "D": "the Edinburgh copy is the one that preserves the exact wording that the author originally intended."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The text explains that mid-run corrections were common and that uncorrected sheets were bound into copies along with corrected ones. Two copies that match in every detail, even in their misprints, except for one word fit this practice exactly. The single difference does not require a different edition or a forgery.",
+    "A": "Incorrect. The text says printers often made such corrections during printing.",
+    "B": "Incorrect. The text gives no evidence of forgery; the identical misprints and layout point to the same printing.",
+    "C": "Correct. A single changed word in otherwise identical copies matches the practice of binding uncorrected and corrected sheets together.",
+    "D": "Incorrect. The text gives no way to tell which of the two words the author intended."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

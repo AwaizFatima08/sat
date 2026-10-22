@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0135",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Young male zebra finches learn their songs by copying an adult male, or tutor, usually their father. Males that hear a tutor between about 20 and 65 days after hatching copy its song closely. Males raised with one tutor and then given a new tutor after they are 100 days old copy almost nothing from the newcomer, which led researchers to describe song learning as limited to an early window of time. Biologist Kenji Morimoto, however, raised a group of young males in isolation, hearing no song at all, until they were 100 days old. When he then introduced them to a tutor, many copied its song well. These results suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "female zebra finches prefer males that learned their songs early in their lives.",
+    "B": "the learning window closes partly because of hearing a tutor, not because of age alone.",
+    "C": "being raised in isolation permanently prevents zebra finches from learning to sing.",
+    "D": "male zebra finches can learn a new song from a tutor equally well at any point in their lives."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "At 100 days, birds that had already heard a tutor learned almost nothing from a new one, but birds that had heard no song learned well. The two groups were the same age, so age alone cannot explain the difference. What differed was earlier experience of hearing a tutor, which suggests that this experience helps close the window.",
+    "A": "Incorrect. The text never discusses the preferences of female finches.",
+    "B": "Correct. Same age, different outcomes: the key difference is whether the bird had already heard a tutor.",
+    "C": "Incorrect. The isolated birds learned well once they were given a tutor.",
+    "D": "Incorrect. Birds that had already learned from a tutor copied almost nothing at 100 days, so learning is not equally easy at any age."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

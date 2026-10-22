@@ -1,0 +1,89 @@
+{
+  "id": "rw-ceq-0141",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Bat houses, wooden boxes mounted on poles or buildings, give roosting bats a place to shelter, and many guides advise painting them dark so that they absorb the sun's heat. Wildlife biologist Marcus Ortega checked hundreds of bat houses in the United States to see which were occupied. He argues that the best color depends on climate: dark paint helps where summers are cool, he says, but in hot regions light-colored houses are more likely to attract bats, perhaps because dark ones overheat.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Occupancy of Bat Houses by Paint Color and Climate",
+    "x_label": "Climate",
+    "y_label": "Houses occupied (%)",
+    "series": [
+      {
+        "name": "Dark paint",
+        "points": [
+          [
+            "Cool regions",
+            68
+          ],
+          [
+            "Hot regions",
+            22
+          ]
+        ]
+      },
+      {
+        "name": "Light paint",
+        "points": [
+          [
+            "Cool regions",
+            31
+          ],
+          [
+            "Hot regions",
+            54
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Ortega's argument?",
+  "choices": {
+    "A": "Dark houses were occupied more often than light-colored houses in both the cool regions and the hot regions.",
+    "B": "In cool regions, 68% of dark houses were occupied, while only 31% of light-colored houses were occupied.",
+    "C": "Dark houses did better in cool regions (68% versus 31%), but light houses did better in hot ones (54% versus 22%).",
+    "D": "Light-colored houses in hot regions were occupied more often than light-colored houses in cool regions, 54% versus 31%."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Ortega argues that the better color switches with climate: dark wins in cool regions, light wins in hot regions. Support must show both halves of that pattern. In cool regions dark houses were occupied far more often, and in hot regions light houses were.",
+    "A": "Incorrect. In hot regions, light-colored houses were occupied more often (54%) than dark ones (22%), so this misreads the graph.",
+    "B": "Incorrect. This is accurate, but it covers only cool regions, so it cannot show that the best color depends on climate.",
+    "C": "Correct. The better color reverses between cool and hot regions, which is exactly Ortega's argument.",
+    "D": "Incorrect. This is accurate (54% versus 31%), but it compares one color across regions instead of comparing the two colors within each region."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -15,22 +15,22 @@
   "stem": "Which finding, if true, would most directly support Memon's argument?",
   "choices": {
     "A": "Natural-dyed ajrak fades more slowly than synthetic-dyed ajrak does when it is washed and dried in the sun.",
-    "B": "Workshops that returned to natural dyes now employ more printers than they did when they used synthetic dyes.",
-    "C": "Most natural-dyed ajrak goes to city shops and foreign buyers, while local customers mostly choose synthetic-dyed cloth.",
-    "D": "Local customers account for most of the natural-dyed ajrak that these workshops sell in a typical year."
+    "B": "Workshops that returned to natural dyes now employ more printers and apprentices than they did when using synthetic dyes.",
+    "C": "Local customers account for most of the natural-dyed ajrak that these workshops sell in a typical year.",
+    "D": "Most natural-dyed ajrak goes to city shops and foreign buyers, while local customers mostly choose synthetic-dyed cloth."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Memon's argument is about who keeps the natural-dye revival going: outside buyers rather than local wearers. Support must compare who buys the natural-dyed cloth. If most of it goes to city shops and foreign buyers while local customers prefer synthetic-dyed cloth, the revival depends on outsiders.",
     "A": "Incorrect. A quality advantage might explain why anyone buys natural-dyed cloth, but it does not show which buyers sustain the revival.",
     "B": "Incorrect. Growth in the workshops shows the revival is doing well, not who is paying for it.",
-    "C": "Correct. Natural-dyed cloth is bought mainly by outside buyers, while locals mostly buy synthetic-dyed cloth, exactly as Memon argues.",
-    "D": "Incorrect. If local customers bought most of the natural-dyed cloth, the revival would rest on them, which weakens the argument."
+    "C": "Incorrect. If local customers bought most of the natural-dyed cloth, the revival would rest on them, which weakens the argument.",
+    "D": "Correct. Natural-dyed cloth is bought mainly by outside buyers, while locals mostly buy synthetic-dyed cloth, exactly as Memon argues."
   },
   "traps": {
     "A": "true_irrelevant",
     "B": "true_irrelevant",
-    "D": "reversed"
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

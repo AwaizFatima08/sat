@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Haddad's argument?",
   "choices": {
-    "A": "Most joke intertitles in the Brazilian comedy prints differ in meaning from the originals, but most drama intertitles match closely.",
-    "B": "Brazilian audiences of the 1920s attended American comedies more often than they attended American dramas.",
-    "C": "Brazilian versions of both comedies and dramas often contained more intertitles than the original American prints did.",
-    "D": "Intertitles in the Brazilian drama prints depart from the original meaning about as often as those in the comedy prints."
+    "A": "Intertitles in the Brazilian drama prints depart from the original meaning about as often as those in the Brazilian comedy prints.",
+    "B": "Brazilian versions of both comedies and dramas often contained more intertitles than the original American prints did.",
+    "C": "Most joke intertitles in the Brazilian comedies differ in meaning from the originals, but most drama intertitles match closely.",
+    "D": "Brazilian audiences of the 1920s attended American comedies more often than they attended American dramas."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Haddad's argument is a contrast: comedy intertitles were freely rewritten, drama intertitles were kept close to the original. Support must compare the two kinds of films. A finding that comedy jokes usually changed in meaning while drama intertitles usually matched shows exactly that difference.",
-    "A": "Correct. Comedy intertitles were often changed in meaning while drama intertitles were not, which is the difference Haddad describes.",
-    "B": "Incorrect. Which films audiences preferred does not show how distributors handled the intertitles.",
-    "C": "Incorrect. This describes a change made to both kinds of films alike, so it does not show that comedies were treated differently from dramas.",
-    "D": "Incorrect. If dramas were changed as often as comedies, there would be no difference in treatment; this weakens the argument."
+    "A": "Incorrect. If dramas were changed as often as comedies, there would be no difference in treatment; this weakens the argument.",
+    "B": "Incorrect. This describes a change made to both kinds of films alike, so it does not show that comedies were treated differently from dramas.",
+    "C": "Correct. Comedy intertitles were often changed in meaning while drama intertitles were not, which is the difference Haddad describes.",
+    "D": "Incorrect. Which films audiences preferred does not show how distributors handled the intertitles."
   },
   "traps": {
+    "A": "reversed",
     "B": "true_irrelevant",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

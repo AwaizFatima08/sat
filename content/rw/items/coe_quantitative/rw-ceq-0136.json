@@ -1,0 +1,105 @@
+{
+  "id": "rw-ceq-0136",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Barn owls cough up pellets of fur and bone from the prey they swallow whole, so researchers can learn what the owls eat by examining the pellets. Ecologist Thomas Wright collected pellets from farms in eastern England, some of which leave strips of rough grass along the edges of their fields. Field voles, the owls' preferred prey, thrive in such grass. Wright argues that owls hunting on farms with grass strips catch more voles and therefore depend less on shrews, a less nourishing prey.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Prey Found in Barn Owl Pellets on Farms in Eastern England",
+    "x_label": "Prey type",
+    "y_label": "Share of prey items (%)",
+    "series": [
+      {
+        "name": "Farms with grass strips",
+        "points": [
+          [
+            "Field voles",
+            58
+          ],
+          [
+            "Shrews",
+            18
+          ],
+          [
+            "Wood mice",
+            16
+          ],
+          [
+            "Other",
+            8
+          ]
+        ]
+      },
+      {
+        "name": "Farms without grass strips",
+        "points": [
+          [
+            "Field voles",
+            34
+          ],
+          [
+            "Shrews",
+            35
+          ],
+          [
+            "Wood mice",
+            22
+          ],
+          [
+            "Other",
+            9
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Wright's argument?",
+  "choices": {
+    "A": "At both kinds of farms, prey in the \"Other\" category made up less than a tenth of all prey items.",
+    "B": "At farms without grass strips, shrews and field voles made up nearly equal shares of the owls' prey.",
+    "C": "Wood mice made up a larger share of the owls' prey at farms with grass strips than they did at farms without them.",
+    "D": "Voles were 58% of prey at farms with grass strips but 34% at farms without, while shrews were 18% and 35%."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Wright's argument has two linked parts: owls at farms with grass strips eat more voles and fewer shrews. The choice must compare both prey types across the two kinds of farms. Voles rise from 34% to 58% and shrews drop from 35% to 18% where grass strips are present.",
+    "A": "Incorrect. This is true (8% and 9%), but other prey has nothing to do with the voles and shrews in Wright's argument.",
+    "B": "Incorrect. This is true (35% and 34%), but it describes only one kind of farm, so it cannot show the effect of grass strips.",
+    "C": "Incorrect. Wood mice were 16% of prey at farms with grass strips and 22% at farms without, so the share was smaller, not larger.",
+    "D": "Correct. Owls at farms with grass strips ate a much larger share of voles and a much smaller share of shrews, as Wright argues."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

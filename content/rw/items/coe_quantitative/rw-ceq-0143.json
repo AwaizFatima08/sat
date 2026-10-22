@@ -1,0 +1,89 @@
+{
+  "id": "rw-ceq-0143",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Brown trout, first brought to the Swat River in northern Pakistan in the early twentieth century, are still raised in hatcheries and released into the river for anglers. Fisheries officer Imran Yousafzai found that far fewer stocked trout survive their first year in the lower river than upstream. Some anglers blame fishing pressure, but Yousafzai argues that warm summer water is the main cause, since trout need cool water to thrive.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Stocked Brown Trout in Three Sections of the Swat River",
+    "columns": [
+      "Section",
+      "Elevation (m)",
+      "Average July water temperature (°C)",
+      "Angler-days per year",
+      "One-year survival (%)"
+    ],
+    "rows": [
+      [
+        "Upper",
+        2050,
+        13,
+        1200,
+        46
+      ],
+      [
+        "Middle",
+        1500,
+        17,
+        2900,
+        29
+      ],
+      [
+        "Lower",
+        950,
+        22,
+        900,
+        7
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Yousafzai's argument?",
+  "choices": {
+    "A": "The lower section had the fewest angler-days (900) but the lowest survival (7%) and the warmest July water (22°C).",
+    "B": "The middle section had more than twice as many angler-days per year as the upper section, 2,900 compared with 1,200.",
+    "C": "The middle section had the most angler-days and also the lowest one-year survival of the three sections.",
+    "D": "The upper section, at the highest elevation, had the highest one-year survival of stocked trout, at 46%."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Yousafzai and the anglers disagree about whether water temperature or fishing pressure causes low survival. Support must separate the two. The lower section had the least fishing of all three sections but the worst survival and the warmest water, so fishing cannot explain its losses, while temperature can.",
+    "A": "Correct. The section with the least fishing had the lowest survival and the warmest water, which points to temperature rather than fishing pressure.",
+    "B": "Incorrect. This is true, but it concerns only fishing pressure and says nothing about water temperature or survival.",
+    "C": "Incorrect. The lowest survival (7%) was in the lower section, not the middle section, which had 29%.",
+    "D": "Incorrect. This is true, but the upper section had both the coolest water and little fishing, so it does not show which factor matters."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

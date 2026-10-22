@@ -1,0 +1,97 @@
+{
+  "id": "rw-ceq-0151",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Seagrass meadows trap large amounts of carbon in the sediment beneath them, and studies have often found that meadows in deeper water store less carbon than shallow ones. Marine ecologist Ana Ribeiro, who sampled five meadows off the coast of Portugal, argues that depth itself is not the cause. Because less light reaches deeper water, she points out, seagrass there usually grows more sparsely, and it is the density of the shoots, she contends, rather than the depth of the water, that determines how much carbon a meadow stores.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Five Seagrass Meadows off the Coast of Portugal",
+    "columns": [
+      "Site",
+      "Water depth (m)",
+      "Shoot density (shoots per m²)",
+      "Carbon in sediment (tonnes per hectare)"
+    ],
+    "rows": [
+      [
+        "1",
+        1.5,
+        960,
+        205
+      ],
+      [
+        "2",
+        3.0,
+        710,
+        176
+      ],
+      [
+        "3",
+        4.5,
+        420,
+        118
+      ],
+      [
+        "4",
+        6.0,
+        820,
+        189
+      ],
+      [
+        "5",
+        7.5,
+        160,
+        58
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Ribeiro's argument?",
+  "choices": {
+    "A": "Site 4, at 6 meters, stored more carbon than the shallower Sites 2 and 3 and had denser shoots than either.",
+    "B": "Stored carbon fell with every increase in depth, from the shallowest site to the deepest one.",
+    "C": "Site 5, the deepest of the five sites, stored the least carbon, about 58 tonnes per hectare.",
+    "D": "Site 1, the shallowest of the five sites, had both the densest growth of shoots and the most carbon stored in its sediment."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Ribeiro must show that shoot density, not depth, controls carbon storage. In most sites, depth and density change together, so they cannot be told apart. Site 4 breaks the pattern: it is deeper than Sites 2 and 3 but has denser shoots, and it stores more carbon than both, just as Ribeiro's argument predicts.",
+    "A": "Correct. Site 4 is deeper but denser than Sites 2 and 3 and stores more carbon, so density rather than depth tracks carbon storage.",
+    "B": "Incorrect. Carbon did not fall at every step: Site 4 (6 meters) stored more than Sites 2 and 3, which are shallower.",
+    "C": "Incorrect. Site 5 is both the deepest and the sparsest, so this fits either explanation equally well.",
+    "D": "Incorrect. Site 1 is both the shallowest and the densest, so its high carbon fits the depth explanation as well as Ribeiro's; it cannot tell them apart."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

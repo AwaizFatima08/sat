@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0149",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The great Indian bustard, a heavy grassland bird now found mainly in the Thar Desert of western India, is critically endangered, and collisions with power lines are among the leading causes of its deaths. Many birds avoid such collisions when lines are fitted with bright diverters, devices that make wires easier to see. But a bustard's eyes are set on the sides of its head, giving it a narrow view straight ahead, and in flight it often looks downward. Because it is so heavy, it also cannot change direction quickly once it sees an obstacle. These facts suggest that for the great Indian bustard, ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "diverters would prevent all collisions if they were placed closer together on the wires.",
+    "B": "flying faster would let the birds clear power lines before striking them.",
+    "C": "making wires more visible may prevent fewer deaths than it does for many other birds.",
+    "D": "power lines pose less danger than they do for lighter birds that can turn quickly."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Diverters work by helping birds see wires. Bustards, however, see poorly straight ahead and often look down in flight, so they may not notice even marked wires in time, and their weight keeps them from turning quickly once they do. Combining these facts, diverters are likely to help bustards less than they help many other birds.",
+    "A": "Incorrect. The problem is the bird's vision and slow turning, so no spacing would guarantee that it avoids every wire.",
+    "B": "Incorrect. The text never suggests that speed would help; a heavy bird moving faster would have even less time to react.",
+    "C": "Correct. Poor forward vision and slow turning reduce the benefit of a measure that relies on birds seeing wires and swerving.",
+    "D": "Incorrect. The text says power lines are a leading cause of bustard deaths, and its traits make collisions more likely, not less."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

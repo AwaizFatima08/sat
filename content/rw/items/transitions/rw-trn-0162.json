@@ -15,21 +15,21 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "Consequently,",
-    "B": "Admittedly,",
-    "C": "Indeed,",
+    "B": "Indeed,",
+    "C": "Admittedly,",
     "D": "For instance,"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The narrator says the attic was her favorite room, then admits its drawbacks (creaking floors, drafts, heat), and finally returns to why she loved it (\"But it was the one place...\"). The blank sentence concedes points that seem to work against her claim before she answers them. A concession transition is needed.",
     "A": "Incorrect. The attic's discomfort is not a result of the narrator's loving it.",
-    "B": "Correct. \"Admittedly\" concedes the attic's drawbacks before the narrator explains, with \"But,\" why she loved it anyway.",
-    "C": "Incorrect. \"Indeed\" would strengthen the claim that she loved the attic, but creaking floors and heat are reasons not to love it. This is the closest near miss for a reader who misses the turn.",
+    "B": "Incorrect. \"Indeed\" would strengthen the claim that she loved the attic, but creaking floors and heat are reasons not to love it. This is the closest near miss for a reader who misses the turn.",
+    "C": "Correct. \"Admittedly\" concedes the attic's drawbacks before the narrator explains, with \"But,\" why she loved it anyway.",
     "D": "Incorrect. The attic's discomfort is not an example of the narrator's love for it; it points the other way."
   },
   "traps": {
     "A": "wrong_logic",
-    "C": "wrong_logic",
+    "B": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

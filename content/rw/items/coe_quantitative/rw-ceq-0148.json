@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0148",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the ger districts of Ulaanbaatar, Mongolia, many families live in gers, round felt-covered tents, and heat them with coal stoves through winters in which temperatures often fall below −30°C. Adding layers of felt to a ger's walls reduces the amount of coal needed. Energy engineer Bat-Erdene Ganbold measured daily coal use in gers with different numbers of felt layers. He argues that each extra layer saves less coal than the one before it, so that the first additional layer is by far the most worthwhile.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Coal Use in Ulaanbaatar Gers with Different Numbers of Felt Layers",
+    "columns": [
+      "Felt layers",
+      "Coal used per winter day (kg)",
+      "Average indoor temperature (°C)"
+    ],
+    "rows": [
+      [
+        "1",
+        38,
+        14
+      ],
+      [
+        "2",
+        26,
+        16
+      ],
+      [
+        "3",
+        22,
+        17
+      ],
+      [
+        "4",
+        20,
+        17
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Ganbold's argument?",
+  "choices": {
+    "A": "Gers with four layers of felt used the least coal of any group, about 20 kilograms per day.",
+    "B": "Adding a second layer cut daily coal use by 12 kilograms, but adding a third cut it by only 4 kilograms.",
+    "C": "Every additional layer of felt reduced the amount of coal that a ger used each day, from 38 kilograms down to 20.",
+    "D": "Adding a third layer of felt saved more coal per day than adding a second layer did."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Ganbold argues that the savings shrink with each added layer. Support must compare the savings from one added layer with the savings from the next. Going from one to two layers saved 12 kilograms (38 to 26), but going from two to three saved only 4 (26 to 22).",
+    "A": "Incorrect. This is true, but it gives only the lowest value and does not show how the savings change from layer to layer.",
+    "B": "Correct. The saving fell from 12 kilograms for the second layer to 4 for the third, showing smaller savings with each layer.",
+    "C": "Incorrect. This is true, but it shows only that each layer helps, not that each layer helps less than the one before.",
+    "D": "Incorrect. The third layer saved 4 kilograms, far less than the 12 kilograms saved by the second layer."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

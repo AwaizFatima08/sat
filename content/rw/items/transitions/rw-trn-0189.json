@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "For example,",
-    "B": "Specifically,",
-    "C": "Nevertheless,",
-    "D": "Moreover,"
+    "A": "Nevertheless,",
+    "B": "Moreover,",
+    "C": "For example,",
+    "D": "Specifically,"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The second sentence names the reform's \"two ways\" only in general terms. The last sentence gives the exact details of both: the ten skipped days and the new rule for century years. A transition that introduces a precise account of the previous idea is needed.",
-    "A": "Incorrect. \"For example\" would introduce one instance, but the last sentence gives the precise details of both parts of the reform, not a sample of it. It is tempting because the sentence mentions particular dates.",
-    "B": "Correct. \"Specifically\" signals that the last sentence states exactly how the reform removed the extra days and changed the leap-year rule.",
-    "C": "Incorrect. \"Nevertheless\" signals something true despite the previous point, but the details carry out the reform rather than going against it.",
-    "D": "Incorrect. \"Moreover\" adds a new point, but the last sentence explains the two corrections already mentioned rather than adding a third."
+    "A": "Incorrect. \"Nevertheless\" signals something true despite the previous point, but the details carry out the reform rather than going against it.",
+    "B": "Incorrect. \"Moreover\" adds a new point, but the last sentence explains the two corrections already mentioned rather than adding a third.",
+    "C": "Incorrect. \"For example\" would introduce one instance, but the last sentence gives the precise details of both parts of the reform, not a sample of it. It is tempting because the sentence mentions particular dates.",
+    "D": "Correct. \"Specifically\" signals that the last sentence states exactly how the reform removed the extra days and changed the leap-year rule."
   },
   "traps": {
     "A": "wrong_logic",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "B": "wrong_logic",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

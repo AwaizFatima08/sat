@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "Similarly,",
-    "B": "Consequently,",
-    "C": "For instance,",
-    "D": "Conversely,"
+    "B": "Conversely,",
+    "C": "Consequently,",
+    "D": "For instance,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text explains that air is deflected right in the north and left in the south, and that the rightward deflection makes northern storms spin counterclockwise. The last sentence describes the reverse case: leftward deflection makes southern storms spin clockwise. A transition that introduces the opposite case is needed.",
     "A": "Incorrect. \"Similarly\" is tempting because the same mechanism is at work, but the outcome is the reverse (left instead of right, clockwise instead of counterclockwise), so the case is opposite, not similar.",
-    "B": "Incorrect. The clockwise spin of southern storms is not caused by the counterclockwise spin of northern ones; each results from its own hemisphere's deflection.",
-    "C": "Incorrect. Southern cyclones are not an example of northern storms spinning counterclockwise; they spin the other way.",
-    "D": "Correct. \"Conversely\" signals that the southern case reverses the northern one: leftward deflection and clockwise rotation."
+    "B": "Correct. \"Conversely\" signals that the southern case reverses the northern one: leftward deflection and clockwise rotation.",
+    "C": "Incorrect. The clockwise spin of southern storms is not caused by the counterclockwise spin of northern ones; each results from its own hemisphere's deflection.",
+    "D": "Incorrect. Southern cyclones are not an example of northern storms spinning counterclockwise; they spin the other way."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

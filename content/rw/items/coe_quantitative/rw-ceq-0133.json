@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0133",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Colombo, Sri Lanka, has tested lanes reserved for buses on some of its busiest roads during the morning rush hour. Supporters hoped the lanes would speed up bus trips, while critics feared they would slow everyone else by leaving fewer lanes for other traffic. Transport planner Dilini Perera compared average trip times on one route before and during a trial. She concluded that the lane greatly helped bus riders while making trips only a little slower for people traveling by car.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Morning Rush-Hour Trip Time on One Colombo Route (minutes)",
+    "columns": [
+      "Way of traveling",
+      "Before trial",
+      "During trial"
+    ],
+    "rows": [
+      [
+        "Bus",
+        52,
+        38
+      ],
+      [
+        "Car",
+        41,
+        44
+      ],
+      [
+        "Three-wheeler",
+        33,
+        34
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Perera's conclusion?",
+  "choices": {
+    "A": "Car trips became faster during the trial, with their average time falling from 44 to 41 minutes.",
+    "B": "Bus trips fell from 52 to 38 minutes during the trial, while car trips rose only from 41 to 44 minutes.",
+    "C": "During the trial, an average bus trip (38 minutes) was shorter than an average car trip on the route (44 minutes).",
+    "D": "Three-wheeler trips changed by only one minute during the trial, from 33 minutes to 34 minutes."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Perera's conclusion has two parts: buses became much faster, and cars became only slightly slower. The choice must report the change for both buses and cars. Bus trips dropped by 14 minutes, while car trips grew by just 3 minutes.",
+    "A": "Incorrect. The table shows car trips rising from 41 to 44 minutes, not falling.",
+    "B": "Correct. Buses gained 14 minutes while cars lost only 3, which supports both parts of Perera's conclusion.",
+    "C": "Incorrect. This compares buses and cars during the trial only; it does not show how much either changed, so it cannot show that cars were only slightly slowed.",
+    "D": "Incorrect. Three-wheelers are not part of Perera's conclusion, which concerns buses and cars."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

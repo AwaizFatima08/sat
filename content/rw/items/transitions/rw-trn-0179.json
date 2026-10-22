@@ -15,21 +15,21 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "For example,",
-    "B": "Specifically,",
-    "C": "In other words,",
+    "B": "In other words,",
+    "C": "Specifically,",
     "D": "Moreover,"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The second sentence says each rank was \"expressed not as one figure but as two\" without saying what the two figures meant. The last sentence explains exactly what each number stood for and why that made the system flexible. A transition that introduces a precise account of the previous idea is needed.",
     "A": "Incorrect. \"For example\" would introduce one particular official's rank, but the last sentence explains how every rank worked. This is a strong near miss.",
-    "B": "Correct. \"Specifically\" signals that the last sentence spells out what the two figures in each rank meant.",
-    "C": "Incorrect. \"In other words\" would restate the previous sentence, but the last sentence adds new information about zat and sawar that the previous sentence did not contain.",
+    "B": "Incorrect. \"In other words\" would restate the previous sentence, but the last sentence adds new information about zat and sawar that the previous sentence did not contain.",
+    "C": "Correct. \"Specifically\" signals that the last sentence spells out what the two figures in each rank meant.",
     "D": "Incorrect. \"Moreover\" adds a separate point, but the last sentence explains the two figures already mentioned rather than adding a new feature."
   },
   "traps": {
     "A": "wrong_logic",
-    "C": "wrong_logic",
+    "B": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

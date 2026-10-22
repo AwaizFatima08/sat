@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0145",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Kente, a cloth woven in narrow strips that are sewn together, has long been made in the town of Bonwire, Ghana, where weaving was traditionally done by men. In 2019, one Bonwire workshop began selling its cloth online. Historian Abena Owusu, who examined the workshop's records, argues that the rise in the number of young people training there since then has come almost entirely from women joining the craft.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Apprentices at a Kente Weaving Workshop in Bonwire, Ghana",
+    "columns": [
+      "Year",
+      "Male apprentices",
+      "Female apprentices"
+    ],
+    "rows": [
+      [
+        "2016",
+        14,
+        2
+      ],
+      [
+        "2018",
+        15,
+        3
+      ],
+      [
+        "2020",
+        16,
+        9
+      ],
+      [
+        "2022",
+        15,
+        14
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Owusu's argument?",
+  "choices": {
+    "A": "From 2016 to 2022, female apprentices rose from 2 to 14, while male apprentices stayed between 14 and 16.",
+    "B": "In 2022, the workshop had a total of 29 apprentices, more than in any other year shown in the table.",
+    "C": "The number of male apprentices at the workshop roughly doubled between 2016 and 2022.",
+    "D": "In every year shown in the table, the workshop had at least as many male apprentices as female apprentices."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Owusu argues that nearly all of the growth in apprentices came from women. The choice must show both that the number of women rose and that the number of men did not. Female apprentices grew from 2 to 14, while male apprentices barely changed.",
+    "A": "Correct. Women accounted for the increase, rising from 2 to 14, while the number of men stayed nearly level.",
+    "B": "Incorrect. This is true (15 + 14 = 29), but a total does not show whether the growth came from women or men.",
+    "C": "Incorrect. Male apprentices went from 14 to 15, so their number barely changed rather than doubling.",
+    "D": "Incorrect. This is true, but it does not show which group's numbers grew over time."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

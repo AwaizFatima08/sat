@@ -1,0 +1,113 @@
+{
+  "id": "rw-ceq-0134",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Brick kilns in Nepal's Kathmandu Valley burn large amounts of coal. After many kilns were damaged in the 2015 earthquake, a number of owners rebuilt them with a zigzag design, in which hot air winds back and forth through the stacked bricks instead of flowing in a straight line, so that more of its heat reaches the bricks. Engineer Bikash Shrestha tracked kilns of both designs over five firing seasons and argues that the zigzag design cuts coal use by more than a quarter.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Coal Used per 1,000 Bricks in Kathmandu Valley Kilns",
+    "x_label": "Firing season",
+    "y_label": "Coal used (kilograms)",
+    "series": [
+      {
+        "name": "Traditional kilns",
+        "points": [
+          [
+            "2016",
+            208
+          ],
+          [
+            "2017",
+            205
+          ],
+          [
+            "2018",
+            201
+          ],
+          [
+            "2019",
+            199
+          ],
+          [
+            "2020",
+            196
+          ]
+        ]
+      },
+      {
+        "name": "Zigzag kilns",
+        "points": [
+          [
+            "2016",
+            146
+          ],
+          [
+            "2017",
+            143
+          ],
+          [
+            "2018",
+            141
+          ],
+          [
+            "2019",
+            140
+          ],
+          [
+            "2020",
+            138
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Shrestha's argument?",
+  "choices": {
+    "A": "Zigzag kilns used more coal per 1,000 bricks in 2020 than they had in 2016, the first season shown.",
+    "B": "Coal use in traditional kilns fell slightly over the five seasons, from about 208 to about 196 kilograms per 1,000 bricks.",
+    "C": "In every season, zigzag kilns used about 140 kilograms of coal per 1,000 bricks, while traditional kilns used about 200.",
+    "D": "In 2018, traditional kilns used about 201 kilograms of coal for every 1,000 bricks they fired."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Shrestha's claim compares the two designs: zigzag kilns should use at least a quarter less coal than traditional ones. The choice must compare the two lines. Zigzag kilns used about 140 kilograms per 1,000 bricks while traditional kilns used about 200, a reduction of about 30%.",
+    "A": "Incorrect. The graph shows zigzag kilns' coal use falling, from about 146 to about 138 kilograms, not rising.",
+    "B": "Incorrect. This describes only the traditional kilns, so it cannot show how the zigzag design compares.",
+    "C": "Correct. About 140 is roughly 30% less than about 200, more than a quarter, and the gap held in every season.",
+    "D": "Incorrect. This gives a single value for traditional kilns and makes no comparison with zigzag kilns."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

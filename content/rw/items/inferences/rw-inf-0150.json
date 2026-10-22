@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0150",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Two nearly identical panels showing a woman reading by a window survive from sixteenth-century Flanders, and scholars have long debated which is the original and which a workshop copy. Infrared imaging can reveal the drawing an artist made on a panel before painting it. A copyist, working from a finished picture, usually transfers its outlines directly, so the underdrawing of a copy tends to match the painted surface closely. When conservator Lotte Vermeulen examined both panels, she found that in the first, the underdrawing shows the woman's head turned toward the window and a second book on the table, details later painted over. In the second panel, the underdrawing matches the visible painting almost exactly. These findings suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the second panel was painted first, and its design was later revised in the first.",
+    "B": "the artist of the first panel was less skilled at drawing than the artist of the second.",
+    "C": "the first panel is more likely the original, and the second is more likely the copy.",
+    "D": "both panels were copied from a third version of the scene that has since been lost."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Copyists transfer the outlines of a finished picture, so a copy's underdrawing should match its surface. The second panel matches; the first shows changes made while the composition was still being worked out. Changes of this kind fit an original, so the first panel is the likelier original.",
+    "A": "Incorrect. If the second were first, the copyist of the first would have had a finished model, and its underdrawing should match the surface rather than show changes.",
+    "B": "Incorrect. The changes show revision of the design, not weaker drawing skill.",
+    "C": "Correct. The changes in the first panel fit an artist inventing the design, while the exact match in the second fits a copy.",
+    "D": "Incorrect. Nothing in the text points to a third, lost version."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

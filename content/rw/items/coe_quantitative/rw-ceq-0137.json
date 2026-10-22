@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0137",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In Iceland, greenhouses heated with water from hot springs allow tomatoes to be grown year-round, but in the darkest months there may be only four or five hours of daylight. Many growers therefore add electric lamps above their plants. Horticulturist Ásta Gunnarsdóttir compared tomato yields in a greenhouse with lamps and one without. She argues that the lamps are most valuable in midwinter: their advantage, she says, shrinks as the days lengthen toward spring.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Monthly Tomato Yield in Two Icelandic Greenhouses (kilograms per square meter)",
+    "columns": [
+      "Month",
+      "Without lamps",
+      "With lamps"
+    ],
+    "rows": [
+      [
+        "December",
+        0.6,
+        2.1
+      ],
+      [
+        "January",
+        0.7,
+        2.2
+      ],
+      [
+        "February",
+        1.1,
+        2.3
+      ],
+      [
+        "March",
+        1.8,
+        2.4
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Gunnarsdóttir's argument?",
+  "choices": {
+    "A": "The lamps added 1.5 kilograms per square meter to the yield in December but only 0.6 kilograms in March.",
+    "B": "The yield of plants grown without lamps tripled between December and March, from 0.6 to 1.8 kilograms.",
+    "C": "In every month shown, plants grown without lamps produced more tomatoes than plants grown with them.",
+    "D": "Plants grown with lamps produced their highest monthly yield of the study, 2.4 kilograms per square meter, in March."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Gunnarsdóttir's argument concerns the size of the lamps' advantage, the gap between lit and unlit yields, and how that gap changes from winter to spring. The choice must compare the gap in a dark month with the gap in a brighter month. The gap was 1.5 kilograms (2.1 minus 0.6) in December and 0.6 kilograms (2.4 minus 1.8) in March.",
+    "A": "Correct. The lamps' advantage fell from 1.5 kilograms in December to 0.6 kilograms in March, shrinking as the days lengthened.",
+    "B": "Incorrect. This is true, but it describes only the unlit plants and does not compare them with lit plants.",
+    "C": "Incorrect. The table shows lit plants yielding more than unlit plants in every month, not less.",
+    "D": "Incorrect. This describes only the lit plants; it does not show how the lamps' advantage over unlit plants changed."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Minor: claim says advantage \"shrinks steadily\" but data show 1.5 in Dec and Jan (no shrink); A still clearly best.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

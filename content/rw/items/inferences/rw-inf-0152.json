@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0152",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Large volcanic eruptions can cool the climate for a few years by filling the upper atmosphere with fine droplets that reflect sunlight; such eruptions leave layers of sulfate in polar ice, and the cold summers that follow often appear as unusually narrow tree rings. Historian Brigid Lennon studied the annals of a monastery in northern Europe that record a severe famine lasting two years. Ice cores show a major eruption in the year before the famine began, and tree rings from the region reveal two exceptionally cold summers matching the famine years. The same annals, however, also report a widespread cattle disease during those years. Taken together, this evidence suggests that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the monks exaggerated the famine, since the tree rings show only mild cooling.",
+    "B": "the eruption may have contributed to the famine, though other causes remain possible.",
+    "C": "the eruption was the only cause of the two-year famine that the monastery's annals recorded.",
+    "D": "the cattle disease was caused by the cold summers that followed the eruption."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The timing lines up: an eruption, then two cold summers that match the famine years, a plausible chain from eruption to crop failure. But the annals also report a cattle disease in the same years, which could have caused or worsened the famine on its own. The evidence supports a possible contribution from the eruption without ruling out other causes.",
+    "A": "Incorrect. The text says the tree rings show \"exceptionally cold summers,\" not mild cooling.",
+    "B": "Correct. This claims only what the evidence allows: a likely contribution, with other causes still possible.",
+    "C": "Incorrect. The cattle disease is a competing possible cause, so the evidence cannot show the eruption was the only one.",
+    "D": "Incorrect. The text never links the cattle disease to the cold summers."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "too_broad",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

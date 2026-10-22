@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Ólafsdóttir's argument?",
   "choices": {
-    "A": "Houses with clustered rooms used more turf for each square meter of floor than the earlier long halls did.",
-    "B": "Iceland's birch woodlands had been largely cleared within a few centuries of the island's settlement.",
-    "C": "Small clustered rooms had lower ceilings than long halls, so a hearth had less air to heat in each room.",
-    "D": "Farms rich in driftwood for beams switched to clustered rooms as early as timber-poor farms, and first where winters were harshest."
+    "A": "Iceland's birch woodlands had been largely cleared within a few centuries of the island's settlement.",
+    "B": "Small clustered rooms had lower ceilings than long halls, so each room's hearth had less air to heat than a hall's hearth did.",
+    "C": "Driftwood-rich farms switched to clustered rooms as early as timber-poor farms, and first where winters were harshest.",
+    "D": "Houses with clustered rooms used more turf for each square meter of floor than the earlier long halls did."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Ólafsdóttir and her opponents offer competing causes: cold or timber shortage. Support must separate them. If farms with plenty of driftwood for beams changed as early as timber-poor farms, timber shortage cannot explain the change, and if the change came first where winters were harshest, cold is the likely cause.",
-    "A": "Incorrect. The amount of turf used does not tell us whether cold or timber shortage drove the change in house plans.",
-    "B": "Incorrect. Cleared woodlands would make timber scarce, which fits the rival explanation rather than Ólafsdóttir's; this weakens her argument.",
-    "C": "Incorrect. This explains why small rooms might be warmer, but it does not show that the change actually happened in response to a cooling climate rather than a lack of timber.",
-    "D": "Correct. Timber supply made no difference to the timing, while harsh winters did, which points to climate rather than timber shortage as the cause."
+    "A": "Incorrect. Cleared woodlands would make timber scarce, which fits the rival explanation rather than Ólafsdóttir's; this weakens her argument.",
+    "B": "Incorrect. This explains why small rooms might be warmer, but it does not show that the change actually happened in response to a cooling climate rather than a lack of timber.",
+    "C": "Correct. Timber supply made no difference to the timing, while harsh winters did, which points to climate rather than timber shortage as the cause.",
+    "D": "Incorrect. The amount of turf used does not tell us whether cold or timber shortage drove the change in house plans."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
-    "C": "true_irrelevant"
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

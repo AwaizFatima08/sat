@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "For example,",
+    "A": "Specifically,",
     "B": "Nevertheless,",
     "C": "Consequently,",
-    "D": "Specifically,"
+    "D": "For example,"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The second sentence says only that the penalty for destroying an eye \"depended heavily on the social rank of the victim.\" The last sentence spells out exactly how: a different penalty for each of three ranks. A transition that introduces a precise statement of the previous idea is needed.",
-    "A": "Incorrect. The penalty for eye injuries is already the example (the previous sentence calls it one \"for instance\"); the last sentence does not give a further example but lays out that rule in full. This is the closest near miss.",
+    "A": "Correct. \"Specifically\" signals that the last sentence states exactly how the penalty depended on the victim's rank.",
     "B": "Incorrect. The different penalties confirm that rank mattered; they do not go against the previous sentence.",
     "C": "Incorrect. The penalties are not a result of the previous sentence; they are the details of the rule it describes.",
-    "D": "Correct. \"Specifically\" signals that the last sentence states exactly how the penalty depended on the victim's rank."
+    "D": "Incorrect. The penalty for eye injuries is already the example (the previous sentence calls it one \"for instance\"); the last sentence does not give a further example but lays out that rule in full. This is the closest near miss."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

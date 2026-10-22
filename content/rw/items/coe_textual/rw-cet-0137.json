@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Sharma's hypothesis?",
   "choices": {
-    "A": "Bhopas who learned from the same teacher usually sing a given episode using nearly identical words.",
-    "B": "Phad paintings made in recent decades show more scenes from the epic than older phads do.",
-    "C": "Bhopas usually perform episodes in the same order, regardless of which village has invited them.",
-    "D": "Bhopas usually performed whichever episodes their hosts had requested, even ones from late in the story."
+    "A": "Phad paintings made in recent decades show more scenes from the epic than older phads do.",
+    "B": "Bhopas usually perform episodes in the same order, regardless of which village has invited them.",
+    "C": "Bhopas usually performed whichever episodes their hosts had requested, even ones from late in the story.",
+    "D": "Bhopas who learned from the same teacher usually sing any given episode using nearly identical words and melodies."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Sharma's hypothesis concerns how episodes are chosen: by hosts' wishes rather than by a fixed, inherited order. Support must show the choice following the hosts' requests, even when that breaks the story's order. Performing requested episodes from late in the story does exactly that.",
-    "A": "Incorrect. This concerns the wording of an episode, not which episodes are chosen, so it does not bear on the hypothesis.",
-    "B": "Incorrect. Changes in the paintings do not show how bhopas decide which episodes to perform.",
-    "C": "Incorrect. Keeping the same order everywhere would suggest a fixed sequence, which weakens the hypothesis.",
-    "D": "Correct. Bhopas followed their hosts' requests even when the requested episodes came late in the story, which shows hosts' wishes rather than a fixed sequence guiding the choice."
+    "A": "Incorrect. Changes in the paintings do not show how bhopas decide which episodes to perform.",
+    "B": "Incorrect. Keeping the same order everywhere would suggest a fixed sequence, which weakens the hypothesis.",
+    "C": "Correct. Bhopas followed their hosts' requests even when the requested episodes came late in the story, which shows hosts' wishes rather than a fixed sequence guiding the choice.",
+    "D": "Incorrect. This concerns the wording of an episode, not which episodes are chosen, so it does not bear on the hypothesis."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "B": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

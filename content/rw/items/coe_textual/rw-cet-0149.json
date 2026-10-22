@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Ashby's argument?",
   "choices": {
-    "A": "Female characters in the plays of this period speak, on average, far fewer lines than male characters do.",
+    "A": "The number of large female roles in new plays stayed about the same whenever companies gained or lost skilled apprentices.",
     "B": "Several apprentices who played female roles went on to become leading actors in adult male roles.",
-    "C": "Plays for companies with two skilled apprentices rarely had over two large female roles, but plays for companies with four often did.",
-    "D": "The number of large female roles in new plays stayed the same when companies gained or lost skilled apprentices."
+    "C": "Female characters in the plays of this period speak, on average, far fewer lines than male characters do.",
+    "D": "Plays for two-apprentice companies rarely had over two large female roles, but plays for four-apprentice companies often did."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Ashby ties the number of large female roles in a play to the number of skilled apprentices in the company it was written for. Support must compare companies with different numbers of apprentices. If plays for two-apprentice companies seldom exceed two large female roles while plays for four-apprentice companies often do, the roles track the apprentices.",
-    "A": "Incorrect. Female characters having fewer lines overall does not show that their number depended on how many skilled apprentices a company had.",
+    "A": "Incorrect. If the number of roles did not change as companies' apprentices changed, the link would not hold; this weakens the argument.",
     "B": "Incorrect. Apprentices' later careers do not bear on how many female roles playwrights wrote.",
-    "C": "Correct. The number of large female roles rose with the number of skilled apprentices, exactly the link Ashby proposes.",
-    "D": "Incorrect. If the number of roles did not change as companies' apprentices changed, the link would not hold; this weakens the argument."
+    "C": "Incorrect. Female characters having fewer lines overall does not show that their number depended on how many skilled apprentices a company had.",
+    "D": "Correct. The number of large female roles rose with the number of skilled apprentices, exactly the link Ashby proposes."
   },
   "traps": {
-    "A": "true_irrelevant",
+    "A": "reversed",
     "B": "true_irrelevant",
-    "D": "reversed"
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

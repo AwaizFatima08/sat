@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Indeed,",
-    "B": "Consequently,",
-    "C": "In reality,",
-    "D": "For instance,"
+    "A": "In reality,",
+    "B": "For instance,",
+    "C": "Consequently,",
+    "D": "Indeed,"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The second sentence describes a calculation based on an assumption: that a bee's wing is rigid and motionless. The last sentence describes how bee wings actually work, which shows that the assumption was false. A transition that contrasts a false assumption with the facts is needed.",
-    "A": "Incorrect. \"Indeed\" would confirm the calculation, but the last sentence shows why it was wrong. It is tempting because the word \"indeed\" appears in the sentence before.",
-    "B": "Incorrect. The way bee wings move is not a result of the calculation's assumption; it contradicts that assumption.",
-    "C": "Correct. \"In reality\" signals that the last sentence describes how bee wings truly work, in contrast to the rigid wing the calculation assumed.",
-    "D": "Incorrect. The moving, twisting wing is not an example of a rigid, motionless wing; it is the opposite."
+    "A": "Correct. \"In reality\" signals that the last sentence describes how bee wings truly work, in contrast to the rigid wing the calculation assumed.",
+    "B": "Incorrect. The moving, twisting wing is not an example of a rigid, motionless wing; it is the opposite.",
+    "C": "Incorrect. The way bee wings move is not a result of the calculation's assumption; it contradicts that assumption.",
+    "D": "Incorrect. \"Indeed\" would confirm the calculation, but the last sentence shows why it was wrong. It is tempting because the word \"indeed\" appears in the sentence before."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

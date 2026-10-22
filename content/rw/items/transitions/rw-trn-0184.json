@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "Nevertheless,",
-    "B": "Indeed,",
+    "B": "In contrast,",
     "C": "Consequently,",
-    "D": "In contrast,"
+    "D": "Indeed,"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The first two sentences describe how deeply the sisters were estranged. The last sentence pushes that description further with the most striking evidence of all: one did not know the other was ill. A transition that reinforces and intensifies the previous point is needed.",
     "A": "Incorrect. \"Nevertheless\" signals something true despite the previous point, but the illness episode confirms the estrangement rather than going against it.",
-    "B": "Correct. \"Indeed\" introduces an even stronger illustration of how complete the sisters' estrangement was.",
+    "B": "Incorrect. \"In contrast\" signals a difference, but the last sentence continues the same picture of the sisters.",
     "C": "Incorrect. \"Consequently\" would make the illness episode a result of the separate mealtimes and the messages through the housemaid, but all of these are signs of the same estrangement, and the last sentence presents the most extreme of them.",
-    "D": "Incorrect. \"In contrast\" signals a difference, but the last sentence continues the same picture of the sisters."
+    "D": "Correct. \"Indeed\" introduces an even stronger illustration of how complete the sisters' estrangement was."
   },
   "traps": {
     "A": "wrong_logic",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "B": "wrong_logic",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

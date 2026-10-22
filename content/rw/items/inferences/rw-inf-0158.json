@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0158",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Historians have often used the number of known ancient shipwrecks as a rough measure of seaborne trade in the Roman Mediterranean. The count rises to a peak between about 100 BCE and 100 CE and then falls steeply, a pattern long read as evidence of declining commerce. Most known wrecks, however, were found by divers who spotted heaps of amphorae, the clay jars in which wine and oil were shipped; a wreck without such a heap is far harder to find. From the second century CE onward, merchants in parts of the empire increasingly shipped wine in wooden barrels, which rarely survive on the seafloor. Taken together, these facts suggest that the fall in known wrecks after the peak ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "occurred because ships carrying barrels were less likely to sink.",
+    "B": "proves that Roman trade collapsed in the centuries after 100 CE.",
+    "C": "shows that seaborne trade in the Mediterranean actually grew after 100 CE.",
+    "D": "may overstate how much seaborne trade actually declined after that time."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Wrecks are found mainly by their heaps of amphorae, and after the second century some cargo moved in barrels that leave little trace. Ships carrying barrels would be undercounted, so part of the drop in known wrecks may reflect changing containers rather than less trade. The decline in trade may therefore be smaller than the wreck count suggests.",
+    "A": "Incorrect. The text says barrels are hard to find, not that ships carrying them sank less often.",
+    "B": "Incorrect. The text's point is that the wreck count may be misleading, so it cannot prove a collapse.",
+    "C": "Incorrect. The text suggests the decline may be overstated, not that trade grew; it gives no evidence of growth.",
+    "D": "Correct. Barrels leave few traces, so wrecks after the shift are harder to find, which could exaggerate the apparent decline."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

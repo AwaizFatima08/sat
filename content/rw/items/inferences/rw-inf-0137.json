@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0137",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In 2021 a European city began charging most vehicles a fee to enter its center between 7 a.m. and 7 p.m. The city's cameras, which operate only during those hours, recorded a 30 percent drop in delivery trucks entering the center during the first year. Yet a survey of shops in the center found that the number of deliveries they received was almost unchanged, and the city made no other changes to delivery rules during the period. Comparing the two sources, urban economist Paolo Ferri concluded that the fee had most likely ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "cut daytime truck traffic, with many deliveries moving to hours without the fee.",
+    "B": "led shops in the center to order smaller deliveries that arrived more often than before.",
+    "C": "reduced the total number of deliveries that shops in the center received.",
+    "D": "removed delivery trucks from the city center at every hour of the day."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The cameras show fewer trucks only during charging hours, because that is when they operate. Shops, however, received about as many deliveries as before. If deliveries stayed the same while daytime trucks fell, many deliveries were probably made at night, when the cameras do not record and no fee applies.",
+    "A": "Correct. This fits both sources: trucks fell during charging hours, while unchanged deliveries point to a shift to other hours.",
+    "B": "Incorrect. More frequent deliveries would mean more trucks, and the text says nothing about delivery size.",
+    "C": "Incorrect. The shop survey shows the number of deliveries was almost unchanged.",
+    "D": "Incorrect. The cameras show a 30 percent drop during charging hours only, not the disappearance of trucks at all hours."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

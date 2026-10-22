@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0135",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Many lakes in Bengaluru, India, were once choked with sewage and weeds. When one lake was restored, workers not only cleaned the water but also reshaped its edges into wide, shallow margins where the water is only a few centimeters deep. Ecologist Shreya Raghavan, who counted birds at the lake before and after the work, argues that the new margins mainly benefited wading birds such as herons and egrets, which feed by walking in shallow water. Other groups, she says, gained far less.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Bird Counts at a Bengaluru Lake Before and After Restoration",
+    "columns": [
+      "Bird group",
+      "Before restoration",
+      "After restoration"
+    ],
+    "rows": [
+      [
+        "Wading birds",
+        34,
+        112
+      ],
+      [
+        "Diving birds",
+        58,
+        71
+      ],
+      [
+        "Dabbling ducks",
+        40,
+        46
+      ],
+      [
+        "Kingfishers",
+        6,
+        9
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Raghavan's argument?",
+  "choices": {
+    "A": "Dabbling ducks increased by a greater number of birds than wading birds did after the restoration.",
+    "B": "Before the restoration, diving birds were the most numerous of the four groups of birds counted.",
+    "C": "Every group of birds counted was more numerous after the restoration than it had been before.",
+    "D": "Wading birds more than tripled, from 34 to 112, while no other group of birds even doubled."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Raghavan argues that wading birds gained far more than other groups. The choice must compare wading birds' increase with the other groups' increases. Wading birds rose from 34 to 112, more than tripling, while diving birds, dabbling ducks, and kingfishers rose by about 50% or less.",
+    "A": "Incorrect. Dabbling ducks rose by only 6 birds (40 to 46), while wading birds rose by 78.",
+    "B": "Incorrect. This is true (58 was the largest count before), but it describes only the starting numbers, not which group gained most.",
+    "C": "Incorrect. This is true, but it shows that all groups gained, not that wading birds gained far more than the others.",
+    "D": "Correct. Wading birds more than tripled, while the largest gain among the other groups was kingfishers' rise from 6 to 9."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "rw-ceq-0160",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In many cities, wealthier neighborhoods are cooler on summer afternoons than poorer ones. Climate researcher Jamal Bennett measured afternoon surface temperatures in five neighborhoods of a large city in the United States. He argues that income itself is not what keeps a neighborhood cool. Instead, he contends, tree canopy, the share of the ground shaded by trees, explains the difference, and wealthier neighborhoods tend to be cooler mainly because they usually have more trees.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Income, Tree Canopy, and Summer Temperature in Five Neighborhoods",
+    "columns": [
+      "Neighborhood",
+      "Median household income ($)",
+      "Tree canopy (%)",
+      "Average afternoon surface temperature (°C)"
+    ],
+    "rows": [
+      [
+        "A",
+        112000,
+        41,
+        31.2
+      ],
+      [
+        "B",
+        98000,
+        12,
+        38.6
+      ],
+      [
+        "C",
+        47000,
+        39,
+        31.8
+      ],
+      [
+        "D",
+        41000,
+        9,
+        39.4
+      ],
+      [
+        "E",
+        71000,
+        24,
+        35.0
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Bennett's argument?",
+  "choices": {
+    "A": "Neighborhood C, with under half of B's median income, had 39% tree canopy and was nearly 7°C cooler than B.",
+    "B": "Neighborhood A had both the highest median household income and the lowest afternoon surface temperature of the five.",
+    "C": "Neighborhood C was hotter than Neighborhood B, even though C had far more tree canopy than B did.",
+    "D": "Neighborhood D had both the lowest median household income and the highest afternoon surface temperature."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Bennett must separate canopy from income, since in most neighborhoods the two go together. The best evidence is a neighborhood where they point in opposite directions. Neighborhood C has much lower income than B but far more canopy, and it is the cooler of the two (31.8°C versus 38.6°C), so canopy, not income, matches temperature.",
+    "A": "Correct. C is poorer than B but shadier, and it is much cooler, which shows canopy rather than income tracking temperature.",
+    "B": "Incorrect. Neighborhood A is high in both income and canopy, so its low temperature fits an income explanation just as well as Bennett's.",
+    "C": "Incorrect. Neighborhood C (31.8°C) was much cooler than Neighborhood B (38.6°C), not hotter.",
+    "D": "Incorrect. Neighborhood D is low in both income and canopy, so its high temperature cannot show which factor matters."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

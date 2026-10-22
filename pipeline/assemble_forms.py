@@ -5,8 +5,8 @@
   python3 pipeline/assemble_forms.py --check  # report only
 
 For each question type, paper items are sorted by difficulty and dealt round-robin to the 10 papers, so every
-paper gets the same spread. Within a paper, each type's items are taken in triples (low, middle, high): the low
-one goes to the easier module 2, the high one to the harder module 2 and the middle one to module 1. Items in a
+paper gets the same spread (snake order). Within a paper, each type's items are split into thirds by difficulty:
+the lowest third goes to the easier module 2, the middle third to module 1, the highest third to the harder module 2. Items in a
 module follow the blueprint type order, easier to harder within each type. The routing threshold is the expected
 module 1 score of a student at ability 0 (Rasch), rounded.
 """
@@ -39,14 +39,13 @@ def main():
             continue
         dealt = [[] for _ in range(PAPERS)]
         for k, it in enumerate(mine[:need]):
-            dealt[k % PAPERS].append(it)
+            r, pos = divmod(k, PAPERS)
+            dealt[pos if r % 2 == 0 else PAPERS - 1 - pos].append(it)   # snake order: equal papers
         for p, group in enumerate(dealt):
             group.sort(key=lambda i: (i["b"], i["id"]))
-            for j in range(c):
-                low, mid, high = group[3 * j], group[3 * j + 1], group[3 * j + 2]
-                papers[p]["m2_easy"].append(low)
-                papers[p]["m1"].append(mid)
-                papers[p]["m2_hard"].append(high)
+            papers[p]["m2_easy"] += group[:c]
+            papers[p]["m1"] += group[c:2 * c]
+            papers[p]["m2_hard"] += group[2 * c:]
     if short:
         print("Not enough paper items yet:\n  " + "\n  ".join(short))
         return

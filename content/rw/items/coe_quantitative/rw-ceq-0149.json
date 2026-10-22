@@ -1,0 +1,121 @@
+{
+  "id": "rw-ceq-0149",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Each winter, caves form inside the edges of Iceland's Vatnajökull glacier, and guided tours lead visitors through their blue ice. Because the caves are safe to enter only when the ice is cold and firm, the tour season depends on the weather. Guide Einar Pálsson compared monthly visitor numbers for two seasons eight years apart. He argues that warmer conditions have shortened the season at both its beginning and its end, even though demand in the middle of winter has held steady.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Monthly Visitors on Vatnajökull Ice Cave Tours",
+    "x_label": "Month",
+    "y_label": "Visitors (thousands)",
+    "series": [
+      {
+        "name": "2015–16 season",
+        "points": [
+          [
+            "October",
+            2
+          ],
+          [
+            "November",
+            9
+          ],
+          [
+            "December",
+            14
+          ],
+          [
+            "January",
+            15
+          ],
+          [
+            "February",
+            14
+          ],
+          [
+            "March",
+            11
+          ]
+        ]
+      },
+      {
+        "name": "2023–24 season",
+        "points": [
+          [
+            "October",
+            0
+          ],
+          [
+            "November",
+            3
+          ],
+          [
+            "December",
+            13
+          ],
+          [
+            "January",
+            16
+          ],
+          [
+            "February",
+            15
+          ],
+          [
+            "March",
+            5
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Pálsson's argument?",
+  "choices": {
+    "A": "In both seasons shown, January had more visitors than December did.",
+    "B": "The total number of visitors over the whole season was greater in 2023–24 than in 2015–16.",
+    "C": "In the 2023–24 season, the number of visitors peaked in January, at about 16,000, slightly above the 2015–16 season's peak.",
+    "D": "Visitors fell from about 9,000 to 3,000 in November and 11,000 to 5,000 in March but held steady from December to February."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Pálsson's argument has two parts: the early and late months lost visitors, and the midwinter months did not. Support must compare the two seasons at the edges and in the middle. November and March dropped sharply between the seasons, while December through February stayed within about 1,000 visitors of the earlier season.",
+    "A": "Incorrect. This is true, but it compares two midwinter months and says nothing about the start or end of the season.",
+    "B": "Incorrect. The 2023–24 season had fewer visitors in total (about 52,000) than the 2015–16 season (about 65,000).",
+    "C": "Incorrect. This is true, but a peak in one season does not show how the season's length changed.",
+    "D": "Correct. The early and late months lost many visitors while the midwinter months held steady, matching both parts of the argument."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

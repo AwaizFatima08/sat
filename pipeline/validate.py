@@ -250,6 +250,7 @@ def check_forms(items_by_id):
             continue
         if not isinstance(f.get("route_threshold"), int):
             err(w, "route_threshold (module 1 raw correct needed for the harder module) missing")
+        mean_b = {}
         for mk, ids in mods.items():
             if len(ids) != BP["module_items"]:
                 err(w, f"{mk} has {len(ids)} items, expected {BP['module_items']}")
@@ -273,9 +274,9 @@ def check_forms(items_by_id):
                 last = pos
             if dict(types) != {k: v for k, v in mb["types"].items() if v}:
                 err(w, f"{mk} type counts {dict(types)} differ from blueprint")
-            want = {k: v for k, v in mb["levels"][mk].items() if v}
-            if dict(levels) != want:
-                warn(w, f"{mk} level counts {dict(levels)} differ from blueprint {want}")
+            mean_b[mk] = sum(items_by_id[i]["b"] for i in ids if i in items_by_id) / max(1, len(ids))
+        if len(mean_b) == 3 and not (mean_b["m2_easy"] < mean_b["m1"] < mean_b["m2_hard"]):
+            err(w, f"module difficulty order wrong: {mean_b}")
     return seen
 
 

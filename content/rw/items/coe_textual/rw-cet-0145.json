@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Kamaka's argument?",
   "choices": {
-    "A": "Fishpond walls along that stretch of coast were rebuilt several times after being damaged by storms.",
-    "B": "The fish raised in the ponds were mostly mullet and milkfish, which feed on algae growing in the water.",
-    "C": "The dates of new ponds along that coast closely track increases in the number of house sites near the shore.",
+    "A": "The dates of new ponds along that coast closely track increases in the number of house sites near the shore.",
+    "B": "The fish raised in the ponds were mostly mullet and milkfish, both of which feed on algae growing in the water.",
+    "C": "Fishpond walls along that stretch of coast were rebuilt several times after being damaged by storms.",
     "D": "Most new ponds along that coast were built within a few years after a new chief took control of the area."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Kamaka connects the building of new ponds to a rising local population rather than to chiefs' ambitions. Support must show that pond building rose and fell with the number of people. If the dates of new ponds track increases in nearby house sites, pond building followed population growth.",
-    "A": "Incorrect. Repairs after storms say nothing about why new ponds were built in the first place.",
+    "A": "Correct. New ponds appeared as house sites near the shore increased, linking pond building to a growing local population.",
     "B": "Incorrect. The kinds of fish raised do not show whether population growth or chiefly power led to new ponds.",
-    "C": "Correct. New ponds appeared as house sites near the shore increased, linking pond building to a growing local population.",
+    "C": "Incorrect. Repairs after storms say nothing about why new ponds were built in the first place.",
     "D": "Incorrect. Ponds built soon after new chiefs took power would support the usual explanation that Kamaka disputes; this weakens his argument."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "true_irrelevant",
+    "C": "true_irrelevant",
     "D": "reversed"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

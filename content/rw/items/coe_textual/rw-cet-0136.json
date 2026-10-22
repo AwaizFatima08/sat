@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which quotation from Sonnet 18 most effectively illustrates the claim?",
   "choices": {
-    "A": "\"So long as men can breathe, or eyes can see, / So long lives this, and this gives life to thee.\"",
-    "B": "\"Rough winds do shake the darling buds of May, / And summer's lease hath all too short a date:\"",
-    "C": "\"Shall I compare thee to a summer's day? / Thou art more lovely and more temperate:\"",
-    "D": "\"And every fair from fair sometime declines, / By chance, or nature's changing course untrimm'd:\""
+    "A": "\"Rough winds do shake the darling buds of May, / And summer's lease hath all too short a date:\"",
+    "B": "\"Shall I compare thee to a summer's day? / Thou art more lovely and more temperate:\"",
+    "C": "\"And every fair from fair sometime declines, / By chance, or nature's changing course untrimm'd:\"",
+    "D": "\"So long as men can breathe, or eyes can see, / So long lives this, and this gives life to thee.\""
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The claim is that the speaker says the poem will preserve the addressee's beauty as long as people can read it. The right quotation must link the poem (\"this\") to lasting life. In the final couplet, \"this\" (the poem) \"lives\" as long as \"eyes can see\" and \"gives life to thee.\"",
-    "A": "Correct. \"This\" refers to the poem, which will live as long as people can see to read it and will give the addressee lasting life.",
-    "B": "Incorrect. These lines describe summer's flaws, such as its brief \"lease,\" but say nothing about the poem preserving anyone's beauty.",
-    "C": "Incorrect. These lines set up the comparison and praise the addressee, but they do not claim that the poem will keep that beauty alive.",
-    "D": "Incorrect. These lines say that every beautiful thing eventually fades, which is the problem the poem answers, not the claim that the poem will preserve beauty."
+    "A": "Incorrect. These lines describe summer's flaws, such as its brief \"lease,\" but say nothing about the poem preserving anyone's beauty.",
+    "B": "Incorrect. These lines set up the comparison and praise the addressee, but they do not claim that the poem will keep that beauty alive.",
+    "C": "Incorrect. These lines say that every beautiful thing eventually fades, which is the problem the poem answers, not the claim that the poem will preserve beauty.",
+    "D": "Correct. \"This\" refers to the poem, which will live as long as people can see to read it and will give the addressee lasting life."
   },
   "traps": {
+    "A": "true_irrelevant",
     "B": "true_irrelevant",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,8 +43,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

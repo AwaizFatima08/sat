@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Venier's argument?",
   "choices": {
-    "A": "Gondolas with asymmetrical hulls are slightly heavier than older gondolas of the same length.",
-    "B": "Asymmetrical hulls first appeared on gondolas built for racing rather than on those that carried passengers.",
-    "C": "The share of gondolas rowed by two oarsmen stayed about the same as asymmetrical hulls became common.",
+    "A": "The share of gondolas rowed by two oarsmen stayed about the same as asymmetrical hulls became common.",
+    "B": "Asymmetrical hulls first appeared on gondolas built for racing rather than on the gondolas that carried paying passengers.",
+    "C": "Gondolas with asymmetrical hulls are slightly heavier than older gondolas of the same length.",
     "D": "Owners' account books show that switching to an asymmetrical gondola usually meant paying one rower instead of two."
   },
   "answer": "D",
   "explanation": {
     "why": "Venier claims the asymmetrical design was adopted mainly to save money by letting one oarsman do the work of two. Support must tie the new hull both to fewer rowers and to lower costs. Account books showing that owners paid one rower instead of two after switching connect the design directly to that saving.",
-    "A": "Incorrect. A difference in weight does not show that the design reduced the number of rowers or the cost of operating the boat.",
+    "A": "Incorrect. If two-oarsman gondolas remained just as common, the design did not lead owners to use fewer rowers; this weakens the argument.",
     "B": "Incorrect. A racing origin would suggest the design was meant for speed rather than for saving on rowers' wages.",
-    "C": "Incorrect. If two-oarsman gondolas remained just as common, the design did not lead owners to use fewer rowers; this weakens the argument.",
+    "C": "Incorrect. A difference in weight does not show that the design reduced the number of rowers or the cost of operating the boat.",
     "D": "Correct. The switch to the new hull went along with paying one rower rather than two, which is the cost saving Venier describes."
   },
   "traps": {
-    "A": "true_irrelevant",
+    "A": "reversed",
     "B": "true_irrelevant",
-    "C": "reversed"
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

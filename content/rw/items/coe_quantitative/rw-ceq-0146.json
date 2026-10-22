@@ -1,0 +1,121 @@
+{
+  "id": "rw-ceq-0146",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Lisbon's Tram 28 winds through the old hilltop neighborhoods of the Portuguese capital and has become one of the city's most famous tourist attractions. As crowds of visitors packed its small cars, some residents complained that they could no longer ride the line at all. Urban planner Marta Sousa counted riders over several weeks and argues that residents have adapted rather than abandoned the tram: they now ride it mostly at the times of day when tourists are few.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Average Riders per Hour on Lisbon's Tram 28",
+    "x_label": "Time of day",
+    "y_label": "Riders per hour",
+    "series": [
+      {
+        "name": "Residents",
+        "points": [
+          [
+            "7–9 a.m.",
+            410
+          ],
+          [
+            "9–11 a.m.",
+            240
+          ],
+          [
+            "11 a.m.–1 p.m.",
+            150
+          ],
+          [
+            "1–3 p.m.",
+            140
+          ],
+          [
+            "3–5 p.m.",
+            190
+          ],
+          [
+            "5–7 p.m.",
+            380
+          ]
+        ]
+      },
+      {
+        "name": "Tourists",
+        "points": [
+          [
+            "7–9 a.m.",
+            60
+          ],
+          [
+            "9–11 a.m.",
+            280
+          ],
+          [
+            "11 a.m.–1 p.m.",
+            520
+          ],
+          [
+            "1–3 p.m.",
+            560
+          ],
+          [
+            "3–5 p.m.",
+            470
+          ],
+          [
+            "5–7 p.m.",
+            210
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Sousa's argument?",
+  "choices": {
+    "A": "From 11 a.m. to 1 p.m., tourist riders outnumbered resident riders by more than three to one.",
+    "B": "Tourist ridership on the tram was highest from 1 to 3 p.m., at about 560 riders per hour.",
+    "C": "Residents' ridership was highest from 1 to 3 p.m., the same two-hour period in which tourist riders were most numerous.",
+    "D": "Residents' riding peaked from 7 to 9 a.m. and from 5 to 7 p.m., the two periods with the fewest tourist riders."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Sousa argues that residents ride mainly when tourists are few. Support must connect the times of residents' heaviest riding with the times of lightest tourist riding. Residents' two highest bars (about 410 and 380) fall in exactly the two periods with the fewest tourists (about 60 and 210).",
+    "A": "Incorrect. This is true (about 520 versus 150), but it shows only that residents are scarce at midday, not that they ride mainly at the quieter times.",
+    "B": "Incorrect. This is true, but it describes only tourists and does not show when residents ride.",
+    "C": "Incorrect. Residents' ridership was among its lowest from 1 to 3 p.m. (about 140), not its highest.",
+    "D": "Correct. Residents rode most in the early morning and early evening, when tourist ridership was at its lowest, which matches Sousa's argument."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

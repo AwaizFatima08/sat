@@ -15,22 +15,22 @@
   "stem": "Which finding, if true, would most directly support Sen's argument?",
   "choices": {
     "A": "On average, the English poems are less than half as long as the Bengali poems from which they were translated.",
-    "B": "The English poems rarely keep the patterns of rhyme that run throughout the Bengali originals.",
-    "C": "Images of Bengali seasons, plants, and festivals were dropped no more often than images of sky, light, and rain.",
-    "D": "References to Bengali seasons, plants, and festivals were dropped far more often than widely shared images of sky and light."
+    "B": "References to Bengali seasons, plants, and festivals were dropped far more often than widely shared images of sky and light.",
+    "C": "Images of Bengali seasons, plants, and festivals were dropped no more often than widely shared images of sky, light, and rain.",
+    "D": "The English poems rarely keep the patterns of rhyme that run throughout the Bengali originals."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Sen argues that Tagore's cuts targeted details unfamiliar to English readers. To support this, a finding must show that the cuts fell unevenly, landing mostly on culturally specific material. If references to Bengali seasons, plants, and festivals were dropped far more often than images any reader would know, the pattern of cuts reflects the audience.",
     "A": "Incorrect. This confirms that the English poems are shorter, which both Sen and the critics accept; it does not show what kind of material was removed.",
-    "B": "Incorrect. Losing the rhyme fits the critics' view about the difficulty of English verse; it does not show that unfamiliar details were the main target of the cuts.",
+    "B": "Correct. Culturally specific details were removed far more often than familiar images, which is the pattern Sen's argument predicts.",
     "C": "Incorrect. If unfamiliar Bengali details were cut no more often than familiar images, the cuts would not reflect a choice about audience; this weakens the argument.",
-    "D": "Correct. Culturally specific details were removed far more often than familiar images, which is the pattern Sen's argument predicts."
+    "D": "Incorrect. Losing the rhyme fits the critics' view about the difficulty of English verse; it does not show that unfamiliar details were the main target of the cuts."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

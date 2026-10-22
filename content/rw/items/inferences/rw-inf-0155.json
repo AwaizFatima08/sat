@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0155",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Library fines for late returns are often defended as the only thing that makes borrowers bring items back on time. When a city library system abolished late fines in 2019, while making no other changes to its lending rules, researcher Tomás Aguilar compared the two years before the change with the two years after. The share of items returned late rose modestly, from 8 percent to 11 percent. Over the same period, however, the number of borrowers whose accounts were blocked for unpaid fines, many of whom had stopped using the library without returning what they had borrowed, fell sharply, and the number of items never returned dropped by about 40 percent. Aguilar's findings suggest that abolishing fines ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "had no measurable effect on when or whether borrowers returned their items.",
+    "B": "made returns slightly less prompt but reduced how many items were lost.",
+    "C": "showed that borrowers with unpaid fines had returned items faster than others.",
+    "D": "removed the main reason that borrowers had for returning items on time at all."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Two results must be combined. Late returns rose a little (8 to 11 percent), so fines did encourage some promptness. But blocked accounts fell and items never returned dropped by about 40 percent, which suggests fines had been driving some borrowers away with their items. The overall effect was slightly later returns but fewer permanent losses.",
+    "A": "Incorrect. Both late returns and lost items changed after the fines ended.",
+    "B": "Correct. This captures both results: a small rise in late returns and a large drop in items never returned.",
+    "C": "Incorrect. The text says many blocked borrowers stopped using the library without returning items, the opposite of returning them faster.",
+    "D": "Incorrect. Late returns rose only from 8 to 11 percent, so most borrowers still returned items on time without fines."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "reversed",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

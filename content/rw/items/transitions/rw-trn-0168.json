@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Specifically,",
-    "B": "Nevertheless,",
+    "A": "Nevertheless,",
+    "B": "In other words,",
     "C": "For example,",
-    "D": "In other words,"
+    "D": "Specifically,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The second sentence defines sprezzatura as performing difficult feats with an ease that hides the effort. The last sentence says the same thing in plainer and sharper terms: work hard in private so as to seem effortless in public. A restatement transition is needed.",
-    "A": "Incorrect. \"Specifically\" would add a narrower, more detailed point, but the last sentence repeats the definition in different words rather than adding detail. This is the closest near miss.",
-    "B": "Incorrect. \"Nevertheless\" signals something true despite the previous point, but laboring in private to seem effortless is exactly what sprezzatura requires. The paradox inside the sentence may make a contrast transition look tempting.",
+    "A": "Incorrect. \"Nevertheless\" signals something true despite the previous point, but laboring in private to seem effortless is exactly what sprezzatura requires. The paradox inside the sentence may make a contrast transition look tempting.",
+    "B": "Correct. \"In other words\" signals that the last sentence restates the meaning of sprezzatura.",
     "C": "Incorrect. The last sentence is a general statement about the ideal courtier, not a particular example; the examples (dancing, conversing, composing verse) came before.",
-    "D": "Correct. \"In other words\" signals that the last sentence restates the meaning of sprezzatura."
+    "D": "Incorrect. \"Specifically\" would add a narrower, more detailed point, but the last sentence repeats the definition in different words rather than adding detail. This is the closest near miss."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

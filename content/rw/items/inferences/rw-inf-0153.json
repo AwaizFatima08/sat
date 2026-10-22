@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0153",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In the humid climate of southern India, the palm-leaf manuscripts on which Tamil literature was long preserved seldom last more than a few centuries, so a text survived only if it was copied again and again. As a result, the oldest surviving manuscript of a work is often far younger than the work itself. Consider a Tamil devotional poem whose oldest known manuscript was copied in the 1700s. Literary historian Kavitha Raman has shown that a commentary on Tamil grammar, written by a scholar whose life can be dated to the 1200s by temple inscriptions, quotes several passages from the poem as examples of fine style. Raman's evidence indicates that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "at least the quoted passages of the poem already existed by the 1200s, centuries before 1700.",
+    "B": "the grammar scholar wrote the poem himself and then claimed that an earlier poet had written it.",
+    "C": "every Tamil poem quoted by medieval scholars survives in some manuscript older than the 1700s.",
+    "D": "the poem was most likely composed in the 1700s, when its oldest known manuscript was copied."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Palm-leaf copies rarely last long, so a manuscript from the 1700s says little about when the poem was written. A scholar from the 1200s quoted passages from it, and he could only quote lines that already existed. The quoted passages therefore date to the 1200s or earlier.",
+    "A": "Correct. A writer of the 1200s could quote only passages that existed in his time, so the quoted lines are at least that old.",
+    "B": "Incorrect. The text gives no reason to think the scholar wrote the poem.",
+    "C": "Incorrect. This poem's oldest manuscript is from the 1700s, which contradicts the claim.",
+    "D": "Incorrect. The text explains that the oldest manuscript is often much younger than the work, and the quotations show the poem is older than 1700."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

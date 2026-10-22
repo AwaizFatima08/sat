@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0160",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Nineteenth-century theaters kept prompt books, working copies of plays in which the stage manager marked cuts, added lines, and recorded cues for performers. For one popular melodrama of the 1840s, two versions survive: the text the playwright published the year the play opened, and the prompt book from the theater that first staged it. The prompt book cuts nearly a third of the second act and adds a song for the heroine that appears nowhere in the published text. Several newspaper reviews of the play's opening week praise that song. These sources suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the playwright wrote the heroine's song after the published text had appeared.",
+    "B": "the published text may not reflect what audiences at the first performances saw.",
+    "C": "the playwright disapproved of the changes that the theater made to the second act.",
+    "D": "prompt books are more reliable guides than published texts for every play of the period."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The prompt book records a version of the play with a shortened second act and an added song. Reviews of the opening week praise the song, which is missing from the published text, so audiences saw the prompt-book version, at least in part. The published text therefore may not match what was performed.",
+    "A": "Incorrect. The reviews show the song was sung in the opening week, the same year the text was published; nothing indicates who wrote it or when.",
+    "B": "Correct. The reviews confirm that a feature found only in the prompt book was performed, so the published text differs from what audiences saw.",
+    "C": "Incorrect. The text gives no information about the playwright's opinion of the changes.",
+    "D": "Incorrect. Evidence about one melodrama cannot establish a rule for every play of the period."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "not_in_text",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

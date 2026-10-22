@@ -1,0 +1,105 @@
+{
+  "id": "rw-ceq-0158",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Some theaters set aside certain performances as pay-what-you-can nights, when audience members choose their own ticket price. Critics have suggested that such nights mostly give discounts to older regular theatergoers, many of whom live on fixed incomes. Theater manager Olivia Chen, who surveyed audiences at a theater in Vancouver, Canada, argues that the nights do something different: compared with regular-price performances, she says, they draw a much younger audience.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Age of Audience Members at a Vancouver Theater",
+    "x_label": "Age group",
+    "y_label": "Share of audience (%)",
+    "series": [
+      {
+        "name": "Regular-price nights",
+        "points": [
+          [
+            "Under 30",
+            14
+          ],
+          [
+            "30–49",
+            29
+          ],
+          [
+            "50–64",
+            31
+          ],
+          [
+            "65 and older",
+            26
+          ]
+        ]
+      },
+      {
+        "name": "Pay-what-you-can nights",
+        "points": [
+          [
+            "Under 30",
+            38
+          ],
+          [
+            "30–49",
+            33
+          ],
+          [
+            "50–64",
+            18
+          ],
+          [
+            "65 and older",
+            11
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Chen's argument?",
+  "choices": {
+    "A": "People aged 65 and older made up a larger share of pay-what-you-can audiences than of regular-price audiences.",
+    "B": "Under-30s were 14% of regular-price audiences but 38% of pay-what-you-can ones; people 65 and older were 26% and 11%.",
+    "C": "On pay-what-you-can nights, people under 30 made up a larger share of the audience than people aged 30 to 49 did, 38% to 33%.",
+    "D": "On regular-price nights, people aged 50 to 64 made up a larger share of the audience than any other age group did."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Chen's claim is comparative: pay-what-you-can audiences are much younger than regular-price audiences. The choice must compare the age makeup of the two kinds of performances. The youngest group's share nearly triples and the oldest group's share falls by more than half on pay-what-you-can nights.",
+    "A": "Incorrect. People 65 and older made up 11% of pay-what-you-can audiences and 26% of regular-price audiences, so their share was smaller, not larger.",
+    "B": "Correct. Compared with regular-price nights, pay-what-you-can nights had a much larger share of young people and a much smaller share of older people.",
+    "C": "Incorrect. This is true (38% versus 33%), but it describes only pay-what-you-can nights; without a comparison to regular-price nights it cannot show that those nights draw a younger crowd.",
+    "D": "Incorrect. This is true (31%), but it describes only regular-price nights."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

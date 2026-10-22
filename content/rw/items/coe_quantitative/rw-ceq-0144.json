@@ -1,0 +1,113 @@
+{
+  "id": "rw-ceq-0144",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "On the tea estates of Sylhet, in northeastern Bangladesh, the first leaves of the season are plucked in March, and growth depends heavily on spring rain. Agronomist Nusrat Jahan compared monthly yields on one estate in a year with normal spring rain and in a year when the spring was unusually dry. She argues that the dry spring cut yields only early in the season: once the monsoon rains arrived in June, she says, the bushes caught up.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Monthly Tea Leaf Yield on a Sylhet Estate (kilograms per hectare)",
+    "x_label": "Month",
+    "y_label": "Yield (kg per hectare)",
+    "series": [
+      {
+        "name": "Year with normal spring rain",
+        "points": [
+          [
+            "March",
+            180
+          ],
+          [
+            "April",
+            320
+          ],
+          [
+            "May",
+            410
+          ],
+          [
+            "June",
+            450
+          ],
+          [
+            "July",
+            470
+          ]
+        ]
+      },
+      {
+        "name": "Year with dry spring",
+        "points": [
+          [
+            "March",
+            110
+          ],
+          [
+            "April",
+            190
+          ],
+          [
+            "May",
+            300
+          ],
+          [
+            "June",
+            440
+          ],
+          [
+            "July",
+            475
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Jahan's argument?",
+  "choices": {
+    "A": "The dry year trailed the normal year by 70 to 130 kilograms from March to May but nearly matched it in June and July.",
+    "B": "In both years, the estate's yield of tea leaves rose in every single month from March through July, peaking each year in July.",
+    "C": "In March, the yield in the dry year was higher than the yield in the year with normal spring rain.",
+    "D": "In the normal year, the yield in July was more than twice the yield in April."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Jahan's argument has two parts: the dry year fell behind early in the season, and it caught up after June. The choice must compare the two years in both periods. From March to May the dry year was 70 to 130 kilograms per hectare lower, but in June and July the two years were within about 10 kilograms of each other.",
+    "A": "Correct. The dry year lagged well behind from March to May and then nearly matched the normal year in June and July.",
+    "B": "Incorrect. This is true, but steady growth in both years does not show that the dry year fell behind and then caught up.",
+    "C": "Incorrect. In March the dry year yielded 110 kilograms per hectare, less than the normal year's 180, not more.",
+    "D": "Incorrect. This is true (470 versus 320), but it describes only the normal year."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

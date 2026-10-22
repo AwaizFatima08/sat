@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which quotation from \"I Wandered Lonely as a Cloud\" most effectively illustrates the claim?",
   "choices": {
-    "A": "\"Continuous as the stars that shine / And twinkle on the milky way,\"",
-    "B": "\"I gazed—and gazed—but little thought / What wealth the show to me had brought:\"",
-    "C": "\"They flash upon that inward eye / Which is the bliss of solitude;\"",
+    "A": "\"I gazed—and gazed—but little thought / What wealth the show to me had brought:\"",
+    "B": "\"They flash upon that inward eye / Which is the bliss of solitude;\"",
+    "C": "\"Continuous as the stars that shine / And twinkle on the milky way,\"",
     "D": "\"The waves beside them danced; but they / Out-did the sparkling waves in glee:\""
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The claim has two parts: the daffodils come back to the speaker later, and they do so when he is alone. The quotation must show both. In \"They flash upon that inward eye / Which is the bliss of solitude,\" the flowers reappear in his memory (his \"inward eye\") during \"solitude.\"",
-    "A": "Incorrect. This line describes the daffodils as they looked during the walk, comparing them to stars; it says nothing about their returning to him later.",
-    "B": "Incorrect. This hints that the scene was worth more than the speaker realized at the time, but it does not show the flowers returning to him when he is alone.",
-    "C": "Correct. The daffodils reappear in the speaker's memory, his \"inward eye,\" and the lines place that moment in \"solitude,\" so both parts of the claim are shown.",
+    "A": "Incorrect. This hints that the scene was worth more than the speaker realized at the time, but it does not show the flowers returning to him when he is alone.",
+    "B": "Correct. The daffodils reappear in the speaker's memory, his \"inward eye,\" and the lines place that moment in \"solitude,\" so both parts of the claim are shown.",
+    "C": "Incorrect. This line describes the daffodils as they looked during the walk, comparing them to stars; it says nothing about their returning to him later.",
     "D": "Incorrect. These lines describe the scene during the walk, comparing the flowers with the waves; they do not show the encounter continuing afterward."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "too_narrow",
+    "A": "too_narrow",
+    "C": "true_irrelevant",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -43,8 +43,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

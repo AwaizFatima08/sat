@@ -14,17 +14,17 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Takahashi's hypothesis?",
   "choices": {
-    "A": "Young five-lined skinks spend more of their time in open, sunny areas than adult skinks do.",
+    "A": "Predators attacked clay skink models with blue tails about as often as models with brown tails.",
     "B": "On clay skink models placed outdoors, blue tails received a larger share of predator strikes than brown tails did.",
-    "C": "Predators attacked clay skink models with blue tails about as often as models with brown tails.",
-    "D": "On clay skink models, strikes hit the head and body just as often whether the model's tail was blue or brown."
+    "C": "Young five-lined skinks spend more of their time in open, sunny areas than adult skinks do.",
+    "D": "On clay skink models, predator strikes hit the head and body just as often whether the model's tail was blue or brown."
   },
   "answer": "B",
   "explanation": {
     "why": "Takahashi's hypothesis is about where attacks land: a blue tail should pull strikes toward itself and away from the head and body. Support must compare where strikes fall on blue-tailed and brown-tailed models. If blue tails receive a larger share of strikes, the color is redirecting attacks.",
-    "A": "Incorrect. Where young skinks spend their time does not show whether the blue tail redirects attacks.",
+    "A": "Incorrect. The hypothesis concerns where attacks land, not how many there are, so equal attack rates neither support nor weaken it.",
     "B": "Correct. A larger share of strikes went to blue tails than to brown ones, so the blue color drew attacks toward the part the skink can lose.",
-    "C": "Incorrect. The hypothesis concerns where attacks land, not how many there are, so equal attack rates neither support nor weaken it.",
+    "C": "Incorrect. Where young skinks spend their time does not show whether the blue tail redirects attacks.",
     "D": "Incorrect. If tail color did not change how often the head and body were hit, the blue tail would not be drawing attacks away from them; this weakens the hypothesis."
   },
   "traps": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

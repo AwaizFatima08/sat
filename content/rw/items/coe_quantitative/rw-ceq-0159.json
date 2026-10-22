@@ -1,0 +1,150 @@
+{
+  "id": "rw-ceq-0159",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Japanese has absorbed thousands of words from English, usually written in the katakana script, such as konpyūtā (\"computer\"). Linguist Haruto Sato counted English loanwords in articles from a major Tokyo newspaper over five decades. He acknowledges that some kinds of coverage have always used more loanwords than others, but he argues that the growth in loanwords since 1990 has come overwhelmingly from technology and business reporting, while other kinds of coverage have changed little.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "English Loanwords in a Tokyo Newspaper by Type of Coverage",
+    "x_label": "Year",
+    "y_label": "Loanwords per 10,000 words",
+    "series": [
+      {
+        "name": "Technology and business",
+        "points": [
+          [
+            "1970",
+            45
+          ],
+          [
+            "1980",
+            70
+          ],
+          [
+            "1990",
+            110
+          ],
+          [
+            "2000",
+            160
+          ],
+          [
+            "2010",
+            210
+          ],
+          [
+            "2020",
+            250
+          ]
+        ]
+      },
+      {
+        "name": "Culture",
+        "points": [
+          [
+            "1970",
+            60
+          ],
+          [
+            "1980",
+            68
+          ],
+          [
+            "1990",
+            75
+          ],
+          [
+            "2000",
+            80
+          ],
+          [
+            "2010",
+            84
+          ],
+          [
+            "2020",
+            86
+          ]
+        ]
+      },
+      {
+        "name": "Politics",
+        "points": [
+          [
+            "1970",
+            20
+          ],
+          [
+            "1980",
+            24
+          ],
+          [
+            "1990",
+            29
+          ],
+          [
+            "2000",
+            35
+          ],
+          [
+            "2010",
+            38
+          ],
+          [
+            "2020",
+            41
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Sato's argument?",
+  "choices": {
+    "A": "From 1990 to 2020, loanwords in culture coverage increased more than loanwords in technology and business coverage did.",
+    "B": "From 1990 to 2020, technology and business coverage gained 140 loanwords per 10,000 words; culture gained 11 and politics 12.",
+    "C": "In 2020, technology and business coverage used more English loanwords per 10,000 words than either of the other two kinds of coverage.",
+    "D": "In 1970, culture coverage used more English loanwords per 10,000 words than technology and business coverage did."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Sato's argument concerns growth since 1990, not the level of loanwords in any single year. The choice must compare how much each kind of coverage changed from 1990 to 2020. Technology and business rose from 110 to 250 (a gain of 140), while culture rose from 75 to 86 and politics from 29 to 41.",
+    "A": "Incorrect. Culture coverage gained only 11 loanwords per 10,000 words, far fewer than the 140 gained in technology and business coverage.",
+    "B": "Correct. Almost all of the growth since 1990 occurred in technology and business coverage, while the other two lines barely rose.",
+    "C": "Incorrect. This is true, but it gives only the 2020 levels; it does not show that the increase since 1990 came from technology and business coverage.",
+    "D": "Incorrect. This is true (60 versus 45), but it describes a single year before 1990 and says nothing about growth since then."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

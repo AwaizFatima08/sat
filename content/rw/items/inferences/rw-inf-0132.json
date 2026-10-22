@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0132",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Radiocarbon dating measures how long ago a living thing stopped taking in carbon. In a tree, each ring stops taking in carbon soon after it forms, so wood from the center of a 400-year-old trunk can give a date centuries earlier than the year the tree was cut. At a coastal settlement, archaeologist Mateus Ribeiro dated charcoal from a hearth to around 1150 CE; the charcoal came from the heartwood of a slow-growing cedar. Seeds of a grass that lives for only one year, found burned together with the charcoal in a single thin layer of ash, dated to around 1400 CE. These results suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the settlement was occupied without a break from 1150 CE to 1400 CE.",
+    "B": "the fire in the hearth probably burned closer to 1400 CE than to 1150 CE.",
+    "C": "the cedar was burned in the hearth long before the grass seeds were.",
+    "D": "radiocarbon dates from hearths are unreliable whatever material is tested."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The text explains that heartwood from an old tree can give a date centuries earlier than when the wood was used. The one-year grass seeds have no such problem, and they were burned in the same thin ash layer as the charcoal, so they mark the same fire. Combining these points, the fire most likely happened near the seeds' date, around 1400 CE, and the cedar date is misleadingly early.",
+    "A": "Incorrect. Nothing in the text shows people living at the site through the whole period; the earlier date reflects the age of the wood.",
+    "B": "Correct. The short-lived seeds date the fire reliably, and the old heartwood explains why the charcoal date is earlier.",
+    "C": "Incorrect. The charcoal and seeds were found together in a single thin layer of ash, which points to one fire, not two.",
+    "D": "Incorrect. The text shows that short-lived material such as one-year seeds can date a hearth well; only old wood is the problem."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

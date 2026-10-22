@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Mamani's hypothesis?",
   "choices": {
-    "A": "Chuño found at the village had been stored in straw-lined pits dug beneath the floors of houses.",
-    "B": "Genetic tests show that freeze-dried potato remains at the village are mostly bitter varieties, while cooked fresh ones are mostly mild.",
-    "C": "Bitter and mild varieties appear in roughly equal numbers among the freeze-dried potato remains at the village.",
-    "D": "The village lies high enough that nights below freezing occur there for several months of each year."
+    "A": "Tests show that freeze-dried potato remains at the site are mostly bitter varieties, while fresh-cooked ones are mostly mild.",
+    "B": "Bitter and mild varieties appear in roughly equal numbers among the freeze-dried potato remains found at the village.",
+    "C": "The village lies high enough that nights below freezing occur there for several months of each year.",
+    "D": "Chuño found at the village had been stored in straw-lined pits dug beneath the floors of houses."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
-    "why": "Mamani's hypothesis matches potato type to use: bitter varieties were freeze-dried, mild ones eaten fresh. Support must show which varieties ended up in each form. Genetic results showing mostly bitter varieties among freeze-dried remains and mostly mild ones among fresh-cooked remains fit the hypothesis on both counts.",
-    "A": "Incorrect. How chuño was stored does not reveal which potato varieties it was made from.",
-    "B": "Correct. The freeze-dried remains are mostly bitter and the fresh-cooked remains mostly mild, exactly the division Mamani proposes.",
-    "C": "Incorrect. If bitter and mild potatoes were freeze-dried equally, chuño was not made mainly from bitter varieties; this weakens the hypothesis.",
-    "D": "Incorrect. Cold nights show only that villagers could make chuño, not which varieties they used for it."
+    "why": "Mamani's hypothesis matches potato type to use: bitter varieties were freeze-dried, mild ones eaten fresh. Support must show which varieties ended up in each form. Test results showing mostly bitter varieties among freeze-dried remains and mostly mild ones among fresh-cooked remains fit the hypothesis on both counts.",
+    "A": "Correct. The freeze-dried remains are mostly bitter and the fresh-cooked remains mostly mild, exactly the division Mamani proposes.",
+    "B": "Incorrect. If bitter and mild potatoes were freeze-dried equally, chuño was not made mainly from bitter varieties; this weakens the hypothesis.",
+    "C": "Incorrect. Cold nights show only that villagers could make chuño, not which varieties they used for it.",
+    "D": "Incorrect. How chuño was stored does not reveal which potato varieties it was made from."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "reversed",
+    "B": "reversed",
+    "C": "true_irrelevant",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

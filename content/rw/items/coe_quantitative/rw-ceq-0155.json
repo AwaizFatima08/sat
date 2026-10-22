@@ -1,0 +1,91 @@
+{
+  "id": "rw-ceq-0155",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the ancient Mediterranean, wine traveled in amphorae, tall clay jars with two handles. Potters on the island of Rhodes and in the city of Knidos often stamped the handles with the names of officials who held office for a single year, which allows archaeologists to date the handles closely. Archaeologist Eleni Stavrou studied stamped handles excavated in Alexandria, Egypt, and argues that during the second century BCE, wine from Knidos increasingly took the place of Rhodian wine in the city's markets.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Stamped Amphora Handles Found in Alexandria, by Period",
+    "columns": [
+      "Period",
+      "Rhodian handles",
+      "Knidian handles"
+    ],
+    "rows": [
+      [
+        "240–210 BCE",
+        1450,
+        300
+      ],
+      [
+        "210–180 BCE",
+        2300,
+        420
+      ],
+      [
+        "180–150 BCE",
+        3100,
+        650
+      ],
+      [
+        "150–120 BCE",
+        1900,
+        1200
+      ],
+      [
+        "120–90 BCE",
+        700,
+        1650
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Stavrou's argument?",
+  "choices": {
+    "A": "The number of Rhodian handles fell by 2,400 between the periods 180–150 BCE and 120–90 BCE.",
+    "B": "Knidian wine was sold at a lower price than Rhodian wine, which made it more attractive to buyers in Alexandria.",
+    "C": "As Rhodian handles fell from 3,100 to 700 after 180–150 BCE, Knidian handles rose from 650 to 1,650.",
+    "D": "Rhodian handles outnumbered Knidian handles in every period shown except the last, 120–90 BCE."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Stavrou's claim is that Knidian wine replaced Rhodian wine, which requires two trends at once: Rhodian handles falling and Knidian handles rising over the same periods. Only a choice reporting both trends together supports a replacement. From 180–150 BCE to 120–90 BCE, Rhodian handles dropped from 3,100 to 700 while Knidian handles rose from 650 to 1,650.",
+    "A": "Incorrect. This is true, but a fall in Rhodian handles alone could mean that Alexandria simply imported less wine; it does not show Knidian wine taking its place.",
+    "B": "Incorrect. The table gives only numbers of handles, not prices, so it cannot support this statement.",
+    "C": "Correct. Rhodian handles declined while Knidian handles increased over the same periods, the pattern a replacement would produce.",
+    "D": "Incorrect. This is true, but it compares the two kinds of handles period by period without showing that one rose as the other fell."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "not_in_text",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

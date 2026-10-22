@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0140",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In Leeds, England, volunteers run a community fridge where anyone may leave spare food or take what they need. Organizer Priya Malhotra noticed that the fridge was often empty by Sunday afternoon and studied a month of records to find out why. She concluded that the problem was not unusually heavy use on weekends; rather, donations fell sharply on Saturdays and Sundays while the number of items people took stayed about the same as on weekdays.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Daily Use of a Leeds Community Fridge over One Month",
+    "columns": [
+      "Day",
+      "Items donated",
+      "Items taken"
+    ],
+    "rows": [
+      [
+        "Monday–Thursday (average)",
+        133,
+        128
+      ],
+      [
+        "Friday",
+        122,
+        131
+      ],
+      [
+        "Saturday",
+        64,
+        129
+      ],
+      [
+        "Sunday",
+        58,
+        127
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Malhotra's conclusion?",
+  "choices": {
+    "A": "Daily donations were higher from Monday through Thursday than on Friday, Saturday, or Sunday, the other days of the week.",
+    "B": "On Fridays, people took more items from the fridge (131) than donors left in it (122).",
+    "C": "Donations fell from about 130 a day on weekdays to about 60 on weekend days, while items taken stayed near 128.",
+    "D": "Far fewer items were taken from the fridge on Saturdays and Sundays than on weekdays."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Malhotra's conclusion has two parts: donations dropped on weekends, and the number of items taken did not change much. The choice must cover both columns. Donations fell from about 130 per day to 64 and 58, while items taken stayed between 127 and 131 throughout the week.",
+    "A": "Incorrect. This is true, but it shows only that donations were highest early in the week; it does not show that items taken stayed steady.",
+    "B": "Incorrect. This is true, but it concerns Friday, a weekday, and does not show what changed on weekends.",
+    "C": "Correct. Weekend donations were about half the weekday level, while the number of items taken stayed nearly constant, which matches both parts of the conclusion.",
+    "D": "Incorrect. The table shows 129 and 127 items taken on Saturday and Sunday, about the same as on weekdays."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

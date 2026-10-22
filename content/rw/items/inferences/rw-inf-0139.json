@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0139",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In parts of the Himalayas, herders cross yaks with cattle to produce hybrids known as dzo. Yaks thrive in high pastures but suffer in the heat of lower valleys, while cattle do poorly in the thin, cold air at high elevations; dzo cope reasonably well in both settings and are especially valued in villages at middle elevations. Male dzo, however, are sterile. Female dzo can bear calves when bred to a yak or cattle bull, but these calves are generally less hardy than first-generation hybrids. Herders who want a steady supply of dzo will therefore most likely need to ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "breed female dzo with male dzo to produce each new generation.",
+    "B": "keep both yaks and cattle so that the two can be crossed again.",
+    "C": "move their herds to the high pastures where yaks are healthiest.",
+    "D": "stop raising yaks, since dzo do better than yaks at every elevation."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Male dzo cannot father calves, and the calves of female dzo are less hardy than true first-generation hybrids. So dzo herds cannot simply breed themselves. To keep getting first-generation dzo, herders must keep crossing the two parent species, which means keeping both yaks and cattle.",
+    "A": "Incorrect. The text says male dzo are sterile, so this breeding is impossible.",
+    "B": "Correct. New first-generation dzo come only from crossing yaks with cattle.",
+    "C": "Incorrect. Moving to high pastures would not produce dzo, and the text says dzo are valued at middle elevations.",
+    "D": "Incorrect. The text says yaks thrive in high pastures; it never says dzo outperform them everywhere."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

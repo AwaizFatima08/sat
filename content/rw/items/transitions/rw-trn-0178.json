@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Nevertheless,",
-    "B": "In contrast,",
-    "C": "Thus,",
+    "A": "Thus,",
+    "B": "Nevertheless,",
+    "C": "In contrast,",
     "D": "Similarly,"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text describes an experiment and its results: broth open to air stayed clear, but broth exposed to the trapped dust grew microbes. The last sentence states the conclusion that these results support. A transition that introduces a conclusion drawn from evidence is needed.",
-    "A": "Incorrect. \"Nevertheless\" signals something true despite the previous point, but the conclusion follows from the results rather than going against them. It is tempting because the sentence before contains \"yet.\"",
-    "B": "Incorrect. \"In contrast\" is tempting because the experiment compares two conditions, but that comparison was made in the previous sentence; the last sentence draws a conclusion from it rather than adding another contrast.",
-    "C": "Correct. \"Thus\" shows that the conclusion about dust is drawn from the results of the swan-neck experiment.",
+    "A": "Correct. \"Thus\" shows that the conclusion about dust is drawn from the results of the swan-neck experiment.",
+    "B": "Incorrect. \"Nevertheless\" signals something true despite the previous point, but the conclusion follows from the results rather than going against them. It is tempting because the sentence before contains \"yet.\"",
+    "C": "Incorrect. \"In contrast\" is tempting because the experiment compares two conditions, but that comparison was made in the previous sentence; the last sentence draws a conclusion from it rather than adding another contrast.",
     "D": "Incorrect. \"Similarly\" introduces a parallel point, but the last sentence is the lesson of the experiment, not another case like it."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

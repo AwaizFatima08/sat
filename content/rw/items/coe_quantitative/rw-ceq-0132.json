@@ -1,0 +1,113 @@
+{
+  "id": "rw-ceq-0132",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In Alappuzha, in the Indian state of Kerala, visitors rent houseboats to cruise the region's network of lagoons and canals. The monsoon, which brings heavy rain from June to September, has long been treated as the off-season. Tourism researcher Anjali Nair argues that the monsoon months now depend heavily on travelers from within India: when the rains come, she notes, bookings by international visitors fall much more sharply than bookings by domestic visitors.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Houseboat Bookings in Alappuzha, Kerala, by Month",
+    "x_label": "Month",
+    "y_label": "Bookings",
+    "series": [
+      {
+        "name": "Domestic visitors",
+        "points": [
+          [
+            "January",
+            3200
+          ],
+          [
+            "April",
+            2900
+          ],
+          [
+            "July",
+            2400
+          ],
+          [
+            "October",
+            3000
+          ],
+          [
+            "December",
+            3600
+          ]
+        ]
+      },
+      {
+        "name": "International visitors",
+        "points": [
+          [
+            "January",
+            2600
+          ],
+          [
+            "April",
+            1100
+          ],
+          [
+            "July",
+            300
+          ],
+          [
+            "October",
+            1500
+          ],
+          [
+            "December",
+            2900
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Nair's claim?",
+  "choices": {
+    "A": "In December, domestic bookings (about 3,600) were greater than international bookings (about 2,900) by roughly 700.",
+    "B": "From January to July, domestic bookings fell from about 3,200 to 2,400; international ones fell from 2,600 to 300.",
+    "C": "Domestic bookings were higher in July than in any other month shown in the graph.",
+    "D": "International bookings were higher in October, at about 1,500, than in April, at about 1,100."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Nair claims that international bookings drop much more sharply than domestic ones during the monsoon. Support must compare the change in both series between a dry-season month and a monsoon month. From January to July, domestic bookings fell by about a quarter, while international bookings fell by almost 90%.",
+    "A": "Incorrect. December is not a monsoon month, so this comparison says nothing about how bookings change when the rains come.",
+    "B": "Correct. Between January and July, international bookings fell far more steeply than domestic bookings, just as Nair claims.",
+    "C": "Incorrect. Domestic bookings were lowest, not highest, in July (about 2,400).",
+    "D": "Incorrect. This is accurate, but neither April nor October is a monsoon month, and the choice ignores domestic bookings."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

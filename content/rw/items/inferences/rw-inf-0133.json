@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0133",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In certain lakes, sediment settles in yearly pairs of layers called varves: a pale, coarse layer laid down in summer and a thin, dark one in winter. By counting these pairs downward from the surface, scientists can date events recorded in the mud, much as they count tree rings. The method works only where the layers stay intact. In most lakes, worms and other burrowing animals churn the bottom mud and blend the layers together; varves survive mainly where the deep water holds too little oxygen for such animals to live. In a sediment core from a lake in Norway, geologist Ingrid Solheim found a section, about 40 centimeters thick, full of worm burrows. A count of varves through that section would most likely ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "reveal how many kinds of worms lived in the lake at that time.",
+    "B": "provide an especially precise date for the events recorded in that section.",
+    "C": "record fewer years than actually passed as that sediment built up.",
+    "D": "show that summers were longer than winters during that period."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Two facts must be combined. Varves can be counted only where layers stay intact, and burrowing animals blend the layers together. The worm burrows show that animals lived in the mud when that section formed, so many yearly layers would have been mixed and could not be counted. A count would therefore miss years.",
+    "A": "Incorrect. The burrows show that animals were present; a count of layers would not reveal how many kinds of worms lived there.",
+    "B": "Incorrect. Blended layers make the count less precise, not more.",
+    "C": "Correct. Layers blended by burrowing animals cannot be told apart, so a count would come up short.",
+    "D": "Incorrect. The text never links the thickness of layers to the length of seasons."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

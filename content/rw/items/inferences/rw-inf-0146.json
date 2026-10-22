@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0146",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In laboratory tests, dark bird eggs placed under a lamp warmed faster and reached higher temperatures than pale eggs did, a possible advantage in cold places, where eggs left uncovered while a parent feeds can chill quickly. A team of ornithologists compared egg color with climate across several hundred bird species and found that darker eggs were more common in colder regions. The pattern held only for species that nest in the open, however. Among species that lay their eggs inside dark tree holes or burrows, egg darkness showed no relationship to climate. The team's results suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "egg color likely matters for warmth mainly where sunlight can actually reach the eggs.",
+    "B": "dark eggs are more likely than pale eggs to become dangerously hot in cold regions.",
+    "C": "birds that nest in tree holes or burrows lay darker eggs than birds that nest in the open.",
+    "D": "birds in cold regions tend to lay more eggs in each nest than birds in warm regions do."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Dark eggs gain heat from light, which helps in the cold. The link between egg darkness and cold climate appeared only for open nests, where light reaches the eggs, and vanished for nests in dark holes and burrows. Combining these points, egg color seems to matter for temperature mainly when the eggs are exposed to sunlight.",
+    "A": "Correct. The relationship appears only where light can reach the eggs, matching the lamp experiment.",
+    "B": "Incorrect. The text presents faster warming as an advantage in cold places, not a danger.",
+    "C": "Incorrect. The text never compares how dark the eggs of hole-nesting and open-nesting birds are.",
+    "D": "Incorrect. The text says nothing about the number of eggs in a nest."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "id": "rw-ceq-0153",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Cahokia, near present-day St. Louis, Missouri, was the largest city in North America north of Mexico around 1100 CE, home to thousands of people who built enormous earthen mounds. By 1350 it had been largely abandoned. Archaeologist Daniel Whitehorse, who dated houses excavated in both the city's central precinct and its outlying neighborhoods, argues that the decline did not begin everywhere at once: people began leaving the outlying neighborhoods while the central precinct was still growing.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Houses Dated to Each Period at Cahokia (CE)",
+    "x_label": "Period (CE)",
+    "y_label": "Number of houses",
+    "series": [
+      {
+        "name": "Central precinct",
+        "points": [
+          [
+            "1000–1050",
+            120
+          ],
+          [
+            "1050–1100",
+            340
+          ],
+          [
+            "1100–1150",
+            360
+          ],
+          [
+            "1150–1200",
+            330
+          ],
+          [
+            "1200–1250",
+            190
+          ],
+          [
+            "1250–1300",
+            60
+          ]
+        ]
+      },
+      {
+        "name": "Outlying neighborhoods",
+        "points": [
+          [
+            "1000–1050",
+            210
+          ],
+          [
+            "1050–1100",
+            520
+          ],
+          [
+            "1100–1150",
+            410
+          ],
+          [
+            "1150–1200",
+            260
+          ],
+          [
+            "1200–1250",
+            120
+          ],
+          [
+            "1250–1300",
+            40
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Whitehorse's argument?",
+  "choices": {
+    "A": "The outlying neighborhoods lost half their houses between 1050–1100 and 1150–1200, falling from 520 to 260.",
+    "B": "From 1050–1100 to 1100–1150, outlying houses fell from 520 to 410, while central houses rose from 340 to 360.",
+    "C": "The outlying neighborhoods had more houses than the central precinct in each of the first three periods shown.",
+    "D": "The number of houses in the central precinct began to fall before the number in the outlying neighborhoods did."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The argument has two parts that must hold at the same time: the outlying neighborhoods were losing houses while the central precinct was still gaining them. The choice must compare both areas over the same span. From 1050–1100 to 1100–1150, outlying houses dropped from 520 to 410 while central houses rose from 340 to 360.",
+    "A": "Incorrect. This is true, but it describes only the outlying neighborhoods; over that same span the central precinct also shrank slightly (340 to 330), so it does not show the center still growing.",
+    "B": "Correct. During the same period, the outlying neighborhoods declined while the central precinct grew, exactly as Whitehorse argues.",
+    "C": "Incorrect. This is true, but it compares the sizes of the two areas, not when each began to decline.",
+    "D": "Incorrect. The central precinct kept growing until 1100–1150, after the outlying neighborhoods had already begun to decline, so this reverses the order."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": "rw-ceq-0156",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Bakers describe a dough's hydration as the weight of its water compared with the weight of its flour, so a dough with 75% hydration contains 75 grams of water for every 100 grams of flour. Wetter doughs often rise higher in the oven, but only up to a point, beyond which they spread instead. Baker and food scientist Henrik Dahl argues that this point depends on the flour: bread flour, which contains more of the proteins that form gluten, can hold more water before it stops rising than all-purpose flour can.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Height of Sourdough Loaves at Different Dough Hydrations",
+    "x_label": "Dough hydration",
+    "y_label": "Loaf height (cm)",
+    "series": [
+      {
+        "name": "Bread flour",
+        "points": [
+          [
+            "65%",
+            8.1
+          ],
+          [
+            "70%",
+            8.9
+          ],
+          [
+            "75%",
+            9.6
+          ],
+          [
+            "80%",
+            10.1
+          ],
+          [
+            "85%",
+            9.4
+          ]
+        ]
+      },
+      {
+        "name": "All-purpose flour",
+        "points": [
+          [
+            "65%",
+            7.8
+          ],
+          [
+            "70%",
+            8.6
+          ],
+          [
+            "75%",
+            8.9
+          ],
+          [
+            "80%",
+            8.2
+          ],
+          [
+            "85%",
+            7.1
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Dahl's argument?",
+  "choices": {
+    "A": "At every hydration level tested, the bread-flour loaves were taller than the all-purpose loaves.",
+    "B": "At 85% hydration, loaves made with either kind of flour were shorter than at 80% hydration.",
+    "C": "Bread-flour loaves were tallest at 80% hydration, while all-purpose loaves were tallest at 75%.",
+    "D": "All-purpose loaves reached their greatest height at a higher hydration than bread-flour loaves did."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Dahl claims that the hydration at which loaves stop rising higher is greater for bread flour than for all-purpose flour. The choice must compare where each flour's loaves reach their peak height. Bread-flour loaves peak at 80% (10.1 centimeters), while all-purpose loaves peak at 75% (8.9 centimeters).",
+    "A": "Incorrect. This is true, but it shows only that bread flour makes taller loaves, not that it reaches its peak at a higher hydration.",
+    "B": "Incorrect. This is true, but it describes only the drop after 80% and does not show that the two flours peak at different hydrations.",
+    "C": "Correct. Bread flour kept rising up to 80% hydration, while all-purpose flour peaked at 75%, so bread flour can hold more water before it stops rising.",
+    "D": "Incorrect. All-purpose loaves peaked at 75% and bread-flour loaves at 80%, so this reverses the data."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

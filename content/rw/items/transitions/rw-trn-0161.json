@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Consequently,",
-    "B": "Nevertheless,",
-    "C": "For example,",
-    "D": "In contrast,"
+    "A": "In contrast,",
+    "B": "Consequently,",
+    "C": "Nevertheless,",
+    "D": "For example,"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The third sentence ends with a cause: lichens absorb pollutants from the air and cannot screen them out. The last sentence gives the effects: lichens disappear where air is polluted, so they can be used to judge air quality. A cause-and-effect transition is needed.",
-    "A": "Correct. \"Consequently\" shows that lichens vanish from polluted areas because they take in pollutants they cannot screen out.",
-    "B": "Incorrect. \"Nevertheless\" means \"in spite of that,\" but lichens dying in polluted air is what their lack of protection would lead us to expect. It is tempting because the sentence before contains a contrast (\"but it also means\").",
-    "C": "Incorrect. Lichens disappearing from polluted areas is not an example of absorbing pollutants; it is what happens because they absorb them.",
-    "D": "Incorrect. \"In contrast\" signals a difference, but the last sentence follows from the previous one rather than differing from it."
+    "A": "Incorrect. \"In contrast\" signals a difference, but the last sentence follows from the previous one rather than differing from it.",
+    "B": "Correct. \"Consequently\" shows that lichens vanish from polluted areas because they take in pollutants they cannot screen out.",
+    "C": "Incorrect. \"Nevertheless\" means \"in spite of that,\" but lichens dying in polluted air is what their lack of protection would lead us to expect. It is tempting because the sentence before contains a contrast (\"but it also means\").",
+    "D": "Incorrect. Lichens disappearing from polluted areas is not an example of absorbing pollutants; it is what happens because they absorb them."
   },
   "traps": {
-    "B": "wrong_logic",
+    "A": "wrong_logic",
     "C": "wrong_logic",
     "D": "wrong_logic"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

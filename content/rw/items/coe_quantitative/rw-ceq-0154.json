@@ -1,0 +1,121 @@
+{
+  "id": "rw-ceq-0154",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the early nineteenth century, steamboats turned towns at landings along the Mississippi and Ohio Rivers into busy centers of trade. Historian Ruth Callahan compared the average populations of eight river-landing towns and eight inland towns in one Midwestern region. She acknowledges that the river towns grew faster for decades, but she argues that once railroads reached the region's inland towns in the early 1850s, the inland towns became the faster-growing group.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average Population of River-Landing and Inland Towns in One Midwestern Region",
+    "x_label": "Year",
+    "y_label": "Average population",
+    "series": [
+      {
+        "name": "River-landing towns",
+        "points": [
+          [
+            "1820",
+            600
+          ],
+          [
+            "1830",
+            1400
+          ],
+          [
+            "1840",
+            2900
+          ],
+          [
+            "1850",
+            4800
+          ],
+          [
+            "1860",
+            5600
+          ],
+          [
+            "1870",
+            6100
+          ]
+        ]
+      },
+      {
+        "name": "Inland towns",
+        "points": [
+          [
+            "1820",
+            500
+          ],
+          [
+            "1830",
+            800
+          ],
+          [
+            "1840",
+            1300
+          ],
+          [
+            "1850",
+            2100
+          ],
+          [
+            "1860",
+            3600
+          ],
+          [
+            "1870",
+            5200
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Callahan's argument?",
+  "choices": {
+    "A": "From 1850 to 1870, inland towns added about 3,100 residents, more than twice the river towns' gain of about 1,300.",
+    "B": "In 1870, the average river-landing town was still larger than the average inland town, about 6,100 residents to 5,200.",
+    "C": "From 1830 to 1850, river towns added about 3,400 residents, while inland towns added only about 1,300.",
+    "D": "From 1850 to 1870, the river towns added more residents, on average, than the inland towns did."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Callahan's claim concerns growth after the railroads arrived in the early 1850s: inland towns should then grow faster than river towns. The choice must compare the two groups' growth after 1850. Inland towns rose from about 2,100 to 5,200 (about 3,100 people), while river towns rose from about 4,800 to 6,100 (about 1,300).",
+    "A": "Correct. After 1850, inland towns grew by more than twice as many people as river towns did, which shows they had become the faster-growing group.",
+    "B": "Incorrect. This is true, but it compares the towns' sizes in one year, not their growth; a larger town can still be growing more slowly.",
+    "C": "Incorrect. This is true, but it describes the years before the railroads arrived, which Callahan already grants were the river towns' advantage.",
+    "D": "Incorrect. From 1850 to 1870, river towns gained about 1,300 residents and inland towns about 3,100, so this reverses the data."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

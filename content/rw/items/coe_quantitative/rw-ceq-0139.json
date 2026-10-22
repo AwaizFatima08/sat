@@ -1,0 +1,84 @@
+{
+  "id": "rw-ceq-0139",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Millions of birds die each year after flying into windows, because they see reflected sky and trees rather than glass. Glass printed with small dots can make windows visible to birds. To test different patterns, biologist Naomi Kessler fitted panels of several kinds to the walls of a research building and counted bird collisions over one autumn. She argues that the spacing of the dots matters a great deal: dots placed 5 centimeters apart, she concludes, prevent far more collisions than dots placed 10 centimeters apart.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Bird Collisions with Different Glass Panels over One Autumn",
+    "x_label": "Type of glass panel",
+    "y_label": "Collisions",
+    "series": [
+      {
+        "name": "Collisions",
+        "points": [
+          [
+            "Plain glass",
+            48
+          ],
+          [
+            "Dots 10 cm apart",
+            31
+          ],
+          [
+            "Dots 5 cm apart",
+            7
+          ],
+          [
+            "Ultraviolet coating",
+            26
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Kessler's conclusion?",
+  "choices": {
+    "A": "Panels with dots 10 centimeters apart had fewer collisions than plain glass, 31 compared with 48.",
+    "B": "Panels with dots 10 centimeters apart had fewer collisions than panels with dots 5 centimeters apart.",
+    "C": "Panels with dots 5 centimeters apart had 7 collisions, compared with 31 for panels with dots 10 centimeters apart.",
+    "D": "Glass with a special coating that reflects ultraviolet light had fewer collisions than plain glass did, 26 versus 48."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Kessler's conclusion compares two dot spacings, 5 centimeters and 10 centimeters. The choice must compare those two bars. Panels with closer dots had 7 collisions, while panels with wider spacing had 31.",
+    "A": "Incorrect. This is true, but it compares one dot spacing with plain glass rather than comparing the two spacings.",
+    "B": "Incorrect. The graph shows 31 collisions for 10-centimeter spacing and only 7 for 5-centimeter spacing, so this reverses the data.",
+    "C": "Correct. Closer dots led to far fewer collisions (7) than wider dots (31), which is the comparison Kessler's conclusion makes.",
+    "D": "Incorrect. This is true, but the coating is not a dot pattern, so it says nothing about dot spacing."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

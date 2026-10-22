@@ -1,0 +1,85 @@
+{
+  "id": "rw-ceq-0131",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A history museum in Vienna, Austria, offers its audio guide in five languages. Curator Lena Hofer recorded how many visitors rented the guide in each language during 2023. She was surprised to find that, although German is the main language of Austria, visitors chose English more often than any other language, German included: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Audio Guide Rentals by Language at a Vienna History Museum, 2023",
+    "columns": [
+      "Language",
+      "Rentals"
+    ],
+    "rows": [
+      [
+        "German",
+        18450
+      ],
+      [
+        "English",
+        24310
+      ],
+      [
+        "Italian",
+        6920
+      ],
+      [
+        "French",
+        5180
+      ],
+      [
+        "Japanese",
+        3940
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "French rentals exceeded English rentals by more than 6,000 during the year.",
+    "B": "English rentals reached 24,310, while German, the next most popular, had 18,450.",
+    "C": "Japanese rentals, at 3,940, were the lowest of the five languages offered.",
+    "D": "German rentals, at 18,450, were greater than Italian and French rentals combined."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The statement says English was chosen more often than any other language, including German. The choice must show English at the top and compare it with the next-highest language. The table shows 24,310 English rentals and 18,450 German rentals, with every other language far lower.",
+    "A": "Incorrect. The table shows French at 5,180 and English at 24,310, so French rentals were far lower, not higher.",
+    "B": "Correct. English had 24,310 rentals, more than German's 18,450, and German was the second most popular language.",
+    "C": "Incorrect. This is true, but which language was least popular does not show that English was the most popular.",
+    "D": "Incorrect. This is true (18,450 is more than 6,920 + 5,180), but it compares German with other languages and says nothing about English."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

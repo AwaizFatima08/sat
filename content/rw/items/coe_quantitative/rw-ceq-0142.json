@@ -1,0 +1,121 @@
+{
+  "id": "rw-ceq-0142",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many railway stations in Europe now have public pianos that anyone may play. Musicologist Elena Varga counted how many people played the pianos at two stations in Budapest, Hungary: one used mainly by commuters and one used mainly by tourists. She found that at the commuter station, people seem to avoid playing when the station is most crowded: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "People Playing Public Pianos at Two Budapest Stations",
+    "x_label": "Time of day",
+    "y_label": "Players per hour",
+    "series": [
+      {
+        "name": "Commuter station",
+        "points": [
+          [
+            "8 a.m.",
+            2
+          ],
+          [
+            "10 a.m.",
+            7
+          ],
+          [
+            "12 p.m.",
+            14
+          ],
+          [
+            "2 p.m.",
+            11
+          ],
+          [
+            "5 p.m.",
+            4
+          ],
+          [
+            "7 p.m.",
+            9
+          ]
+        ]
+      },
+      {
+        "name": "Tourist station",
+        "points": [
+          [
+            "8 a.m.",
+            9
+          ],
+          [
+            "10 a.m.",
+            10
+          ],
+          [
+            "12 p.m.",
+            12
+          ],
+          [
+            "2 p.m.",
+            11
+          ],
+          [
+            "5 p.m.",
+            10
+          ],
+          [
+            "7 p.m.",
+            9
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "at the commuter station, only 2 to 4 people played per hour at 8 a.m. and 5 p.m., but 11 to 14 at midday.",
+    "B": "at the commuter station, the piano was played by 9 people per hour at 7 p.m., more than at 5 p.m.",
+    "C": "at the tourist station, the number of players stayed between 9 and 12 per hour throughout the day.",
+    "D": "at the commuter station, more people played the piano at 5 p.m. than at any other time of the day."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The statement says commuter-station players avoid the busiest times. For a commuter station, the busiest times are the morning and evening rush hours, so the choice must compare those hours with quieter ones. The commuter line drops to 2 to 4 players at 8 a.m. and 5 p.m. and rises to 11 to 14 at midday.",
+    "A": "Correct. Playing dropped sharply during the morning and evening rush hours and peaked in the quieter middle of the day.",
+    "B": "Incorrect. This is true, but comparing two evening hours does not show that players avoid both rush hours compared with quieter times.",
+    "C": "Incorrect. This is true, but it describes the tourist station, not the commuter station the statement is about.",
+    "D": "Incorrect. The graph shows only 4 players at 5 p.m. at the commuter station, one of its lowest values, not its highest."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}
