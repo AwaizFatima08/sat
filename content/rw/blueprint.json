@@ -1,0 +1,129 @@
+{
+  "_note": "Single source of truth for the Reading and Writing section. Read by pipeline/validate.py, pipeline/build_packs.py and the app (copied into app/assets/data).",
+  "section": "rw",
+  "title": "Reading and Writing",
+  "module_minutes": 32,
+  "module_items": 27,
+  "domains": {
+    "craft_structure": "Craft and Structure",
+    "information_ideas": "Information and Ideas",
+    "conventions": "Standard English Conventions",
+    "expression": "Expression of Ideas"
+  },
+  "types": {
+    "words_in_context": {
+      "abbr": "wic", "domain": "craft_structure", "name": "Words in Context",
+      "stems": ["Which choice completes the text with the most logical and precise word or phrase?",
+                "As used in the text, what does the word \"{word}\" most nearly mean?"],
+      "needs": ["passage"], "words": [25, 120]
+    },
+    "text_structure_purpose": {
+      "abbr": "tsp", "domain": "craft_structure", "name": "Text Structure and Purpose",
+      "stems": ["Which choice best states the main purpose of the text?",
+                "Which choice best describes the function of the underlined sentence in the text as a whole?",
+                "Which choice best describes the overall structure of the text?"],
+      "needs": ["passage"], "words": [40, 150]
+    },
+    "cross_text": {
+      "abbr": "ctc", "domain": "craft_structure", "name": "Cross-Text Connections",
+      "stems": ["Based on the texts, how would the author of Text 2 most likely respond to the {claim} in Text 1?",
+                "Based on the texts, both authors would most likely agree with which statement?"],
+      "needs": ["passage", "passage_b"], "words": [60, 220]
+    },
+    "central_ideas": {
+      "abbr": "cid", "domain": "information_ideas", "name": "Central Ideas and Details",
+      "stems": ["Which choice best states the main idea of the text?",
+                "According to the text, {detail question}?",
+                "Based on the text, {detail question}?"],
+      "needs": ["passage"], "words": [40, 150]
+    },
+    "coe_textual": {
+      "abbr": "cet", "domain": "information_ideas", "name": "Command of Evidence (Textual)",
+      "stems": ["Which finding, if true, would most directly support {the claim}?",
+                "Which finding, if true, would most directly weaken {the claim}?",
+                "Which quotation from {the work} most effectively illustrates the claim?"],
+      "needs": ["passage"], "words": [40, 150]
+    },
+    "coe_quantitative": {
+      "abbr": "ceq", "domain": "information_ideas", "name": "Command of Evidence (Quantitative)",
+      "stems": ["Which choice most effectively uses data from the table to complete the {example/statement}?",
+                "Which choice most effectively uses data from the graph to complete the {example/statement}?",
+                "Which choice most effectively uses data from the table to support {the claim}?",
+                "Which choice most effectively uses data from the graph to support {the claim}?"],
+      "needs": ["passage", "data"], "words": [40, 150]
+    },
+    "inferences": {
+      "abbr": "inf", "domain": "information_ideas", "name": "Inferences",
+      "stems": ["Which choice most logically completes the text?"],
+      "needs": ["passage", "blank"], "words": [50, 150]
+    },
+    "boundaries": {
+      "abbr": "bnd", "domain": "conventions", "name": "Boundaries",
+      "stems": ["Which choice completes the text so that it conforms to the conventions of Standard English?"],
+      "needs": ["passage", "blank", "grammar"], "words": [25, 110]
+    },
+    "form_structure_sense": {
+      "abbr": "fss", "domain": "conventions", "name": "Form, Structure, and Sense",
+      "stems": ["Which choice completes the text so that it conforms to the conventions of Standard English?"],
+      "needs": ["passage", "blank", "grammar"], "words": [25, 110]
+    },
+    "transitions": {
+      "abbr": "trn", "domain": "expression", "name": "Transitions",
+      "stems": ["Which choice completes the text with the most logical transition?"],
+      "needs": ["passage", "blank"], "words": [30, 120]
+    },
+    "rhetorical_synthesis": {
+      "abbr": "rhs", "domain": "expression", "name": "Rhetorical Synthesis",
+      "stems": ["The student wants to {goal}. Which choice most effectively uses relevant information from the notes to accomplish this goal?"],
+      "needs": ["notes"], "words": [0, 0]
+    }
+  },
+  "type_order": ["words_in_context", "text_structure_purpose", "cross_text", "central_ideas", "coe_textual",
+                 "coe_quantitative", "inferences", "boundaries", "form_structure_sense", "transitions",
+                 "rhetorical_synthesis"],
+  "levels": {
+    "1": {"name": "Foundations", "b": -1.5},
+    "2": {"name": "Medium", "b": -0.5},
+    "3": {"name": "Advanced", "b": 0.5},
+    "4": {"name": "Challenge", "b": 1.5}
+  },
+  "subjects": {
+    "literature": "Literature",
+    "history_social": "History and Social Studies",
+    "humanities": "Humanities",
+    "science": "Science"
+  },
+  "traps": {
+    "too_broad": "Too broad: claims more than the text supports",
+    "too_narrow": "Too narrow: a detail, not the whole point",
+    "not_in_text": "Not in the text: brings in an idea the text never states",
+    "reversed": "Reversed: flips the relationship or the author's view",
+    "true_irrelevant": "True but irrelevant: accurate, but does not answer the question",
+    "wrong_tone": "Wrong tone or shade: a near-synonym that does not fit the context",
+    "wrong_logic": "Wrong logic: the wrong relationship between ideas",
+    "misses_goal": "Misses the goal: uses the notes but not for the stated purpose",
+    "grammar_rule": "Grammar rule broken: does not follow Standard English conventions"
+  },
+  "grammar": {
+    "subject_verb": "Subject-verb agreement",
+    "pronoun": "Pronoun-antecedent agreement",
+    "plural_possessive": "Plurals and possessives",
+    "verb_form": "Verb forms and tense",
+    "modifier": "Modifier placement",
+    "linking_clauses": "Linking clauses",
+    "supplements": "Supplements (nonessential elements)",
+    "punctuation": "End and internal punctuation"
+  },
+  "module_blueprint": {
+    "types": {"words_in_context": 4, "text_structure_purpose": 2, "cross_text": 1, "central_ideas": 2,
+              "coe_textual": 2, "coe_quantitative": 2, "inferences": 2, "boundaries": 4,
+              "form_structure_sense": 3, "transitions": 3, "rhetorical_synthesis": 2},
+    "levels": {
+      "m1": {"1": 6, "2": 9, "3": 9, "4": 3},
+      "m2_easy": {"1": 10, "2": 12, "3": 5, "4": 0},
+      "m2_hard": {"1": 0, "2": 5, "3": 12, "4": 10}
+    }
+  },
+  "drill_items_per_type_level": 15,
+  "papers": 10
+}
