@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0532",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "drill",
+  "passage": "Chennai, India, receives most of its rain between October and December and then endures a long dry season, during which many households buy water delivered by tanker trucks. Many buildings in the city now collect rain from their rooftops in storage tanks, and some observers have expected this storage to free households from buying water. Urban geographer Kavitha Raman, who tracked tanker purchases in one neighborhood, offers a more limited assessment. Households with storage, she finds, buy far less tanker water than other households early in the dry season, but by its final months, once their stored water is used up, the two groups buy nearly the same amount.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Tanker Water Purchased per Household in One Chennai Neighborhood",
+    "columns": [
+      "Month",
+      "Households with rooftop storage (liters)",
+      "Households without storage (liters)"
+    ],
+    "rows": [
+      [
+        "February",
+        300,
+        1800
+      ],
+      [
+        "March",
+        700,
+        1900
+      ],
+      [
+        "April",
+        1500,
+        2000
+      ],
+      [
+        "May",
+        2050,
+        2100
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Raman's assessment?",
+  "choices": {
+    "A": "In February, households with storage bought 1,500 fewer liters than households without it, but in May they bought only 50 fewer.",
+    "B": "Households without rooftop storage bought more tanker water than households with storage in every month shown.",
+    "C": "Tanker purchases by households with storage rose in each month from February to May, reaching 2,050 liters.",
+    "D": "The difference between the two groups' tanker purchases grew larger from February to May."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Raman's assessment has two parts: households with storage buy far less early in the dry season, and by the end the two groups buy nearly the same amount. Support must compare the two columns at the start and at the end. In February the gap is 1,800 − 300 = 1,500 liters; in May it is 2,100 − 2,050 = 50 liters.",
+    "A": "Correct. It shows a large gap early in the dry season and almost none at its end, matching both parts of Raman's assessment.",
+    "B": "Incorrect. This is true, but it shows only that storage always helps somewhat; it does not show the advantage shrinking to almost nothing by May.",
+    "C": "Incorrect. This is true, but it describes only households with storage; without the other column it cannot show the two groups converging.",
+    "D": "Incorrect. The difference shrank from 1,500 liters in February to 50 liters in May, so this reverses the data."
+  },
+  "traps": {
+    "B": "too_narrow",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

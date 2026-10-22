@@ -1,0 +1,82 @@
+{
+  "id": "rw-ceq-0547",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "drill",
+  "passage": "When the public library system of a midsize American city stopped charging fines for overdue items in January 2014, critics warned that, without a penalty, borrowers would grow careless about returning items on time. Supporters had argued that fines mostly drove away the borrowers least able to pay them. Librarian and researcher Marisol Castellanos, analyzing the system's records, concludes not only that the critics' fear went unrealized but that the policy accomplished what its supporters had intended: ending fines drew back borrowers who had stayed away, many of them because of unpaid fines, without making borrowers any more likely to return items late.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Records of a City Library System",
+    "columns": [
+      "Year",
+      "Active borrowers (thousands)",
+      "Items returned late (%)"
+    ],
+    "rows": [
+      [
+        "2012",
+        41.2,
+        9.1
+      ],
+      [
+        "2013",
+        40.6,
+        8.8
+      ],
+      [
+        "2014",
+        46.9,
+        9.3
+      ],
+      [
+        "2015",
+        49.5,
+        9.0
+      ],
+      [
+        "2016",
+        50.8,
+        9.2
+      ]
+    ],
+    "note": "Fines were eliminated in January 2014."
+  },
+  "stem": "Which choice most effectively uses data from the table to support Castellanos's conclusion?",
+  "choices": {
+    "A": "After fines ended, active borrowers rose from about 41,000 to nearly 51,000, while late returns stayed near 9% of items.",
+    "B": "The share of items returned late was higher in 2014, the first full year without fines, than it had been in 2013, before fines ended.",
+    "C": "The number of active borrowers increased in every year from 2012 to 2016.",
+    "D": "Active borrowers increased more from 2013 to 2014 than in any other one-year period shown."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Castellanos's conclusion joins two claims: ending fines brought borrowers back, and it did not make late returns more common. Support must use both columns across the change in 2014. Active borrowers rose from 40,600 in 2013 to 50,800 in 2016, while the share of late items stayed between 8.8% and 9.3% throughout.",
+    "A": "Correct. It shows the rise in borrowers after 2013 together with a late-return rate that stayed near 9%, supporting both halves of the conclusion.",
+    "B": "Incorrect. This is true (9.3% versus 8.8%), but it seems to favor the critics, and it ignores the borrower figures and the return to about 9% afterward.",
+    "C": "Incorrect. Active borrowers fell from 41,200 in 2012 to 40,600 in 2013, so this misreads the table.",
+    "D": "Incorrect. This is true (a rise of 6,300), but it addresses only the return of borrowers and says nothing about whether late returns became more common."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

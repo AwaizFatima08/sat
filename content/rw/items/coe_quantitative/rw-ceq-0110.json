@@ -1,0 +1,82 @@
+{
+  "id": "rw-ceq-0110",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In 2019, volunteers in a coastal town in Maine finished restoring an old lighthouse and opened it as a small museum. Town historian Ruth Callahan has kept a record of how many people visit the museum each year. Her records show that the museum's lowest yearly attendance came in ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Yearly Visitors to a Lighthouse Museum in Maine",
+    "x_label": "Year",
+    "y_label": "Visitors",
+    "series": [
+      {
+        "name": "Visitors",
+        "points": [
+          [
+            "2019",
+            3200
+          ],
+          [
+            "2020",
+            1900
+          ],
+          [
+            "2021",
+            4100
+          ],
+          [
+            "2022",
+            5600
+          ],
+          [
+            "2023",
+            6900
+          ],
+          [
+            "2024",
+            7400
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "2024, the year with the highest attendance shown.",
+    "B": "2019, when about 3,200 people visited the museum.",
+    "C": "2020, when about 1,900 people visited the museum.",
+    "D": "2021, when about 1,400 people visited the museum."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The statement asks for the year of lowest attendance, so find the lowest point on the line. The line drops to about 1,900 visitors in 2020, its lowest value.",
+    "A": "Incorrect. 2024 had the highest attendance, which is the opposite of what the statement describes.",
+    "B": "Incorrect. About 3,200 people did visit in 2019, but that is more than the roughly 1,900 who visited in 2020.",
+    "C": "Correct. About 1,900 people visited in 2020, fewer than in any other year shown.",
+    "D": "Incorrect. This misreads the graph: about 4,100 people visited in 2021, not about 1,400."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

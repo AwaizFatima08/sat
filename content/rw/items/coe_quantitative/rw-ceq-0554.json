@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0554",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "After Pacific salmon spawn and die, their decaying bodies release nitrogen carried from the ocean into the streams, and some of that nitrogen reaches the trees along the banks. Ecologist Hana Kowalczyk hypothesizes that this marine nitrogen speeds tree growth. Because waterfalls prevent salmon from swimming farther upstream, she compared trees below and above the falls on two Alaskan streams. She measured the share of leaf nitrogen that came from the ocean and, since soil moisture also affects growth, the moisture of the soil as well. Kowalczyk's data support her hypothesis while making soil moisture an unlikely alternative explanation: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Streamside Trees below and above Waterfalls on Two Alaskan Streams",
+    "columns": [
+      "Stream section",
+      "Yearly trunk growth (mm)",
+      "Soil moisture (%)",
+      "Leaf nitrogen from the ocean (%)"
+    ],
+    "rows": [
+      [
+        "Stream 1, below falls",
+        2.4,
+        31,
+        22
+      ],
+      [
+        "Stream 1, above falls",
+        1.5,
+        30,
+        3
+      ],
+      [
+        "Stream 2, below falls",
+        2.1,
+        27,
+        18
+      ],
+      [
+        "Stream 2, above falls",
+        1.4,
+        33,
+        2
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "trees below the falls on Stream 1 grew faster than trees in any other section of either stream, and their leaves held the most ocean nitrogen.",
+    "B": "on both streams, soil moisture was higher above the falls, where salmon cannot reach, than below the falls.",
+    "C": "on both streams, trees below the falls grew faster and held more ocean nitrogen, yet soil there was moister on only one stream.",
+    "D": "trees along Stream 1 grew faster, on average, than trees along Stream 2 did."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The statement makes two claims: the data support a link between marine nitrogen and growth, and they rule out soil moisture as the explanation. The completion must therefore show growth tracking nitrogen on both streams while moisture does not. Below the falls, growth (2.4 and 2.1 mm) and ocean nitrogen (22% and 18%) exceed the figures above the falls (1.5 and 1.4 mm; 3% and 2%), but soil was moister below the falls only on Stream 1 (31% versus 30%), not on Stream 2 (27% versus 33%).",
+    "A": "Incorrect. This is true, but a single section cannot show a pattern across both streams, and it says nothing about soil moisture.",
+    "B": "Incorrect. On Stream 1, soil moisture was 31% below the falls and 30% above them, so this misreads the table.",
+    "C": "Correct. It shows growth and ocean nitrogen rising together below the falls on both streams while soil moisture follows no consistent pattern, which supports the hypothesis and undercuts the alternative.",
+    "D": "Incorrect. This is true (averages of 1.95 and 1.75 mm), but comparing the two streams ignores the below-versus-above comparison that the hypothesis depends on."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

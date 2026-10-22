@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0102",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In 2024, a public library in Islamabad, Pakistan, began opening on Sundays in addition to its usual six days. Librarian Farah Qureshi wanted to know whether the new Sunday hours would attract readers, so she counted visitors on each day of one week in May. Her count suggests that the Sunday hours were popular: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Library Visitors on Each Day of One Week in May 2024",
+    "x_label": "Day",
+    "y_label": "Visitors",
+    "series": [
+      {
+        "name": "Visitors",
+        "points": [
+          [
+            "Monday",
+            310
+          ],
+          [
+            "Tuesday",
+            285
+          ],
+          [
+            "Wednesday",
+            298
+          ],
+          [
+            "Thursday",
+            320
+          ],
+          [
+            "Friday",
+            260
+          ],
+          [
+            "Saturday",
+            455
+          ],
+          [
+            "Sunday",
+            520
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "on Friday, the library had about 260 visitors, fewer than on any other day.",
+    "B": "about 520 people visited on Sunday, more than on any other day of the week.",
+    "C": "about 455 people visited on Saturday, more than on any other day of the week.",
+    "D": "most Sunday visitors were students who could not come during the school week."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The statement says the Sunday hours were popular, so the choice must show how Sunday compared with the other days. The Sunday bar, at about 520 visitors, is the tallest on the graph.",
+    "A": "Incorrect. Friday did have the fewest visitors, but this says nothing about Sunday, the day the statement is about.",
+    "B": "Correct. Sunday had about 520 visitors, more than any other day, which shows the new hours were popular.",
+    "C": "Incorrect. This misreads the graph: Saturday had about 455 visitors, fewer than Sunday's 520.",
+    "D": "Incorrect. The graph shows only how many people visited, not who they were or why they came on Sunday."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

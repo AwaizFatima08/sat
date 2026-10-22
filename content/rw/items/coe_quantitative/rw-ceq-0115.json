@@ -1,0 +1,103 @@
+{
+  "id": "rw-ceq-0115",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Brazilian publishers translate far more fiction from English than from any other language. Literary scholar Helena Barros counted the novels translated into Portuguese by Brazilian publishers in 2015 and in 2025, grouping them by the language in which each novel was first written. Her counts cover five common source languages. She argues that although English remained dominant, translations from some Asian languages grew especially quickly over the decade, noting, for example, that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Novels Translated into Portuguese by Brazilian Publishers",
+    "x_label": "Original language",
+    "y_label": "Novels translated",
+    "series": [
+      {
+        "name": "2015",
+        "points": [
+          [
+            "English",
+            410
+          ],
+          [
+            "French",
+            62
+          ],
+          [
+            "Spanish",
+            55
+          ],
+          [
+            "Japanese",
+            14
+          ],
+          [
+            "Korean",
+            3
+          ]
+        ]
+      },
+      {
+        "name": "2025",
+        "points": [
+          [
+            "English",
+            455
+          ],
+          [
+            "French",
+            58
+          ],
+          [
+            "Spanish",
+            71
+          ],
+          [
+            "Japanese",
+            49
+          ],
+          [
+            "Korean",
+            37
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "the number of novels translated from English rose from 410 in 2015 to 455 in 2025.",
+    "B": "translations from Korean grew from 3 novels in 2015 to 37 novels in 2025.",
+    "C": "translations from Japanese fell from 49 novels in 2015 to 14 novels in 2025.",
+    "D": "Korean novels translated in 2025 sold more copies than French novels did."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The blank must give an example of an Asian language whose translations grew especially quickly. Korean and Japanese are the Asian languages on the graph, and Korean translations rose from 3 to 37, more than tenfold.",
+    "A": "Incorrect. This is true, but English is not an Asian language, and a rise from 410 to 455 is modest growth.",
+    "B": "Correct. Korean is an Asian language, and its translations grew from 3 to 37 novels, an especially fast increase.",
+    "C": "Incorrect. This reverses the years: Japanese translations rose from 14 in 2015 to 49 in 2025.",
+    "D": "Incorrect. The graph shows how many novels were translated, not how many copies were sold."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

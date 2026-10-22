@@ -1,0 +1,78 @@
+{
+  "id": "rw-ceq-0108",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "At a youth music camp in Cape Town, South Africa, each of 163 campers chose one instrument to study for the week. Camp director Thandiwe Mokoena expected the guitar to be the most popular choice. However, the camp's records show that the instrument chosen by the most campers was ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Instruments Chosen by Campers",
+    "x_label": "Instrument",
+    "y_label": "Number of campers",
+    "series": [
+      {
+        "name": "Campers",
+        "points": [
+          [
+            "Marimba",
+            34
+          ],
+          [
+            "Guitar",
+            41
+          ],
+          [
+            "Drums",
+            29
+          ],
+          [
+            "Violin",
+            12
+          ],
+          [
+            "Keyboard",
+            47
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "the guitar, which was chosen by 41 campers.",
+    "B": "the marimba, which was chosen by 34 campers.",
+    "C": "the drums, which most campers had already played at school.",
+    "D": "the keyboard, which was chosen by 47 campers."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The word \"However\" signals that the most popular instrument was not the guitar, as the director expected. The tallest bar on the graph is the keyboard, chosen by 47 campers.",
+    "A": "Incorrect. The guitar was the director's expectation, but its 41 campers are fewer than the keyboard's 47, and \"However\" signals a different answer.",
+    "B": "Incorrect. The marimba was chosen by 34 campers, fewer than both the keyboard and the guitar.",
+    "C": "Incorrect. The graph does not show what campers had played before, and the drums drew only 29 campers.",
+    "D": "Correct. The keyboard was chosen by 47 campers, more than any other instrument."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

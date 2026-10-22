@@ -1,0 +1,46 @@
+{
+  "id": "rw-cid-0553",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "central_ideas",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "The slime mold Physarum polycephalum has no brain or nervous system; for much of its life it is a single, enormous cell that spreads across a surface as a web of branching tubes. In one well-known experiment, researchers set oat flakes, a favored food, in a pattern matching the positions of cities around Tokyo and let the mold grow among them. Within about a day it had connected the food sources with a network that compared well with the region's actual rail system in efficiency and in resilience to the loss of any single link. The mold manages this without any overall plan: tubes through which more fluid flows grow thicker, while those carrying little flow gradually shrink and disappear, so that useful routes are reinforced and redundant ones pruned.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Based on the text, what accounts for the slime mold's ability to form a network comparable to the Tokyo rail system?",
+  "choices": {
+    "A": "It grows directly along the shortest possible path between each separate pair of food sources.",
+    "B": "It follows an overall plan for the network, much as the region's rail engineers did.",
+    "C": "Its single, enormous cell can spread across a surface as a web of branching tubes.",
+    "D": "Local changes in its tubes, driven by how much fluid each carries, favor useful routes."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The last sentence explains how the mold \"manages this\": tubes with more flow thicken, tubes with little flow shrink and vanish, so \"useful routes are reinforced and redundant ones pruned.\" The efficient network emerges from these local adjustments, not from any plan.",
+    "A": "Incorrect. The text never says the mold finds shortest paths; it describes a gradual process of reinforcing and pruning tubes.",
+    "B": "Incorrect. The text says the mold works \"without any overall plan.\"",
+    "C": "Incorrect. This describes the mold's basic form, which makes a network possible, but it does not explain why the network becomes efficient.",
+    "D": "Correct. This restates the mechanism in the final sentence: flow-driven thickening and shrinking of tubes."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

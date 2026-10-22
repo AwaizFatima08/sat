@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0535",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "At many wind farms in North America, most of the bats killed by turbine blades die on nights with light winds, when the flying insects the bats hunt are most active. A turbine's blades can spin even in such light winds, yet they generate little electricity then, because a turbine's power output rises steeply with wind speed: a modest increase in wind speed produces a large increase in output. Operators can program turbines to hold their blades still until the wind reaches a chosen speed. Taken together, these facts suggest that modestly raising that chosen speed would most likely ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "eliminate bat deaths at wind farms while leaving electricity output unchanged.",
+    "B": "increase the number of insects available to bats hunting near wind farms.",
+    "C": "reduce bat deaths while sacrificing a relatively small share of electricity output.",
+    "D": "lower electricity output so sharply that the turbines would no longer be worth running."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Two facts combine. Bats die mostly in light winds, and turbines produce little power in light winds. Keeping the blades still in those conditions should therefore protect many bats while giving up only the small amount of power produced at low wind speeds.",
+    "A": "Incorrect. Some output would still be lost, and the text says most deaths, not all, happen in light winds, so this overstates the effect.",
+    "B": "Incorrect. The text says nothing about turbines affecting the number of insects.",
+    "C": "Correct. Stopping the blades in light winds targets the conditions in which most bats die, and those are the conditions in which turbines produce little power.",
+    "D": "Incorrect. This reverses the text's point: output at light wind speeds is small, so holding the blades still then costs relatively little electricity."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

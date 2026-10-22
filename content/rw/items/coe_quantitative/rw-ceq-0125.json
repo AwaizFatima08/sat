@@ -1,0 +1,95 @@
+{
+  "id": "rw-ceq-0125",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In many rural parts of Central America, families have traditionally cooked over wood fires. In 2015, a program in a highland town in Guatemala began offering low-cost bottled-gas stoves. Economist Lucía Ajanel surveyed households about their main cooking fuel in 2015 and again in 2025. She found that gas had become much more common but had not come close to replacing wood.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Main Cooking Fuel of Households in a Guatemalan Highland Town",
+    "x_label": "Fuel",
+    "y_label": "Households (%)",
+    "series": [
+      {
+        "name": "2015",
+        "points": [
+          [
+            "Wood",
+            78
+          ],
+          [
+            "Bottled gas",
+            12
+          ],
+          [
+            "Electricity",
+            4
+          ],
+          [
+            "Charcoal",
+            6
+          ]
+        ]
+      },
+      {
+        "name": "2025",
+        "points": [
+          [
+            "Wood",
+            51
+          ],
+          [
+            "Bottled gas",
+            41
+          ],
+          [
+            "Electricity",
+            6
+          ],
+          [
+            "Charcoal",
+            2
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Ajanel's finding?",
+  "choices": {
+    "A": "Gas became the main fuel for 41% of households, up from 12%, yet 51% still used mainly wood.",
+    "B": "The share of households cooking mainly with electricity rose from 4% to 6% over the decade.",
+    "C": "By 2025, more households cooked mainly with bottled gas than cooked mainly with wood.",
+    "D": "The share of households cooking mainly with wood dropped from 78% in 2015 to 51% in 2025."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Ajanel's finding has two parts: gas became much more common, and wood remained widely used. The choice must show both. Gas rose from 12% to 41% of households, while wood was still the main fuel for 51% in 2025.",
+    "A": "Correct. It shows gas rising sharply (12% to 41%) and wood still the main fuel for about half of households (51%), covering both parts of the finding.",
+    "B": "Incorrect. This is true, but it concerns electricity, not gas or wood.",
+    "C": "Incorrect. This misreads the graph: in 2025, 51% of households used mainly wood and 41% used mainly gas.",
+    "D": "Incorrect. This is true and shows that wood remained common, but it does not show that gas in particular became more common."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

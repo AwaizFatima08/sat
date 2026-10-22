@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0112",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Water heats up and cools down much more slowly than land does. In summer, the ocean slowly stores heat, and in winter it slowly releases that heat into the air above it. Lisbon, Portugal, sits on the Atlantic coast, while Madrid, Spain, lies far inland at a similar distance from the equator. Based on these facts, winter temperatures in Lisbon are most likely ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "colder than Madrid's because the ocean absorbs heat from the air.",
+    "B": "nearly the same as summer temperatures in Lisbon.",
+    "C": "generally milder than those in inland Madrid.",
+    "D": "determined mainly by Lisbon's distance from the equator."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "In winter, the ocean releases heat it stored during summer, warming the air near the coast. Lisbon is on the coast and Madrid is inland at a similar latitude, so Lisbon should have the milder winters.",
+    "A": "Incorrect. The text says that in winter the ocean releases heat into the air, which would make the coast warmer, not colder.",
+    "B": "Incorrect. The ocean only softens the change between seasons; nothing suggests winter and summer would feel the same.",
+    "C": "Correct. Heat released by the Atlantic in winter would keep coastal Lisbon milder than inland Madrid.",
+    "D": "Incorrect. The two cities are a similar distance from the equator, so that distance cannot explain a difference; the ocean can."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "too_broad",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

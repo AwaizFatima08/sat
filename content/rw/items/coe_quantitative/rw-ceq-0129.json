@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0129",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many libraries now lend e-books as well as printed books. Information scientist Wei Ling Tan studied loans at a public library in Singapore from 2021 to 2025 to see whether readers of different ages were moving to e-books at the same rate. She found that e-books made up a growing share of loans for both adults and teenagers but that the change was much faster among adults: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "E-Books as a Share of All Loans at a Singapore Library",
+    "columns": [
+      "Year",
+      "Adult loans that were e-books (%)",
+      "Teen loans that were e-books (%)"
+    ],
+    "rows": [
+      [
+        "2021",
+        22,
+        15
+      ],
+      [
+        "2022",
+        26,
+        16
+      ],
+      [
+        "2023",
+        31,
+        18
+      ],
+      [
+        "2024",
+        35,
+        19
+      ],
+      [
+        "2025",
+        38,
+        21
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "in 2025, e-books made up 38% of adult loans, the highest share shown in the table.",
+    "B": "the e-book share of teen loans rose from 15% to 21%, a larger rise than among adults.",
+    "C": "the adult e-book share rose 16 percentage points, while the teen share rose only 6.",
+    "D": "teenagers borrowed more printed books than adults did in every year from 2021 to 2025."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The claim compares how fast the e-book share grew for the two age groups, so the choice must compare the change in each column. The adult share went from 22% to 38% (16 points), and the teen share went from 15% to 21% (6 points).",
+    "A": "Incorrect. This is true, but it gives one year's figure for adults only and does not compare how fast the two groups changed.",
+    "B": "Incorrect. The teen share did rise from 15% to 21%, but that 6-point rise is smaller than the adults' 16-point rise, not larger.",
+    "C": "Correct. The adult share grew by 16 points and the teen share by only 6, so the change was much faster among adults.",
+    "D": "Incorrect. The table shows only percentages, not the number of printed books each group borrowed."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

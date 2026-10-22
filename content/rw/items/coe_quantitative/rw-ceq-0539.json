@@ -1,0 +1,103 @@
+{
+  "id": "rw-ceq-0539",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Lichens, partnerships between fungi and algae, absorb water and nutrients directly from the air, so many species are harmed by the pollutants that vehicles emit. Ecologist Henrik Aalto surveyed trees at several distances from a busy highway in southern Finland, recording whether each tree carried leafy lichens, which are generally sensitive to pollution, and crust lichens, which are generally tolerant of it. Aalto argues that the highway's influence shows up in the sensitive lichens alone: crust lichens are about equally common at every distance, whereas leafy lichens become common only well away from the road.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Trees Carrying Lichens at Different Distances from a Highway",
+    "x_label": "Distance from highway (meters)",
+    "y_label": "Trees with lichens (%)",
+    "series": [
+      {
+        "name": "Leafy lichens",
+        "points": [
+          [
+            "0",
+            4
+          ],
+          [
+            "100",
+            12
+          ],
+          [
+            "200",
+            31
+          ],
+          [
+            "400",
+            58
+          ],
+          [
+            "800",
+            64
+          ]
+        ]
+      },
+      {
+        "name": "Crust lichens",
+        "points": [
+          [
+            "0",
+            72
+          ],
+          [
+            "100",
+            75
+          ],
+          [
+            "200",
+            70
+          ],
+          [
+            "400",
+            74
+          ],
+          [
+            "800",
+            71
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Aalto's argument?",
+  "choices": {
+    "A": "Crust lichens grew on 70% to 75% of trees at every distance, while leafy lichens grew on 4% of trees at the road and 64% at 800 meters.",
+    "B": "Leafy lichens grew on a larger share of trees at 800 meters from the highway than at any other distance measured.",
+    "C": "At every distance measured, crust lichens grew on a larger share of trees than leafy lichens did.",
+    "D": "The share of trees carrying crust lichens fell steadily as distance from the highway increased."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Aalto's argument contrasts the two kinds of lichen: crust lichens stay about equally common at all distances, while leafy lichens become common only far from the road. Support must describe both lines across distance. Crust lichens stay between 70% and 75%, while leafy lichens climb from 4% at the road to 64% at 800 meters.",
+    "A": "Correct. It shows the flat pattern for tolerant crust lichens alongside the steep rise for sensitive leafy lichens, which is exactly Aalto's contrast.",
+    "B": "Incorrect. This is true, but it describes leafy lichens alone and says nothing about whether crust lichens were unaffected by the road.",
+    "C": "Incorrect. This is true, but which lichen is more common overall does not show how each changes with distance from the road.",
+    "D": "Incorrect. The crust-lichen line stays between 70% and 75% with no steady decline, so this misreads the graph."
+  },
+  "traps": {
+    "B": "too_narrow",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

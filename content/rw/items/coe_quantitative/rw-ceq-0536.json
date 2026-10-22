@@ -1,0 +1,103 @@
+{
+  "id": "rw-ceq-0536",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "drill",
+  "passage": "In 2023, a midsize city in northern Portugal stopped charging fares on its buses. Ridership rose, and the city's mayor credited the policy with persuading commuters to leave their cars at home. Transport economist Rui Valente is skeptical of that interpretation. Comparing average weekday ridership in 2022 and 2023, he argues that the growth came largely from trips taken in the middle of the day, such as errands and visits, while ridership during the morning and evening rush hours, when most commuting occurs, barely changed.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average Weekday Bus Riders by Time of Day",
+    "x_label": "Time of day",
+    "y_label": "Riders (thousands)",
+    "series": [
+      {
+        "name": "2022 (fares charged)",
+        "points": [
+          [
+            "7–9 a.m.",
+            5.2
+          ],
+          [
+            "9 a.m.–noon",
+            2.1
+          ],
+          [
+            "Noon–3 p.m.",
+            2.4
+          ],
+          [
+            "3–5 p.m.",
+            3.0
+          ],
+          [
+            "5–7 p.m.",
+            4.8
+          ]
+        ]
+      },
+      {
+        "name": "2023 (no fares)",
+        "points": [
+          [
+            "7–9 a.m.",
+            5.5
+          ],
+          [
+            "9 a.m.–noon",
+            3.6
+          ],
+          [
+            "Noon–3 p.m.",
+            3.9
+          ],
+          [
+            "3–5 p.m.",
+            4.1
+          ],
+          [
+            "5–7 p.m.",
+            5.1
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Valente's argument?",
+  "choices": {
+    "A": "More people rode the buses in 2023 than in 2022 during every time period shown.",
+    "B": "Ridership rose by about 1,500 in each period from 9 a.m. to 3 p.m. but by only about 300 in each rush-hour period.",
+    "C": "In both years, more people rode between 7 and 9 a.m. than during any other time period shown.",
+    "D": "The largest increase in ridership from 2022 to 2023 occurred between 5 and 7 p.m."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Valente accepts that ridership rose; his point is about where the growth came from: midday trips grew, while rush-hour trips barely changed. Support must compare the change in midday periods with the change in rush-hour periods. Ridership rose 1,500 from 9 a.m. to noon (2.1 to 3.6 thousand) and from noon to 3 p.m. (2.4 to 3.9), but only 300 from 7 to 9 a.m. (5.2 to 5.5) and from 5 to 7 p.m. (4.8 to 5.1).",
+    "A": "Incorrect. This is true, but the mayor and Valente both accept that ridership grew; it does not show which trips produced the growth.",
+    "B": "Correct. It compares the gains in midday and rush-hour periods and shows that the growth came mostly in the middle of the day.",
+    "C": "Incorrect. This is true, but it compares time periods within each year rather than showing how ridership changed after fares ended.",
+    "D": "Incorrect. The 5–7 p.m. period rose by only 300 riders, one of the smallest increases, so this misreads the graph."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

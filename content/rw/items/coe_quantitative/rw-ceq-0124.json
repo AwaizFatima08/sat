@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0124",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many fruit-eating birds swallow seeds whole and later pass them in their droppings. Some ecologists have proposed that passing through a bird's gut also helps seeds sprout. Botanist Lucas Ferraz tested this idea in Brazil's Atlantic Forest, comparing seeds of four tree species collected from bird droppings with seeds taken directly from fruit. Ferraz concluded that the effect depends on the species: gut passage helped some kinds of seeds sprout but not others.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Percentage of Seeds That Sprouted, by Source",
+    "columns": [
+      "Tree species",
+      "Seeds from bird droppings (%)",
+      "Seeds taken from fruit (%)"
+    ],
+    "rows": [
+      [
+        "Juçara palm",
+        72,
+        48
+      ],
+      [
+        "Pitanga",
+        55,
+        57
+      ],
+      [
+        "Guava",
+        81,
+        39
+      ],
+      [
+        "Embaúba",
+        36,
+        38
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Ferraz's conclusion?",
+  "choices": {
+    "A": "Guava seeds from droppings sprouted at a higher rate, 81%, than seeds of any other species did.",
+    "B": "For all four species, seeds from droppings sprouted at a higher rate than seeds taken from fruit.",
+    "C": "Seeds passed by birds were carried farther from the parent tree than seeds that fell in fruit.",
+    "D": "Guava seeds sprouted far more often after passing through a bird, but pitanga seeds did not."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Ferraz's conclusion has two sides: gut passage helped some species and not others. Support must show one species that benefited and one that did not. Guava seeds sprouted at 81% from droppings versus 39% from fruit, while pitanga seeds sprouted at 55% versus 57%.",
+    "A": "Incorrect. This is true, but it compares species with one another and shows only that guava did well, not that the effect differed among species.",
+    "B": "Incorrect. This misreads the table: pitanga and embaúba seeds sprouted slightly less often from droppings than from fruit.",
+    "C": "Incorrect. The table shows sprouting rates, not how far seeds were carried.",
+    "D": "Correct. Gut passage roughly doubled guava's sprouting rate but did not raise pitanga's, so the effect depended on the species."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "reversed",
+    "C": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

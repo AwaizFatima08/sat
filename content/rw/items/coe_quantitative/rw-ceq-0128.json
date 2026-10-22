@@ -1,0 +1,71 @@
+{
+  "id": "rw-ceq-0128",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Sugarcane needs large amounts of water, and in the Indian state of Maharashtra many fields have traditionally been watered through furrows, shallow channels between rows. Agronomist Priya Deshmukh compared furrow watering with drip irrigation, which delivers water through tubes directly to plant roots, on test plots over one growing season. She concluded that drip irrigation did more than simply save water: it let farmers grow more cane while using less water.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Water Use and Sugarcane Yield under Three Irrigation Methods",
+    "columns": [
+      "Irrigation method",
+      "Water used (millimeters)",
+      "Cane yield (metric tons per hectare)"
+    ],
+    "rows": [
+      [
+        "Furrow, every row",
+        2250,
+        99
+      ],
+      [
+        "Furrow, alternate rows",
+        1800,
+        92
+      ],
+      [
+        "Drip",
+        1500,
+        118
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Deshmukh's conclusion?",
+  "choices": {
+    "A": "The drip plots used about 1,500 millimeters of water, roughly 750 millimeters less than the every-row furrow plots.",
+    "B": "Drip plots used less water than every-row furrow plots yet grew more cane: 118 versus 99 metric tons per hectare.",
+    "C": "The alternate-row furrow plots used 1,800 millimeters of water, less than the 2,250 used by every-row furrow plots.",
+    "D": "The alternate-row furrow plots yielded more cane per hectare than the drip plots did, 92 versus 118 metric tons."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Deshmukh claims that drip irrigation did more than save water: it gave a larger harvest with less water. Support must therefore show both less water and a higher yield for drip. Drip used 1,500 millimeters and yielded 118 metric tons per hectare; every-row furrows used 2,250 millimeters and yielded 99.",
+    "A": "Incorrect. This is true, but it shows only that drip saved water, which is the part Deshmukh says is not the whole story.",
+    "B": "Correct. Drip plots used less water and produced more cane than every-row furrow plots, which is exactly what Deshmukh concluded.",
+    "C": "Incorrect. This is true, but it compares two furrow methods and says nothing about drip irrigation.",
+    "D": "Incorrect. This misreads the table: 92 is less than 118, so the alternate-row plots yielded less cane than the drip plots."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

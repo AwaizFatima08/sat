@@ -1,0 +1,103 @@
+{
+  "id": "rw-ceq-0533",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Honeybees and bumblebees often visit the same flowers, but their daily schedules can differ. Because bumblebees are large and densely furred, they can fly in air too cool for many smaller bees. Pollination ecologist Saskia de Vries counted visits by each kind of bee to plots of flowering clover in the Netherlands on a series of cool spring days. She argues that bumblebees dominate the clover in the early morning, while temperatures are still low, but that this difference largely disappears by midday, when honeybees become at least as active as bumblebees.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average Bee Visits to Clover Plots on Cool Spring Days",
+    "x_label": "Time of day",
+    "y_label": "Visits per hour",
+    "series": [
+      {
+        "name": "Bumblebees",
+        "points": [
+          [
+            "6 a.m.",
+            42
+          ],
+          [
+            "8 a.m.",
+            55
+          ],
+          [
+            "10 a.m.",
+            61
+          ],
+          [
+            "Noon",
+            63
+          ],
+          [
+            "2 p.m.",
+            60
+          ]
+        ]
+      },
+      {
+        "name": "Honeybees",
+        "points": [
+          [
+            "6 a.m.",
+            4
+          ],
+          [
+            "8 a.m.",
+            18
+          ],
+          [
+            "10 a.m.",
+            49
+          ],
+          [
+            "Noon",
+            66
+          ],
+          [
+            "2 p.m.",
+            64
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support de Vries's argument?",
+  "choices": {
+    "A": "Bumblebees made more visits to the clover plots than honeybees did at every time of day shown.",
+    "B": "Both kinds of bees made fewer visits per hour at 6 a.m. than they did at noon.",
+    "C": "At 6 a.m., bumblebees made 38 more visits per hour than honeybees did, but at noon honeybees made 3 more.",
+    "D": "Honeybee visits peaked at noon and then declined slightly by 2 p.m."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "De Vries's argument contrasts two times of day: bumblebees dominate early, but by midday honeybees are at least as active. Support must compare the two lines at an early time and at midday. At 6 a.m. the counts are 42 versus 4, a 38-visit gap in favor of bumblebees; at noon they are 63 versus 66, with honeybees slightly ahead.",
+    "A": "Incorrect. At noon (66 versus 63) and 2 p.m. (64 versus 60) honeybees made more visits, so this misreads the graph.",
+    "B": "Incorrect. This is true, but it describes both bees together and says nothing about how they compare with each other.",
+    "C": "Correct. It shows a large early-morning gap favoring bumblebees and a midday reading in which honeybees match or slightly exceed them.",
+    "D": "Incorrect. This is true, but it describes honeybees alone, so it cannot show how the two kinds of bees compare at different times."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

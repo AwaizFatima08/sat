@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0106",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Members of a farming cooperative near Nakuru, Kenya, share equipment and sell their crops together. In 2025, cooperative officer Wanjiru Kamau recorded how many hectares each crop covered and how large each harvest was. Her records show that the crop planted on the most land was ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Crops Grown by a Cooperative near Nakuru, Kenya, 2025",
+    "columns": [
+      "Crop",
+      "Land planted (hectares)",
+      "Harvest (metric tons)"
+    ],
+    "rows": [
+      [
+        "Maize",
+        46,
+        138
+      ],
+      [
+        "Potatoes",
+        22,
+        396
+      ],
+      [
+        "Beans",
+        31,
+        34
+      ],
+      [
+        "Cabbage",
+        9,
+        270
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "potatoes, which produced the largest harvest of any crop.",
+    "B": "beans, which were planted on 31 hectares.",
+    "C": "maize, which was planted on 46 hectares.",
+    "D": "wheat, which was planted on more land than maize."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The statement is about the crop planted on the most land, so check the \"Land planted\" column, not the harvest column. The largest value there is 46 hectares, for maize.",
+    "A": "Incorrect. Potatoes gave the largest harvest (396 metric tons), but they were planted on only 22 hectares.",
+    "B": "Incorrect. Beans were planted on 31 hectares, which is less land than maize's 46 hectares.",
+    "C": "Correct. Maize covered 46 hectares, more land than any other crop in the table.",
+    "D": "Incorrect. The table does not include wheat at all."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

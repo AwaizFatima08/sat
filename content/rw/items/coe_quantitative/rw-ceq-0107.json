@@ -1,0 +1,82 @@
+{
+  "id": "rw-ceq-0107",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Tea bushes grow best with plenty of rain, and many tea estates in Sri Lanka keep their own rainfall records. Estate manager Dilani Perera measured the rain that fell on her estate, in the southwest of the country, during the first six months of 2025. Her measurements show that the wettest of these months was ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Monthly Rainfall at a Tea Estate in Southwestern Sri Lanka, 2025",
+    "x_label": "Month",
+    "y_label": "Rainfall (millimeters)",
+    "series": [
+      {
+        "name": "Rainfall",
+        "points": [
+          [
+            "January",
+            120
+          ],
+          [
+            "February",
+            105
+          ],
+          [
+            "March",
+            190
+          ],
+          [
+            "April",
+            310
+          ],
+          [
+            "May",
+            470
+          ],
+          [
+            "June",
+            400
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "June, when about 400 millimeters of rain fell.",
+    "B": "May, when about 470 millimeters of rain fell.",
+    "C": "February, when about 105 millimeters of rain fell.",
+    "D": "April, when the rain helped the tea bushes grow fastest."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The wettest month is the one with the highest rainfall, so find the highest point on the line. The line peaks at about 470 millimeters in May.",
+    "A": "Incorrect. June was very wet, with about 400 millimeters, but May had even more rain.",
+    "B": "Correct. About 470 millimeters fell in May, more than in any other month shown.",
+    "C": "Incorrect. February had the least rain of the six months, so it was the driest, not the wettest.",
+    "D": "Incorrect. April had about 310 millimeters, less than May, and the graph says nothing about how fast the tea bushes grew."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

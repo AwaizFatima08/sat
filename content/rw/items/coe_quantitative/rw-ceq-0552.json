@@ -1,0 +1,69 @@
+{
+  "id": "rw-ceq-0552",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Historians have long debated how much the arrival of the railway shaped the growth of towns in nineteenth-century Germany, where thousands of kilometers of track were laid between 1840 and 1880. Skeptics point out that in one western region, towns without a railway station added more residents between 1850 and 1880 than towns with one did. Historian Wiebke Lorenz considers this comparison misleading, because the towns without stations were far larger to begin with. Measured relative to their starting size, she argues, the towns that had gained a station by 1855 grew about twice as fast as those that had not.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Population of Towns in One Western German Region",
+    "columns": [
+      "Group of towns",
+      "1850",
+      "1865",
+      "1880"
+    ],
+    "rows": [
+      [
+        "Station by 1855",
+        4200,
+        5400,
+        6900
+      ],
+      [
+        "No station",
+        9600,
+        11300,
+        12800
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Lorenz's argument?",
+  "choices": {
+    "A": "From 1850 to 1880, towns without a station added about 3,200 residents, while towns with a station added about 2,700.",
+    "B": "From 1850 to 1880, towns with a station grew by about 64%, while towns without one grew by about 33%.",
+    "C": "In every year shown, towns without a station were larger on average than towns with a station.",
+    "D": "From 1850 to 1880, towns with a station added more residents than towns without a station did."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Lorenz rejects comparing the number of residents added and instead compares growth relative to starting size, so support must express each group's growth as a percentage. Towns with a station grew from 4,200 to 6,900, an increase of 2,700, or about 64%; towns without one grew from 9,600 to 12,800, an increase of 3,200, or about 33%. The first rate is roughly twice the second.",
+    "A": "Incorrect. This is true, but it is the skeptics' comparison of residents added, which Lorenz calls misleading; it says nothing about growth relative to size.",
+    "B": "Correct. It compares growth relative to each group's starting size and shows towns with a station growing at about twice the rate of the others.",
+    "C": "Incorrect. This is true, but it supports only Lorenz's point about starting size, not her claim about how fast each group grew.",
+    "D": "Incorrect. Towns with a station added 2,700 residents, fewer than the 3,200 added by towns without one, so this reverses the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

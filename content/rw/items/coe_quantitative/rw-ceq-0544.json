@@ -1,0 +1,87 @@
+{
+  "id": "rw-ceq-0544",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "The shells of the grove snail, a common European land snail, range from pale yellow to dark brown. Dark shells absorb more sunlight than pale ones, so in exposed places they can cause their owners to overheat. Evolutionary biologist Marta Lindqvist marked hundreds of snails of each color, released them in three habitats on the Danish coast, and later recorded how many survived. She argues that the advantage of pale shells depends on exposure to the sun: it is substantial in open dunes but shrinks as the habitat becomes more shaded, nearly vanishing in woodland.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Survival of Marked Grove Snails by Shell Color and Habitat",
+    "x_label": "Habitat",
+    "y_label": "Snails surviving (%)",
+    "series": [
+      {
+        "name": "Pale shells",
+        "points": [
+          [
+            "Open dunes",
+            68
+          ],
+          [
+            "Dune edge with shrubs",
+            61
+          ],
+          [
+            "Woodland",
+            57
+          ]
+        ]
+      },
+      {
+        "name": "Dark shells",
+        "points": [
+          [
+            "Open dunes",
+            41
+          ],
+          [
+            "Dune edge with shrubs",
+            50
+          ],
+          [
+            "Woodland",
+            55
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Lindqvist's argument?",
+  "choices": {
+    "A": "Pale-shelled snails survived at a higher rate than dark-shelled snails in open dunes, at the dune edge, and in woodland.",
+    "B": "Pale shells' survival advantage was 27 points in open dunes, 11 points at the dune edge, and 2 points in woodland.",
+    "C": "Dark-shelled snails survived at a higher rate in woodland than they did in open dunes.",
+    "D": "In woodland, dark-shelled snails survived at a higher rate than pale-shelled snails did."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Lindqvist's argument is about the size of the pale shells' advantage: large in open dunes, smaller with more shade, and nearly gone in woodland. The advantage is the gap between the two bars in each habitat. The gaps are 68 − 41 = 27 points, 61 − 50 = 11 points, and 57 − 55 = 2 points.",
+    "A": "Incorrect. This is true, but it shows only that pale shells always did better, not that their advantage shrinks as shade increases.",
+    "B": "Correct. It tracks the gap between pale and dark shells across the three habitats and shows it shrinking from 27 points to almost nothing.",
+    "C": "Incorrect. This is true (55% versus 41%), but it describes dark shells alone and does not compare them with pale shells in each habitat.",
+    "D": "Incorrect. In woodland, pale shells survived at 57% and dark shells at 55%, so this reverses the graph."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

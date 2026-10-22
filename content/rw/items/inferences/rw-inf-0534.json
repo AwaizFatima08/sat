@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0534",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "drill",
+  "passage": "When medieval scribes copied a text, they sometimes skipped from one line to a later line with the same ending, accidentally leaving out everything in between, an error called eye-skip. Because two scribes rarely make the identical omission independently, when two manuscripts share the same unusual gap, scholars generally conclude either that one was copied from the other or that both descend from a common earlier copy. Philologist Anselm Brandt found that manuscripts P and Q of a twelfth-century poem omit the same three lines at the same point. Analysis of the parchment and handwriting indicates that P was written several decades before Q. If these dates are correct, Brandt's findings indicate that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "P was copied from Q, which explains why both lack the same three lines.",
+    "B": "P and Q were both copied from a lost manuscript that already lacked the three lines.",
+    "C": "the scribe of P left out the three lines on purpose because he judged them to be weak.",
+    "D": "P was not copied from Q, though Q may have been copied from P."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "A shared gap means one manuscript copied the other or both share an ancestor. A manuscript cannot be copied from one written decades after it, so P cannot come from Q. That leaves two possibilities, Q copied from P or both from a common source, and the text gives no way to choose between them.",
+    "A": "Incorrect. This reverses the possible direction of copying: P is decades older than Q, so P cannot have been copied from Q.",
+    "B": "Incorrect. A common lost source is one possibility, but Q could just as well have been copied directly from P; the evidence does not decide between them.",
+    "C": "Incorrect. The text describes the omission as the kind of accident scholars call eye-skip and gives no evidence that any scribe left lines out on purpose.",
+    "D": "Correct. Since P is older, it cannot have been copied from Q, while copying of Q from P remains one of the possibilities the shared gap allows."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "too_broad",
+    "C": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

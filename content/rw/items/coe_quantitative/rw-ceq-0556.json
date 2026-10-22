@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0556",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Tadpoles of many frog species grow deeper tails when predators are near, a change that helps them escape. Because dragonfly larvae prey on tadpoles, one might suppose that the mere presence of the larvae is enough to trigger the change. Ecologist Kwame Asante doubts this. He argues that tadpoles respond chiefly to chemical cues released when a predator eats other tadpoles, not to the presence of a predator as such, and still less to general disturbance. To test this, he raised tadpoles under four conditions and measured them after three weeks.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Tadpole Measurements after Three Weeks under Four Conditions",
+    "columns": [
+      "Condition",
+      "Average tail depth (mm)",
+      "Average body length (mm)"
+    ],
+    "rows": [
+      [
+        "No predator, undisturbed (control)",
+        4.1,
+        12.0
+      ],
+      [
+        "No predator, water stirred daily",
+        4.2,
+        12.1
+      ],
+      [
+        "Caged dragonfly larvae fed snails",
+        4.6,
+        11.9
+      ],
+      [
+        "Caged dragonfly larvae fed tadpoles",
+        5.8,
+        11.2
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Asante's argument?",
+  "choices": {
+    "A": "Tadpoles kept near caged dragonfly larvae had deeper tails than control tadpoles, whether the larvae were fed snails or fed tadpoles.",
+    "B": "Tails were 1.2 mm deeper with tadpole-fed larvae than with snail-fed larvae, more than twice the gap between snail-fed and control.",
+    "C": "Stirring the water every day increased tail depth by only 0.1 mm compared with the control.",
+    "D": "Tadpoles near larvae fed tadpoles had the shortest bodies but not the deepest tails of any group."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Asante's key claim is that the response comes chiefly from cues released when predators eat tadpoles, not from the predator's presence. The test of that is to compare the two predator conditions, which differ only in what the larvae ate, and to set that difference against the effect of presence alone. Larvae fed tadpoles produced tails 5.8 − 4.6 = 1.2 mm deeper than larvae fed snails, while snail-fed larvae raised tail depth only 4.6 − 4.1 = 0.5 mm above the control.",
+    "A": "Incorrect. This is true, but it treats both predator conditions alike, and the snail-fed result shows that presence alone has some effect, which does not help show that diet cues matter most.",
+    "B": "Correct. It isolates the effect of what the predator ate and shows that this effect is much larger than the effect of the predator's mere presence.",
+    "C": "Incorrect. This is true, but it rules out only general disturbance; it says nothing about whether presence or diet cues drive the response.",
+    "D": "Incorrect. Tadpoles near larvae fed tadpoles had the deepest tails (5.8 mm) of any group, so this misreads the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

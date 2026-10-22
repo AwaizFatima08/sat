@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0121",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Night markets in Bangkok, Thailand, attract both residents and tourists. Urban geographer Niran Chaiyaporn counted the stalls of each type at two night markets, one near a business district popular with visitors and one in a residential neighborhood. He hypothesized that the residential market would devote a much larger share of its stalls to everyday goods, such as fresh produce and household items, than the business district market would.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Stalls at Two Bangkok Night Markets",
+    "columns": [
+      "Stall type",
+      "Business district market",
+      "Residential market"
+    ],
+    "rows": [
+      [
+        "Prepared food",
+        120,
+        95
+      ],
+      [
+        "Clothing and souvenirs",
+        140,
+        30
+      ],
+      [
+        "Fresh produce",
+        15,
+        60
+      ],
+      [
+        "Household goods",
+        25,
+        55
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Chaiyaporn's hypothesis?",
+  "choices": {
+    "A": "About 48% of stalls at the residential market sold produce or household goods, versus 13% at the other market.",
+    "B": "The business district market had more prepared-food stalls than the residential market had, 120 compared with 95.",
+    "C": "The residential market had more clothing and souvenir stalls than the business district market, 140 compared with 30.",
+    "D": "Most shoppers at the residential market said they lived within a short walk of it and visited weekly."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The hypothesis is about the share of each market's stalls selling everyday goods. The residential market has 60 + 55 = 115 such stalls out of 240 (about 48%), while the business district market has 15 + 25 = 40 out of 300 (about 13%).",
+    "A": "Correct. Everyday goods filled about 48% of the residential market's stalls but only about 13% of the business district market's, as the hypothesis predicts.",
+    "B": "Incorrect. This is true, but prepared food is not one of the everyday goods named in the hypothesis.",
+    "C": "Incorrect. This swaps the markets: the business district market had 140 clothing and souvenir stalls, and the residential market had 30.",
+    "D": "Incorrect. The table counts stalls; it contains no information about shoppers."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

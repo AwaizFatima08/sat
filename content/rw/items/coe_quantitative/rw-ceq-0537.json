@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0537",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Many home bakers assume that keeping bread dough warm is always an advantage, since warm dough rises faster. Food scientist Amaka Obi tested that assumption by letting identical batches of yeast dough rise at four temperatures and then measuring both the time each batch took to double in size and the volume of the baked loaves. Obi agrees that warmth speeds rising, but she argues that beyond a moderate temperature, the time saved comes at a cost: the finished loaves are noticeably smaller.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Rising Time and Loaf Volume at Four Dough Temperatures",
+    "columns": [
+      "Dough temperature (°C)",
+      "Time to double in size (hours)",
+      "Loaf volume (cubic centimeters)"
+    ],
+    "rows": [
+      [
+        "20",
+        3.1,
+        1450
+      ],
+      [
+        "24",
+        2.0,
+        1480
+      ],
+      [
+        "28",
+        1.4,
+        1420
+      ],
+      [
+        "32",
+        1.0,
+        1290
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Obi's argument?",
+  "choices": {
+    "A": "At 20°C, the dough took more than three hours to double in size.",
+    "B": "Loaf volume was greatest at 20°C and decreased with each increase in dough temperature.",
+    "C": "Raising the temperature from 24°C to 32°C halved the rising time but shrank loaf volume from 1,480 to 1,290 cubic centimeters.",
+    "D": "Rising time decreased with each increase in dough temperature shown in the table."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Obi's argument has two linked parts: above a moderate temperature, dough rises faster, but the loaves are smaller. Support must use both columns over the same temperature change. From 24°C to 32°C, rising time fell from 2.0 to 1.0 hours while loaf volume fell from 1,480 to 1,290 cubic centimeters.",
+    "A": "Incorrect. This is true, but it gives one reading at the coolest temperature and shows neither a trade-off nor what happens above a moderate temperature.",
+    "B": "Incorrect. Loaf volume was greatest at 24°C (1,480), not at 20°C (1,450), so this misreads the table.",
+    "C": "Correct. It shows both the time saved and the loss in volume when the temperature rises beyond a moderate level, which is exactly the trade-off Obi describes.",
+    "D": "Incorrect. This is true, but it supports only the point Obi already grants (warmth speeds rising) and says nothing about the cost in loaf size."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

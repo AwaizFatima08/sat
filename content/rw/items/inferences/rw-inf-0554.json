@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0554",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Earthquakes send two main kinds of waves through Earth's interior. Primary (P) waves compress and stretch the material they pass through and can travel through solids and liquids alike; secondary (S) waves shake material from side to side, a motion that only a rigid material can pass along, so S waves cannot travel through liquid. Early twentieth-century seismologists found that seismometers fairly close to an earthquake, reached by waves traveling only through the mantle, recorded both kinds of waves. Seismometers on the side of Earth roughly opposite the earthquake, reached only by paths that pass through the core, recorded P waves, though bent and delayed, but no direct S waves. These observations indicate that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "Earth's entire core, from its boundary to its center, is liquid.",
+    "B": "at least part of Earth's core is liquid rather than solid.",
+    "C": "P waves are unable to pass through Earth's core.",
+    "D": "Earth's mantle is liquid, since waves traveling through it are recorded."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "S waves crossed the mantle but never arrived along paths through the core. Since S waves are stopped only by liquid, something along those core paths must be liquid. The observations show that at least part of the core is liquid, not that all of it is.",
+    "A": "Incorrect. Blocking S waves requires only a liquid layer somewhere along the path; the observations do not show that the whole core is liquid.",
+    "B": "Correct. S waves travel through the mantle but are missing along every path through the core, and only liquid stops them, so some of the core must be liquid.",
+    "C": "Incorrect. This contradicts the text, which says P waves did reach the far side, though bent and delayed.",
+    "D": "Incorrect. S waves passed through the mantle, which shows that the mantle is rigid, not liquid."
+  },
+  "traps": {
+    "A": "too_broad",
+    "C": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

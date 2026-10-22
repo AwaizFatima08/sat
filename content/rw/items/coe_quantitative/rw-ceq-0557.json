@@ -1,0 +1,111 @@
+{
+  "id": "rw-ceq-0557",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Painters in the seventeenth-century Dutch Republic turned out landscapes in enormous numbers, often working quickly in standardized formats, and in estate inventories from Amsterdam a landscape was, by the 1680s, valued at only a small fraction of what a history painting, depicting a scene from the Bible, mythology, or the past, would fetch. Art historian Femke Dijkstra, who compiled the values recorded in hundreds of such inventories, argues that this widening gap reflected changes in the market for landscapes alone: landscapes grew steadily cheaper, she contends, while the prices of history paintings scarcely moved.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average Values of Paintings in Amsterdam Estate Inventories",
+    "x_label": "Decade",
+    "y_label": "Average value (guilders)",
+    "series": [
+      {
+        "name": "Landscapes",
+        "points": [
+          [
+            "1630s",
+            24
+          ],
+          [
+            "1640s",
+            21
+          ],
+          [
+            "1650s",
+            17
+          ],
+          [
+            "1660s",
+            15
+          ],
+          [
+            "1670s",
+            12
+          ],
+          [
+            "1680s",
+            11
+          ]
+        ]
+      },
+      {
+        "name": "History paintings",
+        "points": [
+          [
+            "1630s",
+            60
+          ],
+          [
+            "1640s",
+            58
+          ],
+          [
+            "1650s",
+            61
+          ],
+          [
+            "1660s",
+            63
+          ],
+          [
+            "1670s",
+            62
+          ],
+          [
+            "1680s",
+            60
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Dijkstra's argument?",
+  "choices": {
+    "A": "The average value of landscapes fell in every decade from the 1630s to the 1680s.",
+    "B": "History paintings were valued at least twice as highly as landscapes on average in every decade shown.",
+    "C": "The gap between the two kinds of painting widened mainly because history paintings became more expensive over the period.",
+    "D": "Landscapes fell from 24 to 11 guilders on average, while history paintings stayed between 58 and 63 guilders."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Dijkstra's argument explains the widening gap by pointing to one series only: landscapes fell while history paintings held steady. Support must describe both lines, showing a decline in one and stability in the other. Landscapes dropped from 24 to 11 guilders, while history paintings stayed between 58 and 63 guilders throughout.",
+    "A": "Incorrect. This is true, but it covers only half of the argument; the gap could also have widened partly because history paintings rose.",
+    "B": "Incorrect. This is true, but a constant ratio of at least two to one says nothing about which kind of painting changed in value.",
+    "C": "Incorrect. History paintings were worth 60 guilders in both the 1630s and the 1680s, so the gap widened because landscapes fell, the opposite of this choice.",
+    "D": "Correct. It shows the decline in landscape values alongside nearly flat values for history paintings, which is exactly the pattern Dijkstra describes."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

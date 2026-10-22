@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0119",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "At a film festival in Lyon, France, four foreign-language films were each shown twice: once with French subtitles and once dubbed into French. Festival organizer Camille Roux asked audience members to rate each screening on a scale from 1 to 10. The two screenings of each film drew audiences of similar size. Roux noted that audiences did not prefer the same version of every film: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Audience Ratings for Subtitled and Dubbed Screenings",
+    "columns": [
+      "Film",
+      "Original language",
+      "Subtitled rating",
+      "Dubbed rating"
+    ],
+    "rows": [
+      [
+        "The Salt Road",
+        "Arabic",
+        8.4,
+        7.1
+      ],
+      [
+        "Winter Kitchen",
+        "Japanese",
+        7.9,
+        7.6
+      ],
+      [
+        "Paper Moons",
+        "Hindi",
+        6.8,
+        7.5
+      ],
+      [
+        "North Wind",
+        "Norwegian",
+        8.1,
+        6.9
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "both versions of Winter Kitchen received ratings above 7.5.",
+    "B": "The Salt Road scored higher subtitled, but Paper Moons scored higher dubbed.",
+    "C": "every film was rated higher in its subtitled version than in its dubbed one.",
+    "D": "North Wind scored higher dubbed, but Winter Kitchen scored higher subtitled."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Roux's point is that the preferred version differed from film to film, so the choice must name one film rated higher subtitled and another rated higher dubbed. The Salt Road scored 8.4 subtitled and 7.1 dubbed, while Paper Moons scored 6.8 subtitled and 7.5 dubbed.",
+    "A": "Incorrect. This is true (7.9 and 7.6), but it concerns one film only and shows no difference in which version audiences preferred.",
+    "B": "Correct. The Salt Road was preferred subtitled and Paper Moons was preferred dubbed, so audiences did not favor the same version every time.",
+    "C": "Incorrect. Paper Moons was rated higher dubbed (7.5) than subtitled (6.8), so not every film was preferred subtitled, and this would contradict Roux's point.",
+    "D": "Incorrect. This misreads the table: North Wind scored higher subtitled (8.1) than dubbed (6.9)."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

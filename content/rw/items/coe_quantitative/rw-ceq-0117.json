@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0117",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "For decades, a car ferry was the only way to cross a fjord near a small town in western Norway. In 2022, a bridge opened across the fjord, and planners predicted that use of the ferry, which still stops at two island villages, would keep shrinking year after year. Transport researcher Ola Haugen's data show that ferry use did drop sharply in 2022 but that the rest of the prediction was wrong: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Yearly Ferry Passengers across a Fjord in Western Norway",
+    "x_label": "Year",
+    "y_label": "Passengers (thousands)",
+    "series": [
+      {
+        "name": "Ferry passengers",
+        "points": [
+          [
+            "2019",
+            410
+          ],
+          [
+            "2020",
+            395
+          ],
+          [
+            "2021",
+            402
+          ],
+          [
+            "2022",
+            160
+          ],
+          [
+            "2023",
+            168
+          ],
+          [
+            "2024",
+            177
+          ],
+          [
+            "2025",
+            185
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "after 2022, ferry use rose slightly each year, reaching about 185,000 passengers in 2025.",
+    "B": "by 2025, the ferry was again carrying about 400,000 passengers a year, as it had before 2022.",
+    "C": "the ferry carried about 410,000 passengers in 2019, more than in any later year shown.",
+    "D": "the new bridge carried more than a million vehicles in its first full year of operation."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Planners predicted that ferry use would keep shrinking every year. The graph shows a sharp drop in 2022, but after that the line rises a little each year, from about 160,000 to about 185,000, which contradicts the prediction.",
+    "A": "Correct. After the drop, ferry use grew slightly every year, so it did not keep shrinking as planners predicted.",
+    "B": "Incorrect. This misreads the graph: ferry use in 2025 was about 185,000, far below the roughly 400,000 of earlier years.",
+    "C": "Incorrect. This is true, but it describes the years before the bridge opened and says nothing about what happened after 2022.",
+    "D": "Incorrect. The graph shows only ferry passengers, not traffic on the bridge."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "true_irrelevant",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

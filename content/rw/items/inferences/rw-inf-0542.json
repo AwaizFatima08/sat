@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0542",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "drill",
+  "passage": "Lahore's air is usually far more polluted in winter than in summer. According to an emissions inventory compiled by environmental scientist Asma Rauf, however, the city's traffic and factories release broadly similar amounts of pollution in every season. In winter, the ground cools rapidly on clear nights, often leaving a layer of cold air near the surface beneath warmer air above, an arrangement known as a temperature inversion. Because the cold air is denser, it does not rise and mix with the air above it, so pollutants released near the ground stay concentrated there. These facts suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "Lahore's vehicles and factories release more pollution in cold weather than in warm weather.",
+    "B": "winter weather can worsen Lahore's air even when emissions do not increase.",
+    "C": "temperature inversions are themselves a major source of the pollutants in Lahore's air.",
+    "D": "reducing traffic emissions would have no effect on the quality of Lahore's winter air."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Combine the two parts of the text. The city's traffic and factories release similar amounts in every season, yet winter air is dirtier; inversions explain the difference by trapping pollution near the ground. So weather alone can make the air worse without any rise in emissions.",
+    "A": "Incorrect. This contradicts Rauf's inventory, which finds broadly similar emissions in every season.",
+    "B": "Correct. With emissions steady, the inversions that trap pollutants near the ground can account for dirtier winter air.",
+    "C": "Incorrect. The text says inversions trap pollutants; it never says they produce them.",
+    "D": "Incorrect. Inversions concentrate whatever is released, so the text gives no reason to think lower emissions would make no difference."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "rw-ceq-0120",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In mountain streams fed by melting snow, water flow usually peaks in late spring or early summer. Hydrologist Erin Castillo compared the flow of a stream in the Colorado Rockies in 2023, after a winter of heavy snowfall, and in 2024, after a winter of light snowfall. She found that in the low-snow year, the stream not only carried less water at its peak but also peaked earlier: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average Monthly Flow of a Snow-Fed Stream in Colorado",
+    "x_label": "Month",
+    "y_label": "Flow (cubic meters per second)",
+    "series": [
+      {
+        "name": "2023",
+        "points": [
+          [
+            "April",
+            2.1
+          ],
+          [
+            "May",
+            6.8
+          ],
+          [
+            "June",
+            14.5
+          ],
+          [
+            "July",
+            9.2
+          ],
+          [
+            "August",
+            3.4
+          ]
+        ]
+      },
+      {
+        "name": "2024",
+        "points": [
+          [
+            "April",
+            2.9
+          ],
+          [
+            "May",
+            7.4
+          ],
+          [
+            "June",
+            5.6
+          ],
+          [
+            "July",
+            2.8
+          ],
+          [
+            "August",
+            1.5
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "in 2024, the flow rose from about 2.9 cubic meters per second in April to about 7.4 in May.",
+    "B": "in both years, the stream's flow was lower in August than it had been in June.",
+    "C": "the flow peaked in May in 2023 but did not peak until June in 2024.",
+    "D": "the flow peaked in June 2023 at about 14.5 but in May 2024 at only about 7.4."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Castillo's finding has two parts: in 2024 the peak was lower and came earlier. The choice must give both years' peaks. The 2023 line peaks in June at about 14.5, and the 2024 line peaks in May at about 7.4, a smaller peak one month earlier.",
+    "A": "Incorrect. This is true, but it describes only 2024 and does not compare its peak with the 2023 peak.",
+    "B": "Incorrect. This is true, but it compares August with June and says nothing about the size or timing of each year's peak.",
+    "C": "Incorrect. This swaps the years: the 2023 flow peaked in June and the 2024 flow peaked in May.",
+    "D": "Correct. The 2024 peak (about 7.4 in May) was both smaller and a month earlier than the 2023 peak (about 14.5 in June)."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

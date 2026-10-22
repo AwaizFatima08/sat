@@ -1,0 +1,103 @@
+{
+  "id": "rw-ceq-0113",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When ocean water stays unusually warm for weeks, corals expel the algae living in their tissues and turn white, a process called bleaching. Marine biologist Keoni Kahale surveyed two reefs off the island of Hawai'i during 2025: one in a sheltered bay and one on an exposed point where cooler water rises from the deep. Kahale reported that the exposed reef appeared to be partly protected from bleaching, noting that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Percentage of Corals Bleached at Two Reefs, 2025",
+    "x_label": "Month",
+    "y_label": "Corals bleached (%)",
+    "series": [
+      {
+        "name": "Sheltered bay",
+        "points": [
+          [
+            "June",
+            2
+          ],
+          [
+            "July",
+            9
+          ],
+          [
+            "August",
+            31
+          ],
+          [
+            "September",
+            47
+          ],
+          [
+            "October",
+            38
+          ]
+        ]
+      },
+      {
+        "name": "Exposed point",
+        "points": [
+          [
+            "June",
+            1
+          ],
+          [
+            "July",
+            4
+          ],
+          [
+            "August",
+            12
+          ],
+          [
+            "September",
+            18
+          ],
+          [
+            "October",
+            15
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "in September, about 18% of the exposed reef's corals were bleached, versus about 47% in the bay.",
+    "B": "at both reefs, a larger share of corals was bleached in September than in June.",
+    "C": "in September, about 47% of the exposed reef's corals were bleached, versus about 18% in the bay.",
+    "D": "bleaching at the exposed reef began only after the water there warmed past 29°C."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "To show that the exposed reef was partly protected, the choice must compare the two reefs and show less bleaching at the exposed point. At the peak in September, the exposed point line is at about 18% and the sheltered bay line is at about 47%.",
+    "A": "Correct. The exposed reef had far less bleaching than the sheltered reef in September (about 18% versus 47%), but some bleaching, which fits \"partly protected.\"",
+    "B": "Incorrect. This is true, but it describes a change over time at both reefs and does not compare the exposed reef with the sheltered one.",
+    "C": "Incorrect. This swaps the two reefs; the graph shows the sheltered bay, not the exposed point, at about 47%.",
+    "D": "Incorrect. The graph shows the percentage of corals bleached, not water temperatures."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

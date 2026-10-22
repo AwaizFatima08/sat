@@ -1,0 +1,78 @@
+{
+  "id": "rw-ceq-0105",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Mulch is a layer of material spread over soil to slow the loss of water. Gardener Rosa Delgado covered four garden beds in Tucson, Arizona, with different mulches and left a fifth bed bare. Two days after watering all five beds, she measured how much water remained in the soil of each. Her results show that the soil held the most water under ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Soil Moisture Two Days after Watering",
+    "x_label": "Bed covering",
+    "y_label": "Soil moisture (%)",
+    "series": [
+      {
+        "name": "Soil moisture",
+        "points": [
+          [
+            "Bare soil",
+            11
+          ],
+          [
+            "Straw",
+            24
+          ],
+          [
+            "Wood chips",
+            21
+          ],
+          [
+            "Grass clippings",
+            18
+          ],
+          [
+            "Cardboard",
+            22
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "straw, where soil moisture was about 24 percent.",
+    "B": "cardboard, where soil moisture was about 22 percent.",
+    "C": "bare soil, where soil moisture was about 11 percent.",
+    "D": "wood chips, which also kept weeds from growing in the bed."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The statement asks which covering left the most water in the soil, so look for the tallest bar. The straw bar, at about 24 percent, is taller than all the others.",
+    "A": "Correct. The soil under straw held about 24 percent moisture, the highest value on the graph.",
+    "B": "Incorrect. Cardboard did keep about 22 percent moisture, but that is less than straw's 24 percent.",
+    "C": "Incorrect. Bare soil held the least water of the five beds, not the most.",
+    "D": "Incorrect. The graph shows only soil moisture; it gives no information about weeds."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "rw-ceq-0535",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "drill",
+  "passage": "In many rural homes in Nepal, meals are cooked over open wood fires that fill kitchens with fine smoke particles. Improved cookstoves, which burn wood more completely and vent smoke through a chimney, are designed to reduce this pollution. Environmental engineer Anjana Shrestha measured particle levels during cooking in kitchens using traditional fires and improved stoves. She found that the improved stoves lowered particle levels in every kind of kitchen she studied, but she argues that their benefit is greatest in poorly ventilated kitchens, where smoke from a traditional fire has the fewest ways to escape.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Average Particle Levels during Cooking in Rural Nepali Kitchens",
+    "x_label": "Kitchen type",
+    "y_label": "Fine particles (micrograms per cubic meter)",
+    "series": [
+      {
+        "name": "Traditional fire",
+        "points": [
+          [
+            "No windows",
+            820
+          ],
+          [
+            "One window",
+            510
+          ],
+          [
+            "Two or more windows",
+            330
+          ]
+        ]
+      },
+      {
+        "name": "Improved stove",
+        "points": [
+          [
+            "No windows",
+            240
+          ],
+          [
+            "One window",
+            210
+          ],
+          [
+            "Two or more windows",
+            190
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Shrestha's argument?",
+  "choices": {
+    "A": "Improved stoves cut particle levels by 580 micrograms per cubic meter in kitchens with no windows but by 140 in kitchens with two or more.",
+    "B": "With either kind of stove, kitchens with two or more windows had lower particle levels than kitchens with no windows.",
+    "C": "With improved stoves, particle levels were similar in every type of kitchen, ranging only from 190 to 240.",
+    "D": "Improved stoves lowered particle levels by roughly the same amount in each type of kitchen shown."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Shrestha's argument concerns the size of the stoves' benefit: it is largest in the least ventilated kitchens. The benefit is the difference between the two bars for each kitchen type, so support must compare those differences. In kitchens with no windows the reduction is 820 − 240 = 580; in kitchens with two or more windows it is 330 − 190 = 140.",
+    "A": "Correct. It compares the reduction in the least and most ventilated kitchens and shows the benefit is far larger where ventilation is poorest.",
+    "B": "Incorrect. This is true, but it shows that windows reduce smoke, not that the improved stove helps more in kitchens without them.",
+    "C": "Incorrect. This is true, but it describes the improved stove alone; without the traditional-fire levels, it does not show how much the stove reduced pollution.",
+    "D": "Incorrect. The reductions were 580, 300, and 140, which are far from equal, so this misreads the graph."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

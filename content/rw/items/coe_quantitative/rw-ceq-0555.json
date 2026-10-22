@@ -1,0 +1,103 @@
+{
+  "id": "rw-ceq-0555",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Women now make up more than half of the medical students at a large public university in Chile but only about a quarter of its engineering students, and observers often cite the contrast as evidence that engineering has resisted change. Sociologist Paula Briones, examining the university's enrollment records since 1980, argues that this familiar contrast between the two fields conceals a reversal in their recent trajectories. Medicine, where women's share climbed rapidly from 1980 to 2000, has changed relatively little since then, she contends, whereas engineering, where change was slow over those two decades, has since gained more ground than medicine has.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Women's Share of Students in Two Fields at a Public University in Chile",
+    "x_label": "Year",
+    "y_label": "Women among students (%)",
+    "series": [
+      {
+        "name": "Medicine",
+        "points": [
+          [
+            "1980",
+            28
+          ],
+          [
+            "1990",
+            39
+          ],
+          [
+            "2000",
+            51
+          ],
+          [
+            "2010",
+            54
+          ],
+          [
+            "2020",
+            55
+          ]
+        ]
+      },
+      {
+        "name": "Engineering",
+        "points": [
+          [
+            "1980",
+            9
+          ],
+          [
+            "1990",
+            12
+          ],
+          [
+            "2000",
+            16
+          ],
+          [
+            "2010",
+            21
+          ],
+          [
+            "2020",
+            25
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Briones's argument?",
+  "choices": {
+    "A": "Medicine gained 23 points from 1980 to 2000 and then 4 points by 2020; engineering gained 7 points and then 9.",
+    "B": "In every year shown, women made up a larger share of medical students than of engineering students.",
+    "C": "Women's share of engineering students nearly tripled between 1980 and 2020.",
+    "D": "Women's share of medical students grew more from 2000 to 2020 than it had from 1980 to 2000."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Briones's claim is about a reversal: medicine gained faster than engineering from 1980 to 2000, but engineering has gained more since 2000. Support must compare the gains of both fields in both periods. Medicine rose 23 points (28 to 51) and then 4 (51 to 55); engineering rose 7 points (9 to 16) and then 9 (16 to 25).",
+    "A": "Correct. It gives both fields' gains in both periods and shows medicine ahead before 2000 and engineering ahead after, which is the reversal Briones describes.",
+    "B": "Incorrect. This is true, but it is the familiar contrast that Briones says conceals the real pattern; it says nothing about how fast each field changed.",
+    "C": "Incorrect. This is true (9% to 25%), but it describes engineering over the whole period and cannot show that its pace overtook medicine's after 2000.",
+    "D": "Incorrect. Medicine gained 23 points from 1980 to 2000 but only 4 from 2000 to 2020, so this reverses the graph."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

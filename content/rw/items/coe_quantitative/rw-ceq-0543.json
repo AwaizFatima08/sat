@@ -1,0 +1,71 @@
+{
+  "id": "rw-ceq-0543",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Piano teachers often debate how students should divide their practice time. Music educator Camille Okafor had beginning piano students practice a new piece for the same total number of minutes each week, either in short daily sessions or in a single long session, and then tested how accurately they played it. Okafor reports that the two schedules produced nearly identical results while practice continued, but she argues that the daily schedule had an advantage that emerged only later: students who had practiced that way retained far more of the piece after a month without playing it.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Accuracy Playing a New Piece (percent of notes correct)",
+    "columns": [
+      "Test",
+      "Short daily sessions",
+      "One weekly session"
+    ],
+    "rows": [
+      [
+        "After 2 weeks of practice",
+        71,
+        73
+      ],
+      [
+        "After 4 weeks of practice",
+        86,
+        85
+      ],
+      [
+        "After 4 more weeks without practice",
+        80,
+        62
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Okafor's argument?",
+  "choices": {
+    "A": "After four weeks of practice the groups differed by 1 point, but a month later the daily group scored 18 points higher.",
+    "B": "After two weeks of practice, students in the weekly group played slightly more accurately than students in the daily group.",
+    "C": "Both groups played more accurately after four weeks of practice than they had after two weeks.",
+    "D": "After the month without practice, the weekly group was more accurate than the daily group."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Okafor's argument has two parts: the schedules gave nearly identical results during practice, and the daily group retained far more a month later. Support must compare the two columns at the end of practice and again after the break. At four weeks the scores are 86 and 85 (1 point apart); after the month without practice they are 80 and 62 (18 points apart).",
+    "A": "Correct. It shows a near tie at the end of practice and a large gap after the break, matching both parts of Okafor's argument.",
+    "B": "Incorrect. This is true, but it fits only the first part of the argument and says nothing about the later advantage of daily practice.",
+    "C": "Incorrect. This is true, but it shows that both groups improved, not that the two schedules differed in how well students retained the piece.",
+    "D": "Incorrect. After the break the daily group scored 80 and the weekly group 62, so this reverses the table."
+  },
+  "traps": {
+    "B": "too_narrow",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0532",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "drill",
+  "passage": "Each year, ornithologist Meera Vaghela counts nests at a flamingo breeding colony on the salt flats of Kutch, in western India. The birds nest there only when heavy monsoon rains flood the flats with shallow water that lasts long enough for chicks to be raised; in years of weak rain, the flats stay dry and the site is nearly empty. In one recent year, Vaghela counted thousands of nests, and the following year only a few dozen. Banding studies show that adult flamingos often travel hundreds of kilometers between seasons and commonly live for decades. Given this information, it can most reasonably be concluded that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the flamingos left the site in the second year because the colony had grown too crowded.",
+    "B": "the region's population of adult flamingos fell sharply between the first year and the second.",
+    "C": "heavy monsoon rains in the second year flooded the nests and drove the flamingos away.",
+    "D": "a low nest count in a given year need not mean that many adults have died."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The text gives two facts that work together. Nesting at the site depends on rain, so in a dry year few birds nest there even if they are alive; and adult flamingos are long-lived and range widely. A sudden drop in nests can therefore reflect conditions at the site rather than deaths among the adults.",
+    "A": "Incorrect. The text never mentions crowding; it links the number of nests to rainfall.",
+    "B": "Incorrect. This reads the nest count as a population count, but the text shows that nesting depends on rain, so adults can be alive and simply not nesting there.",
+    "C": "Incorrect. This reverses the role of rain: heavy rain is what makes the site usable, and weak rain is what leaves it nearly empty.",
+    "D": "Correct. Because nesting at the site depends on rain and adults live long and travel far, few nests in one year does not show that the adults died."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

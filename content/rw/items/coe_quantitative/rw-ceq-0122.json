@@ -1,0 +1,87 @@
+{
+  "id": "rw-ceq-0122",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "On mussel farms, young mussels grow on ropes that hang down into the water from floating lines. Aquaculture researcher Fiona MacLeod hung ropes in a sea loch in western Scotland and measured how much the mussels' shells grew at three depths over each of two years. MacLeod argues that mussels grow faster closer to the surface, where the tiny algae they eat are most plentiful. Her measurements are consistent with this view: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Average Shell Growth of Mussels at Three Depths",
+    "x_label": "Depth",
+    "y_label": "Shell growth (millimeters)",
+    "series": [
+      {
+        "name": "2024",
+        "points": [
+          [
+            "2 meters",
+            38
+          ],
+          [
+            "6 meters",
+            29
+          ],
+          [
+            "10 meters",
+            17
+          ]
+        ]
+      },
+      {
+        "name": "2025",
+        "points": [
+          [
+            "2 meters",
+            35
+          ],
+          [
+            "6 meters",
+            30
+          ],
+          [
+            "10 meters",
+            19
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "in 2025, mussels at 6 meters grew about 30 millimeters, slightly more than in 2024.",
+    "B": "in both years, mussels at 10 meters grew more than mussels at 2 meters did.",
+    "C": "in both years, growth was greatest at 2 meters and least at 10 meters.",
+    "D": "in both years, the water at 2 meters held more algae than the water at 10 meters."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "MacLeod's view is that mussels grow faster the closer they are to the surface. The graph should therefore show growth decreasing with depth. In both years the 2-meter bar is tallest and the 10-meter bar is shortest.",
+    "A": "Incorrect. This is true, but it compares one depth across years rather than comparing depths, so it says nothing about growth near the surface.",
+    "B": "Incorrect. This reverses the graph: mussels at 2 meters grew about twice as much as those at 10 meters.",
+    "C": "Correct. In both years, shell growth was largest at the shallowest depth and smallest at the deepest, as MacLeod's view predicts.",
+    "D": "Incorrect. MacLeod says algae are most plentiful near the surface, but the graph measures shell growth, not the amount of algae."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

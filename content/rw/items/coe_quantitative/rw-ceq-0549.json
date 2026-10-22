@@ -1,0 +1,95 @@
+{
+  "id": "rw-ceq-0549",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "drill",
+  "passage": "In northwestern Bangladesh, wheat is often sown after the rice harvest, so when the rice comes in late, so does the wheat. Late-sown wheat fills its grain during the hot weeks of March, and heat at that stage lowers yields. Agronomist Nusrat Jahan grew a standard wheat variety and a newer heat-tolerant variety side by side at four sowing dates. Jahan argues that farmers who sow early gain nothing by switching to the tolerant variety, but that for farmers who sow late, its advantage over the standard variety becomes larger the later the crop is sown.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Wheat Yields by Sowing Date in Northwestern Bangladesh",
+    "x_label": "Sowing date",
+    "y_label": "Yield (tonnes per hectare)",
+    "series": [
+      {
+        "name": "Standard variety",
+        "points": [
+          [
+            "Nov. 10",
+            3.6
+          ],
+          [
+            "Nov. 25",
+            3.4
+          ],
+          [
+            "Dec. 10",
+            2.8
+          ],
+          [
+            "Dec. 25",
+            2.2
+          ]
+        ]
+      },
+      {
+        "name": "Heat-tolerant variety",
+        "points": [
+          [
+            "Nov. 10",
+            3.5
+          ],
+          [
+            "Nov. 25",
+            3.4
+          ],
+          [
+            "Dec. 10",
+            3.2
+          ],
+          [
+            "Dec. 25",
+            2.9
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Jahan's argument?",
+  "choices": {
+    "A": "From the earliest sowing date to the latest, the tolerant variety's yield fell by less than half as much as the standard variety's did.",
+    "B": "Both varieties produced lower yields when sown on December 25 than when sown on November 10.",
+    "C": "The tolerant variety yielded no more than the standard one when sown in November but 0.4 and 0.7 tonnes more when sown in December.",
+    "D": "The tolerant variety produced a higher yield than the standard variety at every sowing date tested."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Jahan's argument has two parts: the tolerant variety offers no gain at early sowing dates, and its advantage widens with later sowing. Support must compare the two bars at each date. In November the tolerant variety yields 3.5 versus 3.6 and 3.4 versus 3.4 (no gain), while in December it leads by 3.2 − 2.8 = 0.4 and then 2.9 − 2.2 = 0.7 tonnes per hectare.",
+    "A": "Incorrect. This is true (a drop of 0.6 versus 1.4), but comparing only the first and last dates cannot show that the tolerant variety offers no gain when sown early, the first half of Jahan's claim.",
+    "B": "Incorrect. This is true, but it shows that late sowing hurts both varieties, not how the tolerant variety compares with the standard one.",
+    "C": "Correct. It shows no advantage at the November dates and a growing advantage at the December dates, supporting both parts of Jahan's argument.",
+    "D": "Incorrect. On November 10 the tolerant variety yielded less (3.5 versus 3.6), and on November 25 the yields were equal, so this misreads the graph."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

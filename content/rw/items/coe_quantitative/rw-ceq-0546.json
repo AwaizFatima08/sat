@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0546",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "The flowers of a night-blooming cactus in the Sonoran Desert open at dusk and remain open until the following midmorning, so they are available both to hawk moths, which fly at night, and to bees, which begin foraging after sunrise. Botanist Inés Carrillo hypothesizes that the plant depends almost entirely on the moths for pollination and that the bees' morning visits, though frequent, contribute little to its seed production. To test this, she covered flowers with mesh bags during different periods, preventing visits at those times, and then recorded seed set. The results support Carrillo's hypothesis: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Seed Set in Cactus Flowers under Four Bagging Treatments",
+    "columns": [
+      "Treatment",
+      "Flowers producing seed (%)",
+      "Average seeds per fruit"
+    ],
+    "rows": [
+      [
+        "Open to all visitors",
+        78,
+        412
+      ],
+      [
+        "Open only at night",
+        71,
+        389
+      ],
+      [
+        "Open only in the morning",
+        12,
+        45
+      ],
+      [
+        "Bagged throughout",
+        3,
+        8
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "flowers open to all visitors had the highest seed set of any treatment, with 78% producing seed.",
+    "B": "flowers open only in the morning were four times as likely to produce seed as flowers bagged throughout.",
+    "C": "flowers open only at night produced more seeds per fruit than flowers open to all visitors did.",
+    "D": "flowers open only at night set seed nearly as often as fully open flowers, while morning-only flowers rarely did."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Carrillo's hypothesis has two parts: moths (night visitors) account for almost all pollination, and bees (morning visitors) add little. Support therefore needs the night-only treatment to come close to the fully open flowers and the morning-only treatment to fall far short. Night-only flowers set seed 71% of the time, close to the 78% for fully open flowers, while morning-only flowers did so only 12% of the time.",
+    "A": "Incorrect. This is true, but fully open flowers receive both moths and bees, so their seed set cannot show which visitor matters.",
+    "B": "Incorrect. This is true (12% versus 3%), but it highlights a contribution from morning visitors rather than showing that the plant depends almost entirely on moths.",
+    "C": "Incorrect. Night-only flowers averaged 389 seeds per fruit, fewer than the 412 for fully open flowers, so this misreads the table.",
+    "D": "Correct. It compares each partial treatment with the fully open flowers and shows that night visits alone nearly match full access, while morning visits alone accomplish little."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0531",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Many ant species distinguish nestmates from outsiders by smell: each worker carries a blend of waxy compounds on its body surface, and workers attack ants whose blend differs too much from their own. Some of these compounds are produced by the ants' own bodies, but others are absorbed from the food they eat. In one laboratory experiment, a single colony of Argentine ants was divided into two halves that were kept apart and fed different kinds of insect prey for several weeks. When workers from the two halves were brought back together, they frequently attacked one another. Because both halves came from the same colony, the experiment suggests that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "ants in the wild attack only those outsiders that have eaten different food from their own.",
+    "B": "diet alone may make closely related ants treat one another as outsiders.",
+    "C": "the two halves of the colony became genetically different during the weeks they were kept apart.",
+    "D": "diet has little effect on the blend of compounds that ants carry on their bodies."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Combine two facts. Some of the compounds ants use to recognize nestmates come from food, and the two groups came from one colony, so they were related and started with the same smell. The only thing the experiment changed was diet, so diet alone was apparently enough to make former nestmates seem like strangers.",
+    "A": "Incorrect. The experiment shows that diet can be enough to cause attacks; it does not show that diet is the only cause of attacks among ants in the wild.",
+    "B": "Correct. The halves differed only in what they ate, yet they attacked each other, so a diet difference alone may be enough to change how related ants treat one another.",
+    "C": "Incorrect. Nothing in the text suggests the ants' genes changed; the point of using one colony is that the two groups were related.",
+    "D": "Incorrect. This contradicts the result: changing only the diet led to attacks, which suggests diet changed the ants' smell."
+  },
+  "traps": {
+    "A": "too_broad",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

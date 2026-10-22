@@ -1,0 +1,95 @@
+{
+  "id": "rw-ceq-0531",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "On hot summer days, unshaded sidewalks in Seville, Spain, can become far hotter than the air above them, and the city has planted street trees partly to counter this effect. Urban climatologist Lucía Ferrer measured the surface temperature of sidewalks beneath tree canopy and of nearby sidewalks with no shade at four times of day during a series of cloudless July days. Ferrer concluded that the cooling the canopy provides is not constant over the course of the day; instead, she argues, it is largest in the afternoon, at roughly the time when exposed pavement reaches its peak temperature.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Average Sidewalk Surface Temperature on Cloudless July Days in Seville",
+    "x_label": "Time of day",
+    "y_label": "Surface temperature (°C)",
+    "series": [
+      {
+        "name": "No shade",
+        "points": [
+          [
+            "9 a.m.",
+            31
+          ],
+          [
+            "Noon",
+            44
+          ],
+          [
+            "3 p.m.",
+            51
+          ],
+          [
+            "6 p.m.",
+            42
+          ]
+        ]
+      },
+      {
+        "name": "Beneath tree canopy",
+        "points": [
+          [
+            "9 a.m.",
+            28
+          ],
+          [
+            "Noon",
+            34
+          ],
+          [
+            "3 p.m.",
+            36
+          ],
+          [
+            "6 p.m.",
+            33
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Ferrer's conclusion?",
+  "choices": {
+    "A": "At each of the four times measured, sidewalks beneath tree canopy were cooler than sidewalks with no shade.",
+    "B": "Shade cooled sidewalks by 3°C at 9 a.m. but by 15°C at 3 p.m., when unshaded pavement was hottest.",
+    "C": "Between 9 a.m. and 3 p.m., shaded sidewalks warmed by more degrees than unshaded sidewalks did.",
+    "D": "Unshaded sidewalks were 11°C hotter at 6 p.m. than they had been at 9 a.m."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Ferrer does not claim only that shade cools sidewalks; she claims the cooling changes over the day and is largest in the afternoon, when unshaded pavement peaks. Support must therefore compare the gap between the two bars at different times. The gap is 31 − 28 = 3°C at 9 a.m. but 51 − 36 = 15°C at 3 p.m., the hottest reading for unshaded sidewalks.",
+    "A": "Incorrect. This is true, but it shows only that shade always helps, not that its cooling effect changes and peaks in the afternoon.",
+    "B": "Correct. It compares the cooling effect at two times and shows it is much larger at 3 p.m., exactly when unshaded pavement is hottest.",
+    "C": "Incorrect. Shaded sidewalks warmed 8°C (28 to 36), while unshaded sidewalks warmed 20°C (31 to 51), so this reverses the data.",
+    "D": "Incorrect. This is true (42 − 31 = 11), but it describes unshaded sidewalks alone and says nothing about how much the canopy cools them."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

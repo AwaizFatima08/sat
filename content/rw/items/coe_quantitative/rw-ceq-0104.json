@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0104",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A marionette theater in Prague, Czech Republic, presents the same puppet show in several languages for residents and tourists. To plan the next season, manager Petra Nováková recorded the number of performances in each language and the average audience at those performances during the summer. According to her records, the language with the largest average audience was ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Marionette Show Performances by Language, Summer Season",
+    "columns": [
+      "Language",
+      "Performances",
+      "Average audience"
+    ],
+    "rows": [
+      [
+        "Czech",
+        24,
+        61
+      ],
+      [
+        "English",
+        40,
+        88
+      ],
+      [
+        "German",
+        18,
+        72
+      ],
+      [
+        "Italian",
+        12,
+        95
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "English, which was used in more performances than any other language.",
+    "B": "Czech, which had an average audience of 61 people per performance.",
+    "C": "German, which had an average audience of 72 people per performance.",
+    "D": "Italian, with an average of 95 people at each performance."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The statement is about the largest average audience, so the \"Average audience\" column is the one to check, not the \"Performances\" column. The largest value there is 95, for Italian.",
+    "A": "Incorrect. English had the most performances (40), but its average audience of 88 was smaller than Italian's 95.",
+    "B": "Incorrect. Czech performances had the smallest average audience in the table, not the largest.",
+    "C": "Incorrect. German performances averaged 72 people, fewer than both English and Italian performances.",
+    "D": "Correct. Italian performances averaged 95 people, the largest average audience in the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

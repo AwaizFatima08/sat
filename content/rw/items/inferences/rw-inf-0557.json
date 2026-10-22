@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0557",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "drill",
+  "passage": "An ancient Greek medical treatise survives in a dozen Greek manuscripts, all of which scholars have traced to a single copy made in Constantinople in the tenth century. The treatise also survives in an Arabic translation that a ninth-century translator in Baghdad prepared from a different Greek manuscript, one older than the Constantinople copy and unrelated to it. The Arabic version contains a long passage on treating fevers that appears in none of the Greek manuscripts. Some editors have concluded that the translator must have composed the passage himself, citing its absence from every surviving Greek copy. Given the history of the manuscripts, this reasoning is questionable because ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the Arabic translator is known to have added passages to other works that he translated.",
+    "B": "Greek manuscripts are generally less reliable than translations made from them.",
+    "C": "the passage on fevers is written in a style typical of Arabic medical writing of the ninth century.",
+    "D": "all the Greek copies could share a single omission inherited from their common source."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The editors treat twelve Greek manuscripts as twelve separate witnesses, but they all descend from one tenth-century copy. If that one copy lacked the passage, every later copy would lack it too. Meanwhile, the Arabic translation was made from an older, independent manuscript that may have preserved it.",
+    "A": "Incorrect. Nothing in the text says this about the translator, and such a fact would support the editors rather than weaken their reasoning.",
+    "B": "Incorrect. The text makes no general claim about the reliability of Greek manuscripts compared with translations.",
+    "C": "Incorrect. A style typical of Arabic medicine would support the editors' conclusion, not cast doubt on their reasoning.",
+    "D": "Correct. Because all the Greek copies come from one source, their shared silence counts as a single piece of evidence: one lost passage in that source would explain it."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -42,3 +42,10 @@ were unsure about. Tick or fix each one during review.
 | rw-tsp-0117 | Real bumblebee ball-rolling study credited to an invented researcher: anonymize ("one team"). |
 | rw-tsp-0113, rw-tsp-0125 | Mantis shrimp color vision (2014) and desert ants on stilts: fact check. |
 | rw-wic-0123, rw-wic-0127 | 0123 vocabulary-heavy for level 1; 0127 distractor C weak. |
+| rw-inf-0124 | Sleep study: time-of-day confound (key hedged "may help"). |
+| rw-cet-0124 | Dimming star: blue dims more than red (dust) vs cooling star reddening. |
+| rw-cet-0117, rw-cet-0121 | Trap label; one-step inference from snow damage. |
+| rw-wic-0548, rw-wic-0558 | "reconstructions" vs "travesties"; "sweeping" near "imprecise". |
+| rw-cid-0551, rw-cid-0546 | Subtle literary readings. |
+| rw-bnd-0507 | Fixed after blind solve (D "loaves and he" → "loaves, and, he"). |
+| rw-ctc-0109 / rw-tsp-0521 | Both about Napoleon's height: duplicate topic, rewrite one. |

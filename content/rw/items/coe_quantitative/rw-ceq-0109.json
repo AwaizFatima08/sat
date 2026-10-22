@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0109",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Ice in a cooler melts more slowly when the cooler's walls let less heat pass through. For a consumer magazine, product tester Daniel Hirsch placed 5 kilograms of ice in each of four coolers, kept them in a 30°C room, and recorded how long the ice took to melt completely. In his test, the ice lasted longest in ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Time for 5 Kilograms of Ice to Melt in Four Coolers at 30°C",
+    "columns": [
+      "Cooler",
+      "Wall material",
+      "Hours until all ice melted"
+    ],
+    "rows": [
+      [
+        "W",
+        "Foam, 2 cm thick",
+        31
+      ],
+      [
+        "X",
+        "Foam, 5 cm thick",
+        58
+      ],
+      [
+        "Y",
+        "Vacuum-insulated steel",
+        72
+      ],
+      [
+        "Z",
+        "Plastic, no insulation",
+        14
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "Cooler Y, where the ice took 72 hours to melt completely.",
+    "B": "Cooler X, which had the thickest foam walls of the four coolers.",
+    "C": "Cooler Z, where the ice took 14 hours to melt completely.",
+    "D": "Cooler W, the lightest and least expensive of the four coolers."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The statement asks where the ice lasted longest, so look at the \"Hours until all ice melted\" column. The largest value is 72 hours, for cooler Y.",
+    "A": "Correct. The ice in cooler Y took 72 hours to melt, longer than in any other cooler.",
+    "B": "Incorrect. Cooler X did have the thickest foam walls, but its ice melted in 58 hours, sooner than cooler Y's.",
+    "C": "Incorrect. Cooler Z's ice melted fastest, so it lasted the shortest time, not the longest.",
+    "D": "Incorrect. The table gives no information about weight or price, and cooler W's ice melted in only 31 hours."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -30,7 +30,7 @@ ABBR_TO_TYPE = {v["abbr"]: k for k, v in BP["types"].items()}
 # British spellings that must not appear in test content (US conventions). Word-boundary matched.
 UK_WORDS = """colour colours coloured favour favourite behaviour behaviours honour honoured labour neighbour
 neighbours harbour humour rumour vapour vigour centre centres metre metres litre litres theatre fibre
-organise organised organising organisation realise realised recognise recognised analyse analysed
+organise organised organising organisation realise realised recognise recognised analysed analysing
 criticise apologise emphasise summarise characterise specialise minimise maximise utilise mobilise
 programme programmes travelled travelling traveller cancelled modelled labelled fuelled levelled signalled
 defence offence licence grey catalogue judgement ageing aluminium jewellery

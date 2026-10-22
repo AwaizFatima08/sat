@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0116",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many garden plants sold in nurseries are cultivars bred for showy blooms, and some ecologists suspect that such breeding can reduce the nectar and pollen that bees rely on. Ecologist Mateus Oliveira compared four groups of plants in a botanical garden in the midwestern United States, counting bee visits to a native species and to an ornamental cultivar in each group. He concluded that, in his study, the native plants were more attractive to bees than the cultivars.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Bee Visits per Plant in One Hour",
+    "columns": [
+      "Plant group",
+      "Native species",
+      "Ornamental cultivar"
+    ],
+    "rows": [
+      [
+        "Asters",
+        31,
+        12
+      ],
+      [
+        "Coneflowers",
+        24,
+        9
+      ],
+      [
+        "Bee balms",
+        18,
+        15
+      ],
+      [
+        "Sunflowers",
+        27,
+        6
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Oliveira's conclusion?",
+  "choices": {
+    "A": "The native aster received 31 bee visits per hour, more than any other plant in the study.",
+    "B": "The ornamental bee balm received more bee visits per hour than the native bee balm did.",
+    "C": "The ornamental cultivars were sold in more local nurseries than the native species were.",
+    "D": "In all four plant groups, the native species drew more bee visits than the cultivar."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Oliveira's conclusion is a general comparison of native plants and cultivars, so the best support compares the two columns across every group. In each row, the native species' number is larger than the cultivar's.",
+    "A": "Incorrect. This is true, but it describes a single plant and does not compare it with a cultivar, so it cannot support a general conclusion.",
+    "B": "Incorrect. This misreads the table: the native bee balm received 18 visits and the cultivar only 15.",
+    "C": "Incorrect. The table gives no information about which plants nurseries sell.",
+    "D": "Correct. Native species drew more visits in every group (31 to 12, 24 to 9, 18 to 15 and 27 to 6), which supports the conclusion."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "reversed",
+    "C": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

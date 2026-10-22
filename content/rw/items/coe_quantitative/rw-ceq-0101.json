@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0101",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "On hydroponic farms, lettuce grows in nutrient-rich water instead of soil, often under lamps that growers can switch on and off. Grower Tobias Lindqvist raised lettuce under four daily lighting schedules in a greenhouse in Sweden and weighed the heads at harvest. In his trial, the heaviest heads of lettuce grew with ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Lettuce Grown under Four Daily Lighting Schedules",
+    "columns": [
+      "Light per day",
+      "Average head mass (grams)",
+      "Days to harvest"
+    ],
+    "rows": [
+      [
+        "10 hours",
+        142,
+        42
+      ],
+      [
+        "12 hours",
+        176,
+        38
+      ],
+      [
+        "14 hours",
+        205,
+        35
+      ],
+      [
+        "16 hours",
+        198,
+        34
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "14 hours of light per day, which produced heads averaging 205 grams.",
+    "B": "16 hours of light per day, which produced the quickest harvest.",
+    "C": "10 hours of light per day, which produced heads averaging 142 grams.",
+    "D": "18 hours of light per day, which produced heads heavier than any others."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The statement asks which schedule produced the heaviest heads, so look at the \"Average head mass\" column and find the largest value. The largest mass is 205 grams, in the 14-hour row.",
+    "A": "Correct. Lettuce given 14 hours of light averaged 205 grams, more than under any other schedule.",
+    "B": "Incorrect. The 16-hour schedule did give the quickest harvest (34 days), but its heads averaged 198 grams, less than 205 grams.",
+    "C": "Incorrect. The 10-hour schedule produced the lightest heads in the table, not the heaviest.",
+    "D": "Incorrect. The table does not include an 18-hour schedule."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

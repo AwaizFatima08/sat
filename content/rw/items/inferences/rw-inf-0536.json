@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0536",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Historians often estimate how many people in a past society could read by counting the share of brides and grooms who signed their names in marriage registers rather than making a mark. The method assumes that people who learned to read also learned to write. In eighteenth-century Sweden, however, the Lutheran church required its members to learn to read religious texts, and clergy regularly examined each household's reading ability; writing, by contrast, was neither required by the church nor commonly taught. Applied to Swedish marriage registers from that century, the signature method would therefore most likely ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "understate the share of Swedes who were able to read.",
+    "B": "overstate the share of Swedes who were able to read.",
+    "C": "show that most Swedes of that time could write as well as read.",
+    "D": "be equally unreliable for every European country of that time."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The signature method counts only people who could write. In eighteenth-century Sweden, many people were taught to read but not to write, so many readers would have made a mark instead of signing. Counting signatures would therefore miss those readers.",
+    "A": "Correct. Many Swedes learned to read without learning to write, so they would not appear among the signers, making the count too low.",
+    "B": "Incorrect. This reverses the effect: the method misses readers who could not write; it does not add people who could not read.",
+    "C": "Incorrect. The text says writing was not commonly taught, which gives no reason to think most Swedes could write.",
+    "D": "Incorrect. The text describes conditions in Sweden only; it does not show that the method fails in the same way everywhere."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

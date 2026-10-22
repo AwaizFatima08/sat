@@ -1,0 +1,111 @@
+{
+  "id": "rw-ceq-0551",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Desert sunlight makes arid regions attractive for solar power, but dust that settles on panels blocks light and lowers their output, and washing panels is costly where water is scarce. At a test site in southern Jordan, engineer Dalia Haddad compared panels that were cleaned every week with panels that were never cleaned at all. Apart from one storm, the study period was entirely dry. At the end of April, the site received the only heavy rain of the six-month study. Haddad's data suggest that this single storm did much of the work of a cleaning crew: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average Monthly Output of Test Panels in Southern Jordan",
+    "x_label": "Month",
+    "y_label": "Output (% of rated output)",
+    "series": [
+      {
+        "name": "Cleaned weekly",
+        "points": [
+          [
+            "Jan.",
+            96
+          ],
+          [
+            "Feb.",
+            95
+          ],
+          [
+            "Mar.",
+            95
+          ],
+          [
+            "Apr.",
+            94
+          ],
+          [
+            "May",
+            95
+          ],
+          [
+            "June",
+            94
+          ]
+        ]
+      },
+      {
+        "name": "Never cleaned",
+        "points": [
+          [
+            "Jan.",
+            95
+          ],
+          [
+            "Feb.",
+            88
+          ],
+          [
+            "Mar.",
+            81
+          ],
+          [
+            "Apr.",
+            74
+          ],
+          [
+            "May",
+            93
+          ],
+          [
+            "June",
+            86
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "the never-cleaned panels' output, which trailed that of the cleaned panels by 20 points in April, came within 2 points of it in May.",
+    "B": "the output of the panels cleaned every week stayed between 94% and 96% of rated output in every month, both before and after the storm.",
+    "C": "the never-cleaned panels' output fell by 7 percentage points in each month from January to April.",
+    "D": "the never-cleaned panels' output was higher in June than it had been in May."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The statement claims that the late-April storm acted like a cleaning, so the data must show the uncleaned panels catching up with the cleaned panels right after the rain. That requires comparing the two lines before and after the storm. In April the gap was 94 − 74 = 20 points; in May it was 95 − 93 = 2 points.",
+    "A": "Correct. It compares the two kinds of panels just before and just after the storm and shows the uncleaned panels nearly matching the cleaned ones once the rain had fallen.",
+    "B": "Incorrect. This is true, but it describes only the cleaned panels and shows nothing about what the storm did to the uncleaned ones.",
+    "C": "Incorrect. This is true (95, 88, 81, 74), but it shows the damage done by dust before the storm, not the recovery that the rain produced.",
+    "D": "Incorrect. Output of the never-cleaned panels fell from 93% in May to 86% in June, so this reverses the graph."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

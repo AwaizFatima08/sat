@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0112",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Different birds prefer different seeds, so the food in a feeder affects which birds visit it. In a backyard in Ohio, birdwatcher Grace Whitfield filled four identical feeders with four kinds of seed and counted bird visits over one week. The seed that drew the most visits was ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Bird Visits to Four Backyard Feeders over One Week",
+    "columns": [
+      "Seed type",
+      "Bird visits",
+      "Bird species seen"
+    ],
+    "rows": [
+      [
+        "Black-oil sunflower",
+        412,
+        9
+      ],
+      [
+        "Safflower",
+        167,
+        5
+      ],
+      [
+        "Nyjer",
+        238,
+        3
+      ],
+      [
+        "Millet",
+        189,
+        6
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "Nyjer seed, which drew 238 visits.",
+    "B": "safflower, which drew 167 visits.",
+    "C": "millet, which drew birds of six different species.",
+    "D": "black-oil sunflower seed, which drew 412 visits."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The statement is about the most visits, so check the \"Bird visits\" column. The largest number there is 412, for black-oil sunflower seed.",
+    "A": "Incorrect. Nyjer drew 238 visits, the second-highest number, but fewer than sunflower seed's 412.",
+    "B": "Incorrect. Safflower drew the fewest visits of the four seeds, not the most.",
+    "C": "Incorrect. This is about the number of species, not the number of visits, and millet drew only 189 visits.",
+    "D": "Correct. Black-oil sunflower seed drew 412 visits, more than any other seed."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

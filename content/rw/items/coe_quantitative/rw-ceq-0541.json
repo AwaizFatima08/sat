@@ -1,0 +1,87 @@
+{
+  "id": "rw-ceq-0541",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "In a no-take marine reserve, all fishing is banned, and fish are often more plentiful inside such reserves than in nearby waters. Marine ecologist Talia Moana compared fish biomass, the total weight of fish in a given area, inside a reserve off the coast of New Zealand's North Island and at similar reefs outside it. She argues that the reserve's advantage lies mainly with large predatory fish, which are the chief targets of local fishers, rather than being spread evenly across the reef's fish community.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Fish Biomass Inside and Outside a No-Take Reserve",
+    "x_label": "Fish group",
+    "y_label": "Biomass (kilograms per hectare)",
+    "series": [
+      {
+        "name": "Inside reserve",
+        "points": [
+          [
+            "Predatory fish",
+            410
+          ],
+          [
+            "Plant-eating fish",
+            520
+          ],
+          [
+            "Small reef fish",
+            180
+          ]
+        ]
+      },
+      {
+        "name": "Outside reserve",
+        "points": [
+          [
+            "Predatory fish",
+            90
+          ],
+          [
+            "Plant-eating fish",
+            430
+          ],
+          [
+            "Small reef fish",
+            170
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Moana's argument?",
+  "choices": {
+    "A": "Plant-eating fish had the greatest biomass of any group both inside and outside the reserve.",
+    "B": "The combined biomass of all three groups was greater inside the reserve than outside it.",
+    "C": "Predatory fish biomass was more than four times as great inside the reserve as outside, while plant-eating fish biomass was about 20% greater.",
+    "D": "Small reef fish had a greater biomass outside the reserve than inside it."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Moana's argument is that the reserve's advantage is concentrated in predatory fish rather than shared evenly. Support must compare the inside-versus-outside difference for predatory fish with that for another group. Predatory fish biomass is 410 versus 90 (more than four times as great), while plant-eating fish biomass is 520 versus 430 (about 21% greater).",
+    "A": "Incorrect. This is true, but which group weighs the most says nothing about where the reserve's advantage is concentrated.",
+    "B": "Incorrect. This is true (1,110 versus 690), but a larger total could come from an advantage spread evenly across all groups, which is what Moana denies.",
+    "C": "Correct. It compares the reserve's effect on two groups and shows a far larger advantage for predatory fish than for plant-eating fish.",
+    "D": "Incorrect. Small reef fish biomass was 180 inside and 170 outside, so this reverses the graph."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "too_broad",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

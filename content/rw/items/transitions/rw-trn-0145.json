@@ -1,0 +1,46 @@
+{
+  "id": "rw-trn-0145",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The engineer John Roebling designed the Brooklyn Bridge, but he died in 1869, before construction began, after an accident while surveying the site. His son Washington took charge of the project and oversaw the dangerous work of sinking the bridge's foundations deep beneath the East River. ______ in 1872, Washington became seriously ill from decompression sickness after working in the compressed air of the foundation chambers, and his wife, Emily, carried his instructions to the engineers on site until the bridge opened in 1883.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Similarly,",
+    "B": "In other words,",
+    "C": "Later,",
+    "D": "For example,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The text tells the story of the bridge in time order: John's death in 1869, Washington taking charge, and then Washington's illness in 1872. A transition that moves the account forward in time is needed.",
+    "A": "Incorrect. \"Similarly\" introduces a parallel case, but the sentence continues a sequence of events.",
+    "B": "Incorrect. Washington's illness and Emily's role are new events, not a restatement of the sentence before.",
+    "C": "Correct. \"Later\" signals that Washington's illness came after he took charge of the work.",
+    "D": "Incorrect. Washington's illness is not an example of his oversight of the foundations; it is the next event in the story."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

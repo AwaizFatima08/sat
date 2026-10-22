@@ -1,0 +1,111 @@
+{
+  "id": "rw-ceq-0548",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "White-tailed deer in a Pennsylvania state park share their range with hikers, whose numbers on the park's trails more than triple on weekends. One might expect the deer simply to abandon the areas near the trails when hikers are most numerous. Wildlife biologist Owen Sutherland, who analyzed photographs from motion-triggered cameras placed along the trails, proposes a different account. The deer, he argues, do not so much leave the area on weekends as rearrange their schedules, avoiding the trails during the hours when hikers are present and making up for that avoidance after dark.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average Deer Detections per Camera along Park Trails",
+    "x_label": "Time of day",
+    "y_label": "Deer detections",
+    "series": [
+      {
+        "name": "Weekdays",
+        "points": [
+          [
+            "6 a.m.",
+            14
+          ],
+          [
+            "10 a.m.",
+            9
+          ],
+          [
+            "2 p.m.",
+            6
+          ],
+          [
+            "6 p.m.",
+            12
+          ],
+          [
+            "10 p.m.",
+            10
+          ],
+          [
+            "2 a.m.",
+            7
+          ]
+        ]
+      },
+      {
+        "name": "Weekends",
+        "points": [
+          [
+            "6 a.m.",
+            6
+          ],
+          [
+            "10 a.m.",
+            2
+          ],
+          [
+            "2 p.m.",
+            1
+          ],
+          [
+            "6 p.m.",
+            5
+          ],
+          [
+            "10 p.m.",
+            17
+          ],
+          [
+            "2 a.m.",
+            15
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Sutherland's account?",
+  "choices": {
+    "A": "On weekends, deer were detected less often than on weekdays at 6 a.m., 10 a.m., and 2 p.m.",
+    "B": "Weekend detections fell below weekday detections from 6 a.m. through 6 p.m. but rose above them at 10 p.m. and 2 a.m.",
+    "C": "Summed across all six times shown, deer were detected less often on weekends, when hikers were most numerous, than on weekdays.",
+    "D": "Weekend detections peaked at 2 a.m., the time when weekday detections were at their lowest."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Sutherland's account is not merely that deer avoid the trails on weekends (the simple expectation he rejects) but that they shift their activity: fewer weekend detections during the day and more after dark. Support must compare the two lines in both daytime and nighttime hours. Weekend detections are lower at every time from 6 a.m. to 6 p.m., but at 10 p.m. (17 versus 10) and 2 a.m. (15 versus 7) they exceed weekday detections.",
+    "A": "Incorrect. This is true, but daytime avoidance alone fits the simple expectation that deer abandon the area; it does not show them making up for it after dark.",
+    "B": "Correct. It shows both halves of the shift: lower weekend activity during hiking hours and higher weekend activity at night.",
+    "C": "Incorrect. This is true (46 versus 58), but a lower weekend total, taken alone, fits the abandonment view that Sutherland rejects rather than his own account.",
+    "D": "Incorrect. Weekend detections peaked at 10 p.m. (17), and weekday detections were lowest at 2 p.m. (6), so this misreads the graph."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

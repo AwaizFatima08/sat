@@ -1,0 +1,87 @@
+{
+  "id": "rw-ceq-0118",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Oil pressed from the seeds of the neem tree is used by many farmers in Pakistan as a natural pest spray. At a research farm in Sindh, agricultural scientist Imran Soomro sprayed aphid-infested chili plants with water only, a 1% neem solution, or a 2% neem solution and counted aphids per leaf on the day of spraying and ten days later. Soomro concluded that the stronger neem solution worked better than the weaker one, pointing out that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Aphids on Chili Plants Sprayed with Water or Neem Solution",
+    "x_label": "Spray",
+    "y_label": "Average aphids per leaf",
+    "series": [
+      {
+        "name": "Day of spraying",
+        "points": [
+          [
+            "Water only",
+            42
+          ],
+          [
+            "1% neem",
+            44
+          ],
+          [
+            "2% neem",
+            41
+          ]
+        ]
+      },
+      {
+        "name": "Ten days later",
+        "points": [
+          [
+            "Water only",
+            58
+          ],
+          [
+            "1% neem",
+            23
+          ],
+          [
+            "2% neem",
+            9
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "plants sprayed with water only had more aphids per leaf after ten days than at the start.",
+    "B": "plants sprayed with the 1% solution had far fewer aphids after ten days than at the start.",
+    "C": "after ten days, the 2% plants had about 9 aphids per leaf and the 1% plants about 23.",
+    "D": "after ten days, the 1% plants had about 9 aphids per leaf and the 2% plants about 23."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Soomro's conclusion compares the two neem strengths, so the choice must compare the 2% and 1% plants. Both groups started with similar numbers (about 41 and 44), but ten days later the 2% plants had about 9 aphids per leaf and the 1% plants about 23.",
+    "A": "Incorrect. This is true (42 rose to 58), but it is about the water-only plants and does not compare the two neem solutions.",
+    "B": "Incorrect. This is true, but it shows only that the weaker solution worked, not that the stronger one worked better.",
+    "C": "Correct. Starting from similar levels, the 2% plants ended with far fewer aphids than the 1% plants, so the stronger solution worked better.",
+    "D": "Incorrect. This swaps the two solutions; the graph shows the 2% plants, not the 1% plants, with about 9 aphids per leaf."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

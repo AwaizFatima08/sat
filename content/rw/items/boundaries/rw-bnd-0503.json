@@ -39,8 +39,17 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus-recheck",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "solver misread: it has three: two pump blood... is grammatical",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked"
   }
 }

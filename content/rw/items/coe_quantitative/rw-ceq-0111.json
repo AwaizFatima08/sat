@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0111",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A public library in Montreal, Canada, lends comic books in several languages. Librarian Sophie Tremblay counted the comic books borrowed in each language during 2025. She found that more comic books were borrowed in French than in any other language, followed by ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Comic Books at a Montreal Public Library, 2025",
+    "columns": [
+      "Language",
+      "Titles in collection",
+      "Comic books borrowed"
+    ],
+    "rows": [
+      [
+        "French",
+        2100,
+        4820
+      ],
+      [
+        "English",
+        1650,
+        3150
+      ],
+      [
+        "Arabic",
+        380,
+        1260
+      ],
+      [
+        "Spanish",
+        520,
+        1410
+      ],
+      [
+        "Mandarin",
+        290,
+        690
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "Spanish, with 1,410 comic books borrowed.",
+    "B": "English, with 3,150 comic books borrowed.",
+    "C": "Mandarin, with 690 comic books borrowed.",
+    "D": "Arabic, with more than 3,000 comic books borrowed."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "\"Followed by\" means the language with the second-largest number of loans. In the \"Comic books borrowed\" column, French is first with 4,820, and English is second with 3,150.",
+    "A": "Incorrect. Spanish had 1,410 loans, far fewer than English, so it was not second.",
+    "B": "Correct. English, with 3,150 loans, is second only to French.",
+    "C": "Incorrect. Mandarin had the fewest loans of any language, not the second most.",
+    "D": "Incorrect. This misreads the table: Arabic had 1,260 loans, not more than 3,000."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

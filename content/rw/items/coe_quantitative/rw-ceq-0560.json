@@ -1,0 +1,95 @@
+{
+  "id": "rw-ceq-0560",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "In the fynbos, the shrubland of South Africa's Western Cape, many plants keep seeds dormant in the soil for years and germinate only after a fire. Fires return to most patches of fynbos at intervals of a decade or more. A fire offers buried seeds two distinct signals: the heat that passes into the soil and the chemicals carried in smoke. Botanist Thandiwe Ndlovu exposed seeds of two fynbos plants, a reedlike restio and a legume, to heat alone, smoke alone, both, or neither. She concluded that the two species respond to different fire cues: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Germination of Two Fynbos Species after Four Treatments",
+    "x_label": "Treatment",
+    "y_label": "Seeds germinating (%)",
+    "series": [
+      {
+        "name": "Restio",
+        "points": [
+          [
+            "Neither",
+            6
+          ],
+          [
+            "Heat only",
+            7
+          ],
+          [
+            "Smoke only",
+            48
+          ],
+          [
+            "Heat and smoke",
+            51
+          ]
+        ]
+      },
+      {
+        "name": "Legume",
+        "points": [
+          [
+            "Neither",
+            4
+          ],
+          [
+            "Heat only",
+            55
+          ],
+          [
+            "Smoke only",
+            5
+          ],
+          [
+            "Heat and smoke",
+            57
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "both species germinated at their highest rates when their seeds were exposed to heat and smoke together rather than to either cue alone.",
+    "B": "smoke alone raised the restio's germination from 6% to 48% but barely affected the legume's, whereas heat alone did the reverse.",
+    "C": "heat alone raised the restio's germination by more percentage points than smoke alone did.",
+    "D": "smoke alone raised the restio's germination from 6% of seeds to 48% of seeds."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Ndlovu's conclusion is a contrast: each species responds to a different cue. The completion must show each cue working for one species but not the other, which means comparing the single-cue bars with the untreated bars for both species. Smoke alone lifted the restio from 6% to 48% but the legume only from 4% to 5%, while heat alone lifted the legume from 4% to 55% but the restio only from 6% to 7%.",
+    "A": "Incorrect. This is true (51% and 57%), but it shows the two species behaving alike, which does nothing to show that they respond to different cues.",
+    "B": "Correct. It shows smoke working for the restio but not the legume and heat working for the legume but not the restio, which is exactly the contrast Ndlovu draws.",
+    "C": "Incorrect. Heat alone raised the restio only from 6% to 7%, while smoke alone raised it to 48%, so this reverses the graph.",
+    "D": "Incorrect. This is true, but it describes one species and one cue; without the legume's results it cannot show that the species respond differently."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

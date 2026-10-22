@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0126",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Crushed waste glass can replace some of the sand in concrete, which keeps glass out of landfills. Civil engineer Hana Novak made concrete samples in which 0%, 10%, 20%, 30%, or 40% of the sand was replaced with glass and measured the pressure each sample could withstand after 28 days. She found that replacing up to 20% of the sand had little effect on strength, but that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Strength of Concrete Made with Crushed Glass in Place of Sand",
+    "columns": [
+      "Sand replaced with glass (%)",
+      "Glass used (kg per cubic meter)",
+      "Strength after 28 days (megapascals)"
+    ],
+    "rows": [
+      [
+        "0",
+        0,
+        40.2
+      ],
+      [
+        "10",
+        70,
+        40.8
+      ],
+      [
+        "20",
+        140,
+        39.5
+      ],
+      [
+        "30",
+        210,
+        35.1
+      ],
+      [
+        "40",
+        280,
+        30.6
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "the concrete with 10% glass was slightly stronger than the concrete with no glass.",
+    "B": "the concrete with 40% glass cost less to produce than the concrete with no glass.",
+    "C": "strength dropped to about 35 megapascals at 30% glass and to about 31 at 40%.",
+    "D": "strength rose steadily as more glass was added, reaching its highest point at 40%."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "\"But\" signals a contrast with \"little effect on strength\" up to 20%, so the blank must describe a clear loss of strength at higher amounts of glass. Strength stays near 40 megapascals up to 20% glass, then falls to 35.1 at 30% and 30.6 at 40%.",
+    "A": "Incorrect. This is true (40.8 versus 40.2), but it describes the range where glass had little effect and does not provide the contrast that \"but\" requires.",
+    "B": "Incorrect. The table gives no information about cost.",
+    "C": "Correct. Beyond 20%, strength fell clearly, to about 35 and then about 31 megapascals, which contrasts with the small changes at lower amounts.",
+    "D": "Incorrect. This reverses the trend: the 40% sample was the weakest in the table, not the strongest."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

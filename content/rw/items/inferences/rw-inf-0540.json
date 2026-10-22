@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0540",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Planetary scientists often estimate the relative ages of surfaces by counting impact craters: the longer a surface has been exposed, the more craters it accumulates. Lucía Ferreyra compared two plains on Mars. Plain 1 has far fewer small craters than Plain 2, which would ordinarily suggest that Plain 1 is younger. Ferreyra's images show, however, that Plain 1 is blanketed by drifting dust deep enough to fill and hide small craters, though not large ones, and when she counted only craters too large for the dust to conceal, the two plains had nearly identical totals. Ferreyra's findings suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the two plains may be similar in age.",
+    "B": "Plain 1 is considerably younger than Plain 2.",
+    "C": "Plain 2 was struck more often because of its location on Mars.",
+    "D": "crater counts cannot be used to estimate the ages of planetary surfaces."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Plain 1's shortage of small craters could come from dust hiding them rather than from youth. When Ferreyra counted only large craters, which dust cannot hide, the plains matched. So the evidence points toward similar ages, and the small-crater difference is explained by the dust.",
+    "A": "Correct. Large craters, which the dust cannot hide, are about equally common on both plains, so the plains may well be about the same age.",
+    "B": "Incorrect. This is the conclusion the dust evidence undercuts: the missing small craters on Plain 1 can be explained by burial, not youth.",
+    "C": "Incorrect. The text never links the number of craters to a plain's location on Mars.",
+    "D": "Incorrect. Ferreyra still uses crater counts; she simply counts the craters the dust cannot hide."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}
