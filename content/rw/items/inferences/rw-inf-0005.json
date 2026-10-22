@@ -1,0 +1,55 @@
+{
+  "id": "rw-inf-0005",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Prussian blue, often described as the first modern synthetic pigment, was first made in Berlin in the early 1700s and was unavailable to painters before then. A landscape in a private collection bears an inscription dating it to 1690, yet conservator Hiroshi Tanabe detected Prussian blue in its sky. That detection alone would not settle the matter, since restorers routinely repaint damaged areas with pigments of their own era. Tanabe's cross-sections, however, place the Prussian blue in the lowest layer of paint, beneath layers that show no sign of having been scraped away or disturbed. Taken together, these observations suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the date in the inscription is unlikely to reflect when the landscape was actually painted.",
+    "B": "a later restorer added the Prussian blue when repairing a damaged area of the sky.",
+    "C": "the landscape was most likely painted in Berlin, where Prussian blue was first produced.",
+    "D": "the inscription was added to the landscape by someone other than the artist who painted it."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The pigment did not exist before the early 1700s, so a 1690 date is suspicious. The text then rules out the other explanation, a later restoration, because the blue sits in the very first layer under undisturbed paint. The blue was therefore part of the original painting, which means the painting was probably made after 1690.",
+    "A": "Correct. If the original paint contains a pigment not available until the early 1700s, the 1690 date is probably not the true date of the painting.",
+    "B": "Incorrect. This is the explanation the cross-sections rule out: the blue lies in the lowest layer, beneath undisturbed paint, so it was not added during a repair.",
+    "C": "Incorrect. Knowing where the pigment was invented says nothing about where this painting was made; the pigment could have been sold elsewhere.",
+    "D": "Incorrect. The evidence shows only that the date is probably wrong; the artist could have written the inaccurate date, so who added the inscription is not established."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

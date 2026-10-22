@@ -1,0 +1,120 @@
+{
+  "id": "rw-ceq-0004",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "A green roof is covered with soil and low plants, which shade the surface and release water vapor that cools the air around them. Engineer Rangi Parata measured the surface temperature of a green roof and a conventional black roof in Auckland, New Zealand, every three hours on a sunny summer day. Parata found that the gap between the two roofs was largest in the afternoon: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Roof Surface Temperature over One Summer Day",
+    "x_label": "Time of day",
+    "y_label": "Surface temperature (°C)",
+    "series": [
+      {
+        "name": "Black roof",
+        "points": [
+          [
+            "6 a.m.",
+            22
+          ],
+          [
+            "9 a.m.",
+            38
+          ],
+          [
+            "Noon",
+            61
+          ],
+          [
+            "3 p.m.",
+            66
+          ],
+          [
+            "6 p.m.",
+            44
+          ],
+          [
+            "9 p.m.",
+            27
+          ]
+        ]
+      },
+      {
+        "name": "Green roof",
+        "points": [
+          [
+            "6 a.m.",
+            21
+          ],
+          [
+            "9 a.m.",
+            27
+          ],
+          [
+            "Noon",
+            33
+          ],
+          [
+            "3 p.m.",
+            35
+          ],
+          [
+            "6 p.m.",
+            30
+          ],
+          [
+            "9 p.m.",
+            24
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "at 6 p.m., the black roof was 44°C, while the green roof was 30°C.",
+    "B": "at 3 p.m., the black roof reached 66°C, while the green roof reached only 35°C.",
+    "C": "at 3 p.m., the green roof reached 66°C, while the black roof reached only 35°C.",
+    "D": "at 9 a.m., the green roof was more than 10°C cooler than the black roof."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The statement needs the afternoon time when the difference between the two lines is greatest. At 3 p.m. the gap is 66 − 35 = 31°C, larger than at noon (28°C) or 6 p.m. (14°C). The choice must also give the values the right way around: the black roof is the hotter one.",
+    "A": "Incorrect. These values are accurate, but the gap at 6 p.m. is only 14°C, much smaller than the gap at 3 p.m.",
+    "B": "Correct. At 3 p.m. the black roof (66°C) was 31°C hotter than the green roof (35°C), the largest gap shown.",
+    "C": "Incorrect. This swaps the two roofs; the graph shows the black roof, not the green roof, reaching 66°C.",
+    "D": "Incorrect. The 11°C gap at 9 a.m. is real, but 9 a.m. is morning, and the gap then is far smaller than in the afternoon."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

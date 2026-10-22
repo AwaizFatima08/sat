@@ -1,0 +1,55 @@
+{
+  "id": "rw-wic-0001",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Tardigrades, tiny animals usually less than a millimeter long, can survive conditions that would kill most living things. When their surroundings dry out, they pull in their legs, lose almost all of their body water, and enter a state in which their metabolism nearly stops. They can remain in this ______ condition for years and then become active again within hours of being placed in water.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "crowded",
+    "B": "dormant",
+    "C": "fragile",
+    "D": "familiar"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The text says the tardigrades' metabolism \"nearly stops\" and that they later \"become active again.\" The blank must describe a condition of being temporarily inactive, which is what \"dormant\" means.",
+    "A": "Incorrect. Nothing in the text is about tardigrades being packed closely together.",
+    "B": "Correct. A dormant state is an inactive one that can end, which matches a metabolism that \"nearly stops\" until the animal becomes \"active again.\"",
+    "C": "Incorrect. The text stresses how tough tardigrades are: they \"survive conditions that would kill most living things.\" Calling the condition fragile reverses that point.",
+    "D": "Incorrect. The text never says the condition is well known or familiar; the word does not describe what happens to the animal."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

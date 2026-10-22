@@ -1,0 +1,55 @@
+{
+  "id": "rw-inf-0003",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "tryit",
+  "passage": "Archaeologists working at sites of the Indus Valley Civilization, which flourished from about 2600 to 1900 BCE in what is now Pakistan and northwestern India, have found hundreds of small stone cubes that were used as weights. The cubes follow the same system of sizes whether they come from Harappa, from Mohenjo-daro, or from settlements hundreds of kilometers away. Because the civilization's writing has never been deciphered, no surviving text explains how this system was kept in place. Even so, the uniformity of the weights suggests that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "people in widely separated settlements shared common standards for measuring goods.",
+    "B": "every one of the weights was produced in a single workshop in Mohenjo-daro.",
+    "C": "scholars have learned how the weights were used by reading Indus inscriptions.",
+    "D": "trade between distant Indus settlements was rare and of little importance."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The key fact is that weights from many distant sites follow the same system of sizes. Even without written records, matching weights across far-apart places point to a shared standard that people in those places followed.",
+    "A": "Correct. Identical weight systems in settlements hundreds of kilometers apart indicate shared measuring standards.",
+    "B": "Incorrect. The text says nothing about where the weights were made; uniform sizes could result from many makers following one standard.",
+    "C": "Incorrect. The text says the Indus writing has never been deciphered, so no one can read such inscriptions.",
+    "D": "Incorrect. A shared system of weights across distant places suggests that exchange mattered, not that it was rare."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

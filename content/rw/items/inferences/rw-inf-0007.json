@@ -1,0 +1,55 @@
+{
+  "id": "rw-inf-0007",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Historians of trade often treat customs ledgers as rough measures of commerce, since officials recorded the cargoes that passed through a port. Akosua Mensah's study of one Mediterranean port complicates that practice. The port's ledgers list pepper and cloves in nearly every year from 1620 to 1649, record almost none from 1650 to 1671, and list them regularly again thereafter. Mensah also located a city charter that, hoping to lure merchants away from a rival port, exempted spice cargoes from customs duties between 1650 and 1671, and she observes that clerks entered a cargo in the ledgers only when duty was owed on it. Mensah's findings therefore suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the port's spice imports fell sharply between 1650 and 1671 before recovering to their earlier level.",
+    "B": "the exemption succeeded in drawing spice merchants away from the rival port to Mensah's port.",
+    "C": "customs ledgers cannot serve as reliable evidence for the trade of any port in any period.",
+    "D": "the ledgers' near silence about spices from 1650 to 1671 may reflect the exemption rather than the trade."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Combine the two facts Mensah found: clerks recorded only cargoes that owed duty, and spice cargoes owed no duty from 1650 to 1671. Spices would then vanish from the ledgers during exactly those years whether or not they kept arriving, so the gap cannot be read as a drop in trade.",
+    "A": "Incorrect. This takes the ledgers at face value, which is exactly the reading Mensah's findings call into question.",
+    "B": "Incorrect. The charter shows what the city hoped for, but because exempt cargoes went unrecorded, the ledgers cannot show whether more spice merchants actually came.",
+    "C": "Incorrect. Mensah's point concerns one gap at one port caused by a specific exemption; it does not show that all ledgers everywhere are unreliable.",
+    "D": "Correct. Since untaxed cargoes went unrecorded, the missing spice entries could result from the exemption rather than from fewer spices arriving."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

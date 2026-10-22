@@ -1,0 +1,104 @@
+{
+  "id": "rw-ceq-0006",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "tryit",
+  "passage": "In parts of Bangladesh, flash floods can leave young rice plants completely underwater for days, and many conventional varieties die if submerged for much longer than a week. Agronomist Farzana Haque compared a conventional variety with a flood-tolerant variety by holding seedlings of each underwater for different lengths of time and then counting the survivors. Haque concluded that although the tolerant variety offers only a slight benefit in brief floods, its advantage over the conventional variety grows considerably as flooding lasts longer.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Rice Seedling Survival after Submergence",
+    "x_label": "Days underwater",
+    "y_label": "Seedlings surviving (%)",
+    "series": [
+      {
+        "name": "Conventional variety",
+        "points": [
+          [
+            "3",
+            92
+          ],
+          [
+            "7",
+            61
+          ],
+          [
+            "10",
+            28
+          ],
+          [
+            "14",
+            9
+          ]
+        ]
+      },
+      {
+        "name": "Flood-tolerant variety",
+        "points": [
+          [
+            "3",
+            95
+          ],
+          [
+            "7",
+            90
+          ],
+          [
+            "10",
+            81
+          ],
+          [
+            "14",
+            64
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Haque's conclusion?",
+  "choices": {
+    "A": "The tolerant variety had a higher survival rate than the conventional variety after every flooding period tested.",
+    "B": "Survival rates for both varieties declined as the number of days underwater increased.",
+    "C": "Between 3 and 14 days underwater, the tolerant variety's survival rate fell by more percentage points than the conventional variety's did.",
+    "D": "The tolerant variety's survival rate was 3 percentage points higher than the conventional variety's after 3 days but 55 points higher after 14 days."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Haque's conclusion has two parts: the tolerant variety's advantage is small in short floods, and that advantage grows as floods last longer. Support must show the gap between the two bars at a short and a long flooding period. The gap is 95 − 92 = 3 points at 3 days and 64 − 9 = 55 points at 14 days.",
+    "A": "Incorrect. This is true, but it shows only that the tolerant variety always did better, not that its advantage was slight at first and then grew.",
+    "B": "Incorrect. This is true, but it describes both varieties together and says nothing about the difference between them.",
+    "C": "Incorrect. The tolerant variety fell 31 points (95 to 64), while the conventional variety fell 83 points (92 to 9), so this reverses the data.",
+    "D": "Correct. A 3-point gap after a short flood and a 55-point gap after a long one shows both parts of the conclusion: a slight early benefit and a much larger later one."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rw-tsp-0007",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "text_structure_purpose",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "It is sometimes said that Renaissance painters, by adopting linear perspective, at last learned to depict the world as the eye actually sees it. The claim has an obvious appeal: a painting constructed so that parallel lines converge on a single vanishing point can produce, for a viewer standing in the right place, a remarkably convincing illusion of depth. But the qualification in that sentence is doing considerable work. Linear perspective models what a single, motionless eye would register, whereas human beings look with two eyes that move constantly and a brain that assembles many glances into one impression. Perspective, on this view, is less a discovery of how vision works than an ingenious convention, one that succeeds because viewers have learned to accept its terms.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice best describes the overall structure of the text?",
+  "choices": {
+    "A": "It introduces a claim, raises an objection to it, and then concedes that the objection fails for viewers in the correct position.",
+    "B": "It states a common view, dismisses it as baseless, and then offers a scientific account of two-eyed vision to replace it.",
+    "C": "It states a common view, grants the basis of its appeal, and then uses a condition within that basis to reinterpret the technique.",
+    "D": "It contrasts two Renaissance theories of vision and then explains why one of them came to dominate painting."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The text opens with a claim that perspective shows the world \"as the eye actually sees it,\" then admits its appeal: perspective is convincing \"for a viewer standing in the right place.\" The author then says \"the qualification in that sentence is doing considerable work,\" turning that condition (one fixed viewpoint) into the reason to treat perspective as a \"convention\" rather than a discovery about vision.",
+    "A": "Incorrect. This reverses the order of the argument. The appeal tied to the \"right place\" is granted first, and the objection that follows is not withdrawn; the text ends by reinterpreting perspective.",
+    "B": "Incorrect. The author grants that the claim has \"an obvious appeal\" rather than calling it baseless, and the replacement offered is the idea of perspective as a convention, not a scientific account of vision.",
+    "C": "Correct. The author grants why the view is appealing, then points to the condition built into that appeal (a single, still viewpoint) to recast perspective as a convention.",
+    "D": "Incorrect. The text discusses one technique and one popular claim about it, not two competing Renaissance theories."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "too_broad",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

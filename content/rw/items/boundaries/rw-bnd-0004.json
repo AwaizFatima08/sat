@@ -1,0 +1,55 @@
+{
+  "id": "rw-bnd-0004",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "The axolotl, a salamander native to a few lakes and canals near Mexico ______ can regrow lost limbs, parts of its heart, and even sections of its spinal cord. Unlike most salamanders, however, it normally spends its whole life in the water, keeping its feathery external gills even as an adult.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "City",
+    "B": "City;",
+    "C": "City—",
+    "D": "City,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "\"A salamander native to a few lakes and canals near Mexico City\" is extra information that describes the axolotl. It opens with a comma after \"axolotl,\" so it must close with a comma too before the verb \"can regrow.\"",
+    "A": "Incorrect. Without a closing comma, the extra information is never set off and runs straight into the verb.",
+    "B": "Incorrect. A semicolon can't separate the subject \"The axolotl\" from its verb \"can regrow.\"",
+    "C": "Incorrect. The extra information opens with a comma, so it can't close with a dash; the two marks must match.",
+    "D": "Correct. The closing comma matches the opening comma after \"axolotl\" and completes the pair around the extra information."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "C": "grammar_rule"
+  },
+  "grammar": "supplements",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

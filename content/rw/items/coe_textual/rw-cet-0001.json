@@ -1,0 +1,55 @@
+{
+  "id": "rw-cet-0001",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Plants of the same species can look quite different depending on where they grow. On windy hilltops, for example, they tend to be shorter and have thicker stems than plants in sheltered valleys. Botanist Lena Fischer thinks the wind itself causes this difference. She hypothesizes that when a plant's stem is bent again and again, the plant responds by growing shorter and sturdier.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Fischer's hypothesis?",
+  "choices": {
+    "A": "Plants on windy hilltops produce fewer flowers than plants of the same species growing in valleys.",
+    "B": "Plants growing on windy hilltops are often damaged by strong storms during the winter.",
+    "C": "Indoor plants bent gently each day grew shorter and thicker than identical plants left alone.",
+    "D": "Valley soils hold more water than hilltop soils, which allows valley plants to grow taller."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Fischer's hypothesis is that repeated bending of the stem causes plants to grow shorter and sturdier. The strongest support would be a test in which bending is the only difference between two groups of plants. If the bent plants turn out shorter and thicker, bending is shown to cause the change.",
+    "A": "Incorrect. Flower numbers have nothing to do with stem bending, height, or thickness.",
+    "B": "Incorrect. Storm damage is a different effect of weather and says nothing about how bending changes growth.",
+    "C": "Correct. Bending was the only difference between the two groups, and the bent plants grew shorter and thicker, just as Fischer predicts.",
+    "D": "Incorrect. This offers a different cause (water in the soil) for the height difference, so it would weaken the hypothesis rather than support it."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rw-fss-0002",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "The Louvre in Paris first opened as a public museum in 1793, during the French Revolution. Today, ______ collection holds hundreds of thousands of objects, so only a small fraction of them can be displayed at any one time.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "it's",
+    "B": "their",
+    "C": "its",
+    "D": "its'"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The blank must show that the collection belongs to the Louvre, a single museum. The possessive form of \"it\" is \"its,\" with no apostrophe.",
+    "A": "Incorrect. \"It's\" is a contraction of \"it is\" or \"it has\"; \"it is collection\" makes no sense.",
+    "B": "Incorrect. \"Their\" is plural, but it refers to the Louvre, which is singular.",
+    "C": "Correct. \"Its\" is the singular possessive pronoun, showing the collection belongs to the Louvre.",
+    "D": "Incorrect. \"Its'\" is not a word in Standard English; the possessive \"its\" never takes an apostrophe."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "plural_possessive",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

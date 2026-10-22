@@ -1,0 +1,85 @@
+{
+  "id": "rw-ceq-0008",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "In a fishing town on the coast of Galicia, in northwestern Spain, older residents use a rich set of local words for particular winds and sea conditions, words that younger residents rarely say aloud. One might assume that this vocabulary is simply being forgotten. Linguist Xoana Castro, who surveyed residents of four age groups, proposes a different account: younger speakers, she argues, still know the traditional words about as well as their grandparents do but choose standard terms instead, so the shift reflects a change in preference rather than a loss of knowledge.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Survey of Traditional Wind and Sea Words in a Galician Fishing Town",
+    "columns": [
+      "Age group",
+      "Regularly use the words (%)",
+      "Recognize the words (%)"
+    ],
+    "rows": [
+      [
+        "65 and older",
+        88,
+        97
+      ],
+      [
+        "45–64",
+        71,
+        95
+      ],
+      [
+        "25–44",
+        46,
+        93
+      ],
+      [
+        "15–24",
+        23,
+        90
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Castro's account?",
+  "choices": {
+    "A": "The share of speakers who regularly used the traditional words fell steadily from 88% in the oldest group to 23% in the youngest group.",
+    "B": "Among speakers aged 65 and older, 88% regularly used the traditional words and 97% recognized them.",
+    "C": "Speakers aged 15–24 used the traditional words at roughly a quarter of the rate of those 65 and older, yet recognized them at nearly the same rate.",
+    "D": "Recognition of the traditional words fell about as sharply from the oldest to the youngest group as regular use of the words did."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Castro's account has two parts that must both appear: younger speakers use the words much less than older speakers, and yet they know the words about as well. That requires comparing the youngest and oldest groups in both columns. Use falls from 88% to 23% (about a quarter), while recognition changes only from 97% to 90%.",
+    "A": "Incorrect. This is true, but a drop in use is what both explanations accept; without the recognition figures it cannot show that the words are not being forgotten.",
+    "B": "Incorrect. These figures are accurate and use both columns, but they describe only the oldest speakers, while Castro's account is about what younger speakers know.",
+    "C": "Correct. It shows a large gap in use (23% versus 88%) alongside a small gap in recognition (90% versus 97%), which is exactly the pattern a change in preference would produce.",
+    "D": "Incorrect. Recognition fell only 7 points (97% to 90%), while use fell 65 points (88% to 23%), so this misreads the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

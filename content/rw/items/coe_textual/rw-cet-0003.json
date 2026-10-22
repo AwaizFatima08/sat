@@ -1,0 +1,55 @@
+{
+  "id": "rw-cet-0003",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "tryit",
+  "passage": "House sparrows were once a familiar sight in South Asian cities, but residents of some neighborhoods in Karachi say they now see far fewer of them than in the past. Ornithologist Farah Siddiqui suspects that the main cause is a shortage of places to nest. Older houses had gaps under roofs and holes in walls where sparrows built their nests, whereas the smooth concrete and glass of newer buildings offer few such spaces.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Siddiqui's hypothesis?",
+  "choices": {
+    "A": "Sparrows in Karachi feed mainly on seeds and insects found in gardens and markets.",
+    "B": "Sparrow numbers fell by similar amounts in neighborhoods of older houses and in neighborhoods of new buildings.",
+    "C": "Several other bird species have also become less common in Karachi in recent decades.",
+    "D": "Sparrow numbers rose in an area after nest boxes were added to its new buildings but not in nearby areas."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Siddiqui's hypothesis is that sparrows declined because newer buildings offer few places to nest. If adding nesting places brings sparrows back in one area but not in similar areas without them, then a lack of nest sites was holding their numbers down. That is direct support.",
+    "A": "Incorrect. What sparrows eat is unrelated to the hypothesis, which is about nesting sites.",
+    "B": "Incorrect. If old houses with many nesting gaps lost sparrows just as fast, nest sites would not explain the decline; this weakens the hypothesis.",
+    "C": "Incorrect. Declines in other species could have many causes and do not show that sparrows lack nesting places.",
+    "D": "Correct. Providing nest sites raised sparrow numbers only where they were added, which points to a shortage of nest sites as the cause."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

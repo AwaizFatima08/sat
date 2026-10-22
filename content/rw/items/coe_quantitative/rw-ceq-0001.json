@@ -1,0 +1,85 @@
+{
+  "id": "rw-ceq-0001",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Basil is a warm-season herb, so gardeners often wonder how warm the soil should be before they plant it. Horticulturist Lucía Ferreira sowed 50 basil seeds in each of four trays, kept each tray at a different soil temperature, and recorded how many seeds sprouted. In her test, the greatest number of seeds sprouted at a soil temperature of ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Basil Seeds Sprouted at Four Soil Temperatures (50 seeds per tray)",
+    "columns": [
+      "Soil temperature",
+      "Seeds sprouted",
+      "Average days to sprout"
+    ],
+    "rows": [
+      [
+        "15°C",
+        21,
+        11.2
+      ],
+      [
+        "20°C",
+        38,
+        7.4
+      ],
+      [
+        "25°C",
+        46,
+        5.1
+      ],
+      [
+        "30°C",
+        44,
+        4.8
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "25°C, where 46 of the 50 seeds sprouted.",
+    "B": "30°C, where seeds sprouted in an average of 4.8 days.",
+    "C": "15°C, where 21 of the 50 seeds sprouted.",
+    "D": "35°C, where nearly all of the 50 seeds sprouted."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The statement is about which temperature produced the greatest number of sprouted seeds, so look at the \"Seeds sprouted\" column and find the largest value. The largest number is 46, in the 25°C row.",
+    "A": "Correct. At 25°C, 46 of 50 seeds sprouted, more than at any other temperature in the table.",
+    "B": "Incorrect. 30°C gave the fastest sprouting time, but the statement is about how many seeds sprouted, and 44 is fewer than 46.",
+    "C": "Incorrect. 15°C produced the fewest sprouted seeds, not the most.",
+    "D": "Incorrect. The table does not include a tray kept at 35°C."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

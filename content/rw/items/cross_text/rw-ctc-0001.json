@@ -1,0 +1,55 @@
+{
+  "id": "rw-ctc-0001",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "For many years, a popular explanation held that zebras' black-and-white stripes help them escape lions. When a herd runs together, the idea went, the moving stripes blur into a confusing pattern, making it hard for a predator to pick out a single animal.",
+  "passage_b": "Biologists testing the purpose of zebra stripes have found support for a different explanation. In one experiment, horses wearing striped coats had far fewer biting flies land on them than horses wearing plain coats. The researchers concluded that the stripes' main benefit is protection from these insects, which can spread disease.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the explanation in Text 1?",
+  "choices": {
+    "A": "By suggesting that evidence points to a different main purpose for zebra stripes",
+    "B": "By agreeing that the main purpose of zebra stripes is to confuse lions",
+    "C": "By arguing that zebras are rarely hunted by lions or other predators",
+    "D": "By pointing out that biting flies are most common where lions live"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Text 1 says stripes help zebras escape lions. Text 2 describes an experiment in which striped coats kept flies away and concludes that the stripes' \"main benefit is protection from these insects.\" So the author of Text 2 would answer that the evidence supports a different purpose.",
+    "A": "Correct. Text 2 presents experimental evidence that stripes mainly protect zebras from biting flies, a different explanation from the one in Text 1.",
+    "B": "Incorrect. Text 2 says the main benefit is protection from insects, not from lions, so it would not agree.",
+    "C": "Incorrect. Text 2 says nothing about how often lions hunt zebras.",
+    "D": "Incorrect. Text 2 never compares where biting flies and lions are found."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

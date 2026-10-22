@@ -1,0 +1,80 @@
+{
+  "id": "rw-ceq-0005",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "When a midsize city expanded its bike-share network between 2019 and 2023, officials celebrated the rise in total trips as evidence that residents were embracing cycling for leisure. Urban planner Tomás Iturralde reads the same records differently. Because the new docking stations were placed mostly near offices and transit hubs, he argues, the growth in ridership came overwhelmingly from people riding on workdays, while recreational weekend use stayed nearly flat. In his view, the network had become chiefly a commuting tool.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Bike-Share Trips in a Midsize City",
+    "columns": [
+      "Year",
+      "Weekday trips (thousands)",
+      "Weekend trips (thousands)"
+    ],
+    "rows": [
+      [
+        "2019",
+        410,
+        190
+      ],
+      [
+        "2021",
+        530,
+        205
+      ],
+      [
+        "2023",
+        690,
+        215
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Iturralde's argument?",
+  "choices": {
+    "A": "Total trips rose from 600,000 in 2019 to 905,000 in 2023.",
+    "B": "Weekday trips rose by 280,000 from 2019 to 2023, while weekend trips rose by only 25,000.",
+    "C": "Weekend trips increased in every year shown, from 190,000 in 2019 to 215,000 in 2023.",
+    "D": "Weekday trips more than doubled between 2019 and 2023, while weekend trips did not."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Iturralde does not dispute that total trips grew; his claim is about where the growth came from: mostly weekday trips, with weekend trips nearly flat. Support therefore has to compare the change in the two columns. Weekday trips rose from 410 to 690 thousand (+280,000), while weekend trips rose from 190 to 215 thousand (+25,000).",
+    "A": "Incorrect. This is true, but officials and Iturralde both accept that total trips grew; the total does not show which kind of trip produced the growth.",
+    "B": "Correct. It compares the growth in the two columns and shows that nearly all of the increase came from weekday trips.",
+    "C": "Incorrect. This is true, but it describes weekend trips alone and stresses their growth, which does not show that weekday trips drove the increase.",
+    "D": "Incorrect. Weekday trips rose from 410,000 to 690,000, which is less than double, so this misreads the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

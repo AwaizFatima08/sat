@@ -1,0 +1,85 @@
+{
+  "id": "rw-ceq-0003",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Museum visitors often spend only a few seconds in front of a painting. Curator Ingrid Solberg suspected that this was partly because wall labels give only basic facts, such as a work's title and date. She hypothesized that adding a short card telling the story behind a painting would increase viewing time for every painting in her test, not just for the most popular ones.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Time Visitors Spent Viewing Each Painting",
+    "columns": [
+      "Painting",
+      "Label only (seconds)",
+      "Label and story card (seconds)"
+    ],
+    "rows": [
+      [
+        "Harbor at Dawn",
+        14,
+        31
+      ],
+      [
+        "Portrait of a Weaver",
+        22,
+        38
+      ],
+      [
+        "Still Life with Lemons",
+        9,
+        17
+      ],
+      [
+        "The Orchard Wall",
+        18,
+        26
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Solberg's hypothesis?",
+  "choices": {
+    "A": "Visitors spent 38 seconds viewing Portrait of a Weaver with a story card, longer than they spent on any other painting.",
+    "B": "Still Life with Lemons received less viewing time than any other painting, with or without a story card.",
+    "C": "Visitors viewed The Orchard Wall for longer when it had only a label than when it also had a story card.",
+    "D": "Each of the four paintings was viewed longer on average with a story card than with only a label."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Solberg's hypothesis is that story cards increase viewing time for every painting, not only the popular ones. Support must therefore compare the two columns for all four paintings. In every row, the \"Label and story card\" time is greater than the \"Label only\" time.",
+    "A": "Incorrect. This is true, but it describes only one painting and does not compare its time with the label-only time, so it cannot show an effect on every painting.",
+    "B": "Incorrect. This is true, but it compares paintings with one another instead of comparing each painting with and without a story card.",
+    "C": "Incorrect. The Orchard Wall was viewed for 26 seconds with a story card and only 18 seconds with a label alone, so this misreads the table.",
+    "D": "Correct. All four paintings gained viewing time with a story card (14 to 31, 22 to 38, 9 to 17 and 18 to 26 seconds), which is what \"every painting\" requires."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

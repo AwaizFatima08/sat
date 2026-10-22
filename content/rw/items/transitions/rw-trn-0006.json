@@ -1,0 +1,55 @@
+{
+  "id": "rw-trn-0006",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Earthen architecture poses obvious practical difficulties for those who build and maintain it. Walls of sun-dried mud brick erode under heavy rain and must be replastered at regular intervals, a labor-intensive task that in some towns of the West African Sahel is carried out communally every year. ______ many builders across the region have continued to choose earth over concrete, valuing walls whose thickness and mass slow the passage of heat and keep interiors noticeably cooler during the hottest hours of the day.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Accordingly,",
+    "B": "Nevertheless,",
+    "C": "Instead,",
+    "D": "For example,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The first two sentences describe the drawbacks of mud brick: it erodes and needs regular, labor-intensive repair. The last sentence says builders keep choosing it anyway because of a benefit. The transition must signal that something remains true in spite of the drawbacks just described.",
+    "A": "Incorrect. \"Accordingly\" means \"for that reason,\" but the drawbacks are not the reason builders choose mud brick; they choose it despite them.",
+    "B": "Correct. \"Nevertheless\" shows that builders keep using earth in spite of the erosion and repair work described earlier.",
+    "C": "Incorrect. \"Instead\" signals that one thing replaces another, but the text names nothing the builders rejected in favor of earth before this sentence. It is contrast-like, but it does not fit the concession here.",
+    "D": "Incorrect. Choosing earth over concrete is not an example of the practical difficulties; it is a response to them."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

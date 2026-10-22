@@ -1,0 +1,55 @@
+{
+  "id": "rw-cet-0005",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 3,
+  "b": 0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Many nineteenth-century novels first reached readers in monthly installments, each containing several chapters. Literary scholar Henrik Lund argues that authors writing for this format deliberately shaped their stories around the installment breaks, saving moments of suspense for the end of each part so that readers would buy the next one. As evidence, Lund notes that in the serialized novels he examined, chapters that closed an installment ended on an unresolved situation far more often than chapters that fell in the middle of an installment did.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly weaken Lund's argument?",
+  "choices": {
+    "A": "Editors, not authors, chose where most installments would end, after each book was fully written.",
+    "B": "Readers of the period often discussed the latest installments of novels with friends and in letters to magazines.",
+    "C": "Authors' letters show that they planned in advance which chapter would close each installment of their novels.",
+    "D": "A few chapters in the middle of installments also ended on unresolved situations in some of the novels."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Lund's claim is about the authors' intentions: they deliberately placed suspense at the breaks. His evidence is a pattern (suspenseful endings cluster at breaks). If editors set the breaks after the books were written, authors could not have aimed suspense at them; the pattern would instead come from editors choosing suspenseful spots to cut. That offers another explanation for his evidence and undercuts his claim.",
+    "A": "Correct. If the breaks were chosen by editors after the writing was done, the authors could not have shaped their stories around them, so the pattern Lund found has a different explanation.",
+    "B": "Incorrect. Readers' discussions show interest in the installments but say nothing about whether authors planned suspense around the breaks.",
+    "C": "Incorrect. Authors planning the breaks in advance makes Lund's argument more likely, so this would support it.",
+    "D": "Incorrect. Lund says suspense came \"far more often\" at installment ends, not only there, so a few suspenseful mid-installment chapters fit his evidence."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

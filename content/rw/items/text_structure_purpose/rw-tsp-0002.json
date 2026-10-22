@@ -1,0 +1,55 @@
+{
+  "id": "rw-tsp-0002",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "text_structure_purpose",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Every evening Amara's grandfather walked to the end of the pier with his fishing rod, though he rarely caught anything. One night Amara asked him why he kept going. He did not answer right away. Instead, he pointed at the orange sky sinking into the water and the gulls settling on the wooden posts. \"The fish are only my excuse,\" he said, smiling. \"This is what I come for.\"",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": {
+    "A": "To describe how the grandfather taught Amara to fish",
+    "B": "To show that the grandfather is unhappy about catching so few fish",
+    "C": "To reveal the grandfather's real reason for his evening walks to the pier",
+    "D": "To explain why so few fish can be caught from the pier"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The text sets up a puzzle (the grandfather goes every night \"though he rarely caught anything\") and then answers it: he points to the sunset and says, \"The fish are only my excuse.\" The passage builds toward revealing why he really goes.",
+    "A": "Incorrect. The grandfather never teaches Amara anything about fishing in the text.",
+    "B": "Incorrect. He is \"smiling\" and says the fish are only an excuse, so he is not unhappy about catching few.",
+    "C": "Correct. The story's point is his answer: he goes to the pier to enjoy the sunset and the gulls, not to catch fish.",
+    "D": "Incorrect. The text says he rarely catches fish but never explains why the pier has few fish."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

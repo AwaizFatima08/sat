@@ -1,0 +1,55 @@
+{
+  "id": "rw-trn-0008",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Linguists have long described the relationship between most words and the things they name as arbitrary. Apart from a small class of imitative words, such as \"buzz\" and \"hiss,\" whose sounds echo what they denote, nothing about a word's sound follows from any property of the thing it refers to: the plant that English speakers call a \"tree\" is an \"arbre\" to speakers of French and a \"Baum\" to speakers of German, and none of these names fits the plant better than the others. ______ for the great majority of words, the pairing of sound and meaning rests on no natural connection, only on the agreement of a language's speakers.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For instance,",
+    "B": "Specifically,",
+    "C": "In other words,",
+    "D": "Similarly,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The text opens with a technical claim, that the link between words and meanings is \"arbitrary,\" and then illustrates it with \"tree,\" \"arbre,\" and \"Baum.\" The last sentence returns to the general claim and states it again in plainer terms: the pairing rests on agreement, not on any natural connection. A restatement transition is needed.",
+    "A": "Incorrect. The last sentence is a general statement about \"the great majority of words,\" not a particular example; the examples came in the sentence before.",
+    "B": "Incorrect. \"Specifically\" would introduce a narrower, more detailed point, but the last sentence moves from the detailed tree example back to a broad summary. This is the closest near miss.",
+    "C": "Correct. \"In other words\" signals that the last sentence restates what \"arbitrary\" means for most words.",
+    "D": "Incorrect. \"Similarly\" introduces a separate case that resembles the previous one, but the last sentence describes the same case, not a parallel one."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

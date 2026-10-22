@@ -1,0 +1,55 @@
+{
+  "id": "rw-ctc-0003",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Norse settlers lived in Greenland from about 985 CE but had abandoned their farms by the mid-1400s. A common explanation is that they clung to European ways of life, raising cattle and sheep as the climate grew colder, and failed to adopt the hunting practices that allowed Inuit communities in the region to thrive.",
+  "passage_b": "Chemical analysis of Norse skeletons from Greenland shows that, over the centuries, the settlers' diets came to rely heavily on seals and other marine animals. Archaeologist Hanne Sørlie argues that the settlers' departure is better explained by the falling value of walrus ivory, their main export to Europe, than by a refusal to change.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the explanation in Text 1?",
+  "choices": {
+    "A": "By accepting it but adding that the settlers also exported walrus ivory",
+    "B": "By suggesting that the settlers left mainly because their farms could no longer feed them",
+    "C": "By questioning it, citing evidence that the settlers did change how they obtained food",
+    "D": "By arguing that a change in the settlers' diet caused them to abandon Greenland"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Text 1 says the Norse \"failed to adopt\" new ways of getting food. Text 2 reports that their diets \"came to rely heavily on seals and other marine animals\" and that their departure is better explained by falling ivory prices \"than by a refusal to change.\" So Text 2 doubts Text 1's explanation and offers evidence of adaptation.",
+    "A": "Incorrect. Text 2 does not accept Text 1's explanation; it says the departure is better explained by something other than \"a refusal to change.\"",
+    "B": "Incorrect. Text 2 does not blame failing farms; it points to the falling value of walrus ivory.",
+    "C": "Correct. The evidence that settlers shifted toward eating seals challenges Text 1's claim that they failed to adapt.",
+    "D": "Incorrect. In Text 2 the diet change is evidence that the settlers adapted, not the cause of their leaving; the cause it proposes is the falling value of ivory."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

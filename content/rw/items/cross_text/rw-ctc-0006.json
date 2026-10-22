@@ -1,0 +1,55 @@
+{
+  "id": "rw-ctc-0006",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "tryit",
+  "passage": "Because snow leopards are rarely seen, ecologists often count them with camera traps: motion-triggered cameras placed along the ridges and trails the cats use. Each leopard's spot pattern is unique, so researchers can tell individuals apart in the photographs. Using this method over one winter in a valley in Pakistan's Gilgit-Baltistan region, a team led by ecologist Sana Mirza identified nine adults and concluded that the valley supports a small but stable population.",
+  "passage_b": "Camera-trap counts of snow leopards are valuable, but a single survey can say little about trends. As zoologist Arjun Thapa points out, photographs taken over a few months show which individuals were present during that time; they cannot reveal whether the population is growing, shrinking, or holding steady. Only surveys repeated over several years in the same area can support such a judgment.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the conclusion in Text 1?",
+  "choices": {
+    "A": "By doubting that the photographs could reliably tell individual leopards apart",
+    "B": "By arguing that the valley most likely contains more than nine adult leopards",
+    "C": "By accepting the count of individuals but questioning the claim that the population is stable",
+    "D": "By suggesting that the population's stability could be confirmed by a longer survey in another valley"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Text 2 calls camera-trap counts \"valuable\" and says photographs show \"which individuals were present,\" so it accepts the count. But it says a single survey \"cannot reveal whether the population is growing, shrinking, or holding steady.\" Text 1's claim that the population is \"stable\" is exactly the kind of judgment Text 2 says needs repeated surveys.",
+    "A": "Incorrect. Text 2 calls camera-trap counts \"valuable\" and does not question the use of spot patterns to identify individuals.",
+    "B": "Incorrect. Text 2 does not say the count is too low; its concern is about trends over time, not the number of leopards.",
+    "C": "Correct. Text 2 accepts what the photographs show about who was present but says one survey cannot show that a population is stable.",
+    "D": "Incorrect. Text 2 says only surveys repeated \"in the same area\" can support a judgment about trends, so a survey in another valley would not confirm this valley's stability."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

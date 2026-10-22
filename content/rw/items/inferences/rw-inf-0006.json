@@ -1,0 +1,55 @@
+{
+  "id": "rw-inf-0006",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "The transit method detects a planet by the slight dimming that occurs when it passes in front of its star. Such a passage is visible only if the planet's orbit happens to be tilted so that, from Earth, the planet crosses the face of its star. For a giant planet orbiting very close to a sunlike star, only about one orbit in ten is tilted this way, and the fraction is far smaller for planets on wider orbits. Surveying 50,000 sunlike stars, astronomer Chidi Nwosu's team detected transits by close-orbiting giant planets around 26 of them, roughly one star in 2,000. Assuming these detections are accurate, the results imply that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "about one in ten of the stars the team surveyed has a close-orbiting giant planet.",
+    "B": "most close-orbiting giant planets went undetected because they were too small to dim their stars.",
+    "C": "considerably more of the surveyed stars have close-orbiting giant planets than the team directly detected.",
+    "D": "the transit method is unable to detect any planet that orbits far from its star."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Only about one in ten close-orbiting giant planets has an orbit tilted so that it transits. So for each such planet the team saw, roughly nine others around surveyed stars would have produced no transit at all. The true number of stars with these planets must therefore be well above the 26 detected.",
+    "A": "Incorrect. \"One in ten\" is the share of orbits that are tilted the right way, not the share of stars that have such planets; the data point to roughly one star in 200.",
+    "B": "Incorrect. The text gives orbital tilt, not planet size, as the reason planets go undetected, and giant planets are the easiest to see.",
+    "C": "Correct. Because most such orbits are not tilted toward Earth, the 26 detections must be only a fraction of the planets actually present.",
+    "D": "Incorrect. The text says the fraction of detectable orbits is \"far smaller\" for wider orbits, not that such planets can never be detected."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "not_in_text",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

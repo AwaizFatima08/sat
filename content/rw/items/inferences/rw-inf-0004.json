@@ -1,0 +1,55 @@
+{
+  "id": "rw-inf-0004",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Bloodroot, a woodland wildflower of eastern North America, produces seeds with a small fatty attachment called an elaiosome. Native ants carry the seeds to their nests, eat the elaiosomes, and discard the intact seeds in waste piles, where many later sprout. Ecologist Anneke de Vries compared two forests: one with plenty of native ants and one where those ants had been replaced by an invasive ant species that ignores the seeds. Bloodroot seeds sprouted equally well in both forests, but in the second forest nearly every seedling grew within half a meter of a parent plant. These findings suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the invasive ants eat bloodroot seeds, which keeps most of the seeds from sprouting.",
+    "B": "bloodroot seeds can sprout only after native ants have placed them in waste piles.",
+    "C": "bloodroot will soon disappear from every forest that the invasive ants have entered.",
+    "D": "native ants help bloodroot spread to new spots but are not needed for its seeds to sprout."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Two findings must be combined. Seeds sprouted equally well with or without native ants, so ants are not needed for sprouting. But without native ants, seedlings stayed right next to parent plants, so the ants are what move seeds to new places.",
+    "A": "Incorrect. The text says the invasive ants ignore the seeds, and seeds sprouted equally well in both forests.",
+    "B": "Incorrect. Seeds sprouted just as well in the forest without native ants, so they do not need the waste piles to sprout.",
+    "C": "Incorrect. The text shows only that seedlings stayed near parent plants, not that the species will disappear.",
+    "D": "Correct. It matches both findings: equal sprouting in both forests, but movement away from parent plants only where native ants were present."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

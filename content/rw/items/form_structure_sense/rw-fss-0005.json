@@ -1,0 +1,55 @@
+{
+  "id": "rw-fss-0005",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "The 1977 discovery of hydrothermal vents along the Galápagos Rift, where scientists aboard the submersible Alvin found tube worms, clams, and crabs crowded around openings in the seafloor roughly 2,500 meters below the surface, ______ one of the most consequential findings in modern biology. It showed that entire communities of animals can depend on bacteria that draw energy from chemicals rather than from sunlight.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "remain",
+    "B": "remains",
+    "C": "have remained",
+    "D": "are"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Strip away the long modifiers and the sentence reads \"The 1977 discovery … remains one of the most consequential findings.\" The subject is the singular noun \"discovery\"; \"vents,\" \"scientists,\" \"worms,\" \"clams,\" \"crabs\" and \"openings\" all sit inside phrases that describe it. A singular subject needs the singular verb \"remains.\"",
+    "A": "Incorrect. \"Remain\" is plural and seems to agree with nearby plural nouns such as \"vents\" or \"openings,\" but the subject is the singular \"discovery.\"",
+    "B": "Correct. The singular verb \"remains\" agrees with the singular subject \"discovery.\"",
+    "C": "Incorrect. \"Have remained\" is plural, but the subject \"discovery\" is singular.",
+    "D": "Incorrect. \"Are\" is plural, but the subject \"discovery\" is singular."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

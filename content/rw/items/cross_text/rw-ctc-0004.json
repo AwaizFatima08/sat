@@ -1,0 +1,55 @@
+{
+  "id": "rw-ctc-0004",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "In one experiment, researchers played recorded sounds of bees' wings to evening primrose flowers. Within minutes, the sugar concentration of the flowers' nectar increased. The researchers suggest that the bowl-shaped petals vibrate in response to such sounds, allowing the plant to detect nearby pollinators and offer them a sweeter reward.",
+  "passage_b": "Studies showing that plants react to sound are intriguing, but the word \"hearing\" can mislead. Plants have no nervous system, so any response must arise from cells physically disturbed by vibration. Moreover, a single experiment, however striking, needs to be repeated by other laboratories before biologists can be confident that the effect is real.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, both authors would most likely agree with which statement?",
+  "choices": {
+    "A": "Plants hear sounds in much the same way that animals do.",
+    "B": "The evening primrose results have already been confirmed by other laboratories.",
+    "C": "Evening primrose nectar becomes sweeter when the flowers are exposed to bee sounds.",
+    "D": "Any response of plants to sound would depend on plant parts being physically moved."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Text 1 explains the flowers' response through petals that \"vibrate in response to such sounds.\" Text 2 says any plant response \"must arise from cells physically disturbed by vibration.\" Both authors connect a plant's reaction to sound with physical movement of its parts.",
+    "A": "Incorrect. Text 2 warns that the word \"hearing\" can mislead because plants have no nervous system, so its author would not agree.",
+    "B": "Incorrect. Text 2 says the experiment still \"needs to be repeated by other laboratories,\" and Text 1 mentions no repetition.",
+    "C": "Incorrect. Text 1 reports this result, but Text 2 says biologists cannot yet be \"confident that the effect is real,\" so only one author clearly accepts it.",
+    "D": "Correct. Text 1 relies on vibrating petals, and Text 2 says responses must come from cells \"physically disturbed by vibration,\" so both would agree."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

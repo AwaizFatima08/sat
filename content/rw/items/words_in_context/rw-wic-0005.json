@@ -1,0 +1,55 @@
+{
+  "id": "rw-wic-0005",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "For decades, scholars attributed every miniature in the Bellcourt Hours, a fifteenth-century prayer book, to a single illuminator. Art historian Inês Carvalho has complicated that view. Examining the paintings under magnification, she found that the faces were made with consistent fine strokes, while the decorated borders vary widely in technique. The master, she argues, painted the figures and left the margins to several assistants. Her conclusion does not ______ the traditional attribution entirely, since the most admired portions of the book remain the master's, but it does require scholars to describe the manuscript as a workshop product.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "overturn",
+    "B": "corroborate",
+    "C": "anticipate",
+    "D": "embellish"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The sentence says the old view survives in part (\"the most admired portions of the book remain the master's\") but must still change (\"but it does require scholars to describe the manuscript as a workshop product\"). The blank must mean \"reverse or knock down,\" so that the old view is not knocked down entirely but is still revised.",
+    "A": "Correct. Carvalho's finding does not overturn the single-artist attribution entirely, because the master still made the most admired paintings, but it does change how the book must be described.",
+    "B": "Incorrect. \"Corroborate\" means confirm. The reason after \"since\" (part of the old view survives) explains why the view is not fully overturned, not why it is not fully confirmed, and the contrast \"but it does require\" would make no sense.",
+    "C": "Incorrect. \"Anticipate\" means foresee; a later conclusion cannot anticipate an older attribution.",
+    "D": "Incorrect. \"Embellish\" means decorate or add details; the sentence is about whether the old view survives, not about decorating it."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "wrong_logic",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rw-wic-0006",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Popular accounts often describe forests as cooperative communities in which trees use underground fungal networks to share nutrients and send warnings to their neighbors. Some ecologists consider such descriptions ______. Although fungi clearly do link the roots of many trees, these researchers note, field studies showing that resources travel between trees through those links in amounts large enough to matter are few, and their results are open to other interpretations.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "baseless",
+    "B": "indisputable",
+    "C": "overstated",
+    "D": "obsolete"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The ecologists accept part of the popular picture (\"fungi clearly do link the roots of many trees\") but say the evidence for the bigger claim, that useful amounts of resources move between trees, is thin. The blank needs a word meaning \"exaggerated,\" not \"completely wrong.\"",
+    "A": "Incorrect. \"Baseless\" means having no basis at all, but the researchers grant that the fungal links are real. This choice goes further than they do.",
+    "B": "Incorrect. The researchers doubt the descriptions, so \"indisputable\" reverses their view.",
+    "C": "Correct. \"Overstated\" means claiming more than the evidence shows, which matches researchers who accept the links but question the large transfers.",
+    "D": "Incorrect. \"Obsolete\" means replaced by something newer; the text does not say a newer view has replaced the popular one."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

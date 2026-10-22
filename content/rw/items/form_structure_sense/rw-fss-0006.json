@@ -1,0 +1,55 @@
+{
+  "id": "rw-fss-0006",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "In the 1840s, many reviewers judged a novel differently depending on whether they believed its author was a man or a woman. Publishing under the pen name Currer Bell, a name she chose partly because it did not reveal her sex, ______ Reviewers soon began guessing about who the mysterious author really was.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "Charlotte Brontë's novel Jane Eyre was published in 1847 and quickly became a success.",
+    "B": "the novel Jane Eyre was published by Charlotte Brontë in 1847 and quickly became a success.",
+    "C": "Charlotte Brontë released Jane Eyre in 1847, and the novel quickly became a success.",
+    "D": "in 1847 Jane Eyre, a novel by Charlotte Brontë, appeared and quickly became a success."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The introductory phrase \"Publishing under the pen name Currer Bell, a name she chose …\" describes the person who published. An introductory modifier applies to the subject that comes right after it, so that subject must be Charlotte Brontë herself, not her novel.",
+    "A": "Incorrect. The subject is \"Charlotte Brontë's novel Jane Eyre,\" so the sentence says the novel was publishing under a pen name and chose it; the modifier dangles.",
+    "B": "Incorrect. The subject is \"the novel Jane Eyre,\" so the novel, not Brontë, seems to be publishing under the pen name.",
+    "C": "Correct. \"Charlotte Brontë\" comes right after the introductory phrase, so she is the one publishing under the pen name she chose.",
+    "D": "Incorrect. The subject is \"Jane Eyre,\" the novel, so the introductory phrase wrongly describes the book as the one choosing a pen name."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "modifier",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

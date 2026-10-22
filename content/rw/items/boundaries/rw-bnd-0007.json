@@ -1,0 +1,55 @@
+{
+  "id": "rw-bnd-0007",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Ada Lovelace's notes on Charles Babbage's Analytical Engine, a general-purpose mechanical computer that Babbage designed but never ______ appended to her 1843 English translation of an article about the machine by the Italian engineer Luigi Menabrea. Running to roughly three times the length of the article itself, the notes include a step-by-step method for calculating Bernoulli numbers, which many historians describe as the first published computer program.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "completed; were",
+    "B": "completed—were",
+    "C": "completed, were",
+    "D": "completed were"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The subject of the first sentence is \"Ada Lovelace's notes,\" and its verb is \"were appended.\" In between, \"a general-purpose mechanical computer that Babbage designed but never completed\" is extra information about the Analytical Engine. It opens with a comma after \"Engine,\" so it must close with a comma before \"were.\"",
+    "A": "Incorrect. A semicolon would separate the subject \"Ada Lovelace's notes\" from its verb \"were appended,\" and neither side would be an independent clause.",
+    "B": "Incorrect. The extra information opens with a comma, so it can't close with a dash; the two marks must match.",
+    "C": "Correct. The closing comma matches the comma after \"Engine,\" setting off the extra information so the subject connects to \"were appended.\"",
+    "D": "Incorrect. Without a closing comma, the extra information is never set off and the verb \"were\" seems to belong to \"Babbage designed but never completed.\""
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "supplements",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

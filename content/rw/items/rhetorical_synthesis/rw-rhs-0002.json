@@ -1,0 +1,60 @@
+{
+  "id": "rw-rhs-0002",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "The kora is a stringed instrument from West Africa.",
+    "Its body is made from a large gourd covered with cowhide.",
+    "A traditional kora has 21 strings.",
+    "Griots, musicians who preserve history through song, often play the kora."
+  ],
+  "data": null,
+  "stem": "The student wants to introduce the kora to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "The kora, a stringed instrument from West Africa, has a body made from a large gourd covered with cowhide.",
+    "B": "A traditional kora has 21 strings and a body made from a large gourd.",
+    "C": "Griots are musicians who preserve history through song.",
+    "D": "Griots often play the kora, which has 21 strings."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Readers who have never heard of the kora first need to know what it is and where it comes from. The best choice names the kora, identifies it as a stringed instrument, gives its region, and adds a detail about how it is made.",
+    "A": "Correct. It tells a new reader what the kora is (a stringed instrument), where it is from (West Africa), and what it is made of.",
+    "B": "Incorrect. It gives details about the kora's strings and body but never says what the kora is or where it comes from, so it assumes the reader already knows.",
+    "C": "Incorrect. This sentence introduces griots, not the kora.",
+    "D": "Incorrect. It mentions the kora's strings but does not explain that the kora is an instrument from West Africa, so an unfamiliar reader is left guessing."
+  },
+  "traps": {
+    "B": "misses_goal",
+    "C": "true_irrelevant",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

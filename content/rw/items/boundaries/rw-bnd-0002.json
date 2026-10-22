@@ -1,0 +1,55 @@
+{
+  "id": "rw-bnd-0002",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Kintsugi is a Japanese method of repairing broken pottery with lacquer dusted with powdered gold. Instead of hiding the cracks, the ______ them, treating the damage as part of the object's history.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "method highlights",
+    "B": "method, highlights",
+    "C": "method; highlights",
+    "D": "method: highlights"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "\"The method\" is the subject of the sentence and \"highlights\" is its verb. No punctuation should separate a subject from its verb, so nothing goes between \"method\" and \"highlights.\"",
+    "A": "Correct. The subject \"the method\" flows straight into its verb \"highlights\" with no punctuation.",
+    "B": "Incorrect. A single comma can't separate a subject from its verb.",
+    "C": "Incorrect. A semicolon joins two independent clauses; here it would cut the subject off from its verb.",
+    "D": "Incorrect. A colon must follow a complete independent clause, and \"Instead of hiding the cracks, the method\" is not one."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "punctuation",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

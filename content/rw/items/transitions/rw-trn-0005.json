@@ -1,0 +1,55 @@
+{
+  "id": "rw-trn-0005",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Climate models that simulate the circulation of the Atlantic Ocean have grown steadily more sophisticated over recent decades, and most now reproduce, with reasonable fidelity, the broad pattern of the Gulf Stream carrying warm surface water northward along the coast of North America. ______ many of these models still place the point at which the current turns away from the coast too far north, an error that leaves simulated waters off New England several degrees warmer than measurements from ships and satellites indicate.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Instead,",
+    "B": "For instance,",
+    "C": "However,",
+    "D": "As a result,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The first sentence credits the models with reproducing the Gulf Stream's broad pattern. The second sentence introduces a limitation that exists alongside that success: the models still misplace where the current leaves the coast. The transition must signal a contrast without suggesting that the success was rejected or replaced.",
+    "A": "Incorrect. \"Instead\" would mean the models do the misplacing in place of reproducing the broad pattern, but the text says they do reproduce it. The error is an exception within that success, not a replacement for it.",
+    "B": "Incorrect. Placing the current too far north is an error, so it cannot be an example of the models' fidelity.",
+    "C": "Correct. \"However\" signals that, despite the models' overall success, a specific error remains.",
+    "D": "Incorrect. The error is not caused by the models' growing sophistication or by their reproducing the broad pattern."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

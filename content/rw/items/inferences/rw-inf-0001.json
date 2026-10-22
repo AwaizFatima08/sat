@@ -1,0 +1,55 @@
+{
+  "id": "rw-inf-0001",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Plants take in carbon dioxide through tiny pores in their leaves called stomata, but water vapor escapes through the same pores. Most plants open their stomata during the day. Many cacti, however, open their stomata only at night, when the desert air is cooler and more humid. Since less water evaporates into cool, humid air, this habit most likely helps cacti ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "survive without taking in any carbon dioxide at all.",
+    "B": "grow taller than plants that open their stomata in daylight.",
+    "C": "lose less water than they would by opening their stomata during the day.",
+    "D": "lose more water at night than they do during the hot daytime hours."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The text gives two facts: water escapes through open stomata, and less water evaporates into cool, humid air. Cacti open their stomata only at night, when the air is cool and humid, so this timing must reduce how much water they lose.",
+    "A": "Incorrect. The text says plants take in carbon dioxide through their stomata; cacti still open them, just at night.",
+    "B": "Incorrect. The text says nothing about how tall cacti grow compared with other plants.",
+    "C": "Correct. Opening the stomata only in cool, humid air means less water escapes than would escape in daytime heat.",
+    "D": "Incorrect. This reverses the logic; the cool, humid night air reduces water loss rather than increasing it."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

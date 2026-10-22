@@ -1,0 +1,55 @@
+{
+  "id": "rw-trn-0004",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "tryit",
+  "passage": "In the dry regions of western India, communities once built stepwells: deep stone structures in which long flights of stairs lead down to the water. Some of these wells were far more than practical sources of water; they were elaborately decorated works of art. ______ Rani ki Vav in Patan, Gujarat, built in the eleventh century, has walls lined with hundreds of carved stone figures arranged along its descending levels.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For example,",
+    "B": "In contrast,",
+    "C": "As a result,",
+    "D": "Even so,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The second sentence makes a general claim: some stepwells \"were elaborately decorated works of art.\" The last sentence describes one particular stepwell with hundreds of carved figures, which illustrates that claim. A transition that introduces an example is needed.",
+    "A": "Correct. \"For example\" introduces Rani ki Vav as a specific case of a decorated stepwell.",
+    "B": "Incorrect. Rani ki Vav agrees with the claim about decorated wells; it does not contrast with it.",
+    "C": "Incorrect. The carvings at Rani ki Vav are not caused by the fact that some stepwells were decorated; they are an instance of it. This is a tempting trap because the two ideas are closely connected.",
+    "D": "Incorrect. \"Even so\" signals something true despite the previous point, but the last sentence supports the previous point."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

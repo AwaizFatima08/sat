@@ -1,0 +1,55 @@
+{
+  "id": "rw-fss-0001",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "At exactly noon, the old clocks in Mr. Adeyemi's repair shop ______ all at once, filling the narrow room with chimes, bells, and the cry of a wooden cuckoo. His new apprentice, Tunde, still jumps at the sound every day.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "rings",
+    "B": "ring",
+    "C": "is ringing",
+    "D": "has rung"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The subject of the verb is \"clocks,\" which is plural; \"in Mr. Adeyemi's repair shop\" only tells where the clocks are. A plural subject needs a plural verb, and the rest of the passage is in the simple present (\"jumps\"), so \"ring\" is correct.",
+    "A": "Incorrect. \"Rings\" is singular and agrees with \"shop,\" but the subject is the plural \"clocks.\"",
+    "B": "Correct. The plural verb \"ring\" agrees with the plural subject \"clocks.\"",
+    "C": "Incorrect. \"Is ringing\" is singular, but the subject \"clocks\" is plural.",
+    "D": "Incorrect. \"Has rung\" is singular, but the subject \"clocks\" is plural."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

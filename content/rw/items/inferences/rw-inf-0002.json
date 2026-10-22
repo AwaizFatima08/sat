@@ -1,0 +1,55 @@
+{
+  "id": "rw-inf-0002",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "In many earlier European churches, thick walls had to hold back the heavy outward push of stone ceilings, so windows had to stay small; large openings would have weakened the walls. In the late twelfth century, builders began using flying buttresses, stone arches on the outside of a building that carry much of that push down to supports beyond the walls. With less force pressing on the walls, builders could ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "make the walls even thicker than they had been before.",
+    "B": "cut larger window openings without weakening the walls.",
+    "C": "build the ceilings out of wood instead of heavy stone.",
+    "D": "place every window in the ceiling rather than the walls."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The text explains that windows stayed small because large openings would weaken walls that were resisting the push of heavy ceilings. Flying buttresses took much of that force off the walls, so the reason for keeping windows small was removed.",
+    "A": "Incorrect. Less force on the walls means they need less thickness, not more.",
+    "B": "Correct. Once the walls bore less force, larger openings would no longer weaken them dangerously.",
+    "C": "Incorrect. The text never mentions changing the material of the ceilings.",
+    "D": "Incorrect. The text gives no reason to move windows into the ceiling; it is about openings in the walls."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

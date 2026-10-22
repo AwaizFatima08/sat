@@ -1,0 +1,55 @@
+{
+  "id": "rw-inf-0008",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "tryit",
+  "passage": "The Indus river dolphin, found mainly in Pakistan, has eyes so reduced that it is nearly blind; it finds prey in the river's muddy water by echolocation, interpreting the echoes of its own rapid clicks. Biologist Saima Qureshi recorded the dolphins along two stretches of the river that held similar numbers of fish. Along the stretch with heavy motorboat traffic, the dolphins clicked far more often than along a quiet stretch. Qureshi points out that animals relying on echolocation tend to repeat their signals when background noise drowns out the returning echoes. If her reasoning is correct, the higher click rate in the busy stretch most likely indicates that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the busy stretch offered the dolphins more prey to locate than the quiet stretch did.",
+    "B": "the dolphins there needed more clicks to perceive their surroundings, not that they had more to find.",
+    "C": "motorboat noise has left the dolphins in the busy stretch unable to catch enough food to survive.",
+    "D": "the dolphins there were clicking to keep in contact with one another over the noise of the boats."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Two pieces of the text must be combined. The stretches held similar numbers of fish, so the extra clicking was not caused by more prey. Qureshi's point about noise drowning out echoes then explains it: in the noisy stretch, the dolphins had to click more to get usable echoes.",
+    "A": "Incorrect. The text says both stretches held similar numbers of fish, which rules out more prey as the cause.",
+    "B": "Correct. With prey similar in both places and noise masking echoes, extra clicks most likely reflect the extra effort needed to sense the surroundings.",
+    "C": "Incorrect. The text shows that the dolphins clicked more, not that they were failing to catch food or were in danger of starving.",
+    "D": "Incorrect. The text describes the clicks as a tool for echolocation; it never says the dolphins use them to communicate."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "too_broad",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rw-trn-0007",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "tryit",
+  "passage": "Although the script of the Indus civilization remains undeciphered, leaving historians without written records of how its cities were organized, the physical remains of sites such as Harappa and Mohenjo-daro, in present-day Pakistan, attest to a remarkable degree of standardization. Among the most telling evidence are the bricks themselves, which, whether fired in kilns or dried in the sun, were molded in a single, fixed proportion across settlements hundreds of kilometers apart. ______ a brick's thickness, width, and length stand in a ratio of 1:2:4 regardless of its overall size.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Moreover,",
+    "B": "Nevertheless,",
+    "C": "Consequently,",
+    "D": "Specifically,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence says the bricks were molded in \"a single, fixed proportion\" but does not say what that proportion is. The last sentence supplies exactly that detail: 1:2:4. A transition that introduces a precise statement of something just mentioned in general terms is needed.",
+    "A": "Incorrect. \"Moreover\" adds a further point, but the last sentence does not add new evidence of standardization; it states exactly what the \"single, fixed proportion\" was. This is the closest near miss.",
+    "B": "Incorrect. The ratio does not contrast with the claim about a fixed proportion; it confirms and spells it out.",
+    "C": "Incorrect. The ratio is not a result of the bricks being molded in a fixed proportion; it is the proportion.",
+    "D": "Correct. \"Specifically\" signals that the last sentence states precisely what the \"single, fixed proportion\" was."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus-recheck",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "recheck after replacing A",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

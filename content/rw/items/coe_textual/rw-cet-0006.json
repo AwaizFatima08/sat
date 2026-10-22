@@ -1,0 +1,55 @@
+{
+  "id": "rw-cet-0006",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Octopuses alternate between two states of sleep. In \"quiet\" sleep they are pale and still, but during brief bouts of \"active\" sleep their skin flickers through patterns of color and texture, and their eyes and arms twitch. Neuroscientist Aiko Tanabe hypothesizes that active sleep in octopuses serves a function similar to one proposed for dreaming in mammals: the strengthening of memories of recent experience. If so, she reasons, the skin patterns produced during active sleep should not be random but should reflect what the animal did while awake.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Tanabe's hypothesis?",
+  "choices": {
+    "A": "Octopuses kept from active sleep for one night spent more time in active sleep the following night.",
+    "B": "The skin patterns that appeared during active sleep showed no relationship to the octopuses' waking activities.",
+    "C": "Patterns an octopus displayed in active sleep closely matched those it had used while hunting or hiding that day.",
+    "D": "Researchers have also observed a similar active sleep state in cuttlefish, which are close relatives of octopuses."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Tanabe's hypothesis makes a specific prediction: if active sleep strengthens memories of recent experience, the sleep patterns should reflect what the octopus did while awake. A finding that sleep patterns matched the octopus's patterns from earlier that day confirms this prediction directly.",
+    "A": "Incorrect. Making up for lost active sleep suggests that active sleep matters to octopuses, but it does not show that it involves recent experience.",
+    "B": "Incorrect. If the patterns had no link to waking activity, Tanabe's prediction would fail; this weakens her hypothesis.",
+    "C": "Correct. Sleep patterns that match the day's hunting and hiding patterns are exactly the link to waking experience that Tanabe predicts.",
+    "D": "Incorrect. Finding active sleep in another species says nothing about what the octopus's sleep patterns reflect."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

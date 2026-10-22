@@ -1,0 +1,21 @@
+rules_version = '2';
+
+// Module Up: each student reads and writes only their own documents under users/{uid}.
+// Question content ships inside the app and is never stored here.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read, write: if isOwner(uid);
+      match /{document=**} {
+        allow read, write: if isOwner(uid);
+      }
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+
+  function isOwner(uid) {
+    return request.auth != null && request.auth.uid == uid;
+  }
+}

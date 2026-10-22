@@ -1,0 +1,55 @@
+{
+  "id": "rw-cet-0008",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "In several Paleolithic caves in France and Spain, researchers have reported that painted images tend to cluster at spots where sound resonates or echoes strongly. Archaeologist Céline Marchand argues that the artists sought out these spots deliberately, perhaps because echoes held ritual significance for them. Skeptics point out, however, that resonance is strongest in narrow passages and small chambers, and that such spaces also offer the smooth, sheltered rock surfaces best suited to painting; on this view, the clustering could arise even if the artists paid no attention to sound at all.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Marchand's argument?",
+  "choices": {
+    "A": "In the caves studied, images appear far more often in narrow passages and small chambers than in large open halls.",
+    "B": "Many painted surfaces in the caves are smoother and better protected from moisture than nearby unpainted ones.",
+    "C": "Echoes are described as important in the ceremonies of several present-day societies that live near caves.",
+    "D": "Artists chose resonant spots far more often than nonresonant ones whose rock surfaces were equally suitable."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Marchand says artists chose resonant spots because of the sound. The skeptics offer another explanation: resonant spots also have the best painting surfaces, so the pattern might have nothing to do with sound. Support for Marchand must rule out that explanation by comparing spots whose surfaces are equally good. If artists still preferred the resonant ones, sound itself seems to have guided their choice.",
+    "A": "Incorrect. Narrow passages and small chambers have both strong resonance and good surfaces, so this pattern fits the skeptics' explanation just as well as Marchand's.",
+    "B": "Incorrect. Painted surfaces being smoother and more sheltered points to surface quality as the reason for the choice, which supports the skeptics instead.",
+    "C": "Incorrect. The customs of present-day societies do not show what Paleolithic artists were thinking when they chose where to paint.",
+    "D": "Correct. Because surface quality is held equal, the skeptics' explanation cannot account for the preference, so attention to sound, which is Marchand's claim, becomes the best explanation."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

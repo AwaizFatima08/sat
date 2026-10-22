@@ -1,0 +1,55 @@
+{
+  "id": "rw-fss-0003",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "The Rosetta Stone, found in Egypt in 1799, records a single royal decree in three scripts: hieroglyphs, Demotic, and ancient Greek. Because the scholars who studied it could already read Greek, the stone gave ______ a way to work out the meaning of the other two scripts, though fully deciphering the hieroglyphs still took more than twenty years.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "them",
+    "B": "it",
+    "C": "they",
+    "D": "him"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The ones who were given a way to work out the other scripts are \"the scholars,\" a plural noun. The pronoun is also the object of \"gave,\" so it must be the plural object pronoun \"them.\"",
+    "A": "Correct. \"Them\" is plural, matching \"scholars,\" and is the object form needed after \"gave.\"",
+    "B": "Incorrect. \"It\" is singular, but it must refer to the plural \"scholars\"; the stone did not give a way to itself or to the Greek text.",
+    "C": "Incorrect. \"They\" is a subject pronoun; after the verb \"gave,\" the object form \"them\" is needed.",
+    "D": "Incorrect. \"Him\" is singular and refers to no one in the text; the antecedent \"scholars\" is plural."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "pronoun",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

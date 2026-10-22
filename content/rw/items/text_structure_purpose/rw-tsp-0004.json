@@ -1,0 +1,55 @@
+{
+  "id": "rw-tsp-0004",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "text_structure_purpose",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "The harpsichord, the leading keyboard instrument of the late 1600s, had a notable limitation: because its strings are plucked by a mechanism, a player cannot make a note louder or softer by pressing a key harder. Around 1700, the instrument maker Bartolomeo Cristofori in Florence solved this problem with a keyboard in which small hammers strike the strings, so the force of the player's touch controls the volume. His instrument's original name, gravicembalo col piano e forte, roughly \"harpsichord with soft and loud,\" announced exactly this advantage, and its shortened form, \"piano,\" survives today.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice best describes the overall structure of the text?",
+  "choices": {
+    "A": "It describes an instrument and then explains why that instrument gradually fell out of use.",
+    "B": "It presents a claim about an inventor and then offers evidence that challenges it.",
+    "C": "It compares the sounds of two instruments and then argues that one is superior.",
+    "D": "It identifies a limitation of an instrument and then explains how an invention addressed it."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The first sentence names a problem with the harpsichord: a player \"cannot make a note louder or softer.\" The second sentence says Cristofori \"solved this problem\" with hammers, and the third shows the new instrument's name advertised the solution. The text moves from a limitation to its solution.",
+    "A": "Incorrect. The text never says the harpsichord fell out of use; it focuses on the problem the piano solved.",
+    "B": "Incorrect. Nothing in the text challenges Cristofori's achievement; the name of his instrument supports it.",
+    "C": "Incorrect. The text explains a mechanical difference in volume control; it does not compare the instruments' sounds or argue that one is better overall.",
+    "D": "Correct. The text identifies the harpsichord's limitation and then explains how Cristofori's hammer mechanism overcame it."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "wrong_logic",
+    "C": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

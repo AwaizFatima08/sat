@@ -1,0 +1,83 @@
+{
+  "id": "rw-ceq-0002",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "tryit",
+  "passage": "At the start of March 2023, a community library in Kathmandu, Nepal, opened a reading corner with low shelves and floor cushions for children. Librarian Sushila Thapa counted how many books were borrowed each month to see whether the new space made a difference. The graph suggests that borrowing increased after the reading corner opened: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Books Borrowed per Month at a Kathmandu Community Library, 2023",
+    "x_label": "Month",
+    "y_label": "Books borrowed",
+    "series": [
+      {
+        "name": "Books borrowed",
+        "points": [
+          [
+            "January",
+            412
+          ],
+          [
+            "February",
+            398
+          ],
+          [
+            "March",
+            655
+          ],
+          [
+            "April",
+            731
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "borrowing was highest in January, when about 410 books were borrowed.",
+    "B": "most of the extra books borrowed were picture books for young children.",
+    "C": "monthly borrowing rose from about 400 books to more than 650 books.",
+    "D": "about 410 books were borrowed in January and about 400 in February."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The statement says borrowing increased after the corner opened in March, so the choice must compare the months before (January and February) with the months after (March and April). The graph shows about 400 books in each of the first two months and more than 650 in each of the last two.",
+    "A": "Incorrect. January is one of the lowest months on the graph; April is the highest.",
+    "B": "Incorrect. The graph shows only the total number of books borrowed, not what kinds of books they were.",
+    "C": "Correct. Borrowing went from about 400 books per month in January and February to 655 and 731 books in March and April.",
+    "D": "Incorrect. These numbers are accurate, but they describe only the months before the corner opened, so they do not show an increase."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

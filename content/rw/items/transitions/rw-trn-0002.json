@@ -1,0 +1,55 @@
+{
+  "id": "rw-trn-0002",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "The letter from her grandmother had been sitting on Ines's desk for three days. Every morning she picked it up, turned it over, and set it back down, telling herself she would answer it after school. ______ when she finally sat down to write, the words came so easily that she filled two pages before dinner.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For example,",
+    "B": "However,",
+    "C": "Similarly,",
+    "D": "In addition,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Ines puts off answering the letter for three days, which suggests she expects writing it to be hard. The last sentence says the opposite happened: \"the words came so easily.\" A contrast transition is needed.",
+    "A": "Incorrect. The last sentence is not an example of Ines putting the letter aside; it describes what happened when she stopped putting it aside.",
+    "B": "Correct. \"However\" signals the contrast between her days of delay and how easily the letter was written once she began.",
+    "C": "Incorrect. \"Similarly\" signals that the next idea is like the previous one, but writing easily is unlike avoiding the letter.",
+    "D": "Incorrect. \"In addition\" adds another point of the same kind, but the last sentence reverses the expectation set up earlier."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

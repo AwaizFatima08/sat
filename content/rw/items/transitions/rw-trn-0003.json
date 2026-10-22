@@ -1,0 +1,55 @@
+{
+  "id": "rw-trn-0003",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Sea otters eat large numbers of sea urchins, spiny animals that graze on the stalks of giant kelp. Along the coast of central California, otters keep urchin populations small enough that kelp can grow faster than it is eaten. ______ kelp forests where otters live tend to be dense and tall, while nearby areas without otters are often bare rock covered with urchins.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "However,",
+    "B": "Likewise,",
+    "C": "Nevertheless,",
+    "D": "As a result,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence explains a cause: otters keep urchins few, so kelp \"can grow faster than it is eaten.\" The last sentence describes the effect that follows: dense kelp where otters live and bare rock where they do not. A cause-and-effect transition is needed.",
+    "A": "Incorrect. The last sentence contains a contrast between two areas, but it does not contrast with the sentence before it; it follows from it. This is the most tempting trap.",
+    "B": "Incorrect. \"Likewise\" introduces a similar, separate point, but the last sentence is the outcome of the otters' feeding, not a parallel to it.",
+    "C": "Incorrect. \"Nevertheless\" means \"in spite of that,\" but dense kelp is exactly what you would expect when urchins are kept in check.",
+    "D": "Correct. \"As a result\" shows that the dense kelp forests are the effect of otters keeping urchin numbers low."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

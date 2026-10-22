@@ -1,0 +1,120 @@
+{
+  "id": "rw-ceq-0007",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "tryit",
+  "passage": "Because lizards cannot generate much body heat internally, they were long described as being at the mercy of their surroundings, warming and cooling with the air. Herpetologist Elif Karaca, who fitted Mediterranean wall lizards in a rocky hillside population with miniature temperature sensors and recorded their average body temperature every two hours through a clear summer day, rejects that characterization. By shuttling between sunlit rock and shaded crevices, she contends, the lizards confine their body temperature to a band considerably narrower than the daily swing in the temperature of the air around them, rather than simply tracking that swing.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Air Temperature and Average Lizard Body Temperature over One Day",
+    "x_label": "Time of day",
+    "y_label": "Temperature (°C)",
+    "series": [
+      {
+        "name": "Air temperature",
+        "points": [
+          [
+            "8 a.m.",
+            14
+          ],
+          [
+            "10 a.m.",
+            21
+          ],
+          [
+            "Noon",
+            29
+          ],
+          [
+            "2 p.m.",
+            33
+          ],
+          [
+            "4 p.m.",
+            27
+          ],
+          [
+            "6 p.m.",
+            18
+          ]
+        ]
+      },
+      {
+        "name": "Lizard body temperature",
+        "points": [
+          [
+            "8 a.m.",
+            25
+          ],
+          [
+            "10 a.m.",
+            33
+          ],
+          [
+            "Noon",
+            35
+          ],
+          [
+            "2 p.m.",
+            34
+          ],
+          [
+            "4 p.m.",
+            34
+          ],
+          [
+            "6 p.m.",
+            29
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Karaca's claim?",
+  "choices": {
+    "A": "Between 8 a.m. and 6 p.m., the lizards' body temperature stayed within about 10°C, whereas air temperature spanned nearly 20°C.",
+    "B": "At every time of day shown, the lizards' average body temperature was higher than the temperature of the surrounding air.",
+    "C": "From 8 a.m. to noon, the temperature of the air rose by fewer degrees than the lizards' body temperature did.",
+    "D": "The lizards spent more of the hottest afternoon hours in shaded crevices than they did in the cool early morning."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Karaca's specific claim is about range: body temperature varies within a narrower band than air temperature does. To support it, compare the spread of each line across the day. Body temperature runs from 25°C to 35°C (about 10 degrees), while air temperature runs from 14°C to 33°C (19 degrees).",
+    "A": "Correct. Comparing the two ranges, about 10°C for the lizards versus about 19°C for the air, shows exactly the narrower band Karaca describes.",
+    "B": "Incorrect. This is true, but being warmer than the air is a different claim; a lizard could be warmer than the air at every hour and still swing as widely as the air does.",
+    "C": "Incorrect. From 8 a.m. to noon the air warmed by 15°C (14 to 29), while the lizards warmed by only 10°C (25 to 35), so this reverses the data.",
+    "D": "Incorrect. Shuttling into shade fits Karaca's explanation, but the graph shows only temperatures, not where the lizards spent their time."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-sonnet",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "Best fit on the text alone.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}
