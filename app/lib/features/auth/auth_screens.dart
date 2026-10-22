@@ -47,7 +47,7 @@ bool requireAccount(
       builder: (c) => AlertDialog(
         title: const Text('Create your free account'),
         content: const Text(
-          'Sign in with Google or email to keep practising, take the full papers and keep your '
+          'Sign in with Google or email to keep practicing, take the full papers and keep your '
           'progress on any phone. What you have done so far is kept.',
         ),
         actions: [
@@ -314,6 +314,15 @@ class _ProfileSetupScreenState extends ConsumerState<ProfileSetupScreen> {
       weeklyGoal: _goal.round(),
     );
     await ref.read(progressRepositoryProvider)?.saveProfile(profile);
+    // Wait until the saved profile is visible to the router; otherwise its
+    // "no profile yet" redirect would bounce straight back to this screen.
+    for (
+      var i = 0;
+      i < 30 && ref.read(progressProvider).value?.profile == null;
+      i++
+    ) {
+      await Future<void>.delayed(const Duration(milliseconds: 100));
+    }
     if (mounted) context.go('/');
   }
 

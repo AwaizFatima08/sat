@@ -68,34 +68,37 @@ class HomeScreen extends ConsumerWidget {
                   highlight: true,
                 ),
               const SizedBox(height: AppSpace.s),
-              Row(
-                children: [
-                  Expanded(
-                    child: _MiniStat(
-                      label: 'Last estimate',
-                      value: last == null ? '—' : '${last.estimate.score}',
-                      onTap: last == null
-                          ? null
-                          : () => context.push('/attempt/${last.formId}'),
+              IntrinsicHeight(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Expanded(
+                      child: _MiniStat(
+                        label: 'Last score',
+                        value: last == null ? '—' : '${last.estimate.score}',
+                        onTap: last == null
+                            ? null
+                            : () => context.push('/attempt/${last.formId}'),
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: AppSpace.s),
-                  Expanded(
-                    child: _MiniStat(
-                      label: 'Target',
-                      value: '${p.profile?.targetScore ?? '—'}',
-                      onTap: () => context.push('/settings'),
+                    const SizedBox(width: AppSpace.s),
+                    Expanded(
+                      child: _MiniStat(
+                        label: 'Target',
+                        value: '${p.profile?.targetScore ?? '—'}',
+                        onTap: () => context.push('/settings'),
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: AppSpace.s),
-                  Expanded(
-                    child: _MiniStat(
-                      label: 'Mistakes due',
-                      value: '$due',
-                      onTap: () => context.go('/practice'),
+                    const SizedBox(width: AppSpace.s),
+                    Expanded(
+                      child: _MiniStat(
+                        label: 'To review',
+                        value: '$due',
+                        onTap: () => context.go('/practice'),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               const SizedBox(height: AppSpace.m),
               SectionCard(

@@ -41,26 +41,29 @@ class PracticeScreen extends ConsumerWidget {
     return ListView(
       padding: const EdgeInsets.all(AppSpace.m),
       children: [
-        Row(
-          children: [
-            Expanded(
-              child: _QuickCard(
-                icon: Icons.timer_outlined,
-                title: 'Timed module',
-                subtitle: '27 questions · 32 min',
-                onTap: () => start(drill.startModulePractice),
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                child: _QuickCard(
+                  icon: Icons.timer_outlined,
+                  title: 'Timed module',
+                  subtitle: '27 questions · 32 min',
+                  onTap: () => start(drill.startModulePractice),
+                ),
               ),
-            ),
-            const SizedBox(width: AppSpace.s),
-            Expanded(
-              child: _QuickCard(
-                icon: Icons.replay,
-                title: 'Mistakes',
-                subtitle: due == 0 ? 'Nothing due' : '$due due today',
-                onTap: due == 0 ? null : () => start(drill.startMistakes),
+              const SizedBox(width: AppSpace.s),
+              Expanded(
+                child: _QuickCard(
+                  icon: Icons.replay,
+                  title: 'Mistakes',
+                  subtitle: due == 0 ? 'Nothing due' : '$due due today',
+                  onTap: due == 0 ? null : () => start(drill.startMistakes),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         for (final d in bank.blueprint.domains.entries) ...[
           const SizedBox(height: AppSpace.l),

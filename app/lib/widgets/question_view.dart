@@ -80,8 +80,6 @@ class QuestionView extends StatefulWidget {
 }
 
 class _QuestionViewState extends State<QuestionView> {
-  double _split = 0.5;
-
   bool get _hasStimulus =>
       widget.content.passage != null ||
       widget.content.notes != null ||
@@ -108,16 +106,16 @@ class _QuestionViewState extends State<QuestionView> {
             ],
           );
         }
-        final top = (box.maxHeight * _split).clamp(120.0, box.maxHeight - 160);
-        return Column(
+        return ListView(
           children: [
-            SizedBox(height: top, child: stimulus),
-            _DragHandle(
-              onDrag: (dy) => setState(
-                () => _split = ((top + dy) / box.maxHeight).clamp(0.2, 0.8),
-              ),
+            _StimulusPane(
+              content: widget.content,
+              highlights: widget.highlights,
+              onHighlight: widget.reveal == null ? widget.onHighlight : null,
+              scroll: false,
             ),
-            Expanded(child: question),
+            const Divider(height: 1, color: AppColors.line),
+            _QuestionPane(widget: widget, scroll: false),
           ],
         );
       },
@@ -125,40 +123,15 @@ class _QuestionViewState extends State<QuestionView> {
   }
 }
 
-class _DragHandle extends StatelessWidget {
-  const _DragHandle({required this.onDrag});
-  final ValueChanged<double> onDrag;
-
-  @override
-  Widget build(BuildContext context) => Semantics(
-    label: 'Resize passage',
-    child: GestureDetector(
-      behavior: HitTestBehavior.opaque,
-      onVerticalDragUpdate: (d) => onDrag(d.delta.dy),
-      child: Container(
-        height: 22,
-        color: AppColors.paper,
-        alignment: Alignment.center,
-        child: Container(
-          width: 44,
-          height: 5,
-          decoration: BoxDecoration(
-            color: AppColors.line,
-            borderRadius: BorderRadius.circular(3),
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
 class _StimulusPane extends StatelessWidget {
   const _StimulusPane({
     required this.content,
     required this.highlights,
     required this.onHighlight,
+    this.scroll = true,
   });
 
+  final bool scroll;
   final QuestionContent content;
   final Set<int> highlights;
   final ValueChanged<int>? onHighlight;
@@ -170,8 +143,8 @@ class _StimulusPane extends StatelessWidget {
       fontWeight: FontWeight.w700,
     );
     final notes = content.notes;
-    return ListView(
-      padding: const EdgeInsets.all(AppSpace.m),
+    return _Pane(
+      scroll: scroll,
       children: [
         if (content.passageB != null) Text('Text 1', style: label),
         if (content.passage case final p?)
@@ -218,15 +191,16 @@ class _StimulusPane extends StatelessWidget {
 }
 
 class _QuestionPane extends StatelessWidget {
-  const _QuestionPane({required this.widget});
+  const _QuestionPane({required this.widget, this.scroll = true});
   final QuestionView widget;
+  final bool scroll;
 
   @override
   Widget build(BuildContext context) {
     final c = widget.content;
     final reveal = widget.reveal;
-    return ListView(
-      padding: const EdgeInsets.all(AppSpace.m),
+    return _Pane(
+      scroll: scroll,
       children: [
         ?widget.header,
         RichLine(
@@ -412,4 +386,22 @@ class _LetterBadge extends StatelessWidget {
       ),
     ),
   );
+}
+
+/// A padded list: scrollable on its own, or a plain column inside a parent scroll.
+class _Pane extends StatelessWidget {
+  const _Pane({required this.scroll, required this.children});
+  final bool scroll;
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) => scroll
+      ? ListView(padding: const EdgeInsets.all(AppSpace.m), children: children)
+      : Padding(
+          padding: const EdgeInsets.all(AppSpace.m),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: children,
+          ),
+        );
 }
