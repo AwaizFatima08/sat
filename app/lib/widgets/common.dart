@@ -74,6 +74,7 @@ class RatioBar extends StatelessWidget {
             Row(
               children: [
                 Expanded(child: Text(label)),
+                const SizedBox(width: AppSpace.s),
                 Text(
                   '${tally.correct}/${tally.total}'
                   '${trailing == null ? '' : ' · $trailing'}',
