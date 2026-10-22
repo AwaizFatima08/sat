@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:moduleup/core/theme.dart';
 
@@ -18,15 +19,22 @@ List<InlineSpan> styledSpans(String text, TextStyle base, {Color? highlight}) {
     }
     if (m.group(0) == _blank) {
       spans.add(
-        TextSpan(
-          text: '       ',
-          style: style(
-            const TextStyle(
-              decoration: TextDecoration.underline,
-              decorationThickness: 2,
+        WidgetSpan(
+          alignment: PlaceholderAlignment.baseline,
+          baseline: TextBaseline.alphabetic,
+          child: Semantics(
+            label: 'blank',
+            child: Container(
+              width: 72,
+              height: (base.fontSize ?? 16) * 1.1,
+              margin: const EdgeInsets.symmetric(horizontal: 2),
+              decoration: const BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(color: AppColors.ink, width: 2),
+                ),
+              ),
             ),
           ),
-          semanticsLabel: 'blank',
         ),
       );
     } else if (m.group(1) != null) {
@@ -67,7 +75,7 @@ class RichLine extends StatelessWidget {
 
 /// A passage the student can highlight sentence by sentence (long-press a
 /// sentence to toggle it), like the highlighter on the real test.
-class HighlightablePassage extends StatelessWidget {
+class HighlightablePassage extends StatefulWidget {
   const HighlightablePassage({
     required this.text,
     required this.highlighted,
@@ -84,35 +92,60 @@ class HighlightablePassage extends StatelessWidget {
   ).allMatches(text).map((m) => m.group(0)!).toList();
 
   @override
+  State<HighlightablePassage> createState() => _HighlightablePassageState();
+}
+
+class _HighlightablePassageState extends State<HighlightablePassage> {
+  final _recognizers = <LongPressGestureRecognizer>[];
+
+  void _disposeRecognizers() {
+    for (final r in _recognizers) {
+      r.dispose();
+    }
+    _recognizers.clear();
+  }
+
+  @override
+  void dispose() {
+    _disposeRecognizers();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    _disposeRecognizers();
     final base = Theme.of(context).textTheme.bodyLarge!.copyWith(
       fontFamily: passageFont,
       fontSize: 17,
       height: 1.55,
       color: AppColors.ink,
     );
-    final parts = sentences(text);
+    final parts = HighlightablePassage.sentences(widget.text);
+    final spans = <InlineSpan>[];
+    for (var i = 0; i < parts.length; i++) {
+      final toggle = widget.onToggle;
+      final recognizer = toggle == null
+          ? null
+          : (LongPressGestureRecognizer()..onLongPress = () => toggle(i));
+      if (recognizer != null) _recognizers.add(recognizer);
+      spans.add(
+        TextSpan(
+          recognizer: recognizer,
+          children: styledSpans(
+            parts[i],
+            base,
+            highlight: widget.highlighted.contains(i)
+                ? AppColors.highlight
+                : null,
+          ),
+        ),
+      );
+    }
     return Semantics(
-      hint: onToggle == null ? null : 'Long-press a sentence to highlight it',
-      child: Wrap(
-        children: [
-          for (var i = 0; i < parts.length; i++)
-            GestureDetector(
-              onLongPress: onToggle == null ? null : () => onToggle!(i),
-              child: Text.rich(
-                TextSpan(
-                  children: styledSpans(
-                    parts[i],
-                    base,
-                    highlight: highlighted.contains(i)
-                        ? AppColors.highlight
-                        : null,
-                  ),
-                ),
-              ),
-            ),
-        ],
-      ),
+      hint: widget.onToggle == null
+          ? null
+          : 'Long-press a sentence to highlight it',
+      child: Text.rich(TextSpan(children: spans)),
     );
   }
 }

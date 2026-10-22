@@ -356,6 +356,7 @@ class ChoiceTile extends StatelessWidget {
                       ),
                       if (onEliminate != null)
                         IconButton(
+                          visualDensity: VisualDensity.compact,
                           tooltip: eliminated
                               ? 'Restore $letter'
                               : 'Eliminate $letter',

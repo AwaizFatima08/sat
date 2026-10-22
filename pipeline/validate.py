@@ -33,7 +33,7 @@ neighbours harbour humour rumour vapour vigour centre centres metre metres litre
 organise organised organising organisation realise realised recognise recognised analyse analysed
 criticise apologise emphasise summarise characterise specialise minimise maximise utilise mobilise
 programme programmes travelled travelling traveller cancelled modelled labelled fuelled levelled signalled
-defence offence licence grey catalogue dialogue analogue judgement ageing aluminium jewellery
+defence offence licence grey catalogue judgement ageing aluminium jewellery
 manoeuvre oestrogen paediatric anaesthetic encyclopaedia mould smoulder plough sceptical whilst amongst
 """.split()
 UK_RE = re.compile(r"\b(" + "|".join(UK_WORDS) + r")(?:s|ed|ing|ful|less|ly|ist|ists)?\b", re.I)

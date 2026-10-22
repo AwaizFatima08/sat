@@ -39,3 +39,6 @@ were unsure about. Tick or fix each one during review.
 | rw-rhs-0527 | Key rests on "many". |
 | rw-rhs-0519, 0520, 0528 | Tarbela, glowing mushrooms, caffeine percentages: fact check. |
 | rw-rhs drills | Key is the longest choice in 11 of 30 items. |
+| rw-tsp-0117 | Real bumblebee ball-rolling study credited to an invented researcher: anonymize ("one team"). |
+| rw-tsp-0113, rw-tsp-0125 | Mantis shrimp color vision (2014) and desert ants on stilts: fact check. |
+| rw-wic-0123, rw-wic-0127 | 0123 vocabulary-heavy for level 1; 0127 distractor C weak. |

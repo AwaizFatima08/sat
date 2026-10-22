@@ -39,6 +39,7 @@ class SkillScreen extends ConsumerWidget {
           title: Text(name),
           bottom: const TabBar(
             isScrollable: true,
+            tabAlignment: TabAlignment.start,
             tabs: [
               Tab(text: 'Lesson'),
               Tab(text: 'Foundations'),
