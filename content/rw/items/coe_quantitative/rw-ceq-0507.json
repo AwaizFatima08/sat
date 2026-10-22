@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0507",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Since 2017, a children's magazine in Wellington, New Zealand, has held a yearly poetry contest for students aged 8 to 14. In 2020, the contest began accepting poems written in te reo Māori as well as in English. According to the graph, the number of entries rose the most from one year to the next between ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Entries in a Children's Poetry Contest, 2017–2023",
+    "x_label": "Year",
+    "y_label": "Entries",
+    "series": [
+      {
+        "name": "Entries",
+        "points": [
+          [
+            "2017",
+            340
+          ],
+          [
+            "2018",
+            365
+          ],
+          [
+            "2019",
+            352
+          ],
+          [
+            "2020",
+            410
+          ],
+          [
+            "2021",
+            590
+          ],
+          [
+            "2022",
+            640
+          ],
+          [
+            "2023",
+            705
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "2017 and 2018, when entries rose from 340 to 365.",
+    "B": "2020 and 2021, when entries rose from 410 to 590.",
+    "C": "2019 and 2020, when entries rose from 352 to 410.",
+    "D": "2022 and 2023, when entries rose from 640 to 705."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The statement asks where the number of entries rose by the largest amount in a single year. Subtract each pair of neighboring years: the largest jump is from 410 in 2020 to 590 in 2021, a rise of 180.",
+    "A": "Incorrect. This rise was only 25 entries, one of the smallest on the graph.",
+    "B": "Correct. Entries rose by 180 from 2020 to 2021, more than in any other one-year step.",
+    "C": "Incorrect. 2020 is the year the rule changed, but entries rose by only 58 from 2019 to 2020, far less than the next year's rise.",
+    "D": "Incorrect. 2023 had the most entries in total, but the rise from 2022 was only 65."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

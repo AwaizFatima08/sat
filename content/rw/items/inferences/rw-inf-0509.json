@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0509",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Mercury is the planet closest to the Sun, at an average distance of about 58 million kilometers, and Venus is nearly twice as far away. Yet the surface of Venus, at about 465 degrees Celsius, is hotter than even the hottest parts of Mercury. Venus is wrapped in a thick atmosphere of carbon dioxide that traps heat, while Mercury has almost no atmosphere. This comparison suggests that a planet's surface temperature ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "depends only on how far the planet is from the Sun.",
+    "B": "cannot be measured on planets with thick atmospheres.",
+    "C": "depends on its atmosphere as well as its distance from the Sun.",
+    "D": "rises whenever a planet is farther away from the Sun."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "If distance were all that mattered, Mercury would be hotter than Venus. Venus is hotter even though it is farther away, and the text explains that its thick atmosphere traps heat, so the atmosphere must also affect temperature.",
+    "A": "Incorrect. Venus is farther from the Sun but hotter, which shows distance is not the only factor.",
+    "B": "Incorrect. The text gives a temperature for Venus, which has a thick atmosphere, so this cannot be right.",
+    "C": "Correct. Venus's heat-trapping atmosphere makes it hotter than Mercury despite its greater distance, so both factors matter.",
+    "D": "Incorrect. This overgeneralizes from one comparison; the text explains Venus's heat by its atmosphere, not by its distance."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "type": "inferences",
+  "title": "Inferences",
+  "what_is_tested": "These questions test whether you can draw the conclusion that follows logically from the information in a text. The SAT asks them because careful readers go one step beyond what is stated without jumping further than the evidence allows.",
+  "how_to_spot": "The text ends with a blank, usually after words like \"suggests that,\" \"most likely,\" or \"therefore,\" and the question asks which choice \"most logically completes the text.\"",
+  "method": [
+    "Read the text and list its key facts (the premises) in your head, one by one.",
+    "Look closely at the words just before the blank; they tell you what kind of conclusion is needed.",
+    "Ask, \"Given these facts, what must be true?\" and predict an ending in your own words.",
+    "Choose the ending that follows from the facts without adding new ideas.",
+    "Prefer a modest, careful conclusion over a sweeping one; \"may\" and \"most likely\" are often signs of the key."
+  ],
+  "pitfalls": [
+    "Choosing a conclusion that goes further than the facts, such as \"always\" or \"every\" (too broad).",
+    "Choosing an ending that contradicts one of the facts (reversed).",
+    "Choosing an ending that brings in an idea the text never mentions, even if it is true in real life (not in the text).",
+    "Using only one premise when the conclusion needs two of them combined.",
+    "Treating a possible explanation as the only possible one."
+  ],
+  "us_uk": null,
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: one fact leads to one conclusion",
+      "steps": [
+        "Find the fact that explains how something works.",
+        "Find the new situation the last sentence describes.",
+        "Apply the fact to the situation and predict the ending.",
+        "Choose the ending that matches; reject choices that add extra claims."
+      ],
+      "worked_example": {
+        "passage": "Leaves look green because they contain large amounts of chlorophyll, a green pigment plants use to capture energy from sunlight. Many leaves also contain yellow and orange pigments, but the much larger amount of chlorophyll usually hides them. In autumn, many trees stop producing chlorophyll, and the chlorophyll already in their leaves breaks down. As a result, the yellow and orange pigments ______",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice most logically completes the text?",
+        "choices": {
+          "A": "disappear from the leaves along with the chlorophyll.",
+          "B": "become visible because the green color no longer covers them.",
+          "C": "start capturing more energy than chlorophyll ever did.",
+          "D": "are produced for the first time to replace the chlorophyll."
+        },
+        "answer": "B",
+        "walkthrough": [
+          "The fact: chlorophyll's green \"usually hides\" the yellow and orange pigments.",
+          "The new situation: in autumn, chlorophyll breaks down.",
+          "If what was hiding them is gone, the other colors can be seen, so B follows.",
+          "D is the trap: the text says the pigments were in the leaves already, so they are not produced for the first time."
+        ]
+      },
+      "tryit": ["rw-inf-0001", "rw-inf-0002"]
+    },
+    {
+      "level": 2,
+      "title": "Medium: conclude only what the evidence shows",
+      "steps": [
+        "Ask what the evidence actually measures (when, where, or what it records).",
+        "Predict the conclusion that the evidence directly supports.",
+        "Check each choice for a hidden extra step, such as a cause the text never establishes.",
+        "Choose the choice that needs no extra step."
+      ],
+      "worked_example": {
+        "passage": "In regions where tree growth is limited mainly by rainfall, trees add wide growth rings in wet years and narrow rings in dry years. The outermost ring of a beam shows the last year the tree grew before it was cut down. Researchers studying the wooden beams of an abandoned mountain village found that every beam ended with about eight very narrow rings in a row. These findings suggest that ______",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice most logically completes the text?",
+        "choices": {
+          "A": "the village was abandoned because a long drought destroyed its crops.",
+          "B": "the trees used for the beams died from lack of water before they were cut.",
+          "C": "rainfall in the region increased sharply after the beams were cut.",
+          "D": "the trees used for the beams were cut down at the end of a long dry period."
+        },
+        "answer": "D",
+        "walkthrough": [
+          "The evidence records the last years each tree grew before it was cut, and those years were all very dry.",
+          "So the direct conclusion is about when the trees were cut: after a run of dry years.",
+          "D says exactly that.",
+          "A is the most tempting trap, but the rings date when the trees were cut, not when the village was abandoned, and the text says nothing about crops."
+        ]
+      },
+      "tryit": ["rw-inf-0003", "rw-inf-0004"]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: combine two premises",
+      "steps": [
+        "Number the premises: premise 1 is usually a general rule, premise 2 a specific observation.",
+        "Put them together: \"If rule 1 is true and observation 2 happened, then ___.\"",
+        "Keep the hedge the text uses (\"likely,\" \"suggests\"); the key rarely sounds more certain than the evidence.",
+        "Reject choices that use only one premise or that need a third fact the text never gives."
+      ],
+      "worked_example": {
+        "passage": "Many lichens are highly sensitive to sulfur dioxide, an air pollutant released by burning coal; one common species cannot grow where levels of the gas are more than very low. In a 1980 survey of a European industrial city, botanists found none of this species on the trees in the city center. When botanist Elena Varga repeated the survey in 2020, she found it growing on trees throughout the center. Taken together, these observations suggest that ______",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice most logically completes the text?",
+        "choices": {
+          "A": "levels of sulfur dioxide in the city center have most likely fallen since 1980.",
+          "B": "the air in the city center is now completely free of all pollutants.",
+          "C": "the lichen spread to the city center because the climate there has become warmer.",
+          "D": "levels of sulfur dioxide in the city center have probably risen since 1980."
+        },
+        "answer": "A",
+        "walkthrough": [
+          "Premise 1: this lichen grows only where sulfur dioxide is very low. Premise 2: it was absent in 1980 but present in 2020.",
+          "Combined, the lichen's return means sulfur dioxide is probably now very low, lower than in 1980.",
+          "A states that and keeps the hedge \"most likely.\"",
+          "B is the near miss: the lichen tells us about one gas, so claiming the air is free of \"all pollutants\" is too broad; C needs a fact about climate the text never gives."
+        ]
+      },
+      "tryit": ["rw-inf-0005", "rw-inf-0006"]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: when a change in method explains the result",
+      "steps": [
+        "Separate what was observed from how it was observed or recorded.",
+        "Ask whether a change in the method, not a real change in the world, could explain the result.",
+        "Look for a second piece of evidence that settles which explanation is better.",
+        "Choose the carefully hedged conclusion that fits both pieces of evidence; reject sweeping claims about the method or the world."
+      ],
+      "worked_example": {
+        "passage": "Seabird researcher Tomás Arriaga counted the nests of a ground-nesting seabird on a small island using photographs taken from a drone in 2016 and again in 2023. The 2023 photographs showed about 30 percent fewer nests. However, new rules introduced in 2020 to protect the birds from disturbance required drones to fly much higher, and from that height, nests partly hidden under low shrubs are hard to see. Arriaga's team also counted nests on foot in several marked plots across the island in both years and found nearly identical numbers. These findings suggest that ______",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice most logically completes the text?",
+        "choices": {
+          "A": "the seabird population on the island declined by about 30 percent between 2016 and 2023.",
+          "B": "drone photographs can never provide useful counts of nesting seabirds.",
+          "C": "the drop in the drone count may reflect the change in how the photographs were taken rather than a real decline in nests.",
+          "D": "the new rules about drone flights caused many of the birds to abandon their nests."
+        },
+        "answer": "C",
+        "walkthrough": [
+          "The observation is fewer nests in the photos, but the method changed: higher flights hide nests under shrubs.",
+          "The second piece of evidence, the ground counts, showed almost no change, which favors the method explanation.",
+          "C combines both points and stays appropriately hedged with \"may.\"",
+          "A is the most attractive trap because it takes the drone count at face value, ignoring the ground counts; B overreaches by saying drones can \"never\" help."
+        ]
+      },
+      "tryit": ["rw-inf-0007", "rw-inf-0008"]
+    }
+  ]
+}

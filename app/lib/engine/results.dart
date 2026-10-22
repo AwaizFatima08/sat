@@ -116,7 +116,7 @@ class PaperResult {
 
   factory PaperResult.fromJson(Map<String, Object?> json) => PaperResult(
     formId: json['form']! as String,
-    route: Route.values.byName(json['route']! as String),
+    route: ModuleRoute.values.byName(json['route']! as String),
     module1: [
       for (final r in json['m1']! as List)
         ItemResponse.fromJson(r as Map<String, Object?>),
@@ -137,7 +137,7 @@ class PaperResult {
   );
 
   final String formId;
-  final Route route;
+  final ModuleRoute route;
   final List<ItemResponse> module1;
   final List<ItemResponse> module2;
   final ScoreEstimate estimate;
@@ -166,7 +166,7 @@ class PaperResult {
 /// Scores a finished paper.
 PaperResult scorePaper({
   required PaperForm form,
-  required Route route,
+  required ModuleRoute route,
   required List<ItemResponse> module1,
   required List<ItemResponse> module2,
   required Map<String, Item> items,

@@ -1,0 +1,75 @@
+{
+  "id": "rw-ceq-0516",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Coffee is often grown in full sun to maximize harvests, but some farmers in Colombia plant it beneath taller shade trees. Agronomist Luis Cárdenas compared plots grown in full sun, light shade and heavy shade. He concluded that shade involves a trade-off: shaded plots produce smaller harvests, but a greater share of their beans are large, a quality that coffee buyers value.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Coffee Plots Grown under Three Levels of Shade",
+    "columns": [
+      "Growing method",
+      "Harvest (kg of beans per hectare)",
+      "Large beans (% of harvest)",
+      "Average plant height (meters)"
+    ],
+    "rows": [
+      [
+        "Full sun",
+        1850,
+        38,
+        1.9
+      ],
+      [
+        "Light shade",
+        1620,
+        51,
+        2.1
+      ],
+      [
+        "Heavy shade",
+        1240,
+        63,
+        2.4
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Cárdenas's conclusion?",
+  "choices": {
+    "A": "Plants under heavy shade grew to an average of 2.4 meters, taller than the 1.9 meters reached in full sun.",
+    "B": "Heavy-shade plots yielded 1,240 kg per hectare to full sun's 1,850 kg, but 63 percent of their beans were large, versus 38 percent.",
+    "C": "Plots in full sun yielded 1,850 kg of beans per hectare, more than the plots under either light shade or heavy shade.",
+    "D": "Plots under light shade yielded more beans per hectare than plots in full sun did, and a larger share of their beans were large."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "A trade-off has two sides, so support for Cárdenas's conclusion must show both a smaller harvest and a larger share of large beans under shade. Only one choice compares both columns for shaded and unshaded plots.",
+    "A": "Incorrect. This is true, but plant height is not part of the trade-off Cárdenas describes, which concerns harvest size and bean size.",
+    "B": "Correct. It shows both halves of the trade-off: heavy shade produced a smaller harvest than full sun but a larger share of large beans.",
+    "C": "Incorrect. This is true and shows that shade lowers the harvest, but it says nothing about bean size, so it supports only half of the trade-off.",
+    "D": "Incorrect. Light-shade plots yielded 1,620 kg per hectare, less than the 1,850 kg from full-sun plots, so this misreads the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

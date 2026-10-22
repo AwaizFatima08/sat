@@ -1,0 +1,90 @@
+{
+  "id": "rw-ceq-0510",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "The Atacama Desert in northern Chile is one of the driest places on Earth. With very little water vapor in the air to hold heat, the desert cools quickly once the sun goes down. Geographer Camila Rojas recorded the air temperature every three hours over one day in March. The lowest temperature of the day occurred at ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Air Temperature over One Day in the Atacama Desert",
+    "x_label": "Time of day",
+    "y_label": "Air temperature (°C)",
+    "series": [
+      {
+        "name": "Air temperature",
+        "points": [
+          [
+            "12 a.m.",
+            9
+          ],
+          [
+            "3 a.m.",
+            6
+          ],
+          [
+            "6 a.m.",
+            4
+          ],
+          [
+            "9 a.m.",
+            14
+          ],
+          [
+            "12 p.m.",
+            24
+          ],
+          [
+            "3 p.m.",
+            27
+          ],
+          [
+            "6 p.m.",
+            19
+          ],
+          [
+            "9 p.m.",
+            12
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "3 p.m., when it was about 27°C.",
+    "B": "9 p.m., soon after sunset, when it was about 12°C.",
+    "C": "6 a.m., when it was about 4°C.",
+    "D": "12 a.m., when it fell below 0°C."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The statement asks when the temperature was lowest, so find the lowest point on the line. That point is at 6 a.m., at about 4°C.",
+    "A": "Incorrect. 3 p.m. was the warmest time of the day, not the coldest.",
+    "B": "Incorrect. The air was cooling at 9 p.m., but it kept falling for several more hours and was colder at 12 a.m., 3 a.m. and 6 a.m.",
+    "C": "Correct. The line reaches its lowest point, about 4°C, at 6 a.m.",
+    "D": "Incorrect. At 12 a.m. the temperature was about 9°C, and no point on the graph is below 0°C."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

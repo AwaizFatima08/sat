@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0504",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Earthworms loosen and mix soil, so park managers often want to know which ground covers suit them. Soil scientist Grace Liu marked out plots of 1 square meter under four different covers in a park in Melbourne, Australia, and counted the earthworms she dug up in each plot. She found the fewest earthworms under ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Earthworms Found in 1-Square-Meter Plots under Four Ground Covers",
+    "columns": [
+      "Ground cover",
+      "Earthworms counted",
+      "Soil moisture (%)"
+    ],
+    "rows": [
+      [
+        "Leaf litter",
+        64,
+        31
+      ],
+      [
+        "Grass lawn",
+        41,
+        24
+      ],
+      [
+        "Wood chips",
+        52,
+        28
+      ],
+      [
+        "Bare soil",
+        9,
+        14
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "leaf litter, where 64 earthworms were counted.",
+    "B": "bare soil, where only 9 earthworms were counted.",
+    "C": "grass lawn, where soil moisture was the lowest.",
+    "D": "wood chips, where 52 earthworms were counted."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The statement is about the fewest earthworms, so look for the smallest number in the \"Earthworms counted\" column. That number is 9, in the bare soil row.",
+    "A": "Incorrect. Leaf litter had the most earthworms, not the fewest.",
+    "B": "Correct. Bare soil had 9 earthworms, the smallest number in the \"Earthworms counted\" column.",
+    "C": "Incorrect. Bare soil, at 14%, had the lowest soil moisture, and the grass lawn did not have the fewest earthworms.",
+    "D": "Incorrect. 52 earthworms is more than the counts for the grass lawn and bare soil, so wood chips did not have the fewest."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

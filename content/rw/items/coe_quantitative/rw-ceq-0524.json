@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0524",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Gardeners sometimes release lady beetles, which eat aphids, to protect plants without using pesticides. In a rose garden in Seville, Spain, horticulturist Sofía Navarro released lady beetles onto some rosebushes and left others untreated, then counted aphids every week. She concluded that the beetles reduced aphid numbers at first but that the effect had nearly disappeared within a few weeks.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Aphids per Rose Shoot after Lady Beetles Were Released",
+    "columns": [
+      "Week",
+      "Bushes with beetles",
+      "Untreated bushes"
+    ],
+    "rows": [
+      [
+        "0",
+        40,
+        41
+      ],
+      [
+        "1",
+        14,
+        46
+      ],
+      [
+        "2",
+        18,
+        49
+      ],
+      [
+        "3",
+        38,
+        50
+      ],
+      [
+        "4",
+        47,
+        52
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Navarro's conclusion?",
+  "choices": {
+    "A": "Most of the lady beetles released onto the rosebushes had flown away to other parts of the garden by week 3.",
+    "B": "One week after release, bushes with beetles had 14 aphids per shoot, far fewer than the 46 on untreated bushes.",
+    "C": "In week 1, bushes with beetles had 14 aphids per shoot to untreated bushes' 46, but by week 4 they had 47 to 52.",
+    "D": "By week 4, bushes with beetles had more aphids per shoot than untreated bushes had in the same week."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Navarro's conclusion has two parts: an early drop in aphids and a later fading of that effect. The support must compare the two columns at an early week and at a late week. In week 1 the gap was 32 aphids per shoot (14 versus 46), but by week 4 it was only 5 (47 versus 52).",
+    "A": "Incorrect. The table counts aphids only; it gives no information about where the beetles went.",
+    "B": "Incorrect. This is true and shows the early reduction, but it does not show that the effect later nearly disappeared.",
+    "C": "Correct. It shows both a large early reduction and a small difference by week 4, matching both parts of the conclusion.",
+    "D": "Incorrect. In week 4, bushes with beetles had 47 aphids per shoot and untreated bushes had 52, so this misreads the table."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

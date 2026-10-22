@@ -1,0 +1,78 @@
+{
+  "id": "rw-ceq-0522",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "drill",
+  "passage": "Air generally becomes cooler as altitude increases. In the Langtang Valley of Nepal, glaciologist Pemba Sherpa installed weather stations at five elevations and recorded the average air temperature at each one during July. She found that, along this valley, the temperature fell by roughly 6°C for every 1,000 meters of elevation gained. For example, the average July temperature was ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average July Air Temperature at Five Stations in the Langtang Valley",
+    "x_label": "Elevation (meters)",
+    "y_label": "Average temperature (°C)",
+    "series": [
+      {
+        "name": "Average July temperature",
+        "points": [
+          [
+            "1,500",
+            22.0
+          ],
+          [
+            "2,500",
+            16.2
+          ],
+          [
+            "3,500",
+            10.1
+          ],
+          [
+            "4,500",
+            4.3
+          ],
+          [
+            "5,500",
+            -1.8
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "about 22°C at 1,500 meters, the warmest of the five stations.",
+    "B": "about 16°C at 2,500 meters and about 10°C at 3,500 meters.",
+    "C": "about 16°C at 2,500 meters and about 4°C at 3,500 meters.",
+    "D": "below freezing at 5,500 meters, the highest station."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Sherpa's finding is about a rate of change, so the example must give temperatures at two elevations and show a drop of about 6°C for each 1,000 meters. The stations at 2,500 and 3,500 meters average about 16°C and 10°C, a drop of about 6°C over 1,000 meters.",
+    "A": "Incorrect. This is true, but a single temperature cannot show how much the temperature falls as elevation increases.",
+    "B": "Correct. These two stations are 1,000 meters apart, and the temperature falls by about 6°C between them, which is an example of the pattern Sherpa describes.",
+    "C": "Incorrect. The 3,500-meter station averaged about 10°C; about 4°C was recorded at 4,500 meters, so this misreads the graph.",
+    "D": "Incorrect. This is true, but it gives only one station's temperature and does not show a drop of about 6°C per 1,000 meters."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

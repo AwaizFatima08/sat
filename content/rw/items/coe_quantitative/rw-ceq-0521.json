@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0521",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "drill",
+  "passage": "After many office workers in Melbourne, Australia, began working from home several days a week, economist Ravi Chandrasekaran studied cafés in the city center, where many customers had once been office workers buying coffee and lunch. He hypothesized that these cafés depended heavily on such customers, so their sales would have fallen much more on weekdays than on weekends.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Daily Sales at City-Center Cafés in Melbourne (dollars)",
+    "columns": [
+      "Day",
+      "2019",
+      "2023"
+    ],
+    "rows": [
+      [
+        "Monday",
+        3100,
+        2000
+      ],
+      [
+        "Wednesday",
+        3600,
+        2900
+      ],
+      [
+        "Friday",
+        3300,
+        2200
+      ],
+      [
+        "Saturday",
+        2700,
+        2650
+      ],
+      [
+        "Sunday",
+        2200,
+        2150
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Chandrasekaran's hypothesis?",
+  "choices": {
+    "A": "Average sales fell by $700 to $1,100 on each weekday shown but by only $50 on each weekend day.",
+    "B": "Average sales on Wednesdays were higher than on any other day shown, in both 2019 and 2023.",
+    "C": "Average sales on Sundays were lower than on any other day shown, in both 2019 and 2023.",
+    "D": "Average sales fell by more on Saturdays than on Wednesdays between 2019 and 2023."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The hypothesis predicts a larger drop in sales on weekdays than on weekends, so the support must compare the changes from 2019 to 2023. Weekday sales fell by $1,100 (Monday), $700 (Wednesday) and $1,100 (Friday), while Saturday and Sunday sales each fell by only $50.",
+    "A": "Correct. It compares the drop on weekdays with the drop on weekends, which is exactly what the hypothesis predicts.",
+    "B": "Incorrect. This is true, but it compares days within each year and does not show how much sales fell.",
+    "C": "Incorrect. This is true, but it does not compare the change in sales on weekdays with the change on weekends.",
+    "D": "Incorrect. Saturday sales fell by only $50, while Wednesday sales fell by $700, so this misreads the table."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

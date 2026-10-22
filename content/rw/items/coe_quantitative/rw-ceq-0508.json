@@ -1,0 +1,74 @@
+{
+  "id": "rw-ceq-0508",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Many insects gather around white streetlights at night, and some bats hunt them there. To see whether the color of the light matters, ecologist Pieter de Vries placed bat detectors under streetlights of four colors along a country road in the Netherlands and counted bat calls each night. The detectors recorded the most bat calls under ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Average Bat Calls Recorded per Night under Streetlights of Four Colors",
+    "x_label": "Light color",
+    "y_label": "Bat calls per night",
+    "series": [
+      {
+        "name": "Bat calls per night",
+        "points": [
+          [
+            "White",
+            412
+          ],
+          [
+            "Green",
+            365
+          ],
+          [
+            "Amber",
+            188
+          ],
+          [
+            "Red",
+            121
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "red lights, with about 120 calls per night.",
+    "B": "amber lights, with about 190 calls per night.",
+    "C": "green lights, with about 410 calls per night.",
+    "D": "white lights, with about 410 calls per night."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The statement asks which light color had the most bat calls, so find the tallest bar. The white bar, at 412 calls per night, is taller than the green (365), amber (188) and red (121) bars.",
+    "A": "Incorrect. Red lights recorded the fewest calls, not the most.",
+    "B": "Incorrect. Amber lights recorded fewer calls than white or green lights.",
+    "C": "Incorrect. Green lights recorded about 365 calls per night; the bar near 410 is the white one, so this misreads the graph.",
+    "D": "Correct. The white bar is the tallest, at 412 calls per night."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "reversed",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

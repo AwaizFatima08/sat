@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0512",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "For a school science fair in Toronto, Canada, Mei Lin Zhou folded paper airplanes in four designs and threw each one ten times from the same spot. She recorded how far each design flew and how long it stayed in the air, on average. According to her results, the design that flew the farthest was the ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Flight of Four Paper Airplane Designs (10 throws each)",
+    "columns": [
+      "Design",
+      "Distance (meters)",
+      "Time in air (seconds)"
+    ],
+    "rows": [
+      [
+        "Dart",
+        9.4,
+        1.6
+      ],
+      [
+        "Glider",
+        7.1,
+        3.2
+      ],
+      [
+        "Delta",
+        8.2,
+        2.1
+      ],
+      [
+        "Square-wing",
+        5.6,
+        1.9
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "glider, which stayed in the air for 3.2 seconds.",
+    "B": "dart, which flew 9.4 meters on average.",
+    "C": "delta, which flew 9.4 meters on average.",
+    "D": "square-wing, which flew 5.6 meters on average."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "\"Flew the farthest\" refers to distance, so look for the largest number in the \"Distance (meters)\" column. That number is 9.4, in the dart row.",
+    "A": "Incorrect. The glider stayed up the longest, but the statement is about distance, and the glider flew only 7.1 meters.",
+    "B": "Correct. 9.4 meters is the largest number in the \"Distance\" column.",
+    "C": "Incorrect. The delta flew 8.2 meters; 9.4 meters belongs to the dart, so this misreads the table.",
+    "D": "Incorrect. 5.6 meters is the shortest distance in the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

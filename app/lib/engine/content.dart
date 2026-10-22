@@ -240,7 +240,7 @@ class Item {
 }
 
 /// The two possible second modules.
-enum Route { easier, harder }
+enum ModuleRoute { easier, harder }
 
 /// One full-length adaptive paper.
 class PaperForm {
@@ -278,6 +278,6 @@ class PaperForm {
   /// Module 1 correct answers needed to be routed to the harder module 2.
   final int routeThreshold;
 
-  List<String> module2(Route route) =>
-      route == Route.harder ? module2Harder : module2Easier;
+  List<String> module2(ModuleRoute route) =>
+      route == ModuleRoute.harder ? module2Harder : module2Easier;
 }

@@ -1,0 +1,171 @@
+{
+  "type": "coe_quantitative",
+  "title": "Command of Evidence (Quantitative)",
+  "what_is_tested": "These questions pair a short text with a table or graph and test whether you can choose data that completes a statement or supports a claim. The right answer must be both accurate according to the data and relevant to what the text says.",
+  "how_to_spot": "There is a table or graph, and the question asks which choice \"most effectively uses data from the table\" or \"from the graph\" to complete a statement or support a claim.",
+  "method": [
+    "Read the text first and find the exact statement or claim the data must serve.",
+    "Read the title, labels, and units of the table or graph before looking at any numbers.",
+    "Decide what comparison the claim needs: highest value, change over time, or a difference between two groups.",
+    "Check each choice against the data; cross out any choice with a wrong number or a reversed comparison.",
+    "From the accurate choices, pick the one that matches the claim, not just the topic."
+  ],
+  "pitfalls": [
+    "Choosing a true data point that does not address the claim (true but irrelevant).",
+    "Mixing up rows, columns, or series, or reading a comparison backward (reversed).",
+    "Choosing a statement that fits the claim but is not shown in the data at all (not in the text).",
+    "Picking a total or an average when the claim is about a difference between two groups.",
+    "Skipping the labels and units, then misreading what a number measures."
+  ],
+  "us_uk": null,
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: read the labels, then find the number",
+      "steps": [
+        "Read the sentence with the blank and note what it asks for (most, least, or a specific value).",
+        "Read the table's title and column headings so you know what each number means.",
+        "Find the row or bar that answers the question.",
+        "Choose the answer that names it with the correct number, and check that number against the data."
+      ],
+      "worked_example": {
+        "passage": "Students at a school in Lahore counted the bird species they could identify during one spring morning in each of four city parks. They found that the park with the greatest variety of birds was ______",
+        "passage_b": null,
+        "notes": null,
+        "data": {
+          "kind": "table",
+          "title": "Bird Species Identified in Four City Parks on One Spring Morning",
+          "columns": ["Park", "Bird species identified", "Individual birds counted"],
+          "rows": [["Canal Park", 19, 212], ["Hill Park", 23, 148], ["Market Park", 11, 265], ["River Park", 31, 190]]
+        },
+        "stem": "Which choice most effectively uses data from the table to complete the statement?",
+        "choices": {
+          "A": "Market Park, where 265 individual birds were counted.",
+          "B": "Hill Park, where 23 bird species were identified.",
+          "C": "Canal Park, where 212 individual birds were counted.",
+          "D": "River Park, where 31 bird species were identified."
+        },
+        "answer": "D",
+        "walkthrough": [
+          "The statement asks for the park with the \"greatest variety of birds,\" which means the most species, not the most birds.",
+          "The \"Bird species identified\" column shows River Park highest, with 31.",
+          "D names River Park with the correct number.",
+          "A is the trap: Market Park had the most individual birds, but many birds of a few species is not variety."
+        ]
+      },
+      "tryit": ["rw-ceq-0001", "rw-ceq-0002"]
+    },
+    {
+      "level": 2,
+      "title": "Medium: support a claim about every case",
+      "steps": [
+        "Underline the claim's scope words, such as \"every,\" \"each,\" \"most,\" or \"only.\"",
+        "Work out which comparison in the data would prove the claim at that scope.",
+        "Check each choice for accuracy first, then for whether it covers the whole scope.",
+        "Reject choices that are accurate but describe only one row or a different comparison."
+      ],
+      "worked_example": {
+        "passage": "Covering soil with a layer of straw, called mulch, slows the evaporation of water from the ground. Agronomist Bilal Chaudhry hypothesized that mulching would reduce the amount of irrigation water needed for each of the three crops he grew in a test field in Punjab, not just for one or two of them.",
+        "passage_b": null,
+        "notes": null,
+        "data": {
+          "kind": "table",
+          "title": "Irrigation Water Used per Season (millimeters)",
+          "columns": ["Crop", "Without mulch", "With straw mulch"],
+          "rows": [["Wheat", 410, 335], ["Tomatoes", 520, 430], ["Chilies", 470, 445]]
+        },
+        "stem": "Which choice most effectively uses data from the table to support Chaudhry's hypothesis?",
+        "choices": {
+          "A": "Tomatoes needed more irrigation water than wheat or chilies, both with and without mulch.",
+          "B": "Each of the three crops needed less irrigation water with straw mulch than without it.",
+          "C": "With mulch, wheat needed 335 millimeters of water, the least of any crop in the test.",
+          "D": "Mulching reduced the water needed for tomatoes by 90 millimeters."
+        },
+        "answer": "B",
+        "walkthrough": [
+          "The scope words are \"each of the three crops,\" so the support must cover all three.",
+          "In every row, the \"With straw mulch\" number is smaller than the \"Without mulch\" number.",
+          "B states that for all three crops, so it supports the hypothesis at the right scope.",
+          "D is accurate (520 minus 430 is 90) but covers only one crop, which the hypothesis says is not enough."
+        ]
+      },
+      "tryit": ["rw-ceq-0003", "rw-ceq-0004"]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: compare two series",
+      "steps": [
+        "Name the two groups or series the claim compares and the direction it predicts for each.",
+        "Find the start and end values for both series and note how each changed.",
+        "Prefer the choice that describes both series in the way the claim needs, with correct numbers.",
+        "Reject choices about one series only, or about a pattern both series share."
+      ],
+      "worked_example": {
+        "passage": "In 2019, farmers in the village of Khanpur, in a dry region of western India, built a small check dam to hold back seasonal streams so that rainwater could soak into the ground. Hydrologist Priya Nair compared well-water levels in Khanpur with those in the nearby village of Sonari, which has similar rainfall but no dam. Nair concluded that while groundwater kept sinking in Sonari, it recovered in Khanpur after the dam was built.",
+        "passage_b": null,
+        "notes": null,
+        "data": {
+          "kind": "line",
+          "title": "Average Depth to Water in Village Wells before the Monsoon",
+          "x_label": "Year",
+          "y_label": "Depth to water (meters below ground)",
+          "series": [
+            {"name": "Khanpur (dam built 2019)", "points": [["2017", 18], ["2018", 19], ["2019", 19], ["2020", 16], ["2021", 14], ["2022", 13]]},
+            {"name": "Sonari (no dam)", "points": [["2017", 17], ["2018", 18], ["2019", 19], ["2020", 20], ["2021", 21], ["2022", 22]]}
+          ]
+        },
+        "stem": "Which choice most effectively uses data from the graph to support Nair's conclusion?",
+        "choices": {
+          "A": "Between 2019 and 2022, the depth to water in Khanpur's wells fell from 19 to 13 meters, while in Sonari it grew from 19 to 22 meters.",
+          "B": "In 2017, the depth to water was 18 meters in Khanpur and 17 meters in Sonari.",
+          "C": "Between 2019 and 2022, the depth to water grew from 19 to 22 meters in Sonari.",
+          "D": "In both villages, the depth to water was 19 meters in 2019."
+        },
+        "answer": "A",
+        "walkthrough": [
+          "The claim compares two villages after the dam: water kept sinking in Sonari but recovered in Khanpur.",
+          "On the graph, a smaller depth means the water is closer to the surface; Khanpur went from 19 to 13 meters and Sonari from 19 to 22 meters after 2019.",
+          "A gives both trends with correct numbers, so it supports the whole conclusion.",
+          "C is accurate and fits half of the claim, but without Khanpur's recovery it cannot show the contrast Nair describes."
+        ]
+      },
+      "tryit": ["rw-ceq-0005", "rw-ceq-0006"]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: find the comparison the claim really needs",
+      "steps": [
+        "Rewrite the claim as a precise comparison (\"group X gained more than group Y\").",
+        "Calculate any differences the claim depends on; the key often uses a difference, not a raw value.",
+        "Watch for choices that are accurate and impressive but answer a different question, such as which group scored highest.",
+        "Pick the choice that would convince a skeptic of exactly this claim and nothing broader."
+      ],
+      "worked_example": {
+        "passage": "A school district introduced a daily small-group reading program for one year. District officials pointed to the rise in average scores, but education researcher Grace Mwangi argues that the program's main value lay elsewhere: in her view, it helped the weakest readers far more than it helped students who were already reading well.",
+        "passage_b": null,
+        "notes": null,
+        "data": {
+          "kind": "table",
+          "title": "Average Reading Scores before and after the Program, by Starting Level",
+          "columns": ["Starting level", "Score before (points)", "Score after (points)"],
+          "rows": [["Lowest quarter", 42, 61], ["Middle half", 63, 70], ["Highest quarter", 81, 84]]
+        },
+        "stem": "Which choice most effectively uses data from the table to support Mwangi's argument?",
+        "choices": {
+          "A": "Students in the highest quarter had the highest scores after the program, at 84 points.",
+          "B": "Average scores increased in every group of students during the program.",
+          "C": "Students in the lowest quarter gained 19 points, while those in the highest quarter gained only 3 points.",
+          "D": "Students in the middle half scored 70 points after the program, up from 63 points."
+        },
+        "answer": "C",
+        "walkthrough": [
+          "Mwangi's claim is a comparison of gains: the weakest readers improved far more than strong readers.",
+          "The gains are 61 minus 42 = 19 for the lowest quarter and 84 minus 81 = 3 for the highest.",
+          "C states both gains correctly, which is exactly the comparison the claim needs.",
+          "B is the most attractive trap because it is true, but it supports the officials' point about overall improvement, not Mwangi's point about who benefited most."
+        ]
+      },
+      "tryit": ["rw-ceq-0007", "rw-ceq-0008"]
+    }
+  ]
+}

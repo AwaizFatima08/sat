@@ -1,0 +1,123 @@
+{
+  "type": "boundaries",
+  "title": "Boundaries",
+  "what_is_tested": "These questions test punctuation where parts of a sentence meet: between two clauses, around extra information, and before lists or explanations. The SAT asks them because correct punctuation shows exactly how ideas connect.",
+  "how_to_spot": "The choices contain the same words and differ only in punctuation (and sometimes a conjunction), and the question asks which choice \"conforms to the conventions of Standard English.\"",
+  "method": [
+    "Find the boundary: the spot where the choices differ.",
+    "Apply the independent-clause test: could the words before the boundary stand alone as a sentence? Could the words after it?",
+    "If both sides are complete sentences, join them with a period, a semicolon, or a comma plus and, but, or, nor, for, so, or yet. A colon also works when the second part explains the first.",
+    "If one side is not a complete sentence, use a comma or no punctuation, never a semicolon or period.",
+    "Never put a single comma between a subject and its verb or between a verb and its object, and close extra information with the same mark that opened it."
+  ],
+  "pitfalls": [
+    "Joining two complete sentences with only a comma (a comma splice).",
+    "Joining two complete sentences with no punctuation at all (a run-on).",
+    "Putting a semicolon or colon after words that cannot stand alone as a sentence.",
+    "Opening extra information with a dash and closing it with a comma, or the reverse.",
+    "Treating words like \"however\" and \"therefore\" as if they were \"and\" or \"but\"; they cannot join sentences with a comma alone."
+  ],
+  "us_uk": "In American English, periods and commas always go inside closing quotation marks (\"tired,\" she said), and double quotation marks are standard; British habits of placing them outside or using single marks are marked wrong on the SAT.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: the independent-clause test",
+      "steps": [
+        "Cover the blank and read the words before it: is this a complete sentence with its own subject and verb?",
+        "Read the words after the blank: are they also a complete sentence?",
+        "If both are complete, a comma alone is a splice and no punctuation is a run-on; use a period or semicolon.",
+        "Plug your choice in and read the full sentence once more."
+      ],
+      "worked_example": {
+        "passage": "Polar bears look white against the Arctic snow ______ fur is actually made of transparent hairs that scatter visible light, and the skin beneath it is black.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {"A": "snow, their", "B": "snow their", "C": "snow, however, their", "D": "snow; their"},
+        "answer": "D",
+        "walkthrough": [
+          "\"Polar bears look white against the Arctic snow\" can stand alone as a sentence.",
+          "\"Their fur is actually made of transparent hairs...\" can also stand alone.",
+          "Two complete sentences need a period or semicolon, so D is correct.",
+          "A is the most common trap, a comma splice, and C is still a splice because \"however\" cannot join sentences with commas alone."
+        ]
+      },
+      "tryit": ["rw-bnd-0001", "rw-bnd-0002"]
+    },
+    {
+      "level": 2,
+      "title": "Medium: semicolons, colons, and \"however\"",
+      "steps": [
+        "Use a semicolon only where a period would also work.",
+        "Use a colon only after a complete sentence, when what follows explains, lists, or illustrates it.",
+        "Before words like \"however,\" \"therefore,\" and \"instead\" that start a new clause, put a semicolon or period, and put a comma after the word.",
+        "With and, but, or so between two complete sentences, put the comma before the conjunction, not after it."
+      ],
+      "worked_example": {
+        "passage": "Monarch butterflies from eastern North America cannot survive freezing winters in southern Canada and the northern United States ______ millions of them fly thousands of kilometers each fall to spend the winter in mountain forests in central Mexico.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {"A": "States, therefore,", "B": "States; therefore,", "C": "States therefore", "D": "States, therefore;"},
+        "answer": "B",
+        "walkthrough": [
+          "Both sides are complete sentences, and \"therefore\" is a transition word, not a joining word like \"and.\"",
+          "So the boundary needs a semicolon before \"therefore\" and a comma after it.",
+          "B follows that pattern.",
+          "A is the trap: commas around \"therefore\" look neat, but they leave a comma splice between two complete sentences."
+        ]
+      },
+      "tryit": ["rw-bnd-0003", "rw-bnd-0004"]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: matching marks around extra information",
+      "steps": [
+        "Find where the extra (nonessential) information starts and see which mark opens it: comma, dash, or parenthesis.",
+        "Close it with the same kind of mark: comma with comma, dash with dash.",
+        "Check by removing the extra part; the sentence that remains must still be complete and correct.",
+        "If the information is essential to identify the noun (\"the student who won\"), use no commas at all."
+      ],
+      "worked_example": {
+        "passage": "The Sydney Opera House, with its sail-like roof shells rising above the harbor, is among the most recognized buildings of the twentieth century. Its architect—the Danish designer Jørn Utzon, who won an international competition for the project in ______ left Australia before the building was finished, and it opened in 1973 without him.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {"A": "1957,", "B": "1957;", "C": "1957—", "D": "1957"},
+        "answer": "C",
+        "walkthrough": [
+          "The extra information about Utzon opens with a dash after \"Its architect.\"",
+          "It must close with a matching dash before the verb \"left.\"",
+          "Removing the extra part leaves \"Its architect left Australia before the building was finished,\" which is complete, so C is correct.",
+          "A is the strongest trap because a comma looks natural after a date, but it does not match the opening dash."
+        ]
+      },
+      "tryit": ["rw-bnd-0005", "rw-bnd-0006"]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: long subjects and colons",
+      "steps": [
+        "Find the core subject and its main verb, and bracket every phrase or clause in between.",
+        "Never separate a long subject from its verb with a single mark, however long the subject is.",
+        "For a colon, check that the words before it form a complete sentence and the words after it explain or list.",
+        "Read the sentence without the bracketed parts to confirm that the punctuation you chose still makes sense."
+      ],
+      "worked_example": {
+        "passage": "The idea that the streets of a city should be laid out in a regular grid of straight lines crossing at right ______ far older than modern urban planning. More than four thousand years ago, builders of Mohenjo-daro, in present-day Pakistan, arranged its main streets on a roughly north-south and east-west pattern, and planners in ancient Greece later favored similar layouts.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "choices": {"A": "angles, is", "B": "angles: is", "C": "angles is", "D": "angles; is"},
+        "answer": "C",
+        "walkthrough": [
+          "The core subject is \"The idea,\" and its verb is \"is\"; everything from \"that\" to \"angles\" describes the idea.",
+          "Nothing should separate this subject from its verb, so no punctuation goes at the blank.",
+          "C is correct.",
+          "A is the trap: the long subject makes a pause feel natural, but a single comma between a subject and its verb is an error."
+        ]
+      },
+      "tryit": ["rw-bnd-0007", "rw-bnd-0008"]
+    }
+  ]
+}

@@ -96,9 +96,9 @@ double scaleScore(double ability) {
 int _round10(double v) => ((v / 10).round() * 10).clamp(200, 800);
 
 /// Section score estimate for a finished paper.
-ScoreEstimate estimateScore(List<Response> responses, Route route) {
+ScoreEstimate estimateScore(List<Response> responses, ModuleRoute route) {
   final est = estimateAbility(responses);
-  final cap = route == Route.easier ? easierRouteCap.toDouble() : 800.0;
+  final cap = route == ModuleRoute.easier ? easierRouteCap.toDouble() : 800.0;
   double scaled(double t) => math.min(scaleScore(t), cap);
   return ScoreEstimate(
     score: _round10(scaled(est.ability)),
@@ -110,5 +110,5 @@ ScoreEstimate estimateScore(List<Response> responses, Route route) {
 }
 
 /// Which second module a student gets after module 1.
-Route routeAfterModule1(int module1Correct, int threshold) =>
-    module1Correct >= threshold ? Route.harder : Route.easier;
+ModuleRoute routeAfterModule1(int module1Correct, int threshold) =>
+    module1Correct >= threshold ? ModuleRoute.harder : ModuleRoute.easier;

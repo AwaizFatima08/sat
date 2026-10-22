@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0529",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "drill",
+  "passage": "When a regional railway in Poland introduced a smartphone ticket app in 2021, transport researcher Agnieszka Wróbel tracked how passengers at one station bought their tickets. She found that the app did not mainly replace the ticket counter, as many staff had feared. Instead, its growth came mostly at the expense of the station's ticket machines, while the counter's share fell only slightly.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Share of Tickets Sold at One Station, by Method (%)",
+    "columns": [
+      "Year",
+      "Ticket counter",
+      "Ticket machine",
+      "App"
+    ],
+    "rows": [
+      [
+        "2020",
+        38,
+        62,
+        0
+      ],
+      [
+        "2021",
+        36,
+        49,
+        15
+      ],
+      [
+        "2022",
+        35,
+        37,
+        28
+      ],
+      [
+        "2023",
+        34,
+        26,
+        40
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Wróbel's finding?",
+  "choices": {
+    "A": "In 2023, 40 percent of tickets were bought through the app, more than through either of the other methods.",
+    "B": "The share of tickets bought through the app rose in every year after the app was introduced in 2021.",
+    "C": "From 2020 to 2023, the machines' share fell from 62 to 26 percent, while the counter's share fell only from 38 to 34 percent.",
+    "D": "From 2020 to 2023, the counter's share of ticket sales fell by more percentage points than the machines' share did."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Wróbel's finding is about where the app's growth came from, so the support must compare how much the counter and the machines each lost. The machines dropped from 62 to 26 percent, while the counter dropped only from 38 to 34 percent.",
+    "A": "Incorrect. This is true, but it shows only how popular the app became, not which method lost the most sales to it.",
+    "B": "Incorrect. This is true, but it describes the app alone and does not compare the losses of the counter and the machines.",
+    "C": "Correct. The machines lost 36 percentage points while the counter lost only 4, which shows that the app's growth came mostly from the machines.",
+    "D": "Incorrect. The counter's share fell by 4 points and the machines' share by 36 points, so this misreads the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

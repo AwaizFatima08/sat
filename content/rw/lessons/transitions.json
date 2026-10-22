@@ -1,0 +1,123 @@
+{
+  "type": "transitions",
+  "title": "Transitions",
+  "what_is_tested": "These questions test whether you can choose the word or phrase that shows how one idea connects to the next. The SAT asks them because transitions tell a reader whether an idea continues, contrasts, explains, or illustrates what came before.",
+  "how_to_spot": "A blank sits at the start of a sentence (or after a semicolon), the choices are words or phrases such as \"However,\" \"For example,\" and \"As a result,\" and the question asks for \"the most logical transition.\"",
+  "method": [
+    "Cover the choices.",
+    "Read the sentence before the blank and the sentence with the blank, and sum up each in a few words.",
+    "Name the relationship between them: contrast, cause and effect, example, addition, concession, restatement, or sequence.",
+    "Choose the transition that expresses exactly that relationship.",
+    "Reread the two sentences with your choice to confirm they make sense together."
+  ],
+  "pitfalls": [
+    "Choosing a transition from the right family but with the wrong meaning, such as \"Instead\" where \"Nevertheless\" is needed (wrong logic).",
+    "Reading only the sentence with the blank and ignoring the sentence before it.",
+    "Choosing \"For example\" when the second sentence is a result, or \"As a result\" when it is only an example.",
+    "Choosing \"Moreover\" (adds a new point) when the sentence only restates the previous one (\"In other words\").",
+    "Letting a contrast word inside the sentence trick you into choosing a contrast transition."
+  ],
+  "us_uk": null,
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: same direction or opposite?",
+      "steps": [
+        "Cover the choices and read both sentences.",
+        "Ask: does the second sentence continue the first idea or go against it?",
+        "If it continues, ask whether it is a result, an example, or just one more point.",
+        "Choose the transition that names that relationship."
+      ],
+      "worked_example": {
+        "passage": "Honey contains very little water and is slightly acidic, and most bacteria and molds cannot grow in those conditions. ______ honey stored in a sealed jar can stay safe to eat for a very long time.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice completes the text with the most logical transition?",
+        "choices": {"A": "However,", "B": "For example,", "C": "Because of this,", "D": "Similarly,"},
+        "answer": "C",
+        "walkthrough": [
+          "The first sentence explains a property of honey; the second describes what follows from it.",
+          "The second sentence continues the first, as a result of it.",
+          "\"Because of this\" signals cause and effect, so C is correct.",
+          "A is the trap: \"However\" signals a contrast, but long storage life agrees with the fact that microbes cannot grow."
+        ]
+      },
+      "tryit": ["rw-trn-0001", "rw-trn-0002"]
+    },
+    {
+      "level": 2,
+      "title": "Medium: example, addition, or result?",
+      "steps": [
+        "Check whether the second sentence is general or specific compared with the first.",
+        "If it names one specific case of the general idea, it is an example.",
+        "If it is something the first idea causes, it is a result; if it is a separate point of equal weight, it is an addition.",
+        "Choose the transition for that relationship and reread."
+      ],
+      "worked_example": {
+        "passage": "Many desert animals avoid the fierce heat of the middle of the day by being active mainly at night. ______ the fennec fox of the Sahara spends the hottest hours resting in a cool underground burrow and comes out after sunset to hunt insects and small rodents.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice completes the text with the most logical transition?",
+        "choices": {"A": "For instance,", "B": "In contrast,", "C": "As a result,", "D": "Nevertheless,"},
+        "answer": "A",
+        "walkthrough": [
+          "The first sentence is general (\"many desert animals\"); the second names one animal.",
+          "The fennec fox does exactly what the first sentence describes, so it is an example.",
+          "\"For instance\" introduces an example, so A is correct.",
+          "C is the strongest trap because the fox's habits are linked to the heat, but the second sentence does not describe a result of the first; it gives one case of it."
+        ]
+      },
+      "tryit": ["rw-trn-0003", "rw-trn-0004"]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: telling contrast words apart",
+      "steps": [
+        "When the relationship is a contrast, decide which kind it is.",
+        "Concession (\"Nevertheless,\" \"Even so,\" \"Still,\"): the first sentence gives a reason to expect something, and the second says it happened anyway.",
+        "Replacement (\"Instead,\" \"Rather,\"): the second sentence says what happened in place of something the first sentence ruled out; plain contrast (\"However,\" \"In contrast,\") simply sets two different facts side by side.",
+        "Test each contrast choice by asking what it would claim about the two sentences, and keep only the one that is true."
+      ],
+      "worked_example": {
+        "passage": "On its first flight in 1903, the Wright brothers' airplane stayed in the air for only about twelve seconds and covered roughly 37 meters, less than the wingspan of a modern jumbo jet. ______ the flight is regarded as a turning point in history, because it was the first controlled, sustained flight of a powered airplane with a pilot aboard.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice completes the text with the most logical transition?",
+        "choices": {"A": "Instead,", "B": "Therefore,", "C": "Similarly,", "D": "Nonetheless,"},
+        "answer": "D",
+        "walkthrough": [
+          "The first sentence makes the flight sound small; the second says it was a turning point anyway.",
+          "That is a concession: a reason to expect little, followed by importance despite it.",
+          "\"Nonetheless\" signals exactly this, so D is correct.",
+          "A is the near miss: \"Instead\" would mean the flight's importance replaced its short length, but both facts are true at once."
+        ]
+      },
+      "tryit": ["rw-trn-0005", "rw-trn-0006"]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: restating, specifying, or adding",
+      "steps": [
+        "Check whether the sentence after the blank gives new information or says the same thing in different words.",
+        "If it says the same thing more simply, it is a restatement (\"In other words,\" \"That is,\").",
+        "If it gives a precise detail of a broader statement, it is a specification (\"Specifically,\"); if it adds a separate new point, it is an addition (\"Moreover,\").",
+        "Compare the last two candidates carefully against the exact content of both sentences before choosing."
+      ],
+      "worked_example": {
+        "passage": "Ecologists distinguish between a species' fundamental niche, the full range of conditions in which it could survive, and its realized niche, the narrower range it actually occupies once competitors are present. On rocky shores in Scotland, for example, one species of barnacle can live across a wide band of the shore when a rival barnacle is removed but is limited to the upper shore when the rival is present. ______ the rival does not change where the first species is able to live; it changes where the species actually lives.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which choice completes the text with the most logical transition?",
+        "choices": {"A": "Moreover,", "B": "In other words,", "C": "For example,", "D": "Specifically,"},
+        "answer": "B",
+        "walkthrough": [
+          "The barnacle sentence shows the rival affecting the realized niche but not the fundamental one.",
+          "The last sentence says the same thing in plainer terms, without adding new facts, so it is a restatement.",
+          "\"In other words\" signals a restatement, so B is correct.",
+          "A is the strongest trap, but \"Moreover\" would announce a new point, and the final sentence adds no new information."
+        ]
+      },
+      "tryit": ["rw-trn-0007", "rw-trn-0008"]
+    }
+  ]
+}

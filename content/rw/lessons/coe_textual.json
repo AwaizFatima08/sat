@@ -1,0 +1,143 @@
+{
+  "type": "coe_textual",
+  "title": "Command of Evidence (Textual)",
+  "what_is_tested": "These questions test whether you can tell which evidence would support or weaken a specific claim. The SAT asks them because judging evidence, not just collecting facts, is at the heart of academic reading.",
+  "how_to_spot": "The question asks which finding, \"if true,\" would \"most directly support\" or \"most directly weaken\" a claim, or which quotation \"most effectively illustrates the claim.\"",
+  "method": [
+    "Find the exact claim, hypothesis, or argument in the text and underline it.",
+    "Check the question word: support or weaken. Write it down so you do not flip it halfway through.",
+    "Turn the claim into a prediction: \"If the claim is right, we should see ___.\"",
+    "Accept each finding as true, then ask whether it bears directly on that specific claim.",
+    "Choose the finding that fits your prediction (for support) or breaks it (for weaken)."
+  ],
+  "pitfalls": [
+    "Choosing a finding that is about the topic but supports a different claim (true but irrelevant).",
+    "Choosing a finding that would weaken the claim when the question asks for support, or the other way around (reversed).",
+    "Choosing a finding that goes beyond the claim or proves something larger (too broad).",
+    "Doubting whether a finding is true; the question tells you to accept it, so judge only its relevance.",
+    "Missing the alternative explanation that the best evidence must rule out at harder levels."
+  ],
+  "us_uk": null,
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: claim first, then evidence",
+      "steps": [
+        "Underline the claim, often the sentence with \"hypothesizes,\" \"argues,\" or \"thinks.\"",
+        "Note whether the question asks you to support or to weaken it.",
+        "Predict what you would expect to see if the claim were true.",
+        "Pick the finding that matches your prediction most directly."
+      ],
+      "worked_example": {
+        "passage": "Gray squirrels bury nuts in many separate spots each fall and dig most of them up in winter. Some people assume the squirrels simply sniff out any buried nut they come across. Biologist Hannah Price disagrees. She hypothesizes that each squirrel remembers the locations of the nuts it buried itself.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which finding, if true, would most directly support Price's hypothesis?",
+        "choices": {
+          "A": "Squirrels bury more nuts in years when trees produce especially large crops.",
+          "B": "Squirrels dug up nuts they had buried themselves far more often than nuts that other squirrels had buried nearby.",
+          "C": "Squirrels often dig up nuts buried by other squirrels as easily as their own.",
+          "D": "Squirrels have a strong sense of smell that they use to find many kinds of food."
+        },
+        "answer": "B",
+        "walkthrough": [
+          "The claim is that each squirrel remembers where it buried its own nuts.",
+          "If that is true, a squirrel should find its own nuts more often than nuts buried by others, which smell just as strong.",
+          "B is exactly that result.",
+          "C is the trap: it is about the same topic but would weaken the claim, since it suggests smell rather than memory."
+        ]
+      },
+      "tryit": ["rw-cet-0001", "rw-cet-0002"]
+    },
+    {
+      "level": 2,
+      "title": "Medium: weakening a cause",
+      "steps": [
+        "Identify the cause and the effect in the claim (\"X caused Y\").",
+        "To weaken, look for a finding where the effect happens without the cause, or the cause appears without the effect.",
+        "To support, look for a finding where the effect follows the cause and not otherwise.",
+        "Ignore findings that describe the cause or the effect alone without linking them."
+      ],
+      "worked_example": {
+        "passage": "In 2021, a city added protected bicycle lanes to several busy streets in its central district. Over the next two years, the number of traffic accidents in the district fell by about 20 percent. City official Daniel Okoro argues that the new bike lanes were responsible for the decrease.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which finding, if true, would most directly weaken Okoro's argument?",
+        "choices": {
+          "A": "More residents of the central district began cycling to work after the lanes were built.",
+          "B": "Accidents on the streets with new lanes fell more than accidents on other streets in the district.",
+          "C": "Traffic accidents fell by about the same amount in districts of the city that received no new lanes.",
+          "D": "Several other cities have also built protected bicycle lanes in recent years."
+        },
+        "answer": "C",
+        "walkthrough": [
+          "The claim links a cause (the bike lanes) to an effect (fewer accidents).",
+          "To weaken it, we want the effect without the cause: fewer accidents in places that got no lanes.",
+          "C shows that, which suggests something citywide, not the lanes, explains the drop.",
+          "B is the trap because it is about accidents and lanes, but it would support the argument, not weaken it."
+        ]
+      },
+      "tryit": ["rw-cet-0003", "rw-cet-0004"]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: match the exact scope of the claim",
+      "steps": [
+        "Restate the claim with all its specific parts, including the proposed mechanism (\"because of X, not Y\").",
+        "Ask which part of the claim is actually in question; the best evidence tests that part.",
+        "Distrust findings that are consistent with the claim but equally consistent with other explanations.",
+        "Prefer a finding that changes only the factor the claim names while everything else stays the same."
+      ],
+      "worked_example": {
+        "passage": "Birds of several species that live in cities sing at a higher pitch than members of the same species that live in forests. Ecologist Marta Kowalczyk hypothesizes that the difference is caused specifically by traffic noise, which is mostly low-pitched and can drown out low notes, rather than by other features of city life such as tall buildings or different food sources.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which finding, if true, would most directly support Kowalczyk's hypothesis?",
+        "choices": {
+          "A": "In several cities, the birds studied sang at a higher pitch than birds of the same species in nearby forests.",
+          "B": "City birds of these species eat different foods than forest birds of the same species do.",
+          "C": "Tall buildings in cities reflect sound in ways that can make songs harder to hear.",
+          "D": "Within the same city, birds lowered the pitch of their songs on days when a major road nearby was closed to traffic."
+        },
+        "answer": "D",
+        "walkthrough": [
+          "The claim has a specific part: traffic noise, not buildings or food, causes the higher pitch.",
+          "The best test changes only the traffic noise, keeping the same city, buildings, and food.",
+          "D does that: when the road closed, the birds sang lower, so the noise itself seems to matter.",
+          "A is the near miss: it is true of the pattern, but it does not separate traffic noise from the other city features the hypothesis rules out."
+        ]
+      },
+      "tryit": ["rw-cet-0005", "rw-cet-0006"]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: rule out the rival explanation",
+      "steps": [
+        "Find both explanations in the text: the author's claim and the rival one (often introduced by \"skeptics\" or \"however\").",
+        "Ask what result each explanation predicts, and look for where the predictions differ.",
+        "Choose a finding that fits the claim and that the rival explanation cannot easily account for.",
+        "Reject findings that both explanations predict equally, however relevant they look."
+      ],
+      "worked_example": {
+        "passage": "At a site in Jordan occupied thousands of years before farming began in the region, archaeologists found many large, flat grinding stones. Archaeologist Layla Haddad argues that people at the site were already grinding wild cereal grains into flour. Skeptics respond that grinding stones were also used to crush mineral pigments such as red ochre, which people of the period used for decoration, so the stones alone do not show that grain was processed.",
+        "passage_b": null,
+        "notes": null,
+        "stem": "Which finding, if true, would most directly support Haddad's argument?",
+        "choices": {
+          "A": "Microscopic starch grains from wild barley and wheat were found on the grinding surfaces of the stones, which showed no traces of ochre.",
+          "B": "Many of the grinding stones were found close to hearths where people cooked food.",
+          "C": "Red ochre has been found at a number of other sites from the same period in the region.",
+          "D": "The grinding stones were heavy and made from a type of rock found only a few kilometers away."
+        },
+        "answer": "A",
+        "walkthrough": [
+          "Haddad says the stones ground grain; the skeptics say they might have ground pigment.",
+          "The two views predict different residues on the stones: grain starch versus ochre.",
+          "A finds grain starch and no ochre, which fits Haddad and is hard for the skeptics to explain.",
+          "B is the most attractive trap, but stones near hearths fit both views, since people could prepare pigment and food in the same living area."
+        ]
+      },
+      "tryit": ["rw-cet-0007", "rw-cet-0008"]
+    }
+  ]
+}

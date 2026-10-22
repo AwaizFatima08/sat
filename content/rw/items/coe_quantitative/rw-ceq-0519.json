@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0519",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Some orchestras offer short talks before concerts to introduce the music. At four concerts in Lyon, France, arts researcher Camille Fournier recorded the share of listeners who returned to their seats after intermission, comparing those who had attended the talk with those who had not. The table lists the programs from most familiar to least familiar to typical audiences. Fournier concluded that the talks mattered most for the least familiar music.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Listeners Who Returned after Intermission at Four Concerts in Lyon",
+    "columns": [
+      "Program",
+      "Attended talk (%)",
+      "Did not attend talk (%)"
+    ],
+    "rows": [
+      [
+        "Debussy and Ravel",
+        96,
+        91
+      ],
+      [
+        "Stravinsky",
+        93,
+        84
+      ],
+      [
+        "Messiaen",
+        90,
+        72
+      ],
+      [
+        "Boulez",
+        86,
+        61
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Fournier's conclusion?",
+  "choices": {
+    "A": "At every concert, listeners who attended the talk returned after intermission at a higher rate than listeners who did not.",
+    "B": "Listeners who attended the talk returned after intermission at a lower rate for the Boulez concert than for any other concert.",
+    "C": "The gap between the two groups' return rates was 5 percentage points for Debussy and Ravel but 25 points for Boulez.",
+    "D": "Among listeners who skipped the talk, a higher share returned at the Messiaen concert than at the Stravinsky concert."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Fournier's conclusion is about where the talks mattered most, so the support must compare the gap between the two groups across programs. The gap is 5 points for Debussy and Ravel, 9 for Stravinsky, 18 for Messiaen and 25 for Boulez, growing as the music becomes less familiar.",
+    "A": "Incorrect. This is true and suggests that the talks helped, but it does not show that they helped most for the least familiar music.",
+    "B": "Incorrect. This is true, but it describes only one group and does not compare talk attendees with other listeners.",
+    "C": "Correct. The gap between the groups grows from 5 points for the most familiar program to 25 points for the least familiar one, so the talks made the biggest difference where the music was least familiar.",
+    "D": "Incorrect. Only 72 percent returned at the Messiaen concert, compared with 84 percent at the Stravinsky concert, so this misreads the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

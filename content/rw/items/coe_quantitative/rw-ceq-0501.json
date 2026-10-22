@@ -1,0 +1,71 @@
+{
+  "id": "rw-ceq-0501",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Hummingbirds feed on flower nectar, which is mostly sugar dissolved in water. To learn which sugar mixture ruby-throated hummingbirds prefer, biologist Nadia Kowalczyk hung four feeders in a garden in Ontario, Canada, each filled with a different mixture, and counted the birds' visits over one week. The feeder that received the most visits held a mixture that was ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Hummingbird Visits to Four Feeders over One Week",
+    "columns": [
+      "Sugar in mixture",
+      "Visits"
+    ],
+    "rows": [
+      [
+        "10%",
+        84
+      ],
+      [
+        "20%",
+        211
+      ],
+      [
+        "30%",
+        167
+      ],
+      [
+        "40%",
+        92
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "10 percent sugar, which received 84 visits.",
+    "B": "30 percent sugar, which received 211 visits.",
+    "C": "20 percent sugar, which received 211 visits.",
+    "D": "taken from wild flowers, which received the most visits."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The statement asks which mixture was in the feeder with the most visits, so find the largest number in the \"Visits\" column. That number is 211, in the 20% row.",
+    "A": "Incorrect. The 10% feeder received the fewest visits, not the most.",
+    "B": "Incorrect. The 30% feeder received 167 visits; the 211 visits belong to the 20% feeder, so this misreads the table.",
+    "C": "Correct. The 20% feeder received 211 visits, the largest number in the \"Visits\" column.",
+    "D": "Incorrect. The table lists only sugar mixtures in feeders; it gives no data about wild flower nectar."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

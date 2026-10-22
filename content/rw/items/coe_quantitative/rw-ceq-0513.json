@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0513",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Officials in a neighborhood of Valparaíso, Chile, wanted to know which materials residents recycled most. For one year, environmental planner Diego Fuentes weighed the material collected from recycling bins and from regular trash bins. According to the table, the material collected for recycling in the largest amount was ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Waste Collected in One Year in a Valparaíso Neighborhood (metric tons)",
+    "columns": [
+      "Material",
+      "Collected for recycling",
+      "Thrown away as trash"
+    ],
+    "rows": [
+      [
+        "Paper and cardboard",
+        340,
+        460
+      ],
+      [
+        "Glass",
+        120,
+        80
+      ],
+      [
+        "Plastic",
+        90,
+        410
+      ],
+      [
+        "Metal cans",
+        45,
+        30
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "paper and cardboard, with 340 metric tons.",
+    "B": "plastic, with 410 metric tons.",
+    "C": "metal cans, with 45 metric tons.",
+    "D": "food scraps, with 500 metric tons."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The statement is about material collected for recycling, so use only the \"Collected for recycling\" column and find its largest value. That value is 340 metric tons, for paper and cardboard.",
+    "A": "Correct. 340 metric tons is the largest number in the \"Collected for recycling\" column.",
+    "B": "Incorrect. 410 metric tons of plastic was thrown away as trash; only 90 metric tons was collected for recycling, so this misreads the table.",
+    "C": "Incorrect. 45 metric tons is the smallest amount collected for recycling.",
+    "D": "Incorrect. Food scraps do not appear in the table."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

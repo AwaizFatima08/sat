@@ -26,13 +26,13 @@ Item _item(
 );
 
 /// A 54-item paper: module 1 mixed, module 2 by route.
-List<Response> _paper({required int correctOf54, required Route route}) {
+List<Response> _paper({required int correctOf54, required ModuleRoute route}) {
   final levels = [
     ...List.filled(6, 1),
     ...List.filled(9, 2),
     ...List.filled(9, 3),
     ...List.filled(3, 4),
-    if (route == Route.harder) ...[
+    if (route == ModuleRoute.harder) ...[
       ...List.filled(5, 2),
       ...List.filled(12, 3),
       ...List.filled(10, 4),
@@ -61,8 +61,8 @@ void main() {
       var last = 0;
       for (var c = 0; c <= 54; c++) {
         final s = estimateScore(
-          _paper(correctOf54: c, route: Route.harder),
-          Route.harder,
+          _paper(correctOf54: c, route: ModuleRoute.harder),
+          ModuleRoute.harder,
         ).score;
         expect(s, greaterThanOrEqualTo(last), reason: '$c correct');
         last = s;
@@ -72,15 +72,15 @@ void main() {
     test('extremes land near the ends of the scale', () {
       expect(
         estimateScore(
-          _paper(correctOf54: 54, route: Route.harder),
-          Route.harder,
+          _paper(correctOf54: 54, route: ModuleRoute.harder),
+          ModuleRoute.harder,
         ).score,
         greaterThanOrEqualTo(750),
       );
       expect(
         estimateScore(
-          _paper(correctOf54: 0, route: Route.easier),
-          Route.easier,
+          _paper(correctOf54: 0, route: ModuleRoute.easier),
+          ModuleRoute.easier,
         ).score,
         lessThanOrEqualTo(260),
       );
@@ -88,8 +88,8 @@ void main() {
 
     test('the easier route is capped', () {
       final s = estimateScore(
-        _paper(correctOf54: 54, route: Route.easier),
-        Route.easier,
+        _paper(correctOf54: 54, route: ModuleRoute.easier),
+        ModuleRoute.easier,
       );
       expect(s.score, lessThanOrEqualTo(easierRouteCap));
       expect(s.high, lessThanOrEqualTo(easierRouteCap));
@@ -97,8 +97,8 @@ void main() {
 
     test('band brackets the score and scores are multiples of 10', () {
       final s = estimateScore(
-        _paper(correctOf54: 30, route: Route.harder),
-        Route.harder,
+        _paper(correctOf54: 30, route: ModuleRoute.harder),
+        ModuleRoute.harder,
       );
       expect(s.low, lessThanOrEqualTo(s.score));
       expect(s.high, greaterThanOrEqualTo(s.score));
@@ -110,16 +110,16 @@ void main() {
       final got = [
         for (final c in [10, 27, 40, 50])
           estimateScore(
-            _paper(correctOf54: c, route: Route.harder),
-            Route.harder,
+            _paper(correctOf54: c, route: ModuleRoute.harder),
+            ModuleRoute.harder,
           ).score,
       ];
       expect(got, [400, 540, 640, 740]);
     });
 
     test('routing uses the threshold', () {
-      expect(routeAfterModule1(15, 15), Route.harder);
-      expect(routeAfterModule1(14, 15), Route.easier);
+      expect(routeAfterModule1(15, 15), ModuleRoute.harder);
+      expect(routeAfterModule1(14, 15), ModuleRoute.easier);
     });
   });
 
@@ -230,18 +230,18 @@ void main() {
     });
 
     test('paper result survives a JSON round trip', () {
-      final form = PaperForm(
+      const form = PaperForm(
         id: 'paper-01',
         number: 1,
         title: 'Paper 1',
-        module1: const ['i0'],
-        module2Easier: const ['i1'],
-        module2Harder: const ['i2'],
+        module1: ['i0'],
+        module2Easier: ['i1'],
+        module2Harder: ['i2'],
         routeThreshold: 1,
       );
       final r = scorePaper(
         form: form,
-        route: Route.harder,
+        route: ModuleRoute.harder,
         items: items,
         finishedAt: t,
         module1: const [ItemResponse(itemId: 'i0', seconds: 50, answer: 'A')],
@@ -252,7 +252,7 @@ void main() {
       final back = PaperResult.fromJson(r.toJson());
       expect(back.estimate.score, r.estimate.score);
       expect(back.module2.single.marked, isTrue);
-      expect(back.route, Route.harder);
+      expect(back.route, ModuleRoute.harder);
     });
   });
 }

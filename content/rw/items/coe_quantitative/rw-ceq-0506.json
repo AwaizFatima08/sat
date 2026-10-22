@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0506",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "drill",
+  "passage": "Mangoes picked while still green ripen in storage, and the temperature of the storeroom affects how quickly they do so. Food scientist Hina Baloch stored four batches of Chaunsa mangoes from Multan, Pakistan, at different temperatures and recorded how many days each batch took to ripen. The batch that ripened the fastest was stored at ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Ripening of Chaunsa Mangoes at Four Storage Temperatures (40 fruits per batch)",
+    "columns": [
+      "Storage temperature",
+      "Days to ripen",
+      "Fruits spoiled"
+    ],
+    "rows": [
+      [
+        "15°C",
+        14,
+        1
+      ],
+      [
+        "20°C",
+        9,
+        2
+      ],
+      [
+        "25°C",
+        6,
+        4
+      ],
+      [
+        "30°C",
+        5,
+        9
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "15°C, where the fewest fruits spoiled.",
+    "B": "25°C, where the mangoes ripened in 4 days.",
+    "C": "30°C, where the mangoes ripened in 5 days.",
+    "D": "15°C, where the mangoes took 14 days to ripen."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "\"Ripened the fastest\" means the fewest days to ripen, so look for the smallest number in the \"Days to ripen\" column. That number is 5, in the 30°C row.",
+    "A": "Incorrect. It is true that only 1 fruit spoiled at 15°C, but the statement is about ripening speed, and that batch took the longest to ripen.",
+    "B": "Incorrect. The 25°C batch ripened in 6 days; the 4 is the number of fruits that spoiled, so this misreads the table.",
+    "C": "Correct. At 30°C the mangoes took 5 days, the smallest number in the \"Days to ripen\" column.",
+    "D": "Incorrect. 14 days is the longest ripening time in the table, so this batch ripened the slowest, not the fastest."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

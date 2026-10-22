@@ -1,0 +1,90 @@
+{
+  "id": "rw-ceq-0514",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Sunflowers can grow remarkably quickly in early summer. Working at a field station in central Ukraine, agronomist Olena Kovalenko measured the height of one sunflower plant at the end of each week after it sprouted. According to the graph, by the end of week 6 the plant had reached a height of ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Height of a Sunflower Plant in the Eight Weeks after Sprouting",
+    "x_label": "Week",
+    "y_label": "Height (centimeters)",
+    "series": [
+      {
+        "name": "Height",
+        "points": [
+          [
+            "1",
+            5
+          ],
+          [
+            "2",
+            12
+          ],
+          [
+            "3",
+            25
+          ],
+          [
+            "4",
+            45
+          ],
+          [
+            "5",
+            80
+          ],
+          [
+            "6",
+            120
+          ],
+          [
+            "7",
+            155
+          ],
+          [
+            "8",
+            170
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "about 45 centimeters.",
+    "B": "about 170 centimeters.",
+    "C": "about 120 centimeters.",
+    "D": "about 80 centimeters."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Find week 6 on the horizontal axis and read the height of that point. It is at about 120 centimeters, between the week 5 value of 80 and the week 7 value of 155.",
+    "A": "Incorrect. 45 centimeters is the plant's height at week 4, not week 6.",
+    "B": "Incorrect. 170 centimeters is the plant's height at week 8, the end of the study, not at week 6.",
+    "C": "Correct. The point for week 6 is at about 120 centimeters.",
+    "D": "Incorrect. 80 centimeters is the plant's height at week 5, one week earlier."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

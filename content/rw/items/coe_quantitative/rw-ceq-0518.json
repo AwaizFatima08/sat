@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0518",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "On many lakes in Finland, local observers have written down the dates of freezing and thawing for well over a century. Limnologist Aino Virtanen used such records from one lake to find the average number of days per winter that it stayed covered with ice in each decade since the 1950s. She argues that the lake's ice cover has not simply declined but that the decline has sped up in recent decades.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average Days of Ice Cover per Winter on a Finnish Lake, by Decade",
+    "x_label": "Decade",
+    "y_label": "Days of ice cover",
+    "series": [
+      {
+        "name": "Days of ice cover",
+        "points": [
+          [
+            "1950s",
+            182
+          ],
+          [
+            "1960s",
+            180
+          ],
+          [
+            "1970s",
+            177
+          ],
+          [
+            "1980s",
+            172
+          ],
+          [
+            "1990s",
+            165
+          ],
+          [
+            "2000s",
+            157
+          ],
+          [
+            "2010s",
+            146
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Virtanen's argument?",
+  "choices": {
+    "A": "Average ice cover fell by 5 days in total from the 1950s to the 1970s but by 11 days from the 2000s to the 2010s alone.",
+    "B": "The lake was covered with ice for an average of 182 days per winter in the 1950s and 146 days in the 2010s.",
+    "C": "Average ice cover fell by about the same number of days from each decade to the next across the whole record.",
+    "D": "In the 1990s, the lake was covered with ice for an average of 165 days per winter, more than in the 2000s."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Virtanen claims more than a decline: she says the decline sped up. Support must therefore compare the size of the drop in an earlier period with the size of the drop in a recent one. From the 1950s to the 1970s ice cover fell from 182 to 177 days, but from the 2000s to the 2010s it fell from 157 to 146 days.",
+    "A": "Correct. A 5-day drop over two decades early on, compared with an 11-day drop in a single recent decade, shows that the decline has sped up.",
+    "B": "Incorrect. This is true and shows that ice cover declined, but comparing only the first and last decades cannot show whether the decline sped up.",
+    "C": "Incorrect. The drops grew from 2 days (1950s to 1960s) to 11 days (2000s to 2010s), so they were not about the same.",
+    "D": "Incorrect. This is true, but a single comparison between two decades says nothing about whether the rate of decline changed."
+  },
+  "traps": {
+    "B": "too_narrow",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "rw-ceq-0530",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "In winter, a layer of snow acts like a blanket, slowing the loss of heat from the ground beneath it. Near Fairbanks, Alaska, soil scientist Ivan Petrov measured soil temperatures 10 centimeters below the surface in plots kept clear of snow and in plots left under natural snow cover. He concluded that the insulating effect of snow was strongest during the coldest months.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Monthly Temperatures near Fairbanks, Alaska (°C)",
+    "columns": [
+      "Month",
+      "Air",
+      "Soil, snow cleared",
+      "Soil, natural snow"
+    ],
+    "rows": [
+      [
+        "November",
+        -15,
+        -8,
+        -2
+      ],
+      [
+        "December",
+        -22,
+        -14,
+        -3
+      ],
+      [
+        "January",
+        -24,
+        -16,
+        -4
+      ],
+      [
+        "February",
+        -19,
+        -12,
+        -4
+      ],
+      [
+        "March",
+        -10,
+        -7,
+        -3
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Petrov's conclusion?",
+  "choices": {
+    "A": "In every month shown, the soil under natural snow was warmer than the air above it, often by more than 10°C.",
+    "B": "Snow-covered soil was 12°C warmer than cleared soil in January, the coldest month, but only 4°C warmer in March, the mildest.",
+    "C": "The soil under natural snow stayed between −2°C and −4°C from November through March, while the air ranged from −10°C to −24°C.",
+    "D": "The difference between cleared soil and snow-covered soil was largest in March, the mildest month shown."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The insulating effect of snow is the difference between soil under snow and soil without snow. Petrov's conclusion requires that this difference be largest in the coldest months. The difference is 12°C in January (−4 versus −16), when the air was coldest, but only 4°C in March (−3 versus −7).",
+    "A": "Incorrect. This is true, but it compares snow-covered soil with the air, not with cleared soil, so it does not show when the snow's insulating effect was strongest.",
+    "B": "Correct. The snow made the biggest difference in the coldest month and a much smaller one in the mildest, which is what Petrov concluded.",
+    "C": "Incorrect. This is true, but it never compares snow-covered soil with cleared soil, so it cannot show when the snow's insulating effect was strongest.",
+    "D": "Incorrect. In March the difference was only 4°C, the smallest of any month, so this misreads the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

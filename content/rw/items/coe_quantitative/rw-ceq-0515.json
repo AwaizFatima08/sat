@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0515",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Ethio-jazz, a style that blends Ethiopian musical scales with jazz and funk, flourished in Addis Ababa in the late 1960s and early 1970s. An archive in the city has been copying old reel-to-reel tapes of the music into digital files. Archivist Selam Tesfaye recorded how many recordings were copied each year. The archive copied the most recordings in ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Recordings Copied into Digital Files by an Addis Ababa Archive",
+    "columns": [
+      "Year",
+      "Recordings copied",
+      "Tapes repaired before copying"
+    ],
+    "rows": [
+      [
+        "2019",
+        140,
+        22
+      ],
+      [
+        "2020",
+        95,
+        18
+      ],
+      [
+        "2021",
+        210,
+        41
+      ],
+      [
+        "2022",
+        185,
+        30
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "2020, when the fewest tapes needed repair.",
+    "B": "2021, when 210 recordings were copied.",
+    "C": "2022, when 210 recordings were copied.",
+    "D": "2019, when 140 recordings were copied."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The statement asks when the archive copied the most recordings, so look for the largest number in the \"Recordings copied\" column. That number is 210, in the 2021 row.",
+    "A": "Incorrect. It is true that 2020 had the fewest repairs, but it also had the fewest recordings copied, so it does not complete the statement.",
+    "B": "Correct. 210 is the largest number in the \"Recordings copied\" column.",
+    "C": "Incorrect. The archive copied 185 recordings in 2022; the 210 belongs to 2021, so this misreads the table.",
+    "D": "Incorrect. 140 is less than the totals for 2021 and 2022, so 2019 was not the busiest year."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

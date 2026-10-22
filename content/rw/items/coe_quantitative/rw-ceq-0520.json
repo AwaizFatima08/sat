@@ -1,0 +1,95 @@
+{
+  "id": "rw-ceq-0520",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "In England, many farmers now sow strips of wildflowers along the edges of their fields to provide food for pollinating insects. Ecologist Hannah Mercer counted bumblebees on four farms, comparing field edges sown with wildflowers and edges left as grass. She claims that the wildflower strips benefited bumblebees on every farm, though the size of the benefit differed greatly from one farm to another.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Bumblebees Counted along Field Edges on Four Farms",
+    "x_label": "Farm",
+    "y_label": "Bumblebees counted",
+    "series": [
+      {
+        "name": "Wildflower strip",
+        "points": [
+          [
+            "Ashcombe",
+            34
+          ],
+          [
+            "Bramley",
+            21
+          ],
+          [
+            "Calder",
+            48
+          ],
+          [
+            "Dunmore",
+            27
+          ]
+        ]
+      },
+      {
+        "name": "Grass edge",
+        "points": [
+          [
+            "Ashcombe",
+            12
+          ],
+          [
+            "Bramley",
+            15
+          ],
+          [
+            "Calder",
+            9
+          ],
+          [
+            "Dunmore",
+            18
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Mercer's claim?",
+  "choices": {
+    "A": "The wildflower strip at Calder had 48 bumblebees, more than any other strip or grass edge in the study.",
+    "B": "More bumblebees were counted along wildflower strips than along grass edges on only three of the four farms.",
+    "C": "The grass edges had between 9 and 18 bumblebees, so the number of bumblebees varied from farm to farm.",
+    "D": "Wildflower strips had more bumblebees than grass edges on all four farms, by 6 at Bramley but by 39 at Calder."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Mercer's claim has two parts: the strips helped on every farm, and the size of the help varied. The support must compare the two bars for each farm. Wildflower strips beat grass edges everywhere, by 22 at Ashcombe, 6 at Bramley, 39 at Calder and 9 at Dunmore.",
+    "A": "Incorrect. This is true, but it describes one farm only and does not show a benefit on every farm.",
+    "B": "Incorrect. Wildflower strips had more bumblebees on all four farms, so this misreads the graph and would weaken the claim about every farm.",
+    "C": "Incorrect. This is true, but it describes only the grass edges; it does not compare them with the wildflower strips, so it cannot show a benefit.",
+    "D": "Correct. It shows a benefit on every farm and that the benefit ranged from 6 to 39 bumblebees, which covers both parts of Mercer's claim."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

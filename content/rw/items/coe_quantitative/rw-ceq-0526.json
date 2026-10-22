@@ -1,0 +1,87 @@
+{
+  "id": "rw-ceq-0526",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "drill",
+  "passage": "Wheat in Pakistan's Punjab province is harvested in April and May, so an unusually hot March, when the grains are filling, can shrink the crop. Plant breeder Rubina Chaudhry compared a widely grown older variety with a newer variety bred to tolerate heat. She argues that the new variety's advantage is not constant: it matters most in years when March is especially hot.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Wheat Yields of Two Varieties at a Research Farm in Punjab, Pakistan",
+    "columns": [
+      "Year",
+      "Average March temperature (°C)",
+      "Older variety (metric tons per hectare)",
+      "Newer variety (metric tons per hectare)"
+    ],
+    "rows": [
+      [
+        "2019",
+        24.1,
+        3.4,
+        3.5
+      ],
+      [
+        "2020",
+        25.0,
+        3.2,
+        3.5
+      ],
+      [
+        "2021",
+        27.3,
+        2.6,
+        3.3
+      ],
+      [
+        "2022",
+        28.9,
+        2.2,
+        3.1
+      ],
+      [
+        "2023",
+        25.6,
+        3.1,
+        3.4
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Chaudhry's argument?",
+  "choices": {
+    "A": "The older variety's yield was highest in 2019, when it produced 3.4 metric tons of wheat per hectare.",
+    "B": "The newer variety outyielded the older one by 0.9 metric tons per hectare in 2022, the hottest March, but by only 0.1 in 2019, the coolest.",
+    "C": "The newer variety produced a higher yield than the older variety in every year from 2019 through 2023.",
+    "D": "The gap between the yields of the two varieties was smaller in 2022 than in any other year shown."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Chaudhry claims that the newer variety's advantage depends on March temperature, so the support must compare the gap between the varieties in hot and cool years. The gap was 0.1 metric tons per hectare in 2019 (24.1°C) but 0.9 in 2022 (28.9°C), and it was larger in 2021 and 2022, the two hottest years, than in any other year.",
+    "A": "Incorrect. This is true, but it describes only the older variety and does not compare the two varieties.",
+    "B": "Correct. The newer variety's advantage was largest in the hottest year and smallest in the coolest one, which shows that its advantage grows when March is hot.",
+    "C": "Incorrect. This is true and shows that the newer variety did better, but it does not show that its advantage was largest in hot years.",
+    "D": "Incorrect. In 2022 the gap was 0.9 metric tons per hectare, the largest of any year, so this misreads the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "rw-inf-0530",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Ice cores drilled from glaciers and ice sheets contain tiny bubbles of ancient air, which scientists analyze to learn what Earth's atmosphere was like in the past. The bubbles do not form when snow first falls, however. Fresh snow is loose and porous, and air from the atmosphere keeps moving through it until the snow has been buried deeply enough to be squeezed into solid ice, a process that can take many years. As a result, the air in a bubble is most likely ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "older than the ice that surrounds it.",
+    "B": "younger than the ice that surrounds it.",
+    "C": "unchanged from the air of the year the snow fell.",
+    "D": "useless for learning about the past atmosphere."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The snow that becomes the ice fell first, but newer air kept moving through it for many years until it was sealed into solid ice. The trapped air therefore comes from a later time than the snow around it.",
+    "A": "Incorrect. This reverses the timing: the air is sealed in years after the snow fell, so it is younger, not older.",
+    "B": "Correct. Air kept circulating through the snow until it turned to ice, so the trapped air is from later than the snow itself.",
+    "C": "Incorrect. Air from the atmosphere kept moving through the snow for years, so the trapped air is not simply air from the year the snow fell.",
+    "D": "Incorrect. This goes too far: the text says scientists use the bubbles to study the past atmosphere; the age difference does not make them useless."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "reversed",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

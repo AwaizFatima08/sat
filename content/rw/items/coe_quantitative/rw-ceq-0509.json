@@ -1,0 +1,71 @@
+{
+  "id": "rw-ceq-0509",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "drill",
+  "passage": "Early in 2022, a town in the Atlas Mountains of Morocco gave every household free low-flow taps, which release less water per minute. Water engineer Youssef Amrani compared average household water use in the summer of 2021, before the program, with use in the summer of 2022. Of the three months shown, average daily water use fell the most in ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Water Use per Household (liters per day)",
+    "columns": [
+      "Month",
+      "2021",
+      "2022"
+    ],
+    "rows": [
+      [
+        "June",
+        412,
+        351
+      ],
+      [
+        "July",
+        455,
+        372
+      ],
+      [
+        "August",
+        470,
+        401
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "July, when it dropped from 455 to 372 liters.",
+    "B": "August, when it dropped from 470 to 401 liters.",
+    "C": "June, when it dropped from 412 to 351 liters.",
+    "D": "September, when it dropped by more than 100 liters."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "To find where use fell the most, subtract the 2022 value from the 2021 value for each month: June 61, July 83 and August 69 liters. The largest drop is in July.",
+    "A": "Correct. Use fell by 83 liters in July, more than in June (61 liters) or August (69 liters).",
+    "B": "Incorrect. August had the highest use in both years, but it fell by only 69 liters, less than July's 83.",
+    "C": "Incorrect. June's drop of 61 liters was the smallest of the three months.",
+    "D": "Incorrect. The table gives no data for September."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}
