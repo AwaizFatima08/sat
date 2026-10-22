@@ -14,23 +14,23 @@
   "data": null,
   "stem": "According to the text, why was a new city built to serve as Australia's capital?",
   "choices": {
-    "A": "Australia's largest cities lacked space for government buildings.",
-    "B": "Neither Sydney nor Melbourne would accept the other as the capital.",
-    "C": "An international competition required the capital to be a new city.",
-    "D": "The Griffins proposed arranging the capital around a central lake."
+    "A": "Neither Sydney nor Melbourne would accept the other as the capital.",
+    "B": "Australia's largest cities lacked space for government buildings.",
+    "C": "The Griffins proposed arranging the capital around a central lake.",
+    "D": "An international competition required the capital to be a new city."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The text says Sydney and Melbourne \"were fierce rivals, and neither would accept the other as the seat of government,\" and then calls building a new city \"the solution.\" The rivalry between the two cities is the reason a new capital was built.",
-    "A": "Incorrect. The text never mentions a lack of space in either city.",
-    "B": "Correct. Building a new city was \"the solution\" to the rivalry, since neither city would accept the other as capital.",
-    "C": "Incorrect. The competition came after the decision to build a new city; it did not cause that decision.",
-    "D": "Incorrect. This is true of the winning design, but it explains how the city was planned, not why it was built."
+    "A": "Correct. Building a new city was \"the solution\" to the rivalry, since neither city would accept the other as capital.",
+    "B": "Incorrect. The text never mentions a lack of space in either city.",
+    "C": "Incorrect. This is true of the winning design, but it explains how the city was planned, not why it was built.",
+    "D": "Incorrect. The competition came after the decision to build a new city; it did not cause that decision."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
-    "D": "true_irrelevant"
+    "B": "not_in_text",
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

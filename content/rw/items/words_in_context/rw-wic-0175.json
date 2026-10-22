@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "severe",
-    "B": "unanimous",
-    "C": "mutable",
-    "D": "prescient"
+    "B": "mutable",
+    "C": "prescient",
+    "D": "unanimous"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Critics first mocked the painters, and within decades the same work and label were admired. The \"reversal\" shows that critical opinion can change dramatically over time, which is what \"mutable\" means.",
     "A": "Incorrect. The 1874 critics were harsh, but the point of the \"reversal\" is that their judgment later changed, not that it was harsh.",
-    "B": "Incorrect. Nothing in the reversal shows critics agreeing with one another; it shows opinion changing over time.",
-    "C": "Correct. Mutable means changeable. Judgment of the Impressionists swung from mockery to admiration, which shows how much critical opinion can change.",
-    "D": "Incorrect. Prescient means able to foresee the future. The critics who mocked the painters were proved wrong, so the episode shows the opposite."
+    "B": "Correct. Mutable means changeable. Judgment of the Impressionists swung from mockery to admiration, which shows how much critical opinion can change.",
+    "C": "Incorrect. Prescient means able to foresee the future. The critics who mocked the painters were proved wrong, so the episode shows the opposite.",
+    "D": "Incorrect. Nothing in the reversal shows critics agreeing with one another; it shows opinion changing over time."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "not_in_text",
-    "D": "reversed"
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

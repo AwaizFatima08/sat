@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "had always enjoyed using the phone and only pretended to dislike it.",
-    "B": "still believed that a text message could never be sincere.",
+    "A": "still believed that a text message could never be sincere.",
+    "B": "had always enjoyed using the phone and only pretended to dislike it.",
     "C": "cared enough about his granddaughter to use a tool he had resisted.",
     "D": "wanted Ximena to give up her course and return home."
   },
   "answer": "C",
   "explanation": {
     "why": "The grandfather complained about the phone and typed slowly, yet right after Ximena left he spent about twenty minutes writing her a caring text. His concern for her outweighed his dislike of the phone.",
-    "A": "Incorrect. The slow, effortful message suggests he still found the phone hard; nothing shows he secretly enjoyed it.",
-    "B": "Incorrect. He chose a text to express real care, which shows he was willing to use it sincerely.",
+    "A": "Incorrect. He chose a text to express real care, which shows he was willing to use it sincerely.",
+    "B": "Incorrect. The slow, effortful message suggests he still found the phone hard; nothing shows he secretly enjoyed it.",
     "C": "Correct. He overcame his resistance to the phone to check on her and tell her about the socks.",
     "D": "Incorrect. The message asks about her room and promises socks; it never asks her to come home."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "reversed",
+    "A": "reversed",
+    "B": "too_broad",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

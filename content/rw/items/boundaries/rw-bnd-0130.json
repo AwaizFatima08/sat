@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "Arjuna,",
-    "B": "Arjuna;",
-    "C": "Arjuna",
-    "D": "Arjuna—"
+    "B": "Arjuna—",
+    "C": "Arjuna;",
+    "D": "Arjuna"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The subject of the second sentence is the long phrase \"The green face paint worn by actors who portray noble heroes such as the warrior prince Arjuna,\" and its verb is \"is known.\" Because no comma comes before \"such as,\" there is no opening mark to pair with, so nothing should separate \"Arjuna\" from the verb.",
     "A": "Incorrect. No comma comes before \"such as,\" so this single comma doesn't close a pair; it only separates the subject from its verb \"is known.\"",
-    "B": "Incorrect. A semicolon joins two independent clauses; here it would cut the subject off from its verb \"is known.\"",
-    "C": "Correct. The long subject flows straight into its verb, \"is known,\" with no punctuation.",
-    "D": "Incorrect. No dash comes earlier in the sentence, so this single dash doesn't close a pair; it only separates the subject from its verb."
+    "B": "Incorrect. No dash comes earlier in the sentence, so this single dash doesn't close a pair; it only separates the subject from its verb.",
+    "C": "Incorrect. A semicolon joins two independent clauses; here it would cut the subject off from its verb \"is known.\"",
+    "D": "Correct. The long subject flows straight into its verb, \"is known,\" with no punctuation."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "punctuation",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

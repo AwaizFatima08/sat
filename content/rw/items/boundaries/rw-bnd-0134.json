@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "principle,",
-    "B": "principle:",
+    "A": "principle:",
+    "B": "principle,",
     "C": "principle",
     "D": "principle that:"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "\"The method depended on a simple principle\" is an independent clause, and what follows is another independent clause that explains what the principle is. A colon can introduce an explanation after a complete independent clause.",
-    "A": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice.",
-    "B": "Correct. The colon follows a complete independent clause and introduces the explanation of the principle.",
+    "A": "Correct. The colon follows a complete independent clause and introduces the explanation of the principle.",
+    "B": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice.",
     "C": "Incorrect. With no punctuation, the two independent clauses run together (a run-on sentence).",
     "D": "Incorrect. A colon must follow a complete independent clause, but \"a simple principle that\" leaves the clause unfinished."
   },
   "traps": {
-    "A": "grammar_rule",
+    "B": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -15,22 +15,22 @@
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
     "A": "Leavitt, hired for supposedly routine work, made a finding that helped astronomers measure great distances.",
-    "B": "The women hired as \"computers\" at Harvard were paid modest wages to examine photographs of the sky.",
+    "B": "Leavitt found that stars whose brightness rises and falls are farther away than other stars.",
     "C": "Leavitt used her own finding to measure the distances to several galaxies beyond our own.",
-    "D": "Leavitt found that stars whose brightness rises and falls are farther away than other stars."
+    "D": "The women hired as \"computers\" at Harvard were paid modest wages to examine photographs of the sky."
   },
   "answer": "A",
   "explanation": {
     "why": "The text contrasts the job's low status (\"considered routine,\" \"modest\" pay) with what Leavitt achieved through it, signaled by \"Yet\": she found a pattern that \"later gave astronomers a way to measure distances.\" The main idea joins that contrast with the importance of her finding.",
     "A": "Correct. This captures the contrast between the routine job and the far-reaching discovery Leavitt made.",
-    "B": "Incorrect. This describes the working conditions in the first two sentences but leaves out Leavitt's discovery.",
+    "B": "Incorrect. Leavitt linked a star's cycle length to its true brightness; the text never says such stars are farther away.",
     "C": "Incorrect. The text says her finding \"later gave astronomers\" a method; it does not say she measured galaxies herself.",
-    "D": "Incorrect. Leavitt linked a star's cycle length to its true brightness; the text never says such stars are farther away."
+    "D": "Incorrect. This describes the working conditions in the first two sentences but leaves out Leavitt's discovery."
   },
   "traps": {
-    "B": "too_narrow",
+    "B": "not_in_text",
     "C": "too_broad",
-    "D": "not_in_text"
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

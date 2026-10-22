@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "disappear",
+    "A": "recover",
     "B": "migrate",
-    "C": "recover",
+    "C": "disappear",
     "D": "decline"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "After hunting had left only \"a small group,\" protection allowed the numbers to rise from about 180 to more than 670. A population that grows back after falling very low is recovering, so \"recover\" fits.",
-    "A": "Incorrect. The lions did not disappear; the count rose to more than 670.",
+    "A": "Correct. Protection let a population that hunting had cut to \"a small group\" grow back to more than 670, so it was able to recover.",
     "B": "Incorrect. The text says the lions survive in the Gir Forest and gives no sign that they moved somewhere else.",
-    "C": "Correct. Protection let a population that hunting had cut to \"a small group\" grow back to more than 670, so it was able to recover.",
+    "C": "Incorrect. The lions did not disappear; the count rose to more than 670.",
     "D": "Incorrect. The count went up from about 180 to more than 670, so the population grew rather than declined."
   },
   "traps": {
-    "A": "reversed",
     "B": "not_in_text",
+    "C": "reversed",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

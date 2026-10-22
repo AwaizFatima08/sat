@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "inhabitant's",
-    "B": "inhabitants'",
-    "C": "inhabitants",
-    "D": "inhabitants's"
+    "B": "inhabitants",
+    "C": "inhabitants's",
+    "D": "inhabitants'"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "A wall around a whole settlement was the work of the community, so the investment belongs to many people, the early inhabitants. A plural noun ending in -s forms its possessive with an apostrophe alone, so \"inhabitants'\" is correct.",
     "A": "Incorrect. \"Inhabitant's\" is singular possessive, but a settlement and its massive wall belonged to many residents, not one.",
-    "B": "Correct. \"Inhabitants'\" is the plural possessive, showing that the investment was made by the settlement's residents.",
-    "C": "Incorrect. \"Inhabitants\" is plural but not possessive; the investment belongs to the inhabitants, so an apostrophe is needed.",
-    "D": "Incorrect. \"Inhabitants's\" is not a Standard English form; a plural ending in -s takes only an apostrophe."
+    "B": "Incorrect. \"Inhabitants\" is plural but not possessive; the investment belongs to the inhabitants, so an apostrophe is needed.",
+    "C": "Incorrect. \"Inhabitants's\" is not a Standard English form; a plural ending in -s takes only an apostrophe.",
+    "D": "Correct. \"Inhabitants'\" is the plural possessive, showing that the investment was made by the settlement's residents."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "B": "grammar_rule",
+    "C": "grammar_rule"
   },
   "grammar": "plural_possessive",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

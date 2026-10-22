@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to explain why swimmers float so easily in the Dead Sea. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "The shore of the Dead Sea, more than 400 meters below sea level, is the lowest land on Earth.",
-    "B": "The Dead Sea, a salt lake, is bordered by Jordan to the east and by Israel and the West Bank to the west.",
-    "C": "Swimmers float easily in the Dead Sea because its very salty water is much denser than ocean water.",
-    "D": "The water of the Dead Sea is about 34 percent salt, almost ten times as salty as ocean water."
+    "A": "The water of the Dead Sea is about 34 percent salt, almost ten times as salty as ocean water.",
+    "B": "The shore of the Dead Sea, more than 400 meters below sea level, is the lowest land on Earth.",
+    "C": "The Dead Sea, a salt lake, is bordered by Jordan to the east and by Israel and the West Bank to the west.",
+    "D": "Swimmers float easily in the Dead Sea because its very salty water is much denser than ocean water."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "An explanation of a cause must connect the fact to the result. The notes link high salt content to greater density, and greater density to easier floating. Only one choice makes that link to swimmers floating.",
-    "A": "Incorrect. The shore's low elevation has nothing to do with why swimmers float.",
-    "B": "Incorrect. It gives the lake's location, which does not explain floating.",
-    "C": "Correct. It explains that the very salty water is denser, which is why swimmers float easily.",
-    "D": "Incorrect. It gives the salt content, but it never connects the salt to density or to floating, so it does not explain anything."
+    "A": "Incorrect. It gives the salt content, but it never connects the salt to density or to floating, so it does not explain anything.",
+    "B": "Incorrect. The shore's low elevation has nothing to do with why swimmers float.",
+    "C": "Incorrect. It gives the lake's location, which does not explain floating.",
+    "D": "Correct. It explains that the very salty water is denser, which is why swimmers float easily."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "misses_goal",
-    "D": "too_narrow"
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "C": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -48,13 +48,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

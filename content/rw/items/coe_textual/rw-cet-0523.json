@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Nowak's hypothesis?",
   "choices": {
-    "A": "Mother bats regularly shared food with their own young, even after the young had begun to hunt on their own.",
+    "A": "Bats shared food with unrelated roost mates that had once fed them as often as they shared with relatives.",
     "B": "Bats that received shared food from a roost mate were more likely to survive the following week.",
-    "C": "Bats shared food with unrelated roost mates that had once fed them as often as they shared with relatives.",
-    "D": "Vampire bats spend more time grooming their roost mates than most other kinds of bats do."
+    "C": "Vampire bats spend more time grooming their roost mates than most other kinds of bats do.",
+    "D": "Mother bats regularly shared food with their own young, even after the young had begun to hunt on their own."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Nowak says bats share food mainly with relatives. To weaken this, a finding must show bats sharing just as readily with bats that are not related to them. If unrelated bats that once helped them get food as often as relatives do, relatedness is not the main factor.",
-    "A": "Incorrect. Mothers feeding their young is sharing with close relatives, so this fits Nowak's hypothesis.",
+    "A": "Correct. Unrelated bats received food as often as relatives, so sharing is not directed mainly toward kin.",
     "B": "Incorrect. This shows that sharing helps bats survive, not whom the bats choose to share with.",
-    "C": "Correct. Unrelated bats received food as often as relatives, so sharing is not directed mainly toward kin.",
-    "D": "Incorrect. Grooming is a different behavior and says nothing about who receives shared food."
+    "C": "Incorrect. Grooming is a different behavior and says nothing about who receives shared food.",
+    "D": "Incorrect. Mothers feeding their young is sharing with close relatives, so this fits Nowak's hypothesis."
   },
   "traps": {
-    "A": "reversed",
     "B": "true_irrelevant",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

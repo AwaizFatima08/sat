@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "Avicennia marina arrived in the delta only after the river's flow had been reduced.",
-    "B": "restoring the river's flow would cause Avicennia marina to vanish from the delta.",
-    "C": "the shift in the delta's mangrove species may be linked to its reduced fresh water.",
-    "D": "the species that became scarce tolerate salt better than Avicennia marina does."
+    "A": "the shift in the delta's mangrove species may be linked to its reduced fresh water.",
+    "B": "Avicennia marina arrived in the delta only after the river's flow had been reduced.",
+    "C": "the species that became scarce tolerate salt better than Avicennia marina does.",
+    "D": "restoring the river's flow would cause Avicennia marina to vanish from the delta."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The delta's water has grown saltier as fresh river water declined, and the one species that now dominates is the one best able to tolerate salt. Putting these together suggests, though does not prove, that the reduced fresh water helped shift the delta's mix of species.",
-    "A": "Incorrect. The text says the delta once had several species but never says Avicennia marina was absent before.",
-    "B": "Incorrect. Even if reduced flow helped Avicennia marina dominate, nothing suggests that more fresh water would make it disappear entirely.",
-    "C": "Correct. Saltier water favors the salt-tolerant species that now dominates, so the reduced fresh water plausibly helps explain the change.",
-    "D": "Incorrect. This reverses the text, which says Avicennia marina tolerates saltier water than the species that have become scarce."
+    "A": "Correct. Saltier water favors the salt-tolerant species that now dominates, so the reduced fresh water plausibly helps explain the change.",
+    "B": "Incorrect. The text says the delta once had several species but never says Avicennia marina was absent before.",
+    "C": "Incorrect. This reverses the text, which says Avicennia marina tolerates saltier water than the species that have become scarce.",
+    "D": "Incorrect. Even if reduced flow helped Avicennia marina dominate, nothing suggests that more fresh water would make it disappear entirely."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "too_broad",
-    "D": "reversed"
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Coase showed that private markets can supply any good that economists once believed required government.",
-    "B": "Private lighthouse owners in Britain collected fees directly from ships as the ships passed their lights.",
-    "C": "Later historians showed that Coase was mistaken in claiming that some British lighthouses were private.",
-    "D": "History undermines a textbook example without showing that private markets alone supplied lighthouses."
+    "A": "History undermines a textbook example without showing that private markets alone supplied lighthouses.",
+    "B": "Later historians showed that Coase was mistaken in claiming that some British lighthouses were private.",
+    "C": "Private lighthouse owners in Britain collected fees directly from ships as the ships passed their lights.",
+    "D": "Coase showed that private markets can supply any good that economists once believed required government."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The text moves in three steps: the textbook claim that markets cannot supply lighthouses, Coase's historical evidence of private lighthouses, and later historians' point that private fees depended on rights granted by the Crown. The conclusion, \"a blend of the two,\" shows that the evidence undercuts the textbook example without supporting a purely market account.",
-    "A": "Incorrect. Coase challenged one example; the text never says he showed that markets can supply every such good.",
-    "B": "Incorrect. The text says fees were charged to ships at nearby ports, not as ships passed the lights.",
-    "C": "Incorrect. The later historians added a qualification about the Crown's role; they did not deny that private operators existed.",
-    "D": "Correct. This captures both the challenge to the textbook example and the qualification that rules out a purely private account."
+    "A": "Correct. This captures both the challenge to the textbook example and the qualification that rules out a purely private account.",
+    "B": "Incorrect. The later historians added a qualification about the Crown's role; they did not deny that private operators existed.",
+    "C": "Incorrect. The text says fees were charged to ships at nearby ports, not as ships passed the lights.",
+    "D": "Incorrect. Coase challenged one example; the text never says he showed that markets can supply every such good."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "not_in_text",
-    "C": "reversed"
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -15,22 +15,22 @@
   "stem": "According to the text, why did Gaudí leave detailed plaster models?",
   "choices": {
     "A": "He wanted to sell them to pay for the construction.",
-    "B": "He needed them to test his designs on computers.",
+    "B": "He hoped to replace the models broken in 1936.",
     "C": "He expected others to finish the building after him.",
-    "D": "He hoped to replace the models broken in 1936."
+    "D": "He needed them to test his designs on computers."
   },
   "answer": "C",
   "explanation": {
     "why": "The text gives the reason in one sentence: Gaudí \"knew the building would not be finished in his lifetime, so he left detailed plaster models to guide later builders.\" The models were meant for the people who would continue the work.",
     "A": "Incorrect. The text never mentions selling the models or raising money.",
-    "B": "Incorrect. Computer programs are used by builders \"today,\" long after Gaudí's death.",
+    "B": "Incorrect. Gaudí died in 1926, ten years before the models were broken.",
     "C": "Correct. He made the models because he knew later builders would have to complete the church.",
-    "D": "Incorrect. Gaudí died in 1926, ten years before the models were broken."
+    "D": "Incorrect. Computer programs are used by builders \"today,\" long after Gaudí's death."
   },
   "traps": {
     "A": "not_in_text",
-    "B": "not_in_text",
-    "D": "reversed"
+    "B": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

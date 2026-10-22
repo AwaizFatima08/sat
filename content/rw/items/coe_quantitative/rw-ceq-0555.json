@@ -71,23 +71,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Briones's argument?",
   "choices": {
-    "A": "Medicine gained 23 points from 1980 to 2000 and then 4 points by 2020; engineering gained 7 points and then 9.",
+    "A": "Women's share of engineering students nearly tripled between 1980 and 2020.",
     "B": "In every year shown, women made up a larger share of medical students than of engineering students.",
-    "C": "Women's share of engineering students nearly tripled between 1980 and 2020.",
-    "D": "Women's share of medical students grew more from 2000 to 2020 than it had from 1980 to 2000."
+    "C": "Women's share of medical students grew more from 2000 to 2020 than it had from 1980 to 2000.",
+    "D": "Medicine gained 23 points from 1980 to 2000 and then 4 points by 2020; engineering gained 7 points and then 9."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Briones's claim is about a reversal: medicine gained faster than engineering from 1980 to 2000, but engineering has gained more since 2000. Support must compare the gains of both fields in both periods. Medicine rose 23 points (28 to 51) and then 4 (51 to 55); engineering rose 7 points (9 to 16) and then 9 (16 to 25).",
-    "A": "Correct. It gives both fields' gains in both periods and shows medicine ahead before 2000 and engineering ahead after, which is the reversal Briones describes.",
+    "A": "Incorrect. This is true (9% to 25%), but it describes engineering over the whole period and cannot show that its pace overtook medicine's after 2000.",
     "B": "Incorrect. This is true, but it is the familiar contrast that Briones says conceals the real pattern; it says nothing about how fast each field changed.",
-    "C": "Incorrect. This is true (9% to 25%), but it describes engineering over the whole period and cannot show that its pace overtook medicine's after 2000.",
-    "D": "Incorrect. Medicine gained 23 points from 1980 to 2000 but only 4 from 2000 to 2020, so this reverses the graph."
+    "C": "Incorrect. Medicine gained 23 points from 1980 to 2000 but only 4 from 2000 to 2020, so this reverses the graph.",
+    "D": "Correct. It gives both fields' gains in both periods and shows medicine ahead before 2000 and engineering ahead after, which is the reversal Briones describes."
   },
   "traps": {
+    "A": "too_narrow",
     "B": "true_irrelevant",
-    "C": "too_narrow",
-    "D": "reversed"
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -96,8 +96,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

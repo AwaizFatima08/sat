@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the editors' changes in Text 1?",
   "choices": {
-    "A": "By agreeing that the changes brought the poems closer to Dickinson's intentions",
-    "B": "By arguing that the 1890 volume failed because readers found the poems confusing",
+    "A": "By arguing that the 1890 volume failed because readers found the poems confusing",
+    "B": "By agreeing that the changes brought the poems closer to Dickinson's intentions",
     "C": "By claiming that Dickinson's manuscripts contained very few dashes",
     "D": "By suggesting that the changes made the poems neater but lost some of their meaning"
   },
   "answer": "D",
   "explanation": {
     "why": "Text 1 says the editors replaced Dickinson's dashes to make the poems \"easier for readers to follow.\" Text 2 says the dashes are \"part of the poems' meaning\" and that replacing them \"made the poems tidier, but it also narrowed them.\" So Text 2 grants a gain in neatness but sees a loss in meaning.",
-    "A": "Incorrect. Text 2 says the dashes are part of the poems' meaning, so removing them moved the poems away from what Dickinson wrote.",
-    "B": "Incorrect. Text 1 says the volume \"sold well,\" and Text 2 never claims it failed.",
+    "A": "Incorrect. Text 1 says the volume \"sold well,\" and Text 2 never claims it failed.",
+    "B": "Incorrect. Text 2 says the dashes are part of the poems' meaning, so removing them moved the poems away from what Dickinson wrote.",
     "C": "Incorrect. Text 2 says the 1955 edition restored the punctuation of the manuscripts, including the dashes, so the manuscripts had many.",
     "D": "Correct. Text 2 calls the edited poems \"tidier\" but \"narrowed,\" meaning they lost some of their range of meaning."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
+    "A": "not_in_text",
+    "B": "reversed",
     "C": "reversed"
   },
   "grammar": null,
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

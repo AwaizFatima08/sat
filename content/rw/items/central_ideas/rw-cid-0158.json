@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Creoles share grammatical features because children everywhere expand pidgins in the same inborn way.",
-    "B": "Most creole languages descend directly from West African languages rather than from pidgins.",
-    "C": "Linguists disagree about why creoles share features, and some creoles may help test the rival views.",
-    "D": "Pidgins become full languages only after adults add grammatical rules to them over several generations."
+    "A": "Most creole languages descend directly from West African languages rather than from pidgins.",
+    "B": "Pidgins become full languages only after adults add grammatical rules to them over several generations.",
+    "C": "Creoles share grammatical features because children everywhere expand pidgins in the same inborn way.",
+    "D": "Linguists disagree about why creoles share features, and some creoles may help test the rival views."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "After explaining how creoles form, the text presents a puzzle (shared features across distant creoles) and two competing explanations: an inborn grammar or features inherited from related West African languages. It ends by identifying which creoles could help decide between them. The main idea must include both the disagreement and the way to test it.",
-    "A": "Incorrect. This presents one side of the debate as settled fact.",
-    "B": "Incorrect. The text says creoles grow out of pidgins and that many drew on West African languages, not that they descend directly from them.",
-    "C": "Correct. This captures both rival explanations and the text's point about which evidence could separate them.",
-    "D": "Incorrect. The text says children, not adults, expand pidgins into full languages."
+    "A": "Incorrect. The text says creoles grow out of pidgins and that many drew on West African languages, not that they descend directly from them.",
+    "B": "Incorrect. The text says children, not adults, expand pidgins into full languages.",
+    "C": "Incorrect. This presents one side of the debate as settled fact.",
+    "D": "Correct. This captures both rival explanations and the text's point about which evidence could separate them."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "not_in_text",
-    "D": "reversed"
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

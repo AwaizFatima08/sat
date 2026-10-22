@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Terakoya taught commoners' children arithmetic but not how to read.",
+    "A": "Terakoya probably spread literacy widely, though how widely is unclear.",
     "B": "Terakoya records let historians measure Edo-period literacy rates precisely.",
-    "C": "Most terakoya were run by a single teacher inside a temple.",
-    "D": "Terakoya probably spread literacy widely, though how widely is unclear."
+    "C": "Terakoya taught commoners' children arithmetic but not how to read.",
+    "D": "Most terakoya were run by a single teacher inside a temple."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The text says historians \"generally agree\" that terakoya \"helped make reading and writing common among ordinary people,\" but then adds with \"however\" that estimates of literacy \"vary widely\" because few records measured it. The main idea must include both the agreement and the uncertainty.",
-    "A": "Incorrect. The text says pupils practiced writing and read letters and almanacs, so reading was taught.",
+    "A": "Correct. This captures both the historians' general agreement and the uncertainty about exact numbers.",
     "B": "Incorrect. The text says few records measured literacy directly, so estimates vary widely.",
-    "C": "Incorrect. The text says terakoya were \"often\" run by one teacher \"in a temple or a home\"; this detail is also not the main point.",
-    "D": "Correct. This captures both the historians' general agreement and the uncertainty about exact numbers."
+    "C": "Incorrect. The text says pupils practiced writing and read letters and almanacs, so reading was taught.",
+    "D": "Incorrect. The text says terakoya were \"often\" run by one teacher \"in a temple or a home\"; this detail is also not the main point."
   },
   "traps": {
-    "A": "reversed",
     "B": "reversed",
-    "C": "too_narrow"
+    "C": "reversed",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

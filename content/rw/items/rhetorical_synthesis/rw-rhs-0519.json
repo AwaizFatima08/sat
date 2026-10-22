@@ -21,21 +21,21 @@
   "stem": "The student wants to explain why Tarbela's reservoir can hold less water than it once could. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
     "A": "Tarbela Dam, completed in 1976 on the Indus River in Pakistan, is one of the largest earth-filled dams in the world.",
-    "B": "The Indus River carries large amounts of sand and silt that wash down from the Himalaya and Karakoram mountains.",
-    "C": "Sand and silt carried by the Indus settle to the bottom of Tarbela's reservoir and stay there, reducing the space for water.",
+    "B": "Sand and silt carried by the Indus settle to the bottom of Tarbela's reservoir and stay there, reducing the space for water.",
+    "C": "The Indus River carries large amounts of sand and silt that wash down from the Himalaya and Karakoram mountains.",
     "D": "Since Tarbela Dam opened, its reservoir, which stores water for irrigation and power, has lost a large share of its capacity."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The goal asks for a cause, so the sentence must explain how the reservoir lost capacity, not just state that it did. The notes connect the river's sediment to the reservoir: the sand and silt sink and stay there, taking up room that water once filled.",
     "A": "Incorrect. It introduces the dam but gives no reason for the lost capacity.",
-    "B": "Incorrect. It gives the source of the sediment but does not say that the sediment builds up in the reservoir, so the explanation is incomplete.",
-    "C": "Correct. It explains that sediment settling in the reservoir reduces the space available for water.",
+    "B": "Correct. It explains that sediment settling in the reservoir reduces the space available for water.",
+    "C": "Incorrect. It gives the source of the sediment but does not say that the sediment builds up in the reservoir, so the explanation is incomplete.",
     "D": "Incorrect. It states the result, the lost capacity, without explaining what caused it. It is tempting because it describes exactly what the goal asks about."
   },
   "traps": {
     "A": "misses_goal",
-    "B": "too_narrow",
+    "C": "too_narrow",
     "D": "misses_goal"
   },
   "grammar": null,
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

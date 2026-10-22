@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Botha's hypothesis?",
   "choices": {
-    "A": "Meerkats live in groups that can include more than twenty animals.",
-    "B": "Meerkats that researchers gave extra food stood guard no more often than meerkats given no extra food.",
-    "C": "Meerkats that researchers gave extra food stood guard more often than meerkats given no extra food.",
+    "A": "Meerkats that researchers gave extra food stood guard no more often than meerkats given no extra food.",
+    "B": "Meerkats that researchers gave extra food stood guard more often than meerkats given no extra food.",
+    "C": "Meerkats live in groups that can include more than twenty animals.",
     "D": "A meerkat on guard gives one alarm call for eagles and a different one for jackals."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Botha links guarding to how full a meerkat is. If her hypothesis is right, meerkats that have eaten more should guard more often. A test in which well-fed meerkats guard more than others would support her.",
-    "A": "Incorrect. The size of meerkat groups does not show when an individual chooses to stand guard.",
-    "B": "Incorrect. If extra food made no difference, being well fed would not explain guarding, so this would weaken the hypothesis.",
-    "C": "Correct. The meerkats given extra food guarded more often, which shows that being well fed leads to taking the guard role.",
+    "A": "Incorrect. If extra food made no difference, being well fed would not explain guarding, so this would weaken the hypothesis.",
+    "B": "Correct. The meerkats given extra food guarded more often, which shows that being well fed leads to taking the guard role.",
+    "C": "Incorrect. The size of meerkat groups does not show when an individual chooses to stand guard.",
     "D": "Incorrect. The kinds of alarm calls describe what guards do, not why a meerkat becomes a guard."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
+    "A": "reversed",
+    "C": "true_irrelevant",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

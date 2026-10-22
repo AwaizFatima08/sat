@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "supply",
-    "B": "block",
+    "B": "heat",
     "C": "waste",
-    "D": "heat"
+    "D": "block"
   },
   "answer": "A",
   "explanation": {
     "why": "The text says people have \"drawn water\" from the hitis for centuries and that the spouts are still \"fed by underground channels.\" \"Remarkably\" signals that the spouts still do their job today. The blank needs a verb meaning \"provide,\" so \"supply\" fits.",
     "A": "Correct. The spouts are still \"fed by underground channels\" and still serve \"nearby homes,\" so they still provide water: they supply it.",
-    "B": "Incorrect. Spouts that are still fed by working channels deliver water; blocking it would be the opposite of what the text describes.",
+    "B": "Incorrect. Nothing in the text is about warming the water; the point is that the old spouts still deliver it.",
     "C": "Incorrect. The text never suggests that the water is lost or used badly; it praises the old system for still working.",
-    "D": "Incorrect. Nothing in the text is about warming the water; the point is that the old spouts still deliver it."
+    "D": "Incorrect. Spouts that are still fed by working channels deliver water; blocking it would be the opposite of what the text describes."
   },
   "traps": {
-    "B": "reversed",
+    "B": "not_in_text",
     "C": "not_in_text",
-    "D": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

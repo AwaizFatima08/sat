@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "Nevertheless,",
-    "B": "In contrast,",
-    "C": "For instance,",
-    "D": "Consequently,"
+    "B": "Consequently,",
+    "C": "In contrast,",
+    "D": "For instance,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The second sentence explains that photographic portraits were cheap and quick. The last sentence describes what followed from this: families who could not afford paintings could now own portraits. A cause-and-effect transition is needed.",
     "A": "Incorrect. \"Nevertheless\" signals that something happens despite an obstacle, but cheap photographs made owning portraits easier, not harder.",
-    "B": "Incorrect. Although the families differ from the wealthy mentioned earlier, the last sentence follows from the low cost of photographs in the sentence just before it; it does not contrast with it.",
-    "C": "Incorrect. Families owning photographs is not an instance of photographs being cheap and quick; it is the result.",
-    "D": "Correct. \"Consequently\" shows that more families could own portraits because photographic portraits were cheap and fast to make."
+    "B": "Correct. \"Consequently\" shows that more families could own portraits because photographic portraits were cheap and fast to make.",
+    "C": "Incorrect. Although the families differ from the wealthy mentioned earlier, the last sentence follows from the low cost of photographs in the sentence just before it; it does not contrast with it.",
+    "D": "Incorrect. Families owning photographs is not an instance of photographs being cheap and quick; it is the result."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

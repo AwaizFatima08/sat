@@ -16,16 +16,16 @@
   "choices": {
     "A": "Later,",
     "B": "Previously,",
-    "C": "Similarly,",
-    "D": "For example,"
+    "C": "For example,",
+    "D": "Similarly,"
   },
   "answer": "A",
   "explanation": {
     "why": "The text moves forward in time: Fleming's discovery in 1928, his failure to extract enough penicillin, and then the Oxford team's success around 1940. The blank must show that the Oxford work came after Fleming's.",
     "A": "Correct. \"Later\" shows that the Oxford team's success around 1940 came after Fleming's discovery in 1928.",
     "B": "Incorrect. \"Previously\" would place the Oxford work before Fleming's, but 1940 comes after 1928.",
-    "C": "Incorrect. The Oxford team succeeded where Fleming had failed, so its work was not similar to his.",
-    "D": "Incorrect. The Oxford team's success is not an example of Fleming's difficulty; it is the next stage of the story."
+    "C": "Incorrect. The Oxford team's success is not an example of Fleming's difficulty; it is the next stage of the story.",
+    "D": "Incorrect. The Oxford team succeeded where Fleming had failed, so its work was not similar to his."
   },
   "traps": {
     "B": "wrong_logic",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

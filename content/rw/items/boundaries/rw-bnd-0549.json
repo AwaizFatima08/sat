@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "customer",
-    "B": "customer;",
-    "C": "customer,",
-    "D": "customer—"
+    "A": "customer,",
+    "B": "customer—",
+    "C": "customer",
+    "D": "customer;"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The subject of the first sentence is \"Selin's grandfather,\" and its verb is \"lifted.\" In between comes a long nonessential element made of two \"who\" clauses joined by \"and.\" It opens with a comma after \"grandfather,\" so it must close with a comma before \"merely lifted\"; the commas around \"in all that time\" sit inside the element and don't close it.",
-    "A": "Incorrect. Without a closing comma, the nonessential element is never set off, and \"merely lifted\" seems to belong to \"a customer\" rather than to the grandfather.",
-    "B": "Incorrect. A semicolon would separate the subject \"Selin's grandfather\" from its verb \"lifted,\" and neither side would be an independent clause.",
-    "C": "Correct. The closing comma matches the comma after \"grandfather,\" so the subject connects to its verb \"merely lifted.\"",
-    "D": "Incorrect. The nonessential element opens with a comma, so it can't close with a dash; the two marks must match."
+    "A": "Correct. The closing comma matches the comma after \"grandfather,\" so the subject connects to its verb \"merely lifted.\"",
+    "B": "Incorrect. The nonessential element opens with a comma, so it can't close with a dash; the two marks must match.",
+    "C": "Incorrect. Without a closing comma, the nonessential element is never set off, and \"merely lifted\" seems to belong to \"a customer\" rather than to the grandfather.",
+    "D": "Incorrect. A semicolon would separate the subject \"Selin's grandfather\" from its verb \"lifted,\" and neither side would be an independent clause."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "supplements",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

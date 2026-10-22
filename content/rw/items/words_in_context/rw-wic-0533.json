@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "unrepeatable",
-    "B": "derivative",
-    "C": "provisional",
-    "D": "anonymous"
+    "A": "derivative",
+    "B": "provisional",
+    "C": "anonymous",
+    "D": "unrepeatable"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The text gives two reasons that no mold could be reused: the mold was broken and each casting needed a new wax model. The next sentence confirms that near-duplicates are \"not copies from a shared mold but separate creations.\" The blank must mean \"impossible to reproduce exactly.\"",
-    "A": "Correct. Since every mold was destroyed and every wax model was new, each bronze could not be produced again in identical form.",
-    "B": "Incorrect. \"Derivative\" means copied from something else, the opposite of what the text says about separate creations rather than copies.",
-    "C": "Incorrect. \"Provisional\" means temporary or not yet final; nothing suggests the finished bronzes were temporary.",
-    "D": "Incorrect. Many old sculptures are by unknown artists, but the text's reasons (the broken mold, the new wax figure) explain why each piece was one of a kind, not why its maker is unknown."
+    "A": "Incorrect. \"Derivative\" means copied from something else, the opposite of what the text says about separate creations rather than copies.",
+    "B": "Incorrect. \"Provisional\" means temporary or not yet final; nothing suggests the finished bronzes were temporary.",
+    "C": "Incorrect. Many old sculptures are by unknown artists, but the text's reasons (the broken mold, the new wax figure) explain why each piece was one of a kind, not why its maker is unknown.",
+    "D": "Correct. Since every mold was destroyed and every wax model was new, each bronze could not be produced again in identical form."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "true_irrelevant"
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It describes an eruption and then explains why scientists could not study its effects.",
-    "B": "It presents a prediction about recovery and then offers evidence that confirms it.",
-    "C": "It describes the damage caused by an eruption and then lists the animals it killed.",
-    "D": "It reports an expectation about recovery and then explains a factor that made recovery happen differently."
+    "A": "It presents a prediction about recovery and then offers evidence that confirms it.",
+    "B": "It describes an eruption and then explains why scientists could not study its effects.",
+    "C": "It reports an expectation about recovery and then explains a factor that made recovery happen differently.",
+    "D": "It describes the damage caused by an eruption and then lists the animals it killed."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The first sentence states what ecologists \"expected\": slow recovery from outside the area. The second sentence says recovery came \"sooner than predicted, partly because of survivors,\" and the rest explains how surviving gophers brought soil and seeds to the surface. The text moves from an expectation to an explanation of why events differed from it.",
-    "A": "Incorrect. The text reports what scientists learned about recovery, so the effects clearly were studied.",
-    "B": "Incorrect. The evidence shows recovery happened sooner and in a different way than predicted, so it does not confirm the prediction.",
-    "C": "Incorrect. The text focuses on animals that survived, not on animals that died.",
-    "D": "Correct. The text gives the expected slow recovery and then explains how surviving gophers helped plants return sooner."
+    "A": "Incorrect. The evidence shows recovery happened sooner and in a different way than predicted, so it does not confirm the prediction.",
+    "B": "Incorrect. The text reports what scientists learned about recovery, so the effects clearly were studied.",
+    "C": "Correct. The text gives the expected slow recovery and then explains how surviving gophers helped plants return sooner.",
+    "D": "Incorrect. The text focuses on animals that survived, not on animals that died."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "reversed",
-    "C": "reversed"
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

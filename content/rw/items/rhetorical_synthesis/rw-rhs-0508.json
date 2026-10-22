@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to emphasize the great length of the Trans-Siberian Railway. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Construction of the Trans-Siberian Railway began in 1891, and the main route was completed in 1916.",
-    "B": "The Trans-Siberian Railway connects Moscow with Vladivostok, a Russian port on the Pacific Ocean.",
-    "C": "About 9,300 kilometers long, the Trans-Siberian Railway is the longest railway line in the world.",
-    "D": "The Trans-Siberian Railway crosses the Ural Mountains, which divide Europe from Asia."
+    "A": "The Trans-Siberian Railway connects Moscow with Vladivostok, a Russian port on the Pacific Ocean.",
+    "B": "The Trans-Siberian Railway crosses the Ural Mountains, which divide Europe from Asia.",
+    "C": "Construction of the Trans-Siberian Railway began in 1891, and the main route was completed in 1916.",
+    "D": "About 9,300 kilometers long, the Trans-Siberian Railway is the longest railway line in the world."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "To emphasize length, the sentence needs the railway's distance and, ideally, how it compares with other railways. The notes give both: about 9,300 kilometers, the longest railway line in the world.",
-    "A": "Incorrect. It gives the construction dates, which show how long building took, not how long the railway is.",
-    "B": "Incorrect. It names the two end points but gives no measure of length or comparison.",
-    "C": "Correct. It states the railway's length and that it is the longest railway line in the world.",
-    "D": "Incorrect. It names a mountain range the railway crosses, which does not stress its length."
+    "A": "Incorrect. It names the two end points but gives no measure of length or comparison.",
+    "B": "Incorrect. It names a mountain range the railway crosses, which does not stress its length.",
+    "C": "Incorrect. It gives the construction dates, which show how long building took, not how long the railway is.",
+    "D": "Correct. It states the railway's length and that it is the longest railway line in the world."
   },
   "traps": {
     "A": "misses_goal",
-    "B": "misses_goal",
-    "D": "true_irrelevant"
+    "B": "true_irrelevant",
+    "C": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -48,13 +48,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

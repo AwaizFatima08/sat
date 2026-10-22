@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "simple",
-    "B": "faded",
-    "C": "frightening",
-    "D": "detailed"
+    "A": "frightening",
+    "B": "detailed",
+    "C": "faded",
+    "D": "simple"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The puppets have \"hundreds of tiny holes,\" and the text contrasts the result with \"a plain dark shape.\" Light shining through so many small holes makes a pattern with many fine parts, so the blank needs a word like \"detailed.\"",
-    "A": "Incorrect. The text says the shadow is \"not a plain dark shape,\" so a simple pattern is the opposite of what the holes create.",
-    "B": "Incorrect. Nothing suggests the shadow is weak or unclear; the text is about how the holes add light within the shape.",
-    "C": "Incorrect. The text does not describe how the shadows make the audience feel.",
-    "D": "Correct. Hundreds of tiny holes let light through in many small spots, producing a detailed pattern rather than \"a plain dark shape.\""
+    "A": "Incorrect. The text does not describe how the shadows make the audience feel.",
+    "B": "Correct. Hundreds of tiny holes let light through in many small spots, producing a detailed pattern rather than \"a plain dark shape.\"",
+    "C": "Incorrect. Nothing suggests the shadow is weak or unclear; the text is about how the holes add light within the shape.",
+    "D": "Incorrect. The text says the shadow is \"not a plain dark shape,\" so a simple pattern is the opposite of what the holes create."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "C": "not_in_text"
+    "A": "not_in_text",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

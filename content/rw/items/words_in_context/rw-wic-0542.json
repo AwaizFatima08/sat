@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "intensified",
-    "B": "foreclosed",
-    "C": "documented",
-    "D": "parodied"
+    "A": "foreclosed",
+    "B": "intensified",
+    "C": "parodied",
+    "D": "documented"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "\"Yet\" introduces an objection to finishing the statues. The prized quality depends on the figures being unfinished (\"still in the act of emerging\"), so completing them would make that quality impossible. The blank must mean \"ruled out\" or \"shut off.\"",
-    "A": "Incorrect. Finishing the figures would remove the raw stone, so it would weaken the tension between figure and block, not intensify it.",
-    "B": "Correct. \"Foreclosed\" means made impossible in advance, which fits completion eliminating the sense of a form still emerging.",
-    "C": "Incorrect. \"Documented\" means recorded. Finishing the carving would not record the unfinished quality; it would erase it.",
-    "D": "Incorrect. \"Parodied\" means imitated mockingly; nothing suggests a later sculptor would mock the works."
+    "A": "Correct. \"Foreclosed\" means made impossible in advance, which fits completion eliminating the sense of a form still emerging.",
+    "B": "Incorrect. Finishing the figures would remove the raw stone, so it would weaken the tension between figure and block, not intensify it.",
+    "C": "Incorrect. \"Parodied\" means imitated mockingly; nothing suggests a later sculptor would mock the works.",
+    "D": "Incorrect. \"Documented\" means recorded. Finishing the carving would not record the unfinished quality; it would erase it."
   },
   "traps": {
-    "A": "reversed",
-    "C": "wrong_logic",
-    "D": "not_in_text"
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -15,22 +15,22 @@
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
     "A": "To argue that naked mole-rats are the most social mammals on Earth",
-    "B": "To explain how naked mole-rats dig tunnels through hard soil",
+    "B": "To describe how work is divided among members of a naked mole-rat colony",
     "C": "To describe the snakes that threaten naked mole-rat colonies",
-    "D": "To describe how work is divided among members of a naked mole-rat colony"
+    "D": "To explain how naked mole-rats dig tunnels through hard soil"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "After introducing the colonies, the text explains who does what: the queen gives birth, some members dig and gather food, and larger ones guard the colony. The text is organized around this division of jobs.",
     "A": "Incorrect. The text never compares naked mole-rats with other mammals.",
-    "B": "Incorrect. Digging is listed as one job, but the text does not explain how the digging is done.",
+    "B": "Correct. The text describes the different roles of the queen, the diggers and gatherers, and the guards.",
     "C": "Incorrect. Snakes are mentioned only as intruders that the guards defend against; they are not the focus.",
-    "D": "Correct. The text describes the different roles of the queen, the diggers and gatherers, and the guards."
+    "D": "Incorrect. Digging is listed as one job, but the text does not explain how the digging is done."
   },
   "traps": {
     "A": "too_broad",
-    "B": "not_in_text",
-    "C": "too_narrow"
+    "C": "too_narrow",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

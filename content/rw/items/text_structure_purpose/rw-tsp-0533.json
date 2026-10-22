@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It describes an obstacle to a measurement, how it was overcome, and how accurate the result proved.",
-    "B": "It presents a measurement, questions its accuracy, and then explains why later surveyors rejected it.",
-    "C": "It compares two methods of measuring mountains and argues that one was more reliable.",
-    "D": "It focuses on why Peak XV was so difficult to observe from the plains of northern India."
+    "A": "It presents a measurement, questions its accuracy, and then explains why later surveyors rejected it.",
+    "B": "It compares two methods of measuring mountains and argues that one was more reliable.",
+    "C": "It focuses on why Peak XV was so difficult to observe from the plains of northern India.",
+    "D": "It describes an obstacle to a measurement, how it was overcome, and how accurate the result proved."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The text first explains the obstacle: the surveyors had to measure Peak XV from more than 160 kilometers away, where air and the mountains' mass distorted readings. It then describes the response (mathematicians \"spent years correcting the observations\") and ends by noting that the 1856 figure is within \"about thirty feet\" of today's. That is obstacle, solution, and outcome.",
-    "A": "Correct. The text moves from the difficulty of measuring from far away, to the years of corrections, to the closeness of the result to the modern figure.",
-    "B": "Incorrect. The final sentence shows the measurement was remarkably accurate; nothing says later surveyors rejected it.",
-    "C": "Incorrect. Only one approach to measuring is described, and no comparison of methods is made.",
-    "D": "Incorrect. The difficulty of observation is only the first part of the text; the corrections and the accuracy of the result are left out."
+    "A": "Incorrect. The final sentence shows the measurement was remarkably accurate; nothing says later surveyors rejected it.",
+    "B": "Incorrect. Only one approach to measuring is described, and no comparison of methods is made.",
+    "C": "Incorrect. The difficulty of observation is only the first part of the text; the corrections and the accuracy of the result are left out.",
+    "D": "Correct. The text moves from the difficulty of measuring from far away, to the years of corrections, to the closeness of the result to the modern figure."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "too_narrow"
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

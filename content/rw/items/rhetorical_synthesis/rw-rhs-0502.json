@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to introduce The Scream to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Munch created the first painted version of The Scream in 1893.",
-    "B": "In addition to the first painted version from 1893, Munch made other versions of the image as paintings, pastel drawings, and prints.",
+    "A": "The figure in The Scream presses its hands to its face as it stands by a railing beneath a swirling sky.",
+    "B": "Munch created the first painted version of The Scream in 1893.",
     "C": "The Scream, an 1893 painting by Norwegian artist Edvard Munch, shows a figure pressing its hands to its face beneath a swirling sky.",
-    "D": "The figure in The Scream presses its hands to its face as it stands by a railing beneath a swirling sky."
+    "D": "In addition to the first painted version from 1893, Munch made other versions of the image as paintings, pastel drawings, and prints."
   },
   "answer": "C",
   "explanation": {
     "why": "Readers who do not know The Scream need to learn what kind of work it is, who made it, and what it shows. Only one choice gives all three: it is an 1893 painting, it is by the Norwegian artist Edvard Munch, and it shows a figure beneath a swirling sky.",
-    "A": "Incorrect. It gives a date but refers to \"Munch\" without explaining who he is, and it never says what the work shows.",
-    "B": "Incorrect. It describes the different versions of the image, which assumes the reader already knows the work.",
+    "A": "Incorrect. It describes the image but never says what The Scream is or who created it.",
+    "B": "Incorrect. It gives a date but refers to \"Munch\" without explaining who he is, and it never says what the work shows.",
     "C": "Correct. It identifies the work as a painting, names the artist and his nationality, and describes what it shows.",
-    "D": "Incorrect. It describes the image but never says what The Scream is or who created it."
+    "D": "Incorrect. It describes the different versions of the image, which assumes the reader already knows the work."
   },
   "traps": {
-    "A": "misses_goal",
+    "A": "too_narrow",
     "B": "misses_goal",
-    "D": "too_narrow"
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -55,6 +55,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

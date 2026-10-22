@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the text, what is the main reason the purple frog went unrecognized by scientists for so long?",
   "choices": {
-    "A": "It is so rare that few people in the Western Ghats had ever encountered it.",
-    "B": "It lives underground for most of the year and comes to the surface only briefly.",
-    "C": "Its closest living relatives are found only on islands in the Indian Ocean.",
-    "D": "It feeds almost entirely on termites, a food that few other kinds of frogs will eat."
+    "A": "It lives underground for most of the year and comes to the surface only briefly.",
+    "B": "Its closest living relatives are found only on islands in the Indian Ocean.",
+    "C": "It feeds almost entirely on termites, a food that few other kinds of frogs will eat.",
+    "D": "It is so rare that few people in the Western Ghats had ever encountered it."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The second sentence answers the question: the frog's late recognition \"reflects its habits more than its rarity,\" and the colon introduces those habits, chiefly that it stays underground most of the year and surfaces \"for only a few weeks.\" A frog that is seldom above ground is easy for scientists to miss.",
-    "A": "Incorrect. The text says the late recognition reflects habits \"more than its rarity\" and that local people \"had long known it.\"",
-    "B": "Correct. This restates the habits the text gives as the reason: life underground with only brief appearances.",
-    "C": "Incorrect. This is true according to the text, but it concerns the frog's ancestry, not why scientists overlooked it.",
-    "D": "Incorrect. The text says it feeds mainly on termites but never compares its diet with other frogs or links diet to its late discovery."
+    "A": "Correct. This restates the habits the text gives as the reason: life underground with only brief appearances.",
+    "B": "Incorrect. This is true according to the text, but it concerns the frog's ancestry, not why scientists overlooked it.",
+    "C": "Incorrect. The text says it feeds mainly on termites but never compares its diet with other frogs or links diet to its late discovery.",
+    "D": "Incorrect. The text says the late recognition reflects habits \"more than its rarity\" and that local people \"had long known it.\""
   },
   "traps": {
-    "A": "reversed",
-    "C": "true_irrelevant",
-    "D": "not_in_text"
+    "B": "true_irrelevant",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

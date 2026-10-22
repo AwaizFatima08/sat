@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "occasionally",
+    "A": "indirectly",
     "B": "nominally",
-    "C": "inadvertently",
-    "D": "indirectly"
+    "C": "occasionally",
+    "D": "inadvertently"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The text says the sound comes from \"the bubble's violent collapse, not any contact\" between the claw's parts, and the final clause adds that the noise arises \"a short distance away, in the water.\" The claw makes the bubble, and the bubble makes the sound, so the claw causes the sound only through a middle step: \"indirectly.\"",
-    "A": "Incorrect. The text describes how every snap works; nothing suggests the claw causes the sound only some of the time.",
+    "A": "Correct. The claw creates the bubble, and the bubble's collapse creates the sound, so the claw is responsible through an intermediate step.",
     "B": "Incorrect. \"Nominally\" would mean responsible in name only, as if the claw played no real part. The claw does cause the sound, just not by direct contact.",
-    "C": "Incorrect. The text says nothing about whether the shrimp means to make the sound; it explains how the sound is physically produced.",
-    "D": "Correct. The claw creates the bubble, and the bubble's collapse creates the sound, so the claw is responsible through an intermediate step."
+    "C": "Incorrect. The text describes how every snap works; nothing suggests the claw causes the sound only some of the time.",
+    "D": "Incorrect. The text says nothing about whether the shrimp means to make the sound; it explains how the sound is physically produced."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "too_broad",
-    "C": "not_in_text"
+    "C": "wrong_logic",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

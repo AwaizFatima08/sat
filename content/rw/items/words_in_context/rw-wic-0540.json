@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "fabricated",
-    "B": "compelling",
-    "C": "anomalous",
-    "D": "equivocal"
+    "A": "equivocal",
+    "B": "anomalous",
+    "C": "compelling",
+    "D": "fabricated"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The colon introduces an explanation of the blank: the signatures \"could also have arisen\" another way, so the grains are \"consistent with\" early water \"without proving it.\" Evidence that fits two explanations is open to more than one interpretation.",
-    "A": "Incorrect. \"Fabricated\" means invented or faked. The cautious geologists question what the evidence means, not whether it is real.",
-    "B": "Incorrect. \"Compelling\" means convincing, but these geologists say the evidence does not prove the claim.",
-    "C": "Incorrect. \"Anomalous\" means unusual or out of line with expectations; the text's point is that the evidence fits more than one explanation, not that it is strange.",
-    "D": "Correct. \"Equivocal\" means open to more than one interpretation, which matches evidence that is consistent with early water without proving it."
+    "A": "Correct. \"Equivocal\" means open to more than one interpretation, which matches evidence that is consistent with early water without proving it.",
+    "B": "Incorrect. \"Anomalous\" means unusual or out of line with expectations; the text's point is that the evidence fits more than one explanation, not that it is strange.",
+    "C": "Incorrect. \"Compelling\" means convincing, but these geologists say the evidence does not prove the claim.",
+    "D": "Incorrect. \"Fabricated\" means invented or faked. The cautious geologists question what the evidence means, not whether it is real."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "reversed",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

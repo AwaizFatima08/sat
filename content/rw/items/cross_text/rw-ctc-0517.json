@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the popular image in Text 1?",
   "choices": {
-    "A": "By arguing that most goods were carried in short stages by many different traders",
-    "B": "By claiming that documents from oasis towns are too few to support any conclusion",
-    "C": "By agreeing that most merchants traveled the full length of the routes",
-    "D": "By arguing that Marco Polo never actually traveled as far as China"
+    "A": "By claiming that documents from oasis towns are too few to support any conclusion",
+    "B": "By arguing that Marco Polo never actually traveled as far as China",
+    "C": "By arguing that most goods were carried in short stages by many different traders",
+    "D": "By agreeing that most merchants traveled the full length of the routes"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Text 1 describes the image of merchants carrying silk the whole way and of Marco Polo as a typical traveler. Text 2 says most traders went \"only a few hundred kilometers\" and that silk moved \"through many hands,\" with travelers like Polo \"rare exceptions.\" Text 2 replaces the image of one long journey with many short ones.",
-    "A": "Correct. Text 2 says goods passed between neighboring markets and \"through many hands\" on the way west.",
-    "B": "Incorrect. Text 2 relies on these documents as evidence; it never questions whether there are enough of them.",
-    "C": "Incorrect. Text 2 says most traders covered \"only a few hundred kilometers,\" the opposite of this choice.",
-    "D": "Incorrect. Text 2 calls Marco Polo a rare long-distance traveler, which assumes he did make the journey."
+    "A": "Incorrect. Text 2 relies on these documents as evidence; it never questions whether there are enough of them.",
+    "B": "Incorrect. Text 2 calls Marco Polo a rare long-distance traveler, which assumes he did make the journey.",
+    "C": "Correct. Text 2 says goods passed between neighboring markets and \"through many hands\" on the way west.",
+    "D": "Incorrect. Text 2 says most traders covered \"only a few hundred kilometers,\" the opposite of this choice."
   },
   "traps": {
-    "B": "not_in_text",
-    "C": "reversed",
+    "A": "not_in_text",
+    "B": "reversed",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "consonants; was",
+    "A": "consonants was",
     "B": "consonants—was",
     "C": "consonants, was",
-    "D": "consonants was"
+    "D": "consonants; was"
   },
   "answer": "C",
   "explanation": {
     "why": "The subject \"Their alphabet\" goes with the verb \"was adapted.\" In between, \"which recorded only consonants\" is extra information. It opens with a comma after \"alphabet,\" so it must close with a comma before \"was.\"",
-    "A": "Incorrect. A semicolon would cut the subject \"Their alphabet\" off from its verb, leaving two fragments.",
+    "A": "Incorrect. Without a closing comma, the extra information runs into the verb, and \"consonants was\" seems to pair a plural noun with a singular verb.",
     "B": "Incorrect. Extra information that opens with a comma can't close with a dash; the two marks must match.",
     "C": "Correct. The closing comma matches the comma after \"alphabet,\" so the subject connects to \"was adapted.\"",
-    "D": "Incorrect. Without a closing comma, the extra information runs into the verb, and \"consonants was\" seems to pair a plural noun with a singular verb."
+    "D": "Incorrect. A semicolon would cut the subject \"Their alphabet\" off from its verb, leaving two fragments."
   },
   "traps": {
     "A": "grammar_rule",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

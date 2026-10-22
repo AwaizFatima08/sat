@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "fragile",
-    "B": "distinctive",
-    "C": "interchangeable",
-    "D": "ancient"
+    "A": "interchangeable",
+    "B": "fragile",
+    "C": "ancient",
+    "D": "distinctive"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The image worked \"much like a signature,\" showing \"who had approved or owned\" something. A mark can identify one person only if it is different from everyone else's, so the blank needs a word like \"distinctive.\"",
-    "A": "Incorrect. Whether the seal could break has nothing to do with why its image could identify a person.",
-    "B": "Correct. Each person's design was distinctive, or different from others, so the image could show who had approved or owned an item, just as a signature does.",
-    "C": "Incorrect. Interchangeable designs, ones that could be swapped for one another, could not show who approved or owned something; it would not work like a signature.",
-    "D": "Incorrect. The seals are ancient to us today, but age does not explain why an image could identify one particular person."
+    "A": "Incorrect. Interchangeable designs, ones that could be swapped for one another, could not show who approved or owned something; it would not work like a signature.",
+    "B": "Incorrect. Whether the seal could break has nothing to do with why its image could identify a person.",
+    "C": "Incorrect. The seals are ancient to us today, but age does not explain why an image could identify one particular person.",
+    "D": "Correct. Each person's design was distinctive, or different from others, so the image could show who had approved or owned an item, just as a signature does."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
-    "D": "wrong_logic"
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

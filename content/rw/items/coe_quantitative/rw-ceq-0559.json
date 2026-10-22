@@ -41,21 +41,21 @@
   "stem": "Which choice most effectively uses data from the table to support Pinto's argument?",
   "choices": {
     "A": "In both decades, steamships saved 21 or 22 days westbound but only 9 or 10 days eastbound.",
-    "B": "Both kinds of ships made faster crossings in both directions in the 1850s than they had in the 1840s.",
-    "C": "Sailing packets took 13 to 14 days longer to cross westbound than eastbound in both decades.",
+    "B": "Sailing packets took 13 to 14 days longer to cross westbound than eastbound in both decades.",
+    "C": "Both kinds of ships made faster crossings in both directions in the 1850s than they had in the 1840s.",
     "D": "In the 1850s, steamships' time advantage over sailing packets was greater eastbound than westbound."
   },
   "answer": "A",
   "explanation": {
     "why": "Pinto's claim concerns the time steamships saved, which is the difference between packet and steamship times in each direction. Support must compute that saving for both directions and compare them. Westbound, steamships saved 37 − 16 = 21 days in the 1840s and 35 − 13 = 22 in the 1850s; eastbound, they saved only 23 − 14 = 9 and 22 − 12 = 10 days.",
     "A": "Correct. It compares the time steamships saved in each direction and shows the saving was more than twice as large westbound.",
-    "B": "Incorrect. This is true, but improvement over time says nothing about whether steam's advantage differed by direction.",
-    "C": "Incorrect. This is true, but it repeats the premise about sailing ships and the wind; it does not compare sailing ships with steamships, which Pinto's claim requires.",
+    "B": "Incorrect. This is true, but it repeats the premise about sailing ships and the wind; it does not compare sailing ships with steamships, which Pinto's claim requires.",
+    "C": "Incorrect. This is true, but improvement over time says nothing about whether steam's advantage differed by direction.",
     "D": "Incorrect. In the 1850s steamships saved 10 days eastbound but 22 days westbound, so this reverses the table."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "too_narrow",
+    "B": "too_narrow",
+    "C": "true_irrelevant",
     "D": "reversed"
   },
   "grammar": null,
@@ -65,8 +65,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

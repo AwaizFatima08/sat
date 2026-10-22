@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "one\",",
+    "A": "one\"",
     "B": "one,\"",
-    "C": "one.\"",
-    "D": "one\""
+    "C": "one\",",
+    "D": "one.\""
   },
   "answer": "B",
   "explanation": {
     "why": "The grandfather's sentence, \"This is your grandmother at nineteen,\" is interrupted by \"he said.\" The first part of the quotation ends with a comma, and in American English that comma goes inside the closing quotation mark.",
-    "A": "Incorrect. In American English, a comma always goes inside the closing quotation mark, not outside it.",
+    "A": "Incorrect. A comma is needed to separate the quotation from the speaker tag \"he said.\"",
     "B": "Correct. The comma before \"he said\" goes inside the closing quotation mark, as American English requires.",
-    "C": "Incorrect. The quoted sentence continues after \"he said,\" so the first part can't end with a period.",
-    "D": "Incorrect. A comma is needed to separate the quotation from the speaker tag \"he said.\""
+    "C": "Incorrect. In American English, a comma always goes inside the closing quotation mark, not outside it.",
+    "D": "Incorrect. The quoted sentence continues after \"he said,\" so the first part can't end with a period."
   },
   "traps": {
     "A": "grammar_rule",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

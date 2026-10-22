@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "As a result,",
-    "B": "Instead,",
-    "C": "Nevertheless,",
+    "A": "Nevertheless,",
+    "B": "As a result,",
+    "C": "Instead,",
     "D": "Similarly,"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The text explains that a flamingo's pink color comes from carotenoids in its natural food. The last sentence describes what follows when that food is missing: zoo flamingos turn pale unless carotenoids are added. A cause-and-effect transition is needed.",
-    "A": "Correct. \"As a result\" shows that zoo flamingos fade because their color depends on pigments in their diet.",
-    "B": "Incorrect. \"Instead\" would mean the zoo birds replace something just mentioned, but the last sentence describes a consequence of the diet explanation.",
-    "C": "Incorrect. \"Nevertheless\" means \"in spite of that,\" but fading without carotenoids is exactly what the explanation predicts, not something that happens despite it.",
+    "A": "Incorrect. \"Nevertheless\" means \"in spite of that,\" but fading without carotenoids is exactly what the explanation predicts, not something that happens despite it.",
+    "B": "Correct. \"As a result\" shows that zoo flamingos fade because their color depends on pigments in their diet.",
+    "C": "Incorrect. \"Instead\" would mean the zoo birds replace something just mentioned, but the last sentence describes a consequence of the diet explanation.",
     "D": "Incorrect. \"Similarly\" introduces a parallel point, but the last sentence is an outcome of the earlier explanation, not a separate, similar fact."
   },
   "traps": {
-    "B": "wrong_logic",
+    "A": "wrong_logic",
     "C": "wrong_logic",
     "D": "wrong_logic"
   },
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Instead,",
+    "A": "Similarly,",
     "B": "Even so,",
     "C": "Accordingly,",
-    "D": "Similarly,"
+    "D": "Instead,"
   },
   "answer": "B",
   "explanation": {
     "why": "The second sentence suggests Nasreen should succeed: she watched for years and wrote down every step. The last sentence reports that the dish still came out wrong. The transition must signal an outcome that goes against what the earlier preparation would lead a reader to expect.",
-    "A": "Incorrect. \"Instead\" would mean the failed dish replaced something mentioned before, but Nasreen's notes and her cooking are not alternatives; she uses the notebook while she cooks. This is the closest near miss.",
+    "A": "Incorrect. \"Similarly\" signals a parallel point, but the failed dish contrasts with Nasreen's careful preparation.",
     "B": "Correct. \"Even so\" signals that the dish went wrong despite Nasreen's careful notes.",
     "C": "Incorrect. \"Accordingly\" means \"as a result,\" but careful notes would lead us to expect success, not a dish that tastes wrong.",
-    "D": "Incorrect. \"Similarly\" signals a parallel point, but the failed dish contrasts with Nasreen's careful preparation."
+    "D": "Incorrect. \"Instead\" would mean the failed dish replaced something mentioned before, but Nasreen's notes and her cooking are not alternatives; she uses the notebook while she cooks. This is the closest near miss."
   },
   "traps": {
     "A": "wrong_logic",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

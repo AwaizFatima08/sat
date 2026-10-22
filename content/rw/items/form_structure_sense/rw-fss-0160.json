@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "the mole's brain receives a detailed picture of every surface the star touches,",
-    "B": "the star sends a detailed picture of every surface it touches to the mole's brain,",
+    "B": "the mole's brain is sent a detailed picture of every surface the star touches,",
     "C": "a detailed picture of every surface the star touches is sent to the mole's brain,",
-    "D": "the mole's brain is sent a detailed picture of every surface the star touches,"
+    "D": "the star sends a detailed picture of every surface it touches to the mole's brain,"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The introductory phrase \"Tapping the ground around the animal roughly ten times per second\" describes the star on the mole's snout. A modifier at the start of a sentence applies to the subject that comes right after the comma, so that subject must be \"the star.\"",
     "A": "Incorrect. This makes \"the mole's brain\" the subject, so the sentence says the brain taps the ground.",
-    "B": "Correct. \"The star\" comes right after the introductory phrase, so it is clear that the star is what taps the ground.",
+    "B": "Incorrect. This makes \"the mole's brain\" the subject again, so the brain is said to be tapping the ground.",
     "C": "Incorrect. This makes \"a detailed picture\" the subject, so the sentence says the picture taps the ground.",
-    "D": "Incorrect. This makes \"the mole's brain\" the subject again, so the brain is said to be tapping the ground."
+    "D": "Correct. \"The star\" comes right after the introductory phrase, so it is clear that the star is what taps the ground."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "B": "grammar_rule",
+    "C": "grammar_rule"
   },
   "grammar": "modifier",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

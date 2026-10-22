@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "preserving? Mori",
-    "B": "preserving. Mori",
-    "C": "preserving, Mori",
-    "D": "preserving; Mori"
+    "A": "preserving. Mori",
+    "B": "preserving, Mori",
+    "C": "preserving; Mori",
+    "D": "preserving? Mori"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "After the colon, the writer states the question directly, in question word order: \"who decides which objects are worth preserving?\" A direct question ends with a question mark, and the next sentence, \"Mori argues …,\" begins after it.",
-    "A": "Correct. A question mark ends the direct question, and a new sentence begins with \"Mori.\"",
-    "B": "Incorrect. \"Who decides which objects are worth preserving\" is a direct question, so it needs a question mark, not a period.",
-    "C": "Incorrect. A comma can't end the question, and it would join two independent clauses with only a comma: a comma splice.",
-    "D": "Incorrect. A semicolon can't end a direct question; the question still needs a question mark."
+    "A": "Incorrect. \"Who decides which objects are worth preserving\" is a direct question, so it needs a question mark, not a period.",
+    "B": "Incorrect. A comma can't end the question, and it would join two independent clauses with only a comma: a comma splice.",
+    "C": "Incorrect. A semicolon can't end a direct question; the question still needs a question mark.",
+    "D": "Correct. A question mark ends the direct question, and a new sentence begins with \"Mori.\""
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "punctuation",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

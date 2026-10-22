@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Instead,",
+    "A": "Admittedly,",
     "B": "Similarly,",
-    "C": "Admittedly,",
-    "D": "Consequently,"
+    "C": "Consequently,",
+    "D": "Instead,"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The last sentence continues the supporters' argument. It first grants a point that critics might make (\"a power drill is not a book\") and then, after \"but,\" explains why lending drills still fits a library's purpose. A transition that concedes a point before answering it is needed.",
-    "A": "Incorrect. \"Instead\" would mean the sentence replaces the supporters' view, but it continues that view.",
+    "A": "Correct. \"Admittedly\" signals that the supporters grant that a drill is not a book before arguing that lending one serves a library's purpose.",
     "B": "Incorrect. \"Similarly\" would introduce a parallel point, but the statement \"a power drill is not a book\" grants a difference. This is tempting because the sentence later compares a drill to a reference volume.",
-    "C": "Correct. \"Admittedly\" signals that the supporters grant that a drill is not a book before arguing that lending one serves a library's purpose.",
-    "D": "Incorrect. A drill not being a book is not a result of libraries sharing resources. This is tempting because the sentence supports the supporters' reasoning, but its first part is a concession, not a conclusion."
+    "C": "Incorrect. A drill not being a book is not a result of libraries sharing resources. This is tempting because the sentence supports the supporters' reasoning, but its first part is a concession, not a conclusion.",
+    "D": "Incorrect. \"Instead\" would mean the sentence replaces the supporters' view, but it continues that view."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

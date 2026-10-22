@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the text, why might elephants freeze in place and lean forward?",
   "choices": {
-    "A": "To produce low rumbles that travel through the ground",
-    "B": "To better sense vibrations traveling through the ground",
-    "C": "To hear airborne sounds too low for their ears to catch",
-    "D": "To rest their feet after walking several kilometers"
+    "A": "To better sense vibrations traveling through the ground",
+    "B": "To hear airborne sounds too low for their ears to catch",
+    "C": "To rest their feet after walking several kilometers",
+    "D": "To produce low rumbles that travel through the ground"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The text says elephants \"appear to detect these vibrations with sensitive nerve endings in their feet and trunks,\" and that they freeze and lean forward \"as if listening.\" Since the vibrations are sensed through the feet, this listening posture most likely helps them pick up the signals.",
-    "A": "Incorrect. The freezing is linked to detecting vibrations, not to making the rumbles.",
-    "B": "Correct. The text connects the freezing and leaning directly to detecting ground vibrations through the feet and trunk.",
-    "C": "Incorrect. The text says humans cannot hear the rumbles; it never says elephants' ears cannot, and it ties the behavior to ground vibrations.",
-    "D": "Incorrect. The text gives no sign that the behavior has anything to do with tiredness."
+    "A": "Correct. The text connects the freezing and leaning directly to detecting ground vibrations through the feet and trunk.",
+    "B": "Incorrect. The text says humans cannot hear the rumbles; it never says elephants' ears cannot, and it ties the behavior to ground vibrations.",
+    "C": "Incorrect. The text gives no sign that the behavior has anything to do with tiredness.",
+    "D": "Incorrect. The freezing is linked to detecting vibrations, not to making the rumbles."
   },
   "traps": {
-    "A": "reversed",
+    "B": "not_in_text",
     "C": "not_in_text",
-    "D": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

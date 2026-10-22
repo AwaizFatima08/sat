@@ -44,23 +44,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "Nyjer seed, which drew 238 visits.",
+    "A": "black-oil sunflower seed, which drew 412 visits.",
     "B": "safflower, which drew 167 visits.",
     "C": "millet, which drew birds of six different species.",
-    "D": "black-oil sunflower seed, which drew 412 visits."
+    "D": "Nyjer seed, which drew 238 visits."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The statement is about the most visits, so check the \"Bird visits\" column. The largest number there is 412, for black-oil sunflower seed.",
-    "A": "Incorrect. Nyjer drew 238 visits, the second-highest number, but fewer than sunflower seed's 412.",
+    "A": "Correct. Black-oil sunflower seed drew 412 visits, more than any other seed.",
     "B": "Incorrect. Safflower drew the fewest visits of the four seeds, not the most.",
     "C": "Incorrect. This is about the number of species, not the number of visits, and millet drew only 189 visits.",
-    "D": "Correct. Black-oil sunflower seed drew 412 visits, more than any other seed."
+    "D": "Incorrect. Nyjer drew 238 visits, the second-highest number, but fewer than sunflower seed's 412."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "reversed",
-    "C": "true_irrelevant"
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

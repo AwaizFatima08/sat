@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "For example,",
-    "B": "Specifically,",
-    "C": "Even so,",
-    "D": "Likewise,"
+    "A": "Likewise,",
+    "B": "For example,",
+    "C": "Specifically,",
+    "D": "Even so,"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The second sentence says the sundari copes with low oxygen through \"a single adaptation of its root system\" but does not say what that adaptation is. The last sentence names and describes it. The transition must introduce a precise account of something just mentioned in general terms.",
-    "A": "Incorrect. \"For example\" would present the pneumatophores as one case among several, but the text says the tree relies on \"a single adaptation.\" The last sentence describes that adaptation itself rather than offering an example of it. This is the closest near miss.",
-    "B": "Correct. \"Specifically\" signals that the last sentence states exactly what the \"single adaptation of its root system\" is.",
-    "C": "Incorrect. \"Even so\" signals a contrast, but the pneumatophores do not conflict with anything in the previous sentence; they explain how the tree copes.",
-    "D": "Incorrect. \"Likewise\" introduces a separate but similar case, yet the last sentence describes the same tree and the same adaptation."
+    "A": "Incorrect. \"Likewise\" introduces a separate but similar case, yet the last sentence describes the same tree and the same adaptation.",
+    "B": "Incorrect. \"For example\" would present the pneumatophores as one case among several, but the text says the tree relies on \"a single adaptation.\" The last sentence describes that adaptation itself rather than offering an example of it. This is the closest near miss.",
+    "C": "Correct. \"Specifically\" signals that the last sentence states exactly what the \"single adaptation of its root system\" is.",
+    "D": "Incorrect. \"Even so\" signals a contrast, but the pneumatophores do not conflict with anything in the previous sentence; they explain how the tree copes."
   },
   "traps": {
     "A": "wrong_logic",
-    "C": "wrong_logic",
+    "B": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

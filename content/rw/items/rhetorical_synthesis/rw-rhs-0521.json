@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to introduce the Hanseatic League to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Led by Lübeck, in what is now Germany, the league's member towns lay mostly along the North Sea and the Baltic Sea.",
-    "B": "The Hanseatic League, which held its last general meeting in 1669, had been most powerful from the 1200s to the 1400s.",
-    "C": "Merchants of the Hanseatic League, whose towns lay mostly along the North Sea and the Baltic Sea, traded fish, timber, grain, and furs.",
-    "D": "The Hanseatic League was a network of northern European merchant groups and trading towns, most powerful from the 1200s to the 1400s."
+    "A": "The Hanseatic League was a network of northern European merchant groups and trading towns, most powerful from the 1200s to the 1400s.",
+    "B": "Merchants of the Hanseatic League, whose towns lay mostly along the North Sea and the Baltic Sea, traded fish, timber, grain, and furs.",
+    "C": "The Hanseatic League, which held its last general meeting in 1669, had been most powerful from the 1200s to the 1400s.",
+    "D": "Led by Lübeck, in what is now Germany, the league's member towns lay mostly along the North Sea and the Baltic Sea."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "An audience that has never heard of the Hanseatic League first needs to know what it was. Only one choice explains that it was a network of merchant groups and trading towns and places it in northern Europe at a particular time.",
-    "A": "Incorrect. It refers to \"the league\" as though readers already know what it is, and it never explains what the league was.",
-    "B": "Incorrect. It gives dates for the league but never says what kind of organization it was, so an unfamiliar reader would be lost.",
-    "C": "Incorrect. It tells where the league's towns were and what its merchants traded, but it never explains what the league itself was.",
-    "D": "Correct. It defines the league, says where it operated, and tells when it was most powerful."
+    "A": "Correct. It defines the league, says where it operated, and tells when it was most powerful.",
+    "B": "Incorrect. It tells where the league's towns were and what its merchants traded, but it never explains what the league itself was.",
+    "C": "Incorrect. It gives dates for the league but never says what kind of organization it was, so an unfamiliar reader would be lost.",
+    "D": "Incorrect. It refers to \"the league\" as though readers already know what it is, and it never explains what the league was."
   },
   "traps": {
-    "A": "misses_goal",
-    "B": "misses_goal",
-    "C": "too_narrow"
+    "B": "too_narrow",
+    "C": "misses_goal",
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "was",
-    "B": "were",
-    "C": "has been",
-    "D": "is"
+    "A": "has been",
+    "B": "is",
+    "C": "was",
+    "D": "were"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "When two subjects are joined by \"neither ... nor,\" the verb agrees with the subject closer to it. Here the closer subject is \"modern navigational charts,\" which is plural, and the passage is set in the past, so the verb must be the plural past form \"were.\"",
-    "A": "Incorrect. \"Was\" agrees with the farther subject, \"a magnetic compass,\" but with \"neither ... nor\" the verb must agree with the nearer subject, the plural \"charts.\"",
-    "B": "Correct. The plural past-tense verb \"were\" agrees with the nearer subject, \"modern navigational charts,\" and fits the 1976 setting.",
-    "C": "Incorrect. \"Has been\" is singular, so it doesn't agree with the nearer subject, the plural \"charts.\"",
-    "D": "Incorrect. \"Is\" is singular, so it doesn't agree with the plural \"charts,\" and it is also in the present tense."
+    "A": "Incorrect. \"Has been\" is singular, so it doesn't agree with the nearer subject, the plural \"charts.\"",
+    "B": "Incorrect. \"Is\" is singular, so it doesn't agree with the plural \"charts,\" and it is also in the present tense.",
+    "C": "Incorrect. \"Was\" agrees with the farther subject, \"a magnetic compass,\" but with \"neither ... nor\" the verb must agree with the nearer subject, the plural \"charts.\"",
+    "D": "Correct. The plural past-tense verb \"were\" agrees with the nearer subject, \"modern navigational charts,\" and fits the 1976 setting."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "B": "grammar_rule",
+    "C": "grammar_rule"
   },
   "grammar": "subject_verb",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

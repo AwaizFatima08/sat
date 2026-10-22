@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Soomro's argument?",
   "choices": {
-    "A": "Many of the older houses that have a mangh were built for families of wealthy merchants.",
-    "B": "Some newer buildings in the city have replaced their mangh with electric fans.",
-    "C": "When the breeze was blowing, rooms beneath a mangh stayed just as hot as rooms without one.",
-    "D": "On hot afternoons, rooms under a mangh were several degrees cooler than similar rooms without one."
+    "A": "On hot afternoons, rooms under a mangh were several degrees cooler than similar rooms without one.",
+    "B": "Many of the older houses that have a mangh were built for families of wealthy merchants.",
+    "C": "Some newer buildings in the city have replaced their mangh with electric fans.",
+    "D": "When the breeze was blowing, rooms beneath a mangh stayed just as hot as rooms without one."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Soomro argues that the mangh was built to cool the rooms below by channeling the breeze. Measurements showing that rooms under a mangh are cooler than similar rooms without one support the claim that it served this cooling purpose.",
-    "A": "Incorrect. Who owned the houses does not show what the mangh was for.",
-    "B": "Incorrect. What later buildings did says nothing about whether the original mangh cooled rooms.",
-    "C": "Incorrect. If rooms under a mangh were no cooler, the structure would not seem to serve a cooling purpose; this weakens the argument.",
-    "D": "Correct. Rooms under a mangh were measurably cooler, which fits the claim that the structure was built to cool them."
+    "A": "Correct. Rooms under a mangh were measurably cooler, which fits the claim that the structure was built to cool them.",
+    "B": "Incorrect. Who owned the houses does not show what the mangh was for.",
+    "C": "Incorrect. What later buildings did says nothing about whether the original mangh cooled rooms.",
+    "D": "Incorrect. If rooms under a mangh were no cooler, the structure would not seem to serve a cooling purpose; this weakens the argument."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "true_irrelevant",
-    "C": "reversed"
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

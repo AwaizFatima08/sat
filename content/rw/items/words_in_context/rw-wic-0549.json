@@ -15,21 +15,21 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "mitigated",
-    "B": "compounded",
-    "C": "preempted",
+    "B": "preempted",
+    "C": "compounded",
     "D": "overshadowed"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The minority view keeps the asteroid in the story (\"did not supplant the impact\") and says the eruptions had already weakened ecosystems, \"leaving life less able to withstand the sudden blow.\" The blank must mean that volcanism made the impact's effects worse.",
     "A": "Incorrect. \"Mitigated\" means lessened, but ecosystems already stressed by eruptions would suffer more from the impact, not less.",
-    "B": "Correct. \"Compounded\" means made worse by adding to, which fits eruptions that weakened life before the asteroid struck.",
-    "C": "Incorrect. The eruptions did come first, but \"preempted\" means made the other unnecessary by acting first. The text says volcanism \"did not supplant the impact,\" so it did not take the impact's place.",
+    "B": "Incorrect. The eruptions did come first, but \"preempted\" means made the other unnecessary by acting first. The text says volcanism \"did not supplant the impact,\" so it did not take the impact's place.",
+    "C": "Correct. \"Compounded\" means made worse by adding to, which fits eruptions that weakened life before the asteroid struck.",
     "D": "Incorrect. \"Overshadowed\" would mean volcanism outweighed the impact in importance, but the text says volcanism \"did not supplant the impact\"; it added to the impact's harm instead of eclipsing it."
   },
   "traps": {
     "A": "reversed",
-    "C": "wrong_logic",
+    "B": "wrong_logic",
     "D": "too_broad"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

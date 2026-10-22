@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "founds",
+    "A": "will found",
     "B": "has founded",
-    "C": "had already founded",
-    "D": "will found"
+    "C": "founds",
+    "D": "had already founded"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "\"By the time he received the prize\" points to a moment in the past (1979), and the founding happened before that moment. An action completed before another past event takes the past perfect, \"had already founded.\"",
-    "A": "Incorrect. The present tense \"founds\" doesn't fit an event that happened before 1979.",
+    "A": "Incorrect. The future \"will found\" places the founding after the prize, but \"By the time\" shows it came before.",
     "B": "Incorrect. The present perfect \"has founded\" connects an action to the present, but the sentence sets it before a past moment.",
-    "C": "Correct. The past perfect \"had already founded\" shows the founding came before he received the prize.",
-    "D": "Incorrect. The future \"will found\" places the founding after the prize, but \"By the time\" shows it came before."
+    "C": "Incorrect. The present tense \"founds\" doesn't fit an event that happened before 1979.",
+    "D": "Correct. The past perfect \"had already founded\" shows the founding came before he received the prize."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "verb_form",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

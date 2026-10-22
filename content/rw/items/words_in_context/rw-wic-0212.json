@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "diversity",
-    "B": "stasis",
-    "C": "instability",
-    "D": "redundancy"
+    "B": "redundancy",
+    "C": "stasis",
+    "D": "instability"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The text says the price of editing is that the sequences around edited sites \"have changed unusually little\" during evolution, because mutations there would disrupt editing. The blank names that price: a lack of change. \"Stasis\" means a condition in which little or nothing changes.",
     "A": "Incorrect. Diversity would mean more variation, but the text says the relevant regions changed \"unusually little.\"",
-    "B": "Correct. The regions around edited sites \"have changed unusually little,\" so the cost of editing is a degree of genetic stasis.",
-    "C": "Incorrect. Instability would mean frequent change; the text describes sequences that are held unusually constant.",
-    "D": "Incorrect. The text says nothing about duplicated genes or backup copies; the price it describes is a lack of change."
+    "B": "Incorrect. The text says nothing about duplicated genes or backup copies; the price it describes is a lack of change.",
+    "C": "Correct. The regions around edited sites \"have changed unusually little,\" so the cost of editing is a degree of genetic stasis.",
+    "D": "Incorrect. Instability would mean frequent change; the text describes sequences that are held unusually constant."
   },
   "traps": {
     "A": "reversed",
-    "C": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

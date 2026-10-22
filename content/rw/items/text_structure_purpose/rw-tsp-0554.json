@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It recounts a popular story, confirms it with new evidence, and then explains why the suites were forgotten.",
-    "B": "It describes how Bach composed the suites and then traces their influence on later music for the cello.",
-    "C": "It recounts a popular story, corrects an assumption in it, and then redefines the central figure's achievement.",
-    "D": "It recounts a popular story and then dismisses Casals's role in the suites' later fame as exaggerated."
+    "A": "It describes how Bach composed the suites and then traces their influence on later music for the cello.",
+    "B": "It recounts a popular story and then dismisses Casals's role in the suites' later fame as exaggerated.",
+    "C": "It recounts a popular story, confirms it with new evidence, and then explains why the suites were forgotten.",
+    "D": "It recounts a popular story, corrects an assumption in it, and then redefines the central figure's achievement."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The text opens with the story that Casals \"rediscovered\" forgotten suites. It corrects this (\"had not, in fact, been lost\"), explains that they lacked \"standing,\" and concludes that Casals's real achievement was \"to change what listeners believed it was for.\" The structure is story, correction, and a redefined achievement.",
-    "A": "Incorrect. The text contradicts the popular story; it says the suites were never lost or forgotten.",
-    "B": "Incorrect. The text says nothing about how Bach composed the suites or about later music they influenced.",
-    "C": "Correct. The assumption that the suites were lost is corrected, and Casals's achievement is redefined as changing how the suites were seen.",
-    "D": "Incorrect. The author still credits Casals with helping establish the suites as concert works; only the idea of rediscovery is rejected."
+    "A": "Incorrect. The text says nothing about how Bach composed the suites or about later music they influenced.",
+    "B": "Incorrect. The author still credits Casals with helping establish the suites as concert works; only the idea of rediscovery is rejected.",
+    "C": "Incorrect. The text contradicts the popular story; it says the suites were never lost or forgotten.",
+    "D": "Correct. The assumption that the suites were lost is corrected, and Casals's achievement is redefined as changing how the suites were seen."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "too_broad"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

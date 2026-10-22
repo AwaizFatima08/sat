@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "about one in five, since the households were chosen at random.",
-    "B": "lower than one in five, since people tend to exaggerate how busy they are.",
-    "C": "higher than the roughly one in five found by the survey.",
-    "D": "impossible to estimate with any kind of survey."
+    "A": "lower than one in five, since people tend to exaggerate how busy they are.",
+    "B": "impossible to estimate with any kind of survey.",
+    "C": "about one in five, since the households were chosen at random.",
+    "D": "higher than the roughly one in five found by the survey."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Choosing households at random does not make the people who answer typical. The adults who answered on weekday afternoons are the ones with fewer duties, and duties are the main cause of feeling rushed. The busiest adults were left out, so the true share is probably higher than the survey's figure.",
-    "A": "Incorrect. Random households do not guarantee typical respondents; Yoon's point is that the people who answered were less busy than average.",
-    "B": "Incorrect. The text never suggests that respondents exaggerated; it points to a bias in who answered, which would push the true figure up, not down.",
-    "C": "Correct. The survey mostly missed adults with heavy work and caregiving duties, who are the most likely to feel rushed, so the true share is likely higher.",
-    "D": "Incorrect. Yoon identifies a problem with this survey's timing, not with every possible survey."
+    "A": "Incorrect. The text never suggests that respondents exaggerated; it points to a bias in who answered, which would push the true figure up, not down.",
+    "B": "Incorrect. Yoon identifies a problem with this survey's timing, not with every possible survey.",
+    "C": "Incorrect. Random households do not guarantee typical respondents; Yoon's point is that the people who answered were less busy than average.",
+    "D": "Correct. The survey mostly missed adults with heavy work and caregiving duties, who are the most likely to feel rushed, so the true share is likely higher."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "too_broad"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

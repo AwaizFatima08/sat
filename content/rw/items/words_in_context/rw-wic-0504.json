@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "tear",
-    "B": "color",
+    "A": "color",
+    "B": "tear",
     "C": "bind",
     "D": "measure"
   },
   "answer": "C",
   "explanation": {
     "why": "The workers pull the leaves together, collect \"sticky threads\" of silk, and end up with \"a closed nest.\" The blank must be a verb meaning \"fasten\" or \"join,\" so \"bind\" fits.",
-    "A": "Incorrect. Tearing the leaves apart is the opposite of joining them to form \"a closed nest.\"",
-    "B": "Incorrect. Nothing in the text is about the color of the leaves or the silk; the silk is used to build.",
+    "A": "Incorrect. Nothing in the text is about the color of the leaves or the silk; the silk is used to build.",
+    "B": "Incorrect. Tearing the leaves apart is the opposite of joining them to form \"a closed nest.\"",
     "C": "Correct. The ants pull the leaves together and then use sticky silk on the edges to form \"a closed nest,\" so the silk fastens, or binds, the edges together.",
     "D": "Incorrect. Measuring the leaf edges would not hold them \"together\"; the sentence describes how the silk joins the leaves into a closed nest."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
+    "A": "not_in_text",
+    "B": "reversed",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

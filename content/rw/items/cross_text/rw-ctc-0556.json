@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the interpretation offered by Holt in Text 1?",
   "choices": {
-    "A": "By denying that labeled carbon supplied to a large tree is ever found in nearby seedlings",
-    "B": "By contending that the results do not establish that the networks meaningfully feed seedlings",
-    "C": "By claiming that seedlings get most of their carbon from the soil rather than from older trees",
-    "D": "By agreeing that the networks feed seedlings but doubting that this helps them survive in shade"
+    "A": "By contending that the results do not establish that the networks meaningfully feed seedlings",
+    "B": "By agreeing that the networks feed seedlings but doubting that this helps them survive in shade",
+    "C": "By denying that labeled carbon supplied to a large tree is ever found in nearby seedlings",
+    "D": "By claiming that seedlings get most of their carbon from the soil rather than from older trees"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Text 2 accepts that \"Labeled carbon does move from tree to seedling\" but raises two problems: the amounts are \"often too small to make a measurable difference,\" and the carbon could have traveled \"through the soil or through roots that touch directly.\" Until other routes are ruled out, the network cannot \"be credited with nourishing anything.\" Text 2 says the evidence falls short of Holt's interpretation.",
-    "A": "Incorrect. Text 2 states that labeled carbon \"does move from tree to seedling.\"",
-    "B": "Correct. Text 2 argues that the amounts are small and the route unproven, so the results do not show that the networks nourish seedlings in any meaningful way.",
-    "C": "Incorrect. Text 2 mentions the soil only as one possible route for the labeled carbon; it makes no claim about where seedlings get most of their carbon.",
-    "D": "Incorrect. Text 2 does not agree that the networks feed seedlings; it says that has not been shown."
+    "A": "Correct. Text 2 argues that the amounts are small and the route unproven, so the results do not show that the networks nourish seedlings in any meaningful way.",
+    "B": "Incorrect. Text 2 does not agree that the networks feed seedlings; it says that has not been shown.",
+    "C": "Incorrect. Text 2 states that labeled carbon \"does move from tree to seedling.\"",
+    "D": "Incorrect. Text 2 mentions the soil only as one possible route for the labeled carbon; it makes no claim about where seedlings get most of their carbon."
   },
   "traps": {
-    "A": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "capture, was",
+    "A": "capture; was",
     "B": "capture: was",
     "C": "capture was",
-    "D": "capture; was"
+    "D": "capture, was"
   },
   "answer": "C",
   "explanation": {
     "why": "The subject of the last sentence is the long phrase \"the share of a dragonfly's attacks on fruit flies that ended in a capture,\" and its verb is \"was.\" No punctuation belongs between a subject and its verb, however long the subject is.",
-    "A": "Incorrect. A single comma should not separate a subject from its verb, even after a long subject.",
+    "A": "Incorrect. A semicolon must join two independent clauses, but here it would split the subject from its verb.",
     "B": "Incorrect. A colon must follow a complete sentence, and the words before it are only the subject.",
     "C": "Correct. The long subject connects directly to its verb \"was\" with no punctuation.",
-    "D": "Incorrect. A semicolon must join two independent clauses, but here it would split the subject from its verb."
+    "D": "Incorrect. A single comma should not separate a subject from its verb, even after a long subject."
   },
   "traps": {
     "A": "grammar_rule",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

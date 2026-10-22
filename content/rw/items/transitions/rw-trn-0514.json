@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Nevertheless,",
-    "B": "Consequently,",
-    "C": "For instance,",
+    "A": "For instance,",
+    "B": "Nevertheless,",
+    "C": "Consequently,",
     "D": "Similarly,"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The first sentence states a limit: glassmakers could make only small pieces of glass. The second sentence explains what window makers did because of that limit: they built pictures from many small pieces. A cause-and-effect transition is needed.",
-    "A": "Incorrect. \"Nevertheless\" signals that something happens despite a problem, but using small pieces is a response to the limit, not a defiance of it.",
-    "B": "Correct. \"Consequently\" shows that windows were made of many small pieces because large sheets could not be produced.",
-    "C": "Incorrect. Building windows from small pieces is not an instance of glassmakers' inability to make large sheets; it is a result of it.",
+    "A": "Incorrect. Building windows from small pieces is not an instance of glassmakers' inability to make large sheets; it is a result of it.",
+    "B": "Incorrect. \"Nevertheless\" signals that something happens despite a problem, but using small pieces is a response to the limit, not a defiance of it.",
+    "C": "Correct. \"Consequently\" shows that windows were made of many small pieces because large sheets could not be produced.",
     "D": "Incorrect. \"Similarly\" signals a parallel fact, but the second sentence describes a consequence."
   },
   "traps": {
     "A": "wrong_logic",
-    "C": "wrong_logic",
+    "B": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

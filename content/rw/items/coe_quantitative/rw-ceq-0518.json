@@ -54,23 +54,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Virtanen's argument?",
   "choices": {
-    "A": "Average ice cover fell by 5 days in total from the 1950s to the 1970s but by 11 days from the 2000s to the 2010s alone.",
-    "B": "The lake was covered with ice for an average of 182 days per winter in the 1950s and 146 days in the 2010s.",
-    "C": "Average ice cover fell by about the same number of days from each decade to the next across the whole record.",
-    "D": "In the 1990s, the lake was covered with ice for an average of 165 days per winter, more than in the 2000s."
+    "A": "In the 1990s, the lake was covered with ice for an average of 165 days per winter, more than in the 2000s.",
+    "B": "Average ice cover fell by about the same number of days from each decade to the next across the whole record.",
+    "C": "Average ice cover fell by 5 days in total from the 1950s to the 1970s but by 11 days from the 2000s to the 2010s alone.",
+    "D": "The lake was covered with ice for an average of 182 days per winter in the 1950s and 146 days in the 2010s."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Virtanen claims more than a decline: she says the decline sped up. Support must therefore compare the size of the drop in an earlier period with the size of the drop in a recent one. From the 1950s to the 1970s ice cover fell from 182 to 177 days, but from the 2000s to the 2010s it fell from 157 to 146 days.",
-    "A": "Correct. A 5-day drop over two decades early on, compared with an 11-day drop in a single recent decade, shows that the decline has sped up.",
-    "B": "Incorrect. This is true and shows that ice cover declined, but comparing only the first and last decades cannot show whether the decline sped up.",
-    "C": "Incorrect. The drops grew from 2 days (1950s to 1960s) to 11 days (2000s to 2010s), so they were not about the same.",
-    "D": "Incorrect. This is true, but a single comparison between two decades says nothing about whether the rate of decline changed."
+    "A": "Incorrect. This is true, but a single comparison between two decades says nothing about whether the rate of decline changed.",
+    "B": "Incorrect. The drops grew from 2 days (1950s to 1960s) to 11 days (2000s to 2010s), so they were not about the same.",
+    "C": "Correct. A 5-day drop over two decades early on, compared with an 11-day drop in a single recent decade, shows that the decline has sped up.",
+    "D": "Incorrect. This is true and shows that ice cover declined, but comparing only the first and last decades cannot show whether the decline sped up."
   },
   "traps": {
-    "B": "too_narrow",
-    "C": "reversed",
-    "D": "true_irrelevant"
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -83,13 +83,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

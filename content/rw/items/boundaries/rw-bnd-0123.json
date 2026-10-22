@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "Africa",
-    "B": "Africa;",
+    "A": "Africa;",
+    "B": "Africa:",
     "C": "Africa,",
-    "D": "Africa:"
+    "D": "Africa"
   },
   "answer": "C",
   "explanation": {
     "why": "The clause \"which live and hunt in close-knit packs in parts of southern and eastern Africa\" is extra information about the dogs. It opens with a comma after \"dogs,\" so it must close with a comma before the verb \"seem.\"",
-    "A": "Incorrect. Without a closing comma, the \"which\" clause runs straight into the main verb \"seem.\"",
-    "B": "Incorrect. A semicolon can't separate the subject \"African wild dogs\" from its verb \"seem.\"",
+    "A": "Incorrect. A semicolon can't separate the subject \"African wild dogs\" from its verb \"seem.\"",
+    "B": "Incorrect. A colon must follow a complete independent clause, and the words before it are not one.",
     "C": "Correct. The closing comma matches the comma after \"dogs\" and sets off the \"which\" clause, so the subject connects to its verb \"seem.\"",
-    "D": "Incorrect. A colon must follow a complete independent clause, and the words before it are not one."
+    "D": "Incorrect. Without a closing comma, the \"which\" clause runs straight into the main verb \"seem.\""
   },
   "traps": {
     "A": "grammar_rule",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

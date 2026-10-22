@@ -64,22 +64,22 @@
   "stem": "Which choice most effectively uses data from the graph to support Jahan's argument?",
   "choices": {
     "A": "From the earliest sowing date to the latest, the tolerant variety's yield fell by less than half as much as the standard variety's did.",
-    "B": "Both varieties produced lower yields when sown on December 25 than when sown on November 10.",
-    "C": "The tolerant variety yielded no more than the standard one when sown in November but 0.4 and 0.7 tonnes more when sown in December.",
-    "D": "The tolerant variety produced a higher yield than the standard variety at every sowing date tested."
+    "B": "The tolerant variety produced a higher yield than the standard variety at every sowing date tested.",
+    "C": "Both varieties produced lower yields when sown on December 25 than when sown on November 10.",
+    "D": "The tolerant variety yielded no more than the standard one when sown in November but 0.4 and 0.7 tonnes more when sown in December."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Jahan's argument has two parts: the tolerant variety offers no gain at early sowing dates, and its advantage widens with later sowing. Support must compare the two bars at each date. In November the tolerant variety yields 3.5 versus 3.6 and 3.4 versus 3.4 (no gain), while in December it leads by 3.2 − 2.8 = 0.4 and then 2.9 − 2.2 = 0.7 tonnes per hectare.",
     "A": "Incorrect. This is true (a drop of 0.6 versus 1.4), but comparing only the first and last dates cannot show that the tolerant variety offers no gain when sown early, the first half of Jahan's claim.",
-    "B": "Incorrect. This is true, but it shows that late sowing hurts both varieties, not how the tolerant variety compares with the standard one.",
-    "C": "Correct. It shows no advantage at the November dates and a growing advantage at the December dates, supporting both parts of Jahan's argument.",
-    "D": "Incorrect. On November 10 the tolerant variety yielded less (3.5 versus 3.6), and on November 25 the yields were equal, so this misreads the graph."
+    "B": "Incorrect. On November 10 the tolerant variety yielded less (3.5 versus 3.6), and on November 25 the yields were equal, so this misreads the graph.",
+    "C": "Incorrect. This is true, but it shows that late sowing hurts both varieties, not how the tolerant variety compares with the standard one.",
+    "D": "Correct. It shows no advantage at the November dates and a growing advantage at the December dates, supporting both parts of Jahan's argument."
   },
   "traps": {
     "A": "too_narrow",
-    "B": "true_irrelevant",
-    "D": "reversed"
+    "B": "reversed",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -88,8 +88,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

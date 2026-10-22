@@ -15,21 +15,21 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "are",
-    "B": "is",
-    "C": "were",
-    "D": "have been"
+    "B": "have been",
+    "C": "is",
+    "D": "were"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The subject is \"the number,\" which is singular; \"of distinct languages used across the country\" describes it. \"The number of\" takes a singular verb, and \"Today\" calls for the present tense, so \"is\" is correct.",
     "A": "Incorrect. \"Are\" is plural and seems to agree with \"languages,\" but the subject is the singular \"number.\"",
-    "B": "Correct. The singular present-tense verb \"is\" agrees with \"the number\" and fits \"Today.\"",
-    "C": "Incorrect. \"Were\" is plural, but the subject \"number\" is singular; it is also past tense, which conflicts with \"Today.\"",
-    "D": "Incorrect. \"Have been\" is plural, but the subject \"number\" is singular."
+    "B": "Incorrect. \"Have been\" is plural, but the subject \"number\" is singular.",
+    "C": "Correct. The singular present-tense verb \"is\" agrees with \"the number\" and fits \"Today.\"",
+    "D": "Incorrect. \"Were\" is plural, but the subject \"number\" is singular; it is also past tense, which conflicts with \"Today.\""
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
+    "B": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "subject_verb",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

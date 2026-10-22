@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Lucía's grandfather decides to stop fishing and gives his tools to her.",
-    "B": "Lucía tries mending a net for the first time and, with quiet help, succeeds.",
-    "C": "Lucía's grandfather grows impatient with her clumsy, loose knots.",
-    "D": "Lucía's first knots slip loose as soon as she pulls them tight."
+    "A": "Lucía tries mending a net for the first time and, with quiet help, succeeds.",
+    "B": "Lucía's first knots slip loose as soon as she pulls them tight.",
+    "C": "Lucía's grandfather decides to stop fishing and gives his tools to her.",
+    "D": "Lucía's grandfather grows impatient with her clumsy, loose knots."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Lucía has always watched, but \"Today\" her grandfather hands her the needle. Her knots slip at first; he silently guides her fingers; then \"the knots began to hold\" and he smiles. The main idea is her first successful attempt, helped quietly by her grandfather.",
-    "A": "Incorrect. He lets her use the needle for one evening; nothing suggests he is giving up fishing.",
-    "B": "Correct. This covers the whole passage: her first try, his silent help, and her success.",
-    "C": "Incorrect. He stays quiet, guides her gently, and ends up smiling, so he is patient, not impatient.",
-    "D": "Incorrect. The slipping knots are only one moment; the passage goes on to show her improving."
+    "A": "Correct. This covers the whole passage: her first try, his silent help, and her success.",
+    "B": "Incorrect. The slipping knots are only one moment; the passage goes on to show her improving.",
+    "C": "Incorrect. He lets her use the needle for one evening; nothing suggests he is giving up fishing.",
+    "D": "Incorrect. He stays quiet, guides her gently, and ends up smiling, so he is patient, not impatient."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
-    "D": "too_narrow"
+    "B": "too_narrow",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

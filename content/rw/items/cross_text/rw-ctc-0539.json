@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the argument made by Kowal in Text 1?",
   "choices": {
-    "A": "By citing evidence that hummingbirds with sufficient reserves also enter torpor",
-    "B": "By disputing that hummingbirds burn energy fast enough to risk starving overnight",
+    "A": "By suggesting that only Andean species of hummingbirds are able to enter torpor",
+    "B": "By citing evidence that hummingbirds with sufficient reserves also enter torpor",
     "C": "By agreeing that torpor is an emergency measure for hummingbirds at high altitudes",
-    "D": "By suggesting that only Andean species of hummingbirds are able to enter torpor"
+    "D": "By disputing that hummingbirds burn energy fast enough to risk starving overnight"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Kowal claims hummingbirds use torpor \"only when their fat reserves have fallen too low.\" Text 2 reports that torpor occurred even in \"individuals that had gone to roost carrying ample fat,\" and Mamani calls torpor \"less a last resort than a routine strategy.\" Text 2 would answer Kowal with evidence against his \"only when\" claim.",
-    "A": "Correct. Mamani's well-fed birds entered torpor too, which contradicts the claim that torpor occurs only when reserves run low.",
-    "B": "Incorrect. Text 2 never questions how quickly hummingbirds burn energy.",
+    "A": "Incorrect. Text 2 studied Andean birds but never says other hummingbirds cannot enter torpor; Text 1 says many do.",
+    "B": "Correct. Mamani's well-fed birds entered torpor too, which contradicts the claim that torpor occurs only when reserves run low.",
     "C": "Incorrect. Text 2 calls torpor at high altitude \"less a last resort than a routine strategy,\" the opposite of an emergency measure.",
-    "D": "Incorrect. Text 2 studied Andean birds but never says other hummingbirds cannot enter torpor; Text 1 says many do."
+    "D": "Incorrect. Text 2 never questions how quickly hummingbirds burn energy."
   },
   "traps": {
-    "B": "not_in_text",
+    "A": "too_broad",
     "C": "reversed",
-    "D": "too_broad"
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

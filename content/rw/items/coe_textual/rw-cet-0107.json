@@ -15,22 +15,22 @@
   "stem": "Which finding, if true, would most directly support Mensah's hypothesis?",
   "choices": {
     "A": "Students who learned from sheet music needed fewer lessons to learn each song than the other students did.",
-    "B": "Most of Mensah's students said they enjoyed learning by ear more than learning from sheet music.",
-    "C": "Months after the lessons, students who had learned by ear could play more of the songs from memory.",
-    "D": "Months after the lessons, both groups of students could play about the same number of songs from memory."
+    "B": "Months after the lessons, both groups of students could play about the same number of songs from memory.",
+    "C": "Most of Mensah's students said they enjoyed learning by ear more than learning from sheet music.",
+    "D": "Months after the lessons, students who had learned by ear could play more of the songs from memory."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Mensah's hypothesis is about memory over time: learning by ear should help students remember songs longer. Support must show the by-ear group remembering more of the songs after time has passed.",
     "A": "Incorrect. This is about how quickly songs were learned, not how long they were remembered.",
-    "B": "Incorrect. Enjoying a method is different from remembering songs longer because of it.",
-    "C": "Correct. After months, the by-ear students remembered more songs, which is what Mensah predicts.",
-    "D": "Incorrect. If both groups remembered equally, learning by ear would show no advantage; this weakens the hypothesis."
+    "B": "Incorrect. If both groups remembered equally, learning by ear would show no advantage; this weakens the hypothesis.",
+    "C": "Incorrect. Enjoying a method is different from remembering songs longer because of it.",
+    "D": "Correct. After months, the by-ear students remembered more songs, which is what Mensah predicts."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "D": "reversed"
+    "B": "reversed",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

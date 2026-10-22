@@ -15,17 +15,17 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "was",
-    "B": "were",
-    "C": "have been",
-    "D": "are"
+    "B": "are",
+    "C": "were",
+    "D": "have been"
   },
   "answer": "A",
   "explanation": {
     "why": "When two subjects are joined by \"either ... or,\" the verb agrees with the subject closer to it. The plural \"penalties\" comes first, but the nearer subject is \"a long prison sentence,\" which is singular; the interrupting phrase \"should he ever be caught and brought back\" doesn't change that. The passage is set in the past, so the singular past-tense \"was\" is correct.",
     "A": "Correct. The singular past-tense verb \"was\" agrees with the nearer subject, \"a long prison sentence.\"",
-    "B": "Incorrect. \"Were\" agrees with the farther subject, \"penalties,\" but with \"either ... or\" the verb must agree with the nearer subject, the singular \"sentence.\"",
-    "C": "Incorrect. \"Have been\" is plural, so it doesn't agree with the nearer singular subject \"sentence.\"",
-    "D": "Incorrect. \"Are\" is plural and present tense, so it neither agrees with the singular \"sentence\" nor fits the past setting."
+    "B": "Incorrect. \"Are\" is plural and present tense, so it neither agrees with the singular \"sentence\" nor fits the past setting.",
+    "C": "Incorrect. \"Were\" agrees with the farther subject, \"penalties,\" but with \"either ... or\" the verb must agree with the nearer subject, the singular \"sentence.\"",
+    "D": "Incorrect. \"Have been\" is plural, so it doesn't agree with the nearer singular subject \"sentence.\""
   },
   "traps": {
     "B": "grammar_rule",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

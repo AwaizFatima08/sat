@@ -16,21 +16,21 @@
   "choices": {
     "A": "Its outer walls were made thicker so that they could support more floors.",
     "B": "It was the first building in Chicago to rise more than ten stories.",
-    "C": "Its weight was carried by a metal frame rather than by its walls.",
-    "D": "It had more windows than any other office building of its time."
+    "C": "It had more windows than any other office building of its time.",
+    "D": "Its weight was carried by a metal frame rather than by its walls."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The text says that in earlier tall buildings \"the outer walls . . . had to carry its full weight,\" but in the Home Insurance Building \"a frame made of iron and steel held up the structure.\" The difference is that a metal frame, not the walls, carried the load.",
     "A": "Incorrect. The text says the opposite: because of the frame, its walls could be thinner.",
     "B": "Incorrect. The text says the building had ten stories, not more than ten, and never ranks it among Chicago buildings.",
-    "C": "Correct. The text contrasts weight-bearing walls in earlier buildings with the iron and steel frame that held up this one.",
-    "D": "Incorrect. The text never mentions windows."
+    "C": "Incorrect. The text never mentions windows.",
+    "D": "Correct. The text contrasts weight-bearing walls in earlier buildings with the iron and steel frame that held up this one."
   },
   "traps": {
     "A": "reversed",
     "B": "not_in_text",
-    "D": "not_in_text"
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

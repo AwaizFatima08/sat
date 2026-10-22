@@ -15,22 +15,22 @@
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
     "A": "Wombats' cube-shaped droppings are formed inside the intestine by walls of uneven stiffness.",
-    "B": "Wombats' droppings take their cube shape only at the body's exit, like icing from a nozzle.",
+    "B": "Wombats are burrowing marsupials that are native to the continent of Australia.",
     "C": "Researchers now understand how the intestines of all animals shape their droppings.",
-    "D": "Wombats are burrowing marsupials that are native to the continent of Australia."
+    "D": "Wombats' droppings take their cube shape only at the body's exit, like icing from a nozzle."
   },
   "answer": "A",
   "explanation": {
     "why": "The text introduces the wombat's unusual cube-shaped droppings, raises an expectation (the shape forms at the body's exit), and then, with \"however,\" reports what researchers actually found: the cubes form inside the intestine, where uneven walls press the contents into blocks. The main idea is this finding about how the cubes form.",
     "A": "Correct. This states the researchers' finding, which is what the whole text builds toward.",
-    "B": "Incorrect. This is the expectation that the 2018 research showed to be wrong.",
+    "B": "Incorrect. This background detail leaves out the text's point about how the cube shape forms.",
     "C": "Incorrect. The research concerned wombats only; the text makes no claim about all animals.",
-    "D": "Incorrect. This background detail leaves out the text's point about how the cube shape forms."
+    "D": "Incorrect. This is the expectation that the 2018 research showed to be wrong."
   },
   "traps": {
-    "B": "reversed",
+    "B": "too_narrow",
     "C": "too_broad",
-    "D": "too_narrow"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

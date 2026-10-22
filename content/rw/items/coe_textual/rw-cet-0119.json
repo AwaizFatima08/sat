@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Park's argument?",
   "choices": {
-    "A": "Delivery trucks were still allowed onto the street early each morning, before the shops opened.",
-    "B": "Before the change, some shop owners on the street had worried that losing car traffic would reduce their sales.",
-    "C": "Over those two years, sales rose about as much on the city's other shopping streets, which still allowed cars.",
+    "A": "Before the change, some shop owners on the street had worried that losing car traffic would reduce their sales.",
+    "B": "Over those two years, sales rose about as much on the city's other shopping streets, which still allowed cars.",
+    "C": "Delivery trucks were still allowed onto the street early each morning, before the shops opened.",
     "D": "Shoppers on the street reported spending more time looking in shop windows after cars were removed."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Park says closing the street to cars caused the rise in sales. If streets that kept their car traffic saw the same rise, the increase was probably due to something affecting the whole city, not the closure.",
-    "A": "Incorrect. Early-morning deliveries do not affect shoppers and say nothing about what caused sales to rise.",
-    "B": "Incorrect. Shop owners' earlier worries show what they expected, not what actually caused the change in sales.",
-    "C": "Correct. Sales rose just as much where cars remained, so removing cars does not explain the increase.",
+    "A": "Incorrect. Shop owners' earlier worries show what they expected, not what actually caused the change in sales.",
+    "B": "Correct. Sales rose just as much where cars remained, so removing cars does not explain the increase.",
+    "C": "Incorrect. Early-morning deliveries do not affect shoppers and say nothing about what caused sales to rise.",
     "D": "Incorrect. Shoppers browsing more after the change fits Park's explanation, so this would support rather than weaken it."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "true_irrelevant",
+    "C": "true_irrelevant",
     "D": "reversed"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

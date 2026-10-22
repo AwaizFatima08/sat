@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "memorize",
+    "A": "whisper",
     "B": "transcribe",
     "C": "improvise",
-    "D": "whisper"
+    "D": "memorize"
   },
   "answer": "C",
   "explanation": {
     "why": "The troupes had no \"full written scripts,\" only a plot outline, and actors made up their lines \"on the spot\" to suit each audience. Making something up in the moment is improvising, so \"improvise\" fits.",
-    "A": "Incorrect. With no full scripts, there were no written lines to memorize, and the lines changed \"on the spot.\"",
+    "A": "Incorrect. The text says nothing about how loudly actors spoke; it is about where their words came from.",
     "B": "Incorrect. To transcribe is to write words down, but the text stresses that the troupes did not use written scripts and made up their lines \"on the spot.\"",
     "C": "Correct. Actors who knew their characters well could invent, or improvise, their lines on the spot from a plot outline.",
-    "D": "Incorrect. The text says nothing about how loudly actors spoke; it is about where their words came from."
+    "D": "Incorrect. With no full scripts, there were no written lines to memorize, and the lines changed \"on the spot.\""
   },
   "traps": {
-    "A": "reversed",
+    "A": "not_in_text",
     "B": "reversed",
-    "D": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

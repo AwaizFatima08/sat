@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "Instead,",
-    "B": "Accordingly,",
+    "B": "Even so,",
     "C": "In other words,",
-    "D": "Even so,"
+    "D": "Accordingly,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The second sentence presents the protocol's success. The last sentence adds a limitation that coexists with that success: full recovery is still decades away. The transition must introduce a qualification without denying the success.",
     "A": "Incorrect. \"Instead\" would mean the slow recovery replaces the success, but the text says both are true. This is the closest near miss because it also signals a contrast.",
-    "B": "Incorrect. \"Accordingly\" means \"as a result,\" but a slow recovery is not a result of the protocol's success; it is caused by how long the chemicals persist.",
+    "B": "Correct. \"Even so\" signals that, despite the encouraging signs, recovery will take decades.",
     "C": "Incorrect. The last sentence adds new information about the timeline; it does not restate the protocol's success.",
-    "D": "Correct. \"Even so\" signals that, despite the encouraging signs, recovery will take decades."
+    "D": "Incorrect. \"Accordingly\" means \"as a result,\" but a slow recovery is not a result of the protocol's success; it is caused by how long the chemicals persist."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

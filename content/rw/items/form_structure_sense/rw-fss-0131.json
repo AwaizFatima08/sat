@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "squirts",
+    "A": "is squirting",
     "B": "squirt",
-    "C": "has squirted",
-    "D": "is squirting"
+    "C": "squirts",
+    "D": "has squirted"
   },
   "answer": "B",
   "explanation": {
     "why": "The subject of the verb is \"glands,\" which is plural; \"inside a velvet worm's body\" only tells where the glands are. A plural subject needs a plural verb, and the passage describes a repeated habit in the simple present (\"comes,\" \"shoots,\" \"hardens\"), so \"squirt\" is correct.",
-    "A": "Incorrect. \"Squirts\" is singular and seems to agree with the nearby noun \"body,\" but the subject is the plural \"glands.\"",
+    "A": "Incorrect. \"Is squirting\" is a singular verb, but the subject \"glands\" is plural.",
     "B": "Correct. The plural verb \"squirt\" agrees with the plural subject \"the two large slime glands.\"",
-    "C": "Incorrect. \"Has squirted\" is a singular verb, but the subject \"glands\" is plural.",
-    "D": "Incorrect. \"Is squirting\" is a singular verb, but the subject \"glands\" is plural."
+    "C": "Incorrect. \"Squirts\" is singular and seems to agree with the nearby noun \"body,\" but the subject is the plural \"glands.\"",
+    "D": "Incorrect. \"Has squirted\" is a singular verb, but the subject \"glands\" is plural."
   },
   "traps": {
     "A": "grammar_rule",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

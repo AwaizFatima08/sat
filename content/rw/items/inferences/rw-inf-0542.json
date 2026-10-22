@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "Lahore's vehicles and factories release more pollution in cold weather than in warm weather.",
-    "B": "winter weather can worsen Lahore's air even when emissions do not increase.",
-    "C": "temperature inversions are themselves a major source of the pollutants in Lahore's air.",
-    "D": "reducing traffic emissions would have no effect on the quality of Lahore's winter air."
+    "A": "reducing traffic emissions would have no effect on the quality of Lahore's winter air.",
+    "B": "Lahore's vehicles and factories release more pollution in cold weather than in warm weather.",
+    "C": "winter weather can worsen Lahore's air even when emissions do not increase.",
+    "D": "temperature inversions are themselves a major source of the pollutants in Lahore's air."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Combine the two parts of the text. The city's traffic and factories release similar amounts in every season, yet winter air is dirtier; inversions explain the difference by trapping pollution near the ground. So weather alone can make the air worse without any rise in emissions.",
-    "A": "Incorrect. This contradicts Rauf's inventory, which finds broadly similar emissions in every season.",
-    "B": "Correct. With emissions steady, the inversions that trap pollutants near the ground can account for dirtier winter air.",
-    "C": "Incorrect. The text says inversions trap pollutants; it never says they produce them.",
-    "D": "Incorrect. Inversions concentrate whatever is released, so the text gives no reason to think lower emissions would make no difference."
+    "A": "Incorrect. Inversions concentrate whatever is released, so the text gives no reason to think lower emissions would make no difference.",
+    "B": "Incorrect. This contradicts Rauf's inventory, which finds broadly similar emissions in every season.",
+    "C": "Correct. With emissions steady, the inversions that trap pollutants near the ground can account for dirtier winter air.",
+    "D": "Incorrect. The text says inversions trap pollutants; it never says they produce them."
   },
   "traps": {
-    "A": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "A": "too_broad",
+    "B": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

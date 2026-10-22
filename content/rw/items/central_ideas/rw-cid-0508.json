@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Hummingbirds must feed every few minutes during the day.",
-    "B": "Hummingbirds sleep for more hours each night than other birds.",
-    "C": "Many hummingbirds survive the night by slowing their bodies to save energy.",
+    "A": "Hummingbirds sleep for more hours each night than other birds.",
+    "B": "Many hummingbirds survive the night by slowing their bodies to save energy.",
+    "C": "Hummingbirds must feed every few minutes during the day.",
     "D": "Hummingbirds' heart rates rise sharply when they rest at night."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The text sets up a problem (hummingbirds use energy fast but cannot feed at night) and then explains the solution: torpor, in which body temperature and heart rate drop, which \"greatly reduces the amount of energy they use.\" The main idea is how torpor helps them survive the night.",
-    "A": "Incorrect. Feeding every few minutes is a detail from the first sentence that sets up the main point.",
-    "B": "Incorrect. The text never compares hummingbirds' sleep with that of other birds.",
-    "C": "Correct. This covers the problem and the solution: during torpor their bodies slow down, saving energy until morning.",
+    "A": "Incorrect. The text never compares hummingbirds' sleep with that of other birds.",
+    "B": "Correct. This covers the problem and the solution: during torpor their bodies slow down, saving energy until morning.",
+    "C": "Incorrect. Feeding every few minutes is a detail from the first sentence that sets up the main point.",
     "D": "Incorrect. The text says their heart rate \"slows sharply,\" not that it rises."
   },
   "traps": {
-    "A": "too_narrow",
-    "B": "not_in_text",
+    "A": "not_in_text",
+    "C": "too_narrow",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

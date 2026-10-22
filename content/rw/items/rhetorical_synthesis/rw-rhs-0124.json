@@ -19,22 +19,22 @@
   "data": null,
   "stem": "The student wants to emphasize a difference between who could compete in the ancient Olympic Games and who competes in the modern Games. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "The ancient Olympic Games were held at Olympia, but the first modern Games took place in Athens.",
+    "A": "Only freeborn Greek men competed in the ancient Games; today, women and athletes from over 200 nations compete.",
     "B": "Women first competed in the modern Olympic Games in 1900, just four years after the first modern Games were held.",
-    "C": "Only freeborn Greek men competed in the ancient Games; today, women and athletes from over 200 nations compete.",
+    "C": "The ancient Olympic Games were held at Olympia, but the first modern Games took place in Athens.",
     "D": "According to tradition, the ancient Olympic Games were first held at Olympia, Greece, in about 776 BCE."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The goal is a difference in who competes. The notes say only freeborn Greek men competed in ancient times, while the modern Games include women and athletes from more than 200 nations. The key must compare both groups of competitors.",
-    "A": "Incorrect. This is a difference, but it is about where the Games were held, not who competed.",
+    "A": "Correct. It sets the ancient competitors (only freeborn Greek men) against the modern ones (women and athletes from over 200 nations).",
     "B": "Incorrect. This tells who competes in the modern Games, but it says nothing about the ancient Games, so no comparison is made.",
-    "C": "Correct. It sets the ancient competitors (only freeborn Greek men) against the modern ones (women and athletes from over 200 nations).",
+    "C": "Incorrect. This is a difference, but it is about where the Games were held, not who competed.",
     "D": "Incorrect. This gives the date and place of the ancient Games, not who could compete."
   },
   "traps": {
-    "A": "misses_goal",
     "B": "too_narrow",
+    "C": "misses_goal",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

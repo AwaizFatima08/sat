@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to make a generalization about how desert animals cope with a lack of water. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Many desert animals can go long periods without drinking, as kangaroo rats, fennec foxes, and camels show.",
-    "B": "Kangaroo rats, which live in the deserts of North America, get the water they need from the seeds they eat.",
+    "A": "Kangaroo rats, which live in the deserts of North America, get the water they need from the seeds they eat.",
+    "B": "Fennec foxes live in the Sahara, while kangaroo rats live in the deserts of North America.",
     "C": "Although many people may assume otherwise, a camel's hump stores fat, not water.",
-    "D": "Fennec foxes live in the Sahara, while kangaroo rats live in the deserts of North America."
+    "D": "Many desert animals can go long periods without drinking, as kangaroo rats, fennec foxes, and camels show."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "A generalization is a broad statement about a group, supported by examples. All three animals in the notes can go a long time without drinking, so the generalization is that many desert animals share this ability. Only one choice makes that broad claim.",
-    "A": "Correct. It states a general pattern about desert animals and backs it up with all three examples.",
-    "B": "Incorrect. It describes only one animal, so it is an example rather than a generalization.",
+    "A": "Incorrect. It describes only one animal, so it is an example rather than a generalization.",
+    "B": "Incorrect. It compares where two animals live, which has nothing to do with how they cope without water.",
     "C": "Incorrect. It corrects a common belief about camels' humps but says nothing general about desert animals and water.",
-    "D": "Incorrect. It compares where two animals live, which has nothing to do with how they cope without water."
+    "D": "Correct. It states a general pattern about desert animals and backs it up with all three examples."
   },
   "traps": {
-    "B": "too_narrow",
-    "C": "true_irrelevant",
-    "D": "misses_goal"
+    "A": "too_narrow",
+    "B": "misses_goal",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -48,13 +48,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

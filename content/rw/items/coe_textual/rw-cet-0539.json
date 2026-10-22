@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Hofer's hypothesis?",
   "choices": {
-    "A": "Marmots in the study area emerged within the same week every spring, whatever the weather.",
-    "B": "Marmots whose burrow soil warmed early emerged weeks before neighbors whose burrows lay under deep snow.",
-    "C": "Marmots lost a large share of their body weight during the long months they spent hibernating.",
-    "D": "Marmots that emerged early in spring found less fresh grass to eat than those that emerged later."
+    "A": "Marmots that emerged early in spring found less fresh grass to eat than those that emerged later.",
+    "B": "Marmots lost a large share of their body weight during the long months they spent hibernating.",
+    "C": "Marmots whose burrow soil warmed early emerged weeks before neighbors whose burrows lay under deep snow.",
+    "D": "Marmots in the study area emerged within the same week every spring, whatever the weather."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Hofer contrasts two cues: warming soil in the burrow and a fixed internal clock. Neighboring marmots would share a similar clock, so if they emerge weeks apart depending on when their burrow soil warms, the soil, not the clock, sets the timing.",
-    "A": "Incorrect. Emerging in the same week regardless of conditions fits a fixed internal clock, which weakens Hofer's hypothesis.",
-    "B": "Correct. Emergence tracks the warming of each burrow's soil rather than the calendar, as Hofer predicts.",
-    "C": "Incorrect. Weight loss during hibernation does not reveal what triggers the end of hibernation.",
-    "D": "Incorrect. This describes a consequence of emerging early, not the cue that causes emergence."
+    "A": "Incorrect. This describes a consequence of emerging early, not the cue that causes emergence.",
+    "B": "Incorrect. Weight loss during hibernation does not reveal what triggers the end of hibernation.",
+    "C": "Correct. Emergence tracks the warming of each burrow's soil rather than the calendar, as Hofer predicts.",
+    "D": "Incorrect. Emerging in the same week regardless of conditions fits a fixed internal clock, which weakens Hofer's hypothesis."
   },
   "traps": {
-    "A": "reversed",
-    "C": "true_irrelevant",
-    "D": "true_irrelevant"
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "sacrifice",
-    "B": "overlook",
-    "C": "simplify",
-    "D": "capture"
+    "A": "overlook",
+    "B": "sacrifice",
+    "C": "capture",
+    "D": "simplify"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "\"By contrast\" sets the freer translation against the word-for-word one, which \"loses the original's rhythm and rhyme.\" The freer approach changes words so that readers get \"some sense of how the original sounds,\" so its goal is to keep the poem's music. \"Capture\" fits.",
-    "A": "Incorrect. Sacrificing the music is what the word-for-word translation does; \"by contrast\" signals that the freer translation does the opposite.",
-    "B": "Incorrect. A translation that ignored the poem's music could not give readers \"some sense of how the original sounds.\"",
-    "C": "Incorrect. The freer translation tries to convey how the original sounds, not to make its music plainer; nothing in the text mentions simplifying.",
-    "D": "Correct. The freer translation changes words so readers can sense \"how the original sounds,\" which means it tries to capture, or preserve, the poem's music."
+    "A": "Incorrect. A translation that ignored the poem's music could not give readers \"some sense of how the original sounds.\"",
+    "B": "Incorrect. Sacrificing the music is what the word-for-word translation does; \"by contrast\" signals that the freer translation does the opposite.",
+    "C": "Correct. The freer translation changes words so readers can sense \"how the original sounds,\" which means it tries to capture, or preserve, the poem's music.",
+    "D": "Incorrect. The freer translation tries to convey how the original sounds, not to make its music plainer; nothing in the text mentions simplifying."
   },
   "traps": {
     "A": "reversed",
     "B": "reversed",
-    "C": "wrong_tone"
+    "D": "wrong_tone"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "she",
-    "B": "her",
-    "C": "hers",
-    "D": "herself"
+    "A": "herself",
+    "B": "hers",
+    "C": "her",
+    "D": "she"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The pronoun refers to Sacagawea and comes after the preposition \"on,\" so it is an object. The object form of \"she\" is \"her.\"",
-    "A": "Incorrect. \"She\" is a subject pronoun; after the preposition \"on,\" the object form \"her\" is needed.",
-    "B": "Correct. \"Her\" is the object pronoun, used after the preposition \"on\" to refer to Sacagawea.",
-    "C": "Incorrect. \"Hers\" is a possessive pronoun meaning \"the one belonging to her,\" which makes no sense here.",
-    "D": "Incorrect. \"Herself\" is a reflexive pronoun, which needs to refer back to a female subject in the same clause, but the subject here is \"Lewis and Clark.\""
+    "A": "Incorrect. \"Herself\" is a reflexive pronoun, which needs to refer back to a female subject in the same clause, but the subject here is \"Lewis and Clark.\"",
+    "B": "Incorrect. \"Hers\" is a possessive pronoun meaning \"the one belonging to her,\" which makes no sense here.",
+    "C": "Correct. \"Her\" is the object pronoun, used after the preposition \"on\" to refer to Sacagawea.",
+    "D": "Incorrect. \"She\" is a subject pronoun; after the preposition \"on,\" the object form \"her\" is needed."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
+    "B": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "pronoun",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

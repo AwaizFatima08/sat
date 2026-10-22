@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the description of Robinson Crusoe in Text 1?",
   "choices": {
-    "A": "By agreeing that the footprint scene is the most important part of the novel",
-    "B": "By arguing that the shipwreck in the novel was added by later editors",
-    "C": "By pointing out that much of the novel focuses on everyday work rather than adventure",
+    "A": "By pointing out that much of the novel focuses on everyday work rather than adventure",
+    "B": "By agreeing that the footprint scene is the most important part of the novel",
+    "C": "By arguing that the shipwreck in the novel was added by later editors",
     "D": "By claiming that readers have always valued the novel mainly for its record keeping"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Text 1 says the novel is \"usually remembered as an adventure story.\" Text 2 says readers may be surprised \"by how little of it is adventure,\" since \"page after page describes ordinary work.\" So Text 2 would respond that the novel is largely about daily labor.",
-    "A": "Incorrect. Text 2 never mentions the footprint scene or ranks the novel's scenes by importance.",
-    "B": "Incorrect. Text 2 says nothing about editors or about how the shipwreck came to be in the novel.",
-    "C": "Correct. Text 2 stresses that much of the novel describes farming, pottery, building, and record keeping rather than adventure.",
+    "A": "Correct. Text 2 stresses that much of the novel describes farming, pottery, building, and record keeping rather than adventure.",
+    "B": "Incorrect. Text 2 never mentions the footprint scene or ranks the novel's scenes by importance.",
+    "C": "Incorrect. Text 2 says nothing about editors or about how the shipwreck came to be in the novel.",
     "D": "Incorrect. Text 2 suggests the opposite: rereaders \"may be surprised\" by the focus on work, so readers have not always valued it for that."
   },
   "traps": {
-    "A": "not_in_text",
     "B": "not_in_text",
+    "C": "not_in_text",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

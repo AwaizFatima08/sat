@@ -15,22 +15,22 @@
   "stem": "Which choice most logically completes the text?",
   "choices": {
     "A": "relied more heavily than before on reading printed libretti during the performance.",
-    "B": "stopped attending operas that were sung in languages other than their own.",
-    "C": "found it harder to follow the words while the opera was being performed.",
-    "D": "asked theaters to keep their auditoriums lit during Wagner's operas."
+    "B": "found it harder to follow the words while the opera was being performed.",
+    "C": "asked theaters to keep their auditoriums lit during Wagner's operas.",
+    "D": "stopped attending operas that were sung in languages other than their own."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Audiences had used printed libretti to follow along, which required light. Once auditoriums were darkened, they could no longer easily read during the performance, so those who did not know the language would have more trouble following the words.",
     "A": "Incorrect. Reading a printed libretto requires light, so a darkened auditorium would make this harder, not more common.",
-    "B": "Incorrect. This goes too far: the text shows that following the words became harder, not that people stopped attending.",
-    "C": "Correct. Without light to read the libretto, listeners who did not know the language would lose their main way of following the words.",
-    "D": "Incorrect. The text says nothing about audiences making requests to theaters."
+    "B": "Correct. Without light to read the libretto, listeners who did not know the language would lose their main way of following the words.",
+    "C": "Incorrect. The text says nothing about audiences making requests to theaters.",
+    "D": "Incorrect. This goes too far: the text shows that following the words became harder, not that people stopped attending."
   },
   "traps": {
     "A": "reversed",
-    "B": "too_broad",
-    "D": "not_in_text"
+    "C": "not_in_text",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

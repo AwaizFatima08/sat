@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the reading of the scene in Text 1?",
   "choices": {
-    "A": "By rejecting the view that Archer ever gave up Ellen for the sake of social convention",
-    "B": "By attributing Archer's choice to a wish to stay loyal to the memory of his late wife",
+    "A": "By attributing Archer's choice to a wish to stay loyal to the memory of his late wife",
+    "B": "By maintaining that Archer's earlier reflections make his choice seem considered",
     "C": "By arguing that Archer's choice shows the timidity that defined the whole of his life",
-    "D": "By maintaining that Archer's earlier reflections make his choice seem considered"
+    "D": "By rejecting the view that Archer ever gave up Ellen for the sake of social convention"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Varga sees the scene as \"final proof of Archer's timidity.\" Text 2 grants that it is \"easy to read as one more retreat\" but points to Archer's reflections \"in the pages just before it\" and concludes that his choice \"looks less like a failure of nerve than like a recognition\" that the remembered Ellen cannot be recovered. Text 2 uses the earlier reflections to recast the choice as considered.",
-    "A": "Incorrect. Text 2 does not deny that Archer gave Ellen up decades earlier; it reinterprets only his final decision.",
-    "B": "Incorrect. Text 2 mentions his marriage's duty and dignity, but it explains the choice by the gap between the remembered Ellen and the real one, not by loyalty to his wife.",
+    "A": "Incorrect. Text 2 mentions his marriage's duty and dignity, but it explains the choice by the gap between the remembered Ellen and the real one, not by loyalty to his wife.",
+    "B": "Correct. Text 2 argues that Archer's reckoning with his past makes staying below a thoughtful recognition rather than a failure of nerve.",
     "C": "Incorrect. This is Varga's reading in Text 1, which Text 2 argues against.",
-    "D": "Correct. Text 2 argues that Archer's reckoning with his past makes staying below a thoughtful recognition rather than a failure of nerve."
+    "D": "Incorrect. Text 2 does not deny that Archer gave Ellen up decades earlier; it reinterprets only his final decision."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "not_in_text",
-    "C": "reversed"
+    "A": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

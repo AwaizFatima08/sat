@@ -20,22 +20,22 @@
   "data": null,
   "stem": "The student wants to explain why ultramarine was so expensive in Renaissance Italy. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "In Renaissance Italy, painters often reserved ultramarine, which could cost more than gold, for the robes of the Virgin Mary.",
-    "B": "Made from stone mined far away in Afghanistan and refined by lengthy grinding and washing, ultramarine could cost more than gold.",
-    "C": "Ultramarine, a brilliant blue pigment made from lapis lazuli, could cost more than gold, weight for weight, in Renaissance Italy.",
+    "A": "Ultramarine, a brilliant blue pigment made from lapis lazuli, could cost more than gold, weight for weight, in Renaissance Italy.",
+    "B": "In Renaissance Italy, painters often reserved ultramarine, which could cost more than gold, for the robes of the Virgin Mary.",
+    "C": "Made from stone mined far away in Afghanistan and refined by lengthy grinding and washing, ultramarine could cost more than gold.",
     "D": "For centuries, nearly all the lapis lazuli used in Europe came from mines in the Badakhshan region of present-day Afghanistan."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "To explain the high price, the key must give causes and connect them to the cost. The notes suggest two: the stone came from distant mines in Afghanistan, and refining it into pigment took a long process. One choice links both to the price.",
-    "A": "Incorrect. This shows how painters used the costly pigment, which is a result of its value, not a reason for it.",
-    "B": "Correct. It gives two reasons, a distant source and a lengthy refining process, and connects them to the high cost.",
-    "C": "Incorrect. This states that ultramarine was very expensive but does not explain why. It is the most tempting near miss.",
+    "A": "Incorrect. This states that ultramarine was very expensive but does not explain why. It is the most tempting near miss.",
+    "B": "Incorrect. This shows how painters used the costly pigment, which is a result of its value, not a reason for it.",
+    "C": "Correct. It gives two reasons, a distant source and a lengthy refining process, and connects them to the high cost.",
     "D": "Incorrect. This gives the distant source of the stone but never connects it to the pigment's cost."
   },
   "traps": {
-    "A": "misses_goal",
-    "C": "too_narrow",
+    "A": "too_narrow",
+    "B": "misses_goal",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

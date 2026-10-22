@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the text, why is Ngozi smiling as she leaves the hall?",
   "choices": {
-    "A": "She believes the champion let her win part of the game out of kindness.",
-    "B": "She is relieved that the long and difficult tournament is finally over.",
-    "C": "She has noticed a serious mistake the champion made late in the game.",
-    "D": "She has learned from a strong opponent that she came close to beating him."
+    "A": "She has noticed a serious mistake the champion made late in the game.",
+    "B": "She believes the champion let her win part of the game out of kindness.",
+    "C": "She has learned from a strong opponent that she came close to beating him.",
+    "D": "She is relieved that the long and difficult tournament is finally over."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Ngozi loses, but the champion shows her a position from earlier in the game and tells her, \"Here you almost had me.\" She leaves \"replaying that move in her head\" and smiling, so her smile comes from learning that she nearly beat a strong player.",
-    "A": "Incorrect. Nothing suggests the champion went easy on her; he simply points out where she nearly won.",
-    "B": "Incorrect. The text never says the tournament is over or that she feels relieved.",
-    "C": "Incorrect. The champion points to her knight twenty moves back, a chance she had, not a late mistake of his own.",
-    "D": "Correct. The champion's words show her how close she came, and she leaves thinking about that move with a smile."
+    "A": "Incorrect. The champion points to her knight twenty moves back, a chance she had, not a late mistake of his own.",
+    "B": "Incorrect. Nothing suggests the champion went easy on her; he simply points out where she nearly won.",
+    "C": "Correct. The champion's words show her how close she came, and she leaves thinking about that move with a smile.",
+    "D": "Incorrect. The text never says the tournament is over or that she feels relieved."
   },
   "traps": {
-    "A": "not_in_text",
+    "A": "reversed",
     "B": "not_in_text",
-    "C": "reversed"
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

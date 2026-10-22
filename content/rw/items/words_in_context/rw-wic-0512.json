@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "accurate",
-    "B": "recent",
-    "C": "mistaken",
+    "A": "mistaken",
+    "B": "accurate",
+    "C": "recent",
     "D": "complicated"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text states an old saying, then says \"Tall buildings show otherwise\" and gives an example of one building struck many times each year. \"Then\" signals the conclusion that the saying is wrong. \"Mistaken\" fits.",
-    "A": "Incorrect. \"Tall buildings show otherwise\" tells you the example disproves the saying rather than confirming it.",
-    "B": "Incorrect. The text calls it \"an old saying\"; nothing suggests it is new.",
-    "C": "Correct. A building hit about twenty to twenty-five times a year shows that lightning does strike the same place more than once, so the saying is wrong, or mistaken.",
+    "A": "Correct. A building hit about twenty to twenty-five times a year shows that lightning does strike the same place more than once, so the saying is wrong, or mistaken.",
+    "B": "Incorrect. \"Tall buildings show otherwise\" tells you the example disproves the saying rather than confirming it.",
+    "C": "Incorrect. The text calls it \"an old saying\"; nothing suggests it is new.",
     "D": "Incorrect. The saying is simple. The text's point is that it is wrong, not that it is hard to understand."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
+    "B": "reversed",
+    "C": "not_in_text",
     "D": "wrong_tone"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -16,21 +16,21 @@
   "choices": {
     "A": "When the scent of shell-crushing crabs was added to their tanks, hermit crabs chose thick shells more often.",
     "B": "Hermit crabs on beaches with many shell-crushing crabs grow more slowly than hermit crabs on other beaches.",
-    "C": "Hermit crabs chose thick and thin shells equally often whether or not shell-crushing crabs were present.",
-    "D": "Hermit crabs carrying thick shells moved more slowly across the sand than those carrying thin shells."
+    "C": "Hermit crabs carrying thick shells moved more slowly across the sand than those carrying thin shells.",
+    "D": "Hermit crabs chose thick and thin shells equally often whether or not shell-crushing crabs were present."
   },
   "answer": "A",
   "explanation": {
     "why": "Fernández claims that hermit crabs change their shell choice depending on whether shell-crushing predators are near. Support must show the choice itself shifting toward thick shells when signs of those predators appear.",
     "A": "Correct. The only change was the predators' scent, and the crabs responded by choosing thick shells more often.",
     "B": "Incorrect. Slower growth near predators is a different effect; it does not show that the crabs choose different shells.",
-    "C": "Incorrect. If shell choice did not change with predators, the crabs would not be adjusting to danger, so this weakens the hypothesis.",
-    "D": "Incorrect. This confirms that thick shells are costly to carry, which the text already states, but it says nothing about how crabs choose shells."
+    "C": "Incorrect. This confirms that thick shells are costly to carry, which the text already states, but it says nothing about how crabs choose shells.",
+    "D": "Incorrect. If shell choice did not change with predators, the crabs would not be adjusting to danger, so this weakens the hypothesis."
   },
   "traps": {
     "B": "true_irrelevant",
-    "C": "reversed",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

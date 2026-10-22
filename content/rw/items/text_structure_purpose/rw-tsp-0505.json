@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It states the true cause of the panes' uneven thickness.",
-    "B": "It supports the popular explanation given in the previous sentence.",
-    "C": "It presents evidence against the explanation offered in the previous sentence.",
-    "D": "It explains how church windows were installed in the Middle Ages."
+    "A": "It supports the popular explanation given in the previous sentence.",
+    "B": "It presents evidence against the explanation offered in the previous sentence.",
+    "C": "It explains how church windows were installed in the Middle Ages.",
+    "D": "It states the true cause of the panes' uneven thickness."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The sentence before the underlined one gives a popular explanation: the glass has slowly flowed downward. The underlined sentence, signaled by \"however,\" says glass is \"far too stiff to flow measurably.\" It rules out the popular explanation, and the final sentence then gives the real cause.",
-    "A": "Incorrect. The real cause, uneven sheets with the heavier edge placed at the bottom, is given in the final sentence, not the underlined one.",
-    "B": "Incorrect. If glass cannot flow measurably, it cannot have sagged, so the sentence argues against the popular explanation.",
-    "C": "Correct. The calculations show that glass cannot flow enough to explain the thicker bottoms, which undercuts the popular idea.",
-    "D": "Incorrect. The text does not describe how windows were installed in any period, and the underlined sentence is about the stiffness of glass."
+    "A": "Incorrect. If glass cannot flow measurably, it cannot have sagged, so the sentence argues against the popular explanation.",
+    "B": "Correct. The calculations show that glass cannot flow enough to explain the thicker bottoms, which undercuts the popular idea.",
+    "C": "Incorrect. The text does not describe how windows were installed in any period, and the underlined sentence is about the stiffness of glass.",
+    "D": "Incorrect. The real cause, uneven sheets with the heavier edge placed at the bottom, is given in the final sentence, not the underlined one."
   },
   "traps": {
-    "A": "wrong_logic",
-    "B": "reversed",
-    "D": "not_in_text"
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

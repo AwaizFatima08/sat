@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to emphasize a similarity in the two animals' appearance while acknowledging that they belong to different groups of animals. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Sharks are fish that breathe through gills, whereas dolphins are mammals that breathe air through a blowhole.",
-    "B": "A shark swims by sweeping its tail from side to side, but a dolphin swims by moving its tail up and down.",
-    "C": "Sharks and dolphins both have smooth, streamlined bodies with a fin on their backs.",
-    "D": "Although sharks are fish and dolphins are mammals, both have smooth, streamlined bodies with a fin on their backs."
+    "A": "Although sharks are fish and dolphins are mammals, both have smooth, streamlined bodies with a fin on their backs.",
+    "B": "Sharks are fish that breathe through gills, whereas dolphins are mammals that breathe air through a blowhole.",
+    "C": "A shark swims by sweeping its tail from side to side, but a dolphin swims by moving its tail up and down.",
+    "D": "Sharks and dolphins both have smooth, streamlined bodies with a fin on their backs."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The goal has two parts: a similarity in appearance and an acknowledgment that sharks and dolphins belong to different groups. Only one choice both notes that one is a fish and the other a mammal and points to their shared body shape.",
-    "A": "Incorrect. It shows that the animals belong to different groups but never mentions a similarity in appearance.",
-    "B": "Incorrect. It describes a difference in how the animals swim, not a similarity in how they look.",
-    "C": "Incorrect. It gives the similarity in appearance but leaves out that the animals belong to different groups, so it meets only half the goal.",
-    "D": "Correct. \"Although sharks are fish and dolphins are mammals\" acknowledges the different groups, and the rest of the sentence stresses their similar shape."
+    "A": "Correct. \"Although sharks are fish and dolphins are mammals\" acknowledges the different groups, and the rest of the sentence stresses their similar shape.",
+    "B": "Incorrect. It shows that the animals belong to different groups but never mentions a similarity in appearance.",
+    "C": "Incorrect. It describes a difference in how the animals swim, not a similarity in how they look.",
+    "D": "Incorrect. It gives the similarity in appearance but leaves out that the animals belong to different groups, so it meets only half the goal."
   },
   "traps": {
-    "A": "too_narrow",
-    "B": "misses_goal",
-    "C": "too_narrow"
+    "B": "too_narrow",
+    "C": "misses_goal",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

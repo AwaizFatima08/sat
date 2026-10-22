@@ -14,22 +14,22 @@
   "data": null,
   "stem": "According to the text, why is an eel's shock stronger when the eel leaps up to press against a threat?",
   "choices": {
-    "A": "The eel can generate more electricity when part of its body is exposed to the open air.",
-    "B": "Shrinking pools in the dry season leave eels more exposed to possible predators.",
-    "C": "Less current is lost to the surrounding water, so more passes through the threat.",
+    "A": "Shrinking pools in the dry season leave eels more exposed to possible predators.",
+    "B": "Less current is lost to the surrounding water, so more passes through the threat.",
+    "C": "The eel can generate more electricity when part of its body is exposed to the open air.",
     "D": "The surrounding water carries the eel's current directly into the threat's body."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The fourth sentence explains the mechanism: out of the water, \"the current that would otherwise spread into the surrounding water passes instead through the threat's body, so the shock it receives is stronger.\" The shock is stronger because less current is lost to the water, not because the eel produces more.",
-    "A": "Incorrect. The text never says the eel produces more electricity in air; it says the same current is directed through the threat instead of spreading into the water.",
-    "B": "Incorrect. This is the situation in which the behavior may be useful, not the reason the shock is stronger.",
-    "C": "Correct. This restates the text's explanation: current that would spread into the water passes through the threat instead.",
+    "A": "Incorrect. This is the situation in which the behavior may be useful, not the reason the shock is stronger.",
+    "B": "Correct. This restates the text's explanation: current that would spread into the water passes through the threat instead.",
+    "C": "Incorrect. The text never says the eel produces more electricity in air; it says the same current is directed through the threat instead of spreading into the water.",
     "D": "Incorrect. This reverses the text, which says the water spreads the current away; leaping out of the water keeps it from doing so."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "true_irrelevant",
+    "A": "true_irrelevant",
+    "C": "not_in_text",
     "D": "reversed"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

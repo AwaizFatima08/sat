@@ -15,22 +15,22 @@
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
     "A": "It describes an engineer's early career and then the project that made him famous.",
-    "B": "It explains a theory about how disease spreads and then shows how it was proved correct.",
+    "B": "It focuses on the weather in 1858 and its effects on the River Thames.",
     "C": "It traces how a long-standing problem finally pushed officials to approve a solution.",
-    "D": "It focuses on the weather in 1858 and its effects on the River Thames."
+    "D": "It explains a theory about how disease spreads and then shows how it was proved correct."
   },
   "answer": "C",
   "explanation": {
     "why": "The text begins with an ongoing problem: sewage in the Thames and fear of its smell. The hot summer of 1858 made the smell unbearable even for Parliament, and \"within weeks\" members approved a sewer plan. The text moves from a problem, to the event that brought it to a head, to the decision to fix it.",
     "A": "Incorrect. Bazalgette appears only as the planner of the sewers; the text says nothing about his career.",
-    "B": "Incorrect. The text reports that doctors believed bad air spread cholera but never says the belief was proved correct.",
+    "B": "Incorrect. The hot summer is one stage in the text; the text is about the sewage problem and Parliament's response.",
     "C": "Correct. The text shows how the long-standing sewage problem, made worse by the hot summer, led Parliament to fund the sewers.",
-    "D": "Incorrect. The hot summer is one stage in the text; the text is about the sewage problem and Parliament's response."
+    "D": "Incorrect. The text reports that doctors believed bad air spread cholera but never says the belief was proved correct."
   },
   "traps": {
     "A": "not_in_text",
-    "B": "reversed",
-    "D": "too_narrow"
+    "B": "too_narrow",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

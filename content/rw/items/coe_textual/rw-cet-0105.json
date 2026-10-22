@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Quispe's argument?",
   "choices": {
-    "A": "Restaurants far from any night bus route gained evening customers just as fast as others.",
-    "B": "The city's night buses ran every thirty minutes from 10:00 p.m. until 2:00 a.m.",
-    "C": "Many diners surveyed at the city's restaurants said they had taken a night bus home after their meal.",
-    "D": "Bus fares in the city stayed the same before and after the night service began."
+    "A": "The city's night buses ran every thirty minutes from 10:00 p.m. until 2:00 a.m.",
+    "B": "Restaurants far from any night bus route gained evening customers just as fast as others.",
+    "C": "Bus fares in the city stayed the same before and after the night service began.",
+    "D": "Many diners surveyed at the city's restaurants said they had taken a night bus home after their meal."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Quispe says the night buses brought in more evening diners. If restaurants that the buses do not serve gained customers just as fast, the buses cannot explain the increase.",
-    "A": "Correct. Restaurants with no night bus nearby grew just as quickly, so something other than the buses must be behind the increase.",
-    "B": "Incorrect. The bus schedule describes the service but does not show whether it brought in diners.",
-    "C": "Incorrect. Diners riding the night bus home would support Quispe's argument, not weaken it.",
-    "D": "Incorrect. Fares staying the same says nothing about whether the buses changed restaurant business."
+    "A": "Incorrect. The bus schedule describes the service but does not show whether it brought in diners.",
+    "B": "Correct. Restaurants with no night bus nearby grew just as quickly, so something other than the buses must be behind the increase.",
+    "C": "Incorrect. Fares staying the same says nothing about whether the buses changed restaurant business.",
+    "D": "Incorrect. Diners riding the night bus home would support Quispe's argument, not weaken it."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "reversed",
-    "D": "true_irrelevant"
+    "A": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

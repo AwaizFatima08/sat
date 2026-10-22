@@ -71,23 +71,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "in 2024, the flow rose from about 2.9 cubic meters per second in April to about 7.4 in May.",
-    "B": "in both years, the stream's flow was lower in August than it had been in June.",
-    "C": "the flow peaked in May in 2023 but did not peak until June in 2024.",
-    "D": "the flow peaked in June 2023 at about 14.5 but in May 2024 at only about 7.4."
+    "A": "the flow peaked in May in 2023 but did not peak until June in 2024.",
+    "B": "the flow peaked in June 2023 at about 14.5 but in May 2024 at only about 7.4.",
+    "C": "in both years, the stream's flow was lower in August than it had been in June.",
+    "D": "in 2024, the flow rose from about 2.9 cubic meters per second in April to about 7.4 in May."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Castillo's finding has two parts: in 2024 the peak was lower and came earlier. The choice must give both years' peaks. The 2023 line peaks in June at about 14.5, and the 2024 line peaks in May at about 7.4, a smaller peak one month earlier.",
-    "A": "Incorrect. This is true, but it describes only 2024 and does not compare its peak with the 2023 peak.",
-    "B": "Incorrect. This is true, but it compares August with June and says nothing about the size or timing of each year's peak.",
-    "C": "Incorrect. This swaps the years: the 2023 flow peaked in June and the 2024 flow peaked in May.",
-    "D": "Correct. The 2024 peak (about 7.4 in May) was both smaller and a month earlier than the 2023 peak (about 14.5 in June)."
+    "A": "Incorrect. This swaps the years: the 2023 flow peaked in June and the 2024 flow peaked in May.",
+    "B": "Correct. The 2024 peak (about 7.4 in May) was both smaller and a month earlier than the 2023 peak (about 14.5 in June).",
+    "C": "Incorrect. This is true, but it compares August with June and says nothing about the size or timing of each year's peak.",
+    "D": "Incorrect. This is true, but it describes only 2024 and does not compare its peak with the 2023 peak."
   },
   "traps": {
-    "A": "too_narrow",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "A": "reversed",
+    "C": "true_irrelevant",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -96,8 +96,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

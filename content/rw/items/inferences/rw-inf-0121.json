@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "southern Africa and South America were probably once joined.",
+    "A": "the South Atlantic was much saltier when Mesosaurus lived.",
     "B": "Mesosaurus regularly swam across the South Atlantic Ocean.",
     "C": "Mesosaurus must have lived on every southern continent.",
-    "D": "the South Atlantic was much saltier when Mesosaurus lived."
+    "D": "southern Africa and South America were probably once joined."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Mesosaurus could not cross an open ocean, yet its fossils are found on both sides of the South Atlantic. The most logical explanation is that the two regions were connected, or much closer together, when it lived.",
-    "A": "Correct. An animal unable to cross the open sea could live in both places only if the land was once connected.",
+    "A": "Incorrect. The text gives no information about how salty the ancient ocean was.",
     "B": "Incorrect. The text says Mesosaurus was not built for long journeys across the open sea.",
     "C": "Incorrect. Its fossils are found only in southern Africa and South America, so the text does not support every southern continent.",
-    "D": "Incorrect. The text gives no information about how salty the ancient ocean was."
+    "D": "Correct. An animal unable to cross the open sea could live in both places only if the land was once connected."
   },
   "traps": {
+    "A": "not_in_text",
     "B": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

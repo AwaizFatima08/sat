@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Admittedly,",
-    "B": "Consequently,",
-    "C": "For example,",
+    "A": "Consequently,",
+    "B": "For example,",
+    "C": "Admittedly,",
     "D": "Likewise,"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The text praises the map, then admits a serious weakness (it distorts sizes), and then returns with \"But\" to explain why the map was still valued. The blank must introduce a point the writer concedes before restating the main claim.",
-    "A": "Correct. \"Admittedly\" signals that the writer grants a weakness of the map before explaining, with \"But,\" why it was still important.",
-    "B": "Incorrect. The map's influence does not cause it to distort sizes; \"Consequently\" sets up a false cause and effect.",
-    "C": "Incorrect. Distorting sizes is not an example of the map's influence; it is a drawback that cuts against it.",
+    "A": "Incorrect. The map's influence does not cause it to distort sizes; \"Consequently\" sets up a false cause and effect.",
+    "B": "Incorrect. Distorting sizes is not an example of the map's influence; it is a drawback that cuts against it.",
+    "C": "Correct. \"Admittedly\" signals that the writer grants a weakness of the map before explaining, with \"But,\" why it was still important.",
     "D": "Incorrect. \"Likewise\" signals a similar point, but the distortion is a weakness that differs from the praise before it."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

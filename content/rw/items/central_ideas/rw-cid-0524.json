@@ -15,21 +15,21 @@
   "stem": "Based on the text, how does Nimali respond to the difficulty of the work?",
   "choices": {
     "A": "She tries to improve by paying closer attention to the skilled pluckers.",
-    "B": "She regrets coming to the estate because it is not as quiet as she imagined.",
-    "C": "She complains to her grandfather that the slopes are too steep to work on.",
-    "D": "She asks her grandfather to give her an easier job somewhere on the estate."
+    "B": "She complains to her grandfather that the slopes are too steep to work on.",
+    "C": "She asks her grandfather to give her an easier job somewhere on the estate.",
+    "D": "She regrets coming to the estate because it is not as quiet as she imagined."
   },
   "answer": "A",
   "explanation": {
     "why": "The question asks how Nimali reacts to falling behind. The last sentence answers it: \"She did not complain; she only watched their hands more closely.\" Watching the experienced women's hands suggests she is trying to learn their skill.",
     "A": "Correct. Watching the pluckers' hands \"more closely\" after falling behind shows she is trying to learn from them.",
-    "B": "Incorrect. The estate differs from what she imagined, but the text never says she regrets coming.",
-    "C": "Incorrect. The text states directly that \"She did not complain.\"",
-    "D": "Incorrect. Nimali never asks for a different job; she keeps watching and learning."
+    "B": "Incorrect. The text states directly that \"She did not complain.\"",
+    "C": "Incorrect. Nimali never asks for a different job; she keeps watching and learning.",
+    "D": "Incorrect. The estate differs from what she imagined, but the text never says she regrets coming."
   },
   "traps": {
-    "B": "not_in_text",
-    "C": "reversed",
+    "B": "reversed",
+    "C": "not_in_text",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

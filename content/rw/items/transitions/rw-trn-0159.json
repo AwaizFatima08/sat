@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "In contrast,",
+    "A": "For example,",
     "B": "Similarly,",
-    "C": "For example,",
-    "D": "Consequently,"
+    "C": "Consequently,",
+    "D": "In contrast,"
   },
   "answer": "B",
   "explanation": {
     "why": "The text describes how the oilbird uses clicks and echoes to navigate dark caves. The last sentence describes other birds, swiftlets, that do the same thing. A transition that introduces a similar case is needed.",
-    "A": "Incorrect. \"In contrast\" is tempting because the swiftlets are \"only distantly related\" to the oilbird, but their way of navigating is the same, not different.",
+    "A": "Incorrect. Swiftlets are different birds, so they cannot be an example of the oilbird.",
     "B": "Correct. \"Similarly\" shows that swiftlets, like the oilbird, navigate caves by echolocation.",
-    "C": "Incorrect. Swiftlets are different birds, so they cannot be an example of the oilbird.",
-    "D": "Incorrect. The swiftlets' echolocation is not caused by the oilbird's; it is a separate, parallel case."
+    "C": "Incorrect. The swiftlets' echolocation is not caused by the oilbird's; it is a separate, parallel case.",
+    "D": "Incorrect. \"In contrast\" is tempting because the swiftlets are \"only distantly related\" to the oilbird, but their way of navigating is the same, not different."
   },
   "traps": {
     "A": "wrong_logic",
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

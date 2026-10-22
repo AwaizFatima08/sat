@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "For example,",
-    "B": "Instead,",
-    "C": "In contrast,",
-    "D": "Later,"
+    "A": "In contrast,",
+    "B": "Later,",
+    "C": "Instead,",
+    "D": "For example,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The first sentence describes how Edhi's work began in 1951 with a small dispensary. The next sentence describes how that work grew into a nationwide network in the years that followed. A transition that shows a later point in time is needed.",
-    "A": "Incorrect. The nationwide network is not an example of the small dispensary; it is what the work grew into afterward.",
-    "B": "Incorrect. \"Instead\" would mean the Edhis built the network in place of opening the dispensary, but the dispensary came first.",
-    "C": "Incorrect. The network does not contrast with the dispensary; it continued and expanded the same work.",
-    "D": "Correct. \"Later\" shows that the Edhi Foundation grew into a nationwide network after the dispensary opened in 1951."
+    "A": "Incorrect. The network does not contrast with the dispensary; it continued and expanded the same work.",
+    "B": "Correct. \"Later\" shows that the Edhi Foundation grew into a nationwide network after the dispensary opened in 1951.",
+    "C": "Incorrect. \"Instead\" would mean the Edhis built the network in place of opening the dispensary, but the dispensary came first.",
+    "D": "Incorrect. The nationwide network is not an example of the small dispensary; it is what the work grew into afterward."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

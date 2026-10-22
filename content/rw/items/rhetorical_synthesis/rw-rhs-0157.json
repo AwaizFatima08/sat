@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to present Whitcombe's method and explain why it suited the animal she was studying. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Thermal cameras can detect the heat given off by warm-bodied animals such as koalas, even when leaves partly hide the animals.",
-    "B": "Because their gray fur blends in with eucalyptus branches and leaves, koalas are often missed by observers on ground surveys.",
-    "C": "To estimate the koala population of a Queensland reserve, Whitcombe flew drones fitted with thermal cameras at dawn, when the air is cool.",
-    "D": "Since koalas blend in with the treetops, Whitcombe used thermal-camera drones, which detect body heat even through partial leaf cover."
+    "A": "Because their gray fur blends in with eucalyptus branches and leaves, koalas are often missed by observers on ground surveys.",
+    "B": "Thermal cameras can detect the heat given off by warm-bodied animals such as koalas, even when leaves partly hide the animals.",
+    "C": "Since koalas blend in with the treetops, Whitcombe used thermal-camera drones, which detect body heat even through partial leaf cover.",
+    "D": "To estimate the koala population of a Queensland reserve, Whitcombe flew drones fitted with thermal cameras at dawn, when the air is cool."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The goal has two parts: Whitcombe's method (drones with thermal cameras) and why it suited koalas. The reason comes from combining notes: koalas are hard to see because their fur blends in with the trees, but thermal cameras detect body heat even when leaves partly hide an animal.",
-    "A": "Incorrect. This explains why thermal cameras could work on koalas, but it never says that Whitcombe used them, so her method is missing.",
-    "B": "Incorrect. This explains why koalas are hard to count, but it says nothing about Whitcombe's method.",
-    "C": "Incorrect. This describes the method and the aim in detail, but it never explains why thermal cameras suit koalas in particular. It is the most attractive near miss.",
-    "D": "Correct. It states the method (drones with thermal cameras) and the reason it suits koalas (they blend in, but their body heat shows through partial leaf cover)."
+    "A": "Incorrect. This explains why koalas are hard to count, but it says nothing about Whitcombe's method.",
+    "B": "Incorrect. This explains why thermal cameras could work on koalas, but it never says that Whitcombe used them, so her method is missing.",
+    "C": "Correct. It states the method (drones with thermal cameras) and the reason it suits koalas (they blend in, but their body heat shows through partial leaf cover).",
+    "D": "Incorrect. This describes the method and the aim in detail, but it never explains why thermal cameras suit koalas in particular. It is the most attractive near miss."
   },
   "traps": {
-    "A": "too_narrow",
-    "B": "misses_goal",
-    "C": "too_narrow"
+    "A": "misses_goal",
+    "B": "too_narrow",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

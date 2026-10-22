@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Meanwhile,",
-    "B": "As a result,",
-    "C": "For instance,",
-    "D": "In other words,"
+    "A": "In other words,",
+    "B": "Meanwhile,",
+    "C": "As a result,",
+    "D": "For instance,"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The text describes the noise upstairs and then turns to what the grandfather was doing downstairs at the same moment. A transition that signals something happening at the same time in another place is needed.",
-    "A": "Correct. \"Meanwhile\" shows that the grandfather was sitting calmly while the uproar went on upstairs.",
-    "B": "Incorrect. The grandfather's calm is not caused by the uproar; if anything, it is surprising given the noise.",
-    "C": "Incorrect. A man calmly reading the newspaper is not an example of the house being in an uproar.",
-    "D": "Incorrect. The last sentence describes a new scene; it does not restate the description of the uproar."
+    "A": "Incorrect. The last sentence describes a new scene; it does not restate the description of the uproar.",
+    "B": "Correct. \"Meanwhile\" shows that the grandfather was sitting calmly while the uproar went on upstairs.",
+    "C": "Incorrect. The grandfather's calm is not caused by the uproar; if anything, it is surprising given the noise.",
+    "D": "Incorrect. A man calmly reading the newspaper is not an example of the house being in an uproar."
   },
   "traps": {
-    "B": "wrong_logic",
+    "A": "wrong_logic",
     "C": "wrong_logic",
     "D": "wrong_logic"
   },
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

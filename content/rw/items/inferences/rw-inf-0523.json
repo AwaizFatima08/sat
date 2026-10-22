@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "most of the cacao beans in circulation were fakes filled with earth.",
-    "B": "cacao was valued mainly as a drink and only rarely used as payment.",
-    "C": "Spanish observers invented the counterfeiters to discourage the use of cacao.",
-    "D": "cacao beans were widely accepted as payment, so fakes could be worth making."
+    "A": "cacao beans were widely accepted as payment, so fakes could be worth making.",
+    "B": "Spanish observers invented the counterfeiters to discourage the use of cacao.",
+    "C": "most of the cacao beans in circulation were fakes filled with earth.",
+    "D": "cacao was valued mainly as a drink and only rarely used as payment."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "A fake bean was useless as food or drink and took effort to make. The only reason to make one would be to spend it, which shows that cacao beans were trusted and accepted as money.",
-    "A": "Incorrect. The text shows that fakes existed, not that they made up most of the beans in use.",
-    "B": "Incorrect. Fakes that could not be drunk would be pointless if cacao were valued only as a drink; their existence points to its use as money.",
-    "C": "Incorrect. Nothing in the text suggests the observers made up their reports.",
-    "D": "Correct. Since fakes had no use except as money, people made them only because real beans were readily accepted as payment."
+    "A": "Correct. Since fakes had no use except as money, people made them only because real beans were readily accepted as payment.",
+    "B": "Incorrect. Nothing in the text suggests the observers made up their reports.",
+    "C": "Incorrect. The text shows that fakes existed, not that they made up most of the beans in use.",
+    "D": "Incorrect. Fakes that could not be drunk would be pointless if cacao were valued only as a drink; their existence points to its use as money."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "reversed",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "C": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

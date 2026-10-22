@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Even so,",
-    "B": "Similarly,",
-    "C": "In other words,",
-    "D": "By contrast,"
+    "A": "Similarly,",
+    "B": "In other words,",
+    "C": "By contrast,",
+    "D": "Even so,"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The first sentence uses a technical term, \"drought deciduous.\" The second sentence explains in plain words what the term means: the plant drops its leaves when the soil is dry. A transition that restates an idea more simply is needed.",
-    "A": "Incorrect. Dropping leaves in dry soil does not go against being drought deciduous; it is what the term means.",
-    "B": "Incorrect. \"Similarly\" compares two different things, but the second sentence explains the same idea.",
-    "C": "Correct. \"In other words\" signals that the second sentence restates \"drought deciduous\" in everyday language.",
-    "D": "Incorrect. Nothing in the second sentence contrasts with the first."
+    "A": "Incorrect. \"Similarly\" compares two different things, but the second sentence explains the same idea.",
+    "B": "Correct. \"In other words\" signals that the second sentence restates \"drought deciduous\" in everyday language.",
+    "C": "Incorrect. Nothing in the second sentence contrasts with the first.",
+    "D": "Incorrect. Dropping leaves in dry soil does not go against being drought deciduous; it is what the term means."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

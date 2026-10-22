@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "found",
-    "B": "had found",
-    "C": "find",
-    "D": "have found"
+    "A": "have found",
+    "B": "find",
+    "C": "had found",
+    "D": "found"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The phrase \"In the decades since that discovery\" describes a period that began in the past and continues up to the present. An action spread over such a period takes the present perfect: \"have found.\" The present-tense \"rotate\" later in the sentence confirms that the time frame reaches the present.",
-    "A": "Incorrect. The simple past \"found\" treats the discoveries as finished at a past time, but \"since that discovery\" describes a period lasting up to now.",
-    "B": "Incorrect. The past perfect \"had found\" needs a later past moment to look back from; here the period runs to the present, not to a point in the past.",
-    "C": "Incorrect. The simple present \"find\" describes habitual or current actions and can't be paired with \"since\" to describe a stretch of time leading up to now.",
-    "D": "Correct. The present perfect \"have found\" fits a period that began in 1967 and continues to the present."
+    "A": "Correct. The present perfect \"have found\" fits a period that began in 1967 and continues to the present.",
+    "B": "Incorrect. The simple present \"find\" describes habitual or current actions and can't be paired with \"since\" to describe a stretch of time leading up to now.",
+    "C": "Incorrect. The past perfect \"had found\" needs a later past moment to look back from; here the period runs to the present, not to a point in the past.",
+    "D": "Incorrect. The simple past \"found\" treats the discoveries as finished at a past time, but \"since that discovery\" describes a period lasting up to now."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "verb_form",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

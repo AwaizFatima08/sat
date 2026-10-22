@@ -55,23 +55,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Moana's argument?",
   "choices": {
-    "A": "Plant-eating fish had the greatest biomass of any group both inside and outside the reserve.",
-    "B": "The combined biomass of all three groups was greater inside the reserve than outside it.",
-    "C": "Predatory fish biomass was more than four times as great inside the reserve as outside, while plant-eating fish biomass was about 20% greater.",
-    "D": "Small reef fish had a greater biomass outside the reserve than inside it."
+    "A": "Small reef fish had a greater biomass outside the reserve than inside it.",
+    "B": "Plant-eating fish had the greatest biomass of any group both inside and outside the reserve.",
+    "C": "The combined biomass of all three groups was greater inside the reserve than outside it.",
+    "D": "Predatory fish biomass was more than four times as great inside the reserve as outside, while plant-eating fish biomass was about 20% greater."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Moana's argument is that the reserve's advantage is concentrated in predatory fish rather than shared evenly. Support must compare the inside-versus-outside difference for predatory fish with that for another group. Predatory fish biomass is 410 versus 90 (more than four times as great), while plant-eating fish biomass is 520 versus 430 (about 21% greater).",
-    "A": "Incorrect. This is true, but which group weighs the most says nothing about where the reserve's advantage is concentrated.",
-    "B": "Incorrect. This is true (1,110 versus 690), but a larger total could come from an advantage spread evenly across all groups, which is what Moana denies.",
-    "C": "Correct. It compares the reserve's effect on two groups and shows a far larger advantage for predatory fish than for plant-eating fish.",
-    "D": "Incorrect. Small reef fish biomass was 180 inside and 170 outside, so this reverses the graph."
+    "A": "Incorrect. Small reef fish biomass was 180 inside and 170 outside, so this reverses the graph.",
+    "B": "Incorrect. This is true, but which group weighs the most says nothing about where the reserve's advantage is concentrated.",
+    "C": "Incorrect. This is true (1,110 versus 690), but a larger total could come from an advantage spread evenly across all groups, which is what Moana denies.",
+    "D": "Correct. It compares the reserve's effect on two groups and shows a far larger advantage for predatory fish than for plant-eating fish."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "too_broad",
-    "D": "reversed"
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -80,8 +80,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

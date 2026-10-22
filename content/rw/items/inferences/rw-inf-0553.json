@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "the soprano deliberately sang the aria about a half step above its written key.",
-    "B": "the studio's recording machines ran too slowly to capture the soprano's highest notes.",
-    "C": "every disc recorded before the late 1920s sounds too high when played at 78.",
-    "D": "the critics' conclusion may reflect playback speed rather than the soprano's singing."
+    "A": "the critics' conclusion may reflect playback speed rather than the soprano's singing.",
+    "B": "the soprano deliberately sang the aria about a half step above its written key.",
+    "C": "the studio's recording machines ran too slowly to capture the soprano's highest notes.",
+    "D": "every disc recorded before the late 1920s sounds too high when played at 78."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The disc was recorded at about 74 but is played at 78, which is faster, and playing faster raises the pitch by nearly a half step. That is almost exactly how far above the written key the recording sounds. So the high pitch can be explained by the playback speed, and the critics' claim about her singing is not supported by this recording.",
-    "A": "Incorrect. This is the critics' view, which Asante's evidence undercuts: the faster playback alone accounts for the higher pitch.",
-    "B": "Incorrect. The text never suggests that the slower machines failed to record any notes.",
-    "C": "Incorrect. Discs were recorded at speeds from about 70 to 90, so those recorded faster than 78 would sound lower, not higher, when played at 78.",
-    "D": "Correct. Playing a disc recorded at 74 at a speed of 78 raises the pitch by nearly a half step, which explains the recording's high pitch without assuming the soprano sang above the key."
+    "A": "Correct. Playing a disc recorded at 74 at a speed of 78 raises the pitch by nearly a half step, which explains the recording's high pitch without assuming the soprano sang above the key.",
+    "B": "Incorrect. This is the critics' view, which Asante's evidence undercuts: the faster playback alone accounts for the higher pitch.",
+    "C": "Incorrect. The text never suggests that the slower machines failed to record any notes.",
+    "D": "Incorrect. Discs were recorded at speeds from about 70 to 90, so those recorded faster than 78 would sound lower, not higher, when played at 78."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "C": "too_broad"
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

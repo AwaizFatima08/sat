@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "revitalize",
-    "B": "ossify",
-    "C": "vindicate",
-    "D": "popularize"
+    "A": "ossify",
+    "B": "revitalize",
+    "C": "popularize",
+    "D": "vindicate"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The colon explains the blank: treating a transcription as definitive \"fixes in place\" something that stays alive through variation. The word must mean \"make rigid and lifeless,\" turning a flexible tradition into a frozen text.",
-    "A": "Incorrect. \"Revitalize\" means bring new life to, but fixing the epic in place would take away the variation that keeps it alive.",
-    "B": "Correct. \"Ossify\" means harden into a rigid, unchanging form, which matches a transcription that \"fixes in place\" a tradition that depends on variation.",
-    "C": "Incorrect. \"Vindicate\" means prove right or justify; the text criticizes treating one version as definitive, so it does not say this practice supports the tradition.",
-    "D": "Incorrect. Written versions might spread the epic to new readers, but the colon explains the blank as fixing the story in place, not making it widely known."
+    "A": "Correct. \"Ossify\" means harden into a rigid, unchanging form, which matches a transcription that \"fixes in place\" a tradition that depends on variation.",
+    "B": "Incorrect. \"Revitalize\" means bring new life to, but fixing the epic in place would take away the variation that keeps it alive.",
+    "C": "Incorrect. Written versions might spread the epic to new readers, but the colon explains the blank as fixing the story in place, not making it widely known.",
+    "D": "Incorrect. \"Vindicate\" means prove right or justify; the text criticizes treating one version as definitive, so it does not say this practice supports the tradition."
   },
   "traps": {
-    "A": "reversed",
-    "C": "wrong_logic",
-    "D": "true_irrelevant"
+    "B": "reversed",
+    "C": "true_irrelevant",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

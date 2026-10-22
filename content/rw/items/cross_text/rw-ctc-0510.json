@@ -15,22 +15,22 @@
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the image of the pyramid builders in Text 1?",
   "choices": {
     "A": "By agreeing that Greek writers described the pyramid builders accurately",
-    "B": "By arguing that the pyramids were built much later than most books claim",
+    "B": "By presenting evidence suggesting that the builders were not enslaved people",
     "C": "By claiming that the workers' town was larger than the pyramids themselves",
-    "D": "By presenting evidence suggesting that the builders were not enslaved people"
+    "D": "By arguing that the pyramids were built much later than most books claim"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Text 1 describes the popular image of enslaved pyramid builders. Text 2 reports evidence that \"suggests a different picture\": the workers were \"well fed\" and were buried in tombs beside the pyramids, \"an honor unlikely to be given to enslaved people.\" Text 2 challenges the image with evidence.",
     "A": "Incorrect. Text 2 offers \"a different picture,\" so it does not support the Greek account.",
-    "B": "Incorrect. Neither text discusses when the pyramids were built.",
+    "B": "Correct. Text 2 points to good food and honored tombs as signs that the workers were not enslaved.",
     "C": "Incorrect. Text 2 never compares the size of the town with the size of the pyramids.",
-    "D": "Correct. Text 2 points to good food and honored tombs as signs that the workers were not enslaved."
+    "D": "Incorrect. Neither text discusses when the pyramids were built."
   },
   "traps": {
     "A": "reversed",
-    "B": "not_in_text",
-    "C": "not_in_text"
+    "C": "not_in_text",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "hatch earlier in the spring, just as the caterpillars have.",
+    "A": "hatch while the caterpillars are at their most plentiful.",
     "B": "be raised on a food other than the caterpillars.",
-    "C": "hatch while the caterpillars are at their most plentiful.",
-    "D": "hatch after the caterpillars' brief peak has passed."
+    "C": "hatch after the caterpillars' brief peak has passed.",
+    "D": "hatch earlier in the spring, just as the caterpillars have."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The caterpillars now emerge earlier because of warming, but the birds' egg laying follows day length, which warming does not change. The birds' timing stays fixed while their food arrives earlier, so the chicks may hatch after the caterpillars' peak.",
-    "A": "Incorrect. The text says the birds still lay eggs on about the same dates as before, so the chicks are not hatching earlier.",
+    "A": "Incorrect. Because the caterpillars now peak earlier while egg laying has not shifted, the chicks will hatch later relative to the caterpillars, not at their peak.",
     "B": "Incorrect. The text never suggests the birds switch to another food.",
-    "C": "Incorrect. Because the caterpillars now peak earlier while egg laying has not shifted, the chicks will hatch later relative to the caterpillars, not at their peak.",
-    "D": "Correct. With the food supply peaking earlier and the birds' timing unchanged, chicks will tend to hatch after the brief peak."
+    "C": "Correct. With the food supply peaking earlier and the birds' timing unchanged, chicks will tend to hatch after the brief peak.",
+    "D": "Incorrect. The text says the birds still lay eggs on about the same dates as before, so the chicks are not hatching earlier."
   },
   "traps": {
     "A": "reversed",
     "B": "not_in_text",
-    "C": "reversed"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

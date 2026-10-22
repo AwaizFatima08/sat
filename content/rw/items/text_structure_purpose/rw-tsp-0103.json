@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It describes an emperor's rise to power and then the building of his tomb.",
-    "B": "It argues that the clay statues are more important than the emperor's tomb.",
-    "C": "It presents a problem archaeologists faced and then the solution they found.",
-    "D": "It recounts an accidental discovery and then describes what it revealed."
+    "A": "It presents a problem archaeologists faced and then the solution they found.",
+    "B": "It recounts an accidental discovery and then describes what it revealed.",
+    "C": "It argues that the clay statues are more important than the emperor's tomb.",
+    "D": "It describes an emperor's rise to power and then the building of his tomb."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text begins with farmers who were digging a well and \"struck pieces of baked clay\" by chance. It then explains what the pieces turned out to be and describes the statues: thousands of soldiers, each with a different face and once holding real weapons. So the text moves from an accidental find to what the find showed.",
-    "A": "Incorrect. Qin Shi Huang is named, but the text never describes how he rose to power or how his tomb was built.",
-    "B": "Incorrect. The text never compares the importance of the statues and the tomb.",
-    "C": "Incorrect. No problem facing archaeologists is described; the text reports a discovery, not a solution.",
-    "D": "Correct. The text tells how farmers found clay pieces by accident and then describes the army of statues they belonged to."
+    "A": "Incorrect. No problem facing archaeologists is described; the text reports a discovery, not a solution.",
+    "B": "Correct. The text tells how farmers found clay pieces by accident and then describes the army of statues they belonged to.",
+    "C": "Incorrect. The text never compares the importance of the statues and the tomb.",
+    "D": "Incorrect. Qin Shi Huang is named, but the text never describes how he rose to power or how his tomb was built."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "too_broad",
-    "C": "wrong_logic"
+    "A": "wrong_logic",
+    "C": "too_broad",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

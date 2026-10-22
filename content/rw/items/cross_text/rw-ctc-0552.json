@@ -15,22 +15,22 @@
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the argument made by Fontaine in Text 1?",
   "choices": {
     "A": "By rejecting the claim that photosynthesis produces nearly all of Earth's atmospheric oxygen",
-    "B": "By arguing that oxygen on its own could mislead, since it might build up without any life",
-    "C": "By claiming that methane, rather than oxygen, is the most reliable single sign of life",
-    "D": "By suggesting that planets orbiting red dwarf stars are unlikely to keep their atmospheres"
+    "B": "By claiming that methane, rather than oxygen, is the most reliable single sign of life",
+    "C": "By suggesting that planets orbiting red dwarf stars are unlikely to keep their atmospheres",
+    "D": "By arguing that oxygen on its own could mislead, since it might build up without any life"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "Fontaine treats abundant oxygen by itself as strong evidence of life. Text 2 describes how oxygen could accumulate \"on a world with no life at all\" and says oxygen \"would become persuasive only alongside other clues.\" Text 2 would therefore say oxygen alone is not enough.",
     "A": "Incorrect. Text 2 speaks of \"Oxygen's link to life on Earth\" and does not dispute it; it denies only that the link must hold elsewhere.",
-    "B": "Correct. Text 2 shows how a lifeless planet could build up oxygen, so oxygen without other clues would not be strong evidence of life.",
-    "C": "Incorrect. Text 2 values methane only together with oxygen; it does not call methane by itself the most reliable sign.",
-    "D": "Incorrect. Text 2's red dwarf planet keeps its oxygen; nothing suggests such planets lose their atmospheres."
+    "B": "Incorrect. Text 2 values methane only together with oxygen; it does not call methane by itself the most reliable sign.",
+    "C": "Incorrect. Text 2's red dwarf planet keeps its oxygen; nothing suggests such planets lose their atmospheres.",
+    "D": "Correct. Text 2 shows how a lifeless planet could build up oxygen, so oxygen without other clues would not be strong evidence of life."
   },
   "traps": {
     "A": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "B": "too_broad",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

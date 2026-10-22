@@ -15,17 +15,17 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "Therefore,",
-    "B": "For example,",
+    "B": "Similarly,",
     "C": "However,",
-    "D": "Similarly,"
+    "D": "For example,"
   },
   "answer": "C",
   "explanation": {
     "why": "The second sentence sets up an expectation: erosion should make the mountains shrink. The last sentence says the opposite is true: much of the range is still rising. A transition that signals a contrast with the expectation is needed.",
     "A": "Incorrect. Erosion would not cause the mountains to rise; the rise happens despite erosion. The \"because\" later in the sentence may make a cause word tempting.",
-    "B": "Incorrect. Rising mountains are not an example of the shrinking that one might expect; they go against it.",
+    "B": "Incorrect. \"Similarly\" signals agreement, but rising contradicts the expected shrinking.",
     "C": "Correct. \"However\" signals that the mountains are rising, contrary to the expectation that erosion would make them shrink.",
-    "D": "Incorrect. \"Similarly\" signals agreement, but rising contradicts the expected shrinking."
+    "D": "Incorrect. Rising mountains are not an example of the shrinking that one might expect; they go against it."
   },
   "traps": {
     "A": "wrong_logic",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

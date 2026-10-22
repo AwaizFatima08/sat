@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to explain why many scholars identify Meluhha with the Indus region. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Seals carved in the Indus style have been found at Ur and at several other sites in ancient Mesopotamia.",
+    "A": "Because Meluhha supplied carnelian and Indus-style carnelian beads appear in Mesopotamian tombs, many scholars link Meluhha to the Indus.",
     "B": "Mesopotamian texts describe Meluhha as a distant land that supplied goods such as carnelian, a reddish stone.",
     "C": "Although the Indus script has not been deciphered, many scholars identify Meluhha, a land named in Mesopotamian texts, with the Indus region.",
-    "D": "Because Meluhha supplied carnelian and Indus-style carnelian beads appear in Mesopotamian tombs, many scholars link Meluhha to the Indus."
+    "D": "Seals carved in the Indus style have been found at Ur and at several other sites in ancient Mesopotamia."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The identification rests on a match between two facts: Mesopotamian texts say Meluhha supplied carnelian, and carnelian beads made in the Indus manner have been found in Mesopotamian tombs. An explanation must connect these two facts to the scholars' conclusion.",
-    "A": "Incorrect. This shows that Indus objects reached Mesopotamia, but it never mentions Meluhha, so it cannot explain why Meluhha is linked to the Indus.",
+    "A": "Correct. \"Because\" introduces both pieces of evidence, carnelian from Meluhha and Indus-style carnelian beads in Mesopotamia, and connects them to the conclusion.",
     "B": "Incorrect. This gives one half of the reasoning, that Meluhha supplied carnelian, but not the Indus beads that complete the link.",
     "C": "Incorrect. This states the scholars' conclusion and a limitation, but it gives no reason for the conclusion. It is the most tempting near miss.",
-    "D": "Correct. \"Because\" introduces both pieces of evidence, carnelian from Meluhha and Indus-style carnelian beads in Mesopotamia, and connects them to the conclusion."
+    "D": "Incorrect. This shows that Indus objects reached Mesopotamia, but it never mentions Meluhha, so it cannot explain why Meluhha is linked to the Indus."
   },
   "traps": {
-    "A": "misses_goal",
     "B": "too_narrow",
-    "C": "too_narrow"
+    "C": "too_narrow",
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

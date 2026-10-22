@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "parasitic",
-    "B": "reciprocal",
-    "C": "competitive",
-    "D": "accidental"
+    "B": "accidental",
+    "C": "reciprocal",
+    "D": "competitive"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The text describes a two-way exchange: the fungi give the plant water and minerals, and the plant gives the fungi sugars \"in return.\" A relationship in which each partner gives and receives is \"reciprocal.\"",
     "A": "Incorrect. A parasite takes from its host without giving anything back. Here the fungi do take sugars, but they also give the plant water and minerals.",
-    "B": "Correct. Each partner supplies what the other needs, so the exchange runs in both directions, which is what reciprocal means.",
-    "C": "Incorrect. Competitors struggle against each other for the same resources. The text describes partners that help each other.",
-    "D": "Incorrect. The text gives no suggestion that the partnership happens by chance; it explains the clear benefit each partner gains."
+    "B": "Incorrect. The text gives no suggestion that the partnership happens by chance; it explains the clear benefit each partner gains.",
+    "C": "Correct. Each partner supplies what the other needs, so the exchange runs in both directions, which is what reciprocal means.",
+    "D": "Incorrect. Competitors struggle against each other for the same resources. The text describes partners that help each other."
   },
   "traps": {
     "A": "reversed",
-    "C": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

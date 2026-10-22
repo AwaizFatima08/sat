@@ -51,21 +51,21 @@
   "stem": "Which choice most effectively uses data from the table to support Castellanos's conclusion?",
   "choices": {
     "A": "After fines ended, active borrowers rose from about 41,000 to nearly 51,000, while late returns stayed near 9% of items.",
-    "B": "The share of items returned late was higher in 2014, the first full year without fines, than it had been in 2013, before fines ended.",
-    "C": "The number of active borrowers increased in every year from 2012 to 2016.",
+    "B": "The number of active borrowers increased in every year from 2012 to 2016.",
+    "C": "The share of items returned late was higher in 2014, the first full year without fines, than it had been in 2013, before fines ended.",
     "D": "Active borrowers increased more from 2013 to 2014 than in any other one-year period shown."
   },
   "answer": "A",
   "explanation": {
     "why": "Castellanos's conclusion joins two claims: ending fines brought borrowers back, and it did not make late returns more common. Support must use both columns across the change in 2014. Active borrowers rose from 40,600 in 2013 to 50,800 in 2016, while the share of late items stayed between 8.8% and 9.3% throughout.",
     "A": "Correct. It shows the rise in borrowers after 2013 together with a late-return rate that stayed near 9%, supporting both halves of the conclusion.",
-    "B": "Incorrect. This is true (9.3% versus 8.8%), but it seems to favor the critics, and it ignores the borrower figures and the return to about 9% afterward.",
-    "C": "Incorrect. Active borrowers fell from 41,200 in 2012 to 40,600 in 2013, so this misreads the table.",
+    "B": "Incorrect. Active borrowers fell from 41,200 in 2012 to 40,600 in 2013, so this misreads the table.",
+    "C": "Incorrect. This is true (9.3% versus 8.8%), but it seems to favor the critics, and it ignores the borrower figures and the return to about 9% afterward.",
     "D": "Incorrect. This is true (a rise of 6,300), but it addresses only the return of borrowers and says nothing about whether late returns became more common."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "reversed",
+    "B": "reversed",
+    "C": "true_irrelevant",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -75,8 +75,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "unpredictably",
-    "B": "rarely",
+    "A": "rarely",
+    "B": "regularly",
     "C": "quietly",
-    "D": "regularly"
+    "D": "unpredictably"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text gives the same months each year for each wind direction, and captains could plan \"months in advance.\" Planning that far ahead is possible only if the change happens on a dependable schedule, so \"regularly\" fits.",
-    "A": "Incorrect. Unpredictable shifts would make planning months ahead impossible, the opposite of what the text describes.",
-    "B": "Incorrect. The winds shifted direction twice every year, so the shift was not rare.",
+    "A": "Incorrect. The winds shifted direction twice every year, so the shift was not rare.",
+    "B": "Correct. The winds changed direction at about the same times every year, so they shifted regularly, letting captains plan voyages \"months in advance.\"",
     "C": "Incorrect. The text says nothing about the sound of the winds; it is about their timing.",
-    "D": "Correct. The winds changed direction at about the same times every year, so they shifted regularly, letting captains plan voyages \"months in advance.\""
+    "D": "Incorrect. Unpredictable shifts would make planning months ahead impossible, the opposite of what the text describes."
   },
   "traps": {
-    "A": "wrong_logic",
-    "B": "reversed",
-    "C": "not_in_text"
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

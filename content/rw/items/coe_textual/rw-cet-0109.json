@@ -15,21 +15,21 @@
   "stem": "Which finding, if true, would most directly support Tremblay's hypothesis?",
   "choices": {
     "A": "Tracked ravens traveled with wolf packs on hunting days and reached most kills within an hour.",
-    "B": "Ravens also eat insects, seeds, berries, and the food scraps that people leave behind.",
-    "C": "Ravens usually found wolf kills only after several days, long after the wolves had moved on.",
-    "D": "Wolves in the region usually hunt in packs of between five and ten animals during the winter."
+    "B": "Ravens usually found wolf kills only after several days, long after the wolves had moved on.",
+    "C": "Wolves in the region usually hunt in packs of between five and ten animals during the winter.",
+    "D": "Ravens also eat insects, seeds, berries, and the food scraps that people leave behind."
   },
   "answer": "A",
   "explanation": {
     "why": "Tremblay's hypothesis is that ravens follow hunting wolves to get to kills fast. Tracking data showing ravens moving with the packs and arriving at kills soon after supports both parts of the claim.",
     "A": "Correct. The ravens traveled with the wolves and reached kills quickly, just as Tremblay predicts.",
-    "B": "Incorrect. Ravens' other foods say nothing about whether they follow wolves.",
-    "C": "Incorrect. Ravens arriving days later, after the wolves had left, suggests they were not following the packs; this weakens the hypothesis.",
-    "D": "Incorrect. The size of wolf packs does not show whether ravens follow them."
+    "B": "Incorrect. Ravens arriving days later, after the wolves had left, suggests they were not following the packs; this weakens the hypothesis.",
+    "C": "Incorrect. The size of wolf packs does not show whether ravens follow them.",
+    "D": "Incorrect. Ravens' other foods say nothing about whether they follow wolves."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "reversed",
+    "B": "reversed",
+    "C": "true_irrelevant",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

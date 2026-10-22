@@ -55,22 +55,22 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "in 2025, mussels at 6 meters grew about 30 millimeters, slightly more than in 2024.",
-    "B": "in both years, mussels at 10 meters grew more than mussels at 2 meters did.",
-    "C": "in both years, growth was greatest at 2 meters and least at 10 meters.",
+    "A": "in both years, mussels at 10 meters grew more than mussels at 2 meters did.",
+    "B": "in both years, growth was greatest at 2 meters and least at 10 meters.",
+    "C": "in 2025, mussels at 6 meters grew about 30 millimeters, slightly more than in 2024.",
     "D": "in both years, the water at 2 meters held more algae than the water at 10 meters."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "MacLeod's view is that mussels grow faster the closer they are to the surface. The graph should therefore show growth decreasing with depth. In both years the 2-meter bar is tallest and the 10-meter bar is shortest.",
-    "A": "Incorrect. This is true, but it compares one depth across years rather than comparing depths, so it says nothing about growth near the surface.",
-    "B": "Incorrect. This reverses the graph: mussels at 2 meters grew about twice as much as those at 10 meters.",
-    "C": "Correct. In both years, shell growth was largest at the shallowest depth and smallest at the deepest, as MacLeod's view predicts.",
+    "A": "Incorrect. This reverses the graph: mussels at 2 meters grew about twice as much as those at 10 meters.",
+    "B": "Correct. In both years, shell growth was largest at the shallowest depth and smallest at the deepest, as MacLeod's view predicts.",
+    "C": "Incorrect. This is true, but it compares one depth across years rather than comparing depths, so it says nothing about growth near the surface.",
     "D": "Incorrect. MacLeod says algae are most plentiful near the surface, but the graph measures shell growth, not the amount of algae."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
+    "A": "reversed",
+    "C": "true_irrelevant",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -80,8 +80,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

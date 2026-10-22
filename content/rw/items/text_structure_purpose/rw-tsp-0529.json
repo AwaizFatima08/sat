@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It offers a likely reason that a newly reported partner was overlooked.",
-    "B": "It describes the role the yeast plays within the lichen partnership.",
-    "C": "It challenges the 2016 report that lichens contain a third partner.",
-    "D": "It explains why the fungus is the partner that provides structure."
+    "A": "It describes the role the yeast plays within the lichen partnership.",
+    "B": "It challenges the 2016 report that lichens contain a third partner.",
+    "C": "It explains why the fungus is the partner that provides structure.",
+    "D": "It offers a likely reason that a newly reported partner was overlooked."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The previous sentence reports the 2016 discovery of a yeast partner. The underlined sentence explains why biologists missed it for so long: its cells are \"hidden among the far more numerous cells of the main fungus.\" It accounts for the oversight rather than questioning the discovery.",
-    "A": "Correct. The sentence explains why the yeast escaped notice for more than a century.",
-    "B": "Incorrect. The final sentence says the yeast's contribution \"is still being studied,\" so its role is not described.",
-    "C": "Incorrect. The sentence accepts that the yeast exists and explains why it was missed; it does not doubt the report.",
-    "D": "Incorrect. The fungus's role is stated in the first sentence, and the underlined sentence does not explain it."
+    "A": "Incorrect. The final sentence says the yeast's contribution \"is still being studied,\" so its role is not described.",
+    "B": "Incorrect. The sentence accepts that the yeast exists and explains why it was missed; it does not doubt the report.",
+    "C": "Incorrect. The fungus's role is stated in the first sentence, and the underlined sentence does not explain it.",
+    "D": "Correct. The sentence explains why the yeast escaped notice for more than a century."
   },
   "traps": {
-    "B": "not_in_text",
-    "C": "reversed",
-    "D": "wrong_logic"
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

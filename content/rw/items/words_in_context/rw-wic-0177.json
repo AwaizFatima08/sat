@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "severed",
-    "B": "purchased",
-    "C": "supplanted",
+    "A": "purchased",
+    "B": "supplanted",
+    "C": "severed",
     "D": "sustained"
   },
   "answer": "D",
   "explanation": {
     "why": "The anthropologists say the exchanges \"established and maintained lasting partnerships.\" A gift that keeps a relationship going \"sustained\" it.",
-    "A": "Incorrect. To sever is to cut off. The exchanges built and kept relationships rather than ending them.",
-    "B": "Incorrect. The text contrasts the Kula with trade driven by \"material gain,\" so the gifts did not buy relationships.",
-    "C": "Incorrect. To supplant is to replace. The gifts supported the partnerships; they did not take their place.",
+    "A": "Incorrect. The text contrasts the Kula with trade driven by \"material gain,\" so the gifts did not buy relationships.",
+    "B": "Incorrect. To supplant is to replace. The gifts supported the partnerships; they did not take their place.",
+    "C": "Incorrect. To sever is to cut off. The exchanges built and kept relationships rather than ending them.",
     "D": "Correct. The gifts kept partnerships going over time, matching \"established and maintained lasting partnerships.\""
   },
   "traps": {
-    "A": "reversed",
-    "B": "wrong_tone",
-    "C": "wrong_logic"
+    "A": "wrong_tone",
+    "B": "wrong_logic",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

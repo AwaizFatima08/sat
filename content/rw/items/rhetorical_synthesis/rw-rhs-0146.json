@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to explain to an unfamiliar audience how eDNA surveys identify the species in an area. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Organisms shed DNA into water and soil, so researchers can sample it and match it to known species' DNA to see which were present.",
-    "B": "Environmental DNA, the genetic material that organisms shed through skin cells, mucus, and waste, can be collected from water or soil.",
-    "C": "In an eDNA survey of Loch Ness in Scotland, researchers found abundant eel DNA but no reptile DNA.",
-    "D": "Surveys of environmental DNA, or eDNA, let researchers detect which species have recently been in an area without seeing or capturing them."
+    "A": "Surveys of environmental DNA, or eDNA, let researchers detect which species have recently been in an area without seeing or capturing them.",
+    "B": "In an eDNA survey of Loch Ness in Scotland, researchers found abundant eel DNA but no reptile DNA.",
+    "C": "Environmental DNA, the genetic material that organisms shed through skin cells, mucus, and waste, can be collected from water or soil.",
+    "D": "Organisms shed DNA into water and soil, so researchers can sample it and match it to known species' DNA to see which were present."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The goal asks how the surveys identify species, explained for readers new to the idea. The process has three steps: organisms shed DNA, researchers collect it from water or soil, and they match it to known species' DNA. Only one choice walks through all of them.",
-    "A": "Correct. It explains the whole process in plain terms: organisms shed DNA, researchers sample it, and matching it to known DNA reveals which species were present.",
-    "B": "Incorrect. This explains what eDNA is and where it is collected, but it stops before explaining how the species are identified.",
-    "C": "Incorrect. This is an example of a survey's result, not an explanation of how surveys work.",
-    "D": "Incorrect. This tells what eDNA surveys can do, but not how they do it. It is the most tempting near miss."
+    "A": "Incorrect. This tells what eDNA surveys can do, but not how they do it. It is the most tempting near miss.",
+    "B": "Incorrect. This is an example of a survey's result, not an explanation of how surveys work.",
+    "C": "Incorrect. This explains what eDNA is and where it is collected, but it stops before explaining how the species are identified.",
+    "D": "Correct. It explains the whole process in plain terms: organisms shed DNA, researchers sample it, and matching it to known DNA reveals which species were present."
   },
   "traps": {
-    "B": "too_narrow",
-    "C": "true_irrelevant",
-    "D": "misses_goal"
+    "A": "misses_goal",
+    "B": "true_irrelevant",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

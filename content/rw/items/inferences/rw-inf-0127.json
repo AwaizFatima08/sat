@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "lichens have become resistant to sulfur dioxide in recent decades.",
-    "B": "coal burning has little effect on which lichens can grow in cities.",
-    "C": "the city's center now has more lichen species than nearby rural areas.",
+    "A": "coal burning has little effect on which lichens can grow in cities.",
+    "B": "the city's center now has more lichen species than nearby rural areas.",
+    "C": "lichens have become resistant to sulfur dioxide in recent decades.",
     "D": "less sulfur dioxide in the air has allowed sensitive lichens to return."
   },
   "answer": "D",
   "explanation": {
     "why": "Coal burning releases sulfur dioxide, which harms many lichens. As coal burning fell, the variety of lichens rose, including sensitive species. The most logical link is that cleaner air let those species grow again.",
-    "A": "Incorrect. The returning species are described as sensitive, so the text points to cleaner air, not to lichens becoming resistant.",
-    "B": "Incorrect. Lichen variety changed sharply as coal burning fell, which suggests a strong effect.",
-    "C": "Incorrect. The text never compares the city with rural areas.",
+    "A": "Incorrect. Lichen variety changed sharply as coal burning fell, which suggests a strong effect.",
+    "B": "Incorrect. The text never compares the city with rural areas.",
+    "C": "Incorrect. The returning species are described as sensitive, so the text points to cleaner air, not to lichens becoming resistant.",
     "D": "Correct. Less coal burning means less sulfur dioxide, which explains why sensitive lichens have come back."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "reversed",
+    "A": "reversed",
+    "B": "not_in_text",
     "C": "not_in_text"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

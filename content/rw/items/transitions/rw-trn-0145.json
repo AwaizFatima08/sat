@@ -15,17 +15,17 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "Similarly,",
-    "B": "In other words,",
+    "B": "For example,",
     "C": "Later,",
-    "D": "For example,"
+    "D": "In other words,"
   },
   "answer": "C",
   "explanation": {
     "why": "The text tells the story of the bridge in time order: John's death in 1869, Washington taking charge, and then Washington's illness in 1872. A transition that moves the account forward in time is needed.",
     "A": "Incorrect. \"Similarly\" introduces a parallel case, but the sentence continues a sequence of events.",
-    "B": "Incorrect. Washington's illness and Emily's role are new events, not a restatement of the sentence before.",
+    "B": "Incorrect. Washington's illness is not an example of his oversight of the foundations; it is the next event in the story.",
     "C": "Correct. \"Later\" signals that Washington's illness came after he took charge of the work.",
-    "D": "Incorrect. Washington's illness is not an example of his oversight of the foundations; it is the next event in the story."
+    "D": "Incorrect. Washington's illness and Emily's role are new events, not a restatement of the sentence before."
   },
   "traps": {
     "A": "wrong_logic",
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

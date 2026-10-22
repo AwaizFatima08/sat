@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to emphasize that Moreno's results contradicted his prediction. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Although Moreno predicted most visitors would come mainly to learn about science, only about 30 percent said so.",
+    "A": "Only about 30 percent of the visitors Moreno surveyed at Spanish science museums said that learning was their main reason for coming.",
     "B": "Moreno found that the most common main reason for visiting the museums, given by about 45 percent, was spending time with family or friends.",
-    "C": "Moreno surveyed more than 2,000 visitors at eight Spanish science museums, predicting that most would come mainly to learn about science.",
-    "D": "Only about 30 percent of the visitors Moreno surveyed at Spanish science museums said that learning was their main reason for coming."
+    "C": "Although Moreno predicted most visitors would come mainly to learn about science, only about 30 percent said so.",
+    "D": "Moreno surveyed more than 2,000 visitors at eight Spanish science museums, predicting that most would come mainly to learn about science."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "To show a contradiction, the sentence must state both the prediction and the result that conflicts with it. Moreno predicted most visitors would come mainly to learn; only about 30 percent did.",
-    "A": "Correct. \"Although\" sets the prediction (most would come to learn) against the result (only about 30 percent did), which shows the contradiction.",
+    "A": "Incorrect. This gives the key result, but without the prediction a reader cannot tell that it was unexpected. It is the most tempting near miss.",
     "B": "Incorrect. This states a result that conflicts with the prediction, but the prediction itself is missing, so the contradiction is not emphasized.",
-    "C": "Incorrect. This states the prediction but gives no result, so the reader cannot see that it was wrong.",
-    "D": "Incorrect. This gives the key result, but without the prediction a reader cannot tell that it was unexpected. It is the most tempting near miss."
+    "C": "Correct. \"Although\" sets the prediction (most would come to learn) against the result (only about 30 percent did), which shows the contradiction.",
+    "D": "Incorrect. This states the prediction but gives no result, so the reader cannot see that it was wrong."
   },
   "traps": {
+    "A": "too_narrow",
     "B": "too_narrow",
-    "C": "misses_goal",
-    "D": "too_narrow"
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

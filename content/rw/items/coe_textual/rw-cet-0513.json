@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken O'Connor's claim?",
   "choices": {
-    "A": "Loaves left unwrapped on the counter lost water and also became hard within a few days.",
-    "B": "Loaves sealed in airtight bags lost almost no water but became hard just as quickly as unwrapped loaves.",
-    "C": "Bread made with extra sugar or butter usually stays soft for a day or two longer than plain bread.",
+    "A": "Loaves sealed in airtight bags lost almost no water but became hard just as quickly as unwrapped loaves.",
+    "B": "Bread made with extra sugar or butter usually stays soft for a day or two longer than plain bread.",
+    "C": "Loaves left unwrapped on the counter lost water and also became hard within a few days.",
     "D": "Many of O'Connor's customers prefer to buy fresh bread every day rather than store it at home."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "O'Connor says bread hardens mainly because it loses water. If bread that keeps almost all its water still hardens just as fast, water loss cannot be the main cause, so that finding weakens his claim.",
-    "A": "Incorrect. Unwrapped loaves losing water and hardening fits O'Connor's claim, so this would support it.",
-    "B": "Correct. The sealed loaves kept their water but still went stale at the same speed, so something other than water loss must be the main cause.",
-    "C": "Incorrect. This is about ingredients, not about whether losing water is what makes bread stale.",
+    "A": "Correct. The sealed loaves kept their water but still went stale at the same speed, so something other than water loss must be the main cause.",
+    "B": "Incorrect. This is about ingredients, not about whether losing water is what makes bread stale.",
+    "C": "Incorrect. Unwrapped loaves losing water and hardening fits O'Connor's claim, so this would support it.",
     "D": "Incorrect. Customers' shopping habits do not show why bread becomes hard."
   },
   "traps": {
-    "A": "reversed",
-    "C": "true_irrelevant",
+    "B": "true_irrelevant",
+    "C": "reversed",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

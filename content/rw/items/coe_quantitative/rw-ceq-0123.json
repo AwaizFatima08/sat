@@ -79,23 +79,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "2021, when online readers reached about 10,400.",
-    "B": "2022, when online readers reached about 13,900.",
+    "A": "2019, when print sales were about 12,000 copies.",
+    "B": "2021, when online readers reached about 10,400.",
     "C": "2024, when online readers reached about 21,000.",
-    "D": "2019, when print sales were about 12,000 copies."
+    "D": "2022, when online readers reached about 13,900."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The question asks for the first year the online line rose above the print line. In 2021 online readers (about 10,400) were still below print copies (about 11,500), but in 2022 online readers (about 13,900) passed print copies (about 11,100).",
-    "A": "Incorrect. In 2021 online readers were about 10,400, still fewer than the roughly 11,500 print copies sold.",
-    "B": "Correct. 2022 is the first year the online line is above the print line: about 13,900 online readers versus about 11,100 print copies.",
+    "A": "Incorrect. This is true, but in 2019 print copies far outnumbered online readers (about 12,000 versus 2,500).",
+    "B": "Incorrect. In 2021 online readers were about 10,400, still fewer than the roughly 11,500 print copies sold.",
     "C": "Incorrect. Online readers did outnumber print copies in 2024, but they had already done so in 2022 and 2023, so 2024 was not the first year.",
-    "D": "Incorrect. This is true, but in 2019 print copies far outnumbered online readers (about 12,000 versus 2,500)."
+    "D": "Correct. 2022 is the first year the online line is above the print line: about 13,900 online readers versus about 11,100 print copies."
   },
   "traps": {
-    "A": "reversed",
-    "C": "true_irrelevant",
-    "D": "true_irrelevant"
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -104,8 +104,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

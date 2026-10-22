@@ -39,23 +39,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "July, when it dropped from 455 to 372 liters.",
-    "B": "August, when it dropped from 470 to 401 liters.",
-    "C": "June, when it dropped from 412 to 351 liters.",
-    "D": "September, when it dropped by more than 100 liters."
+    "A": "September, when it dropped by more than 100 liters.",
+    "B": "June, when it dropped from 412 to 351 liters.",
+    "C": "July, when it dropped from 455 to 372 liters.",
+    "D": "August, when it dropped from 470 to 401 liters."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "To find where use fell the most, subtract the 2022 value from the 2021 value for each month: June 61, July 83 and August 69 liters. The largest drop is in July.",
-    "A": "Correct. Use fell by 83 liters in July, more than in June (61 liters) or August (69 liters).",
-    "B": "Incorrect. August had the highest use in both years, but it fell by only 69 liters, less than July's 83.",
-    "C": "Incorrect. June's drop of 61 liters was the smallest of the three months.",
-    "D": "Incorrect. The table gives no data for September."
+    "A": "Incorrect. The table gives no data for September.",
+    "B": "Incorrect. June's drop of 61 liters was the smallest of the three months.",
+    "C": "Correct. Use fell by 83 liters in July, more than in June (61 liters) or August (69 liters).",
+    "D": "Incorrect. August had the highest use in both years, but it fell by only 69 liters, less than July's 83."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "reversed",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -68,13 +68,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

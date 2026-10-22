@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "bustling",
-    "B": "deserted",
-    "C": "orderly",
-    "D": "melancholy"
+    "A": "deserted",
+    "B": "melancholy",
+    "C": "bustling",
+    "D": "orderly"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "\"Instead\" tells you that the harbor was the opposite of the \"sleepy\" place Bilal imagined, and the details after the colon (sliding crates, shouting auctioneers, pushing buyers) describe a scene full of noisy activity. \"Bustling\" fits.",
-    "A": "Correct. A bustling place is crowded with busy activity, which matches the shouting, pushing, and moving crates.",
-    "B": "Incorrect. Deserted matches the \"sleepy\" harbor Bilal pictured, but \"Instead\" tells you the real harbor was the opposite.",
-    "C": "Incorrect. Shouted prices and buyers pushing forward suggest noise and crowding, not neat organization.",
-    "D": "Incorrect. Although the scene takes place at dawn, the details describe energy and noise, not sadness."
+    "A": "Incorrect. Deserted matches the \"sleepy\" harbor Bilal pictured, but \"Instead\" tells you the real harbor was the opposite.",
+    "B": "Incorrect. Although the scene takes place at dawn, the details describe energy and noise, not sadness.",
+    "C": "Correct. A bustling place is crowded with busy activity, which matches the shouting, pushing, and moving crates.",
+    "D": "Incorrect. Shouted prices and buyers pushing forward suggest noise and crowding, not neat organization."
   },
   "traps": {
-    "B": "reversed",
-    "C": "wrong_tone",
-    "D": "not_in_text"
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "wrong_tone"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

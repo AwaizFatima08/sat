@@ -16,21 +16,21 @@
   "choices": {
     "A": "To caution against treating a kind of early recording as an unaltered record of composers' wishes",
     "B": "To explain how reproducing pianos recorded the force and length of each note a pianist played",
-    "C": "To argue that composers' piano roll recordings are less valuable to musicians than their written scores",
-    "D": "To describe the ways in which technicians improved the sound of early composers' piano rolls"
+    "C": "To describe the ways in which technicians improved the sound of early composers' piano rolls",
+    "D": "To argue that composers' piano roll recordings are less valuable to musicians than their written scores"
   },
   "answer": "A",
   "explanation": {
     "why": "The text reports that rolls are \"sometimes treated as direct evidence\" of composers' intentions, then says \"Such confidence is hard to sustain.\" It gives two reasons (editing by technicians and dependence on the replaying piano) and concludes that the rolls are \"filtered through hands other than the composer's.\" The aim is to warn against overtrusting them.",
     "A": "Correct. The text questions the view that rolls directly show how composers wanted their music to sound, because others shaped what we hear.",
     "B": "Incorrect. The first sentence mentions what the pianos recorded, but this is background for the author's warning, not the main purpose.",
-    "C": "Incorrect. The text never compares rolls with written scores or says the rolls lack value; it says they preserve a real but filtered performance.",
-    "D": "Incorrect. The text presents the technicians' editing as a problem for using the rolls as evidence, not as an improvement to celebrate."
+    "C": "Incorrect. The text presents the technicians' editing as a problem for using the rolls as evidence, not as an improvement to celebrate.",
+    "D": "Incorrect. The text never compares rolls with written scores or says the rolls lack value; it says they preserve a real but filtered performance."
   },
   "traps": {
     "B": "too_narrow",
-    "C": "not_in_text",
-    "D": "wrong_tone"
+    "C": "wrong_tone",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

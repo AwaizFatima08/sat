@@ -16,21 +16,21 @@
   "choices": {
     "A": "It grows directly along the shortest possible path between each separate pair of food sources.",
     "B": "It follows an overall plan for the network, much as the region's rail engineers did.",
-    "C": "Its single, enormous cell can spread across a surface as a web of branching tubes.",
-    "D": "Local changes in its tubes, driven by how much fluid each carries, favor useful routes."
+    "C": "Local changes in its tubes, driven by how much fluid each carries, favor useful routes.",
+    "D": "Its single, enormous cell can spread across a surface as a web of branching tubes."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The last sentence explains how the mold \"manages this\": tubes with more flow thicken, tubes with little flow shrink and vanish, so \"useful routes are reinforced and redundant ones pruned.\" The efficient network emerges from these local adjustments, not from any plan.",
     "A": "Incorrect. The text never says the mold finds shortest paths; it describes a gradual process of reinforcing and pruning tubes.",
     "B": "Incorrect. The text says the mold works \"without any overall plan.\"",
-    "C": "Incorrect. This describes the mold's basic form, which makes a network possible, but it does not explain why the network becomes efficient.",
-    "D": "Correct. This restates the mechanism in the final sentence: flow-driven thickening and shrinking of tubes."
+    "C": "Correct. This restates the mechanism in the final sentence: flow-driven thickening and shrinking of tubes.",
+    "D": "Incorrect. This describes the mold's basic form, which makes a network possible, but it does not explain why the network becomes efficient."
   },
   "traps": {
     "A": "not_in_text",
     "B": "reversed",
-    "C": "true_irrelevant"
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

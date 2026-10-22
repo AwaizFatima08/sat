@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "days, on",
-    "B": "days. On",
+    "B": "days and on",
     "C": "days on",
-    "D": "days and on"
+    "D": "days. On"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "\"One full rotation takes about 243 Earth days, while one trip around the Sun takes only about 225 Earth days\" is a complete sentence, and \"on Venus, a single spin lasts longer than a whole year\" is another. Two independent clauses need a strong boundary such as a period.",
     "A": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice.",
-    "B": "Correct. A period ends the first independent clause, and the second begins as a new sentence.",
+    "B": "Incorrect. When \"and\" joins two independent clauses, a comma is needed before it.",
     "C": "Incorrect. With no punctuation, the clauses run together, and \"225 Earth days on Venus\" is misread as one phrase.",
-    "D": "Incorrect. When \"and\" joins two independent clauses, a comma is needed before it."
+    "D": "Correct. A period ends the first independent clause, and the second begins as a new sentence."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "B": "grammar_rule",
+    "C": "grammar_rule"
   },
   "grammar": "linking_clauses",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

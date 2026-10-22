@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "the pass that the guide had described was nowhere to be seen.",
+    "A": "Yerlan searched for the pass that the guide had described.",
     "B": "the guide's directions to the pass made no sense to Yerlan.",
-    "C": "Yerlan's search for the pass that the guide had described failed.",
-    "D": "Yerlan searched for the pass that the guide had described."
+    "C": "the pass that the guide had described was nowhere to be seen.",
+    "D": "Yerlan's search for the pass that the guide had described failed."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The introductory phrase \"Squinting at the faded map in his gloved hands\" describes a person. The subject right after the comma must be that person, so the sentence must begin with \"Yerlan,\" not with the pass, the directions, or his search.",
-    "A": "Incorrect. The subject is \"the pass,\" so the sentence says the pass was squinting at the map.",
+    "A": "Correct. \"Yerlan\" comes right after the introductory phrase, so he is the one squinting at the map.",
     "B": "Incorrect. The subject is \"the guide's directions,\" so the sentence says the directions were squinting at the map.",
-    "C": "Incorrect. The subject is \"Yerlan's search,\" not Yerlan, so the sentence says his search had gloved hands and was squinting.",
-    "D": "Correct. \"Yerlan\" comes right after the introductory phrase, so he is the one squinting at the map."
+    "C": "Incorrect. The subject is \"the pass,\" so the sentence says the pass was squinting at the map.",
+    "D": "Incorrect. The subject is \"Yerlan's search,\" not Yerlan, so the sentence says his search had gloved hands and was squinting."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "modifier",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "read the whole script without learning any other letters.",
-    "B": "use its shape to help learn the letters for related sounds.",
+    "A": "use its shape to help learn the letters for related sounds.",
+    "B": "understand Chinese characters more easily than other learners.",
     "C": "pronounce Korean words without moving the tongue or lips.",
-    "D": "understand Chinese characters more easily than other learners."
+    "D": "read the whole script without learning any other letters."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Related sounds were written by adding strokes to the basic letters. A learner who knows a basic letter can therefore recognize it inside the related letters, which makes those letters easier to learn.",
-    "A": "Incorrect. Knowing one letter would help with related letters, but the learner would still need to learn the others.",
-    "B": "Correct. Because related letters are built from the basic shapes, knowing one basic letter gives a head start on the related ones.",
+    "A": "Correct. Because related letters are built from the basic shapes, knowing one basic letter gives a head start on the related ones.",
+    "B": "Incorrect. The text never mentions Chinese characters.",
     "C": "Incorrect. The letters picture how the tongue and mouth move; they do not remove the need to move them.",
-    "D": "Incorrect. The text never mentions Chinese characters."
+    "D": "Incorrect. Knowing one letter would help with related letters, but the learner would still need to learn the others."
   },
   "traps": {
-    "A": "too_broad",
+    "B": "not_in_text",
     "C": "reversed",
-    "D": "not_in_text"
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

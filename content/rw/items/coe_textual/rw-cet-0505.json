@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Moreau's argument?",
   "choices": {
-    "A": "Building records show that work usually stopped when wars broke out, even while donations kept arriving.",
+    "A": "Some skilled builders traveled from city to city, working on several cathedrals during their careers.",
     "B": "Building records show that work usually stopped soon after the money collected for construction was spent.",
     "C": "Many medieval cathedrals have stained-glass windows showing stories that were familiar to local people.",
-    "D": "Some skilled builders traveled from city to city, working on several cathedrals during their careers."
+    "D": "Building records show that work usually stopped when wars broke out, even while donations kept arriving."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Moreau claims the pauses came mainly from a lack of money rather than from wars. A finding weakens her if it shows work stopping because of war at times when money was still available.",
-    "A": "Correct. Work stopped during wars even though donations kept coming in, so a lack of money cannot explain these pauses.",
+    "A": "Incorrect. Builders moving between cities does not show what caused the long pauses.",
     "B": "Incorrect. Work stopping when the money ran out fits Moreau's argument, so this would support it.",
     "C": "Incorrect. The windows' subjects say nothing about why construction stopped.",
-    "D": "Incorrect. Builders moving between cities does not show what caused the long pauses."
+    "D": "Correct. Work stopped during wars even though donations kept coming in, so a lack of money cannot explain these pauses."
   },
   "traps": {
+    "A": "true_irrelevant",
     "B": "reversed",
-    "C": "true_irrelevant",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

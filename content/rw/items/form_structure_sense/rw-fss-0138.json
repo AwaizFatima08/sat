@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "basilicas'",
-    "B": "basilica's",
-    "C": "basilicas",
-    "D": "basilicas's"
+    "A": "basilicas's",
+    "B": "basilicas",
+    "C": "basilica's",
+    "D": "basilicas'"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The towers belong to one building, the Sagrada Família. A singular noun shows possession with an apostrophe and s, so \"basilica's\" is correct. The plural \"towers\" is what is owned, not the owner.",
-    "A": "Incorrect. \"Basilicas'\" is plural possessive, but the text describes a single basilica.",
-    "B": "Correct. \"Basilica's\" is the singular possessive, showing that the towers belong to the Sagrada Família.",
-    "C": "Incorrect. \"Basilicas\" is plural and not possessive; the towers belong to one basilica.",
-    "D": "Incorrect. \"Basilicas's\" is not a Standard English form."
+    "A": "Incorrect. \"Basilicas's\" is not a Standard English form.",
+    "B": "Incorrect. \"Basilicas\" is plural and not possessive; the towers belong to one basilica.",
+    "C": "Correct. \"Basilica's\" is the singular possessive, showing that the towers belong to the Sagrada Família.",
+    "D": "Incorrect. \"Basilicas'\" is plural possessive, but the text describes a single basilica."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
+    "B": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "plural_possessive",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

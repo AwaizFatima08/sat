@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "seals",
+    "A": "would seal",
     "B": "has sealed",
-    "C": "would seal",
-    "D": "had sealed"
+    "C": "had sealed",
+    "D": "seals"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The passage describes a past situation (the paintings \"were\" well preserved in 1994) and explains it with an action that happened before that situation, \"many thousands of years earlier.\" An action completed before another past time takes the past perfect: \"had sealed.\"",
-    "A": "Incorrect. \"Seals\" is present tense, but the rockfall happened thousands of years before the past events in the passage.",
+    "A": "Incorrect. \"Would seal\" points to a time after the past moment being described, but the rockfall came before the paintings were found, not after.",
     "B": "Incorrect. The present perfect \"has sealed\" links a past action to the present; it can't be used with a specific earlier time such as \"many thousands of years earlier\" in a sentence set in the past.",
-    "C": "Incorrect. \"Would seal\" points to a time after the past moment being described, but the rockfall came before the paintings were found, not after.",
-    "D": "Correct. The past perfect \"had sealed\" shows that the rockfall came before the past situation described in the sentence."
+    "C": "Correct. The past perfect \"had sealed\" shows that the rockfall came before the past situation described in the sentence.",
+    "D": "Incorrect. \"Seals\" is present tense, but the rockfall happened thousands of years before the past events in the passage."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "D": "grammar_rule"
   },
   "grammar": "verb_form",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

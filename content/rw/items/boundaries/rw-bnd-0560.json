@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "difficulty was: how",
+    "A": "difficulty, was how",
     "B": "difficulty was how",
     "C": "difficulty was, how",
-    "D": "difficulty, was how"
+    "D": "difficulty was: how"
   },
   "answer": "B",
   "explanation": {
     "why": "In \"The central difficulty was how to vault a span ...,\" the subject is \"difficulty,\" the linking verb is \"was,\" and \"how to vault a span of more than forty meters\" completes the verb. No punctuation goes between a subject and its verb or between a verb and the words that complete it.",
-    "A": "Incorrect. A colon must follow a complete independent clause, but \"The central difficulty was\" is unfinished without the words that complete \"was.\"",
+    "A": "Incorrect. A comma can't separate the subject \"The central difficulty\" from its verb \"was.\"",
     "B": "Correct. No punctuation separates the subject, the verb \"was,\" and the phrase that completes it.",
     "C": "Incorrect. A comma can't separate the verb \"was\" from the phrase \"how to vault a span ...\" that completes it.",
-    "D": "Incorrect. A comma can't separate the subject \"The central difficulty\" from its verb \"was.\""
+    "D": "Incorrect. A colon must follow a complete independent clause, but \"The central difficulty was\" is unfinished without the words that complete \"was.\""
   },
   "traps": {
     "A": "grammar_rule",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

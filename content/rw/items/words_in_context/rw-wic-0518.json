@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "settled",
-    "B": "sidestepped",
+    "A": "sidestepped",
+    "B": "settled",
     "C": "welcomed",
     "D": "invented"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The climbers responded by \"saying only that they had arrived together as a team,\" and the text adds that the public did not learn who was first until 1955. So the men avoided answering directly. The blank needs a verb meaning \"evaded,\" such as \"sidestepped.\"",
-    "A": "Incorrect. If the climbers had settled the question, the public would have known the answer in 1953. The text says the answer came only with the 1955 autobiography.",
-    "B": "Correct. The men avoided giving a direct answer, saying \"only\" that they had arrived as a team, so the public did not learn the answer until 1955. They sidestepped the question.",
+    "A": "Correct. The men avoided giving a direct answer, saying \"only\" that they had arrived as a team, so the public did not learn the answer until 1955. They sidestepped the question.",
+    "B": "Incorrect. If the climbers had settled the question, the public would have known the answer in 1953. The text says the answer came only with the 1955 autobiography.",
     "C": "Incorrect. Saying \"only\" that they arrived together suggests the men were avoiding the question, not eagerly inviting it.",
     "D": "Incorrect. The reporters asked the question; nothing suggests the climbers made it up."
   },
   "traps": {
-    "A": "reversed",
+    "B": "reversed",
     "C": "wrong_tone",
     "D": "not_in_text"
   },
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "are: the",
-    "B": "are, the",
-    "C": "are the",
-    "D": "are; the"
+    "B": "are; the",
+    "C": "are, the",
+    "D": "are the"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "In the last sentence, the subject is \"These three instruments,\" the verb is \"are,\" and the list of instruments completes the verb. No punctuation belongs between a verb and the words that complete it.",
     "A": "Incorrect. A colon must follow a complete independent clause, and \"These three instruments are\" is not complete.",
-    "B": "Incorrect. A comma can't separate the verb \"are\" from the list that completes it.",
-    "C": "Correct. No punctuation separates the verb \"are\" from the list that completes it.",
-    "D": "Incorrect. A semicolon must join two independent clauses; it can't separate a verb from its complement."
+    "B": "Incorrect. A semicolon must join two independent clauses; it can't separate a verb from its complement.",
+    "C": "Incorrect. A comma can't separate the verb \"are\" from the list that completes it.",
+    "D": "Correct. No punctuation separates the verb \"are\" from the list that completes it."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "punctuation",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -15,16 +15,16 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "\"watching",
-    "B": ", \"watching",
-    "C": ": \"watching",
+    "B": ": \"watching",
+    "C": ", \"watching",
     "D": "; \"watching"
   },
   "answer": "A",
   "explanation": {
     "why": "The quoted words \"watching light move across a wall\" are the object of the preposition \"to.\" When a quotation is woven into a sentence this way, it takes no introductory punctuation; like the earlier quotation after \"that,\" it simply continues the sentence.",
     "A": "Correct. No punctuation separates the preposition \"to\" from the quotation that serves as its object.",
-    "B": "Incorrect. A comma can't separate the preposition \"to\" from its object, even when the object is a quotation.",
-    "C": "Incorrect. A colon must follow a complete independent clause, and it can't come between a preposition and its object.",
+    "B": "Incorrect. A colon must follow a complete independent clause, and it can't come between a preposition and its object.",
+    "C": "Incorrect. A comma can't separate the preposition \"to\" from its object, even when the object is a quotation.",
     "D": "Incorrect. A semicolon must join two independent clauses, and the quotation is not one."
   },
   "traps": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

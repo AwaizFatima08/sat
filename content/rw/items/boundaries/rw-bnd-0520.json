@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "it; seemed",
-    "B": "it—seemed",
+    "A": "it, seemed",
+    "B": "it; seemed",
     "C": "it seemed",
-    "D": "it, seemed"
+    "D": "it—seemed"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The subject \"The watch\" goes with the verb \"seemed.\" In between, \"silent since the winter her grandfather had last wound it\" is extra information. It opens with a comma after \"watch,\" so it must close with a comma before \"seemed.\"",
-    "A": "Incorrect. A semicolon would cut the subject \"The watch\" off from its verb \"seemed,\" leaving two fragments.",
-    "B": "Incorrect. Extra information that opens with a comma can't close with a dash; the two marks must match.",
+    "A": "Correct. The closing comma matches the comma after \"watch,\" so the subject connects to \"seemed.\"",
+    "B": "Incorrect. A semicolon would cut the subject \"The watch\" off from its verb \"seemed,\" leaving two fragments.",
     "C": "Incorrect. Without a closing comma, the extra information runs into \"seemed,\" and the sentence seems to say \"it seemed\" belongs to the grandfather's winter.",
-    "D": "Correct. The closing comma matches the comma after \"watch,\" so the subject connects to \"seemed.\""
+    "D": "Incorrect. Extra information that opens with a comma can't close with a dash; the two marks must match."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "supplements",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

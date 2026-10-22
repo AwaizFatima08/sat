@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claims in the news reports in Text 1?",
   "choices": {
-    "A": "By agreeing that Mozart's music has a lasting effect on intelligence",
-    "B": "By suggesting that the effect was brief and was not special to Mozart's music",
-    "C": "By arguing that babies benefit more from music than college students do",
-    "D": "By claiming that listening to music has no effect at all on thinking"
+    "A": "By suggesting that the effect was brief and was not special to Mozart's music",
+    "B": "By claiming that listening to music has no effect at all on thinking",
+    "C": "By agreeing that Mozart's music has a lasting effect on intelligence",
+    "D": "By arguing that babies benefit more from music than college students do"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Text 1 says news reports claimed Mozart \"could make listeners smarter.\" Text 2 says the improvement \"was small and lasted only minutes\" and also followed \"other music they enjoyed.\" So Text 2 would answer that the effect was short-lived and not unique to Mozart.",
-    "A": "Incorrect. Text 2 says any improvement \"lasted only minutes,\" so it was not lasting.",
-    "B": "Correct. Text 2 reports that the effect was brief and also appeared with other enjoyable music.",
-    "C": "Incorrect. Neither text compares the effects of music on babies and on college students.",
-    "D": "Incorrect. Text 2 says a good mood \"briefly sharpened their thinking,\" so it does not deny every effect."
+    "A": "Correct. Text 2 reports that the effect was brief and also appeared with other enjoyable music.",
+    "B": "Incorrect. Text 2 says a good mood \"briefly sharpened their thinking,\" so it does not deny every effect.",
+    "C": "Incorrect. Text 2 says any improvement \"lasted only minutes,\" so it was not lasting.",
+    "D": "Incorrect. Neither text compares the effects of music on babies and on college students."
   },
   "traps": {
-    "A": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "B": "too_broad",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

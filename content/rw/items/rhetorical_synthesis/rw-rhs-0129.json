@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to emphasize a similarity in the appearance of puffins and penguins. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Puffins and penguins both use their wings to swim underwater when they hunt for fish.",
-    "B": "Atlantic puffins can fly through the air, but penguins, which are not closely related to puffins, cannot.",
+    "A": "Like penguins, puffins have dark backs and white bellies, coloring that helps hide them in the water.",
+    "B": "Puffins and penguins both use their wings to swim underwater when they hunt for fish.",
     "C": "Atlantic puffins live in the North Atlantic, whereas most penguins live in the Southern Hemisphere.",
-    "D": "Like penguins, puffins have dark backs and white bellies, coloring that helps hide them in the water."
+    "D": "Atlantic puffins can fly through the air, but penguins, which are not closely related to puffins, cannot."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The goal asks for a similarity in appearance, how the birds look. The notes give two similarities, but only one is about appearance: both have dark backs and white bellies. Swimming with their wings is a shared behavior, not a shared look.",
-    "A": "Incorrect. This is a similarity, but it is about how the birds hunt, not how they look.",
-    "B": "Incorrect. This describes a difference in what the birds can do, not a similarity in how they look.",
+    "A": "Correct. \"Like penguins\" signals the similarity, and dark backs and white bellies describe how both birds look.",
+    "B": "Incorrect. This is a similarity, but it is about how the birds hunt, not how they look.",
     "C": "Incorrect. This describes a difference in where the birds live.",
-    "D": "Correct. \"Like penguins\" signals the similarity, and dark backs and white bellies describe how both birds look."
+    "D": "Incorrect. This describes a difference in what the birds can do, not a similarity in how they look."
   },
   "traps": {
-    "A": "misses_goal",
     "B": "misses_goal",
-    "C": "true_irrelevant"
+    "C": "true_irrelevant",
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

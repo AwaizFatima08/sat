@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "celebrations",
+    "A": "travesties",
     "B": "reconstructions",
     "C": "continuations",
-    "D": "travesties"
+    "D": "celebrations"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "\"Not acts of fidelity ... but ______\" requires a word opposite to faithfulness. Ruskin saw restoration as \"a kind of falsehood\" that replaces the authentic record with a modern idea. The blank must mean a false or distorted representation of the past.",
-    "A": "Incorrect. Ruskin condemned the additions as false, so he would not call them celebrations of the past.",
+    "A": "Correct. A travesty is a false or distorted imitation of something, which fits Ruskin's view of additions that replace an authentic record with a modern idea.",
     "B": "Incorrect. The additions were literally reconstructions, but that word is not the opposite of fidelity; Ruskin's point was that they misrepresented the past.",
     "C": "Incorrect. Seeing additions as continuing a building's original design is closer to Viollet-le-Duc's view, not Ruskin's.",
-    "D": "Correct. A travesty is a false or distorted imitation of something, which fits Ruskin's view of additions that replace an authentic record with a modern idea."
+    "D": "Incorrect. Ruskin condemned the additions as false, so he would not call them celebrations of the past."
   },
   "traps": {
-    "A": "reversed",
     "B": "true_irrelevant",
-    "C": "reversed"
+    "C": "reversed",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

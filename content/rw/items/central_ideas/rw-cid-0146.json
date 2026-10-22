@@ -15,22 +15,22 @@
   "stem": "Based on the text, what prompts Fenn's sudden change of mood?",
   "choices": {
     "A": "Discovering at last where the four shillings missing from the Hargreave account had gone",
-    "B": "Seeing his reflection in the window and deciding that he looks younger than he had feared",
-    "C": "Watching a boy peel an orange slowly, as though nothing around him required any hurry",
-    "D": "Arriving at his office after a long and uncomfortable ride through the streets of London"
+    "B": "Arriving at his office after a long and uncomfortable ride through the streets of London",
+    "C": "Seeing his reflection in the window and deciding that he looks younger than he had feared",
+    "D": "Watching a boy peel an orange slowly, as though nothing around him required any hurry"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Fenn's worries (the account, his tired reflection) give way when he notices a boy peeling an orange \"unhurried, as if the tram and the Hargreave account and all of London could wait.\" Right after this, \"quite suddenly Fenn was glad ... of the smell of it ... and of the boy.\" The boy's calm, unhurried act triggers the change.",
     "A": "Incorrect. Fenn only expects the shillings to \"turn up\"; he has not found them.",
-    "B": "Incorrect. His reflection shows \"a man of forty, hat a little crooked,\" and leads him to an uneasy question, not to relief.",
-    "C": "Correct. The gladness follows directly from watching the unhurried boy and smelling the orange.",
-    "D": "Incorrect. Fenn is still on the tram; the passage never shows him arriving at the office."
+    "B": "Incorrect. Fenn is still on the tram; the passage never shows him arriving at the office.",
+    "C": "Incorrect. His reflection shows \"a man of forty, hat a little crooked,\" and leads him to an uneasy question, not to relief.",
+    "D": "Correct. The gladness follows directly from watching the unhurried boy and smelling the orange."
   },
   "traps": {
     "A": "not_in_text",
-    "B": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

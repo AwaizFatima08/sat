@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to present Ortega's overall finding along with an exception to it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Ortega found that streets with permeable pavement produced about 60 percent less runoff than conventional streets during heavy storms.",
-    "B": "During the most intense storm in Ortega's study, runoff was similar on both kinds of streets, possibly because the ground was saturated.",
-    "C": "To learn whether permeable pavement reduces street flooding, Ortega monitored runoff on twelve Valencia streets over two rainy seasons.",
-    "D": "Permeable pavement generally cut storm runoff by about 60 percent in Ortega's study, but not during the most intense storm."
+    "A": "To learn whether permeable pavement reduces street flooding, Ortega monitored runoff on twelve Valencia streets over two rainy seasons.",
+    "B": "Permeable pavement generally cut storm runoff by about 60 percent in Ortega's study, but not during the most intense storm.",
+    "C": "Ortega found that streets with permeable pavement produced about 60 percent less runoff than conventional streets during heavy storms.",
+    "D": "During the most intense storm in Ortega's study, runoff was similar on both kinds of streets, possibly because the ground was saturated."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The goal has two parts: the general result (about 60 percent less runoff) and the exception (the most intense storm, when runoff was nearly the same). The key must state the general pattern and then mark the exception.",
-    "A": "Incorrect. This gives the overall finding but presents it as if it held in every storm, leaving out the exception.",
-    "B": "Incorrect. This describes the exception, but without the overall finding the reader cannot tell what it is an exception to.",
-    "C": "Incorrect. This gives the aim and method of the study, not its findings.",
-    "D": "Correct. \"Generally\" signals the overall finding, and \"but not during the most intense storm\" marks the exception."
+    "A": "Incorrect. This gives the aim and method of the study, not its findings.",
+    "B": "Correct. \"Generally\" signals the overall finding, and \"but not during the most intense storm\" marks the exception.",
+    "C": "Incorrect. This gives the overall finding but presents it as if it held in every storm, leaving out the exception.",
+    "D": "Incorrect. This describes the exception, but without the overall finding the reader cannot tell what it is an exception to."
   },
   "traps": {
-    "A": "too_narrow",
-    "B": "too_narrow",
-    "C": "misses_goal"
+    "A": "misses_goal",
+    "C": "too_narrow",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

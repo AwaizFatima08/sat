@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It describes the methods officials used to collect information for the survey.",
-    "B": "It restates the practical reason the king ordered the survey.",
-    "C": "It argues that many of the survey's tax records were inaccurate.",
-    "D": "It contrasts the survey's original purpose with the reason it is valued today."
+    "A": "It restates the practical reason the king ordered the survey.",
+    "B": "It argues that many of the survey's tax records were inaccurate.",
+    "C": "It contrasts the survey's original purpose with the reason it is valued today.",
+    "D": "It describes the methods officials used to collect information for the survey."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The sentence before the underlined one gives the survey's \"main purpose\": helping the king tax landholders. The underlined sentence, signaled by \"however\" and \"its value lies elsewhere,\" shifts to why historians value it now: it shows \"ordinary life in eleventh-century England.\" Its role is to set the modern value against the original aim.",
-    "A": "Incorrect. The officials' methods are described in the second sentence, not the underlined one.",
-    "B": "Incorrect. The underlined sentence moves away from the tax purpose (\"its value lies elsewhere\") rather than repeating it.",
-    "C": "Incorrect. The text never questions the accuracy of the survey's records.",
-    "D": "Correct. The sentence sets the historians' reason for valuing the survey against the king's practical reason for ordering it."
+    "A": "Incorrect. The underlined sentence moves away from the tax purpose (\"its value lies elsewhere\") rather than repeating it.",
+    "B": "Incorrect. The text never questions the accuracy of the survey's records.",
+    "C": "Correct. The sentence sets the historians' reason for valuing the survey against the king's practical reason for ordering it.",
+    "D": "Incorrect. The officials' methods are described in the second sentence, not the underlined one."
   },
   "traps": {
-    "A": "wrong_logic",
-    "B": "reversed",
-    "C": "not_in_text"
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

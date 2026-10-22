@@ -21,22 +21,22 @@
   "stem": "The student wants to present the aim and the finding of de Vries's study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
     "A": "De Vries compared teenage visits at three branches open until 10 p.m. with visits at three that kept the usual hours.",
-    "B": "De Vries wanted to find out whether keeping library branches open until 10 p.m. would affect how many teenagers used them.",
-    "C": "After a Dutch library system kept three branches open later, teenage visits there rose by 35 percent, mostly after 7 p.m.",
-    "D": "Asking whether longer hours would affect teenage library use, de Vries found that teenage visits rose 35 percent at branches open late."
+    "B": "After a Dutch library system kept three branches open later, teenage visits there rose by 35 percent, mostly after 7 p.m.",
+    "C": "Asking whether longer hours would affect teenage library use, de Vries found that teenage visits rose 35 percent at branches open late.",
+    "D": "De Vries wanted to find out whether keeping library branches open until 10 p.m. would affect how many teenagers used them."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The goal names two parts: the aim (what de Vries wanted to learn) and the finding (what she learned). One choice states the question about longer hours and teenage use and then reports the 35 percent rise.",
     "A": "Incorrect. This describes the study's method, the comparison of branches, rather than its aim or its finding.",
-    "B": "Incorrect. It states the aim but leaves out the finding, so it accomplishes only half the goal.",
-    "C": "Incorrect. It reports the finding but never says what de Vries set out to learn, so it, too, covers only half the goal.",
-    "D": "Correct. \"Asking whether longer hours would affect teenage library use\" is the aim, and the 35 percent rise is the finding."
+    "B": "Incorrect. It reports the finding but never says what de Vries set out to learn, so it, too, covers only half the goal.",
+    "C": "Correct. \"Asking whether longer hours would affect teenage library use\" is the aim, and the 35 percent rise is the finding.",
+    "D": "Incorrect. It states the aim but leaves out the finding, so it accomplishes only half the goal."
   },
   "traps": {
     "A": "misses_goal",
     "B": "too_narrow",
-    "C": "too_narrow"
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

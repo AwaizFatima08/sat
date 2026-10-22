@@ -15,22 +15,22 @@
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the admirers' view of Tagore described in Text 1?",
   "choices": {
     "A": "By suggesting that the qualities they admired owed much to Tagore's way of translating",
-    "B": "By arguing that Tagore's Bengali poems were in fact simpler than his English versions",
-    "C": "By contending that the Nobel committee was unaware that Gitanjali was a translation",
-    "D": "By dismissing the spirituality they praised as a quality absent from Tagore's Bengali verse"
+    "B": "By contending that the Nobel committee was unaware that Gitanjali was a translation",
+    "C": "By dismissing the spirituality they praised as a quality absent from Tagore's Bengali verse",
+    "D": "By arguing that Tagore's Bengali poems were in fact simpler than his English versions"
   },
   "answer": "A",
   "explanation": {
     "why": "Text 1 says Western admirers praised Gitanjali's \"simple, luminous verse\" and saw Tagore as a sage. Sen argues that this simplicity \"was in large part a product\" of Tagore's choices in translating, such as removing rhyme, meter, and wordplay, so the poet they admired was one he \"had fashioned for them in translation.\" She would trace the admired qualities to the translation.",
     "A": "Correct. Sen argues that the simplicity Western readers admired came largely from Tagore's free translation, which removed rhyme, meter, and wordplay.",
-    "B": "Incorrect. Sen says the translations stripped away features of the originals, implying that the Bengali poems were more complex, not simpler.",
-    "C": "Incorrect. Text 2 does not discuss what the Nobel committee knew.",
-    "D": "Incorrect. Sen discusses the poems' simplicity and form; she does not claim that the Bengali poems lack spirituality."
+    "B": "Incorrect. Text 2 does not discuss what the Nobel committee knew.",
+    "C": "Incorrect. Sen discusses the poems' simplicity and form; she does not claim that the Bengali poems lack spirituality.",
+    "D": "Incorrect. Sen says the translations stripped away features of the originals, implying that the Bengali poems were more complex, not simpler."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "B": "not_in_text",
+    "C": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

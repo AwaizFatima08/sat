@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "tiger's",
-    "B": "tigers'",
-    "C": "tigers",
-    "D": "tigers's"
+    "A": "tigers",
+    "B": "tigers's",
+    "C": "tigers'",
+    "D": "tiger's"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The blank must show that the pattern of stripes belongs to a tiger. The word \"each\" shows that one tiger at a time is meant, so the singular possessive \"tiger's\" is correct.",
-    "A": "Correct. \"Tiger's\" is the singular possessive, matching \"each\" and showing that the pattern belongs to one tiger.",
-    "B": "Incorrect. \"Tigers'\" is a plural possessive, but \"each\" requires a singular noun.",
-    "C": "Incorrect. \"Tigers\" is a plain plural with no apostrophe, so it doesn't show possession, and \"each\" needs a singular noun.",
-    "D": "Incorrect. \"Tigers's\" is not a standard form; plural nouns ending in s take only an apostrophe, and \"each\" needs a singular noun."
+    "A": "Incorrect. \"Tigers\" is a plain plural with no apostrophe, so it doesn't show possession, and \"each\" needs a singular noun.",
+    "B": "Incorrect. \"Tigers's\" is not a standard form; plural nouns ending in s take only an apostrophe, and \"each\" needs a singular noun.",
+    "C": "Incorrect. \"Tigers'\" is a plural possessive, but \"each\" requires a singular noun.",
+    "D": "Correct. \"Tiger's\" is the singular possessive, matching \"each\" and showing that the pattern belongs to one tiger."
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "plural_possessive",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

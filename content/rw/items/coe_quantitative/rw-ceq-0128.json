@@ -39,23 +39,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Deshmukh's conclusion?",
   "choices": {
-    "A": "The drip plots used about 1,500 millimeters of water, roughly 750 millimeters less than the every-row furrow plots.",
+    "A": "The alternate-row furrow plots yielded more cane per hectare than the drip plots did, 92 versus 118 metric tons.",
     "B": "Drip plots used less water than every-row furrow plots yet grew more cane: 118 versus 99 metric tons per hectare.",
-    "C": "The alternate-row furrow plots used 1,800 millimeters of water, less than the 2,250 used by every-row furrow plots.",
-    "D": "The alternate-row furrow plots yielded more cane per hectare than the drip plots did, 92 versus 118 metric tons."
+    "C": "The drip plots used about 1,500 millimeters of water, roughly 750 millimeters less than the every-row furrow plots.",
+    "D": "The alternate-row furrow plots used 1,800 millimeters of water, less than the 2,250 used by every-row furrow plots."
   },
   "answer": "B",
   "explanation": {
     "why": "Deshmukh claims that drip irrigation did more than save water: it gave a larger harvest with less water. Support must therefore show both less water and a higher yield for drip. Drip used 1,500 millimeters and yielded 118 metric tons per hectare; every-row furrows used 2,250 millimeters and yielded 99.",
-    "A": "Incorrect. This is true, but it shows only that drip saved water, which is the part Deshmukh says is not the whole story.",
+    "A": "Incorrect. This misreads the table: 92 is less than 118, so the alternate-row plots yielded less cane than the drip plots.",
     "B": "Correct. Drip plots used less water and produced more cane than every-row furrow plots, which is exactly what Deshmukh concluded.",
-    "C": "Incorrect. This is true, but it compares two furrow methods and says nothing about drip irrigation.",
-    "D": "Incorrect. This misreads the table: 92 is less than 118, so the alternate-row plots yielded less cane than the drip plots."
+    "C": "Incorrect. This is true, but it shows only that drip saved water, which is the part Deshmukh says is not the whole story.",
+    "D": "Incorrect. This is true, but it compares two furrow methods and says nothing about drip irrigation."
   },
   "traps": {
-    "A": "too_narrow",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "A": "reversed",
+    "C": "too_narrow",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -64,8 +64,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Brooks's contention?",
   "choices": {
-    "A": "Swallows nesting beneath bridges caught most of their prey in the air just above the water below.",
-    "B": "Colonies of swallows beneath bridges have grown steadily larger over the past several decades.",
-    "C": "Among bridges equally close to insect-rich water, swallows chose those whose supports snakes could not climb.",
-    "D": "Swallows that nested beneath a given bridge one year usually returned to the same bridge the next."
+    "A": "Colonies of swallows beneath bridges have grown steadily larger over the past several decades.",
+    "B": "Among bridges equally close to insect-rich water, swallows chose those whose supports snakes could not climb.",
+    "C": "Swallows that nested beneath a given bridge one year usually returned to the same bridge the next.",
+    "D": "Swallows nesting beneath bridges caught most of their prey in the air just above the water below."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Brooks credits protection from snakes; the skeptics credit nearness to food. Because most bridges offer both, support for Brooks must hold food access equal and still show a preference tied to snakes. A choice among bridges equally close to insect-rich water, decided by whether snakes can climb the supports, does exactly that.",
-    "A": "Incorrect. Feeding just above the water beneath the bridges fits the skeptics' food explanation, not Brooks's snake explanation.",
-    "B": "Incorrect. Growing colonies show that bridges suit swallows but not which feature of the bridges attracts them.",
-    "C": "Correct. With food access held equal, the preference for snake-proof supports can be explained only by protection from snakes.",
-    "D": "Incorrect. Returning to the same bridge shows loyalty to a site, not the reason the site was chosen."
+    "A": "Incorrect. Growing colonies show that bridges suit swallows but not which feature of the bridges attracts them.",
+    "B": "Correct. With food access held equal, the preference for snake-proof supports can be explained only by protection from snakes.",
+    "C": "Incorrect. Returning to the same bridge shows loyalty to a site, not the reason the site was chosen.",
+    "D": "Incorrect. Feeding just above the water beneath the bridges fits the skeptics' food explanation, not Brooks's snake explanation."
   },
   "traps": {
-    "A": "reversed",
-    "B": "too_broad",
-    "D": "true_irrelevant"
+    "A": "too_broad",
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

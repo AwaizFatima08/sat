@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Lyngdoh's proposal?",
   "choices": {
-    "A": "Among bridges with roots of similar thickness, those with more fused junctions held heavier loads.",
-    "B": "The rubber fig trees used for the bridges grow especially well in Meghalaya's heavy seasonal rains.",
-    "C": "Bridges that had been growing for many decades held heavier loads than younger bridges did.",
-    "D": "Bridges with thicker roots held heavier loads no matter how many of their junctions had fused."
+    "A": "Bridges that had been growing for many decades held heavier loads than younger bridges did.",
+    "B": "Bridges with thicker roots held heavier loads no matter how many of their junctions had fused.",
+    "C": "Among bridges with roots of similar thickness, those with more fused junctions held heavier loads.",
+    "D": "The rubber fig trees used for the bridges grow especially well in Meghalaya's heavy seasonal rains."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Lyngdoh names two things that happen as a bridge ages: roots fuse and roots thicken. He credits the fusing. Support must therefore hold thickness constant and show that more fusion still means more strength.",
-    "A": "Correct. With thickness held equal, the extra strength of bridges with more junctions can come only from fusion, as Lyngdoh proposes.",
-    "B": "Incorrect. How well the trees grow in the rain does not show which feature of the roots makes the bridges strong.",
-    "C": "Incorrect. Older bridges have both thicker roots and more junctions, so their greater strength does not show which feature is responsible.",
-    "D": "Incorrect. If thickness alone predicted strength, fusion would not matter much; this weakens Lyngdoh's proposal."
+    "A": "Incorrect. Older bridges have both thicker roots and more junctions, so their greater strength does not show which feature is responsible.",
+    "B": "Incorrect. If thickness alone predicted strength, fusion would not matter much; this weakens Lyngdoh's proposal.",
+    "C": "Correct. With thickness held equal, the extra strength of bridges with more junctions can come only from fusion, as Lyngdoh proposes.",
+    "D": "Incorrect. How well the trees grow in the rain does not show which feature of the roots makes the bridges strong."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

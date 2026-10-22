@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It explains why folklorists came to prefer phonographs to the older method of transcription by ear.",
-    "B": "It introduces a technical constraint that the text then uses to qualify the recordings' authority.",
+    "A": "It introduces a technical constraint that the text then uses to qualify the recordings' authority.",
+    "B": "It explains why folklorists came to prefer phonographs to the older method of transcription by ear.",
     "C": "It offers evidence that the recordings are of little value as sources for the music of the period.",
     "D": "It identifies the main reason that later performers treated the recordings as authoritative versions."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Before the underlined sentence, the recordings are described as valuable and \"authoritative.\" The underlined sentence, marked by \"however,\" states a limit: two to four minutes per cylinder. The rest of the text shows how that limit led singers to cut verses and collectors to favor short songs, so the archive \"also reshaped\" the tradition.",
-    "A": "Incorrect. The folklorists' preference is explained in the first sentence; the underlined sentence describes a drawback of the machines.",
-    "B": "Correct. The short recording time is a technical limit, and the text uses it to show the recordings are not simply exact versions of the songs.",
+    "A": "Correct. The short recording time is a technical limit, and the text uses it to show the recordings are not simply exact versions of the songs.",
+    "B": "Incorrect. The folklorists' preference is explained in the first sentence; the underlined sentence describes a drawback of the machines.",
     "C": "Incorrect. The text still calls the recordings \"among the most valuable sources\"; it qualifies their authority rather than dismissing them.",
     "D": "Incorrect. The recording limit undermines the recordings' authority; it is not why performers trusted them."
   },
   "traps": {
-    "A": "wrong_logic",
+    "B": "wrong_logic",
     "C": "too_broad",
     "D": "reversed"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

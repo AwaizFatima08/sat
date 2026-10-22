@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to emphasize how much time and effort jamdani weaving requires. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "In 2013, UNESCO recognized jamdani weaving, a tradition from the region around Dhaka, as intangible cultural heritage.",
-    "B": "In jamdani, patterns of flowers or geometric shapes are woven directly into the cloth rather than printed afterward.",
+    "A": "In jamdani, patterns of flowers or geometric shapes are woven directly into the cloth rather than printed afterward.",
+    "B": "Jamdani is a fine cotton fabric that is traditionally woven by hand in the region around Dhaka, Bangladesh.",
     "C": "Weavers add each pattern thread by hand, and a single jamdani sari can take weeks or even months to finish.",
-    "D": "Jamdani is a fine cotton fabric that is traditionally woven by hand in the region around Dhaka, Bangladesh."
+    "D": "In 2013, UNESCO recognized jamdani weaving, a tradition from the region around Dhaka, as intangible cultural heritage."
   },
   "answer": "C",
   "explanation": {
     "why": "Two notes show the effort involved: each pattern thread is added by hand, and one sari can take weeks or months. The key should combine the detailed handwork with the long time it takes.",
-    "A": "Incorrect. This shows that jamdani is valued, but it says nothing about how long or how hard it is to make.",
-    "B": "Incorrect. This explains where the patterns come from, but it does not show the time or effort involved.",
+    "A": "Incorrect. This explains where the patterns come from, but it does not show the time or effort involved.",
+    "B": "Incorrect. \"Woven by hand\" hints at effort, but the sentence gives no sense of how much time or work one piece takes.",
     "C": "Correct. It combines the handwork (each pattern thread added by hand) with the time (weeks or even months for one sari).",
-    "D": "Incorrect. \"Woven by hand\" hints at effort, but the sentence gives no sense of how much time or work one piece takes."
+    "D": "Incorrect. This shows that jamdani is valued, but it says nothing about how long or how hard it is to make."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "misses_goal",
-    "D": "too_narrow"
+    "A": "misses_goal",
+    "B": "too_narrow",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

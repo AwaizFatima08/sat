@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "offered shortened versions of songs that ran far longer when performed live.",
-    "B": "captured the full length of typical qawwali performances at live gatherings.",
+    "A": "captured the full length of typical qawwali performances at live gatherings.",
+    "B": "replaced traditional qawwali songs with entirely new compositions for discs.",
     "C": "caused qawwali singers to stop repeating lines in their live performances.",
-    "D": "replaced traditional qawwali songs with entirely new compositions for discs."
+    "D": "offered shortened versions of songs that ran far longer when performed live."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Live qawwali songs can last half an hour or more, but a disc side held only about three minutes. To fit on a disc, recorded songs would have had to be much shorter than live versions.",
-    "A": "Correct. A three-minute disc side could hold only a small part of a song that might last thirty minutes live.",
-    "B": "Incorrect. A three-minute side could not hold a performance lasting half an hour or more.",
+    "A": "Incorrect. A three-minute side could not hold a performance lasting half an hour or more.",
+    "B": "Incorrect. The text gives no evidence that recordings used new songs; the time limit points to shortening, not replacing.",
     "C": "Incorrect. The text describes a limit on recordings; it gives no evidence that live performances changed.",
-    "D": "Incorrect. The text gives no evidence that recordings used new songs; the time limit points to shortening, not replacing."
+    "D": "Correct. A three-minute disc side could hold only a small part of a song that might last thirty minutes live."
   },
   "traps": {
-    "B": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

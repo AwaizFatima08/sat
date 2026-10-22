@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Adebayo's argument?",
   "choices": {
-    "A": "Doyle's letters from 1903 say he agreed to revive Holmes only after a magazine offered him a far larger fee.",
-    "B": "Readers sent Doyle many angry letters in the months after \"The Final Problem\" first appeared in a magazine.",
+    "A": "Readers sent Doyle many angry letters in the months after \"The Final Problem\" first appeared in a magazine.",
+    "B": "Doyle's letters from 1903 say he agreed to revive Holmes only after a magazine offered him a far larger fee.",
     "C": "During the years without new Holmes stories, Doyle wrote several historical novels and a number of plays.",
     "D": "Doyle wrote in his diary that he returned to Holmes because so many readers had begged him to do so."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Adebayo claims money, not readers' protests, was the main reason Doyle revived Holmes in 1903. The best support would link Doyle's decision directly to a large payment. Letters in which Doyle says he agreed only after a much larger fee was offered make that link.",
-    "A": "Correct. Doyle's own words tie his decision to the larger fee, which is exactly the reason Adebayo gives.",
-    "B": "Incorrect. Angry letters show that readers protested, which supports the explanation Adebayo rejects rather than his own.",
+    "A": "Incorrect. Angry letters show that readers protested, which supports the explanation Adebayo rejects rather than his own.",
+    "B": "Correct. Doyle's own words tie his decision to the larger fee, which is exactly the reason Adebayo gives.",
     "C": "Incorrect. What Doyle wrote in the meantime does not show why he chose to bring Holmes back.",
     "D": "Incorrect. Doyle saying readers' pleas brought him back would weaken Adebayo's argument."
   },
   "traps": {
-    "B": "reversed",
+    "A": "reversed",
     "C": "true_irrelevant",
     "D": "reversed"
   },
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

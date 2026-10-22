@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "predict",
-    "B": "prevent",
+    "A": "prevent",
+    "B": "cause",
     "C": "register",
-    "D": "cause"
+    "D": "predict"
   },
   "answer": "C",
   "explanation": {
     "why": "The text rejects the claim that the device could \"forecast earthquakes\" and says it worked only for a quake \"that had already begun.\" The blank must mean \"detect or record,\" so \"register\" fits.",
-    "A": "Incorrect. Predicting is exactly the claim the text says \"overstates its abilities.\" A device that responds only to a quake \"that had already begun\" cannot predict it.",
-    "B": "Incorrect. Nothing in the text suggests the instrument could stop an earthquake; it only reacted to shaking.",
+    "A": "Incorrect. Nothing in the text suggests the instrument could stop an earthquake; it only reacted to shaking.",
+    "B": "Incorrect. The quake made the instrument respond, not the other way around, so the device could not cause a quake.",
     "C": "Correct. The device responded \"when the ground shook,\" so it could record or show a quake that was already happening. That is what it means to register one.",
-    "D": "Incorrect. The quake made the instrument respond, not the other way around, so the device could not cause a quake."
+    "D": "Incorrect. Predicting is exactly the claim the text says \"overstates its abilities.\" A device that responds only to a quake \"that had already begun\" cannot predict it."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "wrong_logic"
+    "A": "not_in_text",
+    "B": "wrong_logic",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

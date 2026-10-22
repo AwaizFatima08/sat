@@ -55,23 +55,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "plants sprayed with water only had more aphids per leaf after ten days than at the start.",
-    "B": "plants sprayed with the 1% solution had far fewer aphids after ten days than at the start.",
-    "C": "after ten days, the 2% plants had about 9 aphids per leaf and the 1% plants about 23.",
-    "D": "after ten days, the 1% plants had about 9 aphids per leaf and the 2% plants about 23."
+    "A": "after ten days, the 1% plants had about 9 aphids per leaf and the 2% plants about 23.",
+    "B": "plants sprayed with water only had more aphids per leaf after ten days than at the start.",
+    "C": "plants sprayed with the 1% solution had far fewer aphids after ten days than at the start.",
+    "D": "after ten days, the 2% plants had about 9 aphids per leaf and the 1% plants about 23."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Soomro's conclusion compares the two neem strengths, so the choice must compare the 2% and 1% plants. Both groups started with similar numbers (about 41 and 44), but ten days later the 2% plants had about 9 aphids per leaf and the 1% plants about 23.",
-    "A": "Incorrect. This is true (42 rose to 58), but it is about the water-only plants and does not compare the two neem solutions.",
-    "B": "Incorrect. This is true, but it shows only that the weaker solution worked, not that the stronger one worked better.",
-    "C": "Correct. Starting from similar levels, the 2% plants ended with far fewer aphids than the 1% plants, so the stronger solution worked better.",
-    "D": "Incorrect. This swaps the two solutions; the graph shows the 2% plants, not the 1% plants, with about 9 aphids per leaf."
+    "A": "Incorrect. This swaps the two solutions; the graph shows the 2% plants, not the 1% plants, with about 9 aphids per leaf.",
+    "B": "Incorrect. This is true (42 rose to 58), but it is about the water-only plants and does not compare the two neem solutions.",
+    "C": "Incorrect. This is true, but it shows only that the weaker solution worked, not that the stronger one worked better.",
+    "D": "Correct. Starting from similar levels, the 2% plants ended with far fewer aphids than the 1% plants, so the stronger solution worked better."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "too_narrow",
-    "D": "reversed"
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -80,8 +80,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

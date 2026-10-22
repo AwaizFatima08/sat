@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "However,",
-    "B": "For instance,",
-    "C": "Consequently,",
-    "D": "In other words,"
+    "A": "For instance,",
+    "B": "Consequently,",
+    "C": "In other words,",
+    "D": "However,"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The second sentence makes a general claim: the edicts were adapted to their regions. The last sentence gives one case of this, the northwestern edicts written in the local Kharosthi script. A transition that introduces an example is needed.",
-    "A": "Incorrect. The use of Kharosthi in the northwest supports the claim that the edicts were adapted; it does not contrast with it.",
-    "B": "Correct. \"For instance\" introduces the Kharosthi edicts as one example of how the edicts were adapted to their regions.",
-    "C": "Incorrect. The Kharosthi script is not a result of the edicts being adapted; it is one of the ways they were adapted.",
-    "D": "Incorrect. \"In other words\" would restate the general claim, but the sentence names particular sites and a particular script."
+    "A": "Correct. \"For instance\" introduces the Kharosthi edicts as one example of how the edicts were adapted to their regions.",
+    "B": "Incorrect. The Kharosthi script is not a result of the edicts being adapted; it is one of the ways they were adapted.",
+    "C": "Incorrect. \"In other words\" would restate the general claim, but the sentence names particular sites and a particular script.",
+    "D": "Incorrect. The use of Kharosthi in the northwest supports the claim that the edicts were adapted; it does not contrast with it."
   },
   "traps": {
-    "A": "wrong_logic",
+    "B": "wrong_logic",
     "C": "wrong_logic",
     "D": "wrong_logic"
   },
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

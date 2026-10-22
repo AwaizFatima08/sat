@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Demir's argument?",
   "choices": {
-    "A": "On La Gomera, Silbo Gomero is now taught in schools so that children continue to learn it.",
-    "B": "Skilled whistlers on La Gomera can express complete sentences, not just simple calls or signals.",
+    "A": "Skilled whistlers on La Gomera can express complete sentences, not just simple calls or signals.",
+    "B": "A worldwide survey found that nearly all known whistled languages are used in mountains or dense forests.",
     "C": "Several whistled languages are used in open, flat grasslands where villages lie close together.",
-    "D": "A worldwide survey found that nearly all known whistled languages are used in mountains or dense forests."
+    "D": "On La Gomera, Silbo Gomero is now taught in schools so that children continue to learn it."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Demir makes a general claim about where whistled speech develops: in rugged or forested places. One example, La Gomera, cannot prove a general pattern. A survey showing that nearly all whistled languages are found in such places supports her claim across many cases.",
-    "A": "Incorrect. Teaching Silbo Gomero in schools concerns keeping the language alive, not where whistled languages arise.",
-    "B": "Incorrect. How much whistlers can express says nothing about the kinds of places where whistled speech develops.",
+    "A": "Incorrect. How much whistlers can express says nothing about the kinds of places where whistled speech develops.",
+    "B": "Correct. If nearly all whistled languages are found in mountains or forests, whistled speech does tend to develop in such places, as Demir argues.",
     "C": "Incorrect. Whistled languages in flat, open land with nearby villages would go against Demir's argument.",
-    "D": "Correct. If nearly all whistled languages are found in mountains or forests, whistled speech does tend to develop in such places, as Demir argues."
+    "D": "Incorrect. Teaching Silbo Gomero in schools concerns keeping the language alive, not where whistled languages arise."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

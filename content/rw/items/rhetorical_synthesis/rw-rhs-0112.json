@@ -19,22 +19,22 @@
   "data": null,
   "stem": "The student wants to explain why Cristofori gave his instrument its name. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Around 1700, Bartolomeo Cristofori built a keyboard instrument in which small hammers struck the strings.",
-    "B": "When a harpsichord key is pressed, a small quill plucks a string inside the instrument.",
-    "C": "Because its notes could be played soft or loud, Cristofori called it a \"harpsichord with soft and loud.\"",
+    "A": "Because its notes could be played soft or loud, Cristofori called it a \"harpsichord with soft and loud.\"",
+    "B": "Around 1700, Bartolomeo Cristofori built a keyboard instrument in which small hammers struck the strings.",
+    "C": "When a harpsichord key is pressed, a small quill plucks a string inside the instrument.",
     "D": "Cristofori called his new keyboard instrument the \"gravicembalo col piano e forte.\""
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "An explanation of the name must connect the name to a feature of the instrument. The name means \"harpsichord with soft and loud,\" and the notes say the instrument could play soft or loud notes. Only one choice links the feature to the name.",
-    "A": "Incorrect. This describes how the instrument worked but never mentions its name.",
-    "B": "Incorrect. This describes the harpsichord, not Cristofori's instrument or its name.",
-    "C": "Correct. \"Because\" links the instrument's soft and loud notes to the meaning of its name.",
+    "A": "Correct. \"Because\" links the instrument's soft and loud notes to the meaning of its name.",
+    "B": "Incorrect. This describes how the instrument worked but never mentions its name.",
+    "C": "Incorrect. This describes the harpsichord, not Cristofori's instrument or its name.",
     "D": "Incorrect. This gives the name but not the reason for it."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "true_irrelevant",
+    "C": "true_irrelevant",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

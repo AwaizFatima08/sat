@@ -14,17 +14,17 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "plaques—",
-    "B": "plaques;",
-    "C": "plaques",
+    "A": "plaques",
+    "B": "plaques—",
+    "C": "plaques;",
     "D": "plaques,"
   },
   "answer": "D",
   "explanation": {
     "why": "The clause \"which once covered the wooden pillars of the palace\" is extra information about the plaques. It closes with a comma before the verb \"show,\" so it must also open with a comma after \"plaques.\"",
-    "A": "Incorrect. Extra information must be set off by matching marks; a dash can't open a phrase that closes with a comma.",
-    "B": "Incorrect. A semicolon can't separate the subject \"The plaques\" from the rest of its own clause.",
-    "C": "Incorrect. Without an opening comma, the comma before \"show\" would separate the subject from its verb.",
+    "A": "Incorrect. Without an opening comma, the comma before \"show\" would separate the subject from its verb.",
+    "B": "Incorrect. Extra information must be set off by matching marks; a dash can't open a phrase that closes with a comma.",
+    "C": "Incorrect. A semicolon can't separate the subject \"The plaques\" from the rest of its own clause.",
     "D": "Correct. The comma opens the pair of commas around the nonessential \"which\" clause, matching the comma before \"show.\""
   },
   "traps": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

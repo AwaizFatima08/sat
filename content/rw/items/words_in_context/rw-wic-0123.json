@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "sunlight",
+    "A": "attention",
     "B": "wind",
-    "C": "attention",
-    "D": "precipitation"
+    "C": "precipitation",
+    "D": "sunlight"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The text says scientists define a desert \"by how little rain or snow falls there.\" Antarctica's interior counts as a desert \"by that measure,\" so the blank must name rain and snow. The word for rain, snow, and other water falling from the sky is \"precipitation.\"",
-    "A": "Incorrect. Sunlight is not measured in centimeters, and the text says a desert is defined by rain or snow, not by light.",
+    "A": "Incorrect. The sentence describes a physical amount measured in centimeters, not how much interest people pay to the region.",
     "B": "Incorrect. The text's definition of a desert is about rain and snow; wind has nothing to do with it.",
-    "C": "Incorrect. The sentence describes a physical amount measured in centimeters, not how much interest people pay to the region.",
-    "D": "Correct. Because a desert is defined by how little rain or snow falls, the blank must refer to precipitation, which Antarctica's plateau receives only a few centimeters of each year."
+    "C": "Correct. Because a desert is defined by how little rain or snow falls, the blank must refer to precipitation, which Antarctica's plateau receives only a few centimeters of each year.",
+    "D": "Incorrect. Sunlight is not measured in centimeters, and the text says a desert is defined by rain or snow, not by light."
   },
   "traps": {
-    "A": "wrong_logic",
+    "A": "not_in_text",
     "B": "not_in_text",
-    "C": "not_in_text"
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "grow jute mainly for its woody stems rather than its fibers.",
+    "A": "have water for soaking their jute close to their fields.",
     "B": "can harvest their jute only once every several years.",
-    "C": "rarely need to soak their jute before removing the fibers.",
-    "D": "have water for soaking their jute close to their fields."
+    "C": "grow jute mainly for its woody stems rather than its fibers.",
+    "D": "rarely need to soak their jute before removing the fibers."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Jute stalks must be soaked in water for weeks, and the text says Bangladesh's delta has ponds, canals, and slow streams almost everywhere. Putting these facts together, farmers there usually have the water they need for soaking nearby.",
-    "A": "Incorrect. The text says jute is used for its fiber; the stems are what the fibers are pulled away from.",
+    "A": "Correct. Soaking needs standing or slow water, and the delta has such water almost everywhere.",
     "B": "Incorrect. The text says nothing about how often jute can be harvested.",
-    "C": "Incorrect. The text says the stalks must be soaked; the delta's water makes soaking easy, not unnecessary.",
-    "D": "Correct. Soaking needs standing or slow water, and the delta has such water almost everywhere."
+    "C": "Incorrect. The text says jute is used for its fiber; the stems are what the fibers are pulled away from.",
+    "D": "Incorrect. The text says the stalks must be soaked; the delta's water makes soaking easy, not unnecessary."
   },
   "traps": {
-    "A": "not_in_text",
     "B": "not_in_text",
-    "C": "reversed"
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

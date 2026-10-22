@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to emphasize a similarity between the two printing systems while indicating which was developed first. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Both Bi Sheng's clay type and Gutenberg's metal type allowed characters to be arranged into a page, printed, and then rearranged.",
-    "B": "Bi Sheng developed movable clay type in the 1040s, roughly four centuries before Gutenberg began printing with metal type.",
+    "A": "Bi Sheng developed movable clay type in the 1040s, roughly four centuries before Gutenberg began printing with metal type.",
+    "B": "Like Gutenberg's later metal type, Bi Sheng's clay type of the 1040s let characters be arranged, printed, and rearranged.",
     "C": "Whereas Gutenberg's Latin alphabet had only a few dozen letters, Bi Sheng worked with a script of thousands of characters.",
-    "D": "Like Gutenberg's later metal type, Bi Sheng's clay type of the 1040s let characters be arranged, printed, and rearranged."
+    "D": "Both Bi Sheng's clay type and Gutenberg's metal type allowed characters to be arranged into a page, printed, and then rearranged."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The goal has two parts: a similarity between the systems and an indication of which came first. The key must describe the shared feature (characters arranged, printed, and rearranged) and make the order clear.",
-    "A": "Incorrect. This states the similarity, but nothing in it shows which system came first.",
-    "B": "Incorrect. This makes the order clear, but it presents no similarity; it actually points to a difference in materials.",
+    "A": "Incorrect. This makes the order clear, but it presents no similarity; it actually points to a difference in materials.",
+    "B": "Correct. \"Like Gutenberg's later metal type\" signals both the similarity and the order, and the date 1040s confirms that Bi Sheng came first.",
     "C": "Incorrect. This describes a difference between the writing systems, not a similarity.",
-    "D": "Correct. \"Like Gutenberg's later metal type\" signals both the similarity and the order, and the date 1040s confirms that Bi Sheng came first."
+    "D": "Incorrect. This states the similarity, but nothing in it shows which system came first."
   },
   "traps": {
     "A": "too_narrow",
-    "B": "too_narrow",
-    "C": "misses_goal"
+    "C": "misses_goal",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

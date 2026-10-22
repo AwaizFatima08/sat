@@ -44,21 +44,21 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "leaf litter, where 64 earthworms were counted.",
-    "B": "bare soil, where only 9 earthworms were counted.",
-    "C": "grass lawn, where soil moisture was the lowest.",
-    "D": "wood chips, where 52 earthworms were counted."
+    "A": "bare soil, where only 9 earthworms were counted.",
+    "B": "wood chips, where 52 earthworms were counted.",
+    "C": "leaf litter, where 64 earthworms were counted.",
+    "D": "grass lawn, where soil moisture was the lowest."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The statement is about the fewest earthworms, so look for the smallest number in the \"Earthworms counted\" column. That number is 9, in the bare soil row.",
-    "A": "Incorrect. Leaf litter had the most earthworms, not the fewest.",
-    "B": "Correct. Bare soil had 9 earthworms, the smallest number in the \"Earthworms counted\" column.",
-    "C": "Incorrect. Bare soil, at 14%, had the lowest soil moisture, and the grass lawn did not have the fewest earthworms.",
-    "D": "Incorrect. 52 earthworms is more than the counts for the grass lawn and bare soil, so wood chips did not have the fewest."
+    "A": "Correct. Bare soil had 9 earthworms, the smallest number in the \"Earthworms counted\" column.",
+    "B": "Incorrect. 52 earthworms is more than the counts for the grass lawn and bare soil, so wood chips did not have the fewest.",
+    "C": "Incorrect. Leaf litter had the most earthworms, not the fewest.",
+    "D": "Incorrect. Bare soil, at 14%, had the lowest soil moisture, and the grass lawn did not have the fewest earthworms."
   },
   "traps": {
-    "A": "reversed",
+    "B": "reversed",
     "C": "reversed",
     "D": "reversed"
   },
@@ -73,13 +73,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

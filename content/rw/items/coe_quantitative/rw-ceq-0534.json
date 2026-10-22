@@ -44,23 +44,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Halvorsen's argument?",
   "choices": {
-    "A": "In every year shown, titles translated from Korean made up a small fraction of all translated titles.",
-    "B": "The number of titles translated from Korean increased between each pair of years shown.",
-    "C": "From 2008 to 2023, translated fiction as a whole grew at a faster rate than fiction translated from Korean.",
-    "D": "From 2008 to 2023, Korean titles grew more than sevenfold, while all translated titles grew by about 15%."
+    "A": "From 2008 to 2023, translated fiction as a whole grew at a faster rate than fiction translated from Korean.",
+    "B": "From 2008 to 2023, Korean titles grew more than sevenfold, while all translated titles grew by about 15%.",
+    "C": "The number of titles translated from Korean increased between each pair of years shown.",
+    "D": "In every year shown, titles translated from Korean made up a small fraction of all translated titles."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Halvorsen's argument is a comparison of growth rates: Korean titles grew much faster than translated fiction overall. Support must therefore compare the growth of the two columns. Korean titles rose from 9 to 66, more than seven times as many, while all translated titles rose from 512 to 590, an increase of about 15%.",
-    "A": "Incorrect. This is true, but the size of Korean fiction's share in any one year says nothing about how fast it grew compared with the whole.",
-    "B": "Incorrect. This is true, but it describes Korean titles alone; steady growth could still be part of a general boom if the total grew just as fast.",
-    "C": "Incorrect. Korean titles grew more than sevenfold, while the total grew only about 15%, so this reverses the data.",
-    "D": "Correct. It compares the growth of the two columns and shows Korean titles growing far faster than translated fiction as a whole."
+    "A": "Incorrect. Korean titles grew more than sevenfold, while the total grew only about 15%, so this reverses the data.",
+    "B": "Correct. It compares the growth of the two columns and shows Korean titles growing far faster than translated fiction as a whole.",
+    "C": "Incorrect. This is true, but it describes Korean titles alone; steady growth could still be part of a general boom if the total grew just as fast.",
+    "D": "Incorrect. This is true, but the size of Korean fiction's share in any one year says nothing about how fast it grew compared with the whole."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "too_narrow",
-    "C": "reversed"
+    "A": "reversed",
+    "C": "too_narrow",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

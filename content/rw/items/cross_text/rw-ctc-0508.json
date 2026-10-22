@@ -16,21 +16,21 @@
   "choices": {
     "A": "By agreeing that early sound films improved on silent films in every way",
     "B": "By arguing that audiences preferred silent films to sound films",
-    "C": "By pointing out that the change to sound also limited how films could be shot",
-    "D": "By suggesting that actors refused to work near microphones"
+    "C": "By suggesting that actors refused to work near microphones",
+    "D": "By pointing out that the change to sound also limited how films could be shot"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Text 1 says film histories treat sound as pure progress in which \"nothing important was lost.\" Text 2 says sound \"came with real costs\": cameras \"could hardly move\" and actors had to stay near microphones, making films \"look stiff.\" So Text 2 would point to a loss Text 1 ignores.",
     "A": "Incorrect. Text 2 says early sound films often looked stiff compared with silent films, so it does not see them as better in every way.",
     "B": "Incorrect. Text 2 discusses how films were made, not what audiences preferred; Text 1 says audiences \"flocked\" to sound films.",
-    "C": "Correct. Text 2 explains that cameras in soundproof booths could barely move, a real limit on filmmaking.",
-    "D": "Incorrect. Text 2 says actors had to stay close to microphones, not that they refused to."
+    "C": "Incorrect. Text 2 says actors had to stay close to microphones, not that they refused to.",
+    "D": "Correct. Text 2 explains that cameras in soundproof booths could barely move, a real limit on filmmaking."
   },
   "traps": {
     "A": "reversed",
     "B": "not_in_text",
-    "D": "not_in_text"
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

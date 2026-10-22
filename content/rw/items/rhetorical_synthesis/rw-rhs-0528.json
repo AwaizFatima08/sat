@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to emphasize a difference in caffeine content between the two species. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Arabica plants grow best at higher elevations, while robusta plants tolerate hotter, lower-lying areas.",
-    "B": "Caffeine, which tastes bitter, helps protect coffee plants such as arabica and robusta from insects.",
-    "C": "Robusta beans, one of the two main types of coffee, contain about 2.2 to 2.7 percent caffeine by weight.",
+    "A": "Caffeine, which tastes bitter, helps protect coffee plants such as arabica and robusta from insects.",
+    "B": "Robusta beans, one of the two main types of coffee, contain about 2.2 to 2.7 percent caffeine by weight.",
+    "C": "Arabica plants grow best at higher elevations, while robusta plants tolerate hotter, lower-lying areas.",
     "D": "With about 2.2 to 2.7 percent caffeine, robusta beans have nearly twice as much as arabica beans do."
   },
   "answer": "D",
   "explanation": {
     "why": "The goal is a difference in caffeine, so the sentence must compare the caffeine in both species. Robusta's 2.2 to 2.7 percent is nearly twice arabica's 1.2 to 1.5 percent, and only one choice makes that comparison.",
-    "A": "Incorrect. It contrasts the two species, which makes it tempting, but the difference is in where they grow, not in caffeine.",
-    "B": "Incorrect. It explains what caffeine does for coffee plants in general; it does not compare the species.",
-    "C": "Incorrect. It gives robusta's caffeine content but no figure for arabica, so the reader cannot see a difference.",
+    "A": "Incorrect. It explains what caffeine does for coffee plants in general; it does not compare the species.",
+    "B": "Incorrect. It gives robusta's caffeine content but no figure for arabica, so the reader cannot see a difference.",
+    "C": "Incorrect. It contrasts the two species, which makes it tempting, but the difference is in where they grow, not in caffeine.",
     "D": "Correct. It compares the two species directly, showing that robusta has nearly twice as much caffeine."
   },
   "traps": {
-    "A": "misses_goal",
-    "B": "true_irrelevant",
-    "C": "too_narrow"
+    "A": "true_irrelevant",
+    "B": "too_narrow",
+    "C": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -56,6 +56,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

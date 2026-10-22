@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Nevertheless,",
-    "B": "Similarly,",
-    "C": "Specifically,",
-    "D": "Instead,"
+    "A": "Specifically,",
+    "B": "Instead,",
+    "C": "Similarly,",
+    "D": "Nevertheless,"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The first sentence says only that a sonnet \"follows a strict pattern.\" The next sentence spells out exactly what that pattern is: fourteen lines arranged and rhymed in a set way. A transition that introduces precise details of something just mentioned is needed.",
-    "A": "Incorrect. The fourteen-line pattern does not go against the idea of a strict form; it describes that form.",
-    "B": "Incorrect. \"Similarly\" signals a comparison with a different thing, but the sentence describes the same strict pattern in detail.",
-    "C": "Correct. \"Specifically\" signals that the sentence states exactly what the sonnet's \"strict pattern\" is.",
-    "D": "Incorrect. The contrast with free verse is already made inside the first sentence; the next sentence does not replace the sonnet's pattern with something else but explains it."
+    "A": "Correct. \"Specifically\" signals that the sentence states exactly what the sonnet's \"strict pattern\" is.",
+    "B": "Incorrect. The contrast with free verse is already made inside the first sentence; the next sentence does not replace the sonnet's pattern with something else but explains it.",
+    "C": "Incorrect. \"Similarly\" signals a comparison with a different thing, but the sentence describes the same strict pattern in detail.",
+    "D": "Incorrect. The fourteen-line pattern does not go against the idea of a strict form; it describes that form."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

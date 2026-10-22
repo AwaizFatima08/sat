@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the critics' praise in Text 1?",
   "choices": {
-    "A": "By agreeing that Bawa's open designs broke completely with earlier Sri Lankan buildings",
-    "B": "By arguing that Bawa's buildings do not suit Sri Lanka's monsoon climate",
-    "C": "By claiming that Bawa's buildings are not modern in any meaningful way",
-    "D": "By pointing out that the features praised as new were adapted from older local buildings"
+    "A": "By arguing that Bawa's buildings do not suit Sri Lanka's monsoon climate",
+    "B": "By agreeing that Bawa's open designs broke completely with earlier Sri Lankan buildings",
+    "C": "By pointing out that the features praised as new were adapted from older local buildings",
+    "D": "By claiming that Bawa's buildings are not modern in any meaningful way"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Text 1 reports that critics praised Bawa's open designs as \"modernist inventions, a break with the past.\" Text 2 says that \"much of what makes them distinctive is old,\" since traditional manor houses already had courtyards and deep roofs, and that Bawa \"reworked their ideas rather than inventing new ones.\" Text 2 credits tradition, not pure invention.",
-    "A": "Incorrect. Text 2 argues the opposite: Bawa reworked ideas from traditional buildings instead of breaking with them.",
-    "B": "Incorrect. Text 2 says the traditional features Bawa used were suited to monsoon rain, so it does not say his buildings fail in that climate.",
-    "C": "Incorrect. Text 2 grants that the buildings \"certainly feel modern\"; it questions only where their ideas came from.",
-    "D": "Correct. Text 2 traces courtyards and deep roofs to traditional manor houses that Bawa studied."
+    "A": "Incorrect. Text 2 says the traditional features Bawa used were suited to monsoon rain, so it does not say his buildings fail in that climate.",
+    "B": "Incorrect. Text 2 argues the opposite: Bawa reworked ideas from traditional buildings instead of breaking with them.",
+    "C": "Correct. Text 2 traces courtyards and deep roofs to traditional manor houses that Bawa studied.",
+    "D": "Incorrect. Text 2 grants that the buildings \"certainly feel modern\"; it questions only where their ideas came from."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "C": "too_broad"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

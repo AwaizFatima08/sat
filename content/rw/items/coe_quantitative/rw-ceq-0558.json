@@ -63,22 +63,22 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Gurung's argument?",
   "choices": {
-    "A": "In every year shown, rhododendrons at the higher site first flowered later in the year than those at the lower site.",
-    "B": "At the lower site, rhododendrons first flowered earlier in 2020 than in any other year shown.",
+    "A": "At the lower site, rhododendrons first flowered earlier in 2020 than in any other year shown.",
+    "B": "In every year shown, rhododendrons at the higher site first flowered later in the year than those at the lower site.",
     "C": "From 1990 to 2020, first flowering came 22 days earlier at the higher site but only 7 days earlier at the lower one.",
     "D": "The gap between the first flowering dates at the two sites widened from 1990 to 2020."
   },
   "answer": "C",
   "explanation": {
     "why": "Gurung's argument compares the size of the shift at the two sites: both now bloom earlier, but the higher site has shifted far more. Support must compare how much each line changed. A lower day number means earlier flowering: the higher site moved from day 128 to day 106 (22 days earlier), while the lower site moved from day 75 to day 68 (7 days earlier).",
-    "A": "Incorrect. This is true, but it is expected at a colder site and says nothing about how much flowering has shifted at each elevation.",
-    "B": "Incorrect. This is true, but it describes only the lower site and gives no comparison with the higher site.",
+    "A": "Incorrect. This is true, but it describes only the lower site and gives no comparison with the higher site.",
+    "B": "Incorrect. This is true, but it is expected at a colder site and says nothing about how much flowering has shifted at each elevation.",
     "C": "Correct. It shows that flowering moved earlier at both sites and that the shift at the higher site was about three times as large.",
     "D": "Incorrect. The gap shrank from 53 days (128 − 75) to 38 days (106 − 68), so this reverses the graph."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "too_narrow",
+    "A": "too_narrow",
+    "B": "true_irrelevant",
     "D": "reversed"
   },
   "grammar": null,
@@ -88,8 +88,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

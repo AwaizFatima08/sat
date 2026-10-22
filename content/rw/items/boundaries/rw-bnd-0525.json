@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "year; every",
+    "A": "year and every",
     "B": "year, every",
     "C": "year every",
-    "D": "year and every"
+    "D": "year; every"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "\"Unlike a bridge of stone or steel, it lasts only about a year\" is a complete sentence, and \"every June, people from nearby communities gather …\" is another. A semicolon can join two closely related independent clauses.",
-    "A": "Correct. A semicolon correctly joins the two closely related independent clauses.",
+    "A": "Incorrect. When \"and\" joins two independent clauses, a comma is needed before it.",
     "B": "Incorrect. A comma alone can't join two independent clauses; because \"every June\" looks like a short phrase, this comma splice is easy to miss.",
     "C": "Incorrect. With no punctuation, the clauses run together and \"a year every June\" is misread as one phrase.",
-    "D": "Incorrect. When \"and\" joins two independent clauses, a comma is needed before it."
+    "D": "Correct. A semicolon correctly joins the two closely related independent clauses."
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "linking_clauses",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

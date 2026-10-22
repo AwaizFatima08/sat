@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "up? Some",
-    "B": "up, some",
-    "C": "up some",
-    "D": "up. Some"
+    "B": "up some",
+    "C": "up. Some",
+    "D": "up, some"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "\"Scientists still disagree about whether the effect is real …\" is a statement that reports a question indirectly; it is not itself a question, so it ends with a period. \"Some careful studies have found no effect at all\" is a new independent clause and starts a new sentence.",
     "A": "Incorrect. An indirect question introduced by \"whether\" is part of a statement, so it ends with a period, not a question mark.",
-    "B": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice.",
-    "C": "Incorrect. With no punctuation, the two independent clauses run together (a run-on sentence).",
-    "D": "Correct. The period ends the statement containing the indirect question, and the next sentence begins with \"Some.\""
+    "B": "Incorrect. With no punctuation, the two independent clauses run together (a run-on sentence).",
+    "C": "Correct. The period ends the statement containing the indirect question, and the next sentence begins with \"Some.\"",
+    "D": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "D": "grammar_rule"
   },
   "grammar": "punctuation",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

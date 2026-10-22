@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It describes a scientific debate and explains why that debate has never been fully settled.",
-    "B": "It presents an idea, explains its early rejection, and describes its later acceptance.",
-    "C": "It compares the fossils of South America with those of Africa in detail.",
-    "D": "It explains how studies of the ocean floor led geologists to reject a theory."
+    "A": "It explains how studies of the ocean floor led geologists to reject a theory.",
+    "B": "It compares the fossils of South America with those of Africa in detail.",
+    "C": "It describes a scientific debate and explains why that debate has never been fully settled.",
+    "D": "It presents an idea, explains its early rejection, and describes its later acceptance."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The text introduces Wegener's proposal and his evidence, then says most geologists \"rejected the idea\" because he had no mechanism. The last sentence explains that ocean-floor studies in the 1960s led the idea to \"win wide acceptance.\" The text moves from proposal, to rejection, to acceptance.",
-    "A": "Incorrect. The last sentence says Wegener's idea won wide acceptance, so the debate was largely settled.",
-    "B": "Correct. The text presents continental drift, gives the reason it was first rejected, and explains how later evidence led to its acceptance.",
-    "C": "Incorrect. The matching fossils are mentioned briefly as Wegener's evidence; they are not compared in detail.",
-    "D": "Incorrect. The ocean-floor studies supported Wegener's idea; they did not lead geologists to reject it."
+    "A": "Incorrect. The ocean-floor studies supported Wegener's idea; they did not lead geologists to reject it.",
+    "B": "Incorrect. The matching fossils are mentioned briefly as Wegener's evidence; they are not compared in detail.",
+    "C": "Incorrect. The last sentence says Wegener's idea won wide acceptance, so the debate was largely settled.",
+    "D": "Correct. The text presents continental drift, gives the reason it was first rejected, and explains how later evidence led to its acceptance."
   },
   "traps": {
-    "A": "reversed",
-    "C": "too_narrow",
-    "D": "wrong_logic"
+    "A": "wrong_logic",
+    "B": "too_narrow",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It describes the harbor where the opera house was built.",
-    "B": "It explains why Utzon's design won the competition.",
-    "C": "It presents a solution to the problem mentioned in the previous sentence.",
+    "A": "It explains why Utzon's design won the competition.",
+    "B": "It presents a solution to the problem mentioned in the previous sentence.",
+    "C": "It describes the harbor where the opera house was built.",
     "D": "It suggests that Utzon's design could never be built."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The sentence before the underlined one states a problem: \"no one yet knew how to build\" the shell roof. The underlined sentence gives Utzon's answer, cutting every shell from one sphere, and the last sentence explains why that answer made construction possible.",
-    "A": "Incorrect. The harbor is mentioned only in passing in the second sentence, and the underlined sentence does not describe it.",
-    "B": "Incorrect. The text does not say why the design won; Utzon's idea came years after the competition.",
-    "C": "Correct. The sphere idea solves the building problem raised in the sentence just before it.",
+    "A": "Incorrect. The text does not say why the design won; Utzon's idea came years after the competition.",
+    "B": "Correct. The sphere idea solves the building problem raised in the sentence just before it.",
+    "C": "Incorrect. The harbor is mentioned only in passing in the second sentence, and the underlined sentence does not describe it.",
     "D": "Incorrect. The sentence shows how the design could be built, the opposite of suggesting it was impossible."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "wrong_logic",
+    "A": "wrong_logic",
+    "C": "not_in_text",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -39,23 +39,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "10 percent sugar, which received 84 visits.",
-    "B": "30 percent sugar, which received 211 visits.",
-    "C": "20 percent sugar, which received 211 visits.",
-    "D": "taken from wild flowers, which received the most visits."
+    "A": "30 percent sugar, which received 211 visits.",
+    "B": "20 percent sugar, which received 211 visits.",
+    "C": "taken from wild flowers, which received the most visits.",
+    "D": "10 percent sugar, which received 84 visits."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The statement asks which mixture was in the feeder with the most visits, so find the largest number in the \"Visits\" column. That number is 211, in the 20% row.",
-    "A": "Incorrect. The 10% feeder received the fewest visits, not the most.",
-    "B": "Incorrect. The 30% feeder received 167 visits; the 211 visits belong to the 20% feeder, so this misreads the table.",
-    "C": "Correct. The 20% feeder received 211 visits, the largest number in the \"Visits\" column.",
-    "D": "Incorrect. The table lists only sugar mixtures in feeders; it gives no data about wild flower nectar."
+    "A": "Incorrect. The 30% feeder received 167 visits; the 211 visits belong to the 20% feeder, so this misreads the table.",
+    "B": "Correct. The 20% feeder received 211 visits, the largest number in the \"Visits\" column.",
+    "C": "Incorrect. The table lists only sugar mixtures in feeders; it gives no data about wild flower nectar.",
+    "D": "Incorrect. The 10% feeder received the fewest visits, not the most."
   },
   "traps": {
     "A": "reversed",
-    "B": "reversed",
-    "D": "not_in_text"
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -68,13 +68,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

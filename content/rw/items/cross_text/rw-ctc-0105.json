@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the assumption in Text 1?",
   "choices": {
-    "A": "By agreeing that Vikings often wore horned helmets in battle",
+    "A": "By claiming that Vikings never wore helmets of any kind at all",
     "B": "By arguing that the familiar image is not supported by evidence",
-    "C": "By claiming that Vikings never wore helmets of any kind at all",
-    "D": "By suggesting that horned helmets were common in 1800s Norway"
+    "C": "By suggesting that horned helmets were common in 1800s Norway",
+    "D": "By agreeing that Vikings often wore horned helmets in battle"
   },
   "answer": "B",
   "explanation": {
     "why": "Text 1 says many people assume the horned helmet \"reflects how the Vikings really dressed.\" Text 2 says archaeologists \"have found no evidence\" of horned helmets and traces the image to costume designers of the 1800s. So the author of Text 2 would say the assumption lacks support.",
-    "A": "Incorrect. Text 2 says there is \"no evidence\" that Vikings wore horned helmets.",
+    "A": "Incorrect. Text 2 describes a real Viking helmet, a \"rounded iron cap,\" so it does not say Vikings wore no helmets.",
     "B": "Correct. Text 2 explains that no horned Viking helmets have been found and that the image came from 1800s stage costumes.",
-    "C": "Incorrect. Text 2 describes a real Viking helmet, a \"rounded iron cap,\" so it does not say Vikings wore no helmets.",
-    "D": "Incorrect. Text 2 says costume designers in the 1800s added horns for the stage, not that horned helmets were common in Norway then."
+    "C": "Incorrect. Text 2 says costume designers in the 1800s added horns for the stage, not that horned helmets were common in Norway then.",
+    "D": "Incorrect. Text 2 says there is \"no evidence\" that Vikings wore horned helmets."
   },
   "traps": {
-    "A": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "A": "too_broad",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "unicorn,",
-    "B": "unicorn",
-    "C": "unicorn;",
-    "D": "unicorn—"
+    "A": "unicorn—",
+    "B": "unicorn;",
+    "C": "unicorn",
+    "D": "unicorn,"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The phrase \"a one-horned animal that researchers often call a unicorn\" is extra information describing \"The most common image.\" It opens with a comma, so it must close with a comma before the verb \"appears.\"",
-    "A": "Correct. The comma closes the extra information, so the subject \"The most common image\" connects cleanly to its verb \"appears.\"",
-    "B": "Incorrect. Without a closing comma, the extra information is never set off and runs straight into the verb \"appears.\"",
-    "C": "Incorrect. A semicolon can't separate the subject \"The most common image\" from its verb \"appears.\"",
-    "D": "Incorrect. Extra information that opens with a comma must close with a comma; a dash doesn't match the opening mark."
+    "A": "Incorrect. Extra information that opens with a comma must close with a comma; a dash doesn't match the opening mark.",
+    "B": "Incorrect. A semicolon can't separate the subject \"The most common image\" from its verb \"appears.\"",
+    "C": "Incorrect. Without a closing comma, the extra information is never set off and runs straight into the verb \"appears.\"",
+    "D": "Correct. The comma closes the extra information, so the subject \"The most common image\" connects cleanly to its verb \"appears.\""
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "supplements",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "long gone, swept away by winds blowing across the lunar surface.",
-    "B": "still there today, since no wind or rain has worn them away.",
-    "C": "deeper now than they were when the astronauts made them.",
-    "D": "preserved only because the dust froze solid after the astronauts left."
+    "A": "deeper now than they were when the astronauts made them.",
+    "B": "preserved only because the dust froze solid after the astronauts left.",
+    "C": "still there today, since no wind or rain has worn them away.",
+    "D": "long gone, swept away by winds blowing across the lunar surface."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Wind and rain erase footprints on Earth, but the Moon has neither. Without those forces, the footprints have nothing to wear them away quickly, so they are probably still there.",
-    "A": "Incorrect. The text says the Moon has no wind.",
-    "B": "Correct. With no wind or weather to erase them, the footprints should remain.",
-    "C": "Incorrect. Nothing in the text suggests the footprints would grow deeper over time.",
-    "D": "Incorrect. The text explains the footprints' survival by the lack of wind and weather, not by freezing."
+    "A": "Incorrect. Nothing in the text suggests the footprints would grow deeper over time.",
+    "B": "Incorrect. The text explains the footprints' survival by the lack of wind and weather, not by freezing.",
+    "C": "Correct. With no wind or weather to erase them, the footprints should remain.",
+    "D": "Incorrect. The text says the Moon has no wind."
   },
   "traps": {
-    "A": "reversed",
-    "C": "not_in_text",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

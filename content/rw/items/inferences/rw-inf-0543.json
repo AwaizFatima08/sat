@@ -15,22 +15,22 @@
   "stem": "Which choice most logically completes the text?",
   "choices": {
     "A": "mistaking a limitation of the process for a feature of the scene.",
-    "B": "correct, since the photographs recorded everything within the frame.",
-    "C": "wrong to trust any image produced by the photographic processes of the 1830s.",
-    "D": "overlooking crowds that the photographers later scraped off the plates."
+    "B": "overlooking crowds that the photographers later scraped off the plates.",
+    "C": "correct, since the photographs recorded everything within the frame.",
+    "D": "wrong to trust any image produced by the photographic processes of the 1830s."
   },
   "answer": "A",
   "explanation": {
     "why": "The long exposure meant that moving people left no image, while still figures did. The boulevards were known to be crowded, so their emptiness in the photographs comes from the process, not from the streets themselves.",
     "A": "Correct. Moving crowds did not register during the long exposures, so the empty look of the boulevards reflects how the process worked rather than what was there.",
-    "B": "Incorrect. The text says the opposite: moving people and carriages did not register, so the photographs did not record everything in the frame.",
-    "C": "Incorrect. Still objects, such as buildings and the man having his boots polished, were recorded sharply, so the images are not worthless.",
-    "D": "Incorrect. The text gives exposure time, not any retouching by photographers, as the reason crowds are missing."
+    "B": "Incorrect. The text gives exposure time, not any retouching by photographers, as the reason crowds are missing.",
+    "C": "Incorrect. The text says the opposite: moving people and carriages did not register, so the photographs did not record everything in the frame.",
+    "D": "Incorrect. Still objects, such as buildings and the man having his boots polished, were recorded sharply, so the images are not worthless."
   },
   "traps": {
-    "B": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

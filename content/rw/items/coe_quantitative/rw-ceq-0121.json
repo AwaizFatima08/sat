@@ -44,23 +44,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Chaiyaporn's hypothesis?",
   "choices": {
-    "A": "About 48% of stalls at the residential market sold produce or household goods, versus 13% at the other market.",
+    "A": "Most shoppers at the residential market said they lived within a short walk of it and visited weekly.",
     "B": "The business district market had more prepared-food stalls than the residential market had, 120 compared with 95.",
     "C": "The residential market had more clothing and souvenir stalls than the business district market, 140 compared with 30.",
-    "D": "Most shoppers at the residential market said they lived within a short walk of it and visited weekly."
+    "D": "About 48% of stalls at the residential market sold produce or household goods, versus 13% at the other market."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The hypothesis is about the share of each market's stalls selling everyday goods. The residential market has 60 + 55 = 115 such stalls out of 240 (about 48%), while the business district market has 15 + 25 = 40 out of 300 (about 13%).",
-    "A": "Correct. Everyday goods filled about 48% of the residential market's stalls but only about 13% of the business district market's, as the hypothesis predicts.",
+    "A": "Incorrect. The table counts stalls; it contains no information about shoppers.",
     "B": "Incorrect. This is true, but prepared food is not one of the everyday goods named in the hypothesis.",
     "C": "Incorrect. This swaps the markets: the business district market had 140 clothing and souvenir stalls, and the residential market had 30.",
-    "D": "Incorrect. The table counts stalls; it contains no information about shoppers."
+    "D": "Correct. Everyday goods filled about 48% of the residential market's stalls but only about 13% of the business district market's, as the hypothesis predicts."
   },
   "traps": {
+    "A": "not_in_text",
     "B": "true_irrelevant",
-    "C": "reversed",
-    "D": "not_in_text"
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

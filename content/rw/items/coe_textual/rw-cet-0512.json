@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Moyo's argument?",
   "choices": {
-    "A": "The stone walls of Great Zimbabwe were built without mortar, using carefully shaped blocks of granite.",
-    "B": "Many families living near Great Zimbabwe grew crops such as sorghum and kept herds of cattle.",
-    "C": "Excavations at Great Zimbabwe have found almost no objects that were made outside the surrounding region.",
-    "D": "Excavations at Great Zimbabwe have uncovered glass beads from Persia and pieces of pottery from China."
+    "A": "Excavations at Great Zimbabwe have found almost no objects that were made outside the surrounding region.",
+    "B": "Excavations at Great Zimbabwe have uncovered glass beads from Persia and pieces of pottery from China.",
+    "C": "The stone walls of Great Zimbabwe were built without mortar, using carefully shaped blocks of granite.",
+    "D": "Many families living near Great Zimbabwe grew crops such as sorghum and kept herds of cattle."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Moyo claims the city grew rich through trade that reached faraway lands. Objects made in distant places, found at the site itself, would show that such trade really reached Great Zimbabwe.",
-    "A": "Incorrect. How the walls were built says nothing about where the city's wealth came from.",
-    "B": "Incorrect. Local farming describes everyday life near the city, not long-distance trade.",
-    "C": "Incorrect. If almost nothing at the site came from outside the region, there is little sign of long-distance trade, so this would weaken the argument.",
-    "D": "Correct. Goods from Persia and China at the site are direct evidence that Great Zimbabwe was connected to long-distance trade."
+    "A": "Incorrect. If almost nothing at the site came from outside the region, there is little sign of long-distance trade, so this would weaken the argument.",
+    "B": "Correct. Goods from Persia and China at the site are direct evidence that Great Zimbabwe was connected to long-distance trade.",
+    "C": "Incorrect. How the walls were built says nothing about where the city's wealth came from.",
+    "D": "Incorrect. Local farming describes everyday life near the city, not long-distance trade."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "A": "reversed",
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

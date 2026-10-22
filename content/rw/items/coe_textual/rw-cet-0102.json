@@ -15,21 +15,21 @@
   "stem": "Which finding, if true, would most directly weaken Claes's argument?",
   "choices": {
     "A": "Some of the earliest public clocks struck a bell every hour instead of showing the time on a dial.",
-    "B": "Small farming towns with few merchants got public clocks as early as large trading towns did.",
-    "C": "Records from several trading towns show that merchants paid much of the cost of the first public clocks.",
+    "B": "Records from several trading towns show that merchants paid much of the cost of the first public clocks.",
+    "C": "Small farming towns with few merchants got public clocks as early as large trading towns did.",
     "D": "Public clocks often had to be repaired, because their iron parts wore out quickly."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Claes says merchants drove the spread of public clocks, so trading towns got them first. A finding weakens this if towns without many merchants got clocks just as early, because then merchants could not have been the main reason.",
     "A": "Incorrect. How early clocks signaled the time does not show who wanted them or why.",
-    "B": "Correct. If farming towns with few merchants got clocks as early as trading towns, merchants do not appear to be the main cause.",
-    "C": "Incorrect. Merchants paying for the first clocks would support Claes's argument, not weaken it.",
+    "B": "Incorrect. Merchants paying for the first clocks would support Claes's argument, not weaken it.",
+    "C": "Correct. If farming towns with few merchants got clocks as early as trading towns, merchants do not appear to be the main cause.",
     "D": "Incorrect. Repairs to clocks say nothing about why towns first installed them."
   },
   "traps": {
     "A": "true_irrelevant",
-    "C": "reversed",
+    "B": "reversed",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

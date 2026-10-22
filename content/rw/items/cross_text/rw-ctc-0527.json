@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the familiar story in Text 1?",
   "choices": {
-    "A": "By claiming that most Europeans of the time had never heard of Eratosthenes",
-    "B": "By explaining that the dispute was about the distance to Asia, not the Earth's shape",
-    "C": "By arguing that Columbus's critics underestimated how far away Asia was",
-    "D": "By agreeing that fear of a flat Earth delayed Columbus's voyage for years"
+    "A": "By arguing that Columbus's critics underestimated how far away Asia was",
+    "B": "By claiming that most Europeans of the time had never heard of Eratosthenes",
+    "C": "By agreeing that fear of a flat Earth delayed Columbus's voyage for years",
+    "D": "By explaining that the dispute was about the distance to Asia, not the Earth's shape"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "Text 1 tells the story that scholars feared Columbus would sail off a flat Earth. Text 2 says educated Europeans \"already knew that the Earth was round\" and that \"the real argument concerned distance\": critics thought Asia was too far away. Text 2 corrects the story by naming the true dispute.",
-    "A": "Incorrect. Text 2 says Greek scholars' knowledge was shared by educated Europeans; it never says how many people had heard of Eratosthenes.",
-    "B": "Correct. Text 2 says the argument \"concerned distance,\" since educated Europeans already knew the Earth was round.",
-    "C": "Incorrect. Text 2 says the critics were correct that Asia was \"much too far west,\" so they did not underestimate the distance.",
-    "D": "Incorrect. Text 2 says educated Europeans knew the Earth was round, so it would reject any role for fear of a flat Earth."
+    "A": "Incorrect. Text 2 says the critics were correct that Asia was \"much too far west,\" so they did not underestimate the distance.",
+    "B": "Incorrect. Text 2 says Greek scholars' knowledge was shared by educated Europeans; it never says how many people had heard of Eratosthenes.",
+    "C": "Incorrect. Text 2 says educated Europeans knew the Earth was round, so it would reject any role for fear of a flat Earth.",
+    "D": "Correct. Text 2 says the argument \"concerned distance,\" since educated Europeans already knew the Earth was round."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
-    "D": "reversed"
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

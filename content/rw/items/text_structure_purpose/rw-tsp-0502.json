@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It describes a swimming race from start to finish and then reports the result.",
-    "B": "It shows Mei growing more nervous as she notices the large crowd.",
-    "C": "It presents Mei's nervousness before a race and then shows what eases it.",
-    "D": "It explains why Mei joined a swim team and how she trained for races."
+    "A": "It shows Mei growing more nervous as she notices the large crowd.",
+    "B": "It describes a swimming race from start to finish and then reports the result.",
+    "C": "It explains why Mei joined a swim team and how she trained for races.",
+    "D": "It presents Mei's nervousness before a race and then shows what eases it."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "At first Mei is anxious: \"Her stomach felt tight,\" and the water looks \"colder and deeper.\" Then she sees her brother's sign, laughs, and dives in \"without a second thought.\" The text moves from nervousness to relief, and the sign is what causes the change.",
-    "A": "Incorrect. The text ends as the race begins; it never describes the race itself or tells who won.",
-    "B": "Incorrect. Looking at the crowd is what calms Mei, because she finds her brother there. Her nervousness decreases rather than grows.",
-    "C": "Correct. The text first shows Mei's tight stomach and fear, then shows her brother's sign making her laugh and dive in confidently.",
-    "D": "Incorrect. Practice is mentioned once, but the text never explains why Mei joined a team or how she trained."
+    "A": "Incorrect. Looking at the crowd is what calms Mei, because she finds her brother there. Her nervousness decreases rather than grows.",
+    "B": "Incorrect. The text ends as the race begins; it never describes the race itself or tells who won.",
+    "C": "Incorrect. Practice is mentioned once, but the text never explains why Mei joined a team or how she trained.",
+    "D": "Correct. The text first shows Mei's tight stomach and fear, then shows her brother's sign making her laugh and dive in confidently."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "reversed",
-    "D": "not_in_text"
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

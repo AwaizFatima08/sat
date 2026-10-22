@@ -46,21 +46,21 @@
   "choices": {
     "A": "In February, households with storage bought 1,500 fewer liters than households without it, but in May they bought only 50 fewer.",
     "B": "Households without rooftop storage bought more tanker water than households with storage in every month shown.",
-    "C": "Tanker purchases by households with storage rose in each month from February to May, reaching 2,050 liters.",
-    "D": "The difference between the two groups' tanker purchases grew larger from February to May."
+    "C": "The difference between the two groups' tanker purchases grew larger from February to May.",
+    "D": "Tanker purchases by households with storage rose in each month from February to May, reaching 2,050 liters."
   },
   "answer": "A",
   "explanation": {
     "why": "Raman's assessment has two parts: households with storage buy far less early in the dry season, and by the end the two groups buy nearly the same amount. Support must compare the two columns at the start and at the end. In February the gap is 1,800 − 300 = 1,500 liters; in May it is 2,100 − 2,050 = 50 liters.",
     "A": "Correct. It shows a large gap early in the dry season and almost none at its end, matching both parts of Raman's assessment.",
     "B": "Incorrect. This is true, but it shows only that storage always helps somewhat; it does not show the advantage shrinking to almost nothing by May.",
-    "C": "Incorrect. This is true, but it describes only households with storage; without the other column it cannot show the two groups converging.",
-    "D": "Incorrect. The difference shrank from 1,500 liters in February to 50 liters in May, so this reverses the data."
+    "C": "Incorrect. The difference shrank from 1,500 liters in February to 50 liters in May, so this reverses the data.",
+    "D": "Incorrect. This is true, but it describes only households with storage; without the other column it cannot show the two groups converging."
   },
   "traps": {
     "B": "too_narrow",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

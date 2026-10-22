@@ -16,21 +16,21 @@
   "choices": {
     "A": "Modernist painters of the period praised work that left large areas of the page blank.",
     "B": "The inexpensive mill-made paper they used could not hold fine detail in watercolor.",
-    "C": "The paintings were sold at low prices and had to be produced in large numbers.",
-    "D": "Their satirical scenes of city life called for simpler settings than religious subjects."
+    "C": "Their satirical scenes of city life called for simpler settings than religious subjects.",
+    "D": "The paintings were sold at low prices and had to be produced in large numbers."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The text gives the cause directly: \"Because the paintings were sold cheaply and in great numbers, the artists abandoned the detailed backgrounds of their village scrolls.\" The market, not artistic theory or materials, drove the change.",
     "A": "Incorrect. The modernists' admiration came in the twentieth century, long after the style developed, so it could not have caused it.",
     "B": "Incorrect. The text mentions mill-made paper but never says it could not hold detail.",
-    "C": "Correct. This restates the cause that the text gives with \"Because.\"",
-    "D": "Incorrect. The text never links the simple backgrounds to the choice of subject."
+    "C": "Incorrect. The text never links the simple backgrounds to the choice of subject.",
+    "D": "Correct. This restates the cause that the text gives with \"Because.\""
   },
   "traps": {
     "A": "reversed",
     "B": "not_in_text",
-    "D": "not_in_text"
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

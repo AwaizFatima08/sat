@@ -15,21 +15,21 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "works",
-    "B": "was still working",
-    "C": "has been working",
+    "B": "has been working",
+    "C": "was still working",
     "D": "will be working"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "\"At the time of his death\" refers to a moment in 1987, and the work was in progress at that moment, as \"the unfinished work\" shows. An action in progress at a specific past moment takes the past progressive, \"was still working.\"",
     "A": "Incorrect. The present tense \"works\" doesn't fit an action at a past moment, the time of his death in 1987.",
-    "B": "Correct. The past progressive \"was still working\" shows that the painting was in progress when he died.",
-    "C": "Incorrect. The present perfect progressive \"has been working\" suggests the work continues into the present, but Sadequain died in 1987.",
+    "B": "Incorrect. The present perfect progressive \"has been working\" suggests the work continues into the present, but Sadequain died in 1987.",
+    "C": "Correct. The past progressive \"was still working\" shows that the painting was in progress when he died.",
     "D": "Incorrect. The future progressive \"will be working\" refers to the future, but the event is in the past."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
+    "B": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "verb_form",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

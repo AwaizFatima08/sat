@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "dry out and become too dusty to farm.",
-    "B": "rise slowly above the level of the sea.",
-    "C": "need fewer dikes to keep out the sea.",
+    "A": "rise slowly above the level of the sea.",
+    "B": "need fewer dikes to keep out the sea.",
+    "C": "dry out and become too dusty to farm.",
     "D": "gradually fill with water and flood."
   },
   "answer": "D",
   "explanation": {
     "why": "Water collects in the polders because they are low and cannot drain on their own. The windmills removed that water, so without them it would keep building up.",
-    "A": "Incorrect. This reverses the problem: polders collect water rather than lose it.",
-    "B": "Incorrect. Nothing in the text suggests the land would rise.",
-    "C": "Incorrect. Nothing in the text links removing water to the number of dikes needed; the dikes hold back rivers and the sea, which would still be there.",
+    "A": "Incorrect. Nothing in the text suggests the land would rise.",
+    "B": "Incorrect. Nothing in the text links removing water to the number of dikes needed; the dikes hold back rivers and the sea, which would still be there.",
+    "C": "Incorrect. This reverses the problem: polders collect water rather than lose it.",
     "D": "Correct. Water collects in the polders and cannot drain away, so without pumping it would build up until the land flooded."
   },
   "traps": {
-    "A": "reversed",
+    "A": "not_in_text",
     "B": "not_in_text",
-    "C": "not_in_text"
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

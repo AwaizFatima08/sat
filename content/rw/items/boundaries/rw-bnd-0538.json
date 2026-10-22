@@ -14,17 +14,17 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "unstable, engineers",
-    "B": "unstable engineers",
-    "C": "unstable, so, engineers",
+    "A": "unstable, so, engineers",
+    "B": "unstable, engineers",
+    "C": "unstable engineers",
     "D": "unstable, so engineers"
   },
   "answer": "D",
   "explanation": {
     "why": "\"The dam was judged dangerously unstable\" and \"engineers cut a gated channel in 2000 ...\" are both independent clauses. Two independent clauses can be joined with a comma followed by a coordinating conjunction such as \"so,\" with no comma after the conjunction.",
-    "A": "Incorrect. A comma alone can't join two independent clauses; this is a comma splice.",
-    "B": "Incorrect. With no punctuation or conjunction, the two independent clauses run together as a run-on sentence.",
-    "C": "Incorrect. No comma belongs after the coordinating conjunction \"so\"; it separates the conjunction from the clause it introduces.",
+    "A": "Incorrect. No comma belongs after the coordinating conjunction \"so\"; it separates the conjunction from the clause it introduces.",
+    "B": "Incorrect. A comma alone can't join two independent clauses; this is a comma splice.",
+    "C": "Incorrect. With no punctuation or conjunction, the two independent clauses run together as a run-on sentence.",
     "D": "Correct. A comma followed by the coordinating conjunction \"so\" correctly joins the two independent clauses."
   },
   "traps": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "economical",
-    "B": "curt",
+    "A": "effusive",
+    "B": "economical",
     "C": "evasive",
-    "D": "effusive"
+    "D": "curt"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The blank gives Mrs. Albright's own view, set against the charge that her letters are \"cold.\" The colon explains that view: the letters say \"exactly what he needed to know\" and waste \"none of his time.\" The word must mean \"brief and efficient, with nothing wasted,\" which is \"economical.\"",
-    "A": "Correct. \"Economical\" means using no more than is needed, which matches letters that say exactly what is necessary and waste no time.",
-    "B": "Incorrect. \"Curt\" means rudely short. It is close in meaning to \"brief,\" but its unfriendly shade is exactly what Mrs. Albright denies when she says the letters are \"not cold.\"",
+    "A": "Incorrect. \"Effusive\" means gushing with feeling, the warmth she refuses to add.",
+    "B": "Correct. \"Economical\" means using no more than is needed, which matches letters that say exactly what is necessary and waste no time.",
     "C": "Incorrect. Evasive letters would avoid giving information, but hers tell the reader \"exactly what he needed to know.\"",
-    "D": "Incorrect. \"Effusive\" means gushing with feeling, the warmth she refuses to add."
+    "D": "Incorrect. \"Curt\" means rudely short. It is close in meaning to \"brief,\" but its unfriendly shade is exactly what Mrs. Albright denies when she says the letters are \"not cold.\""
   },
   "traps": {
-    "B": "wrong_tone",
+    "A": "reversed",
     "C": "reversed",
-    "D": "reversed"
+    "D": "wrong_tone"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

@@ -21,23 +21,23 @@
   "data": null,
   "stem": "The student wants to emphasize how far beyond India Nalanda's reputation reached. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Nalanda drew students from as far away as China, Korea, and Central Asia, among them the Chinese monk Xuanzang.",
-    "B": "Nalanda's teachers covered a wide range of subjects, including philosophy, logic, grammar, and medicine.",
-    "C": "Nalanda, a Buddhist center of learning in what is now Bihar, flourished for more than seven centuries.",
-    "D": "In 2016, the ruins of Nalanda, a center of learning in what is now Bihar, were named a UNESCO World Heritage Site."
+    "A": "In 2016, the ruins of Nalanda, a center of learning in what is now Bihar, were named a UNESCO World Heritage Site.",
+    "B": "Nalanda, a Buddhist center of learning in what is now Bihar, flourished for more than seven centuries.",
+    "C": "Nalanda's teachers covered a wide range of subjects, including philosophy, logic, grammar, and medicine.",
+    "D": "Nalanda drew students from as far away as China, Korea, and Central Asia, among them the Chinese monk Xuanzang."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "To show how far Nalanda's reputation reached, the sentence needs evidence that people from distant lands knew of it and came to it. The notes give that evidence: students came from China, Korea, and Central Asia, including Xuanzang.",
-    "A": "Correct. Students traveling from China, Korea, and Central Asia show that Nalanda's reputation reached far beyond India.",
-    "B": "Incorrect. It shows the wide range of subjects taught, not how far away Nalanda was known.",
-    "C": "Incorrect. It stresses how long Nalanda lasted, which is reach in time, not in distance.",
-    "D": "Incorrect. It tells when the ruins were honored in modern times; it says nothing about how far Nalanda's reputation spread while it was active."
+    "A": "Incorrect. It tells when the ruins were honored in modern times; it says nothing about how far Nalanda's reputation spread while it was active.",
+    "B": "Incorrect. It stresses how long Nalanda lasted, which is reach in time, not in distance.",
+    "C": "Incorrect. It shows the wide range of subjects taught, not how far away Nalanda was known.",
+    "D": "Correct. Students traveling from China, Korea, and Central Asia show that Nalanda's reputation reached far beyond India."
   },
   "traps": {
+    "A": "true_irrelevant",
     "B": "misses_goal",
-    "C": "misses_goal",
-    "D": "true_irrelevant"
+    "C": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -50,13 +50,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

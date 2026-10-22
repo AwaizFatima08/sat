@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, both authors would most likely agree with which statement?",
   "choices": {
-    "A": "Competition with modern humans was the main cause of the Neanderthals' disappearance.",
-    "B": "Living in small, isolated groups left Neanderthals vulnerable to dying out.",
-    "C": "Rapid climate swings were the main reason Neanderthal populations became small.",
-    "D": "Neanderthals had more genetic variety than early modern humans did."
+    "A": "Living in small, isolated groups left Neanderthals vulnerable to dying out.",
+    "B": "Competition with modern humans was the main cause of the Neanderthals' disappearance.",
+    "C": "Neanderthals had more genetic variety than early modern humans did.",
+    "D": "Rapid climate swings were the main reason Neanderthal populations became small."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Text 1 says cold spells split Neanderthals \"into small groups cut off from one another,\" and links this to their decline. Text 2 says they lived \"in small, scattered bands\" that were \"fragile\" and could easily disappear. Both authors connect small, separated populations with the Neanderthals' extinction, though they differ on what caused it.",
-    "A": "Incorrect. Text 2 mentions modern humans only as one possible final blow (\"could have been\"), and Text 1 does not mention them at all.",
-    "B": "Correct. Both texts describe small, separated populations and link them to the Neanderthals' disappearance.",
-    "C": "Incorrect. Only Text 1 blames climate swings; Text 2 explains the small groups using DNA evidence and never mentions climate.",
-    "D": "Incorrect. Text 2 says late Neanderthals had \"very little genetic variety,\" and neither text compares them with modern humans."
+    "A": "Correct. Both texts describe small, separated populations and link them to the Neanderthals' disappearance.",
+    "B": "Incorrect. Text 2 mentions modern humans only as one possible final blow (\"could have been\"), and Text 1 does not mention them at all.",
+    "C": "Incorrect. Text 2 says late Neanderthals had \"very little genetic variety,\" and neither text compares them with modern humans.",
+    "D": "Incorrect. Only Text 1 blames climate swings; Text 2 explains the small groups using DNA evidence and never mentions climate."
   },
   "traps": {
-    "A": "too_broad",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "B": "too_broad",
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

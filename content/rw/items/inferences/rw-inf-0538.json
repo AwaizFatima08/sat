@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "sounded higher around 1700 than it does today.",
-    "B": "probably sounded lower around 1700 than it does today.",
-    "C": "was the only organ in the region to have its pitch changed after 1700.",
-    "D": "can reveal nothing about the pitch that musicians used around 1700."
+    "A": "was the only organ in the region to have its pitch changed after 1700.",
+    "B": "sounded higher around 1700 than it does today.",
+    "C": "can reveal nothing about the pitch that musicians used around 1700.",
+    "D": "probably sounded lower around 1700 than it does today."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "Trimming a pipe raises its pitch, and the trim marks were made long after the organ was built. No metal was added, so nothing was done that would have lowered the pitch. The organ's pitch was therefore raised at some point, which means it was probably lower in 1700 than it is now.",
-    "A": "Incorrect. This reverses the evidence: the later trimming raised the pitch, so the organ was most likely lower in 1700, not higher.",
-    "B": "Correct. Later trimming raised the pipes' pitch and nothing lowered it, so the organ most likely sounded lower when it was new.",
-    "C": "Incorrect. The text discusses only this one organ and says nothing about other organs in the region.",
-    "D": "Incorrect. The evidence does tell Kaarna something: the direction of the change suggests the pitch around 1700 was lower than today's."
+    "A": "Incorrect. The text discusses only this one organ and says nothing about other organs in the region.",
+    "B": "Incorrect. This reverses the evidence: the later trimming raised the pitch, so the organ was most likely lower in 1700, not higher.",
+    "C": "Incorrect. The evidence does tell Kaarna something: the direction of the change suggests the pitch around 1700 was lower than today's.",
+    "D": "Correct. Later trimming raised the pipes' pitch and nothing lowered it, so the organ most likely sounded lower when it was new."
   },
   "traps": {
-    "A": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

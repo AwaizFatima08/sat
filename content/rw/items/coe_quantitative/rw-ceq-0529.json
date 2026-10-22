@@ -49,23 +49,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Wróbel's finding?",
   "choices": {
-    "A": "In 2023, 40 percent of tickets were bought through the app, more than through either of the other methods.",
-    "B": "The share of tickets bought through the app rose in every year after the app was introduced in 2021.",
-    "C": "From 2020 to 2023, the machines' share fell from 62 to 26 percent, while the counter's share fell only from 38 to 34 percent.",
-    "D": "From 2020 to 2023, the counter's share of ticket sales fell by more percentage points than the machines' share did."
+    "A": "The share of tickets bought through the app rose in every year after the app was introduced in 2021.",
+    "B": "From 2020 to 2023, the machines' share fell from 62 to 26 percent, while the counter's share fell only from 38 to 34 percent.",
+    "C": "From 2020 to 2023, the counter's share of ticket sales fell by more percentage points than the machines' share did.",
+    "D": "In 2023, 40 percent of tickets were bought through the app, more than through either of the other methods."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Wróbel's finding is about where the app's growth came from, so the support must compare how much the counter and the machines each lost. The machines dropped from 62 to 26 percent, while the counter dropped only from 38 to 34 percent.",
-    "A": "Incorrect. This is true, but it shows only how popular the app became, not which method lost the most sales to it.",
-    "B": "Incorrect. This is true, but it describes the app alone and does not compare the losses of the counter and the machines.",
-    "C": "Correct. The machines lost 36 percentage points while the counter lost only 4, which shows that the app's growth came mostly from the machines.",
-    "D": "Incorrect. The counter's share fell by 4 points and the machines' share by 36 points, so this misreads the table."
+    "A": "Incorrect. This is true, but it describes the app alone and does not compare the losses of the counter and the machines.",
+    "B": "Correct. The machines lost 36 percentage points while the counter lost only 4, which shows that the app's growth came mostly from the machines.",
+    "C": "Incorrect. The counter's share fell by 4 points and the machines' share by 36 points, so this misreads the table.",
+    "D": "Incorrect. This is true, but it shows only how popular the app became, not which method lost the most sales to it."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "D": "reversed"
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -78,13 +78,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

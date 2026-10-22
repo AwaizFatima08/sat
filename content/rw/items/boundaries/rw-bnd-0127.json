@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "travelers; the",
-    "B": "travelers: the",
-    "C": "travelers. The",
-    "D": "travelers the"
+    "A": "travelers the",
+    "B": "travelers. The",
+    "C": "travelers: the",
+    "D": "travelers; the"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "\"Each one usually carries a practical message for travelers\" is a complete independent clause. What follows is a list of noun phrases that explains what the message might be; the list has no main verb of its own. A colon after an independent clause is the right mark to introduce such an explanation.",
-    "A": "Incorrect. A semicolon must be followed by an independent clause, but \"the location of a good fishing spot … or the place where food has been stored\" has no main verb.",
-    "B": "Correct. A colon follows the independent clause and introduces the list that explains the message.",
-    "C": "Incorrect. A period would leave \"The location of a good fishing spot … or the place where food has been stored\" as a sentence fragment.",
-    "D": "Incorrect. With no punctuation, the list runs straight into \"travelers,\" and the sentence can't be read clearly."
+    "A": "Incorrect. With no punctuation, the list runs straight into \"travelers,\" and the sentence can't be read clearly.",
+    "B": "Incorrect. A period would leave \"The location of a good fishing spot … or the place where food has been stored\" as a sentence fragment.",
+    "C": "Correct. A colon follows the independent clause and introduces the list that explains the message.",
+    "D": "Incorrect. A semicolon must be followed by an independent clause, but \"the location of a good fishing spot … or the place where food has been stored\" has no main verb."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
+    "B": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "punctuation",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

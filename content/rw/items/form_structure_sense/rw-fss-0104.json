@@ -14,17 +14,17 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "counts",
+    "A": "will count",
     "B": "counted",
-    "C": "will count",
+    "C": "counts",
     "D": "has counted"
   },
   "answer": "B",
   "explanation": {
     "why": "The story happened \"last Saturday,\" and the blank is the third verb in a list that already uses the simple past: \"carried,\" \"wrote,\" and ______. The verb must also be in the simple past, so \"counted\" is correct.",
-    "A": "Incorrect. \"Counts\" is present tense, but the events took place last Saturday and the other verbs in the list are past tense.",
+    "A": "Incorrect. \"Will count\" is future tense, but the events already happened.",
     "B": "Correct. \"Counted\" is simple past, matching \"carried\" and \"wrote\" and the time \"last Saturday.\"",
-    "C": "Incorrect. \"Will count\" is future tense, but the events already happened.",
+    "C": "Incorrect. \"Counts\" is present tense, but the events took place last Saturday and the other verbs in the list are past tense.",
     "D": "Incorrect. \"Has counted\" is present perfect, which does not fit a finished event at a specific past time like \"last Saturday.\""
   },
   "traps": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

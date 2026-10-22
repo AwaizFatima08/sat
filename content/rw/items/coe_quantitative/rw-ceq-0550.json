@@ -44,22 +44,22 @@
   "stem": "Which choice most effectively uses data from the table to support Oyelaran's argument?",
   "choices": {
     "A": "The average track recorded in 1955–1959 was more than twice as long as the average track recorded in 1945–1949.",
-    "B": "In every period shown, musicians spent more time on improvised solos than they did on theme statements.",
-    "C": "Solos took up a larger share of the average track in 1945–1949 than they did in 1955–1959.",
-    "D": "Of the 4.4 minutes added to the average track between 1945–1949 and 1955–1959, solos accounted for 4.2."
+    "B": "Of the 4.4 minutes added to the average track between 1945–1949 and 1955–1959, solos accounted for 4.2.",
+    "C": "In every period shown, musicians spent more time on improvised solos than they did on theme statements.",
+    "D": "Solos took up a larger share of the average track in 1945–1949 than they did in 1955–1959."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Oyelaran accepts that tracks got longer; his claim is about where the added time went: almost all of it to solos, with themes nearly unchanged. Support must compare the growth of the solo and theme columns with the growth of the whole track. From 1945–1949 to 1955–1959, tracks grew by 7.4 − 3.0 = 4.4 minutes, solos by 6.1 − 1.9 = 4.2 minutes, and themes by only 0.2 minutes.",
     "A": "Incorrect. This is true, but it shows only that tracks got longer, which the text already accepts, not which sections absorbed the added time.",
-    "B": "Incorrect. This is true, but solos could outweigh themes in every period even if both had grown by similar amounts.",
-    "C": "Incorrect. Solos made up about 63% of a track (1.9 of 3.0 minutes) in 1945–1949 but about 82% (6.1 of 7.4) in 1955–1959, so this reverses the table.",
-    "D": "Correct. It shows that nearly all of the added time went to solos, leaving theme statements almost unchanged."
+    "B": "Correct. It shows that nearly all of the added time went to solos, leaving theme statements almost unchanged.",
+    "C": "Incorrect. This is true, but solos could outweigh themes in every period even if both had grown by similar amounts.",
+    "D": "Incorrect. Solos made up about 63% of a track (1.9 of 3.0 minutes) in 1945–1949 but about 82% (6.1 of 7.4) in 1955–1959, so this reverses the table."
   },
   "traps": {
     "A": "too_narrow",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -68,8 +68,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

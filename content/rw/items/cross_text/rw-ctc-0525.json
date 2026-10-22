@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, both authors would most likely agree with which statement?",
   "choices": {
-    "A": "The cleaned ceiling looks much brighter than it did before the work began.",
-    "B": "The cleaning removed final touches of shadow that Michelangelo added himself.",
-    "C": "The colors now visible are the ones Michelangelo intended viewers to see.",
-    "D": "The ceiling should be cleaned again to remove the remaining layers of glue."
+    "A": "The cleaning removed final touches of shadow that Michelangelo added himself.",
+    "B": "The cleaned ceiling looks much brighter than it did before the work began.",
+    "C": "The ceiling should be cleaned again to remove the remaining layers of glue.",
+    "D": "The colors now visible are the ones Michelangelo intended viewers to see."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Text 1 says the ceiling that emerged \"was startlingly bright.\" Text 2 begins, \"No one disputes that the cleaned ceiling looks dramatically brighter than it did before.\" The authors disagree about whether the cleaning was faithful to Michelangelo, but both accept that the ceiling is now much brighter.",
-    "A": "Correct. Both texts state that the ceiling is much brighter after cleaning.",
-    "B": "Incorrect. Only the critics in Text 2 raise this worry, and Text 1 treats the bright colors as Michelangelo's own.",
-    "C": "Incorrect. Text 1 suggests this, but Text 2 says the colors may be \"harsher than he intended.\"",
-    "D": "Incorrect. Neither text suggests further cleaning; Text 1 says the glue was removed."
+    "A": "Incorrect. Only the critics in Text 2 raise this worry, and Text 1 treats the bright colors as Michelangelo's own.",
+    "B": "Correct. Both texts state that the ceiling is much brighter after cleaning.",
+    "C": "Incorrect. Neither text suggests further cleaning; Text 1 says the glue was removed.",
+    "D": "Incorrect. Text 1 suggests this, but Text 2 says the colors may be \"harsher than he intended.\""
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "reversed",
-    "D": "not_in_text"
+    "A": "true_irrelevant",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

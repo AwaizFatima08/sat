@@ -15,22 +15,22 @@
   "stem": "Which finding, if true, would most directly support Pryce's argument?",
   "choices": {
     "A": "Moss on north faces grew thickest along the forest's northern edge, where storms strike first.",
-    "B": "After rain, bark on the north faces of trunks stayed damp longer than bark on the south faces.",
-    "C": "In a valley where storms come mostly from the south, moss still grew chiefly on north faces.",
-    "D": "Several of the moss species on the trunks also grew on rocks and fallen logs throughout the forest."
+    "B": "Several of the moss species on the trunks also grew on rocks and fallen logs throughout the forest.",
+    "C": "After rain, bark on the north faces of trunks stayed damp longer than bark on the south faces.",
+    "D": "In a valley where storms come mostly from the south, moss still grew chiefly on north faces."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Pryce credits shade from the sun; the rival account credits wind-driven rain from the north. In most of the forest both favor the north side, so they must be pulled apart. Where storms come from the south, the rain account predicts moss on the south faces, but the sunlight account still predicts the north faces. Moss on the north faces there supports Pryce.",
     "A": "Incorrect. Thicker moss where northern storms hit first ties moss growth to rain from the north, which supports the competing explanation.",
-    "B": "Incorrect. Damper north faces would result from either more shade or more rain, so this does not favor Pryce's explanation.",
-    "C": "Correct. With the rain coming from the south, only the sunlight explanation predicts moss on the north faces, and that is what was found.",
-    "D": "Incorrect. Where else the moss grows says nothing about why it favors the north faces of trunks."
+    "B": "Incorrect. Where else the moss grows says nothing about why it favors the north faces of trunks.",
+    "C": "Incorrect. Damper north faces would result from either more shade or more rain, so this does not favor Pryce's explanation.",
+    "D": "Correct. With the rain coming from the south, only the sunlight explanation predicts moss on the north faces, and that is what was found."
   },
   "traps": {
     "A": "reversed",
     "B": "true_irrelevant",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

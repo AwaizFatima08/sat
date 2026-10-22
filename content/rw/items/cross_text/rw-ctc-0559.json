@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the conclusion reached by Adler in Text 1?",
   "choices": {
-    "A": "By arguing that it rests on a contrast between gesture and voice that newer evidence weakens",
-    "B": "By denying that great apes adjust their gestures to the attention of their audience",
+    "A": "By denying that great apes adjust their gestures to the attention of their audience",
+    "B": "By rejecting the idea that flexible, intentional signaling is a necessary precondition for language",
     "C": "By claiming that human language began as speech and only later came to include gesture",
-    "D": "By rejecting the idea that flexible, intentional signaling is a necessary precondition for language"
+    "D": "By arguing that it rests on a contrast between gesture and voice that newer evidence weakens"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Adler's conclusion depends on the contrast between flexible gestures and \"largely fixed\" calls. Text 2 says that contrast \"has softened,\" citing chimpanzees that call selectively and orangutans that learn new sounds, so \"the case for a gesture-only stage loses its main support.\" Text 2 attacks the premise about ape calls rather than the importance of flexible signaling.",
-    "A": "Correct. Text 2 argues that apes' calls are more controllable than Adler assumes, which undercuts the contrast her conclusion relies on.",
-    "B": "Incorrect. Text 2 accepts that ape gestures are flexible; it questions only how rigid their calls are.",
+    "A": "Incorrect. Text 2 accepts that ape gestures are flexible; it questions only how rigid their calls are.",
+    "B": "Incorrect. Text 2 never questions this premise; it disputes the claim that only gestures met it.",
     "C": "Incorrect. Text 2 suggests hand and voice worked \"together from the start,\" not that speech came first.",
-    "D": "Incorrect. Text 2 never questions this premise; it disputes the claim that only gestures met it."
+    "D": "Correct. Text 2 argues that apes' calls are more controllable than Adler assumes, which undercuts the contrast her conclusion relies on."
   },
   "traps": {
-    "B": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

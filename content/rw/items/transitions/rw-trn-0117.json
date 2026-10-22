@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Therefore,",
+    "A": "Similarly,",
     "B": "For example,",
-    "C": "However,",
-    "D": "Similarly,"
+    "C": "Therefore,",
+    "D": "However,"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The text explains that sound needs particles to travel through and that space has almost none. The last sentence states what follows from these two facts: a distant observer would hear nothing from an explosion in space. A cause-and-effect transition is needed.",
-    "A": "Correct. \"Therefore\" shows that the silence of an explosion in space follows from the lack of particles there.",
+    "A": "Incorrect. \"Similarly\" signals a parallel fact, but the sentence states a consequence.",
     "B": "Incorrect. A silent explosion is not an example of empty space; it is a conclusion drawn from the facts given.",
-    "C": "Incorrect. The silence agrees with the facts about sound and space; it does not contrast with them.",
-    "D": "Incorrect. \"Similarly\" signals a parallel fact, but the sentence states a consequence."
+    "C": "Correct. \"Therefore\" shows that the silence of an explosion in space follows from the lack of particles there.",
+    "D": "Incorrect. The silence agrees with the facts about sound and space; it does not contrast with them."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

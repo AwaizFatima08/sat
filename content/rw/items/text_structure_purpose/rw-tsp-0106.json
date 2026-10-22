@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It names a difficulty farmers faced and explains how they dealt with it.",
-    "B": "It describes the borders of the Inca Empire and then lists the crops it grew.",
-    "C": "It argues that terraces were the greatest achievement of the Inca Empire.",
-    "D": "It explains how rainwater damaged Inca fields and why the terraces failed."
+    "A": "It explains how rainwater damaged Inca fields and why the terraces failed.",
+    "B": "It argues that terraces were the greatest achievement of the Inca Empire.",
+    "C": "It describes the borders of the Inca Empire and then lists the crops it grew.",
+    "D": "It names a difficulty farmers faced and explains how they dealt with it."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The first sentence names a difficulty: in the steep Andes, \"flat farmland was scarce.\" The next sentences explain the farmers' response, terraces that \"created level fields\" and kept rain from washing hillsides away. The text moves from a problem to its solution.",
-    "A": "Correct. The text first describes the lack of flat land and then explains how terraces solved that problem.",
-    "B": "Incorrect. The text names the Andes but never lists the empire's borders or its crops.",
-    "C": "Incorrect. The text explains how terraces worked but never ranks them among the empire's achievements.",
-    "D": "Incorrect. The text says the terraces kept rainwater from washing the hillside away, so they succeeded rather than failed."
+    "A": "Incorrect. The text says the terraces kept rainwater from washing the hillside away, so they succeeded rather than failed.",
+    "B": "Incorrect. The text explains how terraces worked but never ranks them among the empire's achievements.",
+    "C": "Incorrect. The text names the Andes but never lists the empire's borders or its crops.",
+    "D": "Correct. The text first describes the lack of flat land and then explains how terraces solved that problem."
   },
   "traps": {
-    "B": "not_in_text",
-    "C": "too_broad",
-    "D": "reversed"
+    "A": "reversed",
+    "B": "too_broad",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

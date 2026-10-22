@@ -15,22 +15,22 @@
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
     "A": "To explain the techniques a paddler uses to steer an outrigger canoe",
-    "B": "To show that Ikaika is angry at being kept in the beginner's seat",
-    "C": "To describe the friendly joking among the older members of the crew",
-    "D": "To portray a wordless gesture that shows Ikaika he has been accepted by the crew"
+    "B": "To portray a wordless gesture that shows Ikaika he has been accepted by the crew",
+    "C": "To show that Ikaika is angry at being kept in the beginner's seat",
+    "D": "To describe the friendly joking among the older members of the crew"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text begins with Ikaika on the edge of the group, in \"the place for beginners\" and barely noticed. Then Lani, the steerer, silently hands him the steering paddle, and he understands that \"no one needed to\" explain. The passage centers on this silent sign that he now belongs.",
     "A": "Incorrect. The text never describes how to steer; the paddle matters as a symbol of trust.",
-    "B": "Incorrect. Ikaika may feel overlooked, but the text does not show anger, and its focus is the moment he is welcomed.",
-    "C": "Incorrect. The joking is a background detail showing Ikaika's distance from the group, not the main focus.",
-    "D": "Correct. Lani hands him the steering paddle without a word, and Ikaika understands that the crew has accepted him."
+    "B": "Correct. Lani hands him the steering paddle without a word, and Ikaika understands that the crew has accepted him.",
+    "C": "Incorrect. Ikaika may feel overlooked, but the text does not show anger, and its focus is the moment he is welcomed.",
+    "D": "Incorrect. The joking is a background detail showing Ikaika's distance from the group, not the main focus."
   },
   "traps": {
     "A": "not_in_text",
-    "B": "wrong_tone",
-    "C": "too_narrow"
+    "C": "wrong_tone",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

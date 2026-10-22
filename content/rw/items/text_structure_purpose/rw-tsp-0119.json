@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To describe the steps involved in making glazed tiles in Multan",
+    "A": "To reveal that Bilal has learned more by watching than he knew",
     "B": "To show that Bilal's uncle is unwilling to teach him the craft",
     "C": "To explain why Bilal decides to leave his uncle's workshop",
-    "D": "To reveal that Bilal has learned more by watching than he knew"
+    "D": "To describe the steps involved in making glazed tiles in Multan"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Bilal complains that he is \"learning nothing\" because he has only mixed, swept, and watched. When his uncle hands him a brush, Bilal finds himself painting the way his uncle does, \"already knowing where the next leaf should go.\" The passage shows that his months of watching taught him more than he realized.",
-    "A": "Incorrect. Mixing glazes and painting are mentioned, but the text does not explain how tiles are made; it focuses on Bilal's discovery.",
+    "A": "Correct. When Bilal finally paints, he moves the way his uncle does, showing that watching taught him more than he believed.",
     "B": "Incorrect. The uncle hands Bilal a brush and a tile, and Bilal's watching has already taught him, so the uncle is not refusing to teach.",
     "C": "Incorrect. Bilal complains, but the text never suggests that he decides to leave.",
-    "D": "Correct. When Bilal finally paints, he moves the way his uncle does, showing that watching taught him more than he believed."
+    "D": "Incorrect. Mixing glazes and painting are mentioned, but the text does not explain how tiles are made; it focuses on Bilal's discovery."
   },
   "traps": {
-    "A": "too_narrow",
     "B": "reversed",
-    "C": "not_in_text"
+    "C": "not_in_text",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

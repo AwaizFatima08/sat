@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the belief in Text 1?",
   "choices": {
-    "A": "By agreeing that Stradivari's varnish explains the violins' superior tone",
+    "A": "By questioning whether the tone of these violins is truly better than that of new ones",
     "B": "By arguing that Stradivari's violins are worth far less than collectors pay",
     "C": "By claiming that new violins sound better than old ones to every listener",
-    "D": "By questioning whether the tone of these violins is truly better than that of new ones"
+    "D": "By agreeing that Stradivari's varnish explains the violins' superior tone"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Text 1 describes the belief that Stradivari violins have a tone \"no modern violin can equal.\" Text 2 asks \"whether the difference can be heard at all\" and reports that players in blind tests \"could not reliably tell which was which.\" So Text 2 doubts that the tone is really superior.",
-    "A": "Incorrect. Text 2 questions whether there is any superior tone to explain, so it would not credit the varnish.",
+    "A": "Correct. Text 2's blind tests suggest that players cannot reliably hear the difference Text 1 describes.",
     "B": "Incorrect. Text 2 tests how the violins sound, not what they are worth; it never discusses their price.",
     "C": "Incorrect. Text 2 says \"many\" players preferred a new violin, not every listener.",
-    "D": "Correct. Text 2's blind tests suggest that players cannot reliably hear the difference Text 1 describes."
+    "D": "Incorrect. Text 2 questions whether there is any superior tone to explain, so it would not credit the varnish."
   },
   "traps": {
-    "A": "reversed",
     "B": "not_in_text",
-    "C": "too_broad"
+    "C": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

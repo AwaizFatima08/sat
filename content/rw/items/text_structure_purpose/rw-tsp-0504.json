@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To describe the battle scenes pictured on the Bayeux Tapestry",
-    "B": "To argue that the Bayeux Tapestry should be given a new name",
-    "C": "To explain how tapestries were woven in England in the 1000s",
-    "D": "To explain why the Bayeux Tapestry's name does not accurately describe it"
+    "A": "To explain why the Bayeux Tapestry's name does not accurately describe it",
+    "B": "To explain how tapestries were woven in England in the 1000s",
+    "C": "To argue that the Bayeux Tapestry should be given a new name",
+    "D": "To describe the battle scenes pictured on the Bayeux Tapestry"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The key sentence is \"Despite its famous name, it is not actually a tapestry.\" The rest of the text explains the difference between weaving a picture into cloth and stitching it onto finished cloth. The purpose is to show why the name is inaccurate.",
-    "A": "Incorrect. The text says the work tells the story of the Norman conquest but never describes any of its scenes.",
-    "B": "Incorrect. The text points out that the name is inaccurate but never says the work should be renamed. This claims more than the text does.",
-    "C": "Incorrect. The text defines a tapestry in general terms; it says nothing about weaving methods in England in the 1000s.",
-    "D": "Correct. The text explains that the work was stitched onto finished linen, so it is an embroidery, not a tapestry."
+    "A": "Correct. The text explains that the work was stitched onto finished linen, so it is an embroidery, not a tapestry.",
+    "B": "Incorrect. The text defines a tapestry in general terms; it says nothing about weaving methods in England in the 1000s.",
+    "C": "Incorrect. The text points out that the name is inaccurate but never says the work should be renamed. This claims more than the text does.",
+    "D": "Incorrect. The text says the work tells the story of the Norman conquest but never describes any of its scenes."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "too_broad",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "C": "too_broad",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

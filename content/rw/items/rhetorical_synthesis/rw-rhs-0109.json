@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to emphasize how the kakapo differs from most other parrots. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "The kakapo is a large parrot that lives only in New Zealand.",
-    "B": "The kakapo's feathers are mossy green with darker markings.",
-    "C": "Most kinds of parrots are able to fly, and they are usually active during the day.",
+    "A": "The kakapo's feathers are mossy green with darker markings.",
+    "B": "Most kinds of parrots are able to fly, and they are usually active during the day.",
+    "C": "The kakapo is a large parrot that lives only in New Zealand.",
     "D": "Unlike most parrots, the kakapo cannot fly and is active mainly at night."
   },
   "answer": "D",
   "explanation": {
     "why": "The goal is to compare the kakapo with most other parrots. The notes say most parrots fly and are active by day, but the kakapo cannot fly and is active at night. Only one choice puts these facts side by side.",
-    "A": "Incorrect. This tells where the kakapo lives but does not compare it with other parrots.",
-    "B": "Incorrect. This describes the kakapo's feathers but does not compare it with other parrots.",
-    "C": "Incorrect. This describes most parrots but never mentions the kakapo, so no difference is shown.",
+    "A": "Incorrect. This describes the kakapo's feathers but does not compare it with other parrots.",
+    "B": "Incorrect. This describes most parrots but never mentions the kakapo, so no difference is shown.",
+    "C": "Incorrect. This tells where the kakapo lives but does not compare it with other parrots.",
     "D": "Correct. \"Unlike most parrots\" sets up the contrast, and the sentence gives the two ways the kakapo is different."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "C": "too_narrow"
+    "B": "too_narrow",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

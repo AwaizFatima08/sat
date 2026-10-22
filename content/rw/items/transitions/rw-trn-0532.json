@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Granted,",
+    "A": "Still,",
     "B": "For instance,",
-    "C": "Likewise,",
-    "D": "Still,"
+    "C": "Granted,",
+    "D": "Likewise,"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The second sentence begins with \"Granted,\" conceding that handwritten books lingered. The last sentence turns back to the main point: the shift to print was swift. After a concession, the writer needs a transition that returns to the main claim in spite of the point just conceded.",
-    "A": "Incorrect. \"Granted\" introduces a concession, but the last sentence is not another point against the main claim; it argues for the main claim. Using \"Granted\" again would mislabel it.",
+    "A": "Correct. \"Still\" signals that, despite the conceded persistence of scribes, the overall shift to print was fast.",
     "B": "Incorrect. The spread of presses to more than two hundred towns is not an example of scribes continuing to work; it points the other way.",
-    "C": "Incorrect. \"Likewise\" signals a similar point, but the rapid spread of printing contrasts with the persistence of handwritten books described just before it.",
-    "D": "Correct. \"Still\" signals that, despite the conceded persistence of scribes, the overall shift to print was fast."
+    "C": "Incorrect. \"Granted\" introduces a concession, but the last sentence is not another point against the main claim; it argues for the main claim. Using \"Granted\" again would mislabel it.",
+    "D": "Incorrect. \"Likewise\" signals a similar point, but the rapid spread of printing contrasts with the persistence of handwritten books described just before it."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

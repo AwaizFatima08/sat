@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the critics' view of the revised ending in Text 1?",
   "choices": {
-    "A": "By agreeing that the revision gives the novel a simple, happy conclusion",
-    "B": "By claiming that Dickens never wrote any ending other than the published one",
+    "A": "By claiming that Dickens never wrote any ending other than the published one",
+    "B": "By suggesting that Bulwer-Lytton wrote the final scene of the novel himself",
     "C": "By arguing that the revised ending is more uncertain and somber than critics suggest",
-    "D": "By suggesting that Bulwer-Lytton wrote the final scene of the novel himself"
+    "D": "By agreeing that the revision gives the novel a simple, happy conclusion"
   },
   "answer": "C",
   "explanation": {
     "why": "Text 1 reports that critics see the revised ending as a happy betrayal of the novel's \"sad, clear-eyed logic.\" Text 2 says the ending is \"far less cheerful than its reputation suggests\": the final words are \"strangely hesitant,\" and the ending \"keeps the novel's somber tone.\" So Text 2 would say the revision does not betray the novel's mood.",
-    "A": "Incorrect. Text 2 argues that the ending only seems happy; read closely, it is somber and uncertain.",
-    "B": "Incorrect. Text 2 discusses only the published ending and never denies that Dickens first wrote a different one.",
+    "A": "Incorrect. Text 2 discusses only the published ending and never denies that Dickens first wrote a different one.",
+    "B": "Incorrect. Text 1 says Bulwer-Lytton urged a change and Dickens rewrote the scene; neither text says Bulwer-Lytton wrote it.",
     "C": "Correct. Text 2 points to the worn-down characters and the hesitant final words to show that the ending stays somber.",
-    "D": "Incorrect. Text 1 says Bulwer-Lytton urged a change and Dickens rewrote the scene; neither text says Bulwer-Lytton wrote it."
+    "D": "Incorrect. Text 2 argues that the ending only seems happy; read closely, it is somber and uncertain."
   },
   "traps": {
-    "A": "reversed",
+    "A": "not_in_text",
     "B": "not_in_text",
-    "D": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

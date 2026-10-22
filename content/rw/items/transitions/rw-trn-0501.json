@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Instead,",
-    "B": "For example,",
-    "C": "Similarly,",
-    "D": "As a result,"
+    "A": "Similarly,",
+    "B": "As a result,",
+    "C": "For example,",
+    "D": "Instead,"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The first sentence describes what many people believe the hump holds: water. The next sentence gives the true answer, fat, in place of that belief. The transition must show that one idea replaces another.",
-    "A": "Correct. \"Instead\" shows that fat, not water, is what the hump actually holds, correcting the common belief.",
-    "B": "Incorrect. The hump being mostly fat is not an example of the belief that it holds water; it contradicts that belief.",
-    "C": "Incorrect. \"Similarly\" signals a matching idea, but fat is different from the water people imagine.",
-    "D": "Incorrect. People's belief about water does not cause the hump to be made of fat."
+    "A": "Incorrect. \"Similarly\" signals a matching idea, but fat is different from the water people imagine.",
+    "B": "Incorrect. People's belief about water does not cause the hump to be made of fat.",
+    "C": "Incorrect. The hump being mostly fat is not an example of the belief that it holds water; it contradicts that belief.",
+    "D": "Correct. \"Instead\" shows that fat, not water, is what the hump actually holds, correcting the common belief."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

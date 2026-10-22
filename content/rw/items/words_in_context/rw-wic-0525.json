@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "lavish",
-    "B": "modest",
-    "C": "polished",
-    "D": "celebrated"
+    "A": "polished",
+    "B": "lavish",
+    "C": "celebrated",
+    "D": "modest"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The text lists the film's limits: \"little money,\" a director with no experience, and performers with \"little or no film experience.\" The producers' doubts were based on these limits, so the blank must describe a small, simple production. \"Modest\" fits, and \"Yet\" then contrasts those doubts with the film's success.",
-    "A": "Incorrect. A film made with \"little money\" in a village with mostly inexperienced performers is the opposite of lavish.",
-    "B": "Correct. A production with \"little money,\" a first-time director, and mostly inexperienced performers is small and simple in scale, or modest.",
-    "C": "Incorrect. The film was later praised, but the producers' doubts came before that success and were based on the film's limited resources and inexperience. Nothing suggests it seemed polished to them.",
-    "D": "Incorrect. The film became celebrated only after it was finished and shown; the producers' doubts came earlier, when no one knew if it would succeed."
+    "A": "Incorrect. The film was later praised, but the producers' doubts came before that success and were based on the film's limited resources and inexperience. Nothing suggests it seemed polished to them.",
+    "B": "Incorrect. A film made with \"little money\" in a village with mostly inexperienced performers is the opposite of lavish.",
+    "C": "Incorrect. The film became celebrated only after it was finished and shown; the producers' doubts came earlier, when no one knew if it would succeed.",
+    "D": "Correct. A production with \"little money,\" a first-time director, and mostly inexperienced performers is small and simple in scale, or modest."
   },
   "traps": {
-    "A": "reversed",
-    "C": "wrong_tone",
-    "D": "wrong_logic"
+    "A": "wrong_tone",
+    "B": "reversed",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

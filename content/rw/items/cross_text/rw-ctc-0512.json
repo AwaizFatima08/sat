@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the finding in Text 1?",
   "choices": {
-    "A": "By arguing that the Chandrayaan-1 instrument did not actually detect any water",
-    "B": "By agreeing that the Moon's surface soil holds enough water to supply lunar bases",
-    "C": "By accepting the finding while stressing that the surface water is very scarce",
-    "D": "By claiming that the ice near the Moon's poles was also found by Chandrayaan-1"
+    "A": "By accepting the finding while stressing that the surface water is very scarce",
+    "B": "By claiming that the ice near the Moon's poles was also found by Chandrayaan-1",
+    "C": "By agreeing that the Moon's surface soil holds enough water to supply lunar bases",
+    "D": "By arguing that the Chandrayaan-1 instrument did not actually detect any water"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Text 1 reports that Chandrayaan-1 detected water across much of the Moon's surface. Text 2 says \"the discovery was real\" but adds that this water is \"extremely scarce,\" with less water than Sahara sand. Text 2 accepts the finding but limits how much it means.",
-    "A": "Incorrect. Text 2 says \"the discovery was real,\" so it does not deny that water was detected.",
-    "B": "Incorrect. Text 2 says scientists looking for water for lunar bases are \"looking instead\" at polar ice, because the surface water is so scarce.",
-    "C": "Correct. Text 2 accepts the discovery but says the soil holds very little water.",
-    "D": "Incorrect. Text 2 does not say which spacecraft or instrument found the polar ice."
+    "A": "Correct. Text 2 accepts the discovery but says the soil holds very little water.",
+    "B": "Incorrect. Text 2 does not say which spacecraft or instrument found the polar ice.",
+    "C": "Incorrect. Text 2 says scientists looking for water for lunar bases are \"looking instead\" at polar ice, because the surface water is so scarce.",
+    "D": "Incorrect. Text 2 says \"the discovery was real,\" so it does not deny that water was detected."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

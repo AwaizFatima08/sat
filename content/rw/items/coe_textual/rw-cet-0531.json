@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Herrera's explanation?",
   "choices": {
-    "A": "Larvae settled more densely on dark panels than on light ones even when all the panels were kept free of bacteria.",
-    "B": "Light panels coated with the bacterial film taken from dark panels attracted as many larvae as dark panels did.",
+    "A": "Larvae settled more densely on dark panels than on light ones at every depth at which the panels were hung.",
+    "B": "Larvae settled more densely on dark panels than on light ones even when all the panels were kept free of bacteria.",
     "C": "Barnacles that settled on dark panels grew to adult size no faster than those that settled on light panels.",
-    "D": "Larvae settled more densely on dark panels than on light ones at every depth at which the panels were hung."
+    "D": "Light panels coated with the bacterial film taken from dark panels attracted as many larvae as dark panels did."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "Herrera explains the preference by how dark panels look; the text offers a rival explanation, the bacterial film that grows on dark panels. To weaken Herrera, a finding must show that the film, not the darkness, draws the larvae. If light panels carrying that film attract just as many larvae, darkness is not needed at all.",
-    "A": "Incorrect. If larvae still prefer dark panels with no bacteria present, the film cannot explain the preference, so this supports Herrera.",
-    "B": "Correct. When light panels with the film do as well as dark panels, the film alone accounts for the preference, which undercuts Herrera's visual explanation.",
+    "A": "Incorrect. This only repeats the preference at more depths; it fits Herrera's explanation and the bacterial one equally well.",
+    "B": "Incorrect. If larvae still prefer dark panels with no bacteria present, the film cannot explain the preference, so this supports Herrera.",
     "C": "Incorrect. How fast barnacles grow after settling says nothing about why the larvae chose dark panels in the first place.",
-    "D": "Incorrect. This only repeats the preference at more depths; it fits Herrera's explanation and the bacterial one equally well."
+    "D": "Correct. When light panels with the film do as well as dark panels, the film alone accounts for the preference, which undercuts Herrera's visual explanation."
   },
   "traps": {
-    "A": "reversed",
-    "C": "true_irrelevant",
-    "D": "true_irrelevant"
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

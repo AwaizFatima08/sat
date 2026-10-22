@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Bellini's argument?",
   "choices": {
-    "A": "A garment that took many hours to sew by hand could be finished on a machine in a fraction of the time.",
+    "A": "Many families who bought sewing machines used them to make clothing for their own use.",
     "B": "Where no installment plans were offered, households bought machines at about the same rate as elsewhere.",
-    "C": "Sales records show that most sewing machines bought for homes in this period were paid for in installments.",
-    "D": "Many families who bought sewing machines used them to make clothing for their own use."
+    "C": "A garment that took many hours to sew by hand could be finished on a machine in a fraction of the time.",
+    "D": "Sales records show that most sewing machines bought for homes in this period were paid for in installments."
   },
   "answer": "B",
   "explanation": {
     "why": "Bellini claims that installment plans were what made the spread of sewing machines possible. If households bought machines just as quickly where no such plans existed, the plans were not necessary, which undercuts his argument.",
-    "A": "Incorrect. This explains why families wanted machines, not whether installment plans made buying them possible.",
+    "A": "Incorrect. How families used their machines says nothing about how they managed to pay for them.",
     "B": "Correct. Machines spread just as fast without installment plans, so the plans could not have been the main reason for the spread.",
-    "C": "Incorrect. Most machines being bought in installments fits Bellini's argument, so it would support rather than weaken it.",
-    "D": "Incorrect. How families used their machines says nothing about how they managed to pay for them."
+    "C": "Incorrect. This explains why families wanted machines, not whether installment plans made buying them possible.",
+    "D": "Incorrect. Most machines being bought in installments fits Bellini's argument, so it would support rather than weaken it."
   },
   "traps": {
     "A": "true_irrelevant",
-    "C": "reversed",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

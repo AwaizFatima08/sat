@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Bhittai's audiences valued the plots of the old folk romances far more than his poems about them.",
-    "B": "Bhittai reshaped well-known folk stories by focusing on the inner experience of their heroines.",
-    "C": "The tale of Sassui is the most important of the stories retold in the Shah Jo Risalo.",
-    "D": "Bhittai retold complete folk romances so that his listeners would remember their plots."
+    "A": "Bhittai reshaped well-known folk stories by focusing on the inner experience of their heroines.",
+    "B": "Bhittai's audiences valued the plots of the old folk romances far more than his poems about them.",
+    "C": "Bhittai retold complete folk romances so that his listeners would remember their plots.",
+    "D": "The tale of Sassui is the most important of the stories retold in the Shah Jo Risalo."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The text says Bhittai drew on familiar romances but \"rarely retells these stories from beginning to end,\" choosing instead to \"dwell ... on the heroine at a single moment of struggle.\" As a result, plot-driven tales \"became explorations of longing and endurance.\" The main idea is how he transformed the stories by centering the heroines' inner lives.",
-    "A": "Incorrect. The text says the original stories were prized for their plots, but it never says listeners preferred them to Bhittai's poems.",
-    "B": "Correct. This sums up the text's contrast between the familiar plots and Bhittai's focus on the heroines' struggles.",
-    "C": "Incorrect. Sassui is one of two examples; the text never ranks the stories.",
-    "D": "Incorrect. The text says Bhittai rarely retells the stories completely, the opposite of this choice."
+    "A": "Correct. This sums up the text's contrast between the familiar plots and Bhittai's focus on the heroines' struggles.",
+    "B": "Incorrect. The text says the original stories were prized for their plots, but it never says listeners preferred them to Bhittai's poems.",
+    "C": "Incorrect. The text says Bhittai rarely retells the stories completely, the opposite of this choice.",
+    "D": "Incorrect. Sassui is one of two examples; the text never ranks the stories."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "too_broad",
-    "D": "reversed"
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

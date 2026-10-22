@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "zebra, is",
-    "B": "zebra; is",
-    "C": "zebra—is",
-    "D": "zebra is"
+    "A": "zebra; is",
+    "B": "zebra—is",
+    "C": "zebra is",
+    "D": "zebra, is"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The subject \"The okapi\" goes with the verb \"is.\" Everything from \"a shy, forest-dwelling mammal\" to \"zebra\" is extra information, and it opens with a dash. It must close with a matching dash, even though the comma in \"shy, forest-dwelling\" may make a comma look tempting.",
-    "A": "Incorrect. Extra information that opens with a dash can't close with a comma; the two marks must match.",
-    "B": "Incorrect. A semicolon would cut the subject \"The okapi\" off from its verb \"is,\" and neither side would be a complete sentence.",
-    "C": "Correct. The second dash closes the pair around the extra information, so \"The okapi\" connects to \"is.\"",
-    "D": "Incorrect. Without a closing dash, the extra information is never set off, and \"a zebra is\" wrongly seems to be the subject and verb."
+    "A": "Incorrect. A semicolon would cut the subject \"The okapi\" off from its verb \"is,\" and neither side would be a complete sentence.",
+    "B": "Correct. The second dash closes the pair around the extra information, so \"The okapi\" connects to \"is.\"",
+    "C": "Incorrect. Without a closing dash, the extra information is never set off, and \"a zebra is\" wrongly seems to be the subject and verb.",
+    "D": "Incorrect. Extra information that opens with a dash can't close with a comma; the two marks must match."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "supplements",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

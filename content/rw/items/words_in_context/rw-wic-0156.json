@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "reconstructed",
+    "A": "shortened",
     "B": "repeated",
-    "C": "shortened",
-    "D": "transliterated"
+    "C": "transliterated",
+    "D": "reconstructed"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The text contrasts \"swapping one word for another\" with making sure that the \"meaning, not just its words,\" gets across. Thanh has to rebuild each sentence in the other language, which is what \"reconstructed\" means.",
-    "A": "Correct. Thanh has to rebuild each sentence so that its meaning comes across, not just replace words one at a time.",
+    "A": "Incorrect. The text never suggests the sentences need to be made shorter; the issue is carrying their meaning across.",
     "B": "Incorrect. Simply repeating the words is close to the \"swapping\" approach that Thanh discovers does not work.",
-    "C": "Incorrect. The text never suggests the sentences need to be made shorter; the issue is carrying their meaning across.",
-    "D": "Incorrect. To transliterate is to write words in another alphabet while keeping their sounds. That would change only the letters, not carry the meaning into another language."
+    "C": "Incorrect. To transliterate is to write words in another alphabet while keeping their sounds. That would change only the letters, not carry the meaning into another language.",
+    "D": "Correct. Thanh has to rebuild each sentence so that its meaning comes across, not just replace words one at a time."
   },
   "traps": {
+    "A": "not_in_text",
     "B": "reversed",
-    "C": "not_in_text",
-    "D": "wrong_tone"
+    "C": "wrong_tone"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

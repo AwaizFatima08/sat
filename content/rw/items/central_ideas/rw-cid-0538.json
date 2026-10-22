@@ -14,23 +14,23 @@
   "data": null,
   "stem": "According to the text, what makes it possible for a whale fall to support animals for decades?",
   "choices": {
-    "A": "Scavengers such as hagfish remove the whale's soft tissue slowly over many years.",
-    "B": "Food is otherwise scarce on the deep seafloor where the whale's carcass settles.",
-    "C": "Animals from hydrothermal vents arrive at the carcass and gradually colonize its bones.",
-    "D": "Microbes draw energy from sulfide released as bacteria break down fats in the bones."
+    "A": "Animals from hydrothermal vents arrive at the carcass and gradually colonize its bones.",
+    "B": "Scavengers such as hagfish remove the whale's soft tissue slowly over many years.",
+    "C": "Microbes draw energy from sulfide released as bacteria break down fats in the bones.",
+    "D": "Food is otherwise scarce on the deep seafloor where the whale's carcass settles."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The fourth sentence explains the longest stage: bacteria break down fats in the bones and release sulfide, \"which other microbes use as a source of energy, supporting communities of animals for decades.\" The decades-long support comes from this chain of microbial activity in the skeleton.",
-    "A": "Incorrect. The text says scavengers strip soft tissue \"within months to a couple of years,\" which is quick, not slow over many years.",
-    "B": "Incorrect. This is true, but it explains why a whale fall matters, not what lets it support animals for decades.",
-    "C": "Incorrect. The text only proposes that vent species might use whale falls as stepping stones; it does not say their arrival sustains the community.",
-    "D": "Correct. This restates the mechanism the text gives for the stage that lasts decades."
+    "A": "Incorrect. The text only proposes that vent species might use whale falls as stepping stones; it does not say their arrival sustains the community.",
+    "B": "Incorrect. The text says scavengers strip soft tissue \"within months to a couple of years,\" which is quick, not slow over many years.",
+    "C": "Correct. This restates the mechanism the text gives for the stage that lasts decades.",
+    "D": "Incorrect. This is true, but it explains why a whale fall matters, not what lets it support animals for decades."
   },
   "traps": {
-    "A": "reversed",
-    "B": "true_irrelevant",
-    "C": "not_in_text"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

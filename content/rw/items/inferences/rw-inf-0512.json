@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "destroyed every clay tablet that had been stored in the city.",
+    "A": "led scribes to stop writing on clay and start writing on stone.",
     "B": "softened the tablets so that their marks could no longer be read.",
-    "C": "led scribes to stop writing on clay and start writing on stone.",
+    "C": "destroyed every clay tablet that had been stored in the city.",
     "D": "helped preserve some tablets by baking them hard."
   },
   "answer": "D",
   "explanation": {
     "why": "Sun-dried tablets are fragile, but strong heat turns clay hard like pottery. A large fire would have supplied that heat, so it could have made some tablets more durable.",
-    "A": "Incorrect. The text says heat hardens clay, so a fire would not necessarily destroy the tablets.",
+    "A": "Incorrect. The text says nothing about scribes switching to stone.",
     "B": "Incorrect. This reverses the text, which says heat hardens clay rather than softening it.",
-    "C": "Incorrect. The text says nothing about scribes switching to stone.",
+    "C": "Incorrect. The text says heat hardens clay, so a fire would not necessarily destroy the tablets.",
     "D": "Correct. Strong heat hardens clay, so the fire could have baked some tablets into a lasting form."
   },
   "traps": {
-    "A": "reversed",
+    "A": "not_in_text",
     "B": "reversed",
-    "C": "not_in_text"
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

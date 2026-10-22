@@ -54,23 +54,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "after 2022, ferry use rose slightly each year, reaching about 185,000 passengers in 2025.",
-    "B": "by 2025, the ferry was again carrying about 400,000 passengers a year, as it had before 2022.",
-    "C": "the ferry carried about 410,000 passengers in 2019, more than in any later year shown.",
-    "D": "the new bridge carried more than a million vehicles in its first full year of operation."
+    "A": "the ferry carried about 410,000 passengers in 2019, more than in any later year shown.",
+    "B": "after 2022, ferry use rose slightly each year, reaching about 185,000 passengers in 2025.",
+    "C": "the new bridge carried more than a million vehicles in its first full year of operation.",
+    "D": "by 2025, the ferry was again carrying about 400,000 passengers a year, as it had before 2022."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Planners predicted that ferry use would keep shrinking every year. The graph shows a sharp drop in 2022, but after that the line rises a little each year, from about 160,000 to about 185,000, which contradicts the prediction.",
-    "A": "Correct. After the drop, ferry use grew slightly every year, so it did not keep shrinking as planners predicted.",
-    "B": "Incorrect. This misreads the graph: ferry use in 2025 was about 185,000, far below the roughly 400,000 of earlier years.",
-    "C": "Incorrect. This is true, but it describes the years before the bridge opened and says nothing about what happened after 2022.",
-    "D": "Incorrect. The graph shows only ferry passengers, not traffic on the bridge."
+    "A": "Incorrect. This is true, but it describes the years before the bridge opened and says nothing about what happened after 2022.",
+    "B": "Correct. After the drop, ferry use grew slightly every year, so it did not keep shrinking as planners predicted.",
+    "C": "Incorrect. The graph shows only ferry passengers, not traffic on the bridge.",
+    "D": "Incorrect. This misreads the graph: ferry use in 2025 was about 185,000, far below the roughly 400,000 of earlier years."
   },
   "traps": {
-    "B": "reversed",
-    "C": "true_irrelevant",
-    "D": "not_in_text"
+    "A": "true_irrelevant",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -79,8 +79,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

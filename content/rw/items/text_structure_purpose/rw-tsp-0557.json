@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that countries should avoid selling their natural resources to foreign buyers",
+    "A": "To explain how an apparent benefit can cause economic harm, using the case that named it",
     "B": "To describe the discovery of natural gas reserves in the northern Netherlands in 1959",
     "C": "To show that the struggles of Dutch manufacturing had causes unrelated to natural gas",
-    "D": "To explain how an apparent benefit can cause economic harm, using the case that named it"
+    "D": "To argue that countries should avoid selling their natural resources to foreign buyers"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The text calls the Dutch experience a \"paradox\": gas revenue arrived, yet manufacturing struggled. It explains the mechanism (a stronger currency and resources shifting to the booming sector) and concludes that a windfall \"can thus weaken\" other industries. The Netherlands is the example that gave the problem its name.",
-    "A": "Incorrect. The text explains a risk of resource exports; it never recommends that countries stop them.",
+    "A": "Correct. The text explains how a resource windfall can harm other industries, using the Dutch case that the term is named after.",
     "B": "Incorrect. The 1959 discovery is background in the first sentence; most of the text explains the mechanism.",
     "C": "Incorrect. The text links the manufacturing problems directly to the effects of gas exports.",
-    "D": "Correct. The text explains how a resource windfall can harm other industries, using the Dutch case that the term is named after."
+    "D": "Incorrect. The text explains a risk of resource exports; it never recommends that countries stop them."
   },
   "traps": {
-    "A": "too_broad",
     "B": "too_narrow",
-    "C": "reversed"
+    "C": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

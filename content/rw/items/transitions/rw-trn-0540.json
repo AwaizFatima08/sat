@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Nevertheless,",
-    "B": "Similarly,",
-    "C": "By contrast,",
-    "D": "As a result,"
+    "A": "Similarly,",
+    "B": "By contrast,",
+    "C": "As a result,",
+    "D": "Nevertheless,"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The first sentence describes Naskh: level letters that suited movable type. The second describes Nastaliq: sloping, overlapping letters that resisted typesetting. The transition must set two different things side by side and show how they differ.",
-    "A": "Incorrect. \"Nevertheless\" signals that something holds true in spite of what came before, but Nastaliq's slope is not a surprising outcome of Naskh's level baseline. The two scripts are simply being compared. This is the closest near miss.",
-    "B": "Incorrect. \"Similarly\" signals a likeness, but the text stresses how Nastaliq differs from Naskh.",
-    "C": "Correct. \"By contrast\" sets Nastaliq's sloping, overlapping words against Naskh's level baseline.",
-    "D": "Incorrect. Nastaliq's diagonal form is not caused by Naskh's suitability for movable type."
+    "A": "Incorrect. \"Similarly\" signals a likeness, but the text stresses how Nastaliq differs from Naskh.",
+    "B": "Correct. \"By contrast\" sets Nastaliq's sloping, overlapping words against Naskh's level baseline.",
+    "C": "Incorrect. Nastaliq's diagonal form is not caused by Naskh's suitability for movable type.",
+    "D": "Incorrect. \"Nevertheless\" signals that something holds true in spite of what came before, but Nastaliq's slope is not a surprising outcome of Naskh's level baseline. The two scripts are simply being compared. This is the closest near miss."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

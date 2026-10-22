@@ -16,21 +16,21 @@
   "choices": {
     "A": "physicist, Chien-Shiung",
     "B": "physicist: Chien-Shiung",
-    "C": "physicist Chien-Shiung",
-    "D": "physicist—Chien-Shiung"
+    "C": "physicist—Chien-Shiung",
+    "D": "physicist Chien-Shiung"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The name \"Chien-Shiung Wu\" tells which Chinese American physicist led the team; \"the Chinese American physicist\" alone would not identify her. Because the name is essential to the meaning, it is not set off from \"physicist\" with any punctuation.",
     "A": "Incorrect. A comma would treat the name as removable extra information, but the name is needed to identify the physicist, and no closing comma follows it.",
     "B": "Incorrect. A colon must follow a complete independent clause, and \"Within months, a team led by the Chinese American physicist\" is not one.",
-    "C": "Correct. No punctuation is used because the name is essential: it identifies which physicist led the team.",
-    "D": "Incorrect. A dash would open an interruption that is never closed, and the name is essential information that shouldn't be set off."
+    "C": "Incorrect. A dash would open an interruption that is never closed, and the name is essential information that shouldn't be set off.",
+    "D": "Correct. No punctuation is used because the name is essential: it identifies which physicist led the team."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "supplements",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

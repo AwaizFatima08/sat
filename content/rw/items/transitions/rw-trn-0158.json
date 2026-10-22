@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Specifically,",
-    "B": "In contrast,",
-    "C": "As a result,",
-    "D": "Likewise,"
+    "A": "Likewise,",
+    "B": "As a result,",
+    "C": "Specifically,",
+    "D": "In contrast,"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The text explains that tempera's fast drying made blending hard, then says oil paint \"dries far more slowly.\" The last sentence gives the effect of that slow drying: painters could blend and rework their colors. A cause-and-effect transition is needed.",
-    "A": "Incorrect. \"Specifically\" would introduce a more exact version of \"dries far more slowly,\" but the last sentence describes what slow drying allowed painters to do, not how slowly oil dries.",
-    "B": "Incorrect. \"In contrast\" is tempting because the text compares oil with tempera, but that contrast was already made in the previous sentence; the last sentence follows from oil's slow drying rather than contrasting with it.",
-    "C": "Correct. \"As a result\" shows that blending and reworking became possible because oil paint dries slowly.",
-    "D": "Incorrect. \"Likewise\" would introduce a point similar to the previous one, but the last sentence is a consequence of it."
+    "A": "Incorrect. \"Likewise\" would introduce a point similar to the previous one, but the last sentence is a consequence of it.",
+    "B": "Correct. \"As a result\" shows that blending and reworking became possible because oil paint dries slowly.",
+    "C": "Incorrect. \"Specifically\" would introduce a more exact version of \"dries far more slowly,\" but the last sentence describes what slow drying allowed painters to do, not how slowly oil dries.",
+    "D": "Incorrect. \"In contrast\" is tempting because the text compares oil with tempera, but that contrast was already made in the previous sentence; the last sentence follows from oil's slow drying rather than contrasting with it."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

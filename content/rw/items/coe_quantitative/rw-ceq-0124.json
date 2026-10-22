@@ -44,23 +44,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Ferraz's conclusion?",
   "choices": {
-    "A": "Guava seeds from droppings sprouted at a higher rate, 81%, than seeds of any other species did.",
-    "B": "For all four species, seeds from droppings sprouted at a higher rate than seeds taken from fruit.",
-    "C": "Seeds passed by birds were carried farther from the parent tree than seeds that fell in fruit.",
-    "D": "Guava seeds sprouted far more often after passing through a bird, but pitanga seeds did not."
+    "A": "For all four species, seeds from droppings sprouted at a higher rate than seeds taken from fruit.",
+    "B": "Guava seeds sprouted far more often after passing through a bird, but pitanga seeds did not.",
+    "C": "Guava seeds from droppings sprouted at a higher rate, 81%, than seeds of any other species did.",
+    "D": "Seeds passed by birds were carried farther from the parent tree than seeds that fell in fruit."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Ferraz's conclusion has two sides: gut passage helped some species and not others. Support must show one species that benefited and one that did not. Guava seeds sprouted at 81% from droppings versus 39% from fruit, while pitanga seeds sprouted at 55% versus 57%.",
-    "A": "Incorrect. This is true, but it compares species with one another and shows only that guava did well, not that the effect differed among species.",
-    "B": "Incorrect. This misreads the table: pitanga and embaúba seeds sprouted slightly less often from droppings than from fruit.",
-    "C": "Incorrect. The table shows sprouting rates, not how far seeds were carried.",
-    "D": "Correct. Gut passage roughly doubled guava's sprouting rate but did not raise pitanga's, so the effect depended on the species."
+    "A": "Incorrect. This misreads the table: pitanga and embaúba seeds sprouted slightly less often from droppings than from fruit.",
+    "B": "Correct. Gut passage roughly doubled guava's sprouting rate but did not raise pitanga's, so the effect depended on the species.",
+    "C": "Incorrect. This is true, but it compares species with one another and shows only that guava did well, not that the effect differed among species.",
+    "D": "Incorrect. The table shows sprouting rates, not how far seeds were carried."
   },
   "traps": {
-    "A": "too_narrow",
-    "B": "reversed",
-    "C": "not_in_text"
+    "A": "reversed",
+    "C": "too_narrow",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

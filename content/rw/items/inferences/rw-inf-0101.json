@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "reach the water faster than hatchlings on natural beaches.",
+    "A": "stay in their nests until the lights are turned off.",
     "B": "crawl away from the ocean instead of toward it.",
-    "C": "stay in their nests until the lights are turned off.",
+    "C": "reach the water faster than hatchlings on natural beaches.",
     "D": "use the sound of the waves to find the water."
   },
   "answer": "B",
   "explanation": {
     "why": "The text says hatchlings crawl toward the brightest direction. On a lit beach, the brightest light comes from the land, not the sea, so the hatchlings will be drawn toward the land, away from the water.",
-    "A": "Incorrect. Lights on land pull hatchlings in the wrong direction, so they would reach the water more slowly, not faster.",
+    "A": "Incorrect. The text never says hatchlings wait in their nests; it describes them crawling toward light.",
     "B": "Correct. Hatchlings move toward the brightest light, and on lit beaches that light is on land, away from the ocean.",
-    "C": "Incorrect. The text never says hatchlings wait in their nests; it describes them crawling toward light.",
+    "C": "Incorrect. Lights on land pull hatchlings in the wrong direction, so they would reach the water more slowly, not faster.",
     "D": "Incorrect. The text discusses only light as a guide; sound is never mentioned."
   },
   "traps": {
-    "A": "reversed",
-    "C": "not_in_text",
+    "A": "not_in_text",
+    "C": "reversed",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

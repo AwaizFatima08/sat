@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "will eventually match the dates on which the words were first spoken.",
-    "B": "will tend to move later as more documents come to light.",
-    "C": "will be accurate for words found in newspapers but not for those in letters.",
-    "D": "will tend to move earlier or else remain unchanged."
+    "A": "will tend to move earlier or else remain unchanged.",
+    "B": "will be accurate for words found in newspapers but not for those in letters.",
+    "C": "will eventually match the dates on which the words were first spoken.",
+    "D": "will tend to move later as more documents come to light."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Moyo makes two points. A newly found document can push a word's first recorded date earlier, but it cannot push it later, since the older text already found still exists. Searching more archives can therefore only move dates earlier or leave them where they are.",
-    "A": "Incorrect. Since words are in use before anyone writes them down, written records may never reach the date a word was first spoken.",
-    "B": "Incorrect. This reverses Moyo's point that a new document can never show a word appeared later than a text already found.",
-    "C": "Incorrect. The text does not compare the accuracy of dates from newspapers with dates from letters.",
-    "D": "Correct. New documents can only reveal earlier uses, never later ones, so recorded dates can only move earlier or stay the same."
+    "A": "Correct. New documents can only reveal earlier uses, never later ones, so recorded dates can only move earlier or stay the same.",
+    "B": "Incorrect. The text does not compare the accuracy of dates from newspapers with dates from letters.",
+    "C": "Incorrect. Since words are in use before anyone writes them down, written records may never reach the date a word was first spoken.",
+    "D": "Incorrect. This reverses Moyo's point that a new document can never show a word appeared later than a text already found."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "reversed",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "C": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

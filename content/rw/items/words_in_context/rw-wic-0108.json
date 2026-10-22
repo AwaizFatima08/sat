@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "compete",
-    "B": "interfere",
-    "C": "trade",
-    "D": "blend"
+    "A": "blend",
+    "B": "trade",
+    "C": "interfere",
+    "D": "compete"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Wright built over the falls, used \"local sandstone,\" and even let a natural boulder rise through the floor. These choices tie the house to its natural setting, so the blank needs a word meaning \"fit in smoothly.\" \"Blend\" fits.",
-    "A": "Incorrect. Using the site's own stone and boulder makes the house part of its setting; it does not set the house against the forest.",
-    "B": "Incorrect. Wright's choices are meant to join the house to the landscape, the opposite of disturbing or interfering with it.",
-    "C": "Incorrect. A house cannot trade with a forest, and nothing in the text is about exchanging anything.",
-    "D": "Correct. Local stone and a natural boulder inside the house help it blend with, or fit naturally into, \"the forest and rock around it.\""
+    "A": "Correct. Local stone and a natural boulder inside the house help it blend with, or fit naturally into, \"the forest and rock around it.\"",
+    "B": "Incorrect. A house cannot trade with a forest, and nothing in the text is about exchanging anything.",
+    "C": "Incorrect. Wright's choices are meant to join the house to the landscape, the opposite of disturbing or interfering with it.",
+    "D": "Incorrect. Using the site's own stone and boulder makes the house part of its setting; it does not set the house against the forest."
   },
   "traps": {
-    "A": "reversed",
-    "B": "reversed",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

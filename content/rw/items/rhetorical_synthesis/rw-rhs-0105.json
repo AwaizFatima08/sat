@@ -20,22 +20,22 @@
   "stem": "The student wants to emphasize the size of the Badshahi Mosque. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
     "A": "The Badshahi Mosque and its courtyard can hold about 100,000 worshippers.",
-    "B": "The Badshahi Mosque was built in 1671–1673 under the Mughal emperor Aurangzeb.",
+    "B": "The Badshahi Mosque stands across from the Lahore Fort, in the city of Lahore, Pakistan.",
     "C": "Made of red sandstone, the Badshahi Mosque is decorated with white marble.",
-    "D": "The Badshahi Mosque stands across from the Lahore Fort, in the city of Lahore, Pakistan."
+    "D": "The Badshahi Mosque was built in 1671–1673 under the Mughal emperor Aurangzeb."
   },
   "answer": "A",
   "explanation": {
     "why": "Only one note tells the reader how big the mosque is: it and its courtyard can hold about 100,000 worshippers. A choice that emphasizes size must use that fact.",
     "A": "Correct. The number of worshippers the mosque can hold shows how large it is.",
-    "B": "Incorrect. This gives the dates and the emperor, which tell when and under whom the mosque was built, not how big it is.",
+    "B": "Incorrect. This tells where the mosque stands but gives no sense of how large it is.",
     "C": "Incorrect. This describes the building materials, not the size.",
-    "D": "Incorrect. This tells where the mosque stands but gives no sense of how large it is."
+    "D": "Incorrect. This gives the dates and the emperor, which tell when and under whom the mosque was built, not how big it is."
   },
   "traps": {
-    "B": "true_irrelevant",
+    "B": "misses_goal",
     "C": "misses_goal",
-    "D": "misses_goal"
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

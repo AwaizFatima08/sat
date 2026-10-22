@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the historians' conclusion in Text 1?",
   "choices": {
-    "A": "By agreeing that silent reading was rare but disputing that Augustine was surprised by it",
-    "B": "By arguing that Ambrose read silently to rest his voice, as Augustine's account proves",
+    "A": "By arguing that Ambrose read silently to rest his voice, as Augustine's account proves",
+    "B": "By claiming that most ancient readers preferred reading silently to reading aloud",
     "C": "By suggesting that the passage shows surprise at Ambrose's choice, not at a rare skill",
-    "D": "By claiming that most ancient readers preferred reading silently to reading aloud"
+    "D": "By agreeing that silent reading was rare but disputing that Augustine was surprised by it"
   },
   "answer": "C",
   "explanation": {
     "why": "The historians reason that Augustine's surprise shows silent reading was \"a rare skill.\" Text 2 argues that what struck Augustine \"may have been less the practice itself than Ambrose's choosing it\" in a setting where listeners expected to hear the text, and it adds earlier evidence of silent reading. Text 2 thus reinterprets the surprise rather than accepting it as evidence of rarity.",
-    "A": "Incorrect. Text 2 does not deny Augustine's surprise, and it does not agree that silent reading was rare; it questions exactly that conclusion.",
-    "B": "Incorrect. Text 2 says Augustine was \"guessing\" at Ambrose's reasons, so it would not say his account proves them.",
+    "A": "Incorrect. Text 2 says Augustine was \"guessing\" at Ambrose's reasons, so it would not say his account proves them.",
+    "B": "Incorrect. Text 2 shows only that silent reading was not unknown; it never claims most readers preferred it.",
     "C": "Correct. Text 2 suggests that Augustine was struck by Ambrose's decision to read silently in that setting, not by a skill few people had.",
-    "D": "Incorrect. Text 2 shows only that silent reading was not unknown; it never claims most readers preferred it."
+    "D": "Incorrect. Text 2 does not deny Augustine's surprise, and it does not agree that silent reading was rare; it questions exactly that conclusion."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "too_broad"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

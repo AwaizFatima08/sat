@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "meters, as a result, the",
-    "B": "meters; as a result, the",
-    "C": "meters as a result, the",
-    "D": "meters, as a result the"
+    "A": "meters; as a result, the",
+    "B": "meters, as a result, the",
+    "C": "meters, as a result the",
+    "D": "meters as a result, the"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "\"The channel ran ... only about twelve meters\" and \"the engineers ... had to keep its slope remarkably even\" are both independent clauses. \"As a result\" is a transitional phrase, not a conjunction, so it can't join the clauses by itself; a semicolon must come before it, and a comma follows it.",
-    "A": "Incorrect. Commas around \"as a result\" can't join two independent clauses; this is a comma splice.",
-    "B": "Correct. The semicolon joins the two independent clauses, and the comma after \"as a result\" sets off the transitional phrase that begins the second clause.",
-    "C": "Incorrect. With no punctuation before \"as a result,\" the phrase seems to belong to the first clause, and the comma after it then joins two independent clauses on its own, which is a comma splice.",
-    "D": "Incorrect. A comma alone before \"as a result\" can't join two independent clauses; this is a comma splice."
+    "A": "Correct. The semicolon joins the two independent clauses, and the comma after \"as a result\" sets off the transitional phrase that begins the second clause.",
+    "B": "Incorrect. Commas around \"as a result\" can't join two independent clauses; this is a comma splice.",
+    "C": "Incorrect. A comma alone before \"as a result\" can't join two independent clauses; this is a comma splice.",
+    "D": "Incorrect. With no punctuation before \"as a result,\" the phrase seems to belong to the first clause, and the comma after it then joins two independent clauses on its own, which is a comma splice."
   },
   "traps": {
-    "A": "grammar_rule",
+    "B": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

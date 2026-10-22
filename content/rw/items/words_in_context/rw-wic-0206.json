@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "rigid",
-    "B": "arbitrary",
-    "C": "ancient",
-    "D": "porous"
+    "A": "arbitrary",
+    "B": "ancient",
+    "C": "porous",
+    "D": "rigid"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The text says the discoveries \"have not erased the distinction\" but have changed how the boundary looks compared with a strict \"dichotomy.\" Features once thought to belong only to cells turned up in a virus, so the boundary now seems to let some traits cross it. \"Porous\" means allowing things to pass through, without implying that the boundary is gone.",
-    "A": "Incorrect. The discoveries made the boundary seem less strict than the \"textbook dichotomy,\" not more.",
-    "B": "Incorrect. An arbitrary boundary would be meaningless, but the text says the distinction has not been erased, because Mimivirus still depends on a host cell.",
-    "C": "Incorrect. The text says nothing about the age of the boundary between viruses and cells.",
-    "D": "Correct. A porous boundary still exists but lets some things cross it, just as cell-like traits appear in a virus that still \"cannot reproduce outside a host cell.\""
+    "A": "Incorrect. An arbitrary boundary would be meaningless, but the text says the distinction has not been erased, because Mimivirus still depends on a host cell.",
+    "B": "Incorrect. The text says nothing about the age of the boundary between viruses and cells.",
+    "C": "Correct. A porous boundary still exists but lets some things cross it, just as cell-like traits appear in a virus that still \"cannot reproduce outside a host cell.\"",
+    "D": "Incorrect. The discoveries made the boundary seem less strict than the \"textbook dichotomy,\" not more."
   },
   "traps": {
-    "A": "reversed",
-    "B": "too_broad",
-    "C": "not_in_text"
+    "A": "too_broad",
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

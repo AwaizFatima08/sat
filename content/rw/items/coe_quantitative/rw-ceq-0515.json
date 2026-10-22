@@ -44,23 +44,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "2020, when the fewest tapes needed repair.",
-    "B": "2021, when 210 recordings were copied.",
-    "C": "2022, when 210 recordings were copied.",
-    "D": "2019, when 140 recordings were copied."
+    "A": "2022, when 210 recordings were copied.",
+    "B": "2020, when the fewest tapes needed repair.",
+    "C": "2019, when 140 recordings were copied.",
+    "D": "2021, when 210 recordings were copied."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The statement asks when the archive copied the most recordings, so look for the largest number in the \"Recordings copied\" column. That number is 210, in the 2021 row.",
-    "A": "Incorrect. It is true that 2020 had the fewest repairs, but it also had the fewest recordings copied, so it does not complete the statement.",
-    "B": "Correct. 210 is the largest number in the \"Recordings copied\" column.",
-    "C": "Incorrect. The archive copied 185 recordings in 2022; the 210 belongs to 2021, so this misreads the table.",
-    "D": "Incorrect. 140 is less than the totals for 2021 and 2022, so 2019 was not the busiest year."
+    "A": "Incorrect. The archive copied 185 recordings in 2022; the 210 belongs to 2021, so this misreads the table.",
+    "B": "Incorrect. It is true that 2020 had the fewest repairs, but it also had the fewest recordings copied, so it does not complete the statement.",
+    "C": "Incorrect. 140 is less than the totals for 2021 and 2022, so 2019 was not the busiest year.",
+    "D": "Correct. 210 is the largest number in the \"Recordings copied\" column."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "reversed",
-    "D": "reversed"
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -73,13 +73,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

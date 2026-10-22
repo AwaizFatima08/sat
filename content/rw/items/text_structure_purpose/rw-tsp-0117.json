@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It notes a parallel that supports the view that the bees' behavior is play.",
-    "B": "It explains why the bees received no food for rolling the balls.",
-    "C": "It suggests that older bees are better at finding food than younger bees.",
-    "D": "It raises a difficulty that weakens Kowalczyk's conclusion about insect play."
+    "A": "It explains why the bees received no food for rolling the balls.",
+    "B": "It suggests that older bees are better at finding food than younger bees.",
+    "C": "It raises a difficulty that weakens Kowalczyk's conclusion about insect play.",
+    "D": "It notes a parallel that supports the view that the bees' behavior is play."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Kowalczyk is testing whether insects \"might play too.\" The underlined sentence notes that, as in mammals, young bees roll balls more than older ones. That similarity to a known pattern of play in mammals adds support to the idea that the ball rolling is play, which leads to her conclusion in the last sentence.",
-    "A": "Correct. The age pattern matches play in mammals, so it supports reading the bees' ball rolling as play.",
-    "B": "Incorrect. The sentence compares younger and older bees; it says nothing about why rolling earned no food.",
-    "C": "Incorrect. The sentence is about how often bees rolled balls, not how well they found food, so this goes beyond the text.",
-    "D": "Incorrect. The sentence supports Kowalczyk's conclusion rather than raising a problem for it."
+    "A": "Incorrect. The sentence compares younger and older bees; it says nothing about why rolling earned no food.",
+    "B": "Incorrect. The sentence is about how often bees rolled balls, not how well they found food, so this goes beyond the text.",
+    "C": "Incorrect. The sentence supports Kowalczyk's conclusion rather than raising a problem for it.",
+    "D": "Correct. The age pattern matches play in mammals, so it supports reading the bees' ball rolling as play."
   },
   "traps": {
-    "B": "not_in_text",
-    "C": "too_broad",
-    "D": "reversed"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

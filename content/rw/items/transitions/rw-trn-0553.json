@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Specifically,",
+    "A": "Nevertheless,",
     "B": "For example,",
-    "C": "Nevertheless,",
-    "D": "Accordingly,"
+    "C": "Accordingly,",
+    "D": "Specifically,"
   },
   "answer": "B",
   "explanation": {
     "why": "The second sentence says researchers have found \"a number of cases\" of molecular convergence. The last sentence describes one such case: matching changes in prestin in bats and toothed whales. The transition must introduce one instance of a general claim about several cases.",
-    "A": "Incorrect. \"Specifically\" would present the bat and whale case as a more precise statement of the whole claim, but the claim covers \"a number of cases,\" and this is only one of them. This is the most attractive near miss.",
+    "A": "Incorrect. \"Nevertheless\" signals a contrast, but the prestin case supports the claim about molecular convergence.",
     "B": "Correct. \"For example\" signals that the prestin case is one of the \"number of cases\" just mentioned.",
-    "C": "Incorrect. \"Nevertheless\" signals a contrast, but the prestin case supports the claim about molecular convergence.",
-    "D": "Incorrect. The shared prestin changes are not a result of researchers comparing sequences; the comparison revealed them."
+    "C": "Incorrect. The shared prestin changes are not a result of researchers comparing sequences; the comparison revealed them.",
+    "D": "Incorrect. \"Specifically\" would present the bat and whale case as a more precise statement of the whole claim, but the claim covers \"a number of cases,\" and this is only one of them. This is the most attractive near miss."
   },
   "traps": {
     "A": "wrong_logic",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

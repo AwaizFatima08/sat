@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "the raft Kon-Tiki carried Heyerdahl and five crew members west from Peru across the Pacific.",
-    "B": "Heyerdahl and five crew members sailed west from Peru across the Pacific on the raft Kon-Tiki.",
-    "C": "Heyerdahl's voyage west from Peru across the Pacific took place on the raft Kon-Tiki.",
-    "D": "west from Peru across the Pacific sailed Heyerdahl and five crew members on the raft Kon-Tiki."
+    "A": "Heyerdahl's voyage west from Peru across the Pacific took place on the raft Kon-Tiki.",
+    "B": "west from Peru across the Pacific sailed Heyerdahl and five crew members on the raft Kon-Tiki.",
+    "C": "the raft Kon-Tiki carried Heyerdahl and five crew members west from Peru across the Pacific.",
+    "D": "Heyerdahl and five crew members sailed west from Peru across the Pacific on the raft Kon-Tiki."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The introductory phrase \"Built from nine balsa logs lashed together with hemp rope\" describes the raft. A modifier at the start of a sentence applies to the subject that comes right after the comma, so that subject must be the raft itself.",
-    "A": "Correct. \"The raft Kon-Tiki\" comes right after the introductory phrase, so it is clear that the raft was built from balsa logs.",
-    "B": "Incorrect. This makes \"Heyerdahl and five crew members\" the subject, so the sentence says the men were built from balsa logs.",
-    "C": "Incorrect. The subject is \"voyage,\" but a voyage cannot be built from logs and rope.",
-    "D": "Incorrect. The words right after the comma are \"west from Peru,\" and the subject that follows is \"Heyerdahl and five crew members,\" not the raft, so the modifier is left without the noun it describes."
+    "A": "Incorrect. The subject is \"voyage,\" but a voyage cannot be built from logs and rope.",
+    "B": "Incorrect. The words right after the comma are \"west from Peru,\" and the subject that follows is \"Heyerdahl and five crew members,\" not the raft, so the modifier is left without the noun it describes.",
+    "C": "Correct. \"The raft Kon-Tiki\" comes right after the introductory phrase, so it is clear that the raft was built from balsa logs.",
+    "D": "Incorrect. This makes \"Heyerdahl and five crew members\" the subject, so the sentence says the men were built from balsa logs."
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "modifier",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

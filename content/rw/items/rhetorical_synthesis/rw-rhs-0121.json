@@ -21,21 +21,21 @@
   "choices": {
     "A": "Mwangi's team printed unit prices in large, bold type in 12 stores and kept the usual small labels in 12 others.",
     "B": "Mwangi wanted to know whether making unit prices, such as the cost per 100 grams, easier to read would change what shoppers buy.",
-    "C": "In stores with large unit-price labels, shoppers chose the product with the lowest unit price about 18 percent more often.",
-    "D": "Many supermarkets show a unit price, such as the cost per 100 grams, beside each product's total price."
+    "C": "Many supermarkets show a unit price, such as the cost per 100 grams, beside each product's total price.",
+    "D": "In stores with large unit-price labels, shoppers chose the product with the lowest unit price about 18 percent more often."
   },
   "answer": "A",
   "explanation": {
     "why": "A method is what the researchers did to answer their question. The third note describes it: large, bold labels in 12 stores and ordinary small labels in 12 others. Only one choice describes this setup.",
     "A": "Correct. It describes what the team did: one group of stores got large, bold labels and another kept the usual labels.",
     "B": "Incorrect. This is the study's aim, the question Mwangi wanted to answer, not the method used to answer it.",
-    "C": "Incorrect. This is the study's result, not its method.",
-    "D": "Incorrect. This is background about unit prices in general, not anything Mwangi's team did."
+    "C": "Incorrect. This is background about unit prices in general, not anything Mwangi's team did.",
+    "D": "Incorrect. This is the study's result, not its method."
   },
   "traps": {
     "B": "misses_goal",
-    "C": "misses_goal",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant",
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

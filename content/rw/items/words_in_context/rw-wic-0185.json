@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "precipitated",
-    "B": "impeded",
+    "A": "impeded",
+    "B": "paralleled",
     "C": "foreshadowed",
-    "D": "paralleled"
+    "D": "precipitated"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The collapse of coffee led planters to turn to tea, which then became the leading export. The disaster caused the change, so it brought about, or \"precipitated,\" tea's rise.",
-    "A": "Correct. To precipitate is to cause something to happen, often suddenly. The coffee disaster pushed planters toward tea.",
-    "B": "Incorrect. Tea rose because of the coffee collapse, so the catastrophe did not hold it back.",
+    "A": "Incorrect. Tea rose because of the coffee collapse, so the catastrophe did not hold it back.",
+    "B": "Incorrect. To parallel is to happen alongside in a similar way. The text describes one event leading to another, not two similar events side by side.",
     "C": "Incorrect. To foreshadow is to hint at something to come. The coffee disaster did more than signal tea's rise; it caused planters to switch.",
-    "D": "Incorrect. To parallel is to happen alongside in a similar way. The text describes one event leading to another, not two similar events side by side."
+    "D": "Correct. To precipitate is to cause something to happen, often suddenly. The coffee disaster pushed planters toward tea."
   },
   "traps": {
-    "B": "reversed",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "A": "reversed",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

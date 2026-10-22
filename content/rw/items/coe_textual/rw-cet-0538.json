@@ -15,22 +15,22 @@
   "stem": "Which finding, if true, would most directly weaken Fernando's argument?",
   "choices": {
     "A": "Spotted deer and other prey in Yala do most of their feeding at night rather than by day.",
-    "B": "Yala's leopards often rest on rocks or in trees during the hottest part of the afternoon.",
-    "C": "Leopards sharing an Indian forest with many tigers are as active by day as Yala's leopards.",
-    "D": "Leopards are the largest wild cats living anywhere on the island of Sri Lanka."
+    "B": "Leopards are the largest wild cats living anywhere on the island of Sri Lanka.",
+    "C": "Yala's leopards often rest on rocks or in trees during the hottest part of the afternoon.",
+    "D": "Leopards sharing an Indian forest with many tigers are as active by day as Yala's leopards."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Fernando links daytime activity to the lack of larger rivals. If leopards that do live alongside many tigers are just as active by day, the presence or absence of stronger rivals does not seem to control when leopards are active.",
     "A": "Incorrect. If prey feed mostly at night, the rival explanation (following prey) fails, which makes Fernando's explanation more likely.",
-    "B": "Incorrect. Resting during the hottest hours does not bear on whether rivals or prey explain daytime activity.",
-    "C": "Correct. Daytime activity persists where strong rivals are common, so their absence cannot be what causes it.",
-    "D": "Incorrect. This only restates the condition Fernando relies on; it does not test whether that condition explains the behavior."
+    "B": "Incorrect. This only restates the condition Fernando relies on; it does not test whether that condition explains the behavior.",
+    "C": "Incorrect. Resting during the hottest hours does not bear on whether rivals or prey explain daytime activity.",
+    "D": "Correct. Daytime activity persists where strong rivals are common, so their absence cannot be what causes it."
   },
   "traps": {
     "A": "reversed",
     "B": "true_irrelevant",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

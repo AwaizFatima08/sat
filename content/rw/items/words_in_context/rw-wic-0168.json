@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "enchanted",
-    "B": "reassured",
-    "C": "bewildered",
-    "D": "scandalized"
+    "A": "reassured",
+    "B": "enchanted",
+    "C": "scandalized",
+    "D": "bewildered"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The visitors \"gave up within minutes\" and \"despaired,\" while the old man found books \"without hesitation.\" The sentence contrasts the visitors' reaction with the fact that the disorder was \"perfectly legible\" to him, so the blank must mean confused them: \"bewildered.\"",
-    "A": "Incorrect. A charming jumble might enchant some people, but these visitors \"despaired\" and \"gave up,\" which shows frustration, not delight.",
-    "B": "Incorrect. The towers of books left visitors despairing, not comforted.",
-    "C": "Correct. The visitors could not make sense of the stacks and gave up, while Mr. Qureshi read the disorder easily.",
-    "D": "Incorrect. To scandalize is to shock someone's sense of what is proper. The visitors' problem is that they cannot find anything, not that they are morally offended."
+    "A": "Incorrect. The towers of books left visitors despairing, not comforted.",
+    "B": "Incorrect. A charming jumble might enchant some people, but these visitors \"despaired\" and \"gave up,\" which shows frustration, not delight.",
+    "C": "Incorrect. To scandalize is to shock someone's sense of what is proper. The visitors' problem is that they cannot find anything, not that they are morally offended.",
+    "D": "Correct. The visitors could not make sense of the stacks and gave up, while Mr. Qureshi read the disorder easily."
   },
   "traps": {
-    "A": "wrong_tone",
-    "B": "reversed",
-    "D": "wrong_tone"
+    "A": "reversed",
+    "B": "wrong_tone",
+    "C": "wrong_tone"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

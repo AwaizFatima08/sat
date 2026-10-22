@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the organizers' claim in Text 1?",
   "choices": {
-    "A": "By agreeing that ancient athletes competed only for the honor of winning",
+    "A": "By pointing out that ancient winners in fact received valuable rewards",
     "B": "By arguing that the modern Olympics should stop awarding prizes",
-    "C": "By pointing out that ancient winners in fact received valuable rewards",
+    "C": "By agreeing that ancient athletes competed only for the honor of winning",
     "D": "By claiming that olive crowns were never given to winners at Olympia"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Text 1 reports the organizers' claim that ancient athletes received \"nothing but a crown of olive leaves.\" Text 2 grants that the olive crown was the official prize but says winners received \"cash, statues, and free meals for life\" at home and valuable prizes elsewhere. So Text 2 would reject the image of the purely amateur Greek athlete.",
-    "A": "Incorrect. Text 2 lists cash, statues, meals, and olive oil as rewards, so athletes did not compete for honor alone.",
+    "A": "Correct. Text 2 shows that victors received money and other valuable rewards from their cities and at other festivals.",
     "B": "Incorrect. Text 2 discusses ancient rewards and never recommends any change to the modern Games.",
-    "C": "Correct. Text 2 shows that victors received money and other valuable rewards from their cities and at other festivals.",
+    "C": "Incorrect. Text 2 lists cash, statues, meals, and olive oil as rewards, so athletes did not compete for honor alone.",
     "D": "Incorrect. Text 2 says, \"It is true that the official prize at Olympia was an olive crown.\""
   },
   "traps": {
-    "A": "reversed",
     "B": "not_in_text",
+    "C": "reversed",
     "D": "too_broad"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

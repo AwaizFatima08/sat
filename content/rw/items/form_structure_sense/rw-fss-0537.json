@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "his",
-    "B": "its",
-    "C": "their",
+    "A": "its",
+    "B": "their",
+    "C": "his",
     "D": "they're"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The pronoun refers to the birds whose repertoire is learned: \"Young males,\" a plural noun. A plural antecedent needs the plural possessive pronoun \"their.\" The singular \"his\" is tempting because the earlier sentence describes one adult male, but that male is not the one doing the learning.",
-    "A": "Incorrect. \"His\" is singular and seems to refer to the adult male described earlier, but the learners are the plural \"young males.\"",
-    "B": "Incorrect. \"Its\" is singular, so it can't refer to the plural antecedent \"young males.\"",
-    "C": "Correct. The plural possessive \"their\" agrees with the plural antecedent \"young males.\"",
+    "A": "Incorrect. \"Its\" is singular, so it can't refer to the plural antecedent \"young males.\"",
+    "B": "Correct. The plural possessive \"their\" agrees with the plural antecedent \"young males.\"",
+    "C": "Incorrect. \"His\" is singular and seems to refer to the adult male described earlier, but the learners are the plural \"young males.\"",
     "D": "Incorrect. \"They're\" is a contraction of \"they are,\" not a possessive pronoun; \"much of they are repertoire\" makes no sense."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "pronoun",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

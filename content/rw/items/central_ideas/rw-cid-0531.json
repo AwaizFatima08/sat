@@ -15,21 +15,21 @@
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
     "A": "Drought is the main cause of the destructive locust swarms that strip farmland across Africa and Asia.",
-    "B": "Swarming locusts appear to be ordinary desert locusts that have changed in response to crowding.",
-    "C": "Serotonin causes crowded locusts to change their color and body shape within just a few hours.",
+    "B": "Serotonin causes crowded locusts to change their color and body shape within just a few hours.",
+    "C": "Swarming locusts appear to be ordinary desert locusts that have changed in response to crowding.",
     "D": "Solitary desert locusts are usually green and tend to avoid contact with other locusts."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The text describes how crowding, through repeated contact, switches solitary locusts into a different state, and its last sentence states the conclusion: swarms are \"not a separate kind of locust but the same insects responding to the crowded conditions.\" The main idea must capture that link between crowding and swarming, not just one step in the process.",
     "A": "Incorrect. The text says drought crowds locusts together, but it presents contact with other locusts, not drought itself, as the trigger, and it never ranks drought as the main cause of swarms.",
-    "B": "Correct. This matches the text's conclusion that swarms are made up of the same insects transformed by crowded conditions.",
-    "C": "Incorrect. The text links serotonin only to the \"initial change in behavior\"; changes in color and body proportions come \"over later generations,\" not within hours.",
+    "B": "Incorrect. The text links serotonin only to the \"initial change in behavior\"; changes in color and body proportions come \"over later generations,\" not within hours.",
+    "C": "Correct. This matches the text's conclusion that swarms are made up of the same insects transformed by crowded conditions.",
     "D": "Incorrect. This describes only the solitary phase in the first sentence and leaves out the transformation that the text is about."
   },
   "traps": {
     "A": "too_broad",
-    "C": "not_in_text",
+    "B": "not_in_text",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

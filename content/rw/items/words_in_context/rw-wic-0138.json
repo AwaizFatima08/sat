@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "complete",
+    "A": "abandon",
     "B": "revive",
-    "C": "publish",
-    "D": "abandon"
+    "C": "complete",
+    "D": "publish"
   },
   "answer": "B",
   "explanation": {
     "why": "Marguerite had given up on the novel, but after rereading it she began \"rewriting the opening pages and sketching an outline.\" She is bringing an abandoned project back to life, which is what \"revive\" means.",
-    "A": "Incorrect. She has only just begun working again and is still sketching an outline for chapters \"she had never drafted,\" so the novel is not being completed yet.",
+    "A": "Incorrect. She abandoned the novel ten years earlier; now she is doing the opposite by working on it again.",
     "B": "Correct. To revive something is to bring it back after it has been set aside, which matches Marguerite returning to the novel she had put away a decade earlier.",
-    "C": "Incorrect. The text says nothing about publishing; it describes her starting to rewrite and plan the novel.",
-    "D": "Incorrect. She abandoned the novel ten years earlier; now she is doing the opposite by working on it again."
+    "C": "Incorrect. She has only just begun working again and is still sketching an outline for chapters \"she had never drafted,\" so the novel is not being completed yet.",
+    "D": "Incorrect. The text says nothing about publishing; it describes her starting to rewrite and plan the novel."
   },
   "traps": {
-    "A": "too_broad",
-    "C": "not_in_text",
-    "D": "reversed"
+    "A": "reversed",
+    "C": "too_broad",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

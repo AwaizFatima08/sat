@@ -15,22 +15,22 @@
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the conclusion in Text 1?",
   "choices": {
     "A": "By agreeing that the yard was the most expensive part of the theater",
-    "B": "By arguing that Shakespeare's plays were rarely performed at the Globe",
-    "C": "By claiming that nobles attended the theater more often than workers did",
-    "D": "By noting that wealthier people also attended, so the audience was more varied"
+    "B": "By claiming that nobles attended the theater more often than workers did",
+    "C": "By noting that wealthier people also attended, so the audience was more varied",
+    "D": "By arguing that Shakespeare's plays were rarely performed at the Globe"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Text 1 reports the conclusion that Shakespeare wrote mainly for poor \"groundlings.\" Text 2 points out that the galleries held \"merchants, lawyers, and even nobles,\" so the audience \"mixed people from nearly every level\" of society. Text 2 would answer that the audience was not mainly poor.",
     "A": "Incorrect. Text 2 says gallery seats \"cost more,\" so the yard was not the most expensive part.",
-    "B": "Incorrect. Text 2 assumes plays were performed at the Globe; it never suggests otherwise.",
-    "C": "Incorrect. Text 2 says the audience was mixed; it never says nobles outnumbered workers.",
-    "D": "Correct. Text 2 shows that wealthier people sat in the galleries, so the audience included many groups, not mainly poor workers."
+    "B": "Incorrect. Text 2 says the audience was mixed; it never says nobles outnumbered workers.",
+    "C": "Correct. Text 2 shows that wealthier people sat in the galleries, so the audience included many groups, not mainly poor workers.",
+    "D": "Incorrect. Text 2 assumes plays were performed at the Globe; it never suggests otherwise."
   },
   "traps": {
     "A": "reversed",
-    "B": "not_in_text",
-    "C": "too_broad"
+    "B": "too_broad",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

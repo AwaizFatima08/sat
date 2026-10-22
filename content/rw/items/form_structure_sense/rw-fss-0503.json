@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "giraffes",
-    "B": "giraffes'",
-    "C": "giraffe's",
-    "D": "giraffes's"
+    "A": "giraffe's",
+    "B": "giraffes",
+    "C": "giraffes's",
+    "D": "giraffes'"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The blank must show that the tongue belongs to a giraffe. The article \"A\" and the words \"the animal\" and \"its tongue\" show that one giraffe is meant, so the singular possessive \"giraffe's\" is correct.",
-    "A": "Incorrect. \"Giraffes\" is a plain plural with no apostrophe, so it doesn't show that the tongue belongs to the animal.",
-    "B": "Incorrect. \"Giraffes'\" is a plural possessive, but \"A\" and \"the animal\" show that only one giraffe is meant.",
-    "C": "Correct. \"Giraffe's\" is the singular possessive, showing that the tongue belongs to one giraffe.",
-    "D": "Incorrect. \"Giraffes's\" is not a standard form; a plural ending in s takes only an apostrophe, and here the noun should be singular anyway."
+    "A": "Correct. \"Giraffe's\" is the singular possessive, showing that the tongue belongs to one giraffe.",
+    "B": "Incorrect. \"Giraffes\" is a plain plural with no apostrophe, so it doesn't show that the tongue belongs to the animal.",
+    "C": "Incorrect. \"Giraffes's\" is not a standard form; a plural ending in s takes only an apostrophe, and here the noun should be singular anyway.",
+    "D": "Incorrect. \"Giraffes'\" is a plural possessive, but \"A\" and \"the animal\" show that only one giraffe is meant."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "plural_possessive",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

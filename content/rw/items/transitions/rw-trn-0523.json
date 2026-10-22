@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Nevertheless,",
-    "B": "In other words,",
-    "C": "For instance,",
-    "D": "Consequently,"
+    "A": "In other words,",
+    "B": "For instance,",
+    "C": "Consequently,",
+    "D": "Nevertheless,"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The first sentence claims that some borrowed words changed meaning in English. The rest of the text gives one such word, \"shampoo,\" which once meant a massage and now means a hair-washing soap. A transition that introduces an example is needed.",
-    "A": "Incorrect. The history of \"shampoo\" supports the claim about changing meanings; it does not contrast with it.",
-    "B": "Incorrect. \"In other words\" restates the same idea, but the sentence moves from a general claim to one particular word.",
-    "C": "Correct. \"For instance\" introduces \"shampoo\" as one borrowed word whose meaning changed.",
-    "D": "Incorrect. The general pattern of borrowing did not cause \"shampoo\" to come from Hindi; the word is an instance of that pattern."
+    "A": "Incorrect. \"In other words\" restates the same idea, but the sentence moves from a general claim to one particular word.",
+    "B": "Correct. \"For instance\" introduces \"shampoo\" as one borrowed word whose meaning changed.",
+    "C": "Incorrect. The general pattern of borrowing did not cause \"shampoo\" to come from Hindi; the word is an instance of that pattern.",
+    "D": "Incorrect. The history of \"shampoo\" supports the claim about changing meanings; it does not contrast with it."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

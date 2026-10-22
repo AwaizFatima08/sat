@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "silence,",
-    "B": "silence;",
-    "C": "silence",
-    "D": "silence—"
+    "A": "silence—",
+    "B": "silence",
+    "C": "silence;",
+    "D": "silence,"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The description \"head tilted, eyes half closed, one finger raised for silence\" interrupts the sentence \"he listened … and then announced.\" It opens with a dash after \"listened,\" so it must close with a matching dash, even though the phrases inside it are separated by commas.",
-    "A": "Incorrect. This comma looks like the commas inside the description, but it can't close an interruption that opens with a dash; the two marks must match.",
-    "B": "Incorrect. A semicolon must join two independent clauses, but \"and then announced that the mainspring was nearly worn through\" is not one.",
-    "C": "Incorrect. Without a closing dash, the description is never set off, and \"one finger raised for silence and then announced\" can't be read correctly.",
-    "D": "Correct. The second dash closes the pair around the description, and the sentence continues with \"and then announced.\""
+    "A": "Correct. The second dash closes the pair around the description, and the sentence continues with \"and then announced.\"",
+    "B": "Incorrect. Without a closing dash, the description is never set off, and \"one finger raised for silence and then announced\" can't be read correctly.",
+    "C": "Incorrect. A semicolon must join two independent clauses, but \"and then announced that the mainspring was nearly worn through\" is not one.",
+    "D": "Incorrect. This comma looks like the commas inside the description, but it can't close an interruption that opens with a dash; the two marks must match."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "supplements",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

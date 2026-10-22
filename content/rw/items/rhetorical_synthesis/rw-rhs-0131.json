@@ -21,21 +21,21 @@
   "stem": "The student wants to emphasize a difference in how the two instruments are built. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
     "A": "Unlike the guitar, whose neck has metal frets that mark each note, the oud has a neck with no frets.",
-    "B": "The oud is played across the Middle East and North Africa, while the classical guitar developed largely in Spain.",
-    "C": "The oud's neck has no frets, a feature that allows players to slide smoothly from one note to another.",
-    "D": "Both the oud and the guitar are stringed instruments that are usually played by plucking the strings."
+    "B": "The oud's neck has no frets, a feature that allows players to slide smoothly from one note to another.",
+    "C": "Both the oud and the guitar are stringed instruments that are usually played by plucking the strings.",
+    "D": "The oud is played across the Middle East and North Africa, while the classical guitar developed largely in Spain."
   },
   "answer": "A",
   "explanation": {
     "why": "The goal is a difference in construction, how each instrument is built. The notes give one: the guitar's neck has frets, but the oud's does not. The key must compare the two necks.",
     "A": "Correct. \"Unlike the guitar\" sets up the contrast between a fretted neck and a fretless one, which is a difference in how the instruments are built.",
-    "B": "Incorrect. This is a difference, but it is about where the instruments are played or developed, not how they are built.",
-    "C": "Incorrect. This describes the oud's neck but never mentions the guitar, so no difference is shown. It is the closest near miss.",
-    "D": "Incorrect. This describes what the two instruments have in common, not how they differ."
+    "B": "Incorrect. This describes the oud's neck but never mentions the guitar, so no difference is shown. It is the closest near miss.",
+    "C": "Incorrect. This describes what the two instruments have in common, not how they differ.",
+    "D": "Incorrect. This is a difference, but it is about where the instruments are played or developed, not how they are built."
   },
   "traps": {
-    "B": "misses_goal",
-    "C": "too_narrow",
+    "B": "too_narrow",
+    "C": "misses_goal",
     "D": "misses_goal"
   },
   "grammar": null,
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

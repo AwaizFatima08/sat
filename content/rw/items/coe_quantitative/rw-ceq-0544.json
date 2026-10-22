@@ -55,22 +55,22 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Lindqvist's argument?",
   "choices": {
-    "A": "Pale-shelled snails survived at a higher rate than dark-shelled snails in open dunes, at the dune edge, and in woodland.",
-    "B": "Pale shells' survival advantage was 27 points in open dunes, 11 points at the dune edge, and 2 points in woodland.",
-    "C": "Dark-shelled snails survived at a higher rate in woodland than they did in open dunes.",
+    "A": "Pale shells' survival advantage was 27 points in open dunes, 11 points at the dune edge, and 2 points in woodland.",
+    "B": "Dark-shelled snails survived at a higher rate in woodland than they did in open dunes.",
+    "C": "Pale-shelled snails survived at a higher rate than dark-shelled snails in open dunes, at the dune edge, and in woodland.",
     "D": "In woodland, dark-shelled snails survived at a higher rate than pale-shelled snails did."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Lindqvist's argument is about the size of the pale shells' advantage: large in open dunes, smaller with more shade, and nearly gone in woodland. The advantage is the gap between the two bars in each habitat. The gaps are 68 − 41 = 27 points, 61 − 50 = 11 points, and 57 − 55 = 2 points.",
-    "A": "Incorrect. This is true, but it shows only that pale shells always did better, not that their advantage shrinks as shade increases.",
-    "B": "Correct. It tracks the gap between pale and dark shells across the three habitats and shows it shrinking from 27 points to almost nothing.",
-    "C": "Incorrect. This is true (55% versus 41%), but it describes dark shells alone and does not compare them with pale shells in each habitat.",
+    "A": "Correct. It tracks the gap between pale and dark shells across the three habitats and shows it shrinking from 27 points to almost nothing.",
+    "B": "Incorrect. This is true (55% versus 41%), but it describes dark shells alone and does not compare them with pale shells in each habitat.",
+    "C": "Incorrect. This is true, but it shows only that pale shells always did better, not that their advantage shrinks as shade increases.",
     "D": "Incorrect. In woodland, pale shells survived at 57% and dark shells at 55%, so this reverses the graph."
   },
   "traps": {
-    "A": "too_narrow",
-    "C": "true_irrelevant",
+    "B": "true_irrelevant",
+    "C": "too_narrow",
     "D": "reversed"
   },
   "grammar": null,
@@ -80,8 +80,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

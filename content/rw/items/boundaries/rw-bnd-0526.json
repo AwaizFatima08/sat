@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "strings; runs",
-    "B": "strings, runs",
-    "C": "strings runs",
+    "A": "strings, runs",
+    "B": "strings runs",
+    "C": "strings; runs",
     "D": "strings—runs"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The subject \"A second set of thinner wires\" goes with the verb \"runs.\" In between, \"known as sympathetic strings\" is extra information. It opens with a comma after \"wires,\" so it must close with a comma before \"runs.\"",
-    "A": "Incorrect. A semicolon would cut the subject off from its verb \"runs,\" and neither side would be a complete sentence.",
-    "B": "Correct. The closing comma matches the comma after \"wires,\" so the subject connects to \"runs.\"",
-    "C": "Incorrect. Without a closing comma, the extra information is never set off, and \"strings runs\" seems to pair a plural noun with a singular verb.",
+    "A": "Correct. The closing comma matches the comma after \"wires,\" so the subject connects to \"runs.\"",
+    "B": "Incorrect. Without a closing comma, the extra information is never set off, and \"strings runs\" seems to pair a plural noun with a singular verb.",
+    "C": "Incorrect. A semicolon would cut the subject off from its verb \"runs,\" and neither side would be a complete sentence.",
     "D": "Incorrect. Extra information that opens with a comma can't close with a dash; the two marks must match."
   },
   "traps": {
-    "A": "grammar_rule",
+    "B": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

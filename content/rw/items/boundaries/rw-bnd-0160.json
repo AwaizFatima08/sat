@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "us,\" the",
-    "B": "us?,\" the",
-    "C": "us\"? the",
-    "D": "us?\" the"
+    "A": "us\"? the",
+    "B": "us?\" the",
+    "C": "us?,\" the",
+    "D": "us,\" the"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The boy's words, \"Do you think the bus forgot about us,\" are a direct question, so they end with a question mark placed inside the closing quotation mark. When a quoted question is followed by a tag such as \"the boy asked,\" no comma is added after the question mark.",
-    "A": "Incorrect. The boy's words are a question, so they must end with a question mark, not a comma.",
-    "B": "Incorrect. A question mark already ends the quotation, so a comma after it is not used.",
-    "C": "Incorrect. The question belongs to the boy's words, so the question mark must go inside the closing quotation mark.",
-    "D": "Correct. The question mark ends the quoted question inside the quotation marks, and no extra comma is needed before \"the boy asked.\""
+    "A": "Incorrect. The question belongs to the boy's words, so the question mark must go inside the closing quotation mark.",
+    "B": "Correct. The question mark ends the quoted question inside the quotation marks, and no extra comma is needed before \"the boy asked.\"",
+    "C": "Incorrect. A question mark already ends the quotation, so a comma after it is not used.",
+    "D": "Incorrect. The boy's words are a question, so they must end with a question mark, not a comma."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "punctuation",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

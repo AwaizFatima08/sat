@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "its riders could no longer find horses that were fast enough.",
+    "A": "the telegraph had made messages between the states slower to arrive.",
     "B": "the telegraph could deliver messages far faster than riders could.",
-    "C": "the telegraph had made messages between the states slower to arrive.",
+    "C": "its riders could no longer find horses that were fast enough.",
     "D": "the new telegraph line had been built across the riders' route."
   },
   "answer": "B",
   "explanation": {
     "why": "The Pony Express took about ten days, while the telegraph took minutes. The service closed right after the telegraph line was finished, which points to the much faster telegraph as the reason.",
-    "A": "Incorrect. The text never mentions any shortage of horses.",
+    "A": "Incorrect. This reverses the text: the telegraph made messages arrive much faster, not slower.",
     "B": "Correct. A ten-day trip could not compete with minutes, and the timing of the closure fits this cause.",
-    "C": "Incorrect. This reverses the text: the telegraph made messages arrive much faster, not slower.",
+    "C": "Incorrect. The text never mentions any shortage of horses.",
     "D": "Incorrect. The text does not say where the telegraph line ran or that it blocked anything."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
+    "A": "reversed",
+    "C": "not_in_text",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

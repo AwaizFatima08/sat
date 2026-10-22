@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It resolves the puzzle described earlier by confirming that gravity works the same way at every scale.",
+    "A": "It introduces an explanation whose underlying premise the following sentence presents as contestable.",
     "B": "It presents the alternative account of the speeds that a minority of physicists have come to favor.",
-    "C": "It introduces an explanation whose underlying premise the following sentence presents as contestable.",
-    "D": "It reports the measurements that first revealed the gap between predicted and observed speeds."
+    "C": "It reports the measurements that first revealed the gap between predicted and observed speeds.",
+    "D": "It resolves the puzzle described earlier by confirming that gravity works the same way at every scale."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The underlined sentence gives the dark-halo explanation for the unexpectedly constant speeds. The next sentence says this explanation \"rests on the assumption\" that gravity works at galactic scales as it does nearby, an assumption some physicists \"abandon.\" So the sentence introduces an explanation whose foundation is then shown to be disputed.",
-    "A": "Incorrect. The halo explanation assumes, rather than confirms, that gravity is the same at all scales, and the next sentence notes that some physicists reject that assumption.",
+    "A": "Correct. The final sentence identifies the assumption beneath the halo explanation and notes that some physicists reject it.",
     "B": "Incorrect. The underlined sentence gives the \"most widely accepted\" view; the minority's modified-gravity account appears in the final sentence.",
-    "C": "Correct. The final sentence identifies the assumption beneath the halo explanation and notes that some physicists reject it.",
-    "D": "Incorrect. The measurements are reported in the previous sentence; the underlined sentence interprets them."
+    "C": "Incorrect. The measurements are reported in the previous sentence; the underlined sentence interprets them.",
+    "D": "Incorrect. The halo explanation assumes, rather than confirms, that gravity is the same at all scales, and the next sentence notes that some physicists reject that assumption."
   },
   "traps": {
-    "A": "too_broad",
     "B": "reversed",
-    "D": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

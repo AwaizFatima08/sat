@@ -16,21 +16,21 @@
   "choices": {
     "A": "Plates for distant trading cities often show more wear than the plate for the owner's home city.",
     "B": "Many astrolabes with multiple plates were inlaid with silver and covered in elaborate engraved script.",
-    "C": "An astrolabe could tell the time at night from the height of a chosen star above the horizon.",
-    "D": "Workshops of the period made many astrolabes to order for rulers and other wealthy patrons."
+    "C": "Workshops of the period made many astrolabes to order for rulers and other wealthy patrons.",
+    "D": "An astrolabe could tell the time at night from the height of a chosen star above the horizon."
   },
   "answer": "A",
   "explanation": {
     "why": "The dispute is over whether the plates for distant cities were actually used. Farouk says they were, by travelers; his opponents say they were rarely, if ever, used. Heavy wear on the distant-city plates, greater even than on the home-city plate, is physical evidence that owners used the instruments far from home.",
     "A": "Correct. Wear shows use, and more wear on distant-city plates than on the home plate means the instruments were used on journeys, as Farouk claims.",
     "B": "Incorrect. Rich decoration fits the view that the instruments were for display, which is the position Farouk opposes.",
-    "C": "Incorrect. This describes what an astrolabe could do, not whether these particular plates were ever used.",
-    "D": "Incorrect. Instruments made for rulers and wealthy patrons fit the display view more than Farouk's view of working tools for traveling merchants."
+    "C": "Incorrect. Instruments made for rulers and wealthy patrons fit the display view more than Farouk's view of working tools for traveling merchants.",
+    "D": "Incorrect. This describes what an astrolabe could do, not whether these particular plates were ever used."
   },
   "traps": {
     "B": "reversed",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

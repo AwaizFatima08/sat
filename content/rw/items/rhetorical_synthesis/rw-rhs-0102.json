@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to introduce the Shandur polo festival to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Thousands of visitors camp near the polo ground every summer to watch the matches.",
-    "B": "Every summer, teams from Chitral and Gilgit play polo at a festival at Shandur Pass in northern Pakistan.",
+    "A": "Every summer, teams from Chitral and Gilgit play polo at a festival at Shandur Pass in northern Pakistan.",
+    "B": "The festival's matches are played each summer between teams from the Chitral and Gilgit regions.",
     "C": "At about 3,700 meters above sea level, the ground at the pass is one of the highest polo grounds in the world.",
-    "D": "The festival's matches are played each summer between teams from the Chitral and Gilgit regions."
+    "D": "Thousands of visitors camp near the polo ground every summer to watch the matches."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "A reader who has never heard of the festival needs to learn what it is and where it takes place. Only one choice explains that it is a summer polo festival, names Shandur Pass, and says the pass is in northern Pakistan.",
-    "A": "Incorrect. This mentions the visitors but never says what is being watched or where, so a new reader learns little about the festival.",
-    "B": "Correct. It tells a new reader what happens (a polo festival), who plays (teams from Chitral and Gilgit), and where (Shandur Pass in northern Pakistan).",
+    "A": "Correct. It tells a new reader what happens (a polo festival), who plays (teams from Chitral and Gilgit), and where (Shandur Pass in northern Pakistan).",
+    "B": "Incorrect. It refers to \"the festival\" as if the reader already knew which one, and it does not say where the matches are played.",
     "C": "Incorrect. This gives an interesting fact about the height of the ground, but it never names the pass or says that a festival takes place there.",
-    "D": "Incorrect. It refers to \"the festival\" as if the reader already knew which one, and it does not say where the matches are played."
+    "D": "Incorrect. This mentions the visitors but never says what is being watched or where, so a new reader learns little about the festival."
   },
   "traps": {
-    "A": "true_irrelevant",
+    "B": "too_narrow",
     "C": "misses_goal",
-    "D": "too_narrow"
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

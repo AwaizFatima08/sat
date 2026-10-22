@@ -73,21 +73,21 @@
   "choices": {
     "A": "species X went from about 6 to 14 flashes per minute, but species Y only from about 10 to 13.",
     "B": "at 25°C, males of both species flashed about 12 times per minute.",
-    "C": "species Y went from about 6 to 14 flashes per minute, but species X only from about 10 to 13.",
-    "D": "females of species Y answered fewer flashes as the air grew warmer."
+    "C": "females of species Y answered fewer flashes as the air grew warmer.",
+    "D": "species Y went from about 6 to 14 flashes per minute, but species X only from about 10 to 13."
   },
   "answer": "A",
   "explanation": {
     "why": "The claim is that one species' flash rate changed much more with temperature than the other's. Between 16°C and 28°C, species X more than doubled its rate (6 to 14), while species Y changed only a little (10 to 13).",
     "A": "Correct. Species X's rate rose by about 8 flashes per minute across the temperatures shown, compared with only about 3 for species Y, so X was far more sensitive.",
     "B": "Incorrect. This is true, but it describes a single temperature and does not show how either species' rate changed as temperatures rose.",
-    "C": "Incorrect. This swaps the species: species X, not species Y, went from about 6 to about 14 flashes per minute.",
-    "D": "Incorrect. The graph shows only males' flash rates; it says nothing about how females responded."
+    "C": "Incorrect. The graph shows only males' flash rates; it says nothing about how females responded.",
+    "D": "Incorrect. This swaps the species: species X, not species Y, went from about 6 to about 14 flashes per minute."
   },
   "traps": {
     "B": "true_irrelevant",
-    "C": "reversed",
-    "D": "not_in_text"
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -96,8 +96,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

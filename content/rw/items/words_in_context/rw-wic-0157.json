@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "valuable",
+    "A": "durable",
     "B": "obsolete",
     "C": "essential",
-    "D": "durable"
+    "D": "valuable"
   },
   "answer": "B",
   "explanation": {
     "why": "\"Though\" marks a contrast with the cards being kept for years, and the sentence ends with the cards being \"removed.\" The digital systems replaced them, making them no longer needed: \"obsolete.\"",
-    "A": "Incorrect. If the cards had become valuable, libraries would have kept them rather than removing them.",
+    "A": "Incorrect. The text says nothing about the cards becoming stronger, and durability would not explain why they were removed.",
     "B": "Correct. Something obsolete is no longer used because something newer has replaced it, which explains why the cards were removed.",
     "C": "Incorrect. Essential cards would have been kept; the text says most were removed once digital catalogs took over.",
-    "D": "Incorrect. The text says nothing about the cards becoming stronger, and durability would not explain why they were removed."
+    "D": "Incorrect. If the cards had become valuable, libraries would have kept them rather than removing them."
   },
   "traps": {
-    "A": "reversed",
+    "A": "not_in_text",
     "C": "reversed",
-    "D": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

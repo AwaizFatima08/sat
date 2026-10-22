@@ -58,22 +58,22 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "about 45 centimeters.",
-    "B": "about 170 centimeters.",
-    "C": "about 120 centimeters.",
-    "D": "about 80 centimeters."
+    "A": "about 120 centimeters.",
+    "B": "about 80 centimeters.",
+    "C": "about 170 centimeters.",
+    "D": "about 45 centimeters."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Find week 6 on the horizontal axis and read the height of that point. It is at about 120 centimeters, between the week 5 value of 80 and the week 7 value of 155.",
-    "A": "Incorrect. 45 centimeters is the plant's height at week 4, not week 6.",
-    "B": "Incorrect. 170 centimeters is the plant's height at week 8, the end of the study, not at week 6.",
-    "C": "Correct. The point for week 6 is at about 120 centimeters.",
-    "D": "Incorrect. 80 centimeters is the plant's height at week 5, one week earlier."
+    "A": "Correct. The point for week 6 is at about 120 centimeters.",
+    "B": "Incorrect. 80 centimeters is the plant's height at week 5, one week earlier.",
+    "C": "Incorrect. 170 centimeters is the plant's height at week 8, the end of the study, not at week 6.",
+    "D": "Incorrect. 45 centimeters is the plant's height at week 4, not week 6."
   },
   "traps": {
-    "A": "reversed",
-    "B": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant",
     "D": "reversed"
   },
   "grammar": null,
@@ -87,13 +87,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

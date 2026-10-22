@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that the gharial's snout makes it a weaker hunter than other crocodilians",
+    "A": "To explain how a feature of the gharial suits its diet and why that feature also leaves it vulnerable",
     "B": "To describe the rivers of India and Nepal where gharials are found",
-    "C": "To explain how a feature of the gharial suits its diet and why that feature also leaves it vulnerable",
-    "D": "To explain why fish in the rivers of India and Nepal have become scarce"
+    "C": "To explain why fish in the rivers of India and Nepal have become scarce",
+    "D": "To argue that the gharial's snout makes it a weaker hunter than other crocodilians"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text first explains that the narrow snout, though it looks \"fragile,\" helps the gharial catch fish quickly. The final sentence adds a qualification: \"The same specialization carries a cost,\" since the animal suffers when fish are scarce. The purpose covers both the advantage and the drawback.",
-    "A": "Incorrect. The text says the snout is \"well suited\" to catching fish, and it never compares the gharial with other crocodilians.",
+    "A": "Correct. The text explains how the snout helps the gharial catch fish and then how dependence on fish makes it vulnerable.",
     "B": "Incorrect. The rivers are mentioned only to say where gharials live; they are not the focus.",
-    "C": "Correct. The text explains how the snout helps the gharial catch fish and then how dependence on fish makes it vulnerable.",
-    "D": "Incorrect. The text mentions places where fish become scarce but never explains why that happens."
+    "C": "Incorrect. The text mentions places where fish become scarce but never explains why that happens.",
+    "D": "Incorrect. The text says the snout is \"well suited\" to catching fish, and it never compares the gharial with other crocodilians."
   },
   "traps": {
-    "A": "reversed",
     "B": "too_narrow",
-    "D": "not_in_text"
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

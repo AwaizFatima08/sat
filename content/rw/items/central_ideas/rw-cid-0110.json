@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Jiho takes pride in being trusted to help with his grandmother's task.",
-    "B": "Jiho's grandmother criticizes the way he prepares the cabbage leaves.",
-    "C": "Jiho learns that kimchi must be stored in large clay jars during the winter.",
-    "D": "Jiho's grandmother decides to make less kimchi than usual this year."
+    "A": "Jiho's grandmother decides to make less kimchi than usual this year.",
+    "B": "Jiho learns that kimchi must be stored in large clay jars during the winter.",
+    "C": "Jiho's grandmother criticizes the way he prepares the cabbage leaves.",
+    "D": "Jiho takes pride in being trusted to help with his grandmother's task."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "For the first time, the grandmother gives Jiho gloves so he can help. When she puts his cabbage \"in the big clay jar with her own,\" she shows she accepts his work, and \"Jiho stood a little taller.\" The main idea is his pride at being trusted with this task.",
-    "A": "Correct. This covers the whole text: Jiho is invited to help for the first time, his work is accepted, and he feels proud.",
-    "B": "Incorrect. The grandmother says nothing and puts his cabbage with her own, which shows approval, not criticism.",
-    "C": "Incorrect. The clay jar is a small detail, and the text never says kimchi must be stored that way.",
-    "D": "Incorrect. The text never says she makes less kimchi this year."
+    "A": "Incorrect. The text never says she makes less kimchi this year.",
+    "B": "Incorrect. The clay jar is a small detail, and the text never says kimchi must be stored that way.",
+    "C": "Incorrect. The grandmother says nothing and puts his cabbage with her own, which shows approval, not criticism.",
+    "D": "Correct. This covers the whole text: Jiho is invited to help for the first time, his work is accepted, and he feels proud."
   },
   "traps": {
-    "B": "reversed",
-    "C": "too_narrow",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "too_narrow",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

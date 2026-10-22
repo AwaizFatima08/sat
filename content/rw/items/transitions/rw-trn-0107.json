@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "In contrast,",
-    "B": "For example,",
-    "C": "Therefore,",
+    "A": "Therefore,",
+    "B": "In contrast,",
+    "C": "For example,",
     "D": "Similarly,"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The first sentence explains a problem: rivers in low-lying Bangladesh often flood. The second sentence describes what families do because of that problem: they raise their homes on earth platforms. A cause-and-effect transition is needed.",
-    "A": "Incorrect. Building raised homes does not contrast with the flooding; it is a response to it.",
-    "B": "Incorrect. A raised home is not an example of a river overflowing; it is a way of dealing with floods.",
-    "C": "Correct. \"Therefore\" shows that families build raised homes because the rivers often flood.",
+    "A": "Correct. \"Therefore\" shows that families build raised homes because the rivers often flood.",
+    "B": "Incorrect. Building raised homes does not contrast with the flooding; it is a response to it.",
+    "C": "Incorrect. A raised home is not an example of a river overflowing; it is a way of dealing with floods.",
     "D": "Incorrect. \"Similarly\" signals a parallel fact, but the second sentence describes a result of the first."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

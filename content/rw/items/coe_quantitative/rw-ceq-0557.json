@@ -80,22 +80,22 @@
   "stem": "Which choice most effectively uses data from the graph to support Dijkstra's argument?",
   "choices": {
     "A": "The average value of landscapes fell in every decade from the 1630s to the 1680s.",
-    "B": "History paintings were valued at least twice as highly as landscapes on average in every decade shown.",
-    "C": "The gap between the two kinds of painting widened mainly because history paintings became more expensive over the period.",
-    "D": "Landscapes fell from 24 to 11 guilders on average, while history paintings stayed between 58 and 63 guilders."
+    "B": "The gap between the two kinds of painting widened mainly because history paintings became more expensive over the period.",
+    "C": "Landscapes fell from 24 to 11 guilders on average, while history paintings stayed between 58 and 63 guilders.",
+    "D": "History paintings were valued at least twice as highly as landscapes on average in every decade shown."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Dijkstra's argument explains the widening gap by pointing to one series only: landscapes fell while history paintings held steady. Support must describe both lines, showing a decline in one and stability in the other. Landscapes dropped from 24 to 11 guilders, while history paintings stayed between 58 and 63 guilders throughout.",
     "A": "Incorrect. This is true, but it covers only half of the argument; the gap could also have widened partly because history paintings rose.",
-    "B": "Incorrect. This is true, but a constant ratio of at least two to one says nothing about which kind of painting changed in value.",
-    "C": "Incorrect. History paintings were worth 60 guilders in both the 1630s and the 1680s, so the gap widened because landscapes fell, the opposite of this choice.",
-    "D": "Correct. It shows the decline in landscape values alongside nearly flat values for history paintings, which is exactly the pattern Dijkstra describes."
+    "B": "Incorrect. History paintings were worth 60 guilders in both the 1630s and the 1680s, so the gap widened because landscapes fell, the opposite of this choice.",
+    "C": "Correct. It shows the decline in landscape values alongside nearly flat values for history paintings, which is exactly the pattern Dijkstra describes.",
+    "D": "Incorrect. This is true, but a constant ratio of at least two to one says nothing about which kind of painting changed in value."
   },
   "traps": {
     "A": "too_narrow",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "B": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -104,8 +104,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

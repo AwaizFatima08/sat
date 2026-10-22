@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "clay,",
-    "B": "clay, and",
-    "C": "clay",
-    "D": "clay and,"
+    "A": "clay, and",
+    "B": "clay",
+    "C": "clay and,",
+    "D": "clay,"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "\"Scribes in Mesopotamia began writing … into soft clay\" and \"each press left a small wedge-shaped mark\" are both independent clauses. A comma followed by the conjunction \"and\" is a standard way to join two independent clauses.",
-    "A": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice.",
-    "B": "Correct. A comma plus \"and\" correctly joins the two independent clauses.",
-    "C": "Incorrect. With no punctuation or conjunction, the two independent clauses run together (a run-on sentence).",
-    "D": "Incorrect. When \"and\" joins two independent clauses, the comma goes before \"and,\" not after it."
+    "A": "Correct. A comma plus \"and\" correctly joins the two independent clauses.",
+    "B": "Incorrect. With no punctuation or conjunction, the two independent clauses run together (a run-on sentence).",
+    "C": "Incorrect. When \"and\" joins two independent clauses, the comma goes before \"and,\" not after it.",
+    "D": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice."
   },
   "traps": {
-    "A": "grammar_rule",
+    "B": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

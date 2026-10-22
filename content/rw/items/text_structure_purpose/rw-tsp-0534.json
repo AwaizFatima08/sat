@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that sans serif typefaces are easier to read than serif typefaces",
-    "B": "To explain how serifs guide a reader's eye along a line of printed text",
-    "C": "To question whether a popular explanation accounts for a common practice",
-    "D": "To show that familiarity is the only factor that affects how fast people read"
+    "A": "To question whether a popular explanation accounts for a common practice",
+    "B": "To show that familiarity is the only factor that affects how fast people read",
+    "C": "To argue that sans serif typefaces are easier to read than serif typefaces",
+    "D": "To explain how serifs guide a reader's eye along a line of printed text"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text presents a familiar claim (serifs make type easier to read) that seems to explain why books use serif type. \"Yet\" introduces studies finding \"small and inconsistent differences,\" and the conclusion suggests the practice \"may reflect habit and tradition.\" The author is casting doubt on the explanation, not replacing it with a strong opposite claim.",
-    "A": "Incorrect. The studies found small, inconsistent differences, not an advantage for sans serif type; the author makes no such claim.",
-    "B": "Incorrect. The text reports this explanation only to question it; it never explains how serifs would guide the eye.",
-    "C": "Correct. The author doubts that the serif-readability claim explains why books are set in serif type, suggesting habit as an alternative.",
-    "D": "Incorrect. The text says differences \"seem to depend more\" on familiarity, a hedged comparison; \"the only factor\" goes far beyond it."
+    "A": "Correct. The author doubts that the serif-readability claim explains why books are set in serif type, suggesting habit as an alternative.",
+    "B": "Incorrect. The text says differences \"seem to depend more\" on familiarity, a hedged comparison; \"the only factor\" goes far beyond it.",
+    "C": "Incorrect. The studies found small, inconsistent differences, not an advantage for sans serif type; the author makes no such claim.",
+    "D": "Incorrect. The text reports this explanation only to question it; it never explains how serifs would guide the eye."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "reversed",
-    "D": "too_broad"
+    "B": "too_broad",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

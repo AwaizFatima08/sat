@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Nevertheless,",
-    "B": "For instance,",
-    "C": "Similarly,",
-    "D": "Thus,"
+    "A": "Thus,",
+    "B": "Similarly,",
+    "C": "For instance,",
+    "D": "Nevertheless,"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The third sentence explains how water moves through the grooves in the lizard's skin toward its mouth. The last sentence states what this makes possible: the lizard can collect water without drinking from a puddle. A cause-and-effect transition is needed.",
-    "A": "Incorrect. \"Nevertheless\" would mean the lizard gathers water in spite of the grooves pulling water along, but the grooves are what let it do so. The lack of standing water in the first sentence may make a contrast seem likely, but \"however\" in the second sentence has already answered that problem.",
-    "B": "Incorrect. Gathering water is not an example of water moving through the grooves; it is the result.",
-    "C": "Incorrect. The paper towel comparison is already made in the previous sentence; the last sentence states a result, not another similar case. This is a tempting trap.",
-    "D": "Correct. \"Thus\" shows that the lizard's ability to collect water through its skin results from the grooves described before."
+    "A": "Correct. \"Thus\" shows that the lizard's ability to collect water through its skin results from the grooves described before.",
+    "B": "Incorrect. The paper towel comparison is already made in the previous sentence; the last sentence states a result, not another similar case. This is a tempting trap.",
+    "C": "Incorrect. Gathering water is not an example of water moving through the grooves; it is the result.",
+    "D": "Incorrect. \"Nevertheless\" would mean the lizard gathers water in spite of the grooves pulling water along, but the grooves are what let it do so. The lack of standing water in the first sentence may make a contrast seem likely, but \"however\" in the second sentence has already answered that problem."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

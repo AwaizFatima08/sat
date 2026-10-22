@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "soloist's",
-    "B": "soloists",
+    "A": "soloists",
+    "B": "soloists'",
     "C": "soloists's",
-    "D": "soloists'"
+    "D": "soloist's"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The preferences belong to the professional soloists who took part in the experiments, a plural group (\"Most could not reliably tell\"). A plural noun ending in -s forms its possessive with an apostrophe alone, so \"soloists'\" is correct.",
-    "A": "Incorrect. \"Soloist's\" is singular possessive, but many soloists took part and stated preferences.",
-    "B": "Incorrect. \"Soloists\" is plural but not possessive; the preferences belong to the soloists, so an apostrophe is needed.",
+    "A": "Incorrect. \"Soloists\" is plural but not possessive; the preferences belong to the soloists, so an apostrophe is needed.",
+    "B": "Correct. \"Soloists'\" is the plural possessive, showing that the preferences belong to the many players tested.",
     "C": "Incorrect. \"Soloists's\" is not a Standard English form; a plural ending in -s takes only an apostrophe.",
-    "D": "Correct. \"Soloists'\" is the plural possessive, showing that the preferences belong to the many players tested."
+    "D": "Incorrect. \"Soloist's\" is singular possessive, but many soloists took part and stated preferences."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "plural_possessive",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

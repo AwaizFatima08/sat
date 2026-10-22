@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "welcoming",
-    "B": "chaotic",
-    "C": "overcrowded",
-    "D": "impersonal"
+    "A": "chaotic",
+    "B": "overcrowded",
+    "C": "impersonal",
+    "D": "welcoming"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "\"Yet\" sets the critics' complaint against the residents' praise. The critics focus on the \"rigid geometry,\" so they must find the city cold or lacking a human, personal feel. \"Impersonal\" expresses that criticism.",
-    "A": "Incorrect. Welcoming is praise, but \"yet\" shows that the critics' view contrasts with what residents praise.",
-    "B": "Incorrect. A plan with \"rigid geometry\" and an \"orderly layout\" is the opposite of chaotic.",
-    "C": "Incorrect. The text mentions \"wide roads\" and \"abundant parks,\" and the critics' complaint is about the geometry, not about too many people.",
-    "D": "Correct. A strict grid can seem cold and lacking in human warmth, which is a criticism that contrasts with residents' praise."
+    "A": "Incorrect. A plan with \"rigid geometry\" and an \"orderly layout\" is the opposite of chaotic.",
+    "B": "Incorrect. The text mentions \"wide roads\" and \"abundant parks,\" and the critics' complaint is about the geometry, not about too many people.",
+    "C": "Correct. A strict grid can seem cold and lacking in human warmth, which is a criticism that contrasts with residents' praise.",
+    "D": "Incorrect. Welcoming is praise, but \"yet\" shows that the critics' view contrasts with what residents praise."
   },
   "traps": {
     "A": "reversed",
-    "B": "reversed",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

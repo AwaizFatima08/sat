@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "exposed",
-    "B": "secure",
-    "C": "spacious",
-    "D": "convenient"
+    "A": "secure",
+    "B": "spacious",
+    "C": "convenient",
+    "D": "exposed"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The burrow is compared with an \"open ledge,\" and the sentence ends by saying the egg and chick are kept \"out of sight of gulls that hunt from the air.\" The blank must describe a place that is safe from danger, which is what \"secure\" means.",
-    "A": "Incorrect. An open ledge is the exposed choice; the burrow hides the egg and chick from gulls.",
-    "B": "Correct. A burrow that keeps the egg and chick out of sight of hunting gulls is a safer, more secure place than an open ledge.",
-    "C": "Incorrect. The text never says the burrow is roomy; its advantage is that it hides the egg and chick from predators.",
-    "D": "Incorrect. The text gives no sign that a burrow is easier for the puffins; digging one takes effort. Its advantage, according to the text, is protection from gulls."
+    "A": "Correct. A burrow that keeps the egg and chick out of sight of hunting gulls is a safer, more secure place than an open ledge.",
+    "B": "Incorrect. The text never says the burrow is roomy; its advantage is that it hides the egg and chick from predators.",
+    "C": "Incorrect. The text gives no sign that a burrow is easier for the puffins; digging one takes effort. Its advantage, according to the text, is protection from gulls.",
+    "D": "Incorrect. An open ledge is the exposed choice; the burrow hides the egg and chick from gulls."
   },
   "traps": {
-    "A": "reversed",
+    "B": "not_in_text",
     "C": "not_in_text",
-    "D": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

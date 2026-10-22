@@ -38,23 +38,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Teixeira's argument?",
   "choices": {
-    "A": "Most of the hatchlings from partly shaded nests, 71 percent, were female rather than male.",
-    "B": "Nests in open sand produced a smaller share of female hatchlings than nests shaded by plants did.",
-    "C": "More turtles laid their eggs in open sand than in the shaded parts of the beach, where plants grow.",
-    "D": "Nests shaded by plants produced 42 percent female hatchlings, while nests in open sand produced 93 percent."
+    "A": "Nests shaded by plants produced 42 percent female hatchlings, while nests in open sand produced 93 percent.",
+    "B": "Most of the hatchlings from partly shaded nests, 71 percent, were female rather than male.",
+    "C": "Nests in open sand produced a smaller share of female hatchlings than nests shaded by plants did.",
+    "D": "More turtles laid their eggs in open sand than in the shaded parts of the beach, where plants grow."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Teixeira's argument depends on shaded nests producing fewer females than open-sand nests, so that removing shade would raise the share of females. The graph shows 42 percent females from shaded nests and 93 percent from open-sand nests.",
-    "A": "Incorrect. This is true (71 percent), but it does not compare shaded nests with open-sand nests, which is what the argument about losing shade depends on.",
-    "B": "Incorrect. Open-sand nests produced 93 percent females, compared with 42 percent for shaded nests, so this misreads the graph.",
-    "C": "Incorrect. The graph shows the share of female hatchlings, not how many nests were in each location.",
-    "D": "Correct. Shaded nests produced far fewer females than open-sand nests, so losing the shaded areas would leave mostly nests that produce females."
+    "A": "Correct. Shaded nests produced far fewer females than open-sand nests, so losing the shaded areas would leave mostly nests that produce females.",
+    "B": "Incorrect. This is true (71 percent), but it does not compare shaded nests with open-sand nests, which is what the argument about losing shade depends on.",
+    "C": "Incorrect. Open-sand nests produced 93 percent females, compared with 42 percent for shaded nests, so this misreads the graph.",
+    "D": "Incorrect. The graph shows the share of female hatchlings, not how many nests were in each location."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
-    "C": "not_in_text"
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -67,13 +67,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "absent",
+    "A": "mirrored",
     "B": "unusual",
-    "C": "mirrored",
+    "C": "absent",
     "D": "enlarged"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text says errors in one tree \"can be caught\" by comparing many trees from the same area. That works only if the same pattern of wide and narrow rings shows up in the other trees, so a missing or doubled ring \"stands out.\" The blank must mean \"matched\" or \"repeated,\" so \"mirrored\" fits.",
-    "A": "Incorrect. If the sequence were absent from the other trees, there would be no shared pattern to compare against, and an error in one tree could not be spotted.",
+    "A": "Correct. Trees in the same area grow under the same weather, so they should show the same sequence of rings. If the sequence is mirrored in many trees, one tree that breaks the pattern \"stands out\" as an error.",
     "B": "Incorrect. The method depends on the sequence being common to many trees. If it were unusual in them, a missing ring would not stand out.",
-    "C": "Correct. Trees in the same area grow under the same weather, so they should show the same sequence of rings. If the sequence is mirrored in many trees, one tree that breaks the pattern \"stands out\" as an error.",
+    "C": "Incorrect. If the sequence were absent from the other trees, there would be no shared pattern to compare against, and an error in one tree could not be spotted.",
     "D": "Incorrect. Nothing in the text says rings grow bigger in other trees; the comparison is about whether the same pattern appears."
   },
   "traps": {
-    "A": "reversed",
     "B": "wrong_logic",
+    "C": "reversed",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

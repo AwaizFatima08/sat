@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "fall,\" she",
-    "B": "fall?,\" she",
-    "C": "fall?\" she",
-    "D": "fall\"? she"
+    "A": "fall?\" she",
+    "B": "fall\"? she",
+    "C": "fall,\" she",
+    "D": "fall?,\" she"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Miss Penhallow's words form a direct question (\"Are we to understand ...\"), so the quotation must end with a question mark. The question mark belongs to the quoted words, so it goes inside the closing quotation mark, and no comma is added before the speaker tag \"she asked.\"",
-    "A": "Incorrect. A comma before \"she asked\" is used for a quoted statement, but this quotation is a direct question and must end with a question mark.",
-    "B": "Incorrect. When a quotation ends with a question mark, no comma follows it; using both marks is incorrect.",
-    "C": "Correct. The question mark ends the quoted question inside the quotation marks, and the speaker tag follows with no comma.",
-    "D": "Incorrect. The question is part of the quotation, so the question mark goes inside the closing quotation mark, not outside it."
+    "A": "Correct. The question mark ends the quoted question inside the quotation marks, and the speaker tag follows with no comma.",
+    "B": "Incorrect. The question is part of the quotation, so the question mark goes inside the closing quotation mark, not outside it.",
+    "C": "Incorrect. A comma before \"she asked\" is used for a quoted statement, but this quotation is a direct question and must end with a question mark.",
+    "D": "Incorrect. When a quotation ends with a question mark, no comma follows it; using both marks is incorrect."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "punctuation",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

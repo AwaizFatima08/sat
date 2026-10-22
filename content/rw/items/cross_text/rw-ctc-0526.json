@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, both authors would most likely agree with which statement?",
   "choices": {
-    "A": "Human hunters caused the final extinction of the Wrangel Island mammoths.",
-    "B": "Harmful mutations were the direct cause of the mammoths' extinction.",
+    "A": "Harmful mutations were the direct cause of the mammoths' extinction.",
+    "B": "Human hunters caused the final extinction of the Wrangel Island mammoths.",
     "C": "The island's isolation protected the mammoths from human hunters.",
     "D": "Mammoths survived on Wrangel Island long after they disappeared from the mainland."
   },
   "answer": "D",
   "explanation": {
     "why": "Text 1 says mammoths survived on Wrangel Island until about 4,000 years ago, long after they had vanished from the mainland. Text 2 says the population \"held on for thousands of years after its mainland relatives died out.\" Both authors accept this late survival, though they focus on different reasons for it and for its end.",
-    "A": "Incorrect. Text 1 says hunters reached Wrangel only \"after the animals were gone,\" and Text 2 suggests a sudden event such as disease.",
-    "B": "Incorrect. Text 2 says the mutations weakened the population but suggests that a sudden event finally wiped it out; Text 1 never mentions mutations.",
+    "A": "Incorrect. Text 2 says the mutations weakened the population but suggests that a sudden event finally wiped it out; Text 1 never mentions mutations.",
+    "B": "Incorrect. Text 1 says hunters reached Wrangel only \"after the animals were gone,\" and Text 2 suggests a sudden event such as disease.",
     "C": "Incorrect. Only Text 1 makes this claim; Text 2 does not discuss hunters.",
     "D": "Correct. Both texts say the island's mammoths outlasted the mainland populations by thousands of years."
   },
   "traps": {
-    "A": "reversed",
-    "B": "too_broad",
+    "A": "too_broad",
+    "B": "reversed",
     "C": "true_irrelevant"
   },
   "grammar": null,
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "fared",
+    "A": "disappeared",
     "B": "declined",
-    "C": "disappeared",
+    "C": "fared",
     "D": "evolved"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The text contrasts the ginkgo group's long decline with what happened \"since people began planting it widely.\" The colon explains the result: ginkgoes now grow in cities worldwide and tolerate harsh conditions. The blank must mean \"done\" or \"gotten along,\" so \"fared\" fits.",
-    "A": "Correct. Ginkgoes now grow in cities \"around the world\" and tolerate harsh conditions, so the species has done, or fared, \"remarkably well.\"",
+    "A": "Incorrect. A species that now lines streets \"around the world\" has not disappeared, and \"disappeared remarkably well\" makes no sense.",
     "B": "Incorrect. Decline describes the group's long history of dying out. \"However\" signals that the story changes once people began planting ginkgoes.",
-    "C": "Incorrect. A species that now lines streets \"around the world\" has not disappeared, and \"disappeared remarkably well\" makes no sense.",
+    "C": "Correct. Ginkgoes now grow in cities \"around the world\" and tolerate harsh conditions, so the species has done, or fared, \"remarkably well.\"",
     "D": "Incorrect. Evolution happens over long periods, but the sentence covers only the time since people began planting ginkgoes, and the colon explains the ginkgo's success in cities, not any change in the species."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "reversed",
-    "C": "wrong_logic",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

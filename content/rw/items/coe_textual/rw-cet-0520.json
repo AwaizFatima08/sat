@@ -15,22 +15,22 @@
   "stem": "Which finding, if true, would most directly support Navarro's argument?",
   "choices": {
     "A": "The ghost-story contest that led Shelley to begin the novel was proposed by the poet Lord Byron, who was staying nearby.",
-    "B": "Frankenstein became much more widely known in the 1820s after it was adapted into a play for the London stage.",
-    "C": "Many novels written in warmer, calmer years of the period also feature bleak, icy, and storm-filled settings.",
-    "D": "Shelley's journal from that summer describes storms over the lake in words that closely match scenes in the novel."
+    "B": "Many novels written in warmer, calmer years of the period also feature bleak, icy, and storm-filled settings.",
+    "C": "Shelley's journal from that summer describes storms over the lake in words that closely match scenes in the novel.",
+    "D": "Frankenstein became much more widely known in the 1820s after it was adapted into a play for the London stage."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Navarro claims the weather of summer 1816 directly shaped the novel's settings. The best support would connect what Shelley actually experienced that summer to what she wrote. Journal descriptions of the storms that closely match scenes in the book make that connection.",
     "A": "Incorrect. Who proposed the contest explains how the novel started, not where its stormy settings came from.",
-    "B": "Incorrect. The novel's later fame on the stage says nothing about what shaped its settings.",
-    "C": "Incorrect. If such settings were common in novels written in calm years, they may simply have been a fashion of the time, which would weaken Navarro's argument.",
-    "D": "Correct. Matching language shows Shelley drawing on the storms she saw that summer when she wrote the novel's scenes."
+    "B": "Incorrect. If such settings were common in novels written in calm years, they may simply have been a fashion of the time, which would weaken Navarro's argument.",
+    "C": "Correct. Matching language shows Shelley drawing on the storms she saw that summer when she wrote the novel's scenes.",
+    "D": "Incorrect. The novel's later fame on the stage says nothing about what shaped its settings."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "B": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

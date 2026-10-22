@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to introduce the theremin to an unfamiliar audience by explaining how it is played. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Players of the theremin, an electronic instrument, control pitch and volume by moving their hands near its two antennas.",
+    "A": "Moving one hand near one antenna changes the pitch, and moving the other hand near the second antenna changes the volume.",
     "B": "Invented around 1920 by Léon Theremin, the theremin was later heard in many science fiction films of the 1950s.",
-    "C": "Moving one hand near one antenna changes the pitch, and moving the other hand near the second antenna changes the volume.",
-    "D": "The eerie, gliding sound of the theremin was used in many science fiction films of the 1950s."
+    "C": "The eerie, gliding sound of the theremin was used in many science fiction films of the 1950s.",
+    "D": "Players of the theremin, an electronic instrument, control pitch and volume by moving their hands near its two antennas."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The goal has two parts: tell a new reader what the theremin is, and explain how it is played. The key must identify it as an instrument and describe the hand movements near the antennas.",
-    "A": "Correct. It identifies the theremin as an electronic instrument and explains how it is played: hands moving near two antennas control pitch and volume.",
+    "A": "Incorrect. This explains how it is played, but it never names the instrument or says what it is, so an unfamiliar reader would not know what is being described.",
     "B": "Incorrect. This introduces the instrument's history, but it does not explain how it is played.",
-    "C": "Incorrect. This explains how it is played, but it never names the instrument or says what it is, so an unfamiliar reader would not know what is being described.",
-    "D": "Incorrect. This describes the instrument's sound and where it was used, not how it is played."
+    "C": "Incorrect. This describes the instrument's sound and where it was used, not how it is played.",
+    "D": "Correct. It identifies the theremin as an electronic instrument and explains how it is played: hands moving near two antennas control pitch and volume."
   },
   "traps": {
+    "A": "too_narrow",
     "B": "misses_goal",
-    "C": "too_narrow",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

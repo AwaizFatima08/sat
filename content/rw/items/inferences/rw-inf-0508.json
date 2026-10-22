@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "grow rice only during the months of heaviest rain.",
-    "B": "move their rice fields to the wetter parts of the island.",
-    "C": "stop depending on rain as a source of water for their crops.",
+    "A": "move their rice fields to the wetter parts of the island.",
+    "B": "stop depending on rain as a source of water for their crops.",
+    "C": "grow rice only during the months of heaviest rain.",
     "D": "water their crops even during months with little rain."
   },
   "answer": "D",
   "explanation": {
     "why": "Rain falls in only a few months, but the tanks stored that rain and channels carried it to the fields. Stored water could therefore reach the crops during the dry part of the year.",
-    "A": "Incorrect. This reverses the purpose of the tanks; storing water frees farmers from the rainy months alone.",
-    "B": "Incorrect. The text says nothing about moving fields elsewhere on the island.",
-    "C": "Incorrect. This goes too far: the tanks were filled by rainwater, so farmers still depended on rain.",
+    "A": "Incorrect. The text says nothing about moving fields elsewhere on the island.",
+    "B": "Incorrect. This goes too far: the tanks were filled by rainwater, so farmers still depended on rain.",
+    "C": "Incorrect. This reverses the purpose of the tanks; storing water frees farmers from the rainy months alone.",
     "D": "Correct. Water stored during the rainy months could be sent to fields when little rain was falling."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "C": "too_broad"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

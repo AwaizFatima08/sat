@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "spread",
+    "A": "rest",
     "B": "shrink",
-    "C": "rest",
+    "C": "spread",
     "D": "wilt"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The text says wind carries dandelion seeds \"away from the parent plant, sometimes for more than a kilometer,\" and that dandelions \"appear in so many lawns and fields.\" The blank must mean \"move out over a wide area,\" so \"spread\" fits.",
-    "A": "Correct. Wind carries the seeds far from the parent plant, so new dandelions grow over a wide area. That is what it means for the plants to spread.",
+    "A": "Incorrect. The sentence describes plants moving into new areas, which is the opposite of resting in one place.",
     "B": "Incorrect. Seeds carried far away produce more dandelions in more places; the plants grow in range rather than shrink.",
-    "C": "Incorrect. The sentence describes plants moving into new areas, which is the opposite of resting in one place.",
+    "C": "Correct. Wind carries the seeds far from the parent plant, so new dandelions grow over a wide area. That is what it means for the plants to spread.",
     "D": "Incorrect. Nothing in the text suggests the plants droop or dry out; the passage is about how they reach new places."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "reversed",
-    "C": "wrong_logic",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

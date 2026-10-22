@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "is",
+    "A": "was",
     "B": "has been",
     "C": "are",
-    "D": "was"
+    "D": "is"
   },
   "answer": "C",
   "explanation": {
     "why": "The subject of the verb is \"The particles,\" which is plural. \"That make up the ring system\" and \"each following its own orbit around the planet\" both describe the particles, and the singular words inside them (\"system,\" \"each,\" \"its\") do not change the subject. A plural subject needs the plural verb \"are,\" which also fits the present-tense description.",
-    "A": "Incorrect. \"Is\" is singular and seems to agree with \"system\" or \"each,\" but the subject is the plural \"particles.\"",
+    "A": "Incorrect. \"Was\" is singular, and its past tense also clashes with the present-tense description; the subject \"particles\" is plural.",
     "B": "Incorrect. \"Has been\" is singular, but the subject \"particles\" is plural.",
     "C": "Correct. The plural verb \"are\" agrees with the plural subject \"The particles.\"",
-    "D": "Incorrect. \"Was\" is singular, and its past tense also clashes with the present-tense description; the subject \"particles\" is plural."
+    "D": "Incorrect. \"Is\" is singular and seems to agree with \"system\" or \"each,\" but the subject is the plural \"particles.\""
   },
   "traps": {
     "A": "grammar_rule",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

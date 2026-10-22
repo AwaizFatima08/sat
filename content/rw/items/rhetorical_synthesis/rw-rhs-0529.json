@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to present the aim and the method of Kakar's study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "To learn whether tube wells were linked to karezes drying up, Kakar mapped 60 karezes and counted the tube wells near each.",
-    "B": "Kakar found that karezes with more tube wells nearby were far more likely to have dried up than other karezes.",
+    "A": "Kakar wanted to know whether the spread of electric tube wells in Balochistan was linked to the drying up of karezes.",
+    "B": "To learn whether tube wells were linked to karezes drying up, Kakar mapped 60 karezes and counted the tube wells near each.",
     "C": "Kakar mapped 60 karezes, underground channels that carry groundwater by gravity from the foot of a hill to fields.",
-    "D": "Kakar wanted to know whether the spread of electric tube wells in Balochistan was linked to the drying up of karezes."
+    "D": "Kakar found that karezes with more tube wells nearby were far more likely to have dried up than other karezes."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The goal needs the aim (what Kakar wanted to learn) and the method (what she did to learn it). One choice opens with her question about tube wells and then describes the mapping and counting.",
-    "A": "Correct. \"To learn whether tube wells were linked to karezes drying up\" is the aim, and mapping 60 karezes and counting nearby tube wells is the method.",
-    "B": "Incorrect. It presents the study's finding, which the goal does not ask for.",
+    "A": "Incorrect. It states the aim but leaves out the method, so it meets only half the goal.",
+    "B": "Correct. \"To learn whether tube wells were linked to karezes drying up\" is the aim, and mapping 60 karezes and counting nearby tube wells is the method.",
     "C": "Incorrect. It gives part of the method and explains what a karez is, but it never states what Kakar wanted to learn.",
-    "D": "Incorrect. It states the aim but leaves out the method, so it meets only half the goal."
+    "D": "Incorrect. It presents the study's finding, which the goal does not ask for."
   },
   "traps": {
-    "B": "misses_goal",
+    "A": "too_narrow",
     "C": "too_narrow",
-    "D": "too_narrow"
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

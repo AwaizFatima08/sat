@@ -46,23 +46,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "tabla, which was borrowed 88 times.",
-    "B": "sarod, which was borrowed 23 times.",
-    "C": "sitar, which costs the most to buy.",
-    "D": "harmonium, which was borrowed 112 times."
+    "A": "harmonium, which was borrowed 112 times.",
+    "B": "tabla, which was borrowed 88 times.",
+    "C": "sarod, which was borrowed 23 times.",
+    "D": "sitar, which costs the most to buy."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "To find the instrument borrowed most often, look for the tallest bar. The harmonium bar, at 112, is taller than every other bar.",
-    "A": "Incorrect. The tabla was borrowed often, but 88 is less than the harmonium's 112.",
-    "B": "Incorrect. The sarod was borrowed the fewest times, not the most.",
-    "C": "Incorrect. The graph shows how often instruments were borrowed, not what they cost.",
-    "D": "Correct. The harmonium bar is the tallest, at 112."
+    "A": "Correct. The harmonium bar is the tallest, at 112.",
+    "B": "Incorrect. The tabla was borrowed often, but 88 is less than the harmonium's 112.",
+    "C": "Incorrect. The sarod was borrowed the fewest times, not the most.",
+    "D": "Incorrect. The graph shows how often instruments were borrowed, not what they cost."
   },
   "traps": {
-    "A": "reversed",
     "B": "reversed",
-    "C": "not_in_text"
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -75,13 +75,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

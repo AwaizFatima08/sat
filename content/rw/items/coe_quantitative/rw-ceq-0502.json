@@ -42,21 +42,21 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "rose every year, from 35 schools to 245 schools.",
-    "B": "stayed at about 90 schools in every year.",
-    "C": "fell every year, from 245 schools to 35 schools.",
+    "A": "fell every year, from 245 schools to 35 schools.",
+    "B": "rose every year, from 35 schools to 245 schools.",
+    "C": "stayed at about 90 schools in every year.",
     "D": "rose fastest among schools for girls."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The statement describes how the number of schools changed from 2019 to 2022, so read the bars from left to right. They rise from 35 in 2019 to 90, then 160, then 245 in 2022.",
-    "A": "Correct. The bars grow taller each year: 35, 90, 160 and 245 schools.",
-    "B": "Incorrect. Only 2020 shows about 90 schools; the other years show 35, 160 and 245.",
-    "C": "Incorrect. This reverses the graph: 35 schools is the 2019 value and 245 is the 2022 value.",
+    "A": "Incorrect. This reverses the graph: 35 schools is the 2019 value and 245 is the 2022 value.",
+    "B": "Correct. The bars grow taller each year: 35, 90, 160 and 245 schools.",
+    "C": "Incorrect. Only 2020 shows about 90 schools; the other years show 35, 160 and 245.",
     "D": "Incorrect. The graph shows only the total number of schools; it does not separate schools for girls and boys."
   },
   "traps": {
-    "B": "reversed",
+    "A": "reversed",
     "C": "reversed",
     "D": "not_in_text"
   },
@@ -71,13 +71,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

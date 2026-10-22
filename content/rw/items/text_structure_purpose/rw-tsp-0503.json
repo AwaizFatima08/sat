@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It argues that the dam should be replaced with a modern structure.",
-    "B": "It explains how the dam was built and how it helped farmers.",
-    "C": "It identifies the ruler who is traditionally credited with the dam.",
-    "D": "It suggests that the dam no longer serves any practical purpose."
+    "A": "It explains how the dam was built and how it helped farmers.",
+    "B": "It identifies the ruler who is traditionally credited with the dam.",
+    "C": "It suggests that the dam no longer serves any practical purpose.",
+    "D": "It argues that the dam should be replaced with a modern structure."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The underlined sentence describes the dam's construction (\"unshaped stones piled across the riverbed\") and what it did: it sent water \"into channels that watered nearby fields.\" It explains how the dam was made and how it supported farming.",
-    "A": "Incorrect. The text never suggests replacing the dam; it notes that the dam still serves farmers.",
-    "B": "Correct. The sentence tells what the dam was made of and how it moved river water to the fields.",
-    "C": "Incorrect. King Karikalan is named in the previous sentence, not in the underlined one.",
-    "D": "Incorrect. The last sentence says the dam \"still serves farmers today,\" and the underlined sentence describes its usefulness."
+    "A": "Correct. The sentence tells what the dam was made of and how it moved river water to the fields.",
+    "B": "Incorrect. King Karikalan is named in the previous sentence, not in the underlined one.",
+    "C": "Incorrect. The last sentence says the dam \"still serves farmers today,\" and the underlined sentence describes its usefulness.",
+    "D": "Incorrect. The text never suggests replacing the dam; it notes that the dam still serves farmers."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "wrong_logic",
-    "D": "reversed"
+    "B": "wrong_logic",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

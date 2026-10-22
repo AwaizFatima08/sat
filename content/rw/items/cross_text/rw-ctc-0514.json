@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the label that travel guides give Taxila in Text 1?",
   "choices": {
-    "A": "By arguing that Taxila's way of teaching does not match what the word suggests",
-    "B": "By denying that Taxila was an important center of learning",
+    "A": "By suggesting that students at Taxila studied only medicine",
+    "B": "By arguing that Taxila's way of teaching does not match what the word suggests",
     "C": "By claiming that Nalanda was founded before Taxila became a center of learning",
-    "D": "By suggesting that students at Taxila studied only medicine"
+    "D": "By denying that Taxila was an important center of learning"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Text 1 reports that travel guides call Taxila \"the world's first university.\" Text 2 \"admire[s] Taxila's teachers\" but questions the label, because students learned from individual teachers with \"no shared campus, set courses, or formal exams.\" Text 2 says Taxila's teaching did not work like a university.",
-    "A": "Correct. Text 2 says Taxila lacked the campus, courses, and exams that the word \"university\" suggests.",
-    "B": "Incorrect. Text 2 says historians \"admire Taxila's teachers\"; it questions only the label.",
+    "A": "Incorrect. Text 1 lists medicine, law, and military skills, and Text 2 never limits the subjects.",
+    "B": "Correct. Text 2 says Taxila lacked the campus, courses, and exams that the word \"university\" suggests.",
     "C": "Incorrect. Text 2 says Nalanda was founded \"centuries later,\" not before Taxila.",
-    "D": "Incorrect. Text 1 lists medicine, law, and military skills, and Text 2 never limits the subjects."
+    "D": "Incorrect. Text 2 says historians \"admire Taxila's teachers\"; it questions only the label."
   },
   "traps": {
-    "B": "too_broad",
+    "A": "not_in_text",
     "C": "reversed",
-    "D": "not_in_text"
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

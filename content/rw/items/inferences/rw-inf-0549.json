@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "the hearth was first lit roughly four centuries after the people in the graves had died.",
-    "B": "charcoal from land plants gives less dependable radiocarbon dates than bone does.",
+    "A": "charcoal from land plants gives less dependable radiocarbon dates than bone does.",
+    "B": "the bones' older dates may not mean that the burials came before the hearth.",
     "C": "radiocarbon dates obtained from any human bone are about 400 years too old.",
-    "D": "the bones' older dates may not mean that the burials came before the hearth."
+    "D": "the hearth was first lit roughly four centuries after the people in the graves had died."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Taken at face value, the dates would put the burials four centuries before the hearth. But the people ate mostly fish, and a seafood diet makes bones date older than they are, while the hearth and graves lie in the same undisturbed layer. The age gap can therefore be explained by diet, so it does not show that the burials were earlier.",
-    "A": "Incorrect. This takes the bone dates at face value, ignoring that a fish-heavy diet makes bones appear centuries older than they are.",
-    "B": "Incorrect. The text never says charcoal gives unreliable dates; the problem it describes affects material from seafood eaters, such as these bones.",
+    "A": "Incorrect. The text never says charcoal gives unreliable dates; the problem it describes affects material from seafood eaters, such as these bones.",
+    "B": "Correct. A seafood diet makes bones date older, so the 400-year gap could come from diet rather than from the burials preceding the hearth.",
     "C": "Incorrect. The effect applies to people who ate mostly seafood, not to all human bone, and its size need not always be 400 years.",
-    "D": "Correct. A seafood diet makes bones date older, so the 400-year gap could come from diet rather than from the burials preceding the hearth."
+    "D": "Incorrect. This takes the bone dates at face value, ignoring that a fish-heavy diet makes bones appear centuries older than they are."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "C": "too_broad"
+    "A": "not_in_text",
+    "C": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

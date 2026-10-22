@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "grow",
-    "B": "are growing",
-    "C": "grows",
-    "D": "have grown"
+    "B": "have grown",
+    "C": "are growing",
+    "D": "grows"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The subject of the verb is \"stack,\" which is singular; \"of letters on his kitchen table\" only describes the stack. A singular subject needs a singular verb, and the passage uses the simple present for a habit (\"sits\"), so \"grows\" is correct.",
     "A": "Incorrect. \"Grow\" is plural and seems to agree with \"letters,\" but the subject is the singular \"stack.\"",
-    "B": "Incorrect. \"Are growing\" is plural, but the subject \"stack\" is singular.",
-    "C": "Correct. The singular verb \"grows\" agrees with the singular subject \"stack.\"",
-    "D": "Incorrect. \"Have grown\" is plural, but the subject \"stack\" is singular."
+    "B": "Incorrect. \"Have grown\" is plural, but the subject \"stack\" is singular.",
+    "C": "Incorrect. \"Are growing\" is plural, but the subject \"stack\" is singular.",
+    "D": "Correct. The singular verb \"grows\" agrees with the singular subject \"stack.\""
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "subject_verb",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

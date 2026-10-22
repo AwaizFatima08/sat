@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Therefore,",
-    "B": "Similarly,",
-    "C": "For example,",
+    "A": "For example,",
+    "B": "Therefore,",
+    "C": "Similarly,",
     "D": "However,"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The first part of the text describes how kangaroo rats survive without drinking. The last sentence describes a different animal, the addax, that does much the same thing. A transition that introduces a similar case is needed.",
-    "A": "Incorrect. The addax's ability is not caused by anything kangaroo rats do; it is a separate, parallel case.",
-    "B": "Correct. \"Similarly\" shows that the addax, like the kangaroo rat, survives in the desert without drinking.",
-    "C": "Incorrect. The addax is an antelope, so it cannot be an example of kangaroo rats. This is tempting because both animals illustrate desert survival.",
+    "A": "Incorrect. The addax is an antelope, so it cannot be an example of kangaroo rats. This is tempting because both animals illustrate desert survival.",
+    "B": "Incorrect. The addax's ability is not caused by anything kangaroo rats do; it is a separate, parallel case.",
+    "C": "Correct. \"Similarly\" shows that the addax, like the kangaroo rat, survives in the desert without drinking.",
     "D": "Incorrect. \"However\" signals a contrast, but the addax's ability matches the kangaroo rat's instead of differing from it."
   },
   "traps": {
     "A": "wrong_logic",
-    "C": "wrong_logic",
+    "B": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

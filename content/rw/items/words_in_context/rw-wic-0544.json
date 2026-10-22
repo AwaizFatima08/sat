@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "insurance",
-    "B": "defiance",
-    "C": "deception",
-    "D": "extravagance"
+    "B": "deception",
+    "C": "extravagance",
+    "D": "defiance"
   },
   "answer": "A",
   "explanation": {
     "why": "The text says the idle ants may be \"less a sign of waste\" than something useful, and the phrase after the comma defines the blank: \"a reserve that the colony can draw on\" in an emergency. The word must mean protection against future loss.",
     "A": "Correct. Insurance is protection kept in reserve against a possible loss, which matches idle workers who step in when active ones disappear.",
-    "B": "Incorrect. \"Defiance\" means open refusal to obey, but the idle ants readily take up work when needed.",
-    "C": "Incorrect. Nothing suggests the idle ants are tricking anyone; they are simply waiting in reserve.",
-    "D": "Incorrect. \"Extravagance\" means wasteful excess, which is the view the text says the experiments challenge."
+    "B": "Incorrect. Nothing suggests the idle ants are tricking anyone; they are simply waiting in reserve.",
+    "C": "Incorrect. \"Extravagance\" means wasteful excess, which is the view the text says the experiments challenge.",
+    "D": "Incorrect. \"Defiance\" means open refusal to obey, but the idle ants readily take up work when needed."
   },
   "traps": {
     "B": "not_in_text",
-    "C": "not_in_text",
-    "D": "reversed"
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

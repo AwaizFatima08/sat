@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "anticipates",
+    "A": "precludes",
     "B": "jeopardizes",
     "C": "overlooks",
-    "D": "precludes"
+    "D": "anticipates"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Proponents explain the thaw by a buildup of carbon dioxide, and the text adds that this atmosphere \"should have driven\" rapid carbonate deposition once the ice retreated. Carbonate layers lying right on top of glacial deposits are therefore exactly what the hypothesis expects. \"Anticipates\" means predicts or expects in advance.",
-    "A": "Correct. The hypothesis's own account of the thaw says carbonates \"should have\" formed after the ice, so the layers are something it predicts.",
+    "A": "Incorrect. To preclude something is to rule it out. The hypothesis calls for these deposits rather than ruling them out.",
     "B": "Incorrect. The text says the carbonate layers are \"not an awkward anomaly,\" so they do not threaten the hypothesis; they support it.",
     "C": "Incorrect. The text shows the hypothesis directly addresses carbonate deposition, so it does not overlook the layers.",
-    "D": "Incorrect. To preclude something is to rule it out. The hypothesis calls for these deposits rather than ruling them out."
+    "D": "Correct. The hypothesis's own account of the thaw says carbonates \"should have\" formed after the ice, so the layers are something it predicts."
   },
   "traps": {
+    "A": "reversed",
     "B": "reversed",
-    "C": "wrong_logic",
-    "D": "reversed"
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

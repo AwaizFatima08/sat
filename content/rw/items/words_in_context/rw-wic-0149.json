@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "weaken",
+    "A": "complicate",
     "B": "determine",
     "C": "decorate",
-    "D": "complicate"
+    "D": "weaken"
   },
   "answer": "B",
   "explanation": {
     "why": "The chains sag \"under their own weight,\" and the shape they take becomes the shape of the arch. Gravity is what decides the curve, so gravity \"determine[s]\" the forms.",
-    "A": "Incorrect. The upside-down curves produce arches that \"can stand without extra bracing,\" so gravity's role made them strong, not weak.",
+    "A": "Incorrect. The method gave Gaudí a simple way to find stable shapes; nothing suggests that gravity made the forms more complicated.",
     "B": "Correct. The shape of each sagging chain is set by gravity, and Gaudí built arches in those shapes, so gravity determined his forms.",
     "C": "Incorrect. The text is about the structural shape of the arches, not about their ornament.",
-    "D": "Incorrect. The method gave Gaudí a simple way to find stable shapes; nothing suggests that gravity made the forms more complicated."
+    "D": "Incorrect. The upside-down curves produce arches that \"can stand without extra bracing,\" so gravity's role made them strong, not weak."
   },
   "traps": {
-    "A": "reversed",
+    "A": "not_in_text",
     "C": "not_in_text",
-    "D": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

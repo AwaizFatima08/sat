@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "made noon in every town fall exactly when the Sun was highest.",
-    "B": "simplified timetables for trains that passed through many towns.",
-    "C": "allowed each town to keep its own local time on the timetables.",
-    "D": "made trains travel faster between distant cities in the country."
+    "A": "allowed each town to keep its own local time on the timetables.",
+    "B": "made trains travel faster between distant cities in the country.",
+    "C": "simplified timetables for trains that passed through many towns.",
+    "D": "made noon in every town fall exactly when the Sun was highest."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The railroads' problem was that timetables had to deal with dozens of different local times. Replacing them with a few standard zones meant many towns shared one time, which would make timetables far simpler.",
-    "A": "Incorrect. With a few shared zones, most towns would no longer set noon by the Sun's exact position.",
-    "B": "Correct. A few zones in place of dozens of local times would make railroad timetables much simpler.",
-    "C": "Incorrect. Standard zones replaced the many local times rather than keeping them.",
-    "D": "Incorrect. The change affected how time was recorded, not how fast trains moved."
+    "A": "Incorrect. Standard zones replaced the many local times rather than keeping them.",
+    "B": "Incorrect. The change affected how time was recorded, not how fast trains moved.",
+    "C": "Correct. A few zones in place of dozens of local times would make railroad timetables much simpler.",
+    "D": "Incorrect. With a few shared zones, most towns would no longer set noon by the Sun's exact position."
   },
   "traps": {
     "A": "reversed",
-    "C": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

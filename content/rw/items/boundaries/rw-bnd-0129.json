@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "heat, the",
+    "A": "heat, but, the",
     "B": "heat; the",
-    "C": "heat the",
-    "D": "heat, but, the"
+    "C": "heat, the",
+    "D": "heat the"
   },
   "answer": "B",
   "explanation": {
     "why": "\"The hornet cannot survive this heat\" and \"the bees, which can tolerate temperatures a few degrees higher, usually do\" are both independent clauses; the \"which\" clause inside the second one is extra information. A semicolon can join two closely related independent clauses.",
-    "A": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice.",
+    "A": "Incorrect. A comma before \"but\" is enough to join the two independent clauses; no comma should follow \"but.\"",
     "B": "Correct. A semicolon correctly joins the two closely related independent clauses.",
-    "C": "Incorrect. With no punctuation, the two independent clauses run together (a run-on sentence).",
-    "D": "Incorrect. A comma before \"but\" is enough to join the two independent clauses; no comma should follow \"but.\""
+    "C": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice.",
+    "D": "Incorrect. With no punctuation, the two independent clauses run together (a run-on sentence)."
   },
   "traps": {
     "A": "grammar_rule",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

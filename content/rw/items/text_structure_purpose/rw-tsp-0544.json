@@ -15,21 +15,21 @@
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
     "A": "It reveals an expectation at odds with what Clara finds, setting up her calm response.",
-    "B": "It explains the reasons that led Clara to accept a teaching position in the West.",
-    "C": "It foreshadows the white schoolhouse with a bell that Clara will soon discover near the crossroads.",
+    "B": "It foreshadows the white schoolhouse with a bell that Clara will soon discover near the crossroads.",
+    "C": "It explains the reasons that led Clara to accept a teaching position in the West.",
     "D": "It shows that Clara bitterly regrets having left her home to travel so far west."
   },
   "answer": "A",
   "explanation": {
     "why": "Before the underlined sentence, Clara sees only empty prairie and \"a sod house.\" The underlined sentence tells what she had imagined: \"a white schoolhouse with a bell.\" The contrast highlights her disappointment, and the next sentence (\"Now she smoothed her gloves...\") shows her composed reaction as she begins studying her primer.",
     "A": "Correct. Her imagined schoolhouse contrasts with the sod house, and the following sentence shows her meeting the letdown calmly.",
-    "B": "Incorrect. The sentence describes what Clara imagined during the trip, not why she took the job.",
-    "C": "Incorrect. Nothing suggests a schoolhouse is nearby; the sentence describes an expectation that the scene has not met.",
+    "B": "Incorrect. Nothing suggests a schoolhouse is nearby; the sentence describes an expectation that the scene has not met.",
+    "C": "Incorrect. The sentence describes what Clara imagined during the trip, not why she took the job.",
     "D": "Incorrect. Clara's calm, careful reading of the primer shows composure, not bitter regret."
   },
   "traps": {
-    "B": "not_in_text",
-    "C": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "not_in_text",
     "D": "too_broad"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

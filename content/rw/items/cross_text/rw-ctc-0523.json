@@ -15,21 +15,21 @@
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the argument in Text 1?",
   "choices": {
     "A": "By agreeing that young crows cannot use tools until they have watched adults",
-    "B": "By suggesting that watching adults may refine tool use but is not where it begins",
-    "C": "By arguing that young crows learn tool use mainly from crows other than their parents",
+    "B": "By arguing that young crows learn tool use mainly from crows other than their parents",
+    "C": "By suggesting that watching adults may refine tool use but is not where it begins",
     "D": "By claiming that observation plays no part in how crows develop tool skills"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Taufa argues in Text 1 that young crows learn tool use by watching adults. In Text 2, crows with \"no adult crows to watch\" still began using sticks, so the basic urge is \"inborn,\" though \"observation may help the birds refine their skills.\" Text 2 would say watching adults explains the refinement of tool use, not its origin.",
     "A": "Incorrect. The crows in Text 2 used sticks \"on their own\" with no adults to watch, the opposite of this choice.",
-    "B": "Correct. Text 2 says the basic urge is inborn, while observation may help refine skills.",
-    "C": "Incorrect. Text 2 never compares learning from parents with learning from other crows.",
+    "B": "Incorrect. Text 2 never compares learning from parents with learning from other crows.",
+    "C": "Correct. Text 2 says the basic urge is inborn, while observation may help refine skills.",
     "D": "Incorrect. Text 2 says observation \"may help the birds refine their skills,\" so it does not rule observation out."
   },
   "traps": {
     "A": "reversed",
-    "C": "not_in_text",
+    "B": "not_in_text",
     "D": "too_broad"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

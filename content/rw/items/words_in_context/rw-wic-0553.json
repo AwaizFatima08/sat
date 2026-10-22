@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "deterministic",
-    "B": "probabilistic",
-    "C": "cyclical",
-    "D": "imminent"
+    "A": "cyclical",
+    "B": "deterministic",
+    "C": "imminent",
+    "D": "probabilistic"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "\"However\" contrasts the reliable behavior of a whole sample with the behavior of one nucleus. The colon defines the blank: physics can give only \"the likelihood\" of decay, never the moment. The word must mean \"governed by chance and describable only in terms of likelihood.\"",
-    "A": "Incorrect. \"Deterministic\" means fixed in advance by prior conditions. The regularity of a large sample might suggest this, but the text says the timing for one nucleus cannot be specified \"even in principle.\"",
-    "B": "Correct. \"Probabilistic\" means describable only in terms of probability, which fits decay whose likelihood can be stated but whose timing cannot.",
-    "C": "Incorrect. \"Cyclical\" means repeating in a regular cycle, but a nucleus decays once, and the text says its age does not make decay any more \"due.\"",
-    "D": "Incorrect. \"Imminent\" means about to happen, but a single nucleus may survive for billions of years; the text stresses that its timing is unknown."
+    "A": "Incorrect. \"Cyclical\" means repeating in a regular cycle, but a nucleus decays once, and the text says its age does not make decay any more \"due.\"",
+    "B": "Incorrect. \"Deterministic\" means fixed in advance by prior conditions. The regularity of a large sample might suggest this, but the text says the timing for one nucleus cannot be specified \"even in principle.\"",
+    "C": "Incorrect. \"Imminent\" means about to happen, but a single nucleus may survive for billions of years; the text stresses that its timing is unknown.",
+    "D": "Correct. \"Probabilistic\" means describable only in terms of probability, which fits decay whose likelihood can be stated but whose timing cannot."
   },
   "traps": {
-    "A": "reversed",
-    "C": "not_in_text",
-    "D": "wrong_logic"
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -15,21 +15,21 @@
   "stem": "Which choice most logically completes the text?",
   "choices": {
     "A": "must find a pond or stream to drink from every few days.",
-    "B": "choose seeds because seeds hold more water than other desert foods.",
-    "C": "can survive for long periods without drinking any water at all.",
+    "B": "can survive for long periods without drinking any water at all.",
+    "C": "choose seeds because seeds hold more water than other desert foods.",
     "D": "lose more water through their kidneys than most other rodents do."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The text says open water is rare where kangaroo rats live, that digesting seeds releases water inside their bodies, and that their kidneys hold on to that water. An animal that makes and keeps its own water does not need to drink, so it can go a long time without drinking.",
     "A": "Incorrect. The text stresses that open water is rare and explains how the rats get water without drinking, so it gives no reason to think they need ponds or streams.",
-    "B": "Incorrect. The text calls the seeds \"dry\"; the water comes from breaking the seeds down, not from water stored in them.",
-    "C": "Correct. Water released while digesting seeds, kept by very efficient kidneys, lets the rats go without drinking.",
+    "B": "Correct. Water released while digesting seeds, kept by very efficient kidneys, lets the rats go without drinking.",
+    "C": "Incorrect. The text calls the seeds \"dry\"; the water comes from breaking the seeds down, not from water stored in them.",
     "D": "Incorrect. This reverses the text, which says their kidneys are extremely efficient at holding on to water."
   },
   "traps": {
     "A": "reversed",
-    "B": "not_in_text",
+    "C": "not_in_text",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

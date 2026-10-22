@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "ago,",
-    "B": "ago",
-    "C": "ago;",
-    "D": "ago—"
+    "B": "ago;",
+    "C": "ago—",
+    "D": "ago"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The subject \"Dickinsonia\" is followed by a long description that opens with a dash, and the verb is \"resisted.\" The description contains several commas of its own, but it began with a dash, so it must end with a matching dash before \"long resisted classification.\"",
     "A": "Incorrect. The commas inside the description make a comma tempting, but extra information that opens with a dash can't close with a comma; the two marks must match.",
-    "B": "Incorrect. Without a closing dash, the description is never set off, and \"ago long resisted\" runs the description into the main verb.",
-    "C": "Incorrect. A semicolon would separate the subject \"Dickinsonia\" from its verb \"resisted,\" and neither side would be an independent clause.",
-    "D": "Correct. The second dash closes the pair around the description, so the subject \"Dickinsonia\" connects to its verb \"resisted.\""
+    "B": "Incorrect. A semicolon would separate the subject \"Dickinsonia\" from its verb \"resisted,\" and neither side would be an independent clause.",
+    "C": "Correct. The second dash closes the pair around the description, so the subject \"Dickinsonia\" connects to its verb \"resisted.\"",
+    "D": "Incorrect. Without a closing dash, the description is never set off, and \"ago long resisted\" runs the description into the main verb."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "D": "grammar_rule"
   },
   "grammar": "supplements",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

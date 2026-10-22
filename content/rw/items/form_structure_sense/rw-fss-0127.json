@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "Ibn Khaldun examined in the Muqaddimah why dynasties rise and fall.",
-    "B": "the Muqaddimah examines why dynasties rise and fall.",
+    "A": "the Muqaddimah examines why dynasties rise and fall.",
+    "B": "the question of why dynasties rise and fall is examined in the Muqaddimah.",
     "C": "why dynasties rise and fall is examined by Ibn Khaldun in the Muqaddimah.",
-    "D": "the question of why dynasties rise and fall is examined in the Muqaddimah."
+    "D": "Ibn Khaldun examined in the Muqaddimah why dynasties rise and fall."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The phrase \"Completed in 1377 as the introduction to that history\" describes a piece of writing, so the noun right after the comma must name that writing: the Muqaddimah. Ibn Khaldun himself was not \"completed\" as an introduction.",
-    "A": "Incorrect. This choice places \"Ibn Khaldun\" after the phrase, saying the scholar himself was completed as an introduction.",
-    "B": "Correct. \"The Muqaddimah\" comes right after the introductory phrase, so it is clear the book was completed in 1377.",
+    "A": "Correct. \"The Muqaddimah\" comes right after the introductory phrase, so it is clear the book was completed in 1377.",
+    "B": "Incorrect. This choice says \"the question\" was completed in 1377 as an introduction; the modifier must describe the book.",
     "C": "Incorrect. This choice says a question (\"why dynasties rise and fall\") was completed as the introduction, which makes no sense.",
-    "D": "Incorrect. This choice says \"the question\" was completed in 1377 as an introduction; the modifier must describe the book."
+    "D": "Incorrect. This choice places \"Ibn Khaldun\" after the phrase, saying the scholar himself was completed as an introduction."
   },
   "traps": {
-    "A": "grammar_rule",
+    "B": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

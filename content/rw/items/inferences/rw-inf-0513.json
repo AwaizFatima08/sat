@@ -15,22 +15,22 @@
   "stem": "Which choice most logically completes the text?",
   "choices": {
     "A": "was confident that he had already won a place in the orchestra.",
-    "B": "had lost interest in music after a difficult audition.",
-    "C": "was too anxious about the results to focus on anything else.",
-    "D": "was hoping to practice once more before the results appeared."
+    "B": "was too anxious about the results to focus on anything else.",
+    "C": "was hoping to practice once more before the results appeared.",
+    "D": "had lost interest in music after a difficult audition."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Rafael keeps doing pointless tasks, cannot take in what he reads, and checks the clock again and again while waiting for the results. These are signs of nervous waiting.",
     "A": "Incorrect. His restless behavior shows worry, not calm confidence.",
-    "B": "Incorrect. Nothing suggests he has lost interest in music; he is eagerly waiting for the results.",
-    "C": "Correct. Retuning an instrument he will not play, rereading without understanding, and watching the clock all show anxiety.",
-    "D": "Incorrect. The text says he had no plans to play the violin."
+    "B": "Correct. Retuning an instrument he will not play, rereading without understanding, and watching the clock all show anxiety.",
+    "C": "Incorrect. The text says he had no plans to play the violin.",
+    "D": "Incorrect. Nothing suggests he has lost interest in music; he is eagerly waiting for the results."
   },
   "traps": {
     "A": "reversed",
-    "B": "not_in_text",
-    "D": "reversed"
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

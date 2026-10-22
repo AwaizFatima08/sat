@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "in early autumn, before the goats have grown their soft layer.",
-    "B": "in spring, around the time the goats begin to shed it.",
-    "C": "from the coarse outer hair rather than the layer beneath it.",
-    "D": "only from goats that live in warmer valleys below the plateau."
+    "A": "only from goats that live in warmer valleys below the plateau.",
+    "B": "from the coarse outer hair rather than the layer beneath it.",
+    "C": "in spring, around the time the goats begin to shed it.",
+    "D": "in early autumn, before the goats have grown their soft layer."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The pashm grows as winter approaches and is shed when spring comes. The sensible time to collect it is in spring, when the layer is full and starting to come loose.",
-    "A": "Incorrect. Before winter the goats have not yet grown the soft layer, so there would be little pashm to collect.",
-    "B": "Correct. In spring the layer is fully grown and already loosening, so herders can gather it then.",
-    "C": "Incorrect. The text says pashm is the fine layer beneath the coarse outer hair, not the outer hair itself.",
-    "D": "Incorrect. The text gives no information about goats in warmer valleys; it links the soft layer to cold weather."
+    "A": "Incorrect. The text gives no information about goats in warmer valleys; it links the soft layer to cold weather.",
+    "B": "Incorrect. The text says pashm is the fine layer beneath the coarse outer hair, not the outer hair itself.",
+    "C": "Correct. In spring the layer is fully grown and already loosening, so herders can gather it then.",
+    "D": "Incorrect. Before winter the goats have not yet grown the soft layer, so there would be little pashm to collect."
   },
   "traps": {
-    "A": "reversed",
-    "C": "reversed",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

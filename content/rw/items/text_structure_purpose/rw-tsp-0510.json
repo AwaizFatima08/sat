@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It identifies the region where the wood frog is found.",
-    "B": "It describes how the frog finds food once spring arrives.",
-    "C": "It suggests that the frog's body does nothing to prepare for freezing.",
-    "D": "It describes a response whose purpose is explained in the next sentence."
+    "A": "It describes how the frog finds food once spring arrives.",
+    "B": "It describes a response whose purpose is explained in the next sentence.",
+    "C": "It identifies the region where the wood frog is found.",
+    "D": "It suggests that the frog's body does nothing to prepare for freezing."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The underlined sentence describes what the frog's body does as ice forms: the liver releases sugar. The next sentence begins \"The sugar helps\" and explains what that release achieves. So the underlined sentence gives the response, and the following sentence gives its purpose.",
-    "A": "Incorrect. The frog's range is given in the first sentence, not the underlined one.",
-    "B": "Incorrect. The text never discusses how the frog finds food.",
-    "C": "Incorrect. Releasing sugar is exactly how the frog's body prepares for freezing.",
-    "D": "Correct. The sentence describes the sugar release, and the next sentence explains how it protects the frog's cells."
+    "A": "Incorrect. The text never discusses how the frog finds food.",
+    "B": "Correct. The sentence describes the sugar release, and the next sentence explains how it protects the frog's cells.",
+    "C": "Incorrect. The frog's range is given in the first sentence, not the underlined one.",
+    "D": "Incorrect. Releasing sugar is exactly how the frog's body prepares for freezing."
   },
   "traps": {
-    "A": "wrong_logic",
-    "B": "not_in_text",
-    "C": "reversed"
+    "A": "not_in_text",
+    "C": "wrong_logic",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

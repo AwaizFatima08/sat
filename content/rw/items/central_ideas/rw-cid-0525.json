@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Snapping shrimp are louder than any other animal that lives in the ocean.",
-    "B": "Large colonies of snapping shrimp can interfere with underwater sonar.",
-    "C": "The shrimp's crack is produced when the two halves of its claw strike together.",
-    "D": "Research showed that the shrimp's snap comes from a collapsing bubble, not the claw."
+    "A": "Research showed that the shrimp's snap comes from a collapsing bubble, not the claw.",
+    "B": "Snapping shrimp are louder than any other animal that lives in the ocean.",
+    "C": "Large colonies of snapping shrimp can interfere with underwater sonar.",
+    "D": "The shrimp's crack is produced when the two halves of its claw strike together."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The text sets up an old assumption (the sound comes from the claw's halves striking) and then reports what high-speed video and recordings \"told\" instead: the crack comes from a collapsing low-pressure bubble. The main idea is this corrected explanation of the sound.",
-    "A": "Incorrect. The text says the shrimp is \"among the loudest\" animals, not the loudest of all.",
-    "B": "Incorrect. The sonar detail shows how loud the shrimp are, but it is not what the text is mainly about.",
-    "C": "Incorrect. This is the old assumption that the newer research overturned.",
-    "D": "Correct. This states the text's central finding, which replaces the earlier assumption about the claw."
+    "A": "Correct. This states the text's central finding, which replaces the earlier assumption about the claw.",
+    "B": "Incorrect. The text says the shrimp is \"among the loudest\" animals, not the loudest of all.",
+    "C": "Incorrect. The sonar detail shows how loud the shrimp are, but it is not what the text is mainly about.",
+    "D": "Incorrect. This is the old assumption that the newer research overturned."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "too_narrow",
-    "C": "reversed"
+    "B": "too_broad",
+    "C": "too_narrow",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

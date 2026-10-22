@@ -15,22 +15,22 @@
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
     "A": "The tulip crash of 1637 ruined thousands of ordinary Dutch merchants and craftsmen.",
-    "B": "Records suggest the tulip mania did far less damage than its reputation implies.",
-    "C": "Moralizing pamphlets of the 1630s were what caused tulip prices to collapse.",
-    "D": "Contracts for rare tulip bulbs briefly sold for extraordinary sums in the 1630s."
+    "B": "Moralizing pamphlets of the 1630s were what caused tulip prices to collapse.",
+    "C": "Contracts for rare tulip bulbs briefly sold for extraordinary sums in the 1630s.",
+    "D": "Records suggest the tulip mania did far less damage than its reputation implies."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The text contrasts the popular story of a crash that \"ruined thousands\" with what historians found in records: a small circle of traders and \"few bankruptcies.\" It concludes that the episode's reputation \"owes more to its retelling than to its actual effects.\" The main idea is this correction of an exaggerated reputation.",
     "A": "Incorrect. This is the popular version that the historians' research challenges.",
-    "B": "Correct. This captures the contrast between the archival evidence and the episode's reputation.",
-    "C": "Incorrect. The text says the pamphlets shaped the story told about the crash, not that they caused it.",
-    "D": "Incorrect. This is background from the first sentence and leaves out the historians' reassessment."
+    "B": "Incorrect. The text says the pamphlets shaped the story told about the crash, not that they caused it.",
+    "C": "Incorrect. This is background from the first sentence and leaves out the historians' reassessment.",
+    "D": "Correct. This captures the contrast between the archival evidence and the episode's reputation."
   },
   "traps": {
     "A": "reversed",
-    "C": "not_in_text",
-    "D": "too_narrow"
+    "B": "not_in_text",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

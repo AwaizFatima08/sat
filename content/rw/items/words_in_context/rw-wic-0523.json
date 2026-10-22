@@ -14,23 +14,23 @@
   "data": null,
   "stem": "As used in the text, what does the word \"measured\" most nearly mean?",
   "choices": {
-    "A": "counted",
-    "B": "hesitant",
-    "C": "rhythmic",
-    "D": "deliberate"
+    "A": "deliberate",
+    "B": "rhythmic",
+    "C": "hesitant",
+    "D": "counted"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Before replying, the first mate checks the sail, the crew, and the sky. Her answer then gives a reasoned judgment with a clear condition (\"but only if no one stopped to rest\"). So \"measured\" here means carefully considered, or \"deliberate.\"",
-    "A": "Incorrect. She did count the sailors, but that describes what she did before answering. \"Measured\" describes her reply, which cannot be \"counted.\" This choice uses a literal sense of the word that does not fit here.",
-    "B": "Incorrect. She paused before speaking, but the pause was spent gathering facts. The reply itself is a firm judgment (\"the work could be done\"), not an unsure or wavering one.",
-    "C": "Incorrect. \"Measured\" can describe a regular beat, as in music or verse, but nothing in the text concerns the sound or rhythm of her words.",
-    "D": "Correct. The first mate weighed the sail, the crew, and the sky before answering, and her reply sets out a clear judgment with a condition. A measured reply in this sense is carefully thought out: deliberate."
+    "A": "Correct. The first mate weighed the sail, the crew, and the sky before answering, and her reply sets out a clear judgment with a condition. A measured reply in this sense is carefully thought out: deliberate.",
+    "B": "Incorrect. \"Measured\" can describe a regular beat, as in music or verse, but nothing in the text concerns the sound or rhythm of her words.",
+    "C": "Incorrect. She paused before speaking, but the pause was spent gathering facts. The reply itself is a firm judgment (\"the work could be done\"), not an unsure or wavering one.",
+    "D": "Incorrect. She did count the sailors, but that describes what she did before answering. \"Measured\" describes her reply, which cannot be \"counted.\" This choice uses a literal sense of the word that does not fit here."
   },
   "traps": {
-    "A": "wrong_tone",
-    "B": "wrong_tone",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "C": "wrong_tone",
+    "D": "wrong_tone"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

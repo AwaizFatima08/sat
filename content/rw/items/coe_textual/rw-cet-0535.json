@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Brandt's proposal?",
   "choices": {
-    "A": "In recordings made at village gatherings, listeners can often be heard singing along with the refrains.",
-    "B": "Many of the ballads in the recordings had also been printed on cheap song sheets sold at fairs.",
-    "C": "Some refrains in the recorded ballads consist of nonsense syllables with no clear meaning.",
-    "D": "When singers in the recordings faltered over a verse, they most often recovered right after a refrain."
+    "A": "Some refrains in the recorded ballads consist of nonsense syllables with no clear meaning.",
+    "B": "When singers in the recordings faltered over a verse, they most often recovered right after a refrain.",
+    "C": "Many of the ballads in the recordings had also been printed on cheap song sheets sold at fairs.",
+    "D": "In recordings made at village gatherings, listeners can often be heard singing along with the refrains."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Brandt claims refrains mainly helped singers remember what came next. The most direct support would show refrains actually working that way during performance. Singers regaining their place just after a refrain shows the refrain giving them time to recall the next verse.",
-    "A": "Incorrect. Listeners singing along fits the usual explanation, audience participation, rather than Brandt's memory explanation.",
-    "B": "Incorrect. Whether ballads were also printed says nothing about what the refrains did for singers.",
-    "C": "Incorrect. The meaning of a refrain's words does not show whether refrains helped singers recall verses.",
-    "D": "Correct. Recovering right after a refrain suggests the refrain gave singers a pause in which to remember the next verse, as Brandt proposes."
+    "A": "Incorrect. The meaning of a refrain's words does not show whether refrains helped singers recall verses.",
+    "B": "Correct. Recovering right after a refrain suggests the refrain gave singers a pause in which to remember the next verse, as Brandt proposes.",
+    "C": "Incorrect. Whether ballads were also printed says nothing about what the refrains did for singers.",
+    "D": "Incorrect. Listeners singing along fits the usual explanation, audience participation, rather than Brandt's memory explanation."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "C": "true_irrelevant"
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

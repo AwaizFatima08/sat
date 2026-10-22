@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It describes a character's memory of her father and then explains why she has avoided the square ever since.",
-    "B": "It traces a character's idle thoughts, a memory revived by a smell, and her slightly altered return to her errand.",
-    "C": "It contrasts a character's errands with her father's habits and concludes that she has grown to resemble him.",
-    "D": "It shows a character straining to recall a memory and then succeeding only after she has left the square."
+    "A": "It traces a character's idle thoughts, a memory revived by a smell, and her slightly altered return to her errand.",
+    "B": "It contrasts a character's errands with her father's habits and concludes that she has grown to resemble him.",
+    "C": "It shows a character straining to recall a memory and then succeeding only after she has left the square.",
+    "D": "It describes a character's memory of her father and then explains why she has avoided the square ever since."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Agnes begins \"thinking of nothing in particular\" when the chestnut smell brings back a childhood memory \"entire and without warning.\" She stops, then continues \"a little more slowly\" toward the cleaner's. The text moves from ordinary thoughts, to a sudden memory, to her return to the errand with a small change in her pace.",
-    "A": "Incorrect. Agnes crosses the square as part of an ordinary errand; nothing suggests she has avoided it.",
-    "B": "Correct. Idle thoughts give way to a vivid memory, and she goes on with her errand, \"a little more slowly.\"",
-    "C": "Incorrect. The text never compares her habits to her father's or says she resembles him; it presents one memory of him.",
-    "D": "Incorrect. The memory arrives suddenly and \"without warning\" while she is in the square; she makes no effort to recall it."
+    "A": "Correct. Idle thoughts give way to a vivid memory, and she goes on with her errand, \"a little more slowly.\"",
+    "B": "Incorrect. The text never compares her habits to her father's or says she resembles him; it presents one memory of him.",
+    "C": "Incorrect. The memory arrives suddenly and \"without warning\" while she is in the square; she makes no effort to recall it.",
+    "D": "Incorrect. Agnes crosses the square as part of an ordinary errand; nothing suggests she has avoided it."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "too_broad",
-    "D": "reversed"
+    "B": "too_broad",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

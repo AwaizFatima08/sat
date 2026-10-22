@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "arbitrary",
-    "B": "improvised",
-    "C": "definitive",
-    "D": "anachronistic"
+    "A": "definitive",
+    "B": "arbitrary",
+    "C": "anachronistic",
+    "D": "improvised"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The word \"when\" sets up a contrast between how the printed part looks and what the composer intended. The composer expected each player to fill in the harmony \"differently,\" so the problem with a printed part is that it makes one version look like the only correct one.",
-    "A": "Incorrect. \"Arbitrary\" means chosen without reason. A printed part does not make choices look random; if anything, it makes them look official.",
-    "B": "Incorrect. A part that is fully written out looks fixed, not improvised; improvising is what the composer expected the players to do.",
-    "C": "Correct. \"Definitive\" means final and authoritative, which is the misleading impression a printed part gives when the composer expected many versions.",
-    "D": "Incorrect. \"Anachronistic\" means belonging to the wrong period. The text's contrast is between one fixed version and many possible versions, not between old and modern styles."
+    "A": "Correct. \"Definitive\" means final and authoritative, which is the misleading impression a printed part gives when the composer expected many versions.",
+    "B": "Incorrect. \"Arbitrary\" means chosen without reason. A printed part does not make choices look random; if anything, it makes them look official.",
+    "C": "Incorrect. \"Anachronistic\" means belonging to the wrong period. The text's contrast is between one fixed version and many possible versions, not between old and modern styles.",
+    "D": "Incorrect. A part that is fully written out looks fixed, not improvised; improvising is what the composer expected the players to do."
   },
   "traps": {
-    "A": "wrong_logic",
-    "B": "reversed",
-    "D": "not_in_text"
+    "B": "wrong_logic",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

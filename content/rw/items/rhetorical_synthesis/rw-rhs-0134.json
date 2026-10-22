@@ -19,18 +19,18 @@
   "data": null,
   "stem": "The student wants to make a generalization about the evolutionary origins of bioluminescence. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "In most bioluminescent organisms, from fireflies to deep-sea fish, light results from a luciferase acting on a luciferin.",
+    "A": "Bioluminescence, the production of light by living things, occurs in fireflies, certain fungi, many deep-sea fish, and some bacteria.",
     "B": "The luciferins and luciferases found in different groups of light-producing organisms often differ considerably in structure.",
     "C": "Bioluminescence seems to have evolved independently dozens of times, in organisms as different as fireflies, fungi, and fish.",
-    "D": "Bioluminescence, the production of light by living things, occurs in fireflies, certain fungi, many deep-sea fish, and some bacteria."
+    "D": "In most bioluminescent organisms, from fireflies to deep-sea fish, light results from a luciferase acting on a luciferin."
   },
   "answer": "C",
   "explanation": {
     "why": "The goal is a generalization about origins, that is, how bioluminescence arose. The notes' conclusion is that it evolved independently dozens of times. Other choices make general statements too, but about how the light is produced or where it occurs, not about how it evolved.",
-    "A": "Incorrect. This is a generalization, but about the chemistry of light production, not about how bioluminescence evolved. It is the most tempting near miss.",
+    "A": "Incorrect. This generalizes about which organisms produce light, not about how that ability evolved.",
     "B": "Incorrect. This is the evidence that biologists use, but it does not state the conclusion about origins that the evidence supports.",
     "C": "Correct. It states the general conclusion about origins: bioluminescence evolved independently many times in very different organisms.",
-    "D": "Incorrect. This generalizes about which organisms produce light, not about how that ability evolved."
+    "D": "Incorrect. This is a generalization, but about the chemistry of light production, not about how bioluminescence evolved. It is the most tempting near miss."
   },
   "traps": {
     "A": "misses_goal",
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

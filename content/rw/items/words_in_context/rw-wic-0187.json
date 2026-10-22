@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "precondition",
-    "B": "repudiation",
-    "C": "consequence",
-    "D": "distortion"
+    "A": "repudiation",
+    "B": "distortion",
+    "C": "precondition",
+    "D": "consequence"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The text explains how installment publication \"shaped the fiction itself,\" leading to cliffhangers and midcourse changes. The episodic structure therefore resulted from those conditions, so it was a \"consequence\" of them.",
-    "A": "Incorrect. A precondition comes first and makes something possible. The publishing conditions came first; the structure followed from them, not the other way around.",
-    "B": "Incorrect. To repudiate is to reject. The structure grew out of the publishing conditions rather than rejecting them.",
-    "C": "Correct. The structure resulted from the way the novels were published, which the text says \"shaped the fiction itself.\"",
-    "D": "Incorrect. Nothing suggests the structure misrepresented the conditions of publication; it resulted from them."
+    "A": "Incorrect. To repudiate is to reject. The structure grew out of the publishing conditions rather than rejecting them.",
+    "B": "Incorrect. Nothing suggests the structure misrepresented the conditions of publication; it resulted from them.",
+    "C": "Incorrect. A precondition comes first and makes something possible. The publishing conditions came first; the structure followed from them, not the other way around.",
+    "D": "Correct. The structure resulted from the way the novels were published, which the text says \"shaped the fiction itself.\""
   },
   "traps": {
     "A": "reversed",
-    "B": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

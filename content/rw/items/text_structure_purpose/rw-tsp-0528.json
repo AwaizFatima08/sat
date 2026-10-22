@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that Mercator's map should no longer be used for any purpose",
-    "B": "To explain the purpose of a map's design and a distortion that came with it",
-    "C": "To describe how sailors found their way at sea before 1569",
-    "D": "To compare the actual sizes of Greenland and Africa"
+    "A": "To explain the purpose of a map's design and a distortion that came with it",
+    "B": "To describe how sailors found their way at sea before 1569",
+    "C": "To compare the actual sizes of Greenland and Africa",
+    "D": "To argue that Mercator's map should no longer be used for any purpose"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The text first explains what Mercator's map was for: letting sailors plot a constant compass course as a straight line. \"That advantage came at a price\" then introduces the drawback, the growing stretch near the poles that makes Greenland look as large as Africa. The purpose covers both the design's benefit and its cost.",
-    "A": "Incorrect. The text describes a drawback but never says the map should be abandoned, so this claims more than the text does.",
-    "B": "Correct. The text explains why the map was useful for navigation and then the size distortion that this design caused.",
-    "C": "Incorrect. The text says nothing about navigation methods before Mercator's map.",
-    "D": "Incorrect. Greenland and Africa are compared only as an example of the distortion; that comparison is a detail, not the main purpose."
+    "A": "Correct. The text explains why the map was useful for navigation and then the size distortion that this design caused.",
+    "B": "Incorrect. The text says nothing about navigation methods before Mercator's map.",
+    "C": "Incorrect. Greenland and Africa are compared only as an example of the distortion; that comparison is a detail, not the main purpose.",
+    "D": "Incorrect. The text describes a drawback but never says the map should be abandoned, so this claims more than the text does."
   },
   "traps": {
-    "A": "too_broad",
-    "C": "not_in_text",
-    "D": "too_narrow"
+    "B": "not_in_text",
+    "C": "too_narrow",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the view of the teachers in Text 1?",
   "choices": {
-    "A": "By agreeing that people who listen to books remember less than readers do",
-    "B": "By arguing that audiobooks are better than print for every type of book",
-    "C": "By suggesting that schools should replace printed books with recordings",
-    "D": "By noting that in one test, listeners understood a book as well as readers"
+    "A": "By suggesting that schools should replace printed books with recordings",
+    "B": "By noting that in one test, listeners understood a book as well as readers",
+    "C": "By arguing that audiobooks are better than print for every type of book",
+    "D": "By agreeing that people who listen to books remember less than readers do"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The teachers in Text 1 claim that listeners \"will understand and remember less.\" In Text 2, Ferreira's listeners and readers \"answered about the same number of questions correctly,\" so he concluded that listening and reading led to \"similar understanding.\" The author of Text 2 would answer the teachers by pointing to this result.",
-    "A": "Incorrect. This is the teachers' view in Text 1; Text 2's test found that the two groups did about equally well.",
-    "B": "Incorrect. Text 2 found similar results, not better ones, and limits its conclusion to \"this kind of book.\"",
-    "C": "Incorrect. Text 2 does not recommend replacing printed books; it only compares understanding.",
-    "D": "Correct. Text 2 reports that listeners and readers did about equally well on the test, which challenges the teachers' claim."
+    "A": "Incorrect. Text 2 does not recommend replacing printed books; it only compares understanding.",
+    "B": "Correct. Text 2 reports that listeners and readers did about equally well on the test, which challenges the teachers' claim.",
+    "C": "Incorrect. Text 2 found similar results, not better ones, and limits its conclusion to \"this kind of book.\"",
+    "D": "Incorrect. This is the teachers' view in Text 1; Text 2's test found that the two groups did about equally well."
   },
   "traps": {
-    "A": "reversed",
-    "B": "too_broad",
-    "C": "not_in_text"
+    "A": "not_in_text",
+    "C": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

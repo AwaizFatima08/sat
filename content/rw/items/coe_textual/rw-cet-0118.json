@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Baig's hypothesis?",
   "choices": {
-    "A": "Cameras recorded snow leopards more often in ungrazed valleys than in grazed valleys.",
-    "B": "Cameras caught snow leopards mostly at night in grazed valleys but at all hours in ungrazed ones.",
-    "C": "Snow leopards in grazed valleys were active at the same hours as snow leopards in ungrazed valleys.",
-    "D": "Snow leopards in the region hunt wild ibex as well as domestic goats and sheep."
+    "A": "Cameras caught snow leopards mostly at night in grazed valleys but at all hours in ungrazed ones.",
+    "B": "Snow leopards in grazed valleys were active at the same hours as snow leopards in ungrazed valleys.",
+    "C": "Snow leopards in the region hunt wild ibex as well as domestic goats and sheep.",
+    "D": "Cameras recorded snow leopards more often in ungrazed valleys than in grazed valleys."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Baig's hypothesis is about timing: snow leopards stay in grazed valleys but become active there at night. The best support shows a difference in activity hours between grazed and ungrazed valleys.",
-    "A": "Incorrect. This suggests snow leopards avoid grazed valleys altogether, which is the explanation Baig sets aside; it says nothing about their activity hours.",
-    "B": "Correct. Snow leopards were mostly nocturnal only where herders worked, which shows a shift in timing caused by people's presence.",
-    "C": "Incorrect. If activity hours were the same in both kinds of valleys, there would be no shift to the night, so this weakens the hypothesis.",
-    "D": "Incorrect. What snow leopards hunt does not show when they are active."
+    "A": "Correct. Snow leopards were mostly nocturnal only where herders worked, which shows a shift in timing caused by people's presence.",
+    "B": "Incorrect. If activity hours were the same in both kinds of valleys, there would be no shift to the night, so this weakens the hypothesis.",
+    "C": "Incorrect. What snow leopards hunt does not show when they are active.",
+    "D": "Incorrect. This suggests snow leopards avoid grazed valleys altogether, which is the explanation Baig sets aside; it says nothing about their activity hours."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "reversed",
+    "B": "reversed",
+    "C": "true_irrelevant",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

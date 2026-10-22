@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "resin; the",
-    "B": "resin. The",
+    "A": "resin. The",
+    "B": "resin, the",
     "C": "resin: the",
-    "D": "resin, the"
+    "D": "resin; the"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The third sentence begins with \"When,\" so \"When the heat of a forest fire finally melts the resin\" is a dependent clause. \"The cones open and drop their seeds\" is the main clause. A dependent clause that comes first is joined to the main clause with a comma.",
-    "A": "Incorrect. A semicolon must join two independent clauses, but the \"When\" clause is dependent.",
-    "B": "Incorrect. A period would leave \"When the heat of a forest fire finally melts the resin\" as a sentence fragment.",
+    "A": "Incorrect. A period would leave \"When the heat of a forest fire finally melts the resin\" as a sentence fragment.",
+    "B": "Correct. A comma correctly links the introductory \"When\" clause to the main clause.",
     "C": "Incorrect. A colon must follow a complete independent clause, and the \"When\" clause is not one.",
-    "D": "Correct. A comma correctly links the introductory \"When\" clause to the main clause."
+    "D": "Incorrect. A semicolon must join two independent clauses, but the \"When\" clause is dependent."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "linking_clauses",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

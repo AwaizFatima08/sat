@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "Mercury",
-    "B": "Mercury;",
-    "C": "Mercury,",
+    "A": "Mercury;",
+    "B": "Mercury,",
+    "C": "Mercury",
     "D": "Mercury—"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The clause \"which is the largest of Saturn's moons and is even bigger than the planet Mercury\" is extra information about Titan. It opens with a comma after \"Titan,\" so it must close with a comma before the main verb \"is.\"",
-    "A": "Incorrect. Without a closing comma, the \"which\" clause runs straight into the main verb \"is,\" and the sentence can't be read clearly.",
-    "B": "Incorrect. A semicolon can't separate the subject \"Titan\" from its verb \"is.\"",
-    "C": "Correct. The closing comma matches the comma after \"Titan\" and sets off the \"which\" clause, so the subject \"Titan\" connects to its verb \"is.\"",
+    "A": "Incorrect. A semicolon can't separate the subject \"Titan\" from its verb \"is.\"",
+    "B": "Correct. The closing comma matches the comma after \"Titan\" and sets off the \"which\" clause, so the subject \"Titan\" connects to its verb \"is.\"",
+    "C": "Incorrect. Without a closing comma, the \"which\" clause runs straight into the main verb \"is,\" and the sentence can't be read clearly.",
     "D": "Incorrect. The \"which\" clause opens with a comma, so it can't close with a dash; the two marks must match."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "supplements",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

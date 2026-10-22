@@ -44,22 +44,22 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "15°C, where the fewest fruits spoiled.",
-    "B": "25°C, where the mangoes ripened in 4 days.",
-    "C": "30°C, where the mangoes ripened in 5 days.",
-    "D": "15°C, where the mangoes took 14 days to ripen."
+    "A": "30°C, where the mangoes ripened in 5 days.",
+    "B": "15°C, where the fewest fruits spoiled.",
+    "C": "15°C, where the mangoes took 14 days to ripen.",
+    "D": "25°C, where the mangoes ripened in 4 days."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "\"Ripened the fastest\" means the fewest days to ripen, so look for the smallest number in the \"Days to ripen\" column. That number is 5, in the 30°C row.",
-    "A": "Incorrect. It is true that only 1 fruit spoiled at 15°C, but the statement is about ripening speed, and that batch took the longest to ripen.",
-    "B": "Incorrect. The 25°C batch ripened in 6 days; the 4 is the number of fruits that spoiled, so this misreads the table.",
-    "C": "Correct. At 30°C the mangoes took 5 days, the smallest number in the \"Days to ripen\" column.",
-    "D": "Incorrect. 14 days is the longest ripening time in the table, so this batch ripened the slowest, not the fastest."
+    "A": "Correct. At 30°C the mangoes took 5 days, the smallest number in the \"Days to ripen\" column.",
+    "B": "Incorrect. It is true that only 1 fruit spoiled at 15°C, but the statement is about ripening speed, and that batch took the longest to ripen.",
+    "C": "Incorrect. 14 days is the longest ripening time in the table, so this batch ripened the slowest, not the fastest.",
+    "D": "Incorrect. The 25°C batch ripened in 6 days; the 4 is the number of fruits that spoiled, so this misreads the table."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
+    "B": "true_irrelevant",
+    "C": "reversed",
     "D": "reversed"
   },
   "grammar": null,
@@ -73,13 +73,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

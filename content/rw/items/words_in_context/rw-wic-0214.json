@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "documentary",
-    "B": "conclusive",
-    "C": "fabricated",
-    "D": "circumstantial"
+    "A": "fabricated",
+    "B": "circumstantial",
+    "C": "documentary",
+    "D": "conclusive"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text says no document records the device, and the colon explains what evidence remains: features \"consistent with optical aid\" that \"do not require it.\" Evidence that fits a conclusion without directly proving it is \"circumstantial.\"",
-    "A": "Incorrect. The text says \"no document\" records the device, so the hypothesis does not rest on documentary evidence.",
-    "B": "Incorrect. Features that \"do not require\" optical aid cannot settle the question.",
-    "C": "Incorrect. The visual effects in the paintings are real; the text questions what they prove, not whether they exist.",
-    "D": "Correct. Circumstantial evidence fits a conclusion without proving it directly, just like features \"consistent with optical aid but\" not requiring it."
+    "A": "Incorrect. The visual effects in the paintings are real; the text questions what they prove, not whether they exist.",
+    "B": "Correct. Circumstantial evidence fits a conclusion without proving it directly, just like features \"consistent with optical aid but\" not requiring it.",
+    "C": "Incorrect. The text says \"no document\" records the device, so the hypothesis does not rest on documentary evidence.",
+    "D": "Incorrect. Features that \"do not require\" optical aid cannot settle the question."
   },
   "traps": {
-    "A": "reversed",
-    "B": "reversed",
-    "C": "too_broad"
+    "A": "too_broad",
+    "C": "reversed",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

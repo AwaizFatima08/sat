@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "heavy",
+    "A": "deep",
     "B": "shallow",
-    "C": "deep",
+    "C": "heavy",
     "D": "decorated"
   },
   "answer": "B",
   "explanation": {
     "why": "The hulls sat \"only about a meter deep in the water,\" which let the ships travel up rivers and land on beaches. A hull that does not reach far below the surface is shallow, so \"shallow\" fits.",
-    "A": "Incorrect. A heavy, loaded ship would sink deeper into the water; the text stresses how little of the hull was below the surface.",
+    "A": "Incorrect. A deep hull would run aground in rivers and on beaches, the opposite of what the text describes.",
     "B": "Correct. Sitting \"only about a meter deep,\" the hulls were shallow, which let crews row up rivers and onto beaches.",
-    "C": "Incorrect. A deep hull would run aground in rivers and on beaches, the opposite of what the text describes.",
+    "C": "Incorrect. A heavy, loaded ship would sink deeper into the water; the text stresses how little of the hull was below the surface.",
     "D": "Incorrect. The text says nothing about decoration; it explains how the hull's shape let the ships reach rivers and beaches."
   },
   "traps": {
-    "A": "wrong_logic",
-    "C": "reversed",
+    "A": "reversed",
+    "C": "wrong_logic",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

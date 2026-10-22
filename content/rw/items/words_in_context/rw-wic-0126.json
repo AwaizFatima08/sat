@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "luxury",
-    "B": "model",
-    "C": "threat",
-    "D": "novelty"
+    "B": "threat",
+    "C": "novelty",
+    "D": "model"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The text contrasts buyers, who loved calico, with weavers, who \"did not share this enthusiasm.\" The weavers believed the fabric was \"taking away their customers\" and protested against it. Something seen as endangering one's livelihood is a threat, so \"threat\" fits.",
     "A": "Incorrect. Buyers may have prized calico, but the blank describes how the weavers saw it. To them it was a danger to their trade, not a fine thing to own.",
-    "B": "Incorrect. A model is something to copy or admire, but the weavers protested against the fabric rather than admiring it.",
-    "C": "Correct. The weavers believed the imports were \"taking away their customers\" and protested, so to them Indian cotton was above all a threat to their livelihood.",
-    "D": "Incorrect. A novelty is something interesting because it is new. That does not explain why the weavers complained and protested; their concern was the loss of customers."
+    "B": "Correct. The weavers believed the imports were \"taking away their customers\" and protested, so to them Indian cotton was above all a threat to their livelihood.",
+    "C": "Incorrect. A novelty is something interesting because it is new. That does not explain why the weavers complained and protested; their concern was the loss of customers.",
+    "D": "Incorrect. A model is something to copy or admire, but the weavers protested against the fabric rather than admiring it."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "reversed",
-    "D": "wrong_tone"
+    "C": "wrong_tone",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

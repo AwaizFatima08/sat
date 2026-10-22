@@ -63,23 +63,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Whitfield's conclusion?",
   "choices": {
-    "A": "Returning attendees outnumbered first-time attendees by a wide margin in every season shown.",
+    "A": "After the translations were introduced in 2013, returning attendance rose by more than first-time attendance did.",
     "B": "First-time attendance increased in every season shown, from 3,900 in 2011 to 7,300 in 2014.",
-    "C": "After the translations were introduced in 2013, returning attendance rose by more than first-time attendance did.",
+    "C": "Returning attendees outnumbered first-time attendees by a wide margin in every season shown.",
     "D": "From 2012 to 2013, first-time attendance rose by about 2,700, but returning attendance rose by only about 500."
   },
   "answer": "D",
   "explanation": {
     "why": "Whitfield's conclusion has two parts tied to the moment the translations began in 2013: first-time attendance surged, but returning attendance barely changed. Support must compare the change in both series across that moment. From 2012 to 2013, first-time attendance rose from 4,100 to 6,800 (about 2,700), while returning attendance moved only from 21,100 to 21,600 (about 500).",
-    "A": "Incorrect. This is true, but which group was larger says nothing about how each responded to the translations.",
+    "A": "Incorrect. From 2012 to 2013, first-time attendance rose about 2,700, while returning attendance rose about 500, so this reverses the data.",
     "B": "Incorrect. This is true, but it covers first-time attendees only, and the rise from 2011 to 2012 came before the translations began.",
-    "C": "Incorrect. From 2012 to 2013, first-time attendance rose about 2,700, while returning attendance rose about 500, so this reverses the data.",
+    "C": "Incorrect. This is true, but which group was larger says nothing about how each responded to the translations.",
     "D": "Correct. It compares both groups across the 2013 change and shows a large jump for newcomers and little change for returning attendees."
   },
   "traps": {
-    "A": "true_irrelevant",
+    "A": "reversed",
     "B": "too_narrow",
-    "C": "reversed"
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -88,8 +88,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

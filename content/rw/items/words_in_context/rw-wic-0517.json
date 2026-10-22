@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "approval",
+    "A": "indifference",
     "B": "criticism",
-    "C": "indifference",
-    "D": "impatience"
+    "C": "impatience",
+    "D": "approval"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Emi first takes her grandfather's silence \"for disappointment,\" but \"but she gradually understood\" signals that she changes her mind. His actions explain why: he examines the shelf and then places his own heavy dictionaries on it to stay, showing he trusts her work. The blank must mean a positive judgment, so \"approval\" fits.",
-    "A": "Correct. Haruki tests the shelf and then trusts it with his own heavy dictionaries \"where they would stay.\" Emi realizes his silent inspection was his way of showing that he approved.",
+    "A": "Incorrect. Someone indifferent would not inspect each shelf and joint so carefully, and he puts his own dictionaries on the shelf to stay, which shows he cares about it.",
     "B": "Incorrect. This is what Emi first feared (\"she had taken his silence for disappointment\"), but \"but she gradually understood\" signals that her first reading was wrong.",
-    "C": "Incorrect. Someone indifferent would not inspect each shelf and joint so carefully, and he puts his own dictionaries on the shelf to stay, which shows he cares about it.",
-    "D": "Incorrect. Haruki moves \"slowly\" and examines everything with care; nothing suggests he is in a hurry."
+    "C": "Incorrect. Haruki moves \"slowly\" and examines everything with care; nothing suggests he is in a hurry.",
+    "D": "Correct. Haruki tests the shelf and then trusts it with his own heavy dictionaries \"where they would stay.\" Emi realizes his silent inspection was his way of showing that he approved."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "reversed",
-    "C": "wrong_logic",
-    "D": "not_in_text"
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

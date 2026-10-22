@@ -44,21 +44,21 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "glider, which stayed in the air for 3.2 seconds.",
-    "B": "dart, which flew 9.4 meters on average.",
-    "C": "delta, which flew 9.4 meters on average.",
-    "D": "square-wing, which flew 5.6 meters on average."
+    "A": "dart, which flew 9.4 meters on average.",
+    "B": "glider, which stayed in the air for 3.2 seconds.",
+    "C": "square-wing, which flew 5.6 meters on average.",
+    "D": "delta, which flew 9.4 meters on average."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "\"Flew the farthest\" refers to distance, so look for the largest number in the \"Distance (meters)\" column. That number is 9.4, in the dart row.",
-    "A": "Incorrect. The glider stayed up the longest, but the statement is about distance, and the glider flew only 7.1 meters.",
-    "B": "Correct. 9.4 meters is the largest number in the \"Distance\" column.",
-    "C": "Incorrect. The delta flew 8.2 meters; 9.4 meters belongs to the dart, so this misreads the table.",
-    "D": "Incorrect. 5.6 meters is the shortest distance in the table."
+    "A": "Correct. 9.4 meters is the largest number in the \"Distance\" column.",
+    "B": "Incorrect. The glider stayed up the longest, but the statement is about distance, and the glider flew only 7.1 meters.",
+    "C": "Incorrect. 5.6 meters is the shortest distance in the table.",
+    "D": "Incorrect. The delta flew 8.2 meters; 9.4 meters belongs to the dart, so this misreads the table."
   },
   "traps": {
-    "A": "true_irrelevant",
+    "B": "true_irrelevant",
     "C": "reversed",
     "D": "reversed"
   },
@@ -73,13 +73,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

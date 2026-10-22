@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "purchased",
-    "B": "refurbished",
+    "A": "discarded",
+    "B": "purchased",
     "C": "decorated",
-    "D": "discarded"
+    "D": "refurbished"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The text calls the steelpan's beginning \"a kind of recycling\" and later describes the oil drum as one \"nobody wanted.\" A container that was thrown away after use is discarded, so \"discarded\" fits.",
-    "A": "Incorrect. The text describes the drums as unwanted objects that were recycled; nothing suggests the musicians bought them.",
-    "B": "Incorrect. Nothing says the drums were restored to good condition before the musicians got them; the text says \"nobody wanted\" them.",
+    "A": "Correct. \"Recycling\" and \"a drum nobody wanted\" show that the drums had been thrown away, or discarded, after use.",
+    "B": "Incorrect. The text describes the drums as unwanted objects that were recycled; nothing suggests the musicians bought them.",
     "C": "Incorrect. The text does not mention decorating the drums; it says they were unwanted until musicians reshaped them.",
-    "D": "Correct. \"Recycling\" and \"a drum nobody wanted\" show that the drums had been thrown away, or discarded, after use."
+    "D": "Incorrect. Nothing says the drums were restored to good condition before the musicians got them; the text says \"nobody wanted\" them."
   },
   "traps": {
-    "A": "wrong_logic",
-    "B": "not_in_text",
-    "C": "not_in_text"
+    "B": "wrong_logic",
+    "C": "not_in_text",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

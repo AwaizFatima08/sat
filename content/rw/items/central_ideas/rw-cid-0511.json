@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Scientists plan to add phosphorus to the Amazon's soil to help plants grow.",
-    "B": "The Amazon's soil is richer in nutrients than the soil of most forests.",
-    "C": "Winds carry millions of tons of dust across the Atlantic Ocean each year.",
-    "D": "Dust from the Sahara helps supply a nutrient that the Amazon's soil lacks."
+    "A": "The Amazon's soil is richer in nutrients than the soil of most forests.",
+    "B": "Scientists plan to add phosphorus to the Amazon's soil to help plants grow.",
+    "C": "Dust from the Sahara helps supply a nutrient that the Amazon's soil lacks.",
+    "D": "Winds carry millions of tons of dust across the Atlantic Ocean each year."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The text explains a problem (the Amazon's soil is \"poor in phosphorus\" because rain washes it away) and then its surprising partial solution: phosphorus-rich dust blown from the Sahara. The main idea links the two: Saharan dust supplies a nutrient the soil lacks.",
-    "A": "Incorrect. The text describes a natural process; it never mentions scientists adding phosphorus.",
-    "B": "Incorrect. The text says the forest only looks fertile; its soil is actually \"poor in phosphorus.\"",
-    "C": "Incorrect. This is one supporting detail; it leaves out why the dust matters to the rainforest.",
-    "D": "Correct. This connects both parts of the text: the soil's shortage of phosphorus and the dust that helps replace it."
+    "A": "Incorrect. The text says the forest only looks fertile; its soil is actually \"poor in phosphorus.\"",
+    "B": "Incorrect. The text describes a natural process; it never mentions scientists adding phosphorus.",
+    "C": "Correct. This connects both parts of the text: the soil's shortage of phosphorus and the dust that helps replace it.",
+    "D": "Incorrect. This is one supporting detail; it leaves out why the dust matters to the rainforest."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "reversed",
-    "C": "too_narrow"
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

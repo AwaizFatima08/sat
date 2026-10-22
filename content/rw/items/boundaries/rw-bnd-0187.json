@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "as: giraffes,",
-    "B": "as, giraffes,",
-    "C": "as—giraffes,",
-    "D": "as giraffes,"
+    "A": "as—giraffes,",
+    "B": "as giraffes,",
+    "C": "as, giraffes,",
+    "D": "as: giraffes,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "\"Such as\" introduces examples that are part of the same sentence. No punctuation goes between \"such as\" and the first example, \"giraffes\"; the commas that follow simply separate the items in the list.",
-    "A": "Incorrect. A colon must follow a complete independent clause; it can't come between \"such as\" and its examples.",
-    "B": "Incorrect. A comma can't separate \"such as\" from the examples it introduces.",
-    "C": "Incorrect. A dash can't separate \"such as\" from the examples it introduces.",
-    "D": "Correct. No punctuation separates \"such as\" from its first example, and the comma after \"giraffes\" separates the list items."
+    "A": "Incorrect. A dash can't separate \"such as\" from the examples it introduces.",
+    "B": "Correct. No punctuation separates \"such as\" from its first example, and the comma after \"giraffes\" separates the list items.",
+    "C": "Incorrect. A comma can't separate \"such as\" from the examples it introduces.",
+    "D": "Incorrect. A colon must follow a complete independent clause; it can't come between \"such as\" and its examples."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "punctuation",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

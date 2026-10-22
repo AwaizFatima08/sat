@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "worms and insects are sniffed out by the kiwi.",
-    "B": "the kiwi sniffs out worms and insects.",
-    "C": "the soil gives the kiwi the smell of worms and insects.",
-    "D": "the kiwi's sense of smell finds worms and insects."
+    "A": "the kiwi sniffs out worms and insects.",
+    "B": "the soil gives the kiwi the smell of worms and insects.",
+    "C": "the kiwi's sense of smell finds worms and insects.",
+    "D": "worms and insects are sniffed out by the kiwi."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The phrase \"Poking its bill deep into the soil\" describes whoever is doing the poking, so the words right after the comma must name that one: the kiwi. Only one choice places \"the kiwi\" directly after the introductory phrase.",
-    "A": "Incorrect. This choice places \"worms and insects\" after the phrase, which says the worms and insects poked their bill into the soil.",
-    "B": "Correct. \"The kiwi\" comes right after the introductory phrase, so it is clear the kiwi pokes its bill into the soil.",
-    "C": "Incorrect. This choice says the soil poked its bill into the soil, which makes no sense.",
-    "D": "Incorrect. This choice says the kiwi's sense of smell poked its bill into the soil; the modifier must describe the bird itself."
+    "A": "Correct. \"The kiwi\" comes right after the introductory phrase, so it is clear the kiwi pokes its bill into the soil.",
+    "B": "Incorrect. This choice says the soil poked its bill into the soil, which makes no sense.",
+    "C": "Incorrect. This choice says the kiwi's sense of smell poked its bill into the soil; the modifier must describe the bird itself.",
+    "D": "Incorrect. This choice places \"worms and insects\" after the phrase, which says the worms and insects poked their bill into the soil."
   },
   "traps": {
-    "A": "grammar_rule",
+    "B": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "growers prize the first flush of tender new shoots for its light, flowery taste,",
+    "A": "the first flush of tender new shoots yields a tea with a light, flowery taste,",
     "B": "the light, flowery taste of the first flush of tender new shoots is prized by growers,",
-    "C": "the first flush of tender new shoots yields a tea with a light, flowery taste,",
-    "D": "a light, flowery taste is what growers prize in the first flush of tender new shoots,"
+    "C": "a light, flowery taste is what growers prize in the first flush of tender new shoots,",
+    "D": "growers prize the first flush of tender new shoots for its light, flowery taste,"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The introductory phrase \"Picked in March and April, soon after the bushes end their winter dormancy\" describes what is picked: the new shoots of the first flush. A modifier at the start of a sentence applies to the subject that comes right after the comma, so that subject must be \"the first flush of tender new shoots.\"",
-    "A": "Incorrect. This makes \"growers\" the subject, so the sentence says the growers were picked in March and April.",
+    "A": "Correct. \"The first flush of tender new shoots\" comes right after the introductory phrase, so it is clear that the shoots are what was picked.",
     "B": "Incorrect. The subject is \"taste\"; a taste is not something that can be picked.",
-    "C": "Correct. \"The first flush of tender new shoots\" comes right after the introductory phrase, so it is clear that the shoots are what was picked.",
-    "D": "Incorrect. This makes \"a light, flowery taste\" the subject, so the sentence says the taste was picked."
+    "C": "Incorrect. This makes \"a light, flowery taste\" the subject, so the sentence says the taste was picked.",
+    "D": "Incorrect. This makes \"growers\" the subject, so the sentence says the growers were picked in March and April."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "modifier",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

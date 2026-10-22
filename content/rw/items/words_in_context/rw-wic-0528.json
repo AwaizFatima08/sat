@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "lavish",
-    "B": "sarcastic",
-    "C": "hasty",
-    "D": "grudging"
+    "A": "sarcastic",
+    "B": "hasty",
+    "C": "grudging",
+    "D": "lavish"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The aunt had opposed the shop, and she speaks \"in a voice that showed how much the words cost her.\" Her comment, that the shop \"might just survive,\" is weak praise given unwillingly. The final clause, \"but it was praise,\" confirms it was sincere. \"Grudging\" (given reluctantly) fits.",
-    "A": "Incorrect. Admitting only that the shop \"might just survive\" is the faintest kind of praise, the opposite of lavish.",
-    "B": "Incorrect. The aunt \"admitted\" her view after studying the account book, and the text ends \"but it was praise.\" Sarcasm would mean she did not mean it, which the text rules out.",
-    "C": "Incorrect. The aunt studied the account book \"for a long while\" before speaking, so her praise was not hasty.",
-    "D": "Correct. The aunt had opposed the shop, and the words clearly \"cost her\" to say. Praise given reluctantly like this is grudging praise, though still sincere."
+    "A": "Incorrect. The aunt \"admitted\" her view after studying the account book, and the text ends \"but it was praise.\" Sarcasm would mean she did not mean it, which the text rules out.",
+    "B": "Incorrect. The aunt studied the account book \"for a long while\" before speaking, so her praise was not hasty.",
+    "C": "Correct. The aunt had opposed the shop, and the words clearly \"cost her\" to say. Praise given reluctantly like this is grudging praise, though still sincere.",
+    "D": "Incorrect. Admitting only that the shop \"might just survive\" is the faintest kind of praise, the opposite of lavish."
   },
   "traps": {
-    "A": "reversed",
-    "B": "wrong_tone",
-    "C": "wrong_logic"
+    "A": "wrong_tone",
+    "B": "wrong_logic",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

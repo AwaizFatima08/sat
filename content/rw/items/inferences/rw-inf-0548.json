@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "knew that ancient statues had been painted but chose to leave their own works white.",
-    "B": "would have painted their own figures if suitable pigments had been available to them.",
-    "C": "may have taken the effects of centuries of decay for the intentions of ancient artists.",
-    "D": "were wrong to admire any feature of ancient Greek sculpture."
+    "A": "would have painted their own figures if suitable pigments had been available to them.",
+    "B": "were wrong to admire any feature of ancient Greek sculpture.",
+    "C": "knew that ancient statues had been painted but chose to leave their own works white.",
+    "D": "may have taken the effects of centuries of decay for the intentions of ancient artists."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Two pieces of information combine. The statues the sculptors studied had spent centuries buried or outdoors, and ancient paint is known to break down in those conditions. The whiteness the sculptors admired as an ancient ideal may therefore have been the result of paint wearing away.",
-    "A": "Incorrect. The text says the sculptors believed the ancient Greeks prized unpainted stone, so they did not know the statues had been painted.",
-    "B": "Incorrect. The text never suggests that the sculptors lacked pigments or wanted to paint their figures.",
-    "C": "Correct. The paint on the statues had largely broken down over the centuries, so the white stone the sculptors admired probably reflected decay, not the original artists' choices.",
-    "D": "Incorrect. The findings concern only the sculptors' belief about unpainted stone, not every feature they admired."
+    "A": "Incorrect. The text never suggests that the sculptors lacked pigments or wanted to paint their figures.",
+    "B": "Incorrect. The findings concern only the sculptors' belief about unpainted stone, not every feature they admired.",
+    "C": "Incorrect. The text says the sculptors believed the ancient Greeks prized unpainted stone, so they did not know the statues had been painted.",
+    "D": "Correct. The paint on the statues had largely broken down over the centuries, so the white stone the sculptors admired probably reflected decay, not the original artists' choices."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "too_broad"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

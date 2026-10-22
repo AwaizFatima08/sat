@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "hurried",
-    "B": "hurrying",
-    "C": "having hurried",
-    "D": "to hurry"
+    "A": "to hurry",
+    "B": "having hurried",
+    "C": "hurried",
+    "D": "hurrying"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The subject \"Adaeze\" is separated from its verb by a long \"who\" clause (\"who had spent three weeks ... and who knew perfectly well ...\"). The verbs inside that clause belong to it, so the sentence still needs a main verb for \"Adaeze.\" The later \"and listened\" is a past-tense verb that must be parallel with it, so the blank must be the past-tense \"hurried.\"",
-    "A": "Correct. The past-tense verb \"hurried\" gives \"Adaeze\" a main verb and is parallel with \"listened.\"",
-    "B": "Incorrect. \"Hurrying\" is a participle, not a main verb, so the sentence would lack a main verb, and it isn't parallel with \"listened.\"",
-    "C": "Incorrect. \"Having hurried\" is a participial phrase, not a main verb, and \"and\" can't join a participle to the finite verb \"listened\" as if they were parallel.",
-    "D": "Incorrect. \"To hurry\" is an infinitive, which can't serve as the main verb of a sentence or pair with \"and listened.\""
+    "A": "Incorrect. \"To hurry\" is an infinitive, which can't serve as the main verb of a sentence or pair with \"and listened.\"",
+    "B": "Incorrect. \"Having hurried\" is a participial phrase, not a main verb, and \"and\" can't join a participle to the finite verb \"listened\" as if they were parallel.",
+    "C": "Correct. The past-tense verb \"hurried\" gives \"Adaeze\" a main verb and is parallel with \"listened.\"",
+    "D": "Incorrect. \"Hurrying\" is a participle, not a main verb, so the sentence would lack a main verb, and it isn't parallel with \"listened.\""
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "verb_form",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim in Text 1?",
   "choices": {
-    "A": "By agreeing that the wall's great length makes it easy to see from orbit",
-    "B": "By arguing that the Great Wall is shorter than most books report",
+    "A": "By arguing that the Great Wall is shorter than most books report",
+    "B": "By agreeing that the wall's great length makes it easy to see from orbit",
     "C": "By explaining that the wall is easiest to see where it is widest",
     "D": "By pointing out that the wall is too narrow and plain to see easily from space"
   },
   "answer": "D",
   "explanation": {
     "why": "Text 1 reports the claim that the Great Wall can be seen with the naked eye from space. Text 2 says the wall is \"only a few meters wide\" and close in color to the land, so astronauts \"could not pick it out\" without a lens. Text 2 therefore rejects the claim and explains why.",
-    "A": "Incorrect. Text 2 says that \"although the Great Wall is very long,\" it is still hard to see, so it would not agree.",
-    "B": "Incorrect. Text 2 accepts that the wall \"is very long\"; it never says books exaggerate its length.",
+    "A": "Incorrect. Text 2 accepts that the wall \"is very long\"; it never says books exaggerate its length.",
+    "B": "Incorrect. Text 2 says that \"although the Great Wall is very long,\" it is still hard to see, so it would not agree.",
     "C": "Incorrect. Text 2 never says the wall is easier to see in some places than in others.",
     "D": "Correct. Text 2 explains that the wall's narrow width and its color, similar to the land around it, make it hard to see from orbit."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
+    "A": "not_in_text",
+    "B": "reversed",
     "C": "not_in_text"
   },
   "grammar": null,
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to emphasize a similarity between Amsterdam and Suzhou. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Many of Amsterdam's canals were dug in the 1600s, but Suzhou's canals date back more than 2,000 years.",
-    "B": "Amsterdam, a city in the Netherlands, is crossed by more than 100 kilometers of canals.",
-    "C": "Suzhou is a city in eastern China whose canals date back more than 2,000 years.",
-    "D": "Like Amsterdam, Suzhou is a city of canals that has been called the \"Venice\" of its region."
+    "A": "Like Amsterdam, Suzhou is a city of canals that has been called the \"Venice\" of its region.",
+    "B": "Suzhou is a city in eastern China whose canals date back more than 2,000 years.",
+    "C": "Amsterdam, a city in the Netherlands, is crossed by more than 100 kilometers of canals.",
+    "D": "Many of Amsterdam's canals were dug in the 1600s, but Suzhou's canals date back more than 2,000 years."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "To emphasize a similarity, the sentence must mention both cities and show what they share. The notes say both are known for their many canals and both have been called the \"Venice\" of their region. Only one choice presents that shared feature.",
-    "A": "Incorrect. This mentions both cities, but it points out how the ages of their canals differ, which is a difference, not a similarity.",
-    "B": "Incorrect. This describes only Amsterdam, so it cannot show what the two cities have in common.",
-    "C": "Incorrect. This describes only Suzhou, so it cannot show what the two cities have in common.",
-    "D": "Correct. \"Like Amsterdam\" signals a similarity, and the sentence states the feature both cities share."
+    "A": "Correct. \"Like Amsterdam\" signals a similarity, and the sentence states the feature both cities share.",
+    "B": "Incorrect. This describes only Suzhou, so it cannot show what the two cities have in common.",
+    "C": "Incorrect. This describes only Amsterdam, so it cannot show what the two cities have in common.",
+    "D": "Incorrect. This mentions both cities, but it points out how the ages of their canals differ, which is a difference, not a similarity."
   },
   "traps": {
-    "A": "misses_goal",
     "B": "too_narrow",
-    "C": "too_narrow"
+    "C": "too_narrow",
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "For example,",
-    "B": "Instead,",
-    "C": "However,",
-    "D": "In addition,"
+    "A": "Instead,",
+    "B": "However,",
+    "C": "In addition,",
+    "D": "For example,"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The second sentence gives two purposes of a kolam: welcoming visitors and decorating the entrance. The last sentence gives one more purpose, feeding ants and birds, and even uses the word \"also.\" A transition that adds a point is needed.",
-    "A": "Incorrect. Feeding ants and birds is not an example of decorating the entrance; it is a separate benefit.",
-    "B": "Incorrect. The kolam feeds animals as well as decorating, not in place of decorating.",
-    "C": "Incorrect. Feeding small animals does not contrast with welcoming visitors; it is another positive purpose.",
-    "D": "Correct. \"In addition\" adds a further purpose of the kolam, matching the word \"also\" in the sentence."
+    "A": "Incorrect. The kolam feeds animals as well as decorating, not in place of decorating.",
+    "B": "Incorrect. Feeding small animals does not contrast with welcoming visitors; it is another positive purpose.",
+    "C": "Correct. \"In addition\" adds a further purpose of the kolam, matching the word \"also\" in the sentence.",
+    "D": "Incorrect. Feeding ants and birds is not an example of decorating the entrance; it is a separate benefit."
   },
   "traps": {
     "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic"
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

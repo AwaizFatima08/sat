@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "Earth's entire core, from its boundary to its center, is liquid.",
-    "B": "at least part of Earth's core is liquid rather than solid.",
-    "C": "P waves are unable to pass through Earth's core.",
-    "D": "Earth's mantle is liquid, since waves traveling through it are recorded."
+    "A": "at least part of Earth's core is liquid rather than solid.",
+    "B": "P waves are unable to pass through Earth's core.",
+    "C": "Earth's mantle is liquid, since waves traveling through it are recorded.",
+    "D": "Earth's entire core, from its boundary to its center, is liquid."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "S waves crossed the mantle but never arrived along paths through the core. Since S waves are stopped only by liquid, something along those core paths must be liquid. The observations show that at least part of the core is liquid, not that all of it is.",
-    "A": "Incorrect. Blocking S waves requires only a liquid layer somewhere along the path; the observations do not show that the whole core is liquid.",
-    "B": "Correct. S waves travel through the mantle but are missing along every path through the core, and only liquid stops them, so some of the core must be liquid.",
-    "C": "Incorrect. This contradicts the text, which says P waves did reach the far side, though bent and delayed.",
-    "D": "Incorrect. S waves passed through the mantle, which shows that the mantle is rigid, not liquid."
+    "A": "Correct. S waves travel through the mantle but are missing along every path through the core, and only liquid stops them, so some of the core must be liquid.",
+    "B": "Incorrect. This contradicts the text, which says P waves did reach the far side, though bent and delayed.",
+    "C": "Incorrect. S waves passed through the mantle, which shows that the mantle is rigid, not liquid.",
+    "D": "Incorrect. Blocking S waves requires only a liquid layer somewhere along the path; the observations do not show that the whole core is liquid."
   },
   "traps": {
-    "A": "too_broad",
+    "B": "reversed",
     "C": "reversed",
-    "D": "reversed"
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

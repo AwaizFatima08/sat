@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It describes two images, argues that Fenton staged both, and then explains how he arranged each scene.",
-    "B": "It describes two images and then argues that the order in which they were made cannot be determined.",
-    "C": "It describes two images, explains why their order matters, reports a likely order, and notes what is unknown.",
-    "D": "It explains a photographer's wartime methods and then compares his work with that of later photographers."
+    "A": "It describes two images, explains why their order matters, reports a likely order, and notes what is unknown.",
+    "B": "It explains a photographer's wartime methods and then compares his work with that of later photographers.",
+    "C": "It describes two images, argues that Fenton staged both, and then explains how he arranged each scene.",
+    "D": "It describes two images and then argues that the order in which they were made cannot be determined."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text describes the two photographs, explains that their order matters because it would show whether the scene was arranged, and reports that \"many now conclude\" the empty road came first. It ends by noting that the conclusion \"rests on inference\" and that the photos cannot show \"who moved the balls, or why.\"",
-    "A": "Incorrect. The text never says both images were staged, and it does not explain how any scene was arranged.",
-    "B": "Incorrect. The text reports that many investigators have reached a conclusion about the order; what remains unknown is who moved the balls and why.",
-    "C": "Correct. The text moves from the two images, to why their order matters, to the likely order, to the questions that remain.",
-    "D": "Incorrect. The text discusses only these two photographs and makes no comparison with later photographers."
+    "A": "Correct. The text moves from the two images, to why their order matters, to the likely order, to the questions that remain.",
+    "B": "Incorrect. The text discusses only these two photographs and makes no comparison with later photographers.",
+    "C": "Incorrect. The text never says both images were staged, and it does not explain how any scene was arranged.",
+    "D": "Incorrect. The text reports that many investigators have reached a conclusion about the order; what remains unknown is who moved the balls and why."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

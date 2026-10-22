@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Finally,",
-    "B": "For example,",
+    "A": "For example,",
+    "B": "In other words,",
     "C": "Instead,",
-    "D": "In other words,"
+    "D": "Finally,"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The text describes the grandmother's morning routine as a series of tasks. The last sentence, \"with her chores done,\" tells what she does at the end of that series. A sequence transition that marks the last step is needed.",
-    "A": "Correct. \"Finally\" marks sitting with her tea as the last part of her routine, after the chores.",
-    "B": "Incorrect. Sitting with tea is not an example of a chore; the sentence says the chores are \"done.\"",
+    "A": "Incorrect. Sitting with tea is not an example of a chore; the sentence says the chores are \"done.\"",
+    "B": "Incorrect. The last sentence adds a new step rather than restating the chores.",
     "C": "Incorrect. \"Instead\" would mean she sat down in place of doing the chores, but she had already done them.",
-    "D": "Incorrect. The last sentence adds a new step rather than restating the chores."
+    "D": "Correct. \"Finally\" marks sitting with her tea as the last part of her routine, after the chores."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

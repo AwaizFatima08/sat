@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that Noh masks are more expressive than the faces of live actors",
-    "B": "To describe how Noh masks are displayed in museum collections",
+    "A": "To describe how Noh masks are displayed in museum collections",
+    "B": "To argue that Noh masks are more expressive than the faces of live actors",
     "C": "To explain how a mask with fixed features can seem to show changing emotions",
     "D": "To explain why the Noh theater has continued to attract audiences"
   },
   "answer": "C",
   "explanation": {
     "why": "The text contrasts a mask's \"blank\" look in a museum with its changing expressions on stage (\"however\"). It then explains why: the features are carved so that tilting the head shifts light and shadow, making the face \"brighten\" or \"cloud over.\" The purpose is to explain this effect.",
-    "A": "Incorrect. The text never compares masks with actors' real faces, so this claims more than the text says.",
-    "B": "Incorrect. The museum case is mentioned only to contrast with the stage; the text does not discuss how masks are displayed.",
+    "A": "Incorrect. The museum case is mentioned only to contrast with the stage; the text does not discuss how masks are displayed.",
+    "B": "Incorrect. The text never compares masks with actors' real faces, so this claims more than the text says.",
     "C": "Correct. The text explains how carving and slight head movements let a mask whose features never change appear joyful or sorrowful.",
     "D": "Incorrect. The text says nothing about audiences or the theater's popularity."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "too_narrow",
+    "A": "too_narrow",
+    "B": "too_broad",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

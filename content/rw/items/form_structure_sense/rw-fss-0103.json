@@ -16,21 +16,21 @@
   "choices": {
     "A": "snail's",
     "B": "snails",
-    "C": "snails's",
-    "D": "snails'"
+    "C": "snails'",
+    "D": "snails's"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The glands belong to the snails, and the text says workers crushed \"huge numbers\" of them, so the owner is plural. A plural noun that ends in -s shows possession with an apostrophe after the s: \"snails'.\"",
     "A": "Incorrect. \"Snail's\" is singular possessive, but the glands came from many snails, not one.",
     "B": "Incorrect. \"Snails\" is plural but not possessive; the glands belong to the snails, so an apostrophe is needed.",
-    "C": "Incorrect. \"Snails's\" is not a Standard English form; a plural ending in -s takes only an apostrophe.",
-    "D": "Correct. \"Snails'\" is the plural possessive, showing the glands belong to many snails."
+    "C": "Correct. \"Snails'\" is the plural possessive, showing the glands belong to many snails.",
+    "D": "Incorrect. \"Snails's\" is not a Standard English form; a plural ending in -s takes only an apostrophe."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "D": "grammar_rule"
   },
   "grammar": "plural_possessive",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Benali's argument?",
   "choices": {
-    "A": "Picture books with refrains are often shorter than other picture books written for the same age group.",
-    "B": "Children usually listened quietly and rarely spoke when adults read books with refrains aloud.",
+    "A": "Children usually listened quietly and rarely spoke when adults read books with refrains aloud.",
+    "B": "Picture books with refrains are often shorter than other picture books written for the same age group.",
     "C": "Many authors of picture books draw the illustrations for their own stories.",
     "D": "When adults read books with refrains aloud, children often said the refrain before the adult did."
   },
   "answer": "D",
   "explanation": {
     "why": "Benali argues that refrains let children predict the next line and join in. Evidence that children actually say the refrain, even before the reader gets to it, supports her argument directly.",
-    "A": "Incorrect. The length of the books says nothing about whether refrains invite children to take part.",
-    "B": "Incorrect. Children staying silent would suggest refrains do not get them to join in, which weakens the argument.",
+    "A": "Incorrect. Children staying silent would suggest refrains do not get them to join in, which weakens the argument.",
+    "B": "Incorrect. The length of the books says nothing about whether refrains invite children to take part.",
     "C": "Incorrect. Who draws the pictures has nothing to do with how refrains affect young listeners.",
     "D": "Correct. Children saying the refrain ahead of the reader shows that they predicted it and joined in, as Benali claims."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
+    "A": "reversed",
+    "B": "true_irrelevant",
     "C": "true_irrelevant"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

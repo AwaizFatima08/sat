@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "For example,",
-    "B": "However,",
-    "C": "As a result,",
-    "D": "Similarly,"
+    "A": "As a result,",
+    "B": "Similarly,",
+    "C": "For example,",
+    "D": "However,"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The first sentence makes a general claim: some plants use animals as \"bodyguards.\" The rest of the text describes one particular plant, the bullhorn acacia, and the ants that guard it. A transition that introduces an example is needed.",
-    "A": "Correct. \"For example\" introduces the bullhorn acacia as a specific case of a plant with animal bodyguards.",
-    "B": "Incorrect. The acacia supports the general claim; it does not contrast with it.",
-    "C": "Incorrect. The acacia's thorns and food are not caused by the general claim; they illustrate it.",
-    "D": "Incorrect. \"Similarly\" would introduce a second case like one already described, but no specific plant has been described before this sentence."
+    "A": "Incorrect. The acacia's thorns and food are not caused by the general claim; they illustrate it.",
+    "B": "Incorrect. \"Similarly\" would introduce a second case like one already described, but no specific plant has been described before this sentence.",
+    "C": "Correct. \"For example\" introduces the bullhorn acacia as a specific case of a plant with animal bodyguards.",
+    "D": "Incorrect. The acacia supports the general claim; it does not contrast with it."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

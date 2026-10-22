@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "cheerful",
-    "B": "hidden",
-    "C": "motionless",
-    "D": "distant"
+    "A": "hidden",
+    "B": "motionless",
+    "C": "distant",
+    "D": "cheerful"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Anyone who moved during the long exposure \"would appear as a blur,\" so studios used stands to brace the sitter's head. The purpose of the brace was to keep the person from moving, so \"motionless\" fits.",
-    "A": "Incorrect. The problem the text describes is movement causing blur, not the sitter's mood.",
-    "B": "Incorrect. It was the stands that were hidden; the sitter had to appear clearly in the portrait.",
-    "C": "Correct. Movement caused blur, so the stands helped sitters stay motionless during the long exposure.",
-    "D": "Incorrect. Nothing in the text concerns how far the sitter was from the camera."
+    "A": "Incorrect. It was the stands that were hidden; the sitter had to appear clearly in the portrait.",
+    "B": "Correct. Movement caused blur, so the stands helped sitters stay motionless during the long exposure.",
+    "C": "Incorrect. Nothing in the text concerns how far the sitter was from the camera.",
+    "D": "Incorrect. The problem the text describes is movement causing blur, not the sitter's mood."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "wrong_logic",
+    "A": "wrong_logic",
+    "C": "not_in_text",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

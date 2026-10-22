@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Nkosi's hypothesis?",
   "choices": {
-    "A": "The lizards darkened at the same time each morning whether their enclosure was kept cool or warm.",
-    "B": "Dark lizards are harder for birds to spot against the dark rocks where the species often rests.",
+    "A": "Lizards kept cool stayed dark all day, while lizards kept warm stayed pale even in the morning.",
+    "B": "The lizards darkened at the same time each morning whether their enclosure was kept cool or warm.",
     "C": "Pale lizards reflect more sunlight and are less likely to overheat during the hottest part of the day.",
-    "D": "Lizards kept cool stayed dark all day, while lizards kept warm stayed pale even in the morning."
+    "D": "Dark lizards are harder for birds to spot against the dark rocks where the species often rests."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Nkosi claims that cold, not simply the time of day, makes the lizards darken. A test that separates temperature from time of day, and shows color following temperature, supports her hypothesis.",
-    "A": "Incorrect. If the lizards darkened on schedule regardless of temperature, cold would not be the trigger; this weakens the hypothesis.",
-    "B": "Incorrect. This offers a different benefit of dark skin (hiding from birds), not evidence that the lizards darken in response to cold.",
+    "A": "Correct. The lizards' color followed the temperature rather than the hour, which shows they darken in response to cold.",
+    "B": "Incorrect. If the lizards darkened on schedule regardless of temperature, cold would not be the trigger; this weakens the hypothesis.",
     "C": "Incorrect. This explains why the lizards might turn pale later in the day, but not what causes them to darken in the morning.",
-    "D": "Correct. The lizards' color followed the temperature rather than the hour, which shows they darken in response to cold."
+    "D": "Incorrect. This offers a different benefit of dark skin (hiding from birds), not evidence that the lizards darken in response to cold."
   },
   "traps": {
-    "A": "reversed",
-    "B": "true_irrelevant",
-    "C": "true_irrelevant"
+    "B": "reversed",
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -37,23 +37,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Lorenz's argument?",
   "choices": {
-    "A": "From 1850 to 1880, towns without a station added about 3,200 residents, while towns with a station added about 2,700.",
-    "B": "From 1850 to 1880, towns with a station grew by about 64%, while towns without one grew by about 33%.",
-    "C": "In every year shown, towns without a station were larger on average than towns with a station.",
-    "D": "From 1850 to 1880, towns with a station added more residents than towns without a station did."
+    "A": "In every year shown, towns without a station were larger on average than towns with a station.",
+    "B": "From 1850 to 1880, towns with a station added more residents than towns without a station did.",
+    "C": "From 1850 to 1880, towns with a station grew by about 64%, while towns without one grew by about 33%.",
+    "D": "From 1850 to 1880, towns without a station added about 3,200 residents, while towns with a station added about 2,700."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Lorenz rejects comparing the number of residents added and instead compares growth relative to starting size, so support must express each group's growth as a percentage. Towns with a station grew from 4,200 to 6,900, an increase of 2,700, or about 64%; towns without one grew from 9,600 to 12,800, an increase of 3,200, or about 33%. The first rate is roughly twice the second.",
-    "A": "Incorrect. This is true, but it is the skeptics' comparison of residents added, which Lorenz calls misleading; it says nothing about growth relative to size.",
-    "B": "Correct. It compares growth relative to each group's starting size and shows towns with a station growing at about twice the rate of the others.",
-    "C": "Incorrect. This is true, but it supports only Lorenz's point about starting size, not her claim about how fast each group grew.",
-    "D": "Incorrect. Towns with a station added 2,700 residents, fewer than the 3,200 added by towns without one, so this reverses the table."
+    "A": "Incorrect. This is true, but it supports only Lorenz's point about starting size, not her claim about how fast each group grew.",
+    "B": "Incorrect. Towns with a station added 2,700 residents, fewer than the 3,200 added by towns without one, so this reverses the table.",
+    "C": "Correct. It compares growth relative to each group's starting size and shows towns with a station growing at about twice the rate of the others.",
+    "D": "Incorrect. This is true, but it is the skeptics' comparison of residents added, which Lorenz calls misleading; it says nothing about growth relative to size."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "too_narrow",
-    "D": "reversed"
+    "A": "too_narrow",
+    "B": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -62,8 +62,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

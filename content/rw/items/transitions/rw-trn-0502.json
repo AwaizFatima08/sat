@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "For instance,",
+    "A": "Even so,",
     "B": "Next,",
-    "C": "In contrast,",
-    "D": "Even so,"
+    "C": "For instance,",
+    "D": "In contrast,"
   },
   "answer": "B",
   "explanation": {
     "why": "The text lists the steps of making a papyrus sheet in order, starting with \"First.\" The last sentence gives the step that comes after laying the strips: pressing and drying them. A sequence transition is needed.",
-    "A": "Incorrect. Pressing the layers is not an instance of laying the strips; it is the following step.",
+    "A": "Incorrect. \"Even so\" signals that something happens despite a problem, but no problem is mentioned.",
     "B": "Correct. \"Next\" shows that pressing and drying come after the strips are laid in two layers.",
-    "C": "Incorrect. Pressing the layers does not contrast with laying them; it continues the same process.",
-    "D": "Incorrect. \"Even so\" signals that something happens despite a problem, but no problem is mentioned."
+    "C": "Incorrect. Pressing the layers is not an instance of laying the strips; it is the following step.",
+    "D": "Incorrect. Pressing the layers does not contrast with laying them; it continues the same process."
   },
   "traps": {
     "A": "wrong_logic",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

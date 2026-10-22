@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the view held by Zand in Text 1?",
   "choices": {
-    "A": "By rejecting the claim that cooked food provides more energy than raw food does",
-    "B": "By arguing that Homo erectus did not in fact have a larger brain than its ancestors",
-    "C": "By claiming that hominins never used fire at all before about 400,000 years ago",
-    "D": "By questioning whether routine fire use is old enough to explain the changes"
+    "A": "By arguing that Homo erectus did not in fact have a larger brain than its ancestors",
+    "B": "By rejecting the claim that cooked food provides more energy than raw food does",
+    "C": "By questioning whether routine fire use is old enough to explain the changes",
+    "D": "By claiming that hominins never used fire at all before about 400,000 years ago"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Text 2 agrees that cooking's \"benefits for a large-brained animal are clear,\" so it does not attack Zand's reasoning about energy. Its objection is timing: routine fire use appears only \"around 400,000 years ago, long after Homo erectus emerged\" about 1.9 million years ago. Text 2 doubts that fire was controlled early enough to cause those changes.",
-    "A": "Incorrect. Text 2 says \"Cooking certainly makes food easier to digest,\" accepting this part of Zand's view.",
-    "B": "Incorrect. Text 2 never disputes the anatomical changes described in Text 1.",
-    "C": "Incorrect. Text 2 mentions fire traces \"about a million years old,\" so it does not say hominins never used fire earlier.",
-    "D": "Correct. Text 2 argues that clear evidence of routine fire use comes far too late to account for changes seen 1.9 million years ago."
+    "A": "Incorrect. Text 2 never disputes the anatomical changes described in Text 1.",
+    "B": "Incorrect. Text 2 says \"Cooking certainly makes food easier to digest,\" accepting this part of Zand's view.",
+    "C": "Correct. Text 2 argues that clear evidence of routine fire use comes far too late to account for changes seen 1.9 million years ago.",
+    "D": "Incorrect. Text 2 mentions fire traces \"about a million years old,\" so it does not say hominins never used fire earlier."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "C": "too_broad"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

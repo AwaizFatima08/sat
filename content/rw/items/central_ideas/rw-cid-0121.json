@@ -14,23 +14,23 @@
   "data": null,
   "stem": "According to the text, what did the planetarium experiment show?",
   "choices": {
-    "A": "Dung beetles roll their balls straighter indoors than they do outdoors.",
-    "B": "Dung beetles can steer by the moon but not by the Milky Way.",
-    "C": "Dung beetles can keep a straight course using the Milky Way's light alone.",
-    "D": "Dung beetles roll in straight lines even when the sky above is completely dark."
+    "A": "Dung beetles can steer by the moon but not by the Milky Way.",
+    "B": "Dung beetles can keep a straight course using the Milky Way's light alone.",
+    "C": "Dung beetles roll in straight lines even when the sky above is completely dark.",
+    "D": "Dung beetles roll their balls straighter indoors than they do outdoors."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "In the planetarium, the researchers showed beetles only the Milky Way's band of light, and the beetles \"still traveled in fairly straight lines.\" Under a completely dark dome, they wandered. So the experiment showed that the Milky Way alone is enough for the beetles to hold their course.",
-    "A": "Incorrect. The text never compares the beetles' paths indoors and outdoors.",
-    "B": "Incorrect. The beetles held a straight course when shown only the Milky Way, so they can use it.",
-    "C": "Correct. With only the Milky Way visible, the beetles traveled fairly straight, which shows its light was enough.",
-    "D": "Incorrect. Under a completely dark dome, the text says the beetles wandered."
+    "A": "Incorrect. The beetles held a straight course when shown only the Milky Way, so they can use it.",
+    "B": "Correct. With only the Milky Way visible, the beetles traveled fairly straight, which shows its light was enough.",
+    "C": "Incorrect. Under a completely dark dome, the text says the beetles wandered.",
+    "D": "Incorrect. The text never compares the beetles' paths indoors and outdoors."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "reversed",
-    "D": "reversed"
+    "A": "reversed",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

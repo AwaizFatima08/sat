@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the belief in Text 1?",
   "choices": {
-    "A": "By agreeing that the oceans give the sky its blue color",
+    "A": "By claiming that sunlight contains only blue and red wavelengths",
     "B": "By arguing that the sky is not really blue but appears blue only over the sea",
-    "C": "By claiming that sunlight contains only blue and red wavelengths",
-    "D": "By explaining that the sky's color comes from the way air scatters sunlight"
+    "C": "By explaining that the sky's color comes from the way air scatters sunlight",
+    "D": "By agreeing that the oceans give the sky its blue color"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Text 1 describes the belief that the sky is blue because it reflects the oceans. Text 2 says physicists explain the color \"without the oceans at all\": air molecules scatter blue light most, so the sky is blue \"even over deserts far from any sea.\" Text 2 replaces the belief with a different explanation.",
-    "A": "Incorrect. Text 2 explains the sky's color \"without the oceans at all,\" so it would not agree.",
+    "A": "Incorrect. Text 2 says sunlight \"contains all colors,\" not only blue and red.",
     "B": "Incorrect. Text 2 says the sky looks blue \"even over deserts far from any sea,\" the opposite of this choice.",
-    "C": "Incorrect. Text 2 says sunlight \"contains all colors,\" not only blue and red.",
-    "D": "Correct. Text 2 explains that air molecules scatter blue light more than red light, which makes the sky look blue."
+    "C": "Correct. Text 2 explains that air molecules scatter blue light more than red light, which makes the sky look blue.",
+    "D": "Incorrect. Text 2 explains the sky's color \"without the oceans at all,\" so it would not agree."
   },
   "traps": {
-    "A": "reversed",
+    "A": "not_in_text",
     "B": "reversed",
-    "C": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

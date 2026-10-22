@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "inherit",
+    "A": "imitate",
     "B": "regulate",
-    "C": "relinquish",
-    "D": "imitate"
+    "C": "inherit",
+    "D": "relinquish"
   },
   "answer": "B",
   "explanation": {
     "why": "The text contrasts merely being able to glow with glowing \"only when enough cells are present.\" The semicolon sets up a correction: the bacteria actively control when the light is made. The blank needs a verb meaning \"control or adjust according to conditions.\"",
-    "A": "Incorrect. The bacteria may inherit the ability to glow, but the text says they \"do not glow simply because they are able to\"; the blank must describe how they control the glow, not where the ability came from.",
+    "A": "Incorrect. Nothing in the text suggests the bacteria copy another organism's light; the point is that they control their own.",
     "B": "Correct. To regulate something is to control when and how much of it happens, which matches cells that switch on light production only at high density.",
-    "C": "Incorrect. \"Relinquish\" means give up; the bacteria do produce light when crowded, so they do not give it up.",
-    "D": "Incorrect. Nothing in the text suggests the bacteria copy another organism's light; the point is that they control their own."
+    "C": "Incorrect. The bacteria may inherit the ability to glow, but the text says they \"do not glow simply because they are able to\"; the blank must describe how they control the glow, not where the ability came from.",
+    "D": "Incorrect. \"Relinquish\" means give up; the bacteria do produce light when crowded, so they do not give it up."
   },
   "traps": {
-    "A": "wrong_logic",
-    "C": "reversed",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "C": "wrong_logic",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

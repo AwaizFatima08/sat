@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the text, how do Mei's feelings change over the course of the text?",
   "choices": {
-    "A": "She starts out eager to help but grows bored by her uncle's slow work.",
+    "A": "She starts out confident but becomes nervous once the bees cover the comb.",
     "B": "She starts out afraid of the bees but decides to keep bees of her own.",
     "C": "She starts out fearful of the bees but grows calmer as she handles them.",
-    "D": "She starts out confident but becomes nervous once the bees cover the comb."
+    "D": "She starts out eager to help but grows bored by her uncle's slow work."
   },
   "answer": "C",
   "explanation": {
     "why": "At first Mei stands \"well back,\" \"flinching\" whenever a bee comes near. By the end, holding the comb, she realizes \"her hands had stopped shaking.\" Her feelings move from fear toward calm.",
-    "A": "Incorrect. She helps only because her parents insist, so she is not eager, and the text never mentions boredom.",
+    "A": "Incorrect. This reverses the change: she begins nervous and ends calmer.",
     "B": "Incorrect. She becomes calmer, but nothing suggests she plans to keep bees herself.",
     "C": "Correct. Her flinching at the start and her steady hands at the end show fear giving way to calm.",
-    "D": "Incorrect. This reverses the change: she begins nervous and ends calmer."
+    "D": "Incorrect. She helps only because her parents insist, so she is not eager, and the text never mentions boredom."
   },
   "traps": {
-    "A": "not_in_text",
+    "A": "reversed",
     "B": "too_broad",
-    "D": "reversed"
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

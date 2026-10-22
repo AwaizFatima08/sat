@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "bright",
-    "B": "costly",
-    "C": "old",
-    "D": "alike"
+    "A": "old",
+    "B": "alike",
+    "C": "costly",
+    "D": "bright"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Each design is drawn \"freehand,\" and every line is made \"by hand rather than printed by a machine.\" Hand drawing always varies a little, so the pieces cannot be identical. \"Alike\" fits.",
-    "A": "Incorrect. The text does not discuss how bright the colors are, and hand drawing would not explain a difference in brightness.",
-    "B": "Incorrect. The text says nothing about price; hand drawing explains why pieces differ from one another, not what they cost.",
-    "C": "Incorrect. Hand drawing has nothing to do with a piece's age, and the text never discusses when pieces were made.",
-    "D": "Correct. Because each line is drawn by hand, every piece varies slightly, so no two are exactly alike."
+    "A": "Incorrect. Hand drawing has nothing to do with a piece's age, and the text never discusses when pieces were made.",
+    "B": "Correct. Because each line is drawn by hand, every piece varies slightly, so no two are exactly alike.",
+    "C": "Incorrect. The text says nothing about price; hand drawing explains why pieces differ from one another, not what they cost.",
+    "D": "Incorrect. The text does not discuss how bright the colors are, and hand drawing would not explain a difference in brightness."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "not_in_text",
-    "C": "wrong_logic"
+    "A": "wrong_logic",
+    "C": "not_in_text",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

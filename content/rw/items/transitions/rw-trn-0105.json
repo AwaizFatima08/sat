@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Even so,",
-    "B": "For example,",
-    "C": "Similarly,",
+    "A": "For example,",
+    "B": "Similarly,",
+    "C": "Even so,",
     "D": "As a result,"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The first two sentences say the water was painfully cold and Matteo wanted to leave. The last sentence says he went into the water anyway because of a promise. A transition that shows he acted in spite of what was just described is needed.",
-    "A": "Correct. \"Even so\" shows that Matteo waded in despite the cold and his wish to return to his towel.",
-    "B": "Incorrect. His promise is not an example of wanting to run back to the shore; it works against that wish.",
-    "C": "Incorrect. \"Similarly\" signals a matching idea, but wading in is the opposite of running back to the towel.",
+    "A": "Incorrect. His promise is not an example of wanting to run back to the shore; it works against that wish.",
+    "B": "Incorrect. \"Similarly\" signals a matching idea, but wading in is the opposite of running back to the towel.",
+    "C": "Correct. \"Even so\" shows that Matteo waded in despite the cold and his wish to return to his towel.",
     "D": "Incorrect. The cold water and Matteo's wish to leave did not cause him to wade in; he waded in despite them."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

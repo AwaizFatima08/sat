@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "rich",
-    "B": "fragile",
-    "C": "misleading",
+    "A": "fragile",
+    "B": "misleading",
+    "C": "rich",
     "D": "recent"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The bodies are so well preserved that they reveal details as specific as \"what they ate in their final meals.\" The blank must describe sources that provide a great deal of information, which is what \"rich\" means.",
-    "A": "Correct. A rich source provides a lot of information, which matches remains that reveal last meals and clothing.",
-    "B": "Incorrect. Ancient remains may be delicate, but the sentence is about how much the bodies reveal, as the phrase \"revealing details\" shows.",
-    "C": "Incorrect. Nothing in the text suggests the bodies give false information; they are praised for what they reveal.",
+    "A": "Incorrect. Ancient remains may be delicate, but the sentence is about how much the bodies reveal, as the phrase \"revealing details\" shows.",
+    "B": "Incorrect. Nothing in the text suggests the bodies give false information; they are praised for what they reveal.",
+    "C": "Correct. A rich source provides a lot of information, which matches remains that reveal last meals and clothing.",
     "D": "Incorrect. The bodies are \"more than two thousand years old,\" so they are not recent."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "reversed",
+    "A": "true_irrelevant",
+    "B": "reversed",
     "D": "reversed"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

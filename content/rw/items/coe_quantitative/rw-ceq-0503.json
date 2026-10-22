@@ -51,22 +51,22 @@
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
     "A": "March, when 1,150 tickets were sold.",
-    "B": "August, when 1,910 tickets were sold.",
-    "C": "May, when 1,180 tickets were sold.",
+    "B": "May, when 1,180 tickets were sold.",
+    "C": "August, when 1,910 tickets were sold.",
     "D": "June, when 1,640 tickets were sold."
   },
   "answer": "D",
   "explanation": {
     "why": "The statement asks for the first month in which sales were above 1,500, so read the line from left to right and stop at the first point higher than 1,500. March, April and May are all under 1,200; June is 1,640.",
     "A": "Incorrect. 1,150 is below 1,500, so sales had not yet passed that level in March.",
-    "B": "Incorrect. August's sales were above 1,500, but they had already passed that level in June and July, so August was not the first such month.",
-    "C": "Incorrect. 1,180 is below 1,500; May was the last month before sales rose above that level.",
+    "B": "Incorrect. 1,180 is below 1,500; May was the last month before sales rose above that level.",
+    "C": "Incorrect. August's sales were above 1,500, but they had already passed that level in June and July, so August was not the first such month.",
     "D": "Correct. March, April and May are all below 1,500, and June, at 1,640, is the first month above it."
   },
   "traps": {
     "A": "reversed",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "B": "reversed",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -86,6 +86,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

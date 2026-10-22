@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Menon's argument?",
   "choices": {
-    "A": "After mobile phones arrived, many fishers also began using them to talk with their families while at sea.",
-    "B": "After mobile phones arrived, boats often sailed past their nearest market to sell at one paying more.",
-    "C": "Before mobile phones arrived, some markets sold fish caught by boats from several different villages.",
-    "D": "After mobile phones arrived, nearly every boat still landed at its nearest market, just as before."
+    "A": "After mobile phones arrived, nearly every boat still landed at its nearest market, just as before.",
+    "B": "Before mobile phones arrived, some markets sold fish caught by boats from several different villages.",
+    "C": "After mobile phones arrived, many fishers also began using them to talk with their families while at sea.",
+    "D": "After mobile phones arrived, boats often sailed past their nearest market to sell at one paying more."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "Menon's explanation depends on a change in behavior: with phones, fishers chose the best-paying market instead of the nearest one. A finding that boats really did start sailing past their nearest market to sell elsewhere supports that explanation.",
-    "A": "Incorrect. Calling family members does not show that phones changed where fishers sold their catch.",
-    "B": "Correct. This shows fishers using information to choose the higher-paying market, which is exactly how Menon says prices became more even.",
-    "C": "Incorrect. This describes markets before phones and says nothing about how phones changed prices.",
-    "D": "Incorrect. If boats kept landing at the nearest market, phones did not change where fish were sold, so this would weaken the argument."
+    "A": "Incorrect. If boats kept landing at the nearest market, phones did not change where fish were sold, so this would weaken the argument.",
+    "B": "Incorrect. This describes markets before phones and says nothing about how phones changed prices.",
+    "C": "Incorrect. Calling family members does not show that phones changed where fishers sold their catch.",
+    "D": "Correct. This shows fishers using information to choose the higher-paying market, which is exactly how Menon says prices became more even."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

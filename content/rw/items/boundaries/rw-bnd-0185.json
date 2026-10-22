@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "tunnels,",
+    "A": "tunnels;",
     "B": "tunnels",
-    "C": "tunnels—",
-    "D": "tunnels;"
+    "C": "tunnels,",
+    "D": "tunnels—"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The clause \"some of which run for dozens of kilometers and have been maintained … for generations\" is extra information about \"The tunnels.\" It closes with a comma before the verb \"are built,\" so it must open with a comma after \"tunnels.\"",
-    "A": "Correct. The comma opens the pair of commas around the nonessential clause, matching the comma before \"are built.\"",
+    "A": "Incorrect. A semicolon can't separate the subject \"The tunnels\" from the rest of its own clause.",
     "B": "Incorrect. Without an opening comma, the clause is not set off, and the comma before \"are built\" separates the subject from its verb.",
-    "C": "Incorrect. Extra information must be set off by matching marks; a dash can't open a clause that closes with a comma.",
-    "D": "Incorrect. A semicolon can't separate the subject \"The tunnels\" from the rest of its own clause."
+    "C": "Correct. The comma opens the pair of commas around the nonessential clause, matching the comma before \"are built.\"",
+    "D": "Incorrect. Extra information must be set off by matching marks; a dash can't open a clause that closes with a comma."
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "supplements",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

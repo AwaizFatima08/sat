@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To show how her uncle's kind response encourages Chiara after a failed first loaf",
-    "B": "To explain the steps Chiara followed when she baked her first loaf",
-    "C": "To show that Chiara's uncle is disappointed by her poor baking",
-    "D": "To describe the kitchen where Chiara and her uncle bake together"
+    "A": "To explain the steps Chiara followed when she baked her first loaf",
+    "B": "To show that Chiara's uncle is disappointed by her poor baking",
+    "C": "To describe the kitchen where Chiara and her uncle bake together",
+    "D": "To show how her uncle's kind response encourages Chiara after a failed first loaf"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Chiara's loaf is a failure, and she expects her uncle to laugh. \"Instead,\" he eats it with her and says, \"Tomorrow we try again.\" The text ends with Chiara smiling and reaching for the flour, so it shows how his response gives her the courage to keep trying.",
-    "A": "Correct. Paolo's gentle reaction turns Chiara's failure into a reason to try again, as her smile at the end shows.",
-    "B": "Incorrect. The text shows only the finished loaf; it does not describe how Chiara made it.",
-    "C": "Incorrect. Paolo raises an eyebrow but then shares the bread and reassures her, so he is supportive rather than disappointed.",
-    "D": "Incorrect. The oven and flour are mentioned, but the text never describes the kitchen."
+    "A": "Incorrect. The text shows only the finished loaf; it does not describe how Chiara made it.",
+    "B": "Incorrect. Paolo raises an eyebrow but then shares the bread and reassures her, so he is supportive rather than disappointed.",
+    "C": "Incorrect. The oven and flour are mentioned, but the text never describes the kitchen.",
+    "D": "Correct. Paolo's gentle reaction turns Chiara's failure into a reason to try again, as her smile at the end shows."
   },
   "traps": {
-    "B": "not_in_text",
-    "C": "reversed",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

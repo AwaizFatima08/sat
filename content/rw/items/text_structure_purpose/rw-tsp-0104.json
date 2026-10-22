@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that katajjaq is more difficult than any other kind of singing",
-    "B": "To describe how a traditional Inuit vocal game is performed",
-    "C": "To explain how the Inuit first learned to make sounds from the throat",
-    "D": "To show that katajjaq singers rarely enjoy taking part in the game"
+    "A": "To show that katajjaq singers rarely enjoy taking part in the game",
+    "B": "To argue that katajjaq is more difficult than any other kind of singing",
+    "C": "To describe how a traditional Inuit vocal game is performed",
+    "D": "To explain how the Inuit first learned to make sounds from the throat"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "After naming katajjaq as \"a traditional vocal game,\" every sentence explains a part of how it is played: how the two women stand, how they take turns, and how the game ends. So the main purpose is to describe how the game is performed.",
-    "A": "Incorrect. The text never compares katajjaq with other kinds of singing.",
-    "B": "Correct. The text explains who takes part, how they trade sounds, and how a winner is decided.",
-    "C": "Incorrect. The text describes the game as it is played; it says nothing about how throat sounds were first learned.",
-    "D": "Incorrect. The game can end when a singer \"starts to laugh,\" which suggests fun, not a lack of enjoyment."
+    "A": "Incorrect. The game can end when a singer \"starts to laugh,\" which suggests fun, not a lack of enjoyment.",
+    "B": "Incorrect. The text never compares katajjaq with other kinds of singing.",
+    "C": "Correct. The text explains who takes part, how they trade sounds, and how a winner is decided.",
+    "D": "Incorrect. The text describes the game as it is played; it says nothing about how throat sounds were first learned."
   },
   "traps": {
-    "A": "too_broad",
-    "C": "not_in_text",
-    "D": "reversed"
+    "A": "reversed",
+    "B": "too_broad",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

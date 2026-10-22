@@ -14,23 +14,23 @@
   "data": null,
   "stem": "According to the text, what happened after the museum added the $105 plan?",
   "choices": {
-    "A": "Most buyers switched from the basic plan to the new plan, which offered more benefits.",
-    "B": "Total membership sales fell because visitors found the larger set of choices confusing.",
-    "C": "The share of buyers choosing the basic plan rose from 31 percent to 47 percent.",
-    "D": "Few people chose the new plan, but a larger share of buyers chose the family plan."
+    "A": "Few people chose the new plan, but a larger share of buyers chose the family plan.",
+    "B": "The share of buyers choosing the basic plan rose from 31 percent to 47 percent.",
+    "C": "Most buyers switched from the basic plan to the new plan, which offered more benefits.",
+    "D": "Total membership sales fell because visitors found the larger set of choices confusing."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The text reports that after the $105 plan was added, \"almost no one bought it, yet the share of buyers choosing the family plan rose from 31 percent to 47 percent.\" The correct answer must state both parts of that result.",
-    "A": "Incorrect. The text says almost no one bought the new plan.",
-    "B": "Incorrect. The text never says total sales fell or that buyers were confused.",
-    "C": "Incorrect. The figures 31 and 47 percent describe the family plan, not the basic plan.",
-    "D": "Correct. This restates the result: the new plan barely sold, while the family plan's share grew."
+    "A": "Correct. This restates the result: the new plan barely sold, while the family plan's share grew.",
+    "B": "Incorrect. The figures 31 and 47 percent describe the family plan, not the basic plan.",
+    "C": "Incorrect. The text says almost no one bought the new plan.",
+    "D": "Incorrect. The text never says total sales fell or that buyers were confused."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "C": "reversed"
+    "B": "reversed",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

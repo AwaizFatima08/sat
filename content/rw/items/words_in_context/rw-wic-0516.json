@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "one-sided",
-    "B": "harmful",
-    "C": "reciprocal",
-    "D": "temporary"
+    "B": "temporary",
+    "C": "harmful",
+    "D": "reciprocal"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The text contrasts an old assumption (the algae were \"simply taking advantage\" of the sloth) with \"more recent work.\" The colon then explains the new view: the algae gain a place to grow and the sloth gains camouflage and perhaps nutrients. Because both sides benefit, the blank needs a word like \"reciprocal.\"",
     "A": "Incorrect. \"One-sided\" describes the older assumption that the algae were \"simply taking advantage\" of the sloth. \"More recent work\" signals a different view, and the colon lists benefits for both partners.",
-    "B": "Incorrect. Nothing after the colon says the sloth is hurt; it lists only possible benefits to the sloth, such as camouflage and nutrients.",
-    "C": "Correct. Both partners benefit (the algae get a place to grow, the sloth gets camouflage and perhaps nutrients), so the relationship is reciprocal, meaning it works in both directions.",
-    "D": "Incorrect. The text never says how long the relationship lasts; the explanation after the colon is about who benefits, not about time."
+    "B": "Incorrect. The text never says how long the relationship lasts; the explanation after the colon is about who benefits, not about time.",
+    "C": "Incorrect. Nothing after the colon says the sloth is hurt; it lists only possible benefits to the sloth, such as camouflage and nutrients.",
+    "D": "Correct. Both partners benefit (the algae get a place to grow, the sloth gets camouflage and perhaps nutrients), so the relationship is reciprocal, meaning it works in both directions."
   },
   "traps": {
     "A": "reversed",
-    "B": "wrong_logic",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

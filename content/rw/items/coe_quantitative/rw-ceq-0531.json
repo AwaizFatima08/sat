@@ -63,22 +63,22 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Ferrer's conclusion?",
   "choices": {
-    "A": "At each of the four times measured, sidewalks beneath tree canopy were cooler than sidewalks with no shade.",
+    "A": "Between 9 a.m. and 3 p.m., shaded sidewalks warmed by more degrees than unshaded sidewalks did.",
     "B": "Shade cooled sidewalks by 3°C at 9 a.m. but by 15°C at 3 p.m., when unshaded pavement was hottest.",
-    "C": "Between 9 a.m. and 3 p.m., shaded sidewalks warmed by more degrees than unshaded sidewalks did.",
+    "C": "At each of the four times measured, sidewalks beneath tree canopy were cooler than sidewalks with no shade.",
     "D": "Unshaded sidewalks were 11°C hotter at 6 p.m. than they had been at 9 a.m."
   },
   "answer": "B",
   "explanation": {
     "why": "Ferrer does not claim only that shade cools sidewalks; she claims the cooling changes over the day and is largest in the afternoon, when unshaded pavement peaks. Support must therefore compare the gap between the two bars at different times. The gap is 31 − 28 = 3°C at 9 a.m. but 51 − 36 = 15°C at 3 p.m., the hottest reading for unshaded sidewalks.",
-    "A": "Incorrect. This is true, but it shows only that shade always helps, not that its cooling effect changes and peaks in the afternoon.",
+    "A": "Incorrect. Shaded sidewalks warmed 8°C (28 to 36), while unshaded sidewalks warmed 20°C (31 to 51), so this reverses the data.",
     "B": "Correct. It compares the cooling effect at two times and shows it is much larger at 3 p.m., exactly when unshaded pavement is hottest.",
-    "C": "Incorrect. Shaded sidewalks warmed 8°C (28 to 36), while unshaded sidewalks warmed 20°C (31 to 51), so this reverses the data.",
+    "C": "Incorrect. This is true, but it shows only that shade always helps, not that its cooling effect changes and peaks in the afternoon.",
     "D": "Incorrect. This is true (42 − 31 = 11), but it describes unshaded sidewalks alone and says nothing about how much the canopy cools them."
   },
   "traps": {
-    "A": "too_narrow",
-    "C": "reversed",
+    "A": "reversed",
+    "C": "too_narrow",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -88,8 +88,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

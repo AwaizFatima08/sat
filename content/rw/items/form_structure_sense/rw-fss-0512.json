@@ -16,21 +16,21 @@
   "choices": {
     "A": "its",
     "B": "his",
-    "C": "they're",
-    "D": "their"
+    "C": "their",
+    "D": "they're"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The machine belongs to \"the brothers,\" a plural noun. A plural antecedent needs the plural possessive pronoun \"their.\"",
     "A": "Incorrect. \"Its\" is singular and refers to a thing, but the owners are the plural \"brothers.\"",
     "B": "Incorrect. \"His\" is singular, but the machine belongs to both brothers.",
-    "C": "Incorrect. \"They're\" is a contraction of \"they are\"; \"they are machine\" makes no sense.",
-    "D": "Correct. \"Their\" is the plural possessive pronoun, matching \"the brothers.\""
+    "C": "Correct. \"Their\" is the plural possessive pronoun, matching \"the brothers.\"",
+    "D": "Incorrect. \"They're\" is a contraction of \"they are\"; \"they are machine\" makes no sense."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "D": "grammar_rule"
   },
   "grammar": "pronoun",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -71,23 +71,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Qureshi's argument?",
   "choices": {
-    "A": "In every year shown, members shipped more mangoes by sea than they did by air.",
-    "B": "From 2010 to 2018, air shipments and sea shipments increased by similar amounts.",
-    "C": "Total shipments rose from about 52,000 tonnes in 2010 to about 89,000 tonnes in 2018.",
+    "A": "Total shipments rose from about 52,000 tonnes in 2010 to about 89,000 tonnes in 2018.",
+    "B": "In every year shown, members shipped more mangoes by sea than they did by air.",
+    "C": "From 2010 to 2018, air shipments and sea shipments increased by similar amounts.",
     "D": "Sea shipments more than doubled from 2010 to 2018, while air shipments stayed between 21,000 and 24,000 tonnes."
   },
   "answer": "D",
   "explanation": {
     "why": "Qureshi's argument is about the source of the growth: sea freight grew while air freight stayed nearly flat. Support must describe how each line changed. Sea shipments rose from 30 to 66 thousand tonnes, more than double, while air shipments stayed between 21 and 24 thousand tonnes.",
-    "A": "Incorrect. This is true, but sea freight could exceed air freight every year without being the source of the growth.",
-    "B": "Incorrect. Sea shipments rose by 36,000 tonnes, while air shipments rose by only 1,000, so this misreads the graph.",
-    "C": "Incorrect. This is true, but it shows only that exports grew, which Qureshi takes for granted; it does not show which kind of shipping produced the growth.",
+    "A": "Incorrect. This is true, but it shows only that exports grew, which Qureshi takes for granted; it does not show which kind of shipping produced the growth.",
+    "B": "Incorrect. This is true, but sea freight could exceed air freight every year without being the source of the growth.",
+    "C": "Incorrect. Sea shipments rose by 36,000 tonnes, while air shipments rose by only 1,000, so this misreads the graph.",
     "D": "Correct. It shows strong growth in sea shipments alongside nearly flat air shipments, which is exactly the pattern Qureshi describes."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
-    "C": "too_narrow"
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -96,8 +96,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

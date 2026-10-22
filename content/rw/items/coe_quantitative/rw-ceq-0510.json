@@ -58,23 +58,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "3 p.m., when it was about 27°C.",
-    "B": "9 p.m., soon after sunset, when it was about 12°C.",
-    "C": "6 a.m., when it was about 4°C.",
-    "D": "12 a.m., when it fell below 0°C."
+    "A": "6 a.m., when it was about 4°C.",
+    "B": "3 p.m., when it was about 27°C.",
+    "C": "12 a.m., when it fell below 0°C.",
+    "D": "9 p.m., soon after sunset, when it was about 12°C."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The statement asks when the temperature was lowest, so find the lowest point on the line. That point is at 6 a.m., at about 4°C.",
-    "A": "Incorrect. 3 p.m. was the warmest time of the day, not the coldest.",
-    "B": "Incorrect. The air was cooling at 9 p.m., but it kept falling for several more hours and was colder at 12 a.m., 3 a.m. and 6 a.m.",
-    "C": "Correct. The line reaches its lowest point, about 4°C, at 6 a.m.",
-    "D": "Incorrect. At 12 a.m. the temperature was about 9°C, and no point on the graph is below 0°C."
+    "A": "Correct. The line reaches its lowest point, about 4°C, at 6 a.m.",
+    "B": "Incorrect. 3 p.m. was the warmest time of the day, not the coldest.",
+    "C": "Incorrect. At 12 a.m. the temperature was about 9°C, and no point on the graph is below 0°C.",
+    "D": "Incorrect. The air was cooling at 9 p.m., but it kept falling for several more hours and was colder at 12 a.m., 3 a.m. and 6 a.m."
   },
   "traps": {
-    "A": "reversed",
-    "B": "true_irrelevant",
-    "D": "reversed"
+    "B": "reversed",
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -87,13 +87,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

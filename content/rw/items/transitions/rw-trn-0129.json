@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Specifically,",
-    "B": "In addition,",
-    "C": "Nevertheless,",
-    "D": "Similarly,"
+    "A": "Similarly,",
+    "B": "Nevertheless,",
+    "C": "Specifically,",
+    "D": "In addition,"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The first sentence says the pyramid is aligned \"with remarkable precision.\" The next sentence states exactly how precise the alignment is: off by less than a tenth of a degree. A transition that introduces a precise statement of a point just made is needed.",
-    "A": "Correct. \"Specifically\" signals that the sentence states exactly how precisely the pyramid is aligned.",
-    "B": "Incorrect. \"In addition\" would add a new, separate fact, but the sentence measures the same precision just described. This is the most tempting trap.",
-    "C": "Incorrect. A tiny error of alignment confirms the claim of precision rather than going against it. This is tempting because the sentence mentions how far the sides are \"turned away\" from true directions.",
-    "D": "Incorrect. \"Similarly\" would introduce a different but comparable case, but the sentence is about the same pyramid's alignment."
+    "A": "Incorrect. \"Similarly\" would introduce a different but comparable case, but the sentence is about the same pyramid's alignment.",
+    "B": "Incorrect. A tiny error of alignment confirms the claim of precision rather than going against it. This is tempting because the sentence mentions how far the sides are \"turned away\" from true directions.",
+    "C": "Correct. \"Specifically\" signals that the sentence states exactly how precisely the pyramid is aligned.",
+    "D": "Incorrect. \"In addition\" would add a new, separate fact, but the sentence measures the same precision just described. This is the most tempting trap."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

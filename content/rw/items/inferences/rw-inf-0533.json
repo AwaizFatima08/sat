@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "the cost of maintaining eyes may weigh more heavily on fish where food is scarce.",
-    "B": "fish in the flood-fed cave use their eyes to find the food that the floods bring in.",
-    "C": "the fish in the two caves are descended from two different surface populations.",
-    "D": "fish in the flood-fed cave will eventually regain fully working eyes."
+    "A": "the fish in the two caves are descended from two different surface populations.",
+    "B": "fish in the flood-fed cave will eventually regain fully working eyes.",
+    "C": "fish in the flood-fed cave use their eyes to find the food that the floods bring in.",
+    "D": "the cost of maintaining eyes may weigh more heavily on fish where food is scarce."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The proposal says eyes are a burden in the dark because they use energy and give nothing back. Where food, and so energy, is scarcer, that cost should matter more. The fish in the food-poor cave have the smallest eyes, which fits the idea that the energy cost of eyes is felt most where food is scarce.",
-    "A": "Correct. If eyes are a burden because they use energy, that burden should be heaviest where energy from food is hardest to get, matching the smaller eyes in the food-poor cave.",
-    "B": "Incorrect. Both caves are equally and completely dark, so eyes would give no benefit in either one, including for finding food.",
-    "C": "Incorrect. The text says nothing about the ancestry of the two cave populations.",
-    "D": "Incorrect. The text compares eye size in two caves; it gives no basis for predicting that any cave fish will regain working eyes."
+    "A": "Incorrect. The text says nothing about the ancestry of the two cave populations.",
+    "B": "Incorrect. The text compares eye size in two caves; it gives no basis for predicting that any cave fish will regain working eyes.",
+    "C": "Incorrect. Both caves are equally and completely dark, so eyes would give no benefit in either one, including for finding food.",
+    "D": "Correct. If eyes are a burden because they use energy, that burden should be heaviest where energy from food is hardest to get, matching the smaller eyes in the food-poor cave."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To show that Ravi is angry and embarrassed about losing to a student",
-    "B": "To explain how Lucía learned to play chess so skillfully",
-    "C": "To portray Ravi's pride in his student outweighing his hurt",
-    "D": "To describe the chess move that allowed Lucía to win the game"
+    "A": "To explain how Lucía learned to play chess so skillfully",
+    "B": "To describe the chess move that allowed Lucía to win the game",
+    "C": "To show that Ravi is angry and embarrassed about losing to a student",
+    "D": "To portray Ravi's pride in his student outweighing his hurt"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Ravi, who has always beaten Lucía, finds no escape from her move. He feels \"a brief sting of wounded pride\" but then \"something much larger and warmer,\" and he grins. The passage centers on his reaction: a moment of hurt that gives way to pleasure in her success.",
-    "A": "Incorrect. Ravi's wounded pride is \"brief,\" and it is replaced by a warmer feeling and a grin, so anger is not the point.",
-    "B": "Incorrect. The text says Ravi has coached her for five years but never explains how she developed her skill.",
-    "C": "Correct. The brief sting of losing gives way to a \"larger and warmer\" feeling, shown by Ravi's grin at his student.",
-    "D": "Incorrect. The winning move is mentioned only briefly (\"she moved her knight\"); the text focuses on Ravi's feelings."
+    "A": "Incorrect. The text says Ravi has coached her for five years but never explains how she developed her skill.",
+    "B": "Incorrect. The winning move is mentioned only briefly (\"she moved her knight\"); the text focuses on Ravi's feelings.",
+    "C": "Incorrect. Ravi's wounded pride is \"brief,\" and it is replaced by a warmer feeling and a grin, so anger is not the point.",
+    "D": "Correct. The brief sting of losing gives way to a \"larger and warmer\" feeling, shown by Ravi's grin at his student."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "too_narrow"
+    "A": "not_in_text",
+    "B": "too_narrow",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

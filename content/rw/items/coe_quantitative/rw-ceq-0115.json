@@ -72,21 +72,21 @@
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
     "A": "the number of novels translated from English rose from 410 in 2015 to 455 in 2025.",
-    "B": "translations from Korean grew from 3 novels in 2015 to 37 novels in 2025.",
-    "C": "translations from Japanese fell from 49 novels in 2015 to 14 novels in 2025.",
+    "B": "translations from Japanese fell from 49 novels in 2015 to 14 novels in 2025.",
+    "C": "translations from Korean grew from 3 novels in 2015 to 37 novels in 2025.",
     "D": "Korean novels translated in 2025 sold more copies than French novels did."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The blank must give an example of an Asian language whose translations grew especially quickly. Korean and Japanese are the Asian languages on the graph, and Korean translations rose from 3 to 37, more than tenfold.",
     "A": "Incorrect. This is true, but English is not an Asian language, and a rise from 410 to 455 is modest growth.",
-    "B": "Correct. Korean is an Asian language, and its translations grew from 3 to 37 novels, an especially fast increase.",
-    "C": "Incorrect. This reverses the years: Japanese translations rose from 14 in 2015 to 49 in 2025.",
+    "B": "Incorrect. This reverses the years: Japanese translations rose from 14 in 2015 to 49 in 2025.",
+    "C": "Correct. Korean is an Asian language, and its translations grew from 3 to 37 novels, an especially fast increase.",
     "D": "Incorrect. The graph shows how many novels were translated, not how many copies were sold."
   },
   "traps": {
     "A": "true_irrelevant",
-    "C": "reversed",
+    "B": "reversed",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -96,8 +96,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

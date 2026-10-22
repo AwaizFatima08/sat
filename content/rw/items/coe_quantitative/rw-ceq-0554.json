@@ -51,21 +51,21 @@
   "choices": {
     "A": "trees below the falls on Stream 1 grew faster than trees in any other section of either stream, and their leaves held the most ocean nitrogen.",
     "B": "on both streams, soil moisture was higher above the falls, where salmon cannot reach, than below the falls.",
-    "C": "on both streams, trees below the falls grew faster and held more ocean nitrogen, yet soil there was moister on only one stream.",
-    "D": "trees along Stream 1 grew faster, on average, than trees along Stream 2 did."
+    "C": "trees along Stream 1 grew faster, on average, than trees along Stream 2 did.",
+    "D": "on both streams, trees below the falls grew faster and held more ocean nitrogen, yet soil there was moister on only one stream."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The statement makes two claims: the data support a link between marine nitrogen and growth, and they rule out soil moisture as the explanation. The completion must therefore show growth tracking nitrogen on both streams while moisture does not. Below the falls, growth (2.4 and 2.1 mm) and ocean nitrogen (22% and 18%) exceed the figures above the falls (1.5 and 1.4 mm; 3% and 2%), but soil was moister below the falls only on Stream 1 (31% versus 30%), not on Stream 2 (27% versus 33%).",
     "A": "Incorrect. This is true, but a single section cannot show a pattern across both streams, and it says nothing about soil moisture.",
     "B": "Incorrect. On Stream 1, soil moisture was 31% below the falls and 30% above them, so this misreads the table.",
-    "C": "Correct. It shows growth and ocean nitrogen rising together below the falls on both streams while soil moisture follows no consistent pattern, which supports the hypothesis and undercuts the alternative.",
-    "D": "Incorrect. This is true (averages of 1.95 and 1.75 mm), but comparing the two streams ignores the below-versus-above comparison that the hypothesis depends on."
+    "C": "Incorrect. This is true (averages of 1.95 and 1.75 mm), but comparing the two streams ignores the below-versus-above comparison that the hypothesis depends on.",
+    "D": "Correct. It shows growth and ocean nitrogen rising together below the falls on both streams while soil moisture follows no consistent pattern, which supports the hypothesis and undercuts the alternative."
   },
   "traps": {
     "A": "too_narrow",
     "B": "reversed",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -74,8 +74,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

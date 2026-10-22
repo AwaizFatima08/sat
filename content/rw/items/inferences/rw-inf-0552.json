@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "meter-gauge lines were unable to carry cotton at all.",
-    "B": "the directly connected district grew far more cotton than the other district did.",
+    "A": "the directly connected district grew far more cotton than the other district did.",
+    "B": "building meter-gauge lines instead of broad-gauge lines saved railway companies no money.",
     "C": "transferring freight between gauges may have limited some districts' gains from rail links.",
-    "D": "building meter-gauge lines instead of broad-gauge lines saved railway companies no money."
+    "D": "meter-gauge lines were unable to carry cotton at all."
   },
   "answer": "C",
   "explanation": {
     "why": "Two districts that were otherwise comparable both gained rail links, but only one had to send its cotton through a change of gauge, with the extra cost, delay, and damage that involved. That district's shipments grew much less, which suggests the transfer between gauges reduced the benefit of its rail connection.",
-    "A": "Incorrect. The meter-gauge district's shipments did rise, just much less, so its line clearly carried some cotton.",
-    "B": "Incorrect. The text calls the districts comparable and gives no evidence that one grew far more cotton.",
+    "A": "Incorrect. The text calls the districts comparable and gives no evidence that one grew far more cotton.",
+    "B": "Incorrect. This contradicts the text, which calls the meter-gauge lines cheaper.",
     "C": "Correct. The district whose cotton had to be moved between gauges gained much less than a comparable district linked directly, pointing to the cost of the transfer.",
-    "D": "Incorrect. This contradicts the text, which calls the meter-gauge lines cheaper."
+    "D": "Incorrect. The meter-gauge district's shipments did rise, just much less, so its line clearly carried some cotton."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "not_in_text",
-    "D": "reversed"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

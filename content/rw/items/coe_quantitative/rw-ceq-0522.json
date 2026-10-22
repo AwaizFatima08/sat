@@ -46,23 +46,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "about 22°C at 1,500 meters, the warmest of the five stations.",
-    "B": "about 16°C at 2,500 meters and about 10°C at 3,500 meters.",
-    "C": "about 16°C at 2,500 meters and about 4°C at 3,500 meters.",
-    "D": "below freezing at 5,500 meters, the highest station."
+    "A": "about 16°C at 2,500 meters and about 4°C at 3,500 meters.",
+    "B": "below freezing at 5,500 meters, the highest station.",
+    "C": "about 22°C at 1,500 meters, the warmest of the five stations.",
+    "D": "about 16°C at 2,500 meters and about 10°C at 3,500 meters."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "Sherpa's finding is about a rate of change, so the example must give temperatures at two elevations and show a drop of about 6°C for each 1,000 meters. The stations at 2,500 and 3,500 meters average about 16°C and 10°C, a drop of about 6°C over 1,000 meters.",
-    "A": "Incorrect. This is true, but a single temperature cannot show how much the temperature falls as elevation increases.",
-    "B": "Correct. These two stations are 1,000 meters apart, and the temperature falls by about 6°C between them, which is an example of the pattern Sherpa describes.",
-    "C": "Incorrect. The 3,500-meter station averaged about 10°C; about 4°C was recorded at 4,500 meters, so this misreads the graph.",
-    "D": "Incorrect. This is true, but it gives only one station's temperature and does not show a drop of about 6°C per 1,000 meters."
+    "A": "Incorrect. The 3,500-meter station averaged about 10°C; about 4°C was recorded at 4,500 meters, so this misreads the graph.",
+    "B": "Incorrect. This is true, but it gives only one station's temperature and does not show a drop of about 6°C per 1,000 meters.",
+    "C": "Incorrect. This is true, but a single temperature cannot show how much the temperature falls as elevation increases.",
+    "D": "Correct. These two stations are 1,000 meters apart, and the temperature falls by about 6°C between them, which is an example of the pattern Sherpa describes."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "reversed",
-    "D": "true_irrelevant"
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -75,13 +75,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

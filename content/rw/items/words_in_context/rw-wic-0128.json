@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "accidental",
-    "B": "intentional",
-    "C": "costly",
+    "A": "costly",
+    "B": "accidental",
+    "C": "intentional",
     "D": "unnoticeable"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The text raises the idea that \"careless workers\" caused the uneven surface, then rejects it with \"Yet.\" The next sentence explains the effect the tilted tiles create: the walls \"shimmer.\" The unevenness served a purpose, so it was done on purpose. \"Intentional\" fits.",
-    "A": "Incorrect. \"Accidental\" matches the careless-workers explanation that \"Yet\" rejects.",
-    "B": "Correct. The tilted tiles make the walls shimmer, so the unevenness was intentional, a deliberate choice rather than a mistake.",
-    "C": "Incorrect. Gold glass tiles may have been expensive, but the sentence answers whether the uneven surface was a mistake, and the following sentence explains its purpose, not its price.",
+    "A": "Incorrect. Gold glass tiles may have been expensive, but the sentence answers whether the uneven surface was a mistake, and the following sentence explains its purpose, not its price.",
+    "B": "Incorrect. \"Accidental\" matches the careless-workers explanation that \"Yet\" rejects.",
+    "C": "Correct. The tilted tiles make the walls shimmer, so the unevenness was intentional, a deliberate choice rather than a mistake.",
     "D": "Incorrect. The text opens by saying that visitors \"notice\" the uneven surface, so it is not unnoticeable."
   },
   "traps": {
-    "A": "reversed",
-    "C": "true_irrelevant",
+    "A": "true_irrelevant",
+    "B": "reversed",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

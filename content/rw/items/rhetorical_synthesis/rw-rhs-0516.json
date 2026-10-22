@@ -20,22 +20,22 @@
   "data": null,
   "stem": "The student wants to emphasize a difference between the surfaces of Europa and Titan. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Although Europa orbits Jupiter and Titan orbits Saturn, both moons are thought to hide liquid water beneath their surfaces.",
-    "B": "Europa's surface is a cracked shell of water ice, while Titan's surface holds lakes and seas of liquid methane and ethane.",
-    "C": "Titan is surrounded by a thick atmosphere, whereas Europa has only an extremely thin one.",
+    "A": "Titan is surrounded by a thick atmosphere, whereas Europa has only an extremely thin one.",
+    "B": "Although Europa orbits Jupiter and Titan orbits Saturn, both moons are thought to hide liquid water beneath their surfaces.",
+    "C": "Europa's surface is a cracked shell of water ice, while Titan's surface holds lakes and seas of liquid methane and ethane.",
     "D": "Titan, a moon of Saturn, has lakes and seas of liquid methane and ethane on its surface."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The goal has two parts: it must show a difference, and the difference must be about the surfaces. The notes describe Europa's icy, cracked surface and Titan's surface of methane and ethane lakes; only one choice sets these against each other.",
-    "A": "Incorrect. It mentions the surfaces, but it stresses something the moons share (hidden water), so it shows a similarity.",
-    "B": "Correct. It contrasts Europa's cracked ice surface with Titan's lakes and seas of liquid methane and ethane.",
-    "C": "Incorrect. This is a real difference, but it concerns the moons' atmospheres, not their surfaces. It is tempting because it uses a contrast word.",
+    "A": "Incorrect. This is a real difference, but it concerns the moons' atmospheres, not their surfaces. It is tempting because it uses a contrast word.",
+    "B": "Incorrect. It mentions the surfaces, but it stresses something the moons share (hidden water), so it shows a similarity.",
+    "C": "Correct. It contrasts Europa's cracked ice surface with Titan's lakes and seas of liquid methane and ethane.",
     "D": "Incorrect. It describes only Titan's surface, so no difference from Europa is shown."
   },
   "traps": {
     "A": "misses_goal",
-    "C": "misses_goal",
+    "B": "misses_goal",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

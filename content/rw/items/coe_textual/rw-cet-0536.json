@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken MacLeod's argument?",
   "choices": {
-    "A": "Many new post offices opened in the working-class districts of British cities during the 1840s.",
-    "B": "Business correspondence alone accounted for more than half of the additional letters mailed in the 1840s.",
+    "A": "Business correspondence alone accounted for more than half of the additional letters mailed in the 1840s.",
+    "B": "Envelopes, which had been uncommon before 1840, came into wide use soon after the reform.",
     "C": "Before 1840, postage was usually paid by the person who received a letter rather than by the sender.",
-    "D": "Envelopes, which had been uncommon before 1840, came into wide use soon after the reform."
+    "D": "Many new post offices opened in the working-class districts of British cities during the 1840s."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "MacLeod's claim is about where most of the new letters came from: working-class people. A finding that more than half of the additional letters were business correspondence directly contradicts that claim about the source of the increase.",
-    "A": "Incorrect. New post offices in working-class districts would make it easier for those people to send letters, which fits MacLeod's argument.",
-    "B": "Correct. If businesses produced most of the extra letters, working-class writers could not have produced most of them.",
+    "A": "Correct. If businesses produced most of the extra letters, working-class writers could not have produced most of them.",
+    "B": "Incorrect. The spread of envelopes is a change in how letters were sent, not evidence about who was sending them.",
     "C": "Incorrect. This describes how postage worked before the reform but says nothing about who sent the additional letters afterward.",
-    "D": "Incorrect. The spread of envelopes is a change in how letters were sent, not evidence about who was sending them."
+    "D": "Incorrect. New post offices in working-class districts would make it easier for those people to send letters, which fits MacLeod's argument."
   },
   "traps": {
-    "A": "reversed",
+    "B": "true_irrelevant",
     "C": "true_irrelevant",
-    "D": "true_irrelevant"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

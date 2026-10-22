@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "anonymous",
-    "B": "collective",
-    "C": "regal",
-    "D": "cryptic"
+    "A": "regal",
+    "B": "inscrutable",
+    "C": "collective",
+    "D": "anonymous"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The inscriptions name many kinds of donors, each paying for one small part, and the final sentence says the monument was \"less the project of one ruler than an accumulation of many modest acts of giving.\" The blank must describe a story of many people acting together, which is \"collective.\"",
-    "A": "Incorrect. The inscriptions attach \"each donor's name\" to a part of the monument, so the story is not anonymous.",
-    "B": "Correct. A monument built from many donors' gifts tells a collective story, in contrast to one credited to kings.",
-    "C": "Incorrect. The inscriptions challenge the idea of royal patronage; \"regal\" restates the account they correct.",
-    "D": "Incorrect. The inscriptions are brief but clear about who gave what; nothing suggests they are hard to interpret."
+    "A": "Incorrect. The inscriptions challenge the idea of royal patronage; \"regal\" restates the account they correct.",
+    "B": "Incorrect. The inscriptions are brief but clear about who gave what; nothing suggests they are hard to interpret.",
+    "C": "Correct. A monument built from many donors' gifts tells a collective story, in contrast to one credited to kings.",
+    "D": "Incorrect. The inscriptions attach \"each donor's name\" to a part of the monument, so the story is not anonymous."
   },
   "traps": {
     "A": "reversed",
-    "C": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

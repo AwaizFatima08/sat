@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "An unexpected delay leads a woman to truly see a city she had long overlooked.",
+    "A": "A woman realizes that she dislikes her work at the port and wants to leave it.",
     "B": "A woman's fear when the funicular suddenly stalls makes her forget about her newspaper.",
-    "C": "A woman realizes that she dislikes her work at the port and wants to leave it.",
-    "D": "A woman notices that the roofs of her city are painted in a variety of colors."
+    "C": "A woman notices that the roofs of her city are painted in a variety of colors.",
+    "D": "An unexpected delay leads a woman to truly see a city she had long overlooked."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The first sentence establishes that for eleven years the city was only \"a pause\" in her reading. The stall makes her lower the paper and look, and the description shows her seeing the roofs, the washing, and the bay as real things rather than words on documents. Her folding the paper without noticing confirms how fully her attention has shifted.",
-    "A": "Correct. This joins the setup (years of ignoring the view) to the change the stall produces.",
+    "A": "Incorrect. The text says nothing about her feelings toward her work.",
     "B": "Incorrect. Nothing suggests fear; her absorption in the view, not alarm, explains why she folds the paper without noticing.",
-    "C": "Incorrect. The text says nothing about her feelings toward her work.",
-    "D": "Incorrect. The colored roofs are one detail of what she sees, not the point of the passage."
+    "C": "Incorrect. The colored roofs are one detail of what she sees, not the point of the passage.",
+    "D": "Correct. This joins the setup (years of ignoring the view) to the change the stall produces."
   },
   "traps": {
+    "A": "too_broad",
     "B": "not_in_text",
-    "C": "too_broad",
-    "D": "too_narrow"
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

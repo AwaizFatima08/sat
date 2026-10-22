@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "capricious",
-    "B": "convoluted",
-    "C": "ingenious",
-    "D": "democratic"
+    "A": "convoluted",
+    "B": "democratic",
+    "C": "capricious",
+    "D": "ingenious"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The blank describes how the scheme \"can seem\" to modern readers, and it is restated as \"a bureaucratic curiosity\" after a description of \"remarkable intricacy.\" The word \"however\" then introduces the designers' clear purpose. The blank must mean \"needlessly complicated,\" which is \"convoluted.\"",
-    "A": "Incorrect. The procedure used chance, but \"capricious\" means impulsive and changeable on a whim. The text describes a fixed, intricate set of rules, not unpredictable behavior.",
-    "B": "Correct. \"Convoluted\" means needlessly complicated, which matches \"remarkable intricacy\" and \"a bureaucratic curiosity.\"",
-    "C": "Incorrect. \"Ingenious\" is closer to the designers' view that \"however\" introduces; \"merely ingenious\" would not express the dismissive modern impression.",
-    "D": "Incorrect. The text never discusses whether the scheme was democratic; it focuses on its complexity and its purpose."
+    "A": "Correct. \"Convoluted\" means needlessly complicated, which matches \"remarkable intricacy\" and \"a bureaucratic curiosity.\"",
+    "B": "Incorrect. The text never discusses whether the scheme was democratic; it focuses on its complexity and its purpose.",
+    "C": "Incorrect. The procedure used chance, but \"capricious\" means impulsive and changeable on a whim. The text describes a fixed, intricate set of rules, not unpredictable behavior.",
+    "D": "Incorrect. \"Ingenious\" is closer to the designers' view that \"however\" introduces; \"merely ingenious\" would not express the dismissive modern impression."
   },
   "traps": {
-    "A": "wrong_tone",
-    "C": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "wrong_tone",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

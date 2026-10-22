@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "lose its leaves earlier in the dry season than the grasses around it do.",
-    "B": "grow shorter than the grasses and small shrubs that grow near it.",
-    "C": "draw most of its water from the upper layers of the soil.",
-    "D": "stay green in the dry months, after many shallow-rooted plants have withered."
+    "A": "draw most of its water from the upper layers of the soil.",
+    "B": "stay green in the dry months, after many shallow-rooted plants have withered.",
+    "C": "lose its leaves earlier in the dry season than the grasses around it do.",
+    "D": "grow shorter than the grasses and small shrubs that grow near it."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Rain falls in only a few months, so the upper soil dries out for most of the year. The khejri's deep root reaches water far below that dry layer, so the tree can keep getting water when plants with shallow roots cannot.",
-    "A": "Incorrect. This reverses the logic: the khejri's deep root gives it water after the grasses' shallow roots have dried out, so it should keep its leaves longer, not lose them sooner.",
-    "B": "Incorrect. The text says nothing about the tree's height compared with nearby plants.",
-    "C": "Incorrect. The text says the root reaches water \"far below the dry upper layers,\" the opposite of this choice.",
-    "D": "Correct. Reaching deep water lets the khejri keep growing when the upper soil, where shallow-rooted plants get water, is dry."
+    "A": "Incorrect. The text says the root reaches water \"far below the dry upper layers,\" the opposite of this choice.",
+    "B": "Correct. Reaching deep water lets the khejri keep growing when the upper soil, where shallow-rooted plants get water, is dry.",
+    "C": "Incorrect. This reverses the logic: the khejri's deep root gives it water after the grasses' shallow roots have dried out, so it should keep its leaves longer, not lose them sooner.",
+    "D": "Incorrect. The text says nothing about the tree's height compared with nearby plants."
   },
   "traps": {
     "A": "reversed",
-    "B": "not_in_text",
-    "C": "reversed"
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

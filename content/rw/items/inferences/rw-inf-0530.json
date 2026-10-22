@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "older than the ice that surrounds it.",
-    "B": "younger than the ice that surrounds it.",
-    "C": "unchanged from the air of the year the snow fell.",
-    "D": "useless for learning about the past atmosphere."
+    "A": "younger than the ice that surrounds it.",
+    "B": "older than the ice that surrounds it.",
+    "C": "useless for learning about the past atmosphere.",
+    "D": "unchanged from the air of the year the snow fell."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The snow that becomes the ice fell first, but newer air kept moving through it for many years until it was sealed into solid ice. The trapped air therefore comes from a later time than the snow around it.",
-    "A": "Incorrect. This reverses the timing: the air is sealed in years after the snow fell, so it is younger, not older.",
-    "B": "Correct. Air kept circulating through the snow until it turned to ice, so the trapped air is from later than the snow itself.",
-    "C": "Incorrect. Air from the atmosphere kept moving through the snow for years, so the trapped air is not simply air from the year the snow fell.",
-    "D": "Incorrect. This goes too far: the text says scientists use the bubbles to study the past atmosphere; the age difference does not make them useless."
+    "A": "Correct. Air kept circulating through the snow until it turned to ice, so the trapped air is from later than the snow itself.",
+    "B": "Incorrect. This reverses the timing: the air is sealed in years after the snow fell, so it is younger, not older.",
+    "C": "Incorrect. This goes too far: the text says scientists use the bubbles to study the past atmosphere; the age difference does not make them useless.",
+    "D": "Incorrect. Air from the atmosphere kept moving through the snow for years, so the trapped air is not simply air from the year the snow fell."
   },
   "traps": {
-    "A": "reversed",
-    "C": "reversed",
-    "D": "too_broad"
+    "B": "reversed",
+    "C": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

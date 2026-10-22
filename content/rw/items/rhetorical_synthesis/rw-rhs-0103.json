@@ -19,22 +19,22 @@
   "data": null,
   "stem": "The student wants to explain why some leaves turn yellow or orange in autumn. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Leaves contain chlorophyll, a green pigment that plants use to make food from sunlight.",
-    "B": "Carotenoids are yellow and orange pigments that are found in many leaves.",
-    "C": "In autumn, the green chlorophyll in many leaves breaks down, revealing yellow and orange pigments.",
-    "D": "In autumn, many trees stop making chlorophyll, the green pigment that plants use to make food from sunlight."
+    "A": "In autumn, the green chlorophyll in many leaves breaks down, revealing yellow and orange pigments.",
+    "B": "In autumn, many trees stop making chlorophyll, the green pigment that plants use to make food from sunlight.",
+    "C": "Leaves contain chlorophyll, a green pigment that plants use to make food from sunlight.",
+    "D": "Carotenoids are yellow and orange pigments that are found in many leaves."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "An explanation of the color change must connect what happens in autumn to the yellow and orange colors that appear. The notes say the green chlorophyll breaks down, and then the yellow and orange pigments can be seen. Only one choice links these two steps.",
-    "A": "Incorrect. This describes chlorophyll but says nothing about autumn or about yellow and orange colors.",
-    "B": "Incorrect. This names the yellow and orange pigments but does not explain why they become visible in autumn.",
-    "C": "Correct. It gives the cause (the chlorophyll breaks down in autumn) and the result (the yellow and orange pigments are revealed).",
-    "D": "Incorrect. This gives only the first step. It never says that yellow and orange pigments appear once the chlorophyll is gone."
+    "A": "Correct. It gives the cause (the chlorophyll breaks down in autumn) and the result (the yellow and orange pigments are revealed).",
+    "B": "Incorrect. This gives only the first step. It never says that yellow and orange pigments appear once the chlorophyll is gone.",
+    "C": "Incorrect. This describes chlorophyll but says nothing about autumn or about yellow and orange colors.",
+    "D": "Incorrect. This names the yellow and orange pigments but does not explain why they become visible in autumn."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "too_narrow",
+    "C": "true_irrelevant",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

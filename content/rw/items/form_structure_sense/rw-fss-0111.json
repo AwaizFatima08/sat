@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "shows",
-    "B": "is showing",
+    "A": "is showing",
+    "B": "show",
     "C": "has shown",
-    "D": "show"
+    "D": "shows"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The subject of the verb is \"paintings,\" which is plural; \"on a sheltered wall\" only tells where they are. A plural subject needs a plural verb, so \"show\" is correct.",
-    "A": "Incorrect. \"Shows\" is singular and seems to agree with \"wall,\" but the subject is the plural \"paintings.\"",
-    "B": "Incorrect. \"Is showing\" is singular, but the subject \"paintings\" is plural.",
+    "A": "Incorrect. \"Is showing\" is singular, but the subject \"paintings\" is plural.",
+    "B": "Correct. The plural verb \"show\" agrees with the plural subject \"paintings.\"",
     "C": "Incorrect. \"Has shown\" is singular, but the subject \"paintings\" is plural.",
-    "D": "Correct. The plural verb \"show\" agrees with the plural subject \"paintings.\""
+    "D": "Incorrect. \"Shows\" is singular and seems to agree with \"wall,\" but the subject is the plural \"paintings.\""
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "subject_verb",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "European demand for fashionable hats helped drive the growth of the North American fur trade.",
-    "B": "Beaver fur made better felt than any other material because each hair carries tiny barbs.",
+    "A": "Indigenous trappers formed alliances to keep European traders out of the continent's interior.",
+    "B": "European demand for fashionable hats helped drive the growth of the North American fur trade.",
     "C": "Europe's beavers became scarce once silk hats took the place of hats made of beaver felt.",
-    "D": "Indigenous trappers formed alliances to keep European traders out of the continent's interior."
+    "D": "Beaver fur made better felt than any other material because each hair carries tiny barbs."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The text traces a chain of causes: beaver hats became fashionable in Europe, Europe's beavers were scarce, so hatters turned to North American pelts, and that demand drove traders inland, shaped alliances, and funded colonial ventures until silk hats replaced beaver. The main idea is that a fashion drove the North American fur trade.",
-    "A": "Correct. This captures the cause-and-effect chain that the whole text follows.",
-    "B": "Incorrect. The text says beaver fur was \"ideal\" for felt, not better than every other material, and this is only one supporting detail.",
+    "A": "Incorrect. The text says alliances formed between European companies and Indigenous trappers, not against traders.",
+    "B": "Correct. This captures the cause-and-effect chain that the whole text follows.",
     "C": "Incorrect. Europe's beavers were scarce because of hunting; silk hats came centuries later and ended the trade.",
-    "D": "Incorrect. The text says alliances formed between European companies and Indigenous trappers, not against traders."
+    "D": "Incorrect. The text says beaver fur was \"ideal\" for felt, not better than every other material, and this is only one supporting detail."
   },
   "traps": {
-    "B": "too_broad",
+    "A": "not_in_text",
     "C": "reversed",
-    "D": "not_in_text"
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "take",
-    "B": "takes",
-    "C": "are taking",
-    "D": "have taken"
+    "A": "are taking",
+    "B": "take",
+    "C": "have taken",
+    "D": "takes"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The subject of the verb is \"quilt,\" which is singular; the phrase between the commas only describes it. A singular subject needs a singular verb, and the passage is in the present tense, so \"takes\" is correct.",
-    "A": "Incorrect. \"Take\" is plural and seems to agree with \"flowers,\" \"fish,\" or \"scenes,\" but the subject is the singular \"quilt.\"",
-    "B": "Correct. The singular verb \"takes\" agrees with the singular subject \"quilt.\"",
-    "C": "Incorrect. \"Are taking\" is plural, but the subject \"quilt\" is singular.",
-    "D": "Incorrect. \"Have taken\" is plural, but the subject \"quilt\" is singular."
+    "A": "Incorrect. \"Are taking\" is plural, but the subject \"quilt\" is singular.",
+    "B": "Incorrect. \"Take\" is plural and seems to agree with \"flowers,\" \"fish,\" or \"scenes,\" but the subject is the singular \"quilt.\"",
+    "C": "Incorrect. \"Have taken\" is plural, but the subject \"quilt\" is singular.",
+    "D": "Correct. The singular verb \"takes\" agrees with the singular subject \"quilt.\""
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "B": "grammar_rule",
+    "C": "grammar_rule"
   },
   "grammar": "subject_verb",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

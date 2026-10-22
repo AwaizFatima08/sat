@@ -15,21 +15,21 @@
   "stem": "Which choice most logically completes the text?",
   "choices": {
     "A": "built from timber that had been stored for decades before being used.",
-    "B": "built over many decades, as wood from later years was gradually added.",
-    "C": "constructed in 1132 or within a few years afterward.",
+    "B": "constructed in 1132 or within a few years afterward.",
+    "C": "built over many decades, as wood from later years was gradually added.",
     "D": "the oldest wooden church still standing in Norway."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The trees were cut down in the winter of 1131–1132, and builders usually used timber soon after cutting it. So the church was probably built in 1132 or shortly after.",
     "A": "Incorrect. The text says builders usually used timber soon after felling it, not after storing it for decades.",
-    "B": "Incorrect. The text says only that several beams came from trees felled in one winter; it gives no evidence of wood added over many decades.",
-    "C": "Correct. Felling in 1131–1132 plus the habit of building soon afterward points to construction in or soon after 1132.",
+    "B": "Correct. Felling in 1131–1132 plus the habit of building soon afterward points to construction in or soon after 1132.",
+    "C": "Incorrect. The text says only that several beams came from trees felled in one winter; it gives no evidence of wood added over many decades.",
     "D": "Incorrect. The text gives a date for one church but compares it with no other churches, so it cannot show this church is the oldest."
   },
   "traps": {
     "A": "reversed",
-    "B": "not_in_text",
+    "C": "not_in_text",
     "D": "too_broad"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

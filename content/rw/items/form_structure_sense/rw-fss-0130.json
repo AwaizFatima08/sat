@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "researchers",
+    "A": "researchers'",
     "B": "researcher's",
-    "C": "researchers's",
-    "D": "researchers'"
+    "C": "researchers",
+    "D": "researchers's"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The results belong to the two ecologists, Duarte and Asante, so the owner is plural (\"The two\"). A plural noun ending in -s shows possession with an apostrophe after the s: \"researchers'.\"",
-    "A": "Incorrect. \"Researchers\" is plural but not possessive; the results belong to the researchers, so an apostrophe is needed.",
+    "A": "Correct. \"Researchers'\" is the plural possessive, showing the results belong to both ecologists.",
     "B": "Incorrect. \"Researcher's\" is singular possessive, but \"The two\" shows there are two researchers.",
-    "C": "Incorrect. \"Researchers's\" is not a Standard English form; a plural ending in -s takes only an apostrophe.",
-    "D": "Correct. \"Researchers'\" is the plural possessive, showing the results belong to both ecologists."
+    "C": "Incorrect. \"Researchers\" is plural but not possessive; the results belong to the researchers, so an apostrophe is needed.",
+    "D": "Incorrect. \"Researchers's\" is not a Standard English form; a plural ending in -s takes only an apostrophe."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "plural_possessive",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

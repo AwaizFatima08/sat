@@ -15,21 +15,21 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "its",
-    "B": "his or her",
-    "C": "their",
+    "B": "their",
+    "C": "his or her",
     "D": "one's"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The people who tune the instruments are \"the members,\" a plural noun; \"of an orchestra\" only says which members. The pronoun must be plural and possessive, so \"their\" is correct.",
     "A": "Incorrect. \"Its\" is singular and seems to refer to \"orchestra,\" but the subject doing the tuning is the plural \"members.\"",
-    "B": "Incorrect. \"His or her\" is singular, but the antecedent \"members\" is plural.",
-    "C": "Correct. \"Their\" is the plural possessive pronoun, matching \"members.\"",
+    "B": "Correct. \"Their\" is the plural possessive pronoun, matching \"members.\"",
+    "C": "Incorrect. \"His or her\" is singular, but the antecedent \"members\" is plural.",
     "D": "Incorrect. \"One's\" refers to a general, unnamed person, not to the specific plural noun \"members.\""
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "pronoun",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "One of the two lichens in the genus Bryoria produces a yellow compound that is toxic.",
-    "B": "A lichen consists of a fungus and an alga that supply each other with shelter and food.",
-    "C": "In many lichens, a yeast has replaced the alga as the partner that supplies most of their food.",
-    "D": "A newly found partner suggests that the long-accepted account of lichens may be incomplete."
+    "A": "A lichen consists of a fungus and an alga that supply each other with shelter and food.",
+    "B": "One of the two lichens in the genus Bryoria produces a yellow compound that is toxic.",
+    "C": "A newly found partner suggests that the long-accepted account of lichens may be incomplete.",
+    "D": "In many lichens, a yeast has replaced the alga as the partner that supplies most of their food."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The text presents the traditional two-partner model, points out a puzzle it could not explain, and then describes the discovery of a third partner, a yeast, that seems linked to the puzzle. The final sentence states the main idea: the classic picture \"may be incomplete,\" and overlooked partners could explain differences.",
-    "A": "Incorrect. The yellow compound is part of one example, not the point of the whole text.",
-    "B": "Incorrect. This is the traditional model that the text goes on to question; it leaves out the new finding that is the text's focus.",
-    "C": "Incorrect. The text adds the yeast as a third partner; it never says the yeast replaces the alga or supplies food.",
-    "D": "Correct. This captures the text's movement from the accepted model to the discovery that may show it is incomplete."
+    "A": "Incorrect. This is the traditional model that the text goes on to question; it leaves out the new finding that is the text's focus.",
+    "B": "Incorrect. The yellow compound is part of one example, not the point of the whole text.",
+    "C": "Correct. This captures the text's movement from the accepted model to the discovery that may show it is incomplete.",
+    "D": "Incorrect. The text adds the yeast as a third partner; it never says the yeast replaces the alga or supplies food."
   },
   "traps": {
     "A": "too_narrow",
     "B": "too_narrow",
-    "C": "not_in_text"
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

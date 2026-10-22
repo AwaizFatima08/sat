@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "develops through contact with an anemone rather than being fully present at birth.",
-    "B": "is present at birth, which is why the young fish settled among the tentacles at once.",
-    "C": "comes mainly from the fish's ability to dart away before the tentacles can sting it.",
-    "D": "is permanently lost if the fish spends its early life in a tank without anemones."
+    "A": "is permanently lost if the fish spends its early life in a tank without anemones.",
+    "B": "comes mainly from the fish's ability to dart away before the tentacles can sting it.",
+    "C": "develops through contact with an anemone rather than being fully present at birth.",
+    "D": "is present at birth, which is why the young fish settled among the tentacles at once."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The young fish were stung at first but, after hours of gradually longer contact, could nestle among the tentacles unharmed. Protection that appears only after contact must build up through that contact, which challenges the idea that clownfish are born fully immune.",
-    "A": "Correct. The fish were stung at first and became unharmed only after repeated contact, so their protection developed over time.",
-    "B": "Incorrect. The fish did not settle in at once; they were stung and darted away at first.",
-    "C": "Incorrect. Darting away happened only at first; later the fish stayed among the tentacles unharmed, so escape cannot explain their protection.",
-    "D": "Incorrect. Fish raised without anemones still became protected within a day, so the protection was not lost."
+    "A": "Incorrect. Fish raised without anemones still became protected within a day, so the protection was not lost.",
+    "B": "Incorrect. Darting away happened only at first; later the fish stayed among the tentacles unharmed, so escape cannot explain their protection.",
+    "C": "Correct. The fish were stung at first and became unharmed only after repeated contact, so their protection developed over time.",
+    "D": "Incorrect. The fish did not settle in at once; they were stung and darted away at first."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "A": "too_broad",
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -15,21 +15,21 @@
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
     "A": "Kinngait artists gave up stone carving entirely once they began making prints.",
-    "B": "Printmaking in Kinngait began as a way to sell drawings to museums.",
-    "C": "Kinngait artists took up printmaking, which became a lasting success there.",
+    "B": "Kinngait artists took up printmaking, which became a lasting success there.",
+    "C": "Printmaking in Kinngait began as a way to sell drawings to museums.",
     "D": "Inuit artists in northern Canada have long carved figures from stone."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The text describes how Kinngait artists began making prints in the late 1950s and how the art form \"caught on quickly,\" with new collections released nearly every year since 1959 and work shown in museums worldwide. The main idea is that printmaking became a lasting and successful practice in Kinngait.",
     "A": "Incorrect. The text never says the artists stopped carving; it says they added printmaking.",
-    "B": "Incorrect. The text says the prints are now in museums, not that printmaking began in order to sell to them.",
-    "C": "Correct. This sums up the whole text: artists began printmaking, it caught on, and it has continued and gained wide recognition.",
+    "B": "Correct. This sums up the whole text: artists began printmaking, it caught on, and it has continued and gained wide recognition.",
+    "C": "Incorrect. The text says the prints are now in museums, not that printmaking began in order to sell to them.",
     "D": "Incorrect. Stone carving is background from the first sentence; the text is mainly about printmaking."
   },
   "traps": {
     "A": "not_in_text",
-    "B": "not_in_text",
+    "C": "not_in_text",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

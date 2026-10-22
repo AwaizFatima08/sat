@@ -15,16 +15,16 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "scholar, Ahmed",
-    "B": "scholar: Ahmed",
-    "C": "scholar; Ahmed",
+    "B": "scholar; Ahmed",
+    "C": "scholar: Ahmed",
     "D": "scholar Ahmed"
   },
   "answer": "D",
   "explanation": {
     "why": "The name \"Ahmed Baba\" tells which sixteenth-century scholar the institute is named for; without it, \"the sixteenth-century scholar\" would not identify anyone. Because the name is essential, it is not set off with punctuation.",
     "A": "Incorrect. A comma would treat the name as extra information, but the name is essential to identify the scholar, so no comma belongs here.",
-    "B": "Incorrect. A colon must follow a complete independent clause, and \"The institute takes its name from the sixteenth-century scholar\" is not complete without the name.",
-    "C": "Incorrect. A semicolon must join two independent clauses, and neither side of this one is independent.",
+    "B": "Incorrect. A semicolon must join two independent clauses, and neither side of this one is independent.",
+    "C": "Incorrect. A colon must follow a complete independent clause, and \"The institute takes its name from the sixteenth-century scholar\" is not complete without the name.",
     "D": "Correct. No punctuation is used because the name \"Ahmed Baba\" is essential: it identifies which scholar is meant."
   },
   "traps": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

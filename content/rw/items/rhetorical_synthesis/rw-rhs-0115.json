@@ -20,22 +20,22 @@
   "data": null,
   "stem": "The student wants to present Jahan's conclusion along with the study result that supports it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Jahan concluded that protecting mangroves, whose roots trap sediment and slow the flow of water, could help reduce coastal erosion.",
+    "A": "Jahan measured how much shoreline was lost each year at 30 different sites along the coast of Bangladesh.",
     "B": "Because sites with dense mangroves lost far less shoreline, Jahan concluded that protecting mangroves could help reduce erosion.",
-    "C": "Jahan measured how much shoreline was lost each year at 30 different sites along the coast of Bangladesh.",
-    "D": "In Jahan's study, sites with dense mangroves lost far less shoreline each year than sites without any mangroves."
+    "C": "In Jahan's study, sites with dense mangroves lost far less shoreline each year than sites without any mangroves.",
+    "D": "Jahan concluded that protecting mangroves, whose roots trap sediment and slow the flow of water, could help reduce coastal erosion."
   },
   "answer": "B",
   "explanation": {
     "why": "The goal has two parts: Jahan's conclusion and the result from her study that supports it. Her result was that mangrove sites lost far less shoreline; her conclusion was that protecting mangroves could reduce erosion. The key must contain both.",
-    "A": "Incorrect. This states the conclusion, but the support it gives is general background about mangrove roots, not the result of Jahan's measurements.",
+    "A": "Incorrect. This describes the method only. It gives neither the result nor the conclusion.",
     "B": "Correct. It gives the study result (mangrove sites lost far less shoreline) as the reason for the conclusion (protecting mangroves could help reduce erosion).",
-    "C": "Incorrect. This describes the method only. It gives neither the result nor the conclusion.",
-    "D": "Incorrect. This gives the result but not the conclusion Jahan drew from it."
+    "C": "Incorrect. This gives the result but not the conclusion Jahan drew from it.",
+    "D": "Incorrect. This states the conclusion, but the support it gives is general background about mangrove roots, not the result of Jahan's measurements."
   },
   "traps": {
-    "A": "too_narrow",
-    "C": "misses_goal",
+    "A": "misses_goal",
+    "C": "too_narrow",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

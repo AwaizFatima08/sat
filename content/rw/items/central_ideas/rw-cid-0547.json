@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "The famine's abrupt boundaries let researchers link the timing of prenatal exposure to later health.",
-    "B": "The Dutch Hunger Winter is valuable to researchers chiefly because it was an unusually severe famine.",
-    "C": "People exposed to the famine late in gestation show the largest differences in health as adults.",
+    "A": "The Dutch Hunger Winter is valuable to researchers chiefly because it was an unusually severe famine.",
+    "B": "People exposed to the famine late in gestation show the largest differences in health as adults.",
+    "C": "The famine's abrupt boundaries let researchers link the timing of prenatal exposure to later health.",
     "D": "Natural experiments are the only ethical means of studying how nutrition affects human health."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The text says the Hunger Winter is informative not mainly because of its severity but because of \"its sharp boundaries.\" The word \"therefore\" connects those boundaries to the research design: investigators could compare people exposed at different stages of gestation with unexposed relatives, and they found that outcomes \"depend on when in pregnancy the exposure occurred.\" The main idea joins the famine's sharp timing to this finding about timing.",
-    "A": "Correct. This links the feature the text emphasizes, the famine's sharp boundaries, to what that feature allowed researchers to learn.",
-    "B": "Incorrect. The text says the episode is unusual \"less [for] its severity than its sharp boundaries,\" which contradicts this choice.",
-    "C": "Incorrect. The text says differences depend on timing, but it never says which stage of gestation shows the largest differences.",
+    "A": "Incorrect. The text says the episode is unusual \"less [for] its severity than its sharp boundaries,\" which contradicts this choice.",
+    "B": "Incorrect. The text says differences depend on timing, but it never says which stage of gestation shows the largest differences.",
+    "C": "Correct. This links the feature the text emphasizes, the famine's sharp boundaries, to what that feature allowed researchers to learn.",
     "D": "Incorrect. The text says evidence on prenatal nutrition has come \"largely\" from natural experiments; it does not call them the only ethical method for studying nutrition in general."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
+    "A": "reversed",
+    "B": "not_in_text",
     "D": "too_broad"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

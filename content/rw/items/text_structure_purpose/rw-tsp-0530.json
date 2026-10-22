@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It describes a village and then explains why its buildings were changed.",
+    "A": "It traces thirty years of a village's history from the point of view of its longtime residents.",
     "B": "It presents a character's joyful return home and then reveals her hurt at being forgotten.",
     "C": "It shows a character's sense that her home has become unfamiliar and then ends with a moment of recognition.",
-    "D": "It traces thirty years of a village's history from the point of view of its longtime residents."
+    "D": "It describes a village and then explains why its buildings were changed."
   },
   "answer": "C",
   "explanation": {
     "why": "Marguerite's memories clash with what she finds: changed buildings and a silent bell leave her \"feeling like a stranger.\" The last sentence turns this around when a woman recognizes her and uses an old nickname. The text moves from estrangement to being recognized.",
-    "A": "Incorrect. The text lists the changes but never explains why they were made.",
+    "A": "Incorrect. The text follows one returning visitor's view on a single day, not residents' accounts of thirty years.",
     "B": "Incorrect. This reverses the order: she first feels like a stranger, and at the end she is recognized, not forgotten.",
     "C": "Correct. The text first shows how unfamiliar the village has become to Marguerite and then ends with someone recognizing her.",
-    "D": "Incorrect. The text follows one returning visitor's view on a single day, not residents' accounts of thirty years."
+    "D": "Incorrect. The text lists the changes but never explains why they were made."
   },
   "traps": {
-    "A": "not_in_text",
+    "A": "too_broad",
     "B": "reversed",
-    "D": "too_broad"
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

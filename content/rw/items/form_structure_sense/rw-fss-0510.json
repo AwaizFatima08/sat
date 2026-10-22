@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "bamboo leaves make up most of the red panda's diet.",
-    "B": "the red panda eats mostly bamboo leaves.",
-    "C": "most of the red panda's diet is bamboo leaves.",
-    "D": "bamboo is the main food of the red panda."
+    "A": "most of the red panda's diet is bamboo leaves.",
+    "B": "bamboo is the main food of the red panda.",
+    "C": "the red panda eats mostly bamboo leaves.",
+    "D": "bamboo leaves make up most of the red panda's diet."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The introductory phrase \"Found in the cool mountain forests of Nepal, Bhutan, and parts of India and China\" describes the animal. The subject right after the comma must therefore be \"the red panda,\" not its food or its diet.",
-    "A": "Incorrect. The subject is \"bamboo leaves,\" so the sentence says the leaves are the thing found in those forests and described by the phrase, not the red panda.",
-    "B": "Correct. \"The red panda\" comes right after the introductory phrase, so the phrase clearly describes the animal.",
-    "C": "Incorrect. The subject is \"most of the red panda's diet,\" so the phrase describes the diet rather than the animal.",
-    "D": "Incorrect. The subject is \"bamboo,\" so the phrase describes the plant rather than the red panda."
+    "A": "Incorrect. The subject is \"most of the red panda's diet,\" so the phrase describes the diet rather than the animal.",
+    "B": "Incorrect. The subject is \"bamboo,\" so the phrase describes the plant rather than the red panda.",
+    "C": "Correct. \"The red panda\" comes right after the introductory phrase, so the phrase clearly describes the animal.",
+    "D": "Incorrect. The subject is \"bamboo leaves,\" so the sentence says the leaves are the thing found in those forests and described by the phrase, not the red panda."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
+    "B": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "modifier",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "fill, prompting",
+    "A": "fill. Prompting",
     "B": "fill, it prompted",
-    "C": "fill; prompting",
-    "D": "fill. Prompting"
+    "C": "fill, prompting",
+    "D": "fill; prompting"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The last sentence's main clause is \"the plan called for laying the pipes on top of the existing streets and covering them with fill.\" What follows describes a result of that plan. A participial phrase beginning with \"prompting\" can express this result, and it is joined to the main clause with a comma.",
-    "A": "Correct. The comma attaches the participial phrase \"prompting property owners to raise their buildings ...\" to the main clause, describing a result of the plan.",
+    "A": "Incorrect. A period would leave \"Prompting property owners to raise their buildings ... to the new street level\" as a sentence fragment.",
     "B": "Incorrect. \"It prompted property owners to raise their buildings\" is an independent clause, and a comma alone can't join it to the main clause; this is a comma splice.",
-    "C": "Incorrect. A semicolon must be followed by an independent clause, but \"prompting property owners ...\" is a phrase with no subject or main verb.",
-    "D": "Incorrect. A period would leave \"Prompting property owners to raise their buildings ... to the new street level\" as a sentence fragment."
+    "C": "Correct. The comma attaches the participial phrase \"prompting property owners to raise their buildings ...\" to the main clause, describing a result of the plan.",
+    "D": "Incorrect. A semicolon must be followed by an independent clause, but \"prompting property owners ...\" is a phrase with no subject or main verb."
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "linking_clauses",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

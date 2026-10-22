@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "passing",
-    "B": "have passed",
-    "C": "had passed",
-    "D": "passed"
+    "A": "had passed",
+    "B": "passed",
+    "C": "have passed",
+    "D": "passing"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "After a helping verb such as \"should,\" English uses the base form of a verb (\"should pass\") or, for an expectation about the past, \"have\" plus the past participle (\"should have passed\"). The sentence describes what the old model predicted about experiments already done, so \"should have passed\" is correct.",
-    "A": "Incorrect. \"Should passing\" is not grammatical; a helping verb like \"should\" cannot be followed by an -ing form alone.",
-    "B": "Correct. \"Should have passed\" correctly combines \"should\" with \"have\" and the past participle to describe a past expectation.",
-    "C": "Incorrect. \"Should had passed\" is not grammatical; after \"should,\" the base form \"have\" is required, not \"had.\"",
-    "D": "Incorrect. \"Should passed\" is not grammatical; \"should\" must be followed by a base form, not a past-tense verb."
+    "A": "Incorrect. \"Should had passed\" is not grammatical; after \"should,\" the base form \"have\" is required, not \"had.\"",
+    "B": "Incorrect. \"Should passed\" is not grammatical; \"should\" must be followed by a base form, not a past-tense verb.",
+    "C": "Correct. \"Should have passed\" correctly combines \"should\" with \"have\" and the past participle to describe a past expectation.",
+    "D": "Incorrect. \"Should passing\" is not grammatical; a helping verb like \"should\" cannot be followed by an -ing form alone."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
+    "B": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "verb_form",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

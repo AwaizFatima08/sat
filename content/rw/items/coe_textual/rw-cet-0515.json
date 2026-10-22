@@ -15,21 +15,21 @@
   "stem": "Which finding, if true, would most directly weaken Ricci's claim?",
   "choices": {
     "A": "Chameleons placed on a bright green leaf turned green within a few minutes.",
-    "B": "Chameleons catch insects by shooting out a sticky tongue that can be longer than their bodies.",
-    "C": "Chameleons placed on green, brown, and gray backgrounds stayed the same color on all three.",
+    "B": "Chameleons placed on green, brown, and gray backgrounds stayed the same color on all three.",
+    "C": "Chameleons catch insects by shooting out a sticky tongue that can be longer than their bodies.",
     "D": "Many species of chameleon live only on Madagascar, an island off the southeastern coast of Africa."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Ricci says chameleons change color mainly to match their surroundings. If chameleons put on very different backgrounds do not change color at all, matching the background cannot be the main reason they change, so that finding weakens his claim.",
     "A": "Incorrect. A chameleon turning green on a green leaf fits Ricci's claim, so this would support it.",
-    "B": "Incorrect. How chameleons catch food has nothing to do with why they change color.",
-    "C": "Correct. The chameleons did not change to match any of the three backgrounds, which goes against the idea that they change color to blend in.",
+    "B": "Correct. The chameleons did not change to match any of the three backgrounds, which goes against the idea that they change color to blend in.",
+    "C": "Incorrect. How chameleons catch food has nothing to do with why they change color.",
     "D": "Incorrect. Where chameleons live does not show why they change color."
   },
   "traps": {
     "A": "reversed",
-    "B": "true_irrelevant",
+    "C": "true_irrelevant",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

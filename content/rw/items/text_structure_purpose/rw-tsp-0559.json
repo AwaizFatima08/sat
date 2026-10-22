@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It explains how researchers worked out which melanosome shapes produce which colors.",
-    "B": "It suggests that reconstructions produced by the method are almost entirely inaccurate.",
-    "C": "It supports the claim that melanosome shape reliably predicts color in living birds.",
-    "D": "It introduces a limit that the text then develops to temper confidence in the results."
+    "A": "It supports the claim that melanosome shape reliably predicts color in living birds.",
+    "B": "It explains how researchers worked out which melanosome shapes produce which colors.",
+    "C": "It introduces a limit that the text then develops to temper confidence in the results.",
+    "D": "It suggests that reconstructions produced by the method are almost entirely inaccurate."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Before the underlined sentence, the text describes the melanosome method and its successes. The underlined sentence, signaled by \"however,\" says the method captures \"only part\" of the story. The next sentence gives reasons (carotenoids, changes during fossilization), and the last calls reconstructions \"partial outlines,\" not \"finished portraits.\"",
-    "A": "Incorrect. The link between shape and color is described in the second sentence; the underlined sentence turns to the method's limits.",
-    "B": "Incorrect. The text calls the reconstructions \"partial outlines,\" which means incomplete, not almost entirely wrong.",
-    "C": "Incorrect. The underlined sentence starts a discussion of the method's shortcomings rather than adding support for it.",
-    "D": "Correct. The limit is explained in the following sentence, and the conclusion urges reading reconstructions as partial."
+    "A": "Incorrect. The underlined sentence starts a discussion of the method's shortcomings rather than adding support for it.",
+    "B": "Incorrect. The link between shape and color is described in the second sentence; the underlined sentence turns to the method's limits.",
+    "C": "Correct. The limit is explained in the following sentence, and the conclusion urges reading reconstructions as partial.",
+    "D": "Incorrect. The text calls the reconstructions \"partial outlines,\" which means incomplete, not almost entirely wrong."
   },
   "traps": {
-    "A": "wrong_logic",
-    "B": "too_broad",
-    "C": "reversed"
+    "A": "reversed",
+    "B": "wrong_logic",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

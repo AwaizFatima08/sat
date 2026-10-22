@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "intricate",
+    "A": "malleable",
     "B": "inert",
     "C": "indestructible",
-    "D": "malleable"
+    "D": "intricate"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The old view held that the adult brain was \"essentially fixed,\" and the new findings show \"measurable changes\" and a \"capacity for change.\" The blank must mean able to be reshaped, which is what \"malleable\" means.",
-    "A": "Incorrect. The brain is complex, but the contrast is with the idea that it was \"fixed,\" so the blank must be about the ability to change, not complexity.",
+    "A": "Correct. Something malleable can be reshaped. The findings show that adult brains change when people learn, unlike the \"fixed\" brain of the older view.",
     "B": "Incorrect. Inert means inactive or unchanging, which is closer to the old \"fixed\" view that has been revised.",
     "C": "Incorrect. Indestructible means impossible to damage or destroy. The findings are about the brain's capacity for change, not its toughness.",
-    "D": "Correct. Something malleable can be reshaped. The findings show that adult brains change when people learn, unlike the \"fixed\" brain of the older view."
+    "D": "Incorrect. The brain is complex, but the contrast is with the idea that it was \"fixed,\" so the blank must be about the ability to change, not complexity."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "reversed",
-    "C": "wrong_tone"
+    "C": "wrong_tone",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

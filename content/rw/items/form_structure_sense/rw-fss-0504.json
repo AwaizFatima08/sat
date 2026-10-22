@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "reach",
+    "A": "reached",
     "B": "will reach",
-    "C": "reaching",
-    "D": "reached"
+    "C": "reach",
+    "D": "reaching"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The sentence describes a finished event on a specific past date, \"December 14\" of 1911, and the passage is told in the past tense (\"left\"). The sentence also needs a main verb for the subject \"the five men,\" so the simple past \"reached\" is correct.",
-    "A": "Incorrect. The present tense \"reach\" doesn't fit an event the passage places in 1911.",
+    "A": "Correct. The simple past \"reached\" gives the subject its main verb and matches the past time of the passage.",
     "B": "Incorrect. The future \"will reach\" doesn't fit an event that already happened in 1911.",
-    "C": "Incorrect. \"Reaching\" is not a main verb, so the subject \"the five men\" would be left without one and the sentence would be incomplete.",
-    "D": "Correct. The simple past \"reached\" gives the subject its main verb and matches the past time of the passage."
+    "C": "Incorrect. The present tense \"reach\" doesn't fit an event the passage places in 1911.",
+    "D": "Incorrect. \"Reaching\" is not a main verb, so the subject \"the five men\" would be left without one and the sentence would be incomplete."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "verb_form",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to make a generalization about what triggers the seasonal color change in these northern animals. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "When snow arrives late or melts early, white snowshoe hares stand out against brown ground and are more easily caught by predators.",
+    "A": "The color change of snowshoe hares is triggered mainly by changing day length rather than by temperature or snowfall.",
     "B": "Snowshoe hares, willow ptarmigans, and stoats in northern regions all have white coats or white feathers in winter.",
     "C": "In northern animals such as snowshoe hares, willow ptarmigans, and stoats, seasonal color change is triggered mainly by day length.",
-    "D": "The color change of snowshoe hares is triggered mainly by changing day length rather than by temperature or snowfall."
+    "D": "When snow arrives late or melts early, white snowshoe hares stand out against brown ground and are more easily caught by predators."
   },
   "answer": "C",
   "explanation": {
     "why": "The goal has two requirements: a generalization (covering several species) and a focus on the trigger of the color change. The notes say that in each species, day length is the main trigger. Only one choice states that across all three animals.",
-    "A": "Incorrect. This describes a risk faced by one species, not what triggers the color change.",
+    "A": "Incorrect. This names the trigger but only for snowshoe hares, so it is not a generalization.",
     "B": "Incorrect. This is a generalization across all three species, but it describes the change, not what triggers it. It is the most tempting near miss.",
     "C": "Correct. It generalizes across the three species and names the trigger: mainly day length.",
-    "D": "Incorrect. This names the trigger but only for snowshoe hares, so it is not a generalization."
+    "D": "Incorrect. This describes a risk faced by one species, not what triggers the color change."
   },
   "traps": {
-    "A": "true_irrelevant",
+    "A": "too_narrow",
     "B": "misses_goal",
-    "D": "too_narrow"
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

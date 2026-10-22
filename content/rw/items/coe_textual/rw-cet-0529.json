@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Ferreira's argument?",
   "choices": {
-    "A": "A small number of miners found gold nuggets worth more than a typical worker could earn in several years.",
-    "B": "Records from mining towns show that most shopkeepers there earned more each year than most miners did.",
-    "C": "Many merchants in the mining towns went out of business within a year or two because of their high costs.",
-    "D": "Many people who came to California during the gold rush arrived by ship after long voyages around South America."
+    "A": "Many merchants in the mining towns went out of business within a year or two because of their high costs.",
+    "B": "Many people who came to California during the gold rush arrived by ship after long voyages around South America.",
+    "C": "Records from mining towns show that most shopkeepers there earned more each year than most miners did.",
+    "D": "A small number of miners found gold nuggets worth more than a typical worker could earn in several years."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Ferreira compares two groups and says merchants profited more reliably than miners. The best support compares typical earnings of the two groups: if most shopkeepers earned more than most miners, merchants did better as a group.",
-    "A": "Incorrect. A few lucky miners do not show which group profited more reliably, and Ferreira already grants that some miners struck it rich.",
-    "B": "Correct. Comparing most shopkeepers with most miners shows that merchants usually earned more, which is Ferreira's point.",
-    "C": "Incorrect. If many merchants failed quickly, their profits were not reliable, so this would weaken the argument.",
-    "D": "Incorrect. How people traveled to California says nothing about who made the most money once they arrived."
+    "A": "Incorrect. If many merchants failed quickly, their profits were not reliable, so this would weaken the argument.",
+    "B": "Incorrect. How people traveled to California says nothing about who made the most money once they arrived.",
+    "C": "Correct. Comparing most shopkeepers with most miners shows that merchants usually earned more, which is Ferreira's point.",
+    "D": "Incorrect. A few lucky miners do not show which group profited more reliably, and Ferreira already grants that some miners struck it rich."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "reversed",
+    "A": "reversed",
+    "B": "true_irrelevant",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -44,23 +44,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "English, which was used in more performances than any other language.",
-    "B": "Czech, which had an average audience of 61 people per performance.",
-    "C": "German, which had an average audience of 72 people per performance.",
-    "D": "Italian, with an average of 95 people at each performance."
+    "A": "German, which had an average audience of 72 people per performance.",
+    "B": "English, which was used in more performances than any other language.",
+    "C": "Italian, with an average of 95 people at each performance.",
+    "D": "Czech, which had an average audience of 61 people per performance."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The statement is about the largest average audience, so the \"Average audience\" column is the one to check, not the \"Performances\" column. The largest value there is 95, for Italian.",
-    "A": "Incorrect. English had the most performances (40), but its average audience of 88 was smaller than Italian's 95.",
-    "B": "Incorrect. Czech performances had the smallest average audience in the table, not the largest.",
-    "C": "Incorrect. German performances averaged 72 people, fewer than both English and Italian performances.",
-    "D": "Correct. Italian performances averaged 95 people, the largest average audience in the table."
+    "A": "Incorrect. German performances averaged 72 people, fewer than both English and Italian performances.",
+    "B": "Incorrect. English had the most performances (40), but its average audience of 88 was smaller than Italian's 95.",
+    "C": "Correct. Italian performances averaged 95 people, the largest average audience in the table.",
+    "D": "Incorrect. Czech performances had the smallest average audience in the table, not the largest."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "reversed",
-    "C": "true_irrelevant"
+    "B": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

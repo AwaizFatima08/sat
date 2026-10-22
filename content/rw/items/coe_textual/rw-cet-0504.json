@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Lindqvist's hypothesis?",
   "choices": {
-    "A": "City songbirds often begin singing earlier in the morning than forest songbirds of the same species do.",
-    "B": "City birds living beside quiet parks sang at the same high pitch as city birds living beside busy roads.",
-    "C": "City songbirds tend to build their nests higher off the ground than forest songbirds of the same species.",
-    "D": "Individual city birds sang at a higher pitch during noisy rush hours than during quiet weekend mornings."
+    "A": "Individual city birds sang at a higher pitch during noisy rush hours than during quiet weekend mornings.",
+    "B": "City songbirds often begin singing earlier in the morning than forest songbirds of the same species do.",
+    "C": "City birds living beside quiet parks sang at the same high pitch as city birds living beside busy roads.",
+    "D": "City songbirds tend to build their nests higher off the ground than forest songbirds of the same species."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Lindqvist links high pitch to traffic noise and says each bird can change its pitch as the noise level changes. The best support would show the same birds singing higher when it is noisy and lower when it is quiet.",
-    "A": "Incorrect. When birds start singing is a different question from what pitch they use.",
-    "B": "Incorrect. If birds near quiet parks sing just as high as birds near busy roads, noise does not seem to matter, so this would weaken the hypothesis.",
-    "C": "Incorrect. Nest height has nothing to do with the pitch of the birds' songs.",
-    "D": "Correct. The same birds sang higher when traffic was loud and lower when it was quiet, which shows them adjusting their pitch to the noise."
+    "A": "Correct. The same birds sang higher when traffic was loud and lower when it was quiet, which shows them adjusting their pitch to the noise.",
+    "B": "Incorrect. When birds start singing is a different question from what pitch they use.",
+    "C": "Incorrect. If birds near quiet parks sing just as high as birds near busy roads, noise does not seem to matter, so this would weaken the hypothesis.",
+    "D": "Incorrect. Nest height has nothing to do with the pitch of the birds' songs."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
-    "C": "true_irrelevant"
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

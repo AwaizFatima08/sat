@@ -15,22 +15,22 @@
   "stem": "According to the text, why could the same silent film sound different from one theater to another?",
   "choices": {
     "A": "Studios sent each theater its own cue sheet with different music.",
-    "B": "Many musicians improvised rather than playing set music note for note.",
-    "C": "Pianists in small theaters played louder to make up for having no orchestra.",
-    "D": "Cue sheets listed the exact notes each musician was expected to play."
+    "B": "Pianists in small theaters played louder to make up for having no orchestra.",
+    "C": "Cue sheets listed the exact notes each musician was expected to play.",
+    "D": "Many musicians improvised rather than playing set music note for note."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The final sentence gives the cause directly: cue sheets \"did not dictate every note,\" and \"many players continued to improvise, so the same film could sound quite different from one theater to the next.\" The word \"so\" links the improvising to the differences.",
     "A": "Incorrect. The text describes cue sheets for each film, not different cue sheets for different theaters.",
-    "B": "Correct. The text links the differences directly to musicians' improvising.",
-    "C": "Incorrect. The text never discusses how loudly anyone played.",
-    "D": "Incorrect. The text says the cue sheets \"did not dictate every note\"; they suggested pieces and moods."
+    "B": "Incorrect. The text never discusses how loudly anyone played.",
+    "C": "Incorrect. The text says the cue sheets \"did not dictate every note\"; they suggested pieces and moods.",
+    "D": "Correct. The text links the differences directly to musicians' improvising."
   },
   "traps": {
     "A": "not_in_text",
-    "C": "not_in_text",
-    "D": "reversed"
+    "B": "not_in_text",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

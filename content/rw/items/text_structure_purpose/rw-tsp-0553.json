@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that Rayleigh's explanation of the blue color of the sky was mistaken",
-    "B": "To describe the instrument Raman used to observe the sea during his voyage",
-    "C": "To argue that the Raman effect could have been found only by studying the sea",
-    "D": "To trace how a challenge to an accepted explanation led to a major discovery"
+    "A": "To describe the instrument Raman used to observe the sea during his voyage",
+    "B": "To argue that the Raman effect could have been found only by studying the sea",
+    "C": "To trace how a challenge to an accepted explanation led to a major discovery",
+    "D": "To argue that Rayleigh's explanation of the blue color of the sky was mistaken"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Raman questions the accepted view that the sea is blue because it reflects the sky, tests it with a polarizing prism, and proposes molecular scattering instead. \"Pursuing that question\" links this doubt to years of research that led to the 1928 discovery and a Nobel Prize. The text follows the path from one challenge to a major result.",
-    "A": "Incorrect. Rayleigh's explanation that Raman doubted concerned the color of the sea, not the sky.",
-    "B": "Incorrect. The polarizing prism is one detail in Raman's test, not the focus of the whole text.",
-    "C": "Incorrect. The text says the sea question started Raman's research, not that it was the only possible route to the discovery.",
-    "D": "Correct. Raman's doubt about the reflection explanation started the line of research that produced the Raman effect."
+    "A": "Incorrect. The polarizing prism is one detail in Raman's test, not the focus of the whole text.",
+    "B": "Incorrect. The text says the sea question started Raman's research, not that it was the only possible route to the discovery.",
+    "C": "Correct. Raman's doubt about the reflection explanation started the line of research that produced the Raman effect.",
+    "D": "Incorrect. Rayleigh's explanation that Raman doubted concerned the color of the sea, not the sky."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "too_narrow",
-    "C": "too_broad"
+    "A": "too_narrow",
+    "B": "too_broad",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

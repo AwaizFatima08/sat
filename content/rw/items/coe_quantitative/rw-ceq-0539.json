@@ -71,22 +71,22 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Aalto's argument?",
   "choices": {
-    "A": "Crust lichens grew on 70% to 75% of trees at every distance, while leafy lichens grew on 4% of trees at the road and 64% at 800 meters.",
-    "B": "Leafy lichens grew on a larger share of trees at 800 meters from the highway than at any other distance measured.",
-    "C": "At every distance measured, crust lichens grew on a larger share of trees than leafy lichens did.",
+    "A": "At every distance measured, crust lichens grew on a larger share of trees than leafy lichens did.",
+    "B": "Crust lichens grew on 70% to 75% of trees at every distance, while leafy lichens grew on 4% of trees at the road and 64% at 800 meters.",
+    "C": "Leafy lichens grew on a larger share of trees at 800 meters from the highway than at any other distance measured.",
     "D": "The share of trees carrying crust lichens fell steadily as distance from the highway increased."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Aalto's argument contrasts the two kinds of lichen: crust lichens stay about equally common at all distances, while leafy lichens become common only far from the road. Support must describe both lines across distance. Crust lichens stay between 70% and 75%, while leafy lichens climb from 4% at the road to 64% at 800 meters.",
-    "A": "Correct. It shows the flat pattern for tolerant crust lichens alongside the steep rise for sensitive leafy lichens, which is exactly Aalto's contrast.",
-    "B": "Incorrect. This is true, but it describes leafy lichens alone and says nothing about whether crust lichens were unaffected by the road.",
-    "C": "Incorrect. This is true, but which lichen is more common overall does not show how each changes with distance from the road.",
+    "A": "Incorrect. This is true, but which lichen is more common overall does not show how each changes with distance from the road.",
+    "B": "Correct. It shows the flat pattern for tolerant crust lichens alongside the steep rise for sensitive leafy lichens, which is exactly Aalto's contrast.",
+    "C": "Incorrect. This is true, but it describes leafy lichens alone and says nothing about whether crust lichens were unaffected by the road.",
     "D": "Incorrect. The crust-lichen line stays between 70% and 75% with no steady decline, so this misreads the graph."
   },
   "traps": {
-    "B": "too_narrow",
-    "C": "true_irrelevant",
+    "A": "true_irrelevant",
+    "C": "too_narrow",
     "D": "reversed"
   },
   "grammar": null,
@@ -96,8 +96,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

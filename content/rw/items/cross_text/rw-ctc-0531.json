@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim about the central brain in Text 1?",
   "choices": {
-    "A": "By arguing that it overlooks cases in which the brain guides an arm's movements closely",
-    "B": "By rejecting the idea that an octopus's arms can sense and respond to their surroundings",
-    "C": "By suggesting that octopus arms actually contain far fewer neurons than Text 1 indicates",
-    "D": "By claiming that in the maze experiment the arm, not the brain, worked out the route"
+    "A": "By suggesting that octopus arms actually contain far fewer neurons than Text 1 indicates",
+    "B": "By claiming that in the maze experiment the arm, not the brain, worked out the route",
+    "C": "By rejecting the idea that an octopus's arms can sense and respond to their surroundings",
+    "D": "By arguing that it overlooks cases in which the brain guides an arm's movements closely"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Text 1 says the brain issues \"only broad commands\" and leaves \"every detail\" to the arms. Text 2 grants that arms can act on their own but describes a maze task in which \"success depended on the brain watching the arm and correcting its path.\" So Text 2 would say Text 1's claim misses cases of close central control.",
-    "A": "Correct. Text 2's maze experiment shows the brain directing an arm step by step, which the claim that the brain issues \"only broad commands\" leaves out.",
-    "B": "Incorrect. Text 2 calls the arms \"undeniably capable of acting on their own,\" so it does not reject their ability to sense and respond.",
-    "C": "Incorrect. Text 2 never discusses how many neurons the arms contain.",
-    "D": "Incorrect. This reverses Text 2's point: the arm's senses \"offered no guide to the route,\" so the brain had to guide it."
+    "A": "Incorrect. Text 2 never discusses how many neurons the arms contain.",
+    "B": "Incorrect. This reverses Text 2's point: the arm's senses \"offered no guide to the route,\" so the brain had to guide it.",
+    "C": "Incorrect. Text 2 calls the arms \"undeniably capable of acting on their own,\" so it does not reject their ability to sense and respond.",
+    "D": "Correct. Text 2's maze experiment shows the brain directing an arm step by step, which the claim that the brain issues \"only broad commands\" leaves out."
   },
   "traps": {
-    "B": "too_broad",
-    "C": "not_in_text",
-    "D": "reversed"
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

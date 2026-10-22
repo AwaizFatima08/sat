@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "survive water colder than their blood could otherwise stand.",
-    "B": "warm the surrounding seawater to above its freezing point.",
-    "C": "swim north to warmer water whenever ice begins to form.",
+    "A": "swim north to warmer water whenever ice begins to form.",
+    "B": "survive water colder than their blood could otherwise stand.",
+    "C": "warm the surrounding seawater to above its freezing point.",
     "D": "grow larger ice crystals that help protect their tissues."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The water is colder than the freezing point of most fish blood, but the proteins stop ice crystals from growing in these fishes' bodies. That is what lets them live in such cold water.",
-    "A": "Correct. By keeping ice crystals small, the proteins let the fish live in water that would otherwise freeze their blood.",
-    "B": "Incorrect. The proteins work inside the fish; the text never says they change the temperature of the seawater.",
-    "C": "Incorrect. The text says the fish thrive in Antarctic water; nothing mentions moving north.",
+    "A": "Incorrect. The text says the fish thrive in Antarctic water; nothing mentions moving north.",
+    "B": "Correct. By keeping ice crystals small, the proteins let the fish live in water that would otherwise freeze their blood.",
+    "C": "Incorrect. The proteins work inside the fish; the text never says they change the temperature of the seawater.",
     "D": "Incorrect. The proteins stop ice crystals from growing; they do not make them larger."
   },
   "traps": {
-    "B": "not_in_text",
+    "A": "not_in_text",
     "C": "not_in_text",
     "D": "reversed"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

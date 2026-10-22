@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It shows that Rafiq is eager to reach the city his uncle describes.",
-    "B": "It explains why Rafiq's uncle stops talking later in the text.",
-    "C": "It suggests that Rafiq's thoughts remain with the home he is leaving.",
-    "D": "It reveals that Rafiq has already decided to return to his village soon."
+    "A": "It reveals that Rafiq has already decided to return to his village soon.",
+    "B": "It suggests that Rafiq's thoughts remain with the home he is leaving.",
+    "C": "It explains why Rafiq's uncle stops talking later in the text.",
+    "D": "It shows that Rafiq is eager to reach the city his uncle describes."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "While his uncle describes the city, Rafiq only \"nodded at the right moments,\" which shows he is not really listening. The underlined sentence shows where his attention is: on the whistle his sister gave him that morning. Holding a gift from home suggests his mind is still on the village he is leaving.",
-    "A": "Incorrect. Rafiq only nods politely at the description of the city, while his attention goes to a reminder of home.",
-    "B": "Incorrect. The text never explains why the uncle falls silent, and the underlined sentence is about Rafiq, not the uncle.",
-    "C": "Correct. His fingers \"kept returning\" to his sister's gift, which shows that he is thinking about home rather than the city.",
-    "D": "Incorrect. Missing home is suggested, but nothing in the text shows a decision to return. This goes beyond the text."
+    "A": "Incorrect. Missing home is suggested, but nothing in the text shows a decision to return. This goes beyond the text.",
+    "B": "Correct. His fingers \"kept returning\" to his sister's gift, which shows that he is thinking about home rather than the city.",
+    "C": "Incorrect. The text never explains why the uncle falls silent, and the underlined sentence is about Rafiq, not the uncle.",
+    "D": "Incorrect. Rafiq only nods politely at the description of the city, while his attention goes to a reminder of home."
   },
   "traps": {
-    "A": "reversed",
-    "B": "wrong_logic",
-    "D": "too_broad"
+    "A": "too_broad",
+    "C": "wrong_logic",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

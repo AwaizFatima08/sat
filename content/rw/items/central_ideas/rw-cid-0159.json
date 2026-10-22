@@ -15,22 +15,22 @@
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
     "A": "Bimal realizes that he has dismissed knowledge of Khokon's that proves sound and useful.",
-    "B": "Khokon pretends not to understand English grammar so that his lessons will finish early.",
-    "C": "Bimal resents the cloth merchant for making him travel through the rain every afternoon.",
-    "D": "Khokon's predictions about the flooding prove mistaken, which embarrasses him."
+    "B": "Bimal resents the cloth merchant for making him travel through the rain every afternoon.",
+    "C": "Khokon's predictions about the flooding prove mistaken, which embarrasses him.",
+    "D": "Khokon pretends not to understand English grammar so that his lessons will finish early."
   },
   "answer": "A",
   "explanation": {
     "why": "Bimal scorns Khokon's remarks about where the water will rise and \"did not stoop to answer.\" When he finds himself wading through a lane Khokon had predicted would flood, he realizes \"he had been the pupil who would not attend,\" meaning he ignored what the boy could teach him. The main idea is this reversal in Bimal's understanding.",
     "A": "Correct. The final sentence shows Bimal recognizing that Khokon's practical knowledge was accurate and that he failed to heed it.",
-    "B": "Incorrect. Nothing suggests Khokon is pretending; he is simply more interested in the rain.",
-    "C": "Incorrect. Bimal's short temper is a detail; the passage never blames the merchant, and resentment is not its point.",
-    "D": "Incorrect. Bimal wades through a lane Khokon had named, so the predictions proved correct."
+    "B": "Incorrect. Bimal's short temper is a detail; the passage never blames the merchant, and resentment is not its point.",
+    "C": "Incorrect. Bimal wades through a lane Khokon had named, so the predictions proved correct.",
+    "D": "Incorrect. Nothing suggests Khokon is pretending; he is simply more interested in the rain."
   },
   "traps": {
-    "B": "not_in_text",
-    "C": "too_narrow",
-    "D": "reversed"
+    "B": "too_narrow",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

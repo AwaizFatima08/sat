@@ -15,21 +15,21 @@
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
     "A": "It describes the insects that most often land on the plant.",
-    "B": "It suggests that the leaves stay folded once they have closed.",
-    "C": "It explains why the leaves move as the previous sentence describes.",
+    "B": "It explains why the leaves move as the previous sentence describes.",
+    "C": "It suggests that the leaves stay folded once they have closed.",
     "D": "It introduces a second kind of plant whose leaves fold up in the same way."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The sentence before the underlined one describes what happens: the leaves \"fold up within seconds\" when touched. The underlined sentence begins \"The leaves move this way because,\" so it gives the reason for that movement: water leaving cells at the leaf bases.",
     "A": "Incorrect. Insects are mentioned only as one thing that can touch the plant; no insects are described.",
-    "B": "Incorrect. The last sentence says the leaves \"reopen\" after several minutes, so they do not stay folded.",
-    "C": "Correct. The sentence explains why the leaves fold: water flows out of cells at their bases and the cells go limp.",
+    "B": "Correct. The sentence explains why the leaves fold: water flows out of cells at their bases and the cells go limp.",
+    "C": "Incorrect. The last sentence says the leaves \"reopen\" after several minutes, so they do not stay folded.",
     "D": "Incorrect. The sentence is still about Mimosa pudica; no second plant is introduced."
   },
   "traps": {
     "A": "not_in_text",
-    "B": "reversed",
+    "C": "reversed",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

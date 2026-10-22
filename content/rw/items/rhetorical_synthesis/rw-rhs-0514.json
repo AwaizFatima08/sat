@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to describe the materials used to make phulkari. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Phulkari, whose name means \"flower work,\" is a style of embroidery from the Punjab region.",
-    "B": "Phulkari is made by stitching brightly colored, untwisted silk thread onto khaddar, a coarse cotton cloth.",
-    "C": "Phulkari shawls were traditionally made by women and were often given at weddings.",
-    "D": "The Punjab region, where phulkari comes from, is divided between Pakistan and India."
+    "A": "Phulkari is made by stitching brightly colored, untwisted silk thread onto khaddar, a coarse cotton cloth.",
+    "B": "Phulkari shawls were traditionally made by women and were often given at weddings.",
+    "C": "The Punjab region, where phulkari comes from, is divided between Pakistan and India.",
+    "D": "Phulkari, whose name means \"flower work,\" is a style of embroidery from the Punjab region."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The goal is to describe the materials. The notes name two: untwisted silk thread and khaddar, a coarse cotton cloth. Only one choice mentions what phulkari is made from.",
-    "A": "Incorrect. It explains the name and where phulkari comes from, not what it is made of.",
-    "B": "Correct. It names both materials: the silk thread and the khaddar cloth it is stitched onto.",
-    "C": "Incorrect. It tells who made phulkari and when it was given, not what materials were used.",
-    "D": "Incorrect. It gives information about the Punjab region, not about phulkari's materials."
+    "A": "Correct. It names both materials: the silk thread and the khaddar cloth it is stitched onto.",
+    "B": "Incorrect. It tells who made phulkari and when it was given, not what materials were used.",
+    "C": "Incorrect. It gives information about the Punjab region, not about phulkari's materials.",
+    "D": "Incorrect. It explains the name and where phulkari comes from, not what it is made of."
   },
   "traps": {
-    "A": "misses_goal",
-    "C": "misses_goal",
-    "D": "true_irrelevant"
+    "B": "misses_goal",
+    "C": "true_irrelevant",
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

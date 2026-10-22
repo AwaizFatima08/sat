@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the conclusion in Text 1?",
   "choices": {
-    "A": "By arguing that the town of Lothal played no part in trade of any kind",
-    "B": "By agreeing that the basin was most likely used for loading boats with goods",
+    "A": "By agreeing that the basin was most likely used for loading boats with goods",
+    "B": "By proposing another use for the basin while accepting Lothal's role in trade",
     "C": "By claiming that the basin was built long after the town had been abandoned",
-    "D": "By proposing another use for the basin while accepting Lothal's role in trade"
+    "D": "By arguing that the town of Lothal played no part in trade of any kind"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Text 1's excavators concluded that the basin was \"a dockyard.\" Text 2 calls this idea \"doubtful\" and suggests the basin \"may instead have been a reservoir,\" while Pillai \"agrees that Lothal was an important center of trade.\" So Text 2 offers a different purpose for the basin without denying Lothal's trade.",
-    "A": "Incorrect. Pillai \"agrees that Lothal was an important center of trade.\"",
-    "B": "Incorrect. Text 2 finds the dockyard idea \"doubtful,\" so it does not agree.",
+    "A": "Incorrect. Text 2 finds the dockyard idea \"doubtful,\" so it does not agree.",
+    "B": "Correct. Text 2 suggests the basin was a water reservoir but accepts that Lothal was a trading center.",
     "C": "Incorrect. Text 2 says nothing about when the basin was built.",
-    "D": "Correct. Text 2 suggests the basin was a water reservoir but accepts that Lothal was a trading center."
+    "D": "Incorrect. Pillai \"agrees that Lothal was an important center of trade.\""
   },
   "traps": {
-    "A": "too_broad",
-    "B": "reversed",
-    "C": "not_in_text"
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -55,23 +55,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Petrov's conclusion?",
   "choices": {
-    "A": "In every month shown, the soil under natural snow was warmer than the air above it, often by more than 10°C.",
-    "B": "Snow-covered soil was 12°C warmer than cleared soil in January, the coldest month, but only 4°C warmer in March, the mildest.",
-    "C": "The soil under natural snow stayed between −2°C and −4°C from November through March, while the air ranged from −10°C to −24°C.",
-    "D": "The difference between cleared soil and snow-covered soil was largest in March, the mildest month shown."
+    "A": "Snow-covered soil was 12°C warmer than cleared soil in January, the coldest month, but only 4°C warmer in March, the mildest.",
+    "B": "In every month shown, the soil under natural snow was warmer than the air above it, often by more than 10°C.",
+    "C": "The difference between cleared soil and snow-covered soil was largest in March, the mildest month shown.",
+    "D": "The soil under natural snow stayed between −2°C and −4°C from November through March, while the air ranged from −10°C to −24°C."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The insulating effect of snow is the difference between soil under snow and soil without snow. Petrov's conclusion requires that this difference be largest in the coldest months. The difference is 12°C in January (−4 versus −16), when the air was coldest, but only 4°C in March (−3 versus −7).",
-    "A": "Incorrect. This is true, but it compares snow-covered soil with the air, not with cleared soil, so it does not show when the snow's insulating effect was strongest.",
-    "B": "Correct. The snow made the biggest difference in the coldest month and a much smaller one in the mildest, which is what Petrov concluded.",
-    "C": "Incorrect. This is true, but it never compares snow-covered soil with cleared soil, so it cannot show when the snow's insulating effect was strongest.",
-    "D": "Incorrect. In March the difference was only 4°C, the smallest of any month, so this misreads the table."
+    "A": "Correct. The snow made the biggest difference in the coldest month and a much smaller one in the mildest, which is what Petrov concluded.",
+    "B": "Incorrect. This is true, but it compares snow-covered soil with the air, not with cleared soil, so it does not show when the snow's insulating effect was strongest.",
+    "C": "Incorrect. In March the difference was only 4°C, the smallest of any month, so this misreads the table.",
+    "D": "Incorrect. This is true, but it never compares snow-covered soil with cleared soil, so it cannot show when the snow's insulating effect was strongest."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -84,13 +84,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

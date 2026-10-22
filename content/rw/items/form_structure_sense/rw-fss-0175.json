@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "Shackleton sailed the Endurance from Britain in August 1914, intending to cross Antarctica on foot.",
-    "B": "Shackleton's plan was to sail the Endurance to Antarctica and then cross the continent on foot.",
-    "C": "an attempt to cross Antarctica on foot began when the Endurance left Britain in August 1914.",
-    "D": "the Endurance left Britain in August 1914, carrying an expedition that hoped to cross Antarctica on foot."
+    "A": "Shackleton's plan was to sail the Endurance to Antarctica and then cross the continent on foot.",
+    "B": "an attempt to cross Antarctica on foot began when the Endurance left Britain in August 1914.",
+    "C": "the Endurance left Britain in August 1914, carrying an expedition that hoped to cross Antarctica on foot.",
+    "D": "Shackleton sailed the Endurance from Britain in August 1914, intending to cross Antarctica on foot."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The introductory phrase \"Built for polar cruises and renamed by Shackleton after his family's motto\" describes the ship. A modifier at the start of a sentence applies to the subject that comes right after the comma, so that subject must be \"the Endurance.\"",
-    "A": "Incorrect. This makes \"Shackleton\" the subject, so the sentence says Shackleton was built for polar cruises and renamed by himself.",
-    "B": "Incorrect. The subject is \"plan,\" not the ship; \"Shackleton's\" only describes the plan, which was not built or renamed.",
-    "C": "Incorrect. This makes \"an attempt\" the subject, so the sentence says the attempt was built for polar cruises.",
-    "D": "Correct. \"The Endurance\" comes right after the introductory phrase, so it is clear that the ship was built and renamed."
+    "A": "Incorrect. The subject is \"plan,\" not the ship; \"Shackleton's\" only describes the plan, which was not built or renamed.",
+    "B": "Incorrect. This makes \"an attempt\" the subject, so the sentence says the attempt was built for polar cruises.",
+    "C": "Correct. \"The Endurance\" comes right after the introductory phrase, so it is clear that the ship was built and renamed.",
+    "D": "Incorrect. This makes \"Shackleton\" the subject, so the sentence says Shackleton was built for polar cruises and renamed by himself."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "D": "grammar_rule"
   },
   "grammar": "modifier",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

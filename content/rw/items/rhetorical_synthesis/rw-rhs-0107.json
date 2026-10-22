@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to make a generalization about tool use among animals. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Sea otters use rocks to crack open the shells of clams and other prey.",
-    "B": "Several kinds of animals, including sea otters, chimpanzees, and crows, use tools to get food.",
+    "A": "Scientists once thought that only humans used tools.",
+    "B": "Sea otters use rocks to crack open the shells of clams and other prey.",
     "C": "New Caledonian crows shape twigs into hooks and use them to pull insects out of holes in trees.",
-    "D": "Scientists once thought that only humans used tools."
+    "D": "Several kinds of animals, including sea otters, chimpanzees, and crows, use tools to get food."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "A generalization is a broad statement drawn from several examples. The notes give three different animals that each use a tool to get food. Only one choice combines these examples into one general statement about animals.",
-    "A": "Incorrect. This describes one animal only, so it is an example, not a generalization.",
-    "B": "Correct. It draws on all three examples to make a broad statement: several kinds of animals use tools to get food.",
+    "A": "Incorrect. This reports an old belief about humans. It does not make a general statement about animals that use tools.",
+    "B": "Incorrect. This describes one animal only, so it is an example, not a generalization.",
     "C": "Incorrect. This describes one animal only. It is detailed, but it is still a single example.",
-    "D": "Incorrect. This reports an old belief about humans. It does not make a general statement about animals that use tools."
+    "D": "Correct. It draws on all three examples to make a broad statement: several kinds of animals use tools to get food."
   },
   "traps": {
-    "A": "too_narrow",
-    "C": "too_narrow",
-    "D": "true_irrelevant"
+    "A": "true_irrelevant",
+    "B": "too_narrow",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

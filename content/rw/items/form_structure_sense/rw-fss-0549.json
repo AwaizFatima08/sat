@@ -16,21 +16,21 @@
   "choices": {
     "A": "marketing",
     "B": "having marketed",
-    "C": "marketed",
-    "D": "to market"
+    "C": "to market",
+    "D": "marketed"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The subject \"Enterprising sellers\" is followed by two long participial phrases (\"sensing an opportunity ...\" and \"hoping to profit ...\"), but those phrases are only modifiers. The sentence still needs a main verb for \"sellers,\" so the blank must be a finite verb in the past tense: \"marketed.\"",
     "A": "Incorrect. \"Marketing\" is a participle like \"sensing\" and \"hoping\"; without a main verb, the sentence would be a fragment.",
     "B": "Incorrect. \"Having marketed\" is a participial phrase, not a main verb, so the subject \"sellers\" would still have no verb.",
-    "C": "Correct. The past-tense verb \"marketed\" gives the subject \"sellers\" the main verb the sentence needs and fits the 1910 setting.",
-    "D": "Incorrect. \"To market\" is an infinitive, which can't serve as the main verb of a sentence."
+    "C": "Incorrect. \"To market\" is an infinitive, which can't serve as the main verb of a sentence.",
+    "D": "Correct. The past-tense verb \"marketed\" gives the subject \"sellers\" the main verb the sentence needs and fits the 1910 setting."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "verb_form",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

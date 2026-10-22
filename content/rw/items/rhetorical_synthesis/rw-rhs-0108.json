@@ -19,22 +19,22 @@
   "data": null,
   "stem": "The student wants to emphasize a similarity between Humayun's Tomb and the Taj Mahal. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Humayun's Tomb was completed in the 1570s, while the Taj Mahal was built in the 1600s.",
-    "B": "The Taj Mahal in Agra was built for Mumtaz Mahal, the wife of the Mughal emperor Shah Jahan.",
+    "A": "Humayun's Tomb in Delhi was built for the Mughal emperor Humayun after his death.",
+    "B": "Humayun's Tomb was completed in the 1570s, while the Taj Mahal was built in the 1600s.",
     "C": "Like the Taj Mahal, Humayun's Tomb is set in a large garden divided into four parts.",
-    "D": "Humayun's Tomb in Delhi was built for the Mughal emperor Humayun after his death."
+    "D": "The Taj Mahal in Agra was built for Mumtaz Mahal, the wife of the Mughal emperor Shah Jahan."
   },
   "answer": "C",
   "explanation": {
     "why": "A similarity must involve both tombs and something they share. The last note gives that shared feature: both are set in large gardens divided into four parts. Only one choice uses it.",
-    "A": "Incorrect. This mentions both tombs but shows that they were built at different times, which is a difference.",
-    "B": "Incorrect. This is about the Taj Mahal alone, so no similarity is shown.",
+    "A": "Incorrect. This is about Humayun's Tomb alone, so no similarity is shown.",
+    "B": "Incorrect. This mentions both tombs but shows that they were built at different times, which is a difference.",
     "C": "Correct. \"Like the Taj Mahal\" signals the comparison, and both tombs share gardens divided into four parts.",
-    "D": "Incorrect. This is about Humayun's Tomb alone, so no similarity is shown."
+    "D": "Incorrect. This is about the Taj Mahal alone, so no similarity is shown."
   },
   "traps": {
-    "A": "misses_goal",
-    "B": "too_narrow",
+    "A": "too_narrow",
+    "B": "misses_goal",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

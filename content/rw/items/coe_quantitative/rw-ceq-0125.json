@@ -63,23 +63,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Ajanel's finding?",
   "choices": {
-    "A": "Gas became the main fuel for 41% of households, up from 12%, yet 51% still used mainly wood.",
-    "B": "The share of households cooking mainly with electricity rose from 4% to 6% over the decade.",
-    "C": "By 2025, more households cooked mainly with bottled gas than cooked mainly with wood.",
-    "D": "The share of households cooking mainly with wood dropped from 78% in 2015 to 51% in 2025."
+    "A": "The share of households cooking mainly with electricity rose from 4% to 6% over the decade.",
+    "B": "By 2025, more households cooked mainly with bottled gas than cooked mainly with wood.",
+    "C": "The share of households cooking mainly with wood dropped from 78% in 2015 to 51% in 2025.",
+    "D": "Gas became the main fuel for 41% of households, up from 12%, yet 51% still used mainly wood."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Ajanel's finding has two parts: gas became much more common, and wood remained widely used. The choice must show both. Gas rose from 12% to 41% of households, while wood was still the main fuel for 51% in 2025.",
-    "A": "Correct. It shows gas rising sharply (12% to 41%) and wood still the main fuel for about half of households (51%), covering both parts of the finding.",
-    "B": "Incorrect. This is true, but it concerns electricity, not gas or wood.",
-    "C": "Incorrect. This misreads the graph: in 2025, 51% of households used mainly wood and 41% used mainly gas.",
-    "D": "Incorrect. This is true and shows that wood remained common, but it does not show that gas in particular became more common."
+    "A": "Incorrect. This is true, but it concerns electricity, not gas or wood.",
+    "B": "Incorrect. This misreads the graph: in 2025, 51% of households used mainly wood and 41% used mainly gas.",
+    "C": "Incorrect. This is true and shows that wood remained common, but it does not show that gas in particular became more common.",
+    "D": "Correct. It shows gas rising sharply (12% to 41%) and wood still the main fuel for about half of households (51%), covering both parts of the finding."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "reversed",
-    "D": "too_narrow"
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -88,8 +88,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

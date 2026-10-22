@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "genuine",
-    "B": "pretended",
+    "A": "contagious",
+    "B": "genuine",
     "C": "practical",
-    "D": "contagious"
+    "D": "pretended"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "Henrik says the boat is \"only wood and paint,\" but \"Yet\" introduces actions that show he cares deeply: checking its ropes every evening and polishing it one last time. His claim not to care was therefore not sincere. A show of feeling that hides one's real feeling is pretended, so \"pretended\" fits.",
-    "A": "Incorrect. Henrik's daily visits and final polishing show that he cared about the boat, so his claim of not caring was not genuine.",
-    "B": "Correct. Henrik's actions contradict his words, so Ingrid concludes that his indifference was only pretended.",
+    "A": "Incorrect. Nothing in the text suggests that Henrik's attitude spread to anyone else.",
+    "B": "Incorrect. Henrik's daily visits and final polishing show that he cared about the boat, so his claim of not caring was not genuine.",
     "C": "Incorrect. Henrik gives a practical-sounding reason for selling, but Ingrid's conclusion is based on his behavior, which shows that his indifference was not real; whether his reasoning was sensible is not the point.",
-    "D": "Incorrect. Nothing in the text suggests that Henrik's attitude spread to anyone else."
+    "D": "Correct. Henrik's actions contradict his words, so Ingrid concludes that his indifference was only pretended."
   },
   "traps": {
-    "A": "reversed",
-    "C": "wrong_logic",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

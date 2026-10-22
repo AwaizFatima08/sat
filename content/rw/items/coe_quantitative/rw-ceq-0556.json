@@ -44,23 +44,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Asante's argument?",
   "choices": {
-    "A": "Tadpoles kept near caged dragonfly larvae had deeper tails than control tadpoles, whether the larvae were fed snails or fed tadpoles.",
-    "B": "Tails were 1.2 mm deeper with tadpole-fed larvae than with snail-fed larvae, more than twice the gap between snail-fed and control.",
-    "C": "Stirring the water every day increased tail depth by only 0.1 mm compared with the control.",
-    "D": "Tadpoles near larvae fed tadpoles had the shortest bodies but not the deepest tails of any group."
+    "A": "Stirring the water every day increased tail depth by only 0.1 mm compared with the control.",
+    "B": "Tadpoles kept near caged dragonfly larvae had deeper tails than control tadpoles, whether the larvae were fed snails or fed tadpoles.",
+    "C": "Tadpoles near larvae fed tadpoles had the shortest bodies but not the deepest tails of any group.",
+    "D": "Tails were 1.2 mm deeper with tadpole-fed larvae than with snail-fed larvae, more than twice the gap between snail-fed and control."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "Asante's key claim is that the response comes chiefly from cues released when predators eat tadpoles, not from the predator's presence. The test of that is to compare the two predator conditions, which differ only in what the larvae ate, and to set that difference against the effect of presence alone. Larvae fed tadpoles produced tails 5.8 − 4.6 = 1.2 mm deeper than larvae fed snails, while snail-fed larvae raised tail depth only 4.6 − 4.1 = 0.5 mm above the control.",
-    "A": "Incorrect. This is true, but it treats both predator conditions alike, and the snail-fed result shows that presence alone has some effect, which does not help show that diet cues matter most.",
-    "B": "Correct. It isolates the effect of what the predator ate and shows that this effect is much larger than the effect of the predator's mere presence.",
-    "C": "Incorrect. This is true, but it rules out only general disturbance; it says nothing about whether presence or diet cues drive the response.",
-    "D": "Incorrect. Tadpoles near larvae fed tadpoles had the deepest tails (5.8 mm) of any group, so this misreads the table."
+    "A": "Incorrect. This is true, but it rules out only general disturbance; it says nothing about whether presence or diet cues drive the response.",
+    "B": "Incorrect. This is true, but it treats both predator conditions alike, and the snail-fed result shows that presence alone has some effect, which does not help show that diet cues matter most.",
+    "C": "Incorrect. Tadpoles near larvae fed tadpoles had the deepest tails (5.8 mm) of any group, so this misreads the table.",
+    "D": "Correct. It isolates the effect of what the predator ate and shows that this effect is much larger than the effect of the predator's mere presence."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "too_narrow",
-    "D": "reversed"
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

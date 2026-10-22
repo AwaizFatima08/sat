@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Whitfield's argument?",
   "choices": {
-    "A": "Mailed stories adopted the facts-first structure as early and as widely as telegraphed ones.",
+    "A": "Newspapers paid telegraph companies by the word for every dispatch their correspondents sent.",
     "B": "Telegraph lines of the period often failed in the middle of transmitting a dispatch.",
-    "C": "Newspapers paid telegraph companies by the word for every dispatch their correspondents sent.",
-    "D": "Readers of the period complained that news stories had become shorter and plainer than before."
+    "C": "Readers of the period complained that news stories had become shorter and plainer than before.",
+    "D": "Mailed stories adopted the facts-first structure as early and as widely as telegraphed ones."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Whitfield's account has a sequence: the form began in telegraphed dispatches and later spread to other news writing. If stories sent by mail, which faced no risk of a failing line, took up the form just as early and as widely, the telegraph cannot have been where it started.",
-    "A": "Correct. Mailed stories adopting the form at the same time contradicts the claim that it arose from telegraphy and only later spread.",
+    "A": "Incorrect. Paying by the word would encourage short dispatches, but it does not show where the facts-first order came from or count against Whitfield.",
     "B": "Incorrect. Frequent line failures are the very problem Whitfield says the form solved, so this supports his argument.",
-    "C": "Incorrect. Paying by the word would encourage short dispatches, but it does not show where the facts-first order came from or count against Whitfield.",
-    "D": "Incorrect. Complaints about shorter, plainer stories concern length and style, not whether the facts-first order began with the telegraph."
+    "C": "Incorrect. Complaints about shorter, plainer stories concern length and style, not whether the facts-first order began with the telegraph.",
+    "D": "Correct. Mailed stories adopting the form at the same time contradicts the claim that it arose from telegraphy and only later spread."
   },
   "traps": {
+    "A": "true_irrelevant",
     "B": "reversed",
-    "C": "true_irrelevant",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

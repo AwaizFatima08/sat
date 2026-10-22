@@ -15,22 +15,22 @@
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
     "A": "Bossa nova replaced samba as the main music of Brazil's carnival.",
-    "B": "João Gilberto was the first musician in Brazil to play American jazz chords.",
+    "B": "Bossa nova turned elements of samba into a quieter, more intimate music.",
     "C": "Bossa nova singers sang softly instead of projecting over a band.",
-    "D": "Bossa nova turned elements of samba into a quieter, more intimate music."
+    "D": "João Gilberto was the first musician in Brazil to play American jazz chords."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text says bossa nova \"grew out of samba\" but \"sounded strikingly different,\" then lists the changes: a gentle guitar rhythm, jazz chords, and soft singing. It concludes that the result was \"an intimate music.\" The main idea must cover both its roots in samba and its transformation.",
     "A": "Incorrect. The text never says bossa nova replaced samba at carnival.",
-    "B": "Incorrect. The text says musicians borrowed jazz chords but never claims Gilberto was the first in Brazil to do so.",
+    "B": "Correct. This covers the whole text: bossa nova came from samba but changed it into a quiet, intimate style.",
     "C": "Incorrect. Soft singing is only one of several changes the text describes.",
-    "D": "Correct. This covers the whole text: bossa nova came from samba but changed it into a quiet, intimate style."
+    "D": "Incorrect. The text says musicians borrowed jazz chords but never claims Gilberto was the first in Brazil to do so."
   },
   "traps": {
     "A": "not_in_text",
-    "B": "not_in_text",
-    "C": "too_narrow"
+    "C": "too_narrow",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

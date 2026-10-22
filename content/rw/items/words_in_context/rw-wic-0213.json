@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "vehement",
-    "B": "sporadic",
-    "C": "veiled",
-    "D": "unfounded"
+    "A": "veiled",
+    "B": "unfounded",
+    "C": "vehement",
+    "D": "sporadic"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The aunt \"never criticized; she merely observed,\" wrapping each judgment in a mild remark, and the colon clause says no complaint was ever \"direct enough to answer.\" Her disapproval was real but disguised, which is what \"veiled\" means.",
-    "A": "Incorrect. Vehement disapproval would be forceful and open, the opposite of remarks delivered \"with a smile and a small sigh.\"",
-    "B": "Incorrect. The colon clause explains the effect by the remarks' indirectness, not by how often they came; in fact the aunt makes them on every visit.",
-    "C": "Correct. The disapproval was hidden inside polite remarks, so it could not be answered directly, which is what \"veiled\" describes.",
-    "D": "Incorrect. The text never judges whether the aunt's opinions are correct; it explains why her disapproval was hard to answer."
+    "A": "Correct. The disapproval was hidden inside polite remarks, so it could not be answered directly, which is what \"veiled\" describes.",
+    "B": "Incorrect. The text never judges whether the aunt's opinions are correct; it explains why her disapproval was hard to answer.",
+    "C": "Incorrect. Vehement disapproval would be forceful and open, the opposite of remarks delivered \"with a smile and a small sigh.\"",
+    "D": "Incorrect. The colon clause explains the effect by the remarks' indirectness, not by how often they came; in fact the aunt makes them on every visit."
   },
   "traps": {
-    "A": "reversed",
-    "B": "wrong_logic",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

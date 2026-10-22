@@ -49,23 +49,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "both versions of Winter Kitchen received ratings above 7.5.",
-    "B": "The Salt Road scored higher subtitled, but Paper Moons scored higher dubbed.",
-    "C": "every film was rated higher in its subtitled version than in its dubbed one.",
-    "D": "North Wind scored higher dubbed, but Winter Kitchen scored higher subtitled."
+    "A": "The Salt Road scored higher subtitled, but Paper Moons scored higher dubbed.",
+    "B": "every film was rated higher in its subtitled version than in its dubbed one.",
+    "C": "North Wind scored higher dubbed, but Winter Kitchen scored higher subtitled.",
+    "D": "both versions of Winter Kitchen received ratings above 7.5."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Roux's point is that the preferred version differed from film to film, so the choice must name one film rated higher subtitled and another rated higher dubbed. The Salt Road scored 8.4 subtitled and 7.1 dubbed, while Paper Moons scored 6.8 subtitled and 7.5 dubbed.",
-    "A": "Incorrect. This is true (7.9 and 7.6), but it concerns one film only and shows no difference in which version audiences preferred.",
-    "B": "Correct. The Salt Road was preferred subtitled and Paper Moons was preferred dubbed, so audiences did not favor the same version every time.",
-    "C": "Incorrect. Paper Moons was rated higher dubbed (7.5) than subtitled (6.8), so not every film was preferred subtitled, and this would contradict Roux's point.",
-    "D": "Incorrect. This misreads the table: North Wind scored higher subtitled (8.1) than dubbed (6.9)."
+    "A": "Correct. The Salt Road was preferred subtitled and Paper Moons was preferred dubbed, so audiences did not favor the same version every time.",
+    "B": "Incorrect. Paper Moons was rated higher dubbed (7.5) than subtitled (6.8), so not every film was preferred subtitled, and this would contradict Roux's point.",
+    "C": "Incorrect. This misreads the table: North Wind scored higher subtitled (8.1) than dubbed (6.9).",
+    "D": "Incorrect. This is true (7.9 and 7.6), but it concerns one film only and shows no difference in which version audiences preferred."
   },
   "traps": {
-    "A": "true_irrelevant",
+    "B": "reversed",
     "C": "reversed",
-    "D": "reversed"
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -74,8 +74,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

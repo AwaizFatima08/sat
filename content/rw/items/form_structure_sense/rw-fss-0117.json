@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "it",
-    "B": "them",
-    "C": "its",
-    "D": "they"
+    "A": "they",
+    "B": "its",
+    "C": "them",
+    "D": "it"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The blank is the subject of the verb \"turn,\" and it refers to \"the growing plants,\" which is plural. The plural subject pronoun \"they\" is correct; the passage itself uses \"they\" for the plants in the next sentence.",
-    "A": "Incorrect. \"It\" is singular, but it must refer to the plural \"plants\"; \"it slowly turn\" also lacks agreement.",
-    "B": "Incorrect. \"Them\" is an object pronoun, but the blank is the subject of \"turn.\"",
-    "C": "Incorrect. \"Its\" is a singular possessive, not a subject pronoun.",
-    "D": "Correct. \"They\" is the plural subject pronoun, matching \"plants.\""
+    "A": "Correct. \"They\" is the plural subject pronoun, matching \"plants.\"",
+    "B": "Incorrect. \"Its\" is a singular possessive, not a subject pronoun.",
+    "C": "Incorrect. \"Them\" is an object pronoun, but the blank is the subject of \"turn.\"",
+    "D": "Incorrect. \"It\" is singular, but it must refer to the plural \"plants\"; \"it slowly turn\" also lacks agreement."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "pronoun",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It contrasts a founder's own schooling with the kind of school he went on to create.",
-    "B": "It argues that outdoor lessons teach students more effectively than classroom lessons do.",
-    "C": "It describes a poet's best-known works and the places that inspired them.",
-    "D": "It focuses on how a university attracted students from many countries."
+    "A": "It focuses on how a university attracted students from many countries.",
+    "B": "It describes a poet's best-known works and the places that inspired them.",
+    "C": "It argues that outdoor lessons teach students more effectively than classroom lessons do.",
+    "D": "It contrasts a founder's own schooling with the kind of school he went on to create."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "After naming the school, the text describes Tagore's unhappy schooling in \"stuffy classrooms.\" The phrase \"by contrast\" introduces Santiniketan's outdoor lessons and focus on the arts. The text is built on a contrast between the education Tagore received and the one he created, ending with how the school grew.",
-    "A": "Correct. The text sets Tagore's confined, memorization-based schooling against Santiniketan's outdoor, arts-rich lessons.",
-    "B": "Incorrect. The text describes Santiniketan's outdoor lessons but never claims they are more effective in general.",
-    "C": "Incorrect. Tagore is called a poet, but the text never mentions any of his works.",
-    "D": "Incorrect. Visva-Bharati's international reach appears only in the final sentence; it is not the text's organizing idea."
+    "A": "Incorrect. Visva-Bharati's international reach appears only in the final sentence; it is not the text's organizing idea.",
+    "B": "Incorrect. Tagore is called a poet, but the text never mentions any of his works.",
+    "C": "Incorrect. The text describes Santiniketan's outdoor lessons but never claims they are more effective in general.",
+    "D": "Correct. The text sets Tagore's confined, memorization-based schooling against Santiniketan's outdoor, arts-rich lessons."
   },
   "traps": {
-    "B": "too_broad",
-    "C": "not_in_text",
-    "D": "too_narrow"
+    "A": "too_narrow",
+    "B": "not_in_text",
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

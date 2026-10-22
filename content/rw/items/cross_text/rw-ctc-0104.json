@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the explanation in Text 1?",
   "choices": {
-    "A": "By doubting it, because worms can live underwater for days",
-    "B": "By agreeing that worms leave their tunnels to avoid drowning",
+    "A": "By agreeing that worms leave their tunnels to avoid drowning",
+    "B": "By claiming that worms rarely come to the surface after rain",
     "C": "By arguing that heavy rain usually harms earthworms badly",
-    "D": "By claiming that worms rarely come to the surface after rain"
+    "D": "By doubting it, because worms can live underwater for days"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Text 1 says worms surface after rain \"to escape drowning.\" Text 2 reports that earthworms \"can survive for days underwater\" and offers \"a different reason\": rain lets them travel across the surface. So the author of Text 2 would doubt the drowning explanation.",
-    "A": "Correct. Text 2's evidence that worms survive underwater for days casts doubt on the idea that they surface to avoid drowning.",
-    "B": "Incorrect. Text 2 offers \"a different reason,\" so its author would not agree with the drowning explanation.",
+    "A": "Incorrect. Text 2 offers \"a different reason,\" so its author would not agree with the drowning explanation.",
+    "B": "Incorrect. Text 2 accepts that worms come to the surface after rain; it disagrees only about why.",
     "C": "Incorrect. Text 2 presents rain as giving worms \"a rare chance\" to move, not as harming them.",
-    "D": "Incorrect. Text 2 accepts that worms come to the surface after rain; it disagrees only about why."
+    "D": "Correct. Text 2's evidence that worms survive underwater for days casts doubt on the idea that they surface to avoid drowning."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "not_in_text"
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

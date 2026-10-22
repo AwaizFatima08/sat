@@ -15,16 +15,16 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "publishing",
-    "B": "to publish",
-    "C": "having published",
+    "B": "having published",
+    "C": "to publish",
     "D": "published"
   },
   "answer": "D",
   "explanation": {
     "why": "The subject \"Chughtai\" is followed by a descriptive phrase set off by commas, and then the sentence needs its main verb. Only a finite verb can be the main verb, and the event happened in 1927, so the simple past \"published\" is correct.",
     "A": "Incorrect. \"Publishing\" is a participle, not a finite verb, so the sentence would have no main verb.",
-    "B": "Incorrect. \"To publish\" is an infinitive and cannot serve as the main verb of the sentence.",
-    "C": "Incorrect. \"Having published\" is a participle phrase, not a finite verb, so the sentence would have no main verb.",
+    "B": "Incorrect. \"Having published\" is a participle phrase, not a finite verb, so the sentence would have no main verb.",
+    "C": "Incorrect. \"To publish\" is an infinitive and cannot serve as the main verb of the sentence.",
     "D": "Correct. \"Published\" is a finite past-tense verb, giving the subject \"Chughtai\" the main verb it needs."
   },
   "traps": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

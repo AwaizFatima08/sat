@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, both authors would most likely agree with which statement?",
   "choices": {
-    "A": "Medieval peasants worked fewer days each year than most modern employees do.",
-    "B": "Church rules about rest on holy days were generally ignored by peasants.",
-    "C": "The church calendar discouraged ordinary work on many days.",
+    "A": "The church calendar discouraged ordinary work on many days.",
+    "B": "Medieval peasants worked fewer days each year than most modern employees do.",
+    "C": "Church rules about rest on holy days were generally ignored by peasants.",
     "D": "Calendar-based estimates understate how many days peasants actually rested."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Text 1 says the church calendar \"designated dozens of holy days each year on which ordinary labor was discouraged.\" Malik describes these estimates as showing \"what the church prescribed\" and cites fines for working on holy days, showing that such rules existed and \"were taken seriously.\" Both authors therefore accept that the calendar discouraged work on many days, though they disagree about what that reveals.",
-    "A": "Incorrect. Abelard leans toward this claim, but Malik argues that working time \"cannot simply be read off the calendar,\" so she would not endorse it.",
-    "B": "Incorrect. Malik says the rules were \"taken seriously\" though \"not always obeyed,\" and Abelard describes rest days as \"communally observed.\"",
-    "C": "Correct. Text 1 states that holy days discouraged labor, and Text 2 treats the calendar as a record of what the church prescribed, backed by fines for working on holy days.",
+    "A": "Correct. Text 1 states that holy days discouraged labor, and Text 2 treats the calendar as a record of what the church prescribed, backed by fines for working on holy days.",
+    "B": "Incorrect. Abelard leans toward this claim, but Malik argues that working time \"cannot simply be read off the calendar,\" so she would not endorse it.",
+    "C": "Incorrect. Malik says the rules were \"taken seriously\" though \"not always obeyed,\" and Abelard describes rest days as \"communally observed.\"",
     "D": "Incorrect. Malik's points about rule-breaking and unrecorded household labor suggest such estimates may overstate rest, not understate it."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "too_broad",
+    "B": "true_irrelevant",
+    "C": "too_broad",
     "D": "reversed"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

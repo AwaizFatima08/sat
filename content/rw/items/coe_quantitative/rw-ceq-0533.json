@@ -71,23 +71,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support de Vries's argument?",
   "choices": {
-    "A": "Bumblebees made more visits to the clover plots than honeybees did at every time of day shown.",
-    "B": "Both kinds of bees made fewer visits per hour at 6 a.m. than they did at noon.",
-    "C": "At 6 a.m., bumblebees made 38 more visits per hour than honeybees did, but at noon honeybees made 3 more.",
-    "D": "Honeybee visits peaked at noon and then declined slightly by 2 p.m."
+    "A": "Honeybee visits peaked at noon and then declined slightly by 2 p.m.",
+    "B": "Bumblebees made more visits to the clover plots than honeybees did at every time of day shown.",
+    "C": "Both kinds of bees made fewer visits per hour at 6 a.m. than they did at noon.",
+    "D": "At 6 a.m., bumblebees made 38 more visits per hour than honeybees did, but at noon honeybees made 3 more."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "De Vries's argument contrasts two times of day: bumblebees dominate early, but by midday honeybees are at least as active. Support must compare the two lines at an early time and at midday. At 6 a.m. the counts are 42 versus 4, a 38-visit gap in favor of bumblebees; at noon they are 63 versus 66, with honeybees slightly ahead.",
-    "A": "Incorrect. At noon (66 versus 63) and 2 p.m. (64 versus 60) honeybees made more visits, so this misreads the graph.",
-    "B": "Incorrect. This is true, but it describes both bees together and says nothing about how they compare with each other.",
-    "C": "Correct. It shows a large early-morning gap favoring bumblebees and a midday reading in which honeybees match or slightly exceed them.",
-    "D": "Incorrect. This is true, but it describes honeybees alone, so it cannot show how the two kinds of bees compare at different times."
+    "A": "Incorrect. This is true, but it describes honeybees alone, so it cannot show how the two kinds of bees compare at different times.",
+    "B": "Incorrect. At noon (66 versus 63) and 2 p.m. (64 versus 60) honeybees made more visits, so this misreads the graph.",
+    "C": "Incorrect. This is true, but it describes both bees together and says nothing about how they compare with each other.",
+    "D": "Correct. It shows a large early-morning gap favoring bumblebees and a midday reading in which honeybees match or slightly exceed them."
   },
   "traps": {
-    "A": "reversed",
-    "B": "true_irrelevant",
-    "D": "true_irrelevant"
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -96,8 +96,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

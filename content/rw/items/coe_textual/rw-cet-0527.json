@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Petrov's interpretation?",
   "choices": {
-    "A": "Ponderosa pines in a forest about thirty kilometers away also show unusually narrow rings from the 1840s.",
-    "B": "The same pines show unusually wide rings in the 1850s, a decade known for plentiful rain in the area.",
+    "A": "The same pines show unusually wide rings in the 1850s, a decade known for plentiful rain in the area.",
+    "B": "Bark beetles, which can slow the growth of the pines they attack, are found in many western forests.",
     "C": "Douglas firs growing among the pines, which also grow less in dry years, show normal rings for the 1840s.",
-    "D": "Bark beetles, which can slow the growth of the pines they attack, are found in many western forests."
+    "D": "Ponderosa pines in a forest about thirty kilometers away also show unusually narrow rings from the 1840s."
   },
   "answer": "C",
   "explanation": {
     "why": "Petrov reads the narrow pine rings as a sign of drought. A drought would affect every tree in the forest that is sensitive to dry weather, not just the pines. If drought-sensitive firs growing right beside the pines grew normally in the 1840s, something that affected only the pines is a likelier cause.",
-    "A": "Incorrect. Narrow rings in a nearby forest suggest a dry period across the area, which fits Petrov's interpretation.",
-    "B": "Incorrect. Wide rings in a rainy decade show that the trees respond to rainfall, which fits Petrov's method rather than weakening her reading of the 1840s.",
+    "A": "Incorrect. Wide rings in a rainy decade show that the trees respond to rainfall, which fits Petrov's method rather than weakening her reading of the 1840s.",
+    "B": "Incorrect. Beetles being common in western forests does not show that they attacked these pines in the 1840s.",
     "C": "Correct. A drought should have narrowed the firs' rings too; their normal growth suggests the pines were slowed by something other than drought.",
-    "D": "Incorrect. Beetles being common in western forests does not show that they attacked these pines in the 1840s."
+    "D": "Incorrect. Narrow rings in a nearby forest suggest a dry period across the area, which fits Petrov's interpretation."
   },
   "traps": {
     "A": "reversed",
-    "B": "reversed",
-    "D": "true_irrelevant"
+    "B": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

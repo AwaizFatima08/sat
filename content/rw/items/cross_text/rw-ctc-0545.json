@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, both authors would most likely agree with which statement?",
   "choices": {
-    "A": "Most Impressionist paintings were completed in the studio rather than outdoors.",
-    "B": "Before 1841, painters were unable to work outdoors at all.",
-    "C": "The metal paint tube made it easier for painters to work outdoors.",
-    "D": "Monet's paintings of Rouen Cathedral show that the tube freed painters from the studio."
+    "A": "Monet's paintings of Rouen Cathedral show that the tube freed painters from the studio.",
+    "B": "The metal paint tube made it easier for painters to work outdoors.",
+    "C": "Most Impressionist paintings were completed in the studio rather than outdoors.",
+    "D": "Before 1841, painters were unable to work outdoors at all."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Text 1 says the tube \"kept paint fresh and portable\" so painters could work outdoors. Text 2 agrees that \"Portable paint certainly encouraged painting outdoors.\" The authors differ on how far the studio lost its role, but both accept that the tube made outdoor painting easier.",
-    "A": "Incorrect. Text 2 says only that the idea of finishing every canvas outdoors is misleading; it does not say most were finished in the studio, and Text 1 would disagree.",
-    "B": "Incorrect. Text 1 says paint in bladders was hard to carry, not that outdoor work was impossible, and Text 2 does not address the point.",
-    "C": "Correct. Both texts agree that portable tube paint encouraged painters to work in the open air.",
-    "D": "Incorrect. Text 2 uses the Rouen Cathedral paintings to show the studio's continuing role, the opposite of this claim."
+    "A": "Incorrect. Text 2 uses the Rouen Cathedral paintings to show the studio's continuing role, the opposite of this claim.",
+    "B": "Correct. Both texts agree that portable tube paint encouraged painters to work in the open air.",
+    "C": "Incorrect. Text 2 says only that the idea of finishing every canvas outdoors is misleading; it does not say most were finished in the studio, and Text 1 would disagree.",
+    "D": "Incorrect. Text 1 says paint in bladders was hard to carry, not that outdoor work was impossible, and Text 2 does not address the point."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "not_in_text",
-    "D": "reversed"
+    "A": "reversed",
+    "C": "too_broad",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

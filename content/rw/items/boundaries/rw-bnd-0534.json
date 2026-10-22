@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "need,",
-    "B": "need;",
-    "C": "need",
-    "D": "need—"
+    "A": "need",
+    "B": "need—",
+    "C": "need,",
+    "D": "need;"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The words \"the first in all those years that no sailor would ever need\" are extra information about \"a remark of her own.\" Because that information opens with a dash, it must close with a matching dash before the sentence continues with \"describing how the gulls had gathered.\"",
-    "A": "Incorrect. Extra information that opens with a dash can't close with a comma; the two marks must match.",
-    "B": "Incorrect. A semicolon must be followed by an independent clause, but \"describing how the gulls had gathered ...\" is a phrase with no subject or main verb.",
-    "C": "Incorrect. Without a closing dash, the extra information is never set off, and \"need describing\" reads as if the sailors needed the description.",
-    "D": "Correct. The second dash closes the pair around the extra information, and the sentence continues with the phrase that describes the remark."
+    "A": "Incorrect. Without a closing dash, the extra information is never set off, and \"need describing\" reads as if the sailors needed the description.",
+    "B": "Correct. The second dash closes the pair around the extra information, and the sentence continues with the phrase that describes the remark.",
+    "C": "Incorrect. Extra information that opens with a dash can't close with a comma; the two marks must match.",
+    "D": "Incorrect. A semicolon must be followed by an independent clause, but \"describing how the gulls had gathered ...\" is a phrase with no subject or main verb."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "supplements",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

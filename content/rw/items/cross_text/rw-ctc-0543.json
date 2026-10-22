@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the view held by Calloway in Text 1?",
   "choices": {
-    "A": "By arguing that people reached South America before the inland route was usable",
-    "B": "By agreeing that the corridor opened early but denying that it offered enough large game",
-    "C": "By claiming that the first people to reach the Americas did not come from Beringia",
+    "A": "By agreeing that the corridor opened early but denying that it offered enough large game",
+    "B": "By claiming that the first people to reach the Americas did not come from Beringia",
+    "C": "By arguing that people reached South America before the inland route was usable",
     "D": "By suggesting that hunters on the interior grasslands later moved to the Pacific coast"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Text 2's objection is \"a problem of timing\": the corridor could not support travelers until about 13,000 years ago, \"yet people were already living at Monte Verde ... more than a thousand years earlier.\" If people were in Chile before the corridor was usable, they must have come another way. Text 2 uses that date to challenge Calloway's preferred route.",
-    "A": "Correct. Text 2 notes that Monte Verde was occupied more than a thousand years before the corridor could support travelers.",
-    "B": "Incorrect. Text 2 says the corridor could not support travelers until late, so it does not agree that it was usable early.",
-    "C": "Incorrect. Text 2 offers a different route, not a different starting point; it never denies that people came from Beringia.",
+    "A": "Incorrect. Text 2 says the corridor could not support travelers until late, so it does not agree that it was usable early.",
+    "B": "Incorrect. Text 2 offers a different route, not a different starting point; it never denies that people came from Beringia.",
+    "C": "Correct. Text 2 notes that Monte Verde was occupied more than a thousand years before the corridor could support travelers.",
     "D": "Incorrect. Text 2 says nothing about hunters moving from the grasslands to the coast."
   },
   "traps": {
-    "B": "reversed",
-    "C": "too_broad",
+    "A": "reversed",
+    "B": "too_broad",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

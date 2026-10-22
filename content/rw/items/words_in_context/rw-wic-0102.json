@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "unnoticed",
-    "B": "unbroken",
-    "C": "unpopular",
-    "D": "uncertain"
+    "A": "uncertain",
+    "B": "unpopular",
+    "C": "unnoticed",
+    "D": "unbroken"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The text says India won \"every\" Olympic gold from 1928 through 1956 and that the run lasted \"until\" Pakistan beat India in 1960. A streak that continues without a single loss until a certain point is one that has not been broken, so \"unbroken\" fits.",
-    "A": "Incorrect. A team that \"dominated\" the Olympics for decades would hardly go unnoticed, and the text says nothing about people failing to notice the streak.",
-    "B": "Correct. India won six titles in a row with no break, and the streak lasted until Pakistan's victory in 1960, so it remained unbroken until then.",
-    "C": "Incorrect. The text says nothing about how people felt about India's victories.",
-    "D": "Incorrect. India's six titles had already been won, so there was nothing uncertain about them; the word does not describe a winning streak that simply continued."
+    "A": "Incorrect. India's six titles had already been won, so there was nothing uncertain about them; the word does not describe a winning streak that simply continued.",
+    "B": "Incorrect. The text says nothing about how people felt about India's victories.",
+    "C": "Incorrect. A team that \"dominated\" the Olympics for decades would hardly go unnoticed, and the text says nothing about people failing to notice the streak.",
+    "D": "Correct. India won six titles in a row with no break, and the streak lasted until Pakistan's victory in 1960, so it remained unbroken until then."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "not_in_text",
-    "D": "wrong_logic"
+    "A": "wrong_logic",
+    "B": "not_in_text",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

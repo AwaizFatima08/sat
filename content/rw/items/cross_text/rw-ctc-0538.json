@@ -15,22 +15,22 @@
   "stem": "Based on the texts, both authors would most likely agree with which statement?",
   "choices": {
     "A": "Flying buttresses were first built as decoration and only later took on structural work.",
-    "B": "The carving on flying buttresses was added to help them resist the thrust of the vault.",
-    "C": "Medieval masons regarded flying buttresses as purely structural devices.",
+    "B": "Medieval masons regarded flying buttresses as purely structural devices.",
+    "C": "The carving on flying buttresses was added to help them resist the thrust of the vault.",
     "D": "Flying buttresses made it possible for builders to use larger windows."
   },
   "answer": "D",
   "explanation": {
     "why": "Text 1 says that with buttresses carrying the vault's thrust, builders could \"fill [the walls] with large expanses of stained glass.\" Text 2 agrees that \"without them, the great windows of Gothic churches could not have stood.\" Both authors therefore accept that buttresses allowed larger windows; they disagree only about whether the buttress was also display.",
     "A": "Incorrect. Neither text says buttresses began as decoration; both treat their structural work as essential.",
-    "B": "Incorrect. Text 2 says the ornament \"served no structural purpose,\" so it would reject this.",
-    "C": "Incorrect. Text 1 presents the buttress as purely structural, but Text 2 argues that masons deliberately made it part of the display.",
+    "B": "Incorrect. Text 1 presents the buttress as purely structural, but Text 2 argues that masons deliberately made it part of the display.",
+    "C": "Incorrect. Text 2 says the ornament \"served no structural purpose,\" so it would reject this.",
     "D": "Correct. Both texts say buttresses let builders open the walls for great windows of stained glass."
   },
   "traps": {
     "A": "not_in_text",
-    "B": "reversed",
-    "C": "true_irrelevant"
+    "B": "true_irrelevant",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

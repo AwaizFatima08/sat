@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Specifically,",
+    "A": "Similarly,",
     "B": "However,",
-    "C": "Similarly,",
+    "C": "Specifically,",
     "D": "As a result,"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The first sentence says Picasso and Braque broke with \"a convention\" but does not say which one. The next sentence names it exactly: showing a subject from a single, fixed point of view. A transition that gives a more precise statement of the previous idea is needed.",
-    "A": "Correct. \"Specifically\" introduces the exact convention the painters broke with.",
+    "A": "Incorrect. \"Similarly\" introduces a separate, parallel point, but the sentence describes the same break in more detail.",
     "B": "Incorrect. Abandoning the single point of view is how they broke with convention, so it does not contrast with the first sentence.",
-    "C": "Incorrect. \"Similarly\" introduces a separate, parallel point, but the sentence describes the same break in more detail.",
+    "C": "Correct. \"Specifically\" introduces the exact convention the painters broke with.",
     "D": "Incorrect. Abandoning the single point of view is not a result of breaking with convention; it is the break itself."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

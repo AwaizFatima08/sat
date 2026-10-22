@@ -63,23 +63,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Mercer's claim?",
   "choices": {
-    "A": "The wildflower strip at Calder had 48 bumblebees, more than any other strip or grass edge in the study.",
+    "A": "Wildflower strips had more bumblebees than grass edges on all four farms, by 6 at Bramley but by 39 at Calder.",
     "B": "More bumblebees were counted along wildflower strips than along grass edges on only three of the four farms.",
     "C": "The grass edges had between 9 and 18 bumblebees, so the number of bumblebees varied from farm to farm.",
-    "D": "Wildflower strips had more bumblebees than grass edges on all four farms, by 6 at Bramley but by 39 at Calder."
+    "D": "The wildflower strip at Calder had 48 bumblebees, more than any other strip or grass edge in the study."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Mercer's claim has two parts: the strips helped on every farm, and the size of the help varied. The support must compare the two bars for each farm. Wildflower strips beat grass edges everywhere, by 22 at Ashcombe, 6 at Bramley, 39 at Calder and 9 at Dunmore.",
-    "A": "Incorrect. This is true, but it describes one farm only and does not show a benefit on every farm.",
+    "A": "Correct. It shows a benefit on every farm and that the benefit ranged from 6 to 39 bumblebees, which covers both parts of Mercer's claim.",
     "B": "Incorrect. Wildflower strips had more bumblebees on all four farms, so this misreads the graph and would weaken the claim about every farm.",
     "C": "Incorrect. This is true, but it describes only the grass edges; it does not compare them with the wildflower strips, so it cannot show a benefit.",
-    "D": "Correct. It shows a benefit on every farm and that the benefit ranged from 6 to 39 bumblebees, which covers both parts of Mercer's claim."
+    "D": "Incorrect. This is true, but it describes one farm only and does not show a benefit on every farm."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "reversed",
-    "C": "too_narrow"
+    "C": "too_narrow",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -92,13 +92,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

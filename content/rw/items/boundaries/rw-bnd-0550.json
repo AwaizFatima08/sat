@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "luminosity, this relationship allows",
+    "A": "luminosity, a relationship that allows",
     "B": "luminosity; a relationship that allows",
     "C": "luminosity a relationship that allows",
-    "D": "luminosity, a relationship that allows"
+    "D": "luminosity, this relationship allows"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The sentence's last clause, \"she could conclude that a Cepheid's period is linked to its true luminosity,\" is followed by a noun phrase, \"a relationship that allows astronomers to estimate ...,\" that renames and sums up the link just described. Such a summary phrase is not a clause on its own, so it is attached with a comma.",
-    "A": "Incorrect. \"This relationship allows astronomers to estimate ...\" is an independent clause, and a comma alone can't join it to the clause before; this is a comma splice.",
+    "A": "Correct. The comma attaches the noun phrase that sums up the period-luminosity link to the end of the sentence.",
     "B": "Incorrect. A semicolon must be followed by an independent clause, but \"a relationship that allows astronomers ...\" is a noun phrase; its verb \"allows\" sits inside the \"that\" clause.",
     "C": "Incorrect. Without a comma, the summarizing phrase runs straight into \"luminosity,\" and the sentence seems to say the period is linked to \"luminosity a relationship.\"",
-    "D": "Correct. The comma attaches the noun phrase that sums up the period-luminosity link to the end of the sentence."
+    "D": "Incorrect. \"This relationship allows astronomers to estimate ...\" is an independent clause, and a comma alone can't join it to the clause before; this is a comma splice."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "linking_clauses",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

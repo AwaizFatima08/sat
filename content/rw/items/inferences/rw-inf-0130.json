@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "replace the glaciers as the region's year-round source of water.",
+    "A": "release water gradually during the spring planting season.",
     "B": "stay frozen until the glaciers begin melting in early summer.",
-    "C": "release water gradually during the spring planting season.",
+    "C": "replace the glaciers as the region's year-round source of water.",
     "D": "cool the air over the fields so that crops grow more slowly."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Farmers need water in April and May, before the glaciers melt in early summer. Ice stupas store winter water as ice that melts slowly, so they are meant to supply water bit by bit during that spring gap.",
-    "A": "Incorrect. The stupas are built to fill a seasonal gap, not to replace glaciers all year.",
+    "A": "Correct. Melting slowly through the spring, the stupas supply water when crops are planted but glaciers have not yet melted.",
     "B": "Incorrect. The stupas are meant to bridge the gap before the glaciers melt, so staying frozen until then would defeat their purpose.",
-    "C": "Correct. Melting slowly through the spring, the stupas supply water when crops are planted but glaciers have not yet melted.",
+    "C": "Incorrect. The stupas are built to fill a seasonal gap, not to replace glaciers all year.",
     "D": "Incorrect. The text never suggests the stupas are meant to change the air or slow crop growth."
   },
   "traps": {
-    "A": "too_broad",
     "B": "reversed",
+    "C": "too_broad",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

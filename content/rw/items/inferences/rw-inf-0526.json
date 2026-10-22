@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "all bricks used in Indus cities were made in a single central workshop.",
-    "B": "builders in widely separated cities followed common building practices.",
-    "C": "the Indus script was used mainly to record rules for making bricks.",
+    "A": "builders in widely separated cities followed common building practices.",
+    "B": "the Indus script was used mainly to record rules for making bricks.",
+    "C": "all bricks used in Indus cities were made in a single central workshop.",
     "D": "the cities were built by unrelated groups with no contact with one another."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Builders in cities hundreds of kilometers apart made bricks with the same proportions. Even without written rules, this shared pattern points to shared practices across the civilization.",
-    "A": "Incorrect. This goes too far: matching proportions show a shared standard, not that every brick came from one workshop.",
-    "B": "Correct. The same brick proportions in distant cities point to shared building practices, even though no written rules survive.",
-    "C": "Incorrect. The script has not been deciphered, so nothing is known about what it mainly recorded.",
+    "A": "Correct. The same brick proportions in distant cities point to shared building practices, even though no written rules survive.",
+    "B": "Incorrect. The script has not been deciphered, so nothing is known about what it mainly recorded.",
+    "C": "Incorrect. This goes too far: matching proportions show a shared standard, not that every brick came from one workshop.",
     "D": "Incorrect. This reverses the evidence: identical proportions in distant cities suggest connection, not isolation."
   },
   "traps": {
-    "A": "too_broad",
-    "C": "not_in_text",
+    "B": "not_in_text",
+    "C": "too_broad",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

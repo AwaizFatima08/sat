@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Gamelan musicians must train for many years before they may play solos.",
-    "B": "In one technique, two musicians each play part of a fast melody.",
-    "C": "Listeners usually find gamelan melodies too broken up to follow.",
+    "A": "In one technique, two musicians each play part of a fast melody.",
+    "B": "Listeners usually find gamelan melodies too broken up to follow.",
+    "C": "Gamelan musicians must train for many years before they may play solos.",
     "D": "Gamelan music depends on players combining parts rather than playing alone."
   },
   "answer": "D",
   "explanation": {
     "why": "The text says gamelan players are \"not expected to stand out as soloists\" and gives an example of two players whose parts fit together into one line. It ends by stating the point: \"the music depends on every player fitting in with the others.\"",
-    "A": "Incorrect. The text says players are not expected to be soloists; it says nothing about training for solos.",
-    "B": "Incorrect. This is the example the text uses, not the larger point the example supports.",
-    "C": "Incorrect. The text says listeners hear \"a single, unbroken line,\" the opposite of a broken-up melody.",
+    "A": "Incorrect. This is the example the text uses, not the larger point the example supports.",
+    "B": "Incorrect. The text says listeners hear \"a single, unbroken line,\" the opposite of a broken-up melody.",
+    "C": "Incorrect. The text says players are not expected to be soloists; it says nothing about training for solos.",
     "D": "Correct. Both the opening claim and the example show that the music works only when players' parts combine."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "too_narrow",
-    "C": "reversed"
+    "A": "too_narrow",
+    "B": "reversed",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

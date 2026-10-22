@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "Sanchi, many",
-    "B": "Sanchi; many",
-    "C": "Sanchi: many",
-    "D": "Sanchi many"
+    "A": "Sanchi; many",
+    "B": "Sanchi: many",
+    "C": "Sanchi many",
+    "D": "Sanchi, many"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The colon introduces a list of three items separated by semicolons. The blank falls inside the second item, \"short donor inscriptions from the stupa at Sanchi, many of which ended with the same two characters.\" Within that item, \"many of which ...\" is a nonessential clause about the inscriptions, so a comma, not a semicolon, sets it off.",
-    "A": "Correct. The comma sets off the nonessential clause \"many of which ended with the same two characters\" inside the second item of the list.",
-    "B": "Incorrect. The other semicolons make one tempting, but a semicolon here would split the second item in two, leaving \"many of which ended with the same two characters\" as a separate \"item\" that names no kind of evidence.",
-    "C": "Incorrect. A colon can't be used inside a list item to introduce a relative clause, and the sentence already uses a colon to introduce the list.",
-    "D": "Incorrect. A nonessential clause beginning \"many of which\" must be set off with a comma; without one, the sentence seems to mention \"Sanchi many.\""
+    "A": "Incorrect. The other semicolons make one tempting, but a semicolon here would split the second item in two, leaving \"many of which ended with the same two characters\" as a separate \"item\" that names no kind of evidence.",
+    "B": "Incorrect. A colon can't be used inside a list item to introduce a relative clause, and the sentence already uses a colon to introduce the list.",
+    "C": "Incorrect. A nonessential clause beginning \"many of which\" must be set off with a comma; without one, the sentence seems to mention \"Sanchi many.\"",
+    "D": "Correct. The comma sets off the nonessential clause \"many of which ended with the same two characters\" inside the second item of the list."
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "punctuation",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

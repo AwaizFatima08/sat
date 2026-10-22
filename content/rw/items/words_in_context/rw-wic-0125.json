@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "fabricated",
-    "B": "misleading",
-    "C": "overwhelming",
+    "A": "misleading",
+    "B": "overwhelming",
+    "C": "fabricated",
     "D": "unrecorded"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The correct answers were real, and the owner \"was not deliberately cheating,\" yet Pfungst showed the answers did not prove the horse could count: Hans was reading the questioner's unintended movements. Evidence that is genuine but points people to the wrong conclusion is misleading, so \"misleading\" fits.",
-    "A": "Incorrect. \"Fabricated\" means deliberately made up, but the text says the owner \"was not deliberately cheating.\" The answers were real; they just did not mean what observers thought.",
-    "B": "Correct. Hans really did tap the right answers, but because he was reading the questioner's movements, the answers led observers to a false conclusion about his ability to count. The evidence was misleading.",
-    "C": "Incorrect. \"However\" signals that Pfungst undercut the evidence; calling it overwhelming would mean it strongly proved the horse could count.",
+    "A": "Correct. Hans really did tap the right answers, but because he was reading the questioner's movements, the answers led observers to a false conclusion about his ability to count. The evidence was misleading.",
+    "B": "Incorrect. \"However\" signals that Pfungst undercut the evidence; calling it overwhelming would mean it strongly proved the horse could count.",
+    "C": "Incorrect. \"Fabricated\" means deliberately made up, but the text says the owner \"was not deliberately cheating.\" The answers were real; they just did not mean what observers thought.",
     "D": "Incorrect. The text says crowds watched Hans answer and that Pfungst studied when he answered correctly; nothing suggests the evidence went unrecorded."
   },
   "traps": {
-    "A": "wrong_tone",
-    "C": "reversed",
+    "B": "reversed",
+    "C": "wrong_tone",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

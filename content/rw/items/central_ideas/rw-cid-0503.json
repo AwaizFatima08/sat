@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "The greater one-horned rhinoceros once lived widely in northern India and Nepal.",
-    "B": "Farms now cover most of the grassland where rhinos once lived in Nepal.",
-    "C": "Protection efforts helped Nepal's rhinos recover after a sharp decline.",
-    "D": "Rhinos in Nepal are now protected mainly by farmers rather than by guards."
+    "A": "Protection efforts helped Nepal's rhinos recover after a sharp decline.",
+    "B": "Rhinos in Nepal are now protected mainly by farmers rather than by guards.",
+    "C": "The greater one-horned rhinoceros once lived widely in northern India and Nepal.",
+    "D": "Farms now cover most of the grassland where rhinos once lived in Nepal."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text moves from a decline (only a small number of rhinos left by the 1960s) to a response (a national park with guards) to a result: \"The effort has worked,\" with more than 700 rhinos counted in 2021. The main idea is that protection helped the population recover.",
-    "A": "Incorrect. This is background from the first sentence; it leaves out the decline and the recovery.",
-    "B": "Incorrect. The text says grassland was lost to farms before the 1960s, but it never says farms cover most of it today.",
-    "C": "Correct. This covers the whole text: a sharp decline, protection in Chitwan, and a recovery to more than 700 rhinos.",
-    "D": "Incorrect. The text says the government assigned guards; farmers are mentioned only as a cause of lost grassland."
+    "A": "Correct. This covers the whole text: a sharp decline, protection in Chitwan, and a recovery to more than 700 rhinos.",
+    "B": "Incorrect. The text says the government assigned guards; farmers are mentioned only as a cause of lost grassland.",
+    "C": "Incorrect. This is background from the first sentence; it leaves out the decline and the recovery.",
+    "D": "Incorrect. The text says grassland was lost to farms before the 1960s, but it never says farms cover most of it today."
   },
   "traps": {
-    "A": "too_narrow",
-    "B": "not_in_text",
-    "D": "reversed"
+    "B": "reversed",
+    "C": "too_narrow",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

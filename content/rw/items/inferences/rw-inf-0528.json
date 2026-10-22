@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "wanted Kenji to give up the university and stay in the village as a fisherman.",
+    "A": "had found his own way to mark Kenji's departure, even without saying goodbye.",
     "B": "had forgotten that Kenji was leaving for the city that morning.",
-    "C": "had found his own way to mark Kenji's departure, even without saying goodbye.",
-    "D": "planned to join Kenji in the city once the fishing season had ended."
+    "C": "planned to join Kenji in the city once the fishing season had ended.",
+    "D": "wanted Kenji to give up the university and stay in the village as a fisherman."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The father was not there to say goodbye, but someone had slipped his own well-used knife into Kenji's bag. Leaving such a personal object shows that he knew Kenji was leaving and wanted to mark the moment in his own quiet way.",
-    "A": "Incorrect. Nothing suggests the father opposed Kenji's going; the gift travels with Kenji to the city.",
+    "A": "Correct. Placing his own treasured knife in Kenji's bag is a quiet farewell that takes the place of a spoken goodbye.",
     "B": "Incorrect. Hiding the knife in Kenji's packed bag shows the father knew he was leaving.",
-    "C": "Correct. Placing his own treasured knife in Kenji's bag is a quiet farewell that takes the place of a spoken goodbye.",
-    "D": "Incorrect. The text says nothing about the father's plans to move to the city."
+    "C": "Incorrect. The text says nothing about the father's plans to move to the city.",
+    "D": "Incorrect. Nothing suggests the father opposed Kenji's going; the gift travels with Kenji to the city."
   },
   "traps": {
-    "A": "not_in_text",
     "B": "reversed",
+    "C": "not_in_text",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

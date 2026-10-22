@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Kondo's argument?",
   "choices": {
-    "A": "The chirping corridors lead toward the inner rooms where the castle's lord received his visitors.",
-    "B": "Storehouse floors fastened the same way, where no alarm was needed, chirped just as loudly.",
-    "C": "Visitors to the castle today often walk the corridors slowly just to hear the chirping.",
-    "D": "Builders of the period knew methods of laying floors that made almost no sound."
+    "A": "Storehouse floors fastened the same way, where no alarm was needed, chirped just as loudly.",
+    "B": "The chirping corridors lead toward the inner rooms where the castle's lord received his visitors.",
+    "C": "Builders of the period knew methods of laying floors that made almost no sound.",
+    "D": "Visitors to the castle today often walk the corridors slowly just to hear the chirping."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Kondo says the chirping was designed on purpose as an alarm; skeptics say it is a side effect of an ordinary fastening method. If floors fastened the same way in buildings that needed no alarm chirp just as loudly, the sound comes from the method itself, not from a special design for security.",
-    "A": "Incorrect. Chirping floors guarding the way to the lord's rooms is what an alarm would do, so this supports Kondo.",
-    "B": "Correct. The same chirping where no alarm was needed shows the sound arising from ordinary fastening, which fits the skeptics.",
-    "C": "Incorrect. Modern visitors' interest says nothing about why the floors were built to chirp.",
-    "D": "Incorrect. If quiet methods were available, choosing a noisy one looks deliberate, which supports Kondo."
+    "A": "Correct. The same chirping where no alarm was needed shows the sound arising from ordinary fastening, which fits the skeptics.",
+    "B": "Incorrect. Chirping floors guarding the way to the lord's rooms is what an alarm would do, so this supports Kondo.",
+    "C": "Incorrect. If quiet methods were available, choosing a noisy one looks deliberate, which supports Kondo.",
+    "D": "Incorrect. Modern visitors' interest says nothing about why the floors were built to chirp."
   },
   "traps": {
-    "A": "reversed",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "B": "reversed",
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

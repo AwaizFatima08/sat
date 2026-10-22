@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that sexual reproduction offers no real advantage to animal populations",
-    "B": "To explain how bdelloid rotifers are able to survive being completely dried out",
-    "C": "To present a case that seems to defy a general pattern and evidence that may explain it",
-    "D": "To show that bdelloid rotifers reproduce sexually far more often than biologists had believed"
+    "A": "To present a case that seems to defy a general pattern and evidence that may explain it",
+    "B": "To show that bdelloid rotifers reproduce sexually far more often than biologists had believed",
+    "C": "To argue that sexual reproduction offers no real advantage to animal populations",
+    "D": "To explain how bdelloid rotifers are able to survive being completely dried out"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text states a general pattern (asexual lineages die out because they lack the gene shuffling of sex) and then presents bdelloids as \"an apparent exception.\" It closes with a \"partial explanation\": bdelloids may gain new genes from other organisms, getting \"by another route\" what sex provides. So the purpose is to present an exception and a possible way to account for it.",
-    "A": "Incorrect. The text accepts that sex supplies useful genetic novelty; its explanation of bdelloids depends on that idea.",
-    "B": "Incorrect. Surviving drying is one detail used in the explanation; the text's focus is how bdelloids have lasted without sex.",
-    "C": "Correct. Bdelloids seem to contradict the pattern, and gene uptake during DNA repair is offered as a partial explanation.",
-    "D": "Incorrect. The text says no male has ever been observed; it does not suggest bdelloids reproduce sexually at all."
+    "A": "Correct. Bdelloids seem to contradict the pattern, and gene uptake during DNA repair is offered as a partial explanation.",
+    "B": "Incorrect. The text says no male has ever been observed; it does not suggest bdelloids reproduce sexually at all.",
+    "C": "Incorrect. The text accepts that sex supplies useful genetic novelty; its explanation of bdelloids depends on that idea.",
+    "D": "Incorrect. Surviving drying is one detail used in the explanation; the text's focus is how bdelloids have lasted without sex."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "too_narrow",
-    "D": "reversed"
+    "B": "reversed",
+    "C": "too_broad",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

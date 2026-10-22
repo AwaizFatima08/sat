@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the reasoning described in Text 1?",
   "choices": {
-    "A": "By accepting the attribution but doubting that handwriting is its best evidence",
+    "A": "By suggesting that the play's other authors had imitated Shakespeare's distinctive handwriting",
     "B": "By rejecting the attribution because too few of Shakespeare's signatures survive",
     "C": "By arguing that the pages' spellings show that another author wrote them",
-    "D": "By suggesting that the play's other authors had imitated Shakespeare's distinctive handwriting"
+    "D": "By accepting the attribution but doubting that handwriting is its best evidence"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Text 1 says experts attribute Hand D to Shakespeare \"chiefly because\" of the handwriting. Halloran \"accepts that Hand D is probably Shakespeare's, but not mainly because of the handwriting,\" since six signatures are too few; she finds \"far stronger support\" in spellings and phrasing. So she agrees with the conclusion but not with its main basis.",
-    "A": "Correct. Halloran agrees that Hand D is probably Shakespeare's but considers the spelling and language evidence stronger than the handwriting comparison.",
+    "A": "Incorrect. Text 2 never suggests that anyone imitated Shakespeare's handwriting.",
     "B": "Incorrect. Halloran doubts the handwriting evidence but still \"accepts that Hand D is probably Shakespeare's.\"",
     "C": "Incorrect. Halloran says the spellings support Shakespeare's authorship rather than pointing to someone else.",
-    "D": "Incorrect. Text 2 never suggests that anyone imitated Shakespeare's handwriting."
+    "D": "Correct. Halloran agrees that Hand D is probably Shakespeare's but considers the spelling and language evidence stronger than the handwriting comparison."
   },
   "traps": {
+    "A": "not_in_text",
     "B": "too_broad",
-    "C": "reversed",
-    "D": "not_in_text"
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "swiftly",
-    "B": "loosely",
-    "C": "vividly",
-    "D": "finely"
+    "B": "vividly",
+    "C": "finely",
+    "D": "loosely"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Scientists expected the shrimp's many receptors to give \"extraordinary precision,\" but tests showed they \"struggled to tell apart colors.\" The final sentence offers a new explanation: speed instead of precision. The blank must name what the receptors do not provide, so \"finely\" (with fine precision) fits.",
     "A": "Incorrect. \"Quickly rather than swiftly\" sets up a contrast between two words that mean the same thing, so the sentence would make no sense.",
-    "B": "Incorrect. Saying the shrimp recognize colors quickly \"rather than loosely\" would imply that they distinguish colors precisely, which the tests contradict.",
-    "C": "Incorrect. The text is about how precisely the shrimp can tell colors apart, not about how bright or intense the colors look to them.",
-    "D": "Correct. The tests showed the shrimp cannot make precise color distinctions, so their receptors seem to support fast recognition instead of fine, detailed discrimination."
+    "B": "Incorrect. The text is about how precisely the shrimp can tell colors apart, not about how bright or intense the colors look to them.",
+    "C": "Correct. The tests showed the shrimp cannot make precise color distinctions, so their receptors seem to support fast recognition instead of fine, detailed discrimination.",
+    "D": "Incorrect. Saying the shrimp recognize colors quickly \"rather than loosely\" would imply that they distinguish colors precisely, which the tests contradict."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "reversed",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

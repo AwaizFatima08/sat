@@ -15,17 +15,17 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "Pakistan",
-    "B": "Pakistan;",
+    "B": "Pakistan—",
     "C": "Pakistan,",
-    "D": "Pakistan—"
+    "D": "Pakistan;"
   },
   "answer": "C",
   "explanation": {
     "why": "\"A high plateau in the Gilgit-Baltistan region of northern Pakistan\" is extra information that describes the Deosai Plains. It opens with a comma after \"Plains,\" so it must close with a comma before the verb \"sit.\"",
     "A": "Incorrect. Without a closing comma, the extra information is never set off and runs straight into the verb \"sit.\"",
-    "B": "Incorrect. A semicolon can't separate the subject \"The Deosai Plains\" from its verb \"sit.\"",
+    "B": "Incorrect. The extra information opens with a comma, so it can't close with a dash; the two marks must match.",
     "C": "Correct. The closing comma matches the opening comma after \"Plains\" and completes the pair around the extra information.",
-    "D": "Incorrect. The extra information opens with a comma, so it can't close with a dash; the two marks must match."
+    "D": "Incorrect. A semicolon can't separate the subject \"The Deosai Plains\" from its verb \"sit.\""
   },
   "traps": {
     "A": "grammar_rule",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

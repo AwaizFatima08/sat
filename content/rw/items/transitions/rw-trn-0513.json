@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "However,",
+    "A": "Therefore,",
     "B": "For example,",
-    "C": "Therefore,",
+    "C": "However,",
     "D": "Similarly,"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The first sentence describes the usual image of castles: stone fortresses. The second says many early English castles were made of earth and wood instead. A transition that shows a contrast is needed.",
-    "A": "Correct. \"However\" signals the contrast between the usual image of stone castles and the earth-and-timber castles described next.",
+    "A": "Incorrect. People's image of stone castles did not cause early castles to be made of wood.",
     "B": "Incorrect. Wooden castles are not an example of stone fortresses; they differ from them.",
-    "C": "Incorrect. People's image of stone castles did not cause early castles to be made of wood.",
+    "C": "Correct. \"However\" signals the contrast between the usual image of stone castles and the earth-and-timber castles described next.",
     "D": "Incorrect. \"Similarly\" signals a likeness, but earth and timber differ from stone."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

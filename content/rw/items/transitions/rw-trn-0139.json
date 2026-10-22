@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "For instance,",
-    "B": "Nevertheless,",
-    "C": "As a result,",
-    "D": "Similarly,"
+    "A": "Nevertheless,",
+    "B": "As a result,",
+    "C": "Similarly,",
+    "D": "For instance,"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The second sentence gives a cause: movable type could not reproduce the Nastaliq script that readers preferred. The last sentence gives the effect: the pages had to be written by hand. A cause-and-effect transition is needed.",
-    "A": "Incorrect. Writing pages by hand is not an example of movable type failing; it is what printers did because it failed.",
-    "B": "Incorrect. \"Nevertheless\" means \"in spite of that,\" but hand-lettering was a response to the problem with type, not something done despite it.",
-    "C": "Correct. \"As a result\" shows that hand-lettering by katibs followed from the failure of movable type to reproduce Nastaliq.",
-    "D": "Incorrect. \"Similarly\" introduces a parallel point, but the last sentence is the consequence of the problem just described."
+    "A": "Incorrect. \"Nevertheless\" means \"in spite of that,\" but hand-lettering was a response to the problem with type, not something done despite it.",
+    "B": "Correct. \"As a result\" shows that hand-lettering by katibs followed from the failure of movable type to reproduce Nastaliq.",
+    "C": "Incorrect. \"Similarly\" introduces a parallel point, but the last sentence is the consequence of the problem just described.",
+    "D": "Incorrect. Writing pages by hand is not an example of movable type failing; it is what printers did because it failed."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

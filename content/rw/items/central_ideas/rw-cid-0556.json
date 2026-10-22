@@ -15,22 +15,22 @@
   "stem": "Based on the text, why did Walker rely on statistical correlations in his work?",
   "choices": {
     "A": "Records from stations around the world were the only data that his observatories had.",
-    "B": "No adequate physical theory of the monsoon existed on which to base his forecasts.",
+    "B": "Harvests across the subcontinent depended on the strength of the summer monsoon.",
     "C": "He had already shown that the Southern Oscillation was linked to El Niño.",
-    "D": "Harvests across the subcontinent depended on the strength of the summer monsoon."
+    "D": "No adequate physical theory of the monsoon existed on which to base his forecasts."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The second sentence gives the reason: \"Lacking an adequate physical theory of the monsoon, he searched instead for statistical correlations.\" The word \"instead\" shows that correlations were a substitute for the theory he did not have.",
     "A": "Incorrect. The text never says what other data the observatories held; it says he compared records from around the world.",
-    "B": "Correct. This restates the reason in the second sentence: correlations took the place of a missing physical theory.",
+    "B": "Incorrect. This explains why forecasting the monsoon mattered, not why Walker used correlations to do it.",
     "C": "Incorrect. The link to El Niño was shown \"not until the 1960s,\" by later researchers.",
-    "D": "Incorrect. This explains why forecasting the monsoon mattered, not why Walker used correlations to do it."
+    "D": "Correct. This restates the reason in the second sentence: correlations took the place of a missing physical theory."
   },
   "traps": {
     "A": "not_in_text",
-    "C": "reversed",
-    "D": "true_irrelevant"
+    "B": "true_irrelevant",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

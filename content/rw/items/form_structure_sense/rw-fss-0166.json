@@ -16,21 +16,21 @@
   "choices": {
     "A": "were",
     "B": "are",
-    "C": "was",
-    "D": "have been"
+    "C": "have been",
+    "D": "was"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The subject of the second clause is \"each,\" which is singular; \"of these units\" and the clause \"which numbered several hundred men and kept stations ...\" describe it. \"Each\" takes a singular verb, and the passage is in the past tense, so \"was\" is correct.",
     "A": "Incorrect. \"Were\" is plural and seems to agree with \"units\" or \"men,\" but the subject is the singular \"each.\"",
     "B": "Incorrect. \"Are\" is plural, but the subject \"each\" is singular; it is also present tense in a passage about ancient Rome.",
-    "C": "Correct. The singular past-tense verb \"was\" agrees with \"each\" and fits the past-tense passage.",
-    "D": "Incorrect. \"Have been\" is plural, but the subject \"each\" is singular."
+    "C": "Incorrect. \"Have been\" is plural, but the subject \"each\" is singular.",
+    "D": "Correct. The singular past-tense verb \"was\" agrees with \"each\" and fits the past-tense passage."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "subject_verb",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

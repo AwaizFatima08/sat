@@ -46,23 +46,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "straw, where soil moisture was about 24 percent.",
-    "B": "cardboard, where soil moisture was about 22 percent.",
-    "C": "bare soil, where soil moisture was about 11 percent.",
-    "D": "wood chips, which also kept weeds from growing in the bed."
+    "A": "bare soil, where soil moisture was about 11 percent.",
+    "B": "wood chips, which also kept weeds from growing in the bed.",
+    "C": "cardboard, where soil moisture was about 22 percent.",
+    "D": "straw, where soil moisture was about 24 percent."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The statement asks which covering left the most water in the soil, so look for the tallest bar. The straw bar, at about 24 percent, is taller than all the others.",
-    "A": "Correct. The soil under straw held about 24 percent moisture, the highest value on the graph.",
-    "B": "Incorrect. Cardboard did keep about 22 percent moisture, but that is less than straw's 24 percent.",
-    "C": "Incorrect. Bare soil held the least water of the five beds, not the most.",
-    "D": "Incorrect. The graph shows only soil moisture; it gives no information about weeds."
+    "A": "Incorrect. Bare soil held the least water of the five beds, not the most.",
+    "B": "Incorrect. The graph shows only soil moisture; it gives no information about weeds.",
+    "C": "Incorrect. Cardboard did keep about 22 percent moisture, but that is less than straw's 24 percent.",
+    "D": "Correct. The soil under straw held about 24 percent moisture, the highest value on the graph."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "reversed",
-    "D": "not_in_text"
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -71,8 +71,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

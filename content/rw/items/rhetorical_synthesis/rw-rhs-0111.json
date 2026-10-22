@@ -20,21 +20,21 @@
   "stem": "The student wants to emphasize the historic importance of Saha's 1959 swim. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
     "A": "Arati Saha, a swimmer from Kolkata, competed for India at the 1952 Summer Olympics.",
-    "B": "In 1959, Arati Saha became the first Asian woman to swim across the English Channel.",
-    "C": "In 1959, Arati Saha swam across the English Channel, from France to England.",
+    "B": "In 1959, Arati Saha swam across the English Channel, from France to England.",
+    "C": "In 1959, Arati Saha became the first Asian woman to swim across the English Channel.",
     "D": "Arati Saha, who swam across the English Channel in 1959, was a swimmer from Kolkata, India."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The swim was historic because Saha was the first Asian woman to complete it. A choice that emphasizes its importance must include that \"first.\"",
     "A": "Incorrect. This is about the 1952 Olympics, not the 1959 swim.",
-    "B": "Correct. It states that the swim made Saha the first Asian woman to cross the English Channel, which shows why it mattered.",
-    "C": "Incorrect. This describes the swim, but nothing in it shows that the swim was historic.",
+    "B": "Incorrect. This describes the swim, but nothing in it shows that the swim was historic.",
+    "C": "Correct. It states that the swim made Saha the first Asian woman to cross the English Channel, which shows why it mattered.",
     "D": "Incorrect. This mentions the swim only in passing and focuses on where Saha was from."
   },
   "traps": {
     "A": "misses_goal",
-    "C": "too_narrow",
+    "B": "too_narrow",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

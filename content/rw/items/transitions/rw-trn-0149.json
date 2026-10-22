@@ -16,16 +16,16 @@
   "choices": {
     "A": "Consequently,",
     "B": "Nevertheless,",
-    "C": "Indeed,",
-    "D": "For instance,"
+    "C": "For instance,",
+    "D": "Indeed,"
   },
   "answer": "B",
   "explanation": {
     "why": "The text sets up an expectation: animals with more cells and long lives should get cancer more often, and elephants have far more cells than humans. The last sentence reports the opposite of what that reasoning predicts, which is why it is called a \"paradox.\" The transition must signal that the fact holds in spite of the reasoning before it.",
     "A": "Incorrect. \"Consequently\" would mean the elephants' low cancer rate follows from their many cells, but the reasoning predicts a high rate. This is tempting because the text is built as a chain of reasoning.",
     "B": "Correct. \"Nevertheless\" shows that elephants rarely die of cancer in spite of having so many more cells than humans.",
-    "C": "Incorrect. \"Indeed\" would confirm or strengthen the previous point, but the last sentence goes against the expectation the text built up.",
-    "D": "Incorrect. The last sentence is not an instance of the prediction; it contradicts it."
+    "C": "Incorrect. The last sentence is not an instance of the prediction; it contradicts it.",
+    "D": "Incorrect. \"Indeed\" would confirm or strengthen the previous point, but the last sentence goes against the expectation the text built up."
   },
   "traps": {
     "A": "wrong_logic",
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

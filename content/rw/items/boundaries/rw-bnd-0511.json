@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "Treasury,",
-    "B": "Treasury;",
-    "C": "Treasury—",
-    "D": "Treasury"
+    "A": "Treasury—",
+    "B": "Treasury",
+    "C": "Treasury;",
+    "D": "Treasury,"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The subject \"The city's most famous structure\" goes with the verb \"rises.\" In between, \"a tomb known today as the Treasury\" is extra information. It opens with a dash, so it must close with a matching dash.",
-    "A": "Incorrect. Extra information that opens with a dash can't close with a comma; the two marks must match.",
-    "B": "Incorrect. A semicolon would cut the subject off from its verb \"rises,\" and neither part would be a complete sentence.",
-    "C": "Correct. The second dash closes the pair around the extra information, so the subject connects to \"rises.\"",
-    "D": "Incorrect. Without a closing dash, the extra information is never set off and runs into the verb \"rises.\""
+    "A": "Correct. The second dash closes the pair around the extra information, so the subject connects to \"rises.\"",
+    "B": "Incorrect. Without a closing dash, the extra information is never set off and runs into the verb \"rises.\"",
+    "C": "Incorrect. A semicolon would cut the subject off from its verb \"rises,\" and neither part would be a complete sentence.",
+    "D": "Incorrect. Extra information that opens with a dash can't close with a comma; the two marks must match."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "supplements",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

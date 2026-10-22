@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "it's",
+    "A": "its'",
     "B": "their",
-    "C": "its",
-    "D": "its'"
+    "C": "it's",
+    "D": "its"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The base belongs to the dome, which is singular, not to the windows set around it. The singular possessive pronoun for a thing is \"its,\" with no apostrophe.",
-    "A": "Incorrect. \"It's\" means \"it is\" or \"it has\"; \"around it is base\" makes no sense.",
+    "A": "Incorrect. \"Its'\" is not a word in Standard English; the possessive \"its\" never takes an apostrophe.",
     "B": "Incorrect. \"Their\" is plural and seems to refer to \"windows,\" but the base belongs to the singular \"dome.\"",
-    "C": "Correct. \"Its\" is the singular possessive, showing that the base belongs to the dome.",
-    "D": "Incorrect. \"Its'\" is not a word in Standard English; the possessive \"its\" never takes an apostrophe."
+    "C": "Incorrect. \"It's\" means \"it is\" or \"it has\"; \"around it is base\" makes no sense.",
+    "D": "Correct. \"Its\" is the singular possessive, showing that the base belongs to the dome."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "plural_possessive",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

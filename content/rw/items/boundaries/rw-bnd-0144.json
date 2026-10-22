@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "them,",
-    "B": "them",
+    "B": "them;",
     "C": "them, and,",
-    "D": "them;"
+    "D": "them"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "\"Fires sweep through their forests …, but mature trees usually survive them\" is an independent clause, and \"their bark … helps shield the living wood …\" is another. A semicolon can join two closely related independent clauses.",
     "A": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice.",
-    "B": "Incorrect. With no punctuation, the two independent clauses run together (a run-on sentence).",
+    "B": "Correct. The semicolon correctly joins two closely related independent clauses.",
     "C": "Incorrect. A comma and \"and\" could join the clauses, but the comma after \"and\" wrongly separates the conjunction from the clause it introduces.",
-    "D": "Correct. The semicolon correctly joins two closely related independent clauses."
+    "D": "Incorrect. With no punctuation, the two independent clauses run together (a run-on sentence)."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "linking_clauses",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

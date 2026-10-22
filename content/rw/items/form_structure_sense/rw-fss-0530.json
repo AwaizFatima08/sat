@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "a ring of bubbles is released by a humpback whale, trapping the fish like a net.",
-    "B": "a humpback whale releases a ring of bubbles that traps the fish like a net.",
-    "C": "the fish are trapped by a ring of bubbles that a humpback whale releases.",
-    "D": "a ring of bubbles from a humpback whale traps the fish like a net."
+    "B": "the fish are trapped by a ring of bubbles that a humpback whale releases.",
+    "C": "a ring of bubbles from a humpback whale traps the fish like a net.",
+    "D": "a humpback whale releases a ring of bubbles that traps the fish like a net."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The introductory phrase \"Swimming in a slow upward spiral beneath a school of small fish\" describes the whale. The subject right after the comma must be \"a humpback whale,\" not the bubbles or the fish.",
     "A": "Incorrect. The subject is \"a ring of bubbles,\" so the sentence says the bubbles were swimming in a spiral beneath the fish.",
-    "B": "Correct. \"A humpback whale\" comes right after the introductory phrase, so the whale is the one swimming in the spiral.",
-    "C": "Incorrect. The subject is \"the fish,\" so the sentence says the fish were swimming beneath a school of small fish, which makes no sense.",
-    "D": "Incorrect. The subject is \"a ring of bubbles,\" so the phrase describes the bubbles rather than the whale."
+    "B": "Incorrect. The subject is \"the fish,\" so the sentence says the fish were swimming beneath a school of small fish, which makes no sense.",
+    "C": "Incorrect. The subject is \"a ring of bubbles,\" so the phrase describes the bubbles rather than the whale.",
+    "D": "Correct. \"A humpback whale\" comes right after the introductory phrase, so the whale is the one swimming in the spiral."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "B": "grammar_rule",
+    "C": "grammar_rule"
   },
   "grammar": "modifier",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "loudest",
-    "B": "happiest",
-    "C": "hardest",
-    "D": "shortest"
+    "A": "shortest",
+    "B": "loudest",
+    "C": "happiest",
+    "D": "hardest"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The semicolon links two ideas: the garden is \"not a chore at all,\" and caring for it is the ______ part of his day. Because he smiles at the teasing and spends hours there willingly, the blank must express enjoyment. \"Happiest\" fits.",
-    "A": "Incorrect. Nothing in the text is about noise; the passage describes quiet work and how Mr. Adebayo feels about it.",
-    "B": "Correct. He \"only smiled\" at the teasing, and the garden was \"not a chore at all,\" so tending it was the part of the day he enjoyed most: the happiest part.",
-    "C": "Incorrect. The text says the garden was \"not a chore at all.\" Calling the work the hardest part of his day treats it as exactly the kind of burden he denies it is.",
-    "D": "Incorrect. His neighbors tease him for \"spending so many hours\" on the garden, so the gardening is not the shortest part of his day."
+    "A": "Incorrect. His neighbors tease him for \"spending so many hours\" on the garden, so the gardening is not the shortest part of his day.",
+    "B": "Incorrect. Nothing in the text is about noise; the passage describes quiet work and how Mr. Adebayo feels about it.",
+    "C": "Correct. He \"only smiled\" at the teasing, and the garden was \"not a chore at all,\" so tending it was the part of the day he enjoyed most: the happiest part.",
+    "D": "Incorrect. The text says the garden was \"not a chore at all.\" Calling the work the hardest part of his day treats it as exactly the kind of burden he denies it is."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
-    "D": "wrong_logic"
+    "A": "wrong_logic",
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

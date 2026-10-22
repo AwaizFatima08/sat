@@ -19,22 +19,22 @@
   "data": null,
   "stem": "The student wants to make a generalization about the materials that early societies used for writing. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Ancient Egyptian scribes wrote on papyrus, which was made from the stems of a reed that grew along the Nile River.",
-    "B": "Whereas ancient Chinese texts were often written on bamboo strips, medieval European books were often written on parchment.",
-    "C": "Many early societies wrote on materials made from plants, such as papyrus, bamboo, and palm leaves.",
-    "D": "Parchment, a material made from animal skin, was used for many of the books produced in medieval Europe."
+    "A": "Parchment, a material made from animal skin, was used for many of the books produced in medieval Europe.",
+    "B": "Many early societies wrote on materials made from plants, such as papyrus, bamboo, and palm leaves.",
+    "C": "Whereas ancient Chinese texts were often written on bamboo strips, medieval European books were often written on parchment.",
+    "D": "Ancient Egyptian scribes wrote on papyrus, which was made from the stems of a reed that grew along the Nile River."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "A generalization makes a broad statement that covers several cases. Three of the four societies in the notes wrote on plant materials, so the fair generalization is that many early societies did so. The word \"many\" keeps the claim accurate, since medieval Europe used parchment.",
-    "A": "Incorrect. It describes the material of a single society, which is one example rather than a generalization.",
-    "B": "Incorrect. It contrasts two societies' materials instead of making a broad statement that covers several of them.",
-    "C": "Correct. It draws a general pattern from three of the examples and is worded carefully enough to remain accurate.",
-    "D": "Incorrect. It describes only medieval Europe, and parchment is the one example that does not fit the broader pattern."
+    "A": "Incorrect. It describes only medieval Europe, and parchment is the one example that does not fit the broader pattern.",
+    "B": "Correct. It draws a general pattern from three of the examples and is worded carefully enough to remain accurate.",
+    "C": "Incorrect. It contrasts two societies' materials instead of making a broad statement that covers several of them.",
+    "D": "Incorrect. It describes the material of a single society, which is one example rather than a generalization."
   },
   "traps": {
     "A": "too_narrow",
-    "B": "misses_goal",
+    "C": "misses_goal",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -48,13 +48,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

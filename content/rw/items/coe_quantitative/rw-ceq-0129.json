@@ -49,23 +49,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "in 2025, e-books made up 38% of adult loans, the highest share shown in the table.",
-    "B": "the e-book share of teen loans rose from 15% to 21%, a larger rise than among adults.",
+    "A": "the e-book share of teen loans rose from 15% to 21%, a larger rise than among adults.",
+    "B": "teenagers borrowed more printed books than adults did in every year from 2021 to 2025.",
     "C": "the adult e-book share rose 16 percentage points, while the teen share rose only 6.",
-    "D": "teenagers borrowed more printed books than adults did in every year from 2021 to 2025."
+    "D": "in 2025, e-books made up 38% of adult loans, the highest share shown in the table."
   },
   "answer": "C",
   "explanation": {
     "why": "The claim compares how fast the e-book share grew for the two age groups, so the choice must compare the change in each column. The adult share went from 22% to 38% (16 points), and the teen share went from 15% to 21% (6 points).",
-    "A": "Incorrect. This is true, but it gives one year's figure for adults only and does not compare how fast the two groups changed.",
-    "B": "Incorrect. The teen share did rise from 15% to 21%, but that 6-point rise is smaller than the adults' 16-point rise, not larger.",
+    "A": "Incorrect. The teen share did rise from 15% to 21%, but that 6-point rise is smaller than the adults' 16-point rise, not larger.",
+    "B": "Incorrect. The table shows only percentages, not the number of printed books each group borrowed.",
     "C": "Correct. The adult share grew by 16 points and the teen share by only 6, so the change was much faster among adults.",
-    "D": "Incorrect. The table shows only percentages, not the number of printed books each group borrowed."
+    "D": "Incorrect. This is true, but it gives one year's figure for adults only and does not compare how fast the two groups changed."
   },
   "traps": {
-    "A": "too_narrow",
-    "B": "reversed",
-    "D": "not_in_text"
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -74,8 +74,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

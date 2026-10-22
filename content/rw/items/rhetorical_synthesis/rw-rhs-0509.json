@@ -19,21 +19,21 @@
   "data": null,
   "stem": "The student wants to introduce the red panda to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "The red panda, a cat-sized mammal with reddish-brown fur, lives in mountain forests of the eastern Himalayas.",
-    "B": "Despite its name, the red panda is not closely related to the giant panda.",
-    "C": "Most of the red panda's diet is bamboo leaves, and its long tail is marked with rings.",
+    "A": "Most of the red panda's diet is bamboo leaves, and its long tail is marked with rings.",
+    "B": "The red panda, a cat-sized mammal with reddish-brown fur, lives in mountain forests of the eastern Himalayas.",
+    "C": "Despite its name, the red panda is not closely related to the giant panda.",
     "D": "Parts of Nepal, India, and Bhutan are home to the animal known as the red panda."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Readers who have never heard of the red panda need to know what kind of animal it is, what it looks like, and where it lives. One choice gives all of this in a single sentence.",
-    "A": "Correct. It tells readers that the red panda is a mammal, describes its size and fur, and says where it lives.",
-    "B": "Incorrect. It explains what the red panda is not, but never says what kind of animal it is or what it is like.",
-    "C": "Incorrect. It gives details about diet and tail without first telling readers what the red panda is.",
+    "A": "Incorrect. It gives details about diet and tail without first telling readers what the red panda is.",
+    "B": "Correct. It tells readers that the red panda is a mammal, describes its size and fur, and says where it lives.",
+    "C": "Incorrect. It explains what the red panda is not, but never says what kind of animal it is or what it is like.",
     "D": "Incorrect. It gives the countries where the red panda lives but says nothing about what kind of animal it is."
   },
   "traps": {
-    "B": "misses_goal",
+    "A": "misses_goal",
     "C": "misses_goal",
     "D": "too_narrow"
   },
@@ -48,13 +48,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

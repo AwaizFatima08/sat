@@ -14,16 +14,16 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "who",
-    "B": "which",
+    "A": "which",
+    "B": "who",
     "C": "whom",
     "D": "whose"
   },
   "answer": "C",
   "explanation": {
     "why": "Inside the clause that describes the rulers, the subject is \"local oral tradition\" and the verb is \"describes\"; the rulers are the ones being described, the object of \"describes.\" The object form of the relative pronoun for people is \"whom\" (compare \"tradition describes them\"). In everyday speech \"who\" is often used here, but formal Standard English, which the SAT tests, requires \"whom.\"",
-    "A": "Incorrect. \"Who\" is the subject form, but the rulers are the object of \"describes\"; the subject of that verb is \"local oral tradition.\"",
-    "B": "Incorrect. \"Which\" refers to things, not people, and the Saudeleur rulers were people.",
+    "A": "Incorrect. \"Which\" refers to things, not people, and the Saudeleur rulers were people.",
+    "B": "Incorrect. \"Who\" is the subject form, but the rulers are the object of \"describes\"; the subject of that verb is \"local oral tradition.\"",
     "C": "Correct. \"Whom\" is the object form, needed because the rulers are the ones that tradition describes.",
     "D": "Incorrect. \"Whose\" shows possession, but nothing in the clause belongs to the rulers; \"whose local oral tradition describes as ... overlords\" leaves \"describes\" without an object."
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

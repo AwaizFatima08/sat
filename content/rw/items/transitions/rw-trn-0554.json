@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Moreover,",
-    "B": "Consequently,",
-    "C": "In other words,",
-    "D": "Still,"
+    "A": "In other words,",
+    "B": "Still,",
+    "C": "Moreover,",
+    "D": "Consequently,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The third sentence begins \"Granted,\" conceding some evidence that seems to favor the flat-Earth story. The last sentence returns to the author's main point: educated medieval people assumed a round Earth. The transition must signal a return to the main claim despite the concession.",
-    "A": "Incorrect. \"Moreover\" would add a point in the same direction as the sentence before, but the last sentence pushes against the concession about Lactantius instead of extending it.",
-    "B": "Incorrect. Medieval belief in a round Earth is not a result of a few writers rejecting the idea; it holds despite them.",
-    "C": "Incorrect. \"In other words\" would restate the concession, but the last sentence says nearly the opposite. It may tempt readers who connect it to the second sentence, but the concession comes in between.",
-    "D": "Correct. \"Still\" signals that, despite the conceded exceptions, a round Earth was the standard educated view."
+    "A": "Incorrect. \"In other words\" would restate the concession, but the last sentence says nearly the opposite. It may tempt readers who connect it to the second sentence, but the concession comes in between.",
+    "B": "Correct. \"Still\" signals that, despite the conceded exceptions, a round Earth was the standard educated view.",
+    "C": "Incorrect. \"Moreover\" would add a point in the same direction as the sentence before, but the last sentence pushes against the concession about Lactantius instead of extending it.",
+    "D": "Incorrect. Medieval belief in a round Earth is not a result of a few writers rejecting the idea; it holds despite them."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

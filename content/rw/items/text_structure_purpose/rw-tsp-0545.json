@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that cleaner wrasses recognize themselves in mirrors in the same way that great apes do",
-    "B": "To describe how cleaner wrasses remove parasites from the bodies of other fish on coral reefs",
-    "C": "To explain why scientists have now abandoned the mirror test as a reliable measure of self-recognition",
-    "D": "To report a finding that raised questions about animals' abilities and the method used to test them"
+    "A": "To report a finding that raised questions about animals' abilities and the method used to test them",
+    "B": "To explain why scientists have now abandoned the mirror test as a reliable measure of self-recognition",
+    "C": "To describe how cleaner wrasses remove parasites from the bodies of other fish on coral reefs",
+    "D": "To argue that cleaner wrasses recognize themselves in mirrors in the same way that great apes do"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The text explains the mirror test, reports the 2019 wrasse result, and then says it \"divided scientists.\" One side reads it as evidence about animal self-recognition; the other questions whether \"the test itself may be flawed.\" The text's purpose is to present the finding and the two kinds of questions it raised.",
-    "A": "Incorrect. The text presents this as only one side of a disagreement; it does not take that position itself.",
-    "B": "Incorrect. The wrasses' cleaning behavior is mentioned only to explain one group's doubt about the test.",
-    "C": "Incorrect. Some scientists argued the test \"may be flawed,\" but the text never says it has been abandoned.",
-    "D": "Correct. The finding led some to rethink which animals recognize themselves and others to doubt the test itself."
+    "A": "Correct. The finding led some to rethink which animals recognize themselves and others to doubt the test itself.",
+    "B": "Incorrect. Some scientists argued the test \"may be flawed,\" but the text never says it has been abandoned.",
+    "C": "Incorrect. The wrasses' cleaning behavior is mentioned only to explain one group's doubt about the test.",
+    "D": "Incorrect. The text presents this as only one side of a disagreement; it does not take that position itself."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "too_narrow",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "C": "too_narrow",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

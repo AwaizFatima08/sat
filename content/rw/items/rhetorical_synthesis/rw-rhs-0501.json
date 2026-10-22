@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to emphasize a difference in when the two kinds of penguins breed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Emperor penguins breed in the Antarctic winter, but Adélie penguins breed in the spring and summer.",
-    "B": "Emperor penguins and Adélie penguins are two kinds of penguins that both live in Antarctica.",
-    "C": "Emperor penguins, the largest of all penguins, lay their eggs in May or June.",
-    "D": "Adélie penguins build their nests out of small stones during the Antarctic spring and summer."
+    "A": "Emperor penguins, the largest of all penguins, lay their eggs in May or June.",
+    "B": "Adélie penguins build their nests out of small stones during the Antarctic spring and summer.",
+    "C": "Emperor penguins and Adélie penguins are two kinds of penguins that both live in Antarctica.",
+    "D": "Emperor penguins breed in the Antarctic winter, but Adélie penguins breed in the spring and summer."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The goal asks for a difference in breeding time, so the sentence must name both kinds of penguins and set their breeding seasons against each other. Only one choice gives the season for each species.",
-    "A": "Correct. It contrasts the emperor penguins' winter breeding with the Adélie penguins' spring and summer breeding.",
-    "B": "Incorrect. This states something the two penguins have in common, not a difference in when they breed.",
-    "C": "Incorrect. It gives the emperor penguins' egg-laying months but says nothing about Adélie penguins, so no difference is shown.",
-    "D": "Incorrect. It mentions only Adélie penguins and focuses on their nests, so it cannot show a difference between the two species."
+    "A": "Incorrect. It gives the emperor penguins' egg-laying months but says nothing about Adélie penguins, so no difference is shown.",
+    "B": "Incorrect. It mentions only Adélie penguins and focuses on their nests, so it cannot show a difference between the two species.",
+    "C": "Incorrect. This states something the two penguins have in common, not a difference in when they breed.",
+    "D": "Correct. It contrasts the emperor penguins' winter breeding with the Adélie penguins' spring and summer breeding."
   },
   "traps": {
-    "B": "misses_goal",
-    "C": "too_narrow",
-    "D": "true_irrelevant"
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "C": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

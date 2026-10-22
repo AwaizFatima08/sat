@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Almeida's argument?",
   "choices": {
-    "A": "Servants and other low-ranking characters in the plays speak prose far more often than nobles do.",
+    "A": "In comic scenes with no servants present, noble characters addressing one another kept to verse.",
     "B": "Nobles speaking only to other nobles shifted into prose whenever a scene turned comic.",
     "C": "Several of the plays were revised by their authors after their first performances.",
-    "D": "In comic scenes with no servants present, noble characters addressing one another kept to verse."
+    "D": "Servants and other low-ranking characters in the plays speak prose far more often than nobles do."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Almeida must separate two factors that usually go together in these plays: comic mood and low-ranking listeners. A comic scene with only nobles present keeps the mood but removes the low-ranking listener. If the nobles keep speaking verse there, rank of the listener, not mood, decides the shift.",
-    "A": "Incorrect. This concerns the speaker's rank, not the listener's, and servants appear mostly in comic scenes, so it fits the mood explanation as well as Almeida's.",
+    "A": "Correct. Comedy without lower-ranking listeners produces no shift to prose, so the listener's rank, not the mood, appears to control the choice.",
     "B": "Incorrect. Prose that appears with comedy even when no low-ranking listener is present ties the shift to mood, which weakens Almeida.",
     "C": "Incorrect. Whether the plays were revised says nothing about what governs the shifts between verse and prose.",
-    "D": "Correct. Comedy without lower-ranking listeners produces no shift to prose, so the listener's rank, not the mood, appears to control the choice."
+    "D": "Incorrect. This concerns the speaker's rank, not the listener's, and servants appear mostly in comic scenes, so it fits the mood explanation as well as Almeida's."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "reversed",
-    "C": "true_irrelevant"
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

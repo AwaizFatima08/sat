@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "strikes,",
-    "B": "strikes:",
-    "C": "strikes",
-    "D": "strikes—"
+    "A": "strikes",
+    "B": "strikes—",
+    "C": "strikes,",
+    "D": "strikes:"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "\"Strikes\" is a verb, and \"the shell\" is its object: the shell is the thing the otter strikes. No punctuation should come between a verb and its object.",
-    "A": "Incorrect. A comma can't separate the verb \"strikes\" from its object, \"the shell.\"",
-    "B": "Incorrect. A colon must follow a complete independent clause, and it can't come between a verb and its object.",
-    "C": "Correct. The verb \"strikes\" leads straight into its object, \"the shell,\" with no punctuation.",
-    "D": "Incorrect. A dash can't separate the verb \"strikes\" from its object, \"the shell.\""
+    "A": "Correct. The verb \"strikes\" leads straight into its object, \"the shell,\" with no punctuation.",
+    "B": "Incorrect. A dash can't separate the verb \"strikes\" from its object, \"the shell.\"",
+    "C": "Incorrect. A comma can't separate the verb \"strikes\" from its object, \"the shell.\"",
+    "D": "Incorrect. A colon must follow a complete independent clause, and it can't come between a verb and its object."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "punctuation",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

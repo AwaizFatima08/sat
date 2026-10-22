@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "musicians,",
-    "B": "musicians",
-    "C": "musicians;",
-    "D": "musicians—"
+    "A": "musicians",
+    "B": "musicians,",
+    "C": "musicians—",
+    "D": "musicians;"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The words between \"Its walls\" and \"were later buried\" are extra information describing the walls. That information opens with a dash, so it must close with a matching dash, even though the list inside it uses commas. The subject \"Its walls\" then connects to its verb \"were buried.\"",
-    "A": "Incorrect. This comma could continue the list inside the dashes, but it can't close extra information that opens with a dash; the two marks must match.",
-    "B": "Incorrect. Without a closing dash, the extra information is never set off and runs straight into the verb \"were buried.\"",
-    "C": "Incorrect. A semicolon can't separate the subject \"Its walls\" from its verb \"were buried.\"",
-    "D": "Correct. The second dash closes the pair around the extra information, so the subject \"Its walls\" connects to its verb \"were buried.\""
+    "A": "Incorrect. Without a closing dash, the extra information is never set off and runs straight into the verb \"were buried.\"",
+    "B": "Incorrect. This comma could continue the list inside the dashes, but it can't close extra information that opens with a dash; the two marks must match.",
+    "C": "Correct. The second dash closes the pair around the extra information, so the subject \"Its walls\" connects to its verb \"were buried.\"",
+    "D": "Incorrect. A semicolon can't separate the subject \"Its walls\" from its verb \"were buried.\""
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "D": "grammar_rule"
   },
   "grammar": "supplements",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

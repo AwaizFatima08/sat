@@ -50,23 +50,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "June, when about 400 millimeters of rain fell.",
-    "B": "May, when about 470 millimeters of rain fell.",
-    "C": "February, when about 105 millimeters of rain fell.",
-    "D": "April, when the rain helped the tea bushes grow fastest."
+    "A": "April, when the rain helped the tea bushes grow fastest.",
+    "B": "February, when about 105 millimeters of rain fell.",
+    "C": "May, when about 470 millimeters of rain fell.",
+    "D": "June, when about 400 millimeters of rain fell."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The wettest month is the one with the highest rainfall, so find the highest point on the line. The line peaks at about 470 millimeters in May.",
-    "A": "Incorrect. June was very wet, with about 400 millimeters, but May had even more rain.",
-    "B": "Correct. About 470 millimeters fell in May, more than in any other month shown.",
-    "C": "Incorrect. February had the least rain of the six months, so it was the driest, not the wettest.",
-    "D": "Incorrect. April had about 310 millimeters, less than May, and the graph says nothing about how fast the tea bushes grew."
+    "A": "Incorrect. April had about 310 millimeters, less than May, and the graph says nothing about how fast the tea bushes grew.",
+    "B": "Incorrect. February had the least rain of the six months, so it was the driest, not the wettest.",
+    "C": "Correct. About 470 millimeters fell in May, more than in any other month shown.",
+    "D": "Incorrect. June was very wet, with about 400 millimeters, but May had even more rain."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "reversed",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -75,8 +75,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

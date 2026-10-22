@@ -14,17 +14,17 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "temples",
-    "B": "temples'",
-    "C": "temple",
+    "A": "temples'",
+    "B": "temple",
+    "C": "temples",
     "D": "temple's"
   },
   "answer": "D",
   "explanation": {
     "why": "The broad, stepped base belongs to one building, the Nyatapola Temple. A singular noun shows possession with an apostrophe plus s: \"temple's.\" The passage names only one temple, so a plural form doesn't fit.",
-    "A": "Incorrect. \"Temples\" is a plain plural; it neither shows possession nor matches the single temple in the passage.",
-    "B": "Incorrect. \"Temples'\" is a plural possessive, but the base belongs to one temple, not several.",
-    "C": "Incorrect. \"Temple\" has no apostrophe, so it doesn't show that the base belongs to the temple; \"the temple broad, stepped base\" is not standard.",
+    "A": "Incorrect. \"Temples'\" is a plural possessive, but the base belongs to one temple, not several.",
+    "B": "Incorrect. \"Temple\" has no apostrophe, so it doesn't show that the base belongs to the temple; \"the temple broad, stepped base\" is not standard.",
+    "C": "Incorrect. \"Temples\" is a plain plural; it neither shows possession nor matches the single temple in the passage.",
     "D": "Correct. \"Temple's\" is the singular possessive, showing that the base belongs to the one temple."
   },
   "traps": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

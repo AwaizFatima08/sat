@@ -46,23 +46,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "the guitar, which was chosen by 41 campers.",
-    "B": "the marimba, which was chosen by 34 campers.",
-    "C": "the drums, which most campers had already played at school.",
-    "D": "the keyboard, which was chosen by 47 campers."
+    "A": "the marimba, which was chosen by 34 campers.",
+    "B": "the guitar, which was chosen by 41 campers.",
+    "C": "the keyboard, which was chosen by 47 campers.",
+    "D": "the drums, which most campers had already played at school."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The word \"However\" signals that the most popular instrument was not the guitar, as the director expected. The tallest bar on the graph is the keyboard, chosen by 47 campers.",
-    "A": "Incorrect. The guitar was the director's expectation, but its 41 campers are fewer than the keyboard's 47, and \"However\" signals a different answer.",
-    "B": "Incorrect. The marimba was chosen by 34 campers, fewer than both the keyboard and the guitar.",
-    "C": "Incorrect. The graph does not show what campers had played before, and the drums drew only 29 campers.",
-    "D": "Correct. The keyboard was chosen by 47 campers, more than any other instrument."
+    "A": "Incorrect. The marimba was chosen by 34 campers, fewer than both the keyboard and the guitar.",
+    "B": "Incorrect. The guitar was the director's expectation, but its 41 campers are fewer than the keyboard's 47, and \"However\" signals a different answer.",
+    "C": "Correct. The keyboard was chosen by 47 campers, more than any other instrument.",
+    "D": "Incorrect. The graph does not show what campers had played before, and the drums drew only 29 campers."
   },
   "traps": {
-    "A": "reversed",
-    "B": "true_irrelevant",
-    "C": "not_in_text"
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -71,8 +71,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

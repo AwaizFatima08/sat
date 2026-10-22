@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "receive more monsoon rain than Mawsynram, because the air there is cooler.",
+    "A": "receive their monsoon rain from winds blowing south rather than north.",
     "B": "receive considerably less monsoon rain than Mawsynram does.",
-    "C": "receive no rain at all during the summer monsoon season.",
-    "D": "receive their monsoon rain from winds blowing south rather than north."
+    "C": "receive more monsoon rain than Mawsynram, because the air there is cooler.",
+    "D": "receive no rain at all during the summer monsoon season."
   },
   "answer": "B",
   "explanation": {
     "why": "The moist air drops much of its water on the southern slopes, where Mawsynram is. When the air reaches the northern side, it has \"lost much of its moisture,\" so less rain can fall there.",
-    "A": "Incorrect. The air reaching the northern side has already lost much of its moisture, so those places should get less rain, not more.",
+    "A": "Incorrect. The text describes only winds blowing north and gives no information about winds from the north.",
     "B": "Correct. Air that has lost much of its moisture on the southern slopes has less left to drop on the northern side.",
-    "C": "Incorrect. This goes too far: the air has lost much of its moisture, not all of it, so some rain is still possible.",
-    "D": "Incorrect. The text describes only winds blowing north and gives no information about winds from the north."
+    "C": "Incorrect. The air reaching the northern side has already lost much of its moisture, so those places should get less rain, not more.",
+    "D": "Incorrect. This goes too far: the air has lost much of its moisture, not all of it, so some rain is still possible."
   },
   "traps": {
-    "A": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "In contrast,",
-    "B": "Similarly,",
-    "C": "Nevertheless,",
-    "D": "As a result,"
+    "A": "Similarly,",
+    "B": "As a result,",
+    "C": "In contrast,",
+    "D": "Nevertheless,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text explains that soil acidity controls whether hydrangeas can take up aluminum, and that aluminum makes the flowers blue. The last sentence describes what follows from this: identical plants can bloom in different colors in different soils. A cause-and-effect transition is needed.",
-    "A": "Incorrect. The last sentence does mention two colors, but it does not contrast with the explanation before it; it follows from that explanation.",
-    "B": "Incorrect. \"Similarly\" signals a parallel fact, but the last sentence is a consequence of how soil affects color.",
-    "C": "Incorrect. \"Nevertheless\" signals something surprising given what came before, but different colors in different gardens are exactly what the explanation predicts.",
-    "D": "Correct. \"As a result\" shows that plants of one variety can bloom in different colors because soil acidity controls their uptake of aluminum."
+    "A": "Incorrect. \"Similarly\" signals a parallel fact, but the last sentence is a consequence of how soil affects color.",
+    "B": "Correct. \"As a result\" shows that plants of one variety can bloom in different colors because soil acidity controls their uptake of aluminum.",
+    "C": "Incorrect. The last sentence does mention two colors, but it does not contrast with the explanation before it; it follows from that explanation.",
+    "D": "Incorrect. \"Nevertheless\" signals something surprising given what came before, but different colors in different gardens are exactly what the explanation predicts."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

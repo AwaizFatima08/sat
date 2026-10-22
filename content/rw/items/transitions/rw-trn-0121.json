@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Consequently,",
-    "B": "Nevertheless,",
-    "C": "For example,",
-    "D": "Similarly,"
+    "A": "Nevertheless,",
+    "B": "Similarly,",
+    "C": "Consequently,",
+    "D": "For example,"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The second sentence describes a change: tournaments switched to heat-bonded balls that hand stitching \"could not reproduce.\" The last sentence describes how Sialkot manufacturers responded to that change by adopting the new method. A cause-and-effect transition is needed.",
-    "A": "Correct. \"Consequently\" shows that the manufacturers bought heat-bonding machines because tournaments had switched to bonded balls.",
-    "B": "Incorrect. \"Nevertheless\" would mean the manufacturers adopted the new method in spite of the shift to bonded balls, but the shift is the reason they adopted it. This is tempting because the change threatened the city's old craft.",
-    "C": "Incorrect. Buying machines is not an example of tournaments using bonded balls; it is a reaction to that change.",
-    "D": "Incorrect. \"Similarly\" would mean the manufacturers did something parallel to what tournaments did, but their action is a response to the tournaments' choice. This is tempting because both involve the new method."
+    "A": "Incorrect. \"Nevertheless\" would mean the manufacturers adopted the new method in spite of the shift to bonded balls, but the shift is the reason they adopted it. This is tempting because the change threatened the city's old craft.",
+    "B": "Incorrect. \"Similarly\" would mean the manufacturers did something parallel to what tournaments did, but their action is a response to the tournaments' choice. This is tempting because both involve the new method.",
+    "C": "Correct. \"Consequently\" shows that the manufacturers bought heat-bonding machines because tournaments had switched to bonded balls.",
+    "D": "Incorrect. Buying machines is not an example of tournaments using bonded balls; it is a reaction to that change."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

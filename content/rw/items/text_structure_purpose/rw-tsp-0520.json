@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It describes the method the beetles use to shape dung into balls.",
+    "A": "It presents a finding that conflicts with the results of the planetarium tests.",
     "B": "It shows that the beetles rely on something in the night sky, which later tests identify.",
-    "C": "It presents a finding that conflicts with the results of the planetarium tests.",
+    "C": "It describes the method the beetles use to shape dung into balls.",
     "D": "It explains why the beetles roll their dung balls in straight lines."
   },
   "answer": "B",
   "explanation": {
     "why": "The text raises a puzzle: beetles go straight even without the Sun or Moon. The underlined sentence shows that blocking the sky made them wander, so they must be using something in the sky. The final sentence then identifies that cue as the Milky Way.",
-    "A": "Incorrect. The sentence is about steering, not about how the balls are made.",
+    "A": "Incorrect. The two findings fit together: the caps show the sky matters, and the planetarium tests show which part of it the beetles use.",
     "B": "Correct. The caps show that the beetles need a view of the sky to steer, and the planetarium tests reveal what in the sky they use.",
-    "C": "Incorrect. The two findings fit together: the caps show the sky matters, and the planetarium tests show which part of it the beetles use.",
+    "C": "Incorrect. The sentence is about steering, not about how the balls are made.",
     "D": "Incorrect. The reason for rolling in straight lines, avoiding theft by rivals, is given in the first sentence."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
+    "A": "reversed",
+    "C": "not_in_text",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

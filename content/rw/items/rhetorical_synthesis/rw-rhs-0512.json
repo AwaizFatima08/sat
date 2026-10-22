@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to describe the method Watanabe used in her study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Ochre sea stars, the animals Watanabe studied, live along the Pacific coast of North America.",
-    "B": "Watanabe found that ochre sea stars crawled faster on average in warmer water than in cooler water.",
-    "C": "Watanabe wanted to know whether ochre sea stars move faster when the water around them is warmer.",
-    "D": "Watanabe timed sea stars crawling 50 centimeters in tanks kept at either 10 or 16 degrees Celsius."
+    "A": "Watanabe timed sea stars crawling 50 centimeters in tanks kept at either 10 or 16 degrees Celsius.",
+    "B": "Watanabe wanted to know whether ochre sea stars move faster when the water around them is warmer.",
+    "C": "Watanabe found that ochre sea stars crawled faster on average in warmer water than in cooler water.",
+    "D": "Ochre sea stars, the animals Watanabe studied, live along the Pacific coast of North America."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "A method is what the researcher did to answer her question. The notes say Watanabe kept sea stars at two water temperatures and timed how long each took to crawl 50 centimeters. Only one choice describes these steps.",
-    "A": "Incorrect. It gives background about where the animals live, not how the study was done.",
-    "B": "Incorrect. It reports the study's result, not its method.",
-    "C": "Incorrect. It states the question Watanabe wanted to answer, which is the study's aim, not its method.",
-    "D": "Correct. It describes what Watanabe did: she kept the sea stars at two water temperatures and timed them over a set distance."
+    "A": "Correct. It describes what Watanabe did: she kept the sea stars at two water temperatures and timed them over a set distance.",
+    "B": "Incorrect. It states the question Watanabe wanted to answer, which is the study's aim, not its method.",
+    "C": "Incorrect. It reports the study's result, not its method.",
+    "D": "Incorrect. It gives background about where the animals live, not how the study was done."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "misses_goal",
-    "C": "misses_goal"
+    "C": "misses_goal",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

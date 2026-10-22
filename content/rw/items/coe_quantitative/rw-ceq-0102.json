@@ -54,23 +54,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "on Friday, the library had about 260 visitors, fewer than on any other day.",
-    "B": "about 520 people visited on Sunday, more than on any other day of the week.",
-    "C": "about 455 people visited on Saturday, more than on any other day of the week.",
-    "D": "most Sunday visitors were students who could not come during the school week."
+    "A": "about 520 people visited on Sunday, more than on any other day of the week.",
+    "B": "on Friday, the library had about 260 visitors, fewer than on any other day.",
+    "C": "most Sunday visitors were students who could not come during the school week.",
+    "D": "about 455 people visited on Saturday, more than on any other day of the week."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The statement says the Sunday hours were popular, so the choice must show how Sunday compared with the other days. The Sunday bar, at about 520 visitors, is the tallest on the graph.",
-    "A": "Incorrect. Friday did have the fewest visitors, but this says nothing about Sunday, the day the statement is about.",
-    "B": "Correct. Sunday had about 520 visitors, more than any other day, which shows the new hours were popular.",
-    "C": "Incorrect. This misreads the graph: Saturday had about 455 visitors, fewer than Sunday's 520.",
-    "D": "Incorrect. The graph shows only how many people visited, not who they were or why they came on Sunday."
+    "A": "Correct. Sunday had about 520 visitors, more than any other day, which shows the new hours were popular.",
+    "B": "Incorrect. Friday did have the fewest visitors, but this says nothing about Sunday, the day the statement is about.",
+    "C": "Incorrect. The graph shows only how many people visited, not who they were or why they came on Sunday.",
+    "D": "Incorrect. This misreads the graph: Saturday had about 455 visitors, fewer than Sunday's 520."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "reversed",
-    "D": "not_in_text"
+    "B": "true_irrelevant",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -79,8 +79,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the general lesson drawn by Dahl in Text 1?",
   "choices": {
-    "A": "By pointing to a case in which labor scarcity led to stronger rather than weaker servitude",
+    "A": "By suggesting that laws limiting wages worked far better in eastern Europe than they did in England",
     "B": "By claiming that serfdom in England survived the plague largely unchanged",
-    "C": "By suggesting that laws limiting wages worked far better in eastern Europe than they did in England",
-    "D": "By rejecting the idea that the plague had any lasting effect on European laborers"
+    "C": "By rejecting the idea that the plague had any lasting effect on European laborers",
+    "D": "By pointing to a case in which labor scarcity led to stronger rather than weaker servitude"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Dahl claims that scarce labor \"inevitably\" strengthens workers and weakens servitude. Text 2 describes eastern Europe, \"where labor was also in short supply,\" yet landowners tied peasants \"more firmly to their estates.\" That single counterexample shows the outcome was not inevitable but depended on the power of lords.",
-    "A": "Correct. Text 2's account of the \"second serfdom\" in eastern Europe is a case where scarcity was followed by harsher, not looser, servitude.",
+    "A": "Incorrect. Text 2 credits lords' power to restrict peasants' movement, not wage laws.",
     "B": "Incorrect. Text 2 does not challenge Text 1's account of England; it adds a contrasting case from eastern Europe.",
-    "C": "Incorrect. Text 2 credits lords' power to restrict peasants' movement, not wage laws.",
-    "D": "Incorrect. Text 2 says the plague's effects differed by region, not that it had no lasting effect."
+    "C": "Incorrect. Text 2 says the plague's effects differed by region, not that it had no lasting effect.",
+    "D": "Correct. Text 2's account of the \"second serfdom\" in eastern Europe is a case where scarcity was followed by harsher, not looser, servitude."
   },
   "traps": {
+    "A": "not_in_text",
     "B": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

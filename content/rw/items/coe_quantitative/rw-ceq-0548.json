@@ -79,23 +79,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Sutherland's account?",
   "choices": {
-    "A": "On weekends, deer were detected less often than on weekdays at 6 a.m., 10 a.m., and 2 p.m.",
-    "B": "Weekend detections fell below weekday detections from 6 a.m. through 6 p.m. but rose above them at 10 p.m. and 2 a.m.",
-    "C": "Summed across all six times shown, deer were detected less often on weekends, when hikers were most numerous, than on weekdays.",
-    "D": "Weekend detections peaked at 2 a.m., the time when weekday detections were at their lowest."
+    "A": "Summed across all six times shown, deer were detected less often on weekends, when hikers were most numerous, than on weekdays.",
+    "B": "Weekend detections peaked at 2 a.m., the time when weekday detections were at their lowest.",
+    "C": "On weekends, deer were detected less often than on weekdays at 6 a.m., 10 a.m., and 2 p.m.",
+    "D": "Weekend detections fell below weekday detections from 6 a.m. through 6 p.m. but rose above them at 10 p.m. and 2 a.m."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "Sutherland's account is not merely that deer avoid the trails on weekends (the simple expectation he rejects) but that they shift their activity: fewer weekend detections during the day and more after dark. Support must compare the two lines in both daytime and nighttime hours. Weekend detections are lower at every time from 6 a.m. to 6 p.m., but at 10 p.m. (17 versus 10) and 2 a.m. (15 versus 7) they exceed weekday detections.",
-    "A": "Incorrect. This is true, but daytime avoidance alone fits the simple expectation that deer abandon the area; it does not show them making up for it after dark.",
-    "B": "Correct. It shows both halves of the shift: lower weekend activity during hiking hours and higher weekend activity at night.",
-    "C": "Incorrect. This is true (46 versus 58), but a lower weekend total, taken alone, fits the abandonment view that Sutherland rejects rather than his own account.",
-    "D": "Incorrect. Weekend detections peaked at 10 p.m. (17), and weekday detections were lowest at 2 p.m. (6), so this misreads the graph."
+    "A": "Incorrect. This is true (46 versus 58), but a lower weekend total, taken alone, fits the abandonment view that Sutherland rejects rather than his own account.",
+    "B": "Incorrect. Weekend detections peaked at 10 p.m. (17), and weekday detections were lowest at 2 p.m. (6), so this misreads the graph.",
+    "C": "Incorrect. This is true, but daytime avoidance alone fits the simple expectation that deer abandon the area; it does not show them making up for it after dark.",
+    "D": "Correct. It shows both halves of the shift: lower weekend activity during hiking hours and higher weekend activity at night."
   },
   "traps": {
-    "A": "too_narrow",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -104,8 +104,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

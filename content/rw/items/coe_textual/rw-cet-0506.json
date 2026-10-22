@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Perera's hypothesis?",
   "choices": {
-    "A": "Elephants in Sri Lanka raid farms most often during dry months, when wild food is hard to find.",
-    "B": "Elephants walked away when researchers played recordings of buzzing bees but not recordings of wind.",
-    "C": "Fences with beehives cost farmers less to build and repair than electric fences do.",
-    "D": "Elephants stayed away just as often from fences hung with empty hive boxes that made no sound."
+    "A": "Elephants walked away when researchers played recordings of buzzing bees but not recordings of wind.",
+    "B": "Fences with beehives cost farmers less to build and repair than electric fences do.",
+    "C": "Elephants stayed away just as often from fences hung with empty hive boxes that made no sound.",
+    "D": "Elephants in Sri Lanka raid farms most often during dry months, when wild food is hard to find."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Perera's hypothesis is specifically about sound: elephants avoid the fences because buzzing frightens them. The best support would show elephants reacting to the buzzing itself and not to other sounds.",
-    "A": "Incorrect. When elephants raid farms does not explain why they avoid the beehive fences.",
-    "B": "Correct. The elephants left only when they heard bees, not when they heard another sound, so the buzzing itself seems to scare them.",
-    "C": "Incorrect. The cost of the fences says nothing about why elephants avoid them.",
-    "D": "Incorrect. If silent, empty hives work just as well, the buzzing cannot be the reason, so this would weaken the hypothesis."
+    "A": "Correct. The elephants left only when they heard bees, not when they heard another sound, so the buzzing itself seems to scare them.",
+    "B": "Incorrect. The cost of the fences says nothing about why elephants avoid them.",
+    "C": "Incorrect. If silent, empty hives work just as well, the buzzing cannot be the reason, so this would weaken the hypothesis.",
+    "D": "Incorrect. When elephants raid farms does not explain why they avoid the beehive fences."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

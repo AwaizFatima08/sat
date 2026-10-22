@@ -39,23 +39,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Okafor's argument?",
   "choices": {
-    "A": "After four weeks of practice the groups differed by 1 point, but a month later the daily group scored 18 points higher.",
-    "B": "After two weeks of practice, students in the weekly group played slightly more accurately than students in the daily group.",
+    "A": "After two weeks of practice, students in the weekly group played slightly more accurately than students in the daily group.",
+    "B": "After the month without practice, the weekly group was more accurate than the daily group.",
     "C": "Both groups played more accurately after four weeks of practice than they had after two weeks.",
-    "D": "After the month without practice, the weekly group was more accurate than the daily group."
+    "D": "After four weeks of practice the groups differed by 1 point, but a month later the daily group scored 18 points higher."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Okafor's argument has two parts: the schedules gave nearly identical results during practice, and the daily group retained far more a month later. Support must compare the two columns at the end of practice and again after the break. At four weeks the scores are 86 and 85 (1 point apart); after the month without practice they are 80 and 62 (18 points apart).",
-    "A": "Correct. It shows a near tie at the end of practice and a large gap after the break, matching both parts of Okafor's argument.",
-    "B": "Incorrect. This is true, but it fits only the first part of the argument and says nothing about the later advantage of daily practice.",
+    "A": "Incorrect. This is true, but it fits only the first part of the argument and says nothing about the later advantage of daily practice.",
+    "B": "Incorrect. After the break the daily group scored 80 and the weekly group 62, so this reverses the table.",
     "C": "Incorrect. This is true, but it shows that both groups improved, not that the two schedules differed in how well students retained the piece.",
-    "D": "Incorrect. After the break the daily group scored 80 and the weekly group 62, so this reverses the table."
+    "D": "Correct. It shows a near tie at the end of practice and a large gap after the break, matching both parts of Okafor's argument."
   },
   "traps": {
-    "B": "too_narrow",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "A": "too_narrow",
+    "B": "reversed",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -64,8 +64,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

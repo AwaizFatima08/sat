@@ -15,22 +15,22 @@
   "stem": "Which choice most logically completes the text?",
   "choices": {
     "A": "dunnocks are unable to see the colors and patterns of the eggs in their nests.",
-    "B": "cuckoos avoid laying their eggs in the nests of species that reject odd eggs.",
+    "B": "hosts' rejection of odd eggs is likely what favors cuckoo eggs that match theirs.",
     "C": "cuckoos match host eggs by copying the eggs they see in each nest they visit.",
-    "D": "hosts' rejection of odd eggs is likely what favors cuckoo eggs that match theirs."
+    "D": "cuckoos avoid laying their eggs in the nests of species that reject odd eggs."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Cuckoo eggs closely match host eggs where hosts reject odd eggs, but not where the host (the dunnock) rarely rejects them. The match appears only when rejection is a threat, which suggests that rejection by hosts drives the matching.",
     "A": "Incorrect. The text says only that dunnocks rarely reject odd eggs; it never says they cannot see differences.",
-    "B": "Incorrect. The text says cuckoos do lay in the nests of rejecting species, producing matching eggs there.",
+    "B": "Correct. Matching eggs occur where hosts reject odd eggs and not where they rarely do, linking the match to rejection.",
     "C": "Incorrect. The text never explains how the match is produced, and copying eggs in each nest is not suggested.",
-    "D": "Correct. Matching eggs occur where hosts reject odd eggs and not where they rarely do, linking the match to rejection."
+    "D": "Incorrect. The text says cuckoos do lay in the nests of rejecting species, producing matching eggs there."
   },
   "traps": {
     "A": "not_in_text",
-    "B": "reversed",
-    "C": "not_in_text"
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

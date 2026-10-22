@@ -20,22 +20,22 @@
   "stem": "The student wants to make a generalization about the capitals of Brazil, Pakistan, and Australia. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
     "A": "During the 1960s, both Brazil and Pakistan moved their capitals away from coastal cities to newly planned cities.",
-    "B": "Supporters of Brasília argued that an interior capital would encourage development away from Brazil's crowded coast.",
-    "C": "After Melbourne served as its temporary seat of government, Australia's Parliament first met in Canberra in 1927.",
-    "D": "Brazil, Pakistan, and Australia each moved their seat of government to a newly planned capital city."
+    "B": "Brazil, Pakistan, and Australia each moved their seat of government to a newly planned capital city.",
+    "C": "Supporters of Brasília argued that an interior capital would encourage development away from Brazil's crowded coast.",
+    "D": "After Melbourne served as its temporary seat of government, Australia's Parliament first met in Canberra in 1927."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The goal names three countries, so the generalization must cover all three. What they share is that each moved its government to a city planned to be the capital.",
     "A": "Incorrect. This is a generalization, but it covers only two of the three countries named in the goal. It is the most tempting near miss.",
-    "B": "Incorrect. This gives one argument made about one capital, so it is not a generalization.",
-    "C": "Incorrect. This describes Australia alone.",
-    "D": "Correct. It covers all three countries and states what they have in common: each moved its government to a newly planned capital."
+    "B": "Correct. It covers all three countries and states what they have in common: each moved its government to a newly planned capital.",
+    "C": "Incorrect. This gives one argument made about one capital, so it is not a generalization.",
+    "D": "Incorrect. This describes Australia alone."
   },
   "traps": {
     "A": "too_narrow",
-    "B": "true_irrelevant",
-    "C": "too_narrow"
+    "C": "true_irrelevant",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

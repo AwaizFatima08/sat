@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to present Kaur's findings in a way that emphasizes their relevance to Punjab's groundwater problem. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Kaur found that direct-seeded rice used about 25 percent less irrigation water than transplanted rice while producing similar yields.",
+    "A": "Kaur compared transplanting seedlings into flooded fields with sowing seeds directly into the field on 40 farms over three seasons.",
     "B": "Groundwater levels in parts of Punjab have fallen sharply in recent decades, largely because of heavy pumping to irrigate rice.",
-    "C": "Kaur compared transplanting seedlings into flooded fields with sowing seeds directly into the field on 40 farms over three seasons.",
-    "D": "In Punjab, where rice irrigation has depleted groundwater, Kaur found direct seeding used a quarter less water with similar yields."
+    "C": "In Punjab, where rice irrigation has depleted groundwater, Kaur found direct seeding used a quarter less water with similar yields.",
+    "D": "Kaur found that direct-seeded rice used about 25 percent less irrigation water than transplanted rice while producing similar yields."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The goal has two parts: Kaur's findings and their relevance to the falling groundwater. The key must report the water savings (and that yields held up) and tie them to the depletion caused by rice irrigation.",
-    "A": "Incorrect. This reports the findings accurately but never mentions the groundwater problem, so their relevance is not emphasized. It is the most tempting near miss.",
+    "A": "Incorrect. This describes Kaur's method, not her findings.",
     "B": "Incorrect. This describes the groundwater problem, but it does not mention Kaur's findings.",
-    "C": "Incorrect. This describes Kaur's method, not her findings.",
-    "D": "Correct. It places the findings (a quarter less water, similar yields) in the context of Punjab's depleted groundwater, which shows why they matter."
+    "C": "Correct. It places the findings (a quarter less water, similar yields) in the context of Punjab's depleted groundwater, which shows why they matter.",
+    "D": "Incorrect. This reports the findings accurately but never mentions the groundwater problem, so their relevance is not emphasized. It is the most tempting near miss."
   },
   "traps": {
-    "A": "too_narrow",
+    "A": "misses_goal",
     "B": "too_narrow",
-    "C": "misses_goal"
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

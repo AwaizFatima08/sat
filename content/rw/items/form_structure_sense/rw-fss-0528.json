@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "womens'",
-    "B": "woman's",
+    "A": "women's",
+    "B": "womens'",
     "C": "women",
-    "D": "women's"
+    "D": "woman's"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The blank must show that the right to vote belongs to women as a group. \"Women\" is an irregular plural that does not end in s, so its possessive is formed by adding an apostrophe and s: \"women's.\"",
-    "A": "Incorrect. \"Womens'\" is not a word; the plural is \"women,\" and its possessive is \"women's.\"",
-    "B": "Incorrect. \"Woman's\" is the possessive of one woman, but the right was granted to women as a group.",
+    "A": "Correct. \"Women's\" is the possessive of the irregular plural \"women.\"",
+    "B": "Incorrect. \"Womens'\" is not a word; the plural is \"women,\" and its possessive is \"women's.\"",
     "C": "Incorrect. \"Women\" is a plain plural with no apostrophe, so it doesn't show that the right belongs to them.",
-    "D": "Correct. \"Women's\" is the possessive of the irregular plural \"women.\""
+    "D": "Incorrect. \"Woman's\" is the possessive of one woman, but the right was granted to women as a group."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "plural_possessive",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

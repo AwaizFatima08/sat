@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "untenable",
-    "B": "redundant",
-    "C": "plausible",
+    "A": "redundant",
+    "B": "plausible",
+    "C": "untenable",
     "D": "incontrovertible"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The laboratory result supports the hypothesis, but \"rather than proven\" and the colon show its limit: the reaction has not been shown in a living bird. The blank must describe a hypothesis that is reasonable and supported but not established.",
-    "A": "Incorrect. \"Untenable\" means impossible to defend, but the laboratory evidence supports the hypothesis rather than undermining it.",
-    "B": "Incorrect. \"Redundant\" means unnecessary; the text says how birds sense the field \"remains contested,\" so the hypothesis is still needed as a possible explanation.",
-    "C": "Correct. \"Plausible\" means reasonable and believable, which fits a hypothesis that has some support but has not been demonstrated in living birds.",
+    "A": "Incorrect. \"Redundant\" means unnecessary; the text says how birds sense the field \"remains contested,\" so the hypothesis is still needed as a possible explanation.",
+    "B": "Correct. \"Plausible\" means reasonable and believable, which fits a hypothesis that has some support but has not been demonstrated in living birds.",
+    "C": "Incorrect. \"Untenable\" means impossible to defend, but the laboratory evidence supports the hypothesis rather than undermining it.",
     "D": "Incorrect. \"Incontrovertible\" means impossible to dispute, which is even stronger than \"proven\" and contradicts the statement that the question \"remains contested.\""
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
+    "A": "not_in_text",
+    "C": "reversed",
     "D": "too_broad"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

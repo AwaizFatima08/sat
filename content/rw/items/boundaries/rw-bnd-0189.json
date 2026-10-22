@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "kitchen?\" The",
-    "B": "kitchen.\" The",
-    "C": "kitchen,\" the",
-    "D": "kitchen\"? The"
+    "A": "kitchen\"? The",
+    "B": "kitchen?\" The",
+    "C": "kitchen.\" The",
+    "D": "kitchen,\" the"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The whole first sentence is a question, but the quoted words, \"the humblest tool in the kitchen,\" are not. In American English, a question mark goes outside the closing quotation mark when it belongs to the whole sentence rather than to the quotation. The next sentence then begins with a capital letter.",
-    "A": "Incorrect. Placing the question mark inside the quotation marks makes the curator's words a question, but only the full sentence is a question.",
-    "B": "Incorrect. The first sentence asks a direct question (\"Why would a major design museum …\"), so it must end with a question mark, not a period.",
-    "C": "Incorrect. A comma can't end the question or join it to the next independent clause; this creates a comma splice.",
-    "D": "Correct. The question mark ends the whole question and goes outside the quotation mark, because the quoted words themselves are not a question."
+    "A": "Correct. The question mark ends the whole question and goes outside the quotation mark, because the quoted words themselves are not a question.",
+    "B": "Incorrect. Placing the question mark inside the quotation marks makes the curator's words a question, but only the full sentence is a question.",
+    "C": "Incorrect. The first sentence asks a direct question (\"Why would a major design museum …\"), so it must end with a question mark, not a period.",
+    "D": "Incorrect. A comma can't end the question or join it to the next independent clause; this creates a comma splice."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "punctuation",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

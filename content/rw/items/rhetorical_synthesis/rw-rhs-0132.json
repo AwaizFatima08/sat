@@ -20,21 +20,21 @@
   "data": null,
   "stem": "The student wants to present the aim and method of Lhamo's study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "To gauge black carbon's role in Khumbu glacier melting, Lhamo's team sampled snow at twelve sites at varying distances from villages.",
-    "B": "Lhamo's team found that snow near villages where wood is burned held the most black carbon and that the glacier surfaces there melted fastest.",
+    "A": "Lhamo's team found that snow near villages where wood is burned held the most black carbon and that the glacier surfaces there melted fastest.",
+    "B": "To gauge black carbon's role in Khumbu glacier melting, Lhamo's team sampled snow at twelve sites at varying distances from villages.",
     "C": "Lhamo's team collected snow samples at twelve Khumbu sites lying at varying distances from villages where wood is burned.",
     "D": "Black carbon, a soot from the incomplete burning of wood and fuels, darkens snow so that it absorbs more sunlight than clean snow."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The goal has two parts: the aim (what Lhamo wanted to determine) and the method (what her team did). Only one choice states both the question about black carbon's role in melting and the sampling of snow at sites at different distances from villages.",
-    "A": "Correct. \"To gauge black carbon's role in Khumbu glacier melting\" gives the aim, and sampling snow at twelve sites at varying distances from villages is the method.",
-    "B": "Incorrect. This reports the study's results, not its aim or method.",
+    "A": "Incorrect. This reports the study's results, not its aim or method.",
+    "B": "Correct. \"To gauge black carbon's role in Khumbu glacier melting\" gives the aim, and sampling snow at twelve sites at varying distances from villages is the method.",
     "C": "Incorrect. This describes the method accurately but never says what Lhamo was trying to find out, so it meets only half the goal. It is the most tempting near miss.",
     "D": "Incorrect. This is background about black carbon. It says nothing about Lhamo's study."
   },
   "traps": {
-    "B": "misses_goal",
+    "A": "misses_goal",
     "C": "too_narrow",
     "D": "true_irrelevant"
   },
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

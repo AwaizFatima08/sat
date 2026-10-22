@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "After moving to New York, Mondrian gave up both straight lines and primary colors.",
-    "B": "Critics described Mondrian's paintings from before 1940 as calm and even static.",
-    "C": "In Broadway Boogie Woogie, Mondrian adapted his strict method to a new city's energy.",
+    "A": "Critics described Mondrian's paintings from before 1940 as calm and even static.",
+    "B": "In Broadway Boogie Woogie, Mondrian adapted his strict method to a new city's energy.",
+    "C": "After moving to New York, Mondrian gave up both straight lines and primary colors.",
     "D": "Boogie-woogie music shaped Mondrian's art more strongly than any other influence ever did."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The text describes Mondrian's long-standing strict style, then shows how Broadway Boogie Woogie \"departs from that pattern\": colored, broken bands replace black lines, suggesting Manhattan's grid and the rhythm of boogie-woogie. The final clause states the point: his \"rigorous method could absorb the energy of a new city.\" The main idea is that the painting adapts his method to New York.",
-    "A": "Incorrect. The painting still uses straight bands and red, yellow, and blue; only the black lines are gone.",
-    "B": "Incorrect. This is background about the earlier work, not the point the text builds toward.",
-    "C": "Correct. This captures both the continuity (his strict method) and the change (it now conveys the city's energy).",
+    "A": "Incorrect. This is background about the earlier work, not the point the text builds toward.",
+    "B": "Correct. This captures both the continuity (his strict method) and the change (it now conveys the city's energy).",
+    "C": "Incorrect. The painting still uses straight bands and red, yellow, and blue; only the black lines are gone.",
     "D": "Incorrect. The text mentions the music as one thing viewers see in the painting; it never ranks it above all other influences."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "too_narrow",
+    "A": "too_narrow",
+    "C": "too_broad",
     "D": "too_broad"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

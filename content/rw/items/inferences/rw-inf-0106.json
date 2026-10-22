@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "were heavy but cheap to produce, such as stone or timber.",
-    "B": "were worth a great deal compared with their weight.",
-    "C": "would spoil quickly if the journey took too long.",
-    "D": "could already be bought in every town along the way."
+    "A": "were worth a great deal compared with their weight.",
+    "B": "were heavy but cheap to produce, such as stone or timber.",
+    "C": "could already be bought in every town along the way.",
+    "D": "would spoil quickly if the journey took too long."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Loads were limited and long journeys were costly, and silk was popular because a light bundle sold for a high price. Merchants would therefore favor goods that packed high value into little weight.",
-    "A": "Incorrect. Heavy, cheap goods would use up the limited loads without paying for the costly trip.",
-    "B": "Correct. Silk is the example: light to carry but sold for a high price.",
-    "C": "Incorrect. The long trips would make quickly spoiling goods a poor choice; nothing suggests merchants wanted them.",
-    "D": "Incorrect. Goods available everywhere would be hard to sell at a high price after a long journey."
+    "A": "Correct. Silk is the example: light to carry but sold for a high price.",
+    "B": "Incorrect. Heavy, cheap goods would use up the limited loads without paying for the costly trip.",
+    "C": "Incorrect. Goods available everywhere would be hard to sell at a high price after a long journey.",
+    "D": "Incorrect. The long trips would make quickly spoiling goods a poor choice; nothing suggests merchants wanted them."
   },
   "traps": {
-    "A": "reversed",
-    "C": "reversed",
-    "D": "not_in_text"
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

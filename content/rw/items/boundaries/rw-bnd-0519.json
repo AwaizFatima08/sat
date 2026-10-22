@@ -15,21 +15,21 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "timing, when",
-    "B": "timing when",
-    "C": "timing. When",
+    "B": "timing. When",
+    "C": "timing when",
     "D": "timing and when"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "\"Instead, each male watches the flashes around him and adjusts his own timing\" is a complete sentence. \"When enough males fall into step\" is a dependent clause that introduces the next independent clause, \"whole hillsides seem to blink on and off together.\" A period is needed between the two sentences.",
     "A": "Incorrect. This choice attaches \"when enough males fall into step\" to the first sentence, leaving \"whole hillsides seem to blink …\" joined by only a comma: a comma splice.",
-    "B": "Incorrect. With no punctuation, the two independent clauses run together.",
-    "C": "Correct. A period ends the first sentence, and \"When …\" begins the second, whose introductory clause is followed by a comma.",
+    "B": "Correct. A period ends the first sentence, and \"When …\" begins the second, whose introductory clause is followed by a comma.",
+    "C": "Incorrect. With no punctuation, the two independent clauses run together.",
     "D": "Incorrect. When \"and\" joins two independent clauses, a comma is needed before it."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "linking_clauses",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

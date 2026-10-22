@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to contrast the evidence for the two hypotheses about yawning. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "People may yawn either to raise the level of oxygen in their blood or to cool the brain by increasing blood flow to the head.",
-    "B": "Breathing extra oxygen did not reduce yawning, undercutting the oxygen hypothesis, but weather patterns in yawning support the cooling hypothesis.",
-    "C": "Volunteers who breathed oxygen-enriched air yawned no less often than others, casting doubt on the idea that yawning raises blood oxygen.",
-    "D": "That people yawn more often in mild weather than in very hot weather is consistent with the idea that yawning helps cool the brain."
+    "A": "Volunteers who breathed oxygen-enriched air yawned no less often than others, casting doubt on the idea that yawning raises blood oxygen.",
+    "B": "That people yawn more often in mild weather than in very hot weather is consistent with the idea that yawning helps cool the brain.",
+    "C": "Breathing extra oxygen did not reduce yawning, undercutting the oxygen hypothesis, but weather patterns in yawning support the cooling hypothesis.",
+    "D": "People may yawn either to raise the level of oxygen in their blood or to cool the brain by increasing blood flow to the head."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The goal is to contrast the evidence, not just the ideas. The notes show that the oxygen hypothesis failed a test (extra oxygen did not reduce yawning), while the cooling hypothesis fits an observed pattern (more yawning in mild weather). The key must set these two pieces of evidence against each other.",
-    "A": "Incorrect. This contrasts the two hypotheses themselves but mentions no evidence for or against either one. It is the most tempting near miss.",
-    "B": "Correct. It sets evidence against the oxygen hypothesis beside evidence for the cooling hypothesis, so the contrast in support is clear.",
-    "C": "Incorrect. This gives the evidence on the oxygen hypothesis only, so no contrast with the cooling hypothesis is made.",
-    "D": "Incorrect. This gives the evidence on the cooling hypothesis only, so no contrast with the oxygen hypothesis is made."
+    "A": "Incorrect. This gives the evidence on the oxygen hypothesis only, so no contrast with the cooling hypothesis is made.",
+    "B": "Incorrect. This gives the evidence on the cooling hypothesis only, so no contrast with the oxygen hypothesis is made.",
+    "C": "Correct. It sets evidence against the oxygen hypothesis beside evidence for the cooling hypothesis, so the contrast in support is clear.",
+    "D": "Incorrect. This contrasts the two hypotheses themselves but mentions no evidence for or against either one. It is the most tempting near miss."
   },
   "traps": {
-    "A": "misses_goal",
-    "C": "too_narrow",
-    "D": "too_narrow"
+    "A": "too_narrow",
+    "B": "too_narrow",
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

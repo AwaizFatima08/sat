@@ -14,23 +14,23 @@
   "data": null,
   "stem": "According to the text, what causes mud to rise to the surface at the mud volcanoes of Hingol National Park?",
   "choices": {
-    "A": "Gas trapped under pressure in thick layers of squeezed sediment pushes it up.",
-    "B": "Molten rock rising from deep beneath the Arabian Plate heats the mud and lifts it.",
-    "C": "Seawater floods cracks in the ground during strong earthquakes and lifts it.",
-    "D": "Methane burning underground melts nearby sediment and drives it upward."
+    "A": "Seawater floods cracks in the ground during strong earthquakes and lifts it.",
+    "B": "Methane burning underground melts nearby sediment and drives it upward.",
+    "C": "Gas trapped under pressure in thick layers of squeezed sediment pushes it up.",
+    "D": "Molten rock rising from deep beneath the Arabian Plate heats the mud and lifts it."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The text explains that the plate collision \"squeezes thick layers of water-soaked sediment\" and that gas \"collects in those layers under great pressure and forces mud upward through cracks.\" So pressurized gas in compressed sediment drives the mud to the surface.",
-    "A": "Correct. This restates the text's explanation of how the mud reaches the surface.",
-    "B": "Incorrect. The text says the mud volcanoes \"have nothing to do with molten rock\" and that the mud is cool.",
-    "C": "Incorrect. The earthquake is mentioned as a sudden trigger near Gwadar; the text never says seawater floods cracks.",
-    "D": "Incorrect. The text says the gas is under pressure, not that it burns, and that the mud is cool."
+    "A": "Incorrect. The earthquake is mentioned as a sudden trigger near Gwadar; the text never says seawater floods cracks.",
+    "B": "Incorrect. The text says the gas is under pressure, not that it burns, and that the mud is cool.",
+    "C": "Correct. This restates the text's explanation of how the mud reaches the surface.",
+    "D": "Incorrect. The text says the mud volcanoes \"have nothing to do with molten rock\" and that the mud is cool."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

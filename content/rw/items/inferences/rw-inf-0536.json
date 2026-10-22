@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "understate the share of Swedes who were able to read.",
+    "A": "show that most Swedes of that time could write as well as read.",
     "B": "overstate the share of Swedes who were able to read.",
-    "C": "show that most Swedes of that time could write as well as read.",
-    "D": "be equally unreliable for every European country of that time."
+    "C": "be equally unreliable for every European country of that time.",
+    "D": "understate the share of Swedes who were able to read."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The signature method counts only people who could write. In eighteenth-century Sweden, many people were taught to read but not to write, so many readers would have made a mark instead of signing. Counting signatures would therefore miss those readers.",
-    "A": "Correct. Many Swedes learned to read without learning to write, so they would not appear among the signers, making the count too low.",
+    "A": "Incorrect. The text says writing was not commonly taught, which gives no reason to think most Swedes could write.",
     "B": "Incorrect. This reverses the effect: the method misses readers who could not write; it does not add people who could not read.",
-    "C": "Incorrect. The text says writing was not commonly taught, which gives no reason to think most Swedes could write.",
-    "D": "Incorrect. The text describes conditions in Sweden only; it does not show that the method fails in the same way everywhere."
+    "C": "Incorrect. The text describes conditions in Sweden only; it does not show that the method fails in the same way everywhere.",
+    "D": "Correct. Many Swedes learned to read without learning to write, so they would not appear among the signers, making the count too low."
   },
   "traps": {
+    "A": "not_in_text",
     "B": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

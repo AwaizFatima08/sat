@@ -14,23 +14,23 @@
   "data": null,
   "stem": "According to the text, what is a result of the slant in the parallelograms of Miura's fold?",
   "choices": {
-    "A": "Each crease in the sheet can be folded on its own, independently of the others.",
-    "B": "The folded sheet takes up less space than a sheet that is folded into squares.",
-    "C": "Origami came to be seen as a branch of engineering rather than as an art form.",
+    "A": "The folded sheet takes up less space than a sheet that is folded into squares.",
+    "B": "Origami came to be seen as a branch of engineering rather than as an art form.",
+    "C": "Each crease in the sheet can be folded on its own, independently of the others.",
     "D": "The creases move together, so the whole sheet opens or closes in one motion."
   },
   "answer": "D",
   "explanation": {
     "why": "The third sentence states the result: \"The slant makes the creases depend on one another, so that a folded sheet can be opened or closed in a single motion.\" The slant links the creases so they move together.",
-    "A": "Incorrect. This reverses the text, which says the slant makes the creases \"depend on one another.\"",
-    "B": "Incorrect. The text never compares the space taken up by Miura's fold with a fold of squares.",
-    "C": "Incorrect. The text says only that \"some\" origami patterns found engineering uses; it never says origami stopped being seen as an art.",
+    "A": "Incorrect. The text never compares the space taken up by Miura's fold with a fold of squares.",
+    "B": "Incorrect. The text says only that \"some\" origami patterns found engineering uses; it never says origami stopped being seen as an art.",
+    "C": "Incorrect. This reverses the text, which says the slant makes the creases \"depend on one another.\"",
     "D": "Correct. This restates the direct result of the slant described in the third sentence."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "C": "too_broad"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

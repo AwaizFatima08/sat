@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "A retired tailor who claims not to miss his work seems to enjoy returning to it.",
-    "B": "A grandfather refuses to mend his granddaughter's coat because he has retired.",
-    "C": "A retired tailor regrets closing his shop and decides to open it once again.",
-    "D": "A granddaughter tears her winter coat and asks her grandfather to repair it."
+    "A": "A retired tailor regrets closing his shop and decides to open it once again.",
+    "B": "A granddaughter tears her winter coat and asks her grandfather to repair it.",
+    "C": "A retired tailor who claims not to miss his work seems to enjoy returning to it.",
+    "D": "A grandfather refuses to mend his granddaughter's coat because he has retired."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Ibarra says he does not miss tailoring and grumbles about the coat, but his actions tell a different story: he studies the seam, finds his old thread, and works while \"humming a tune she had not heard him hum in years.\" The main idea is the contrast between what he claims and the pleasure he shows.",
-    "A": "Correct. This captures the contrast at the heart of the passage: his claim not to miss the work versus his evident pleasure in doing it.",
-    "B": "Incorrect. He grumbles at first, but by evening he is mending the coat.",
-    "C": "Incorrect. He enjoys one repair job, but nothing suggests he regrets closing the shop or plans to reopen it.",
-    "D": "Incorrect. This is only the event that starts the passage; it leaves out how Ibarra responds."
+    "A": "Incorrect. He enjoys one repair job, but nothing suggests he regrets closing the shop or plans to reopen it.",
+    "B": "Incorrect. This is only the event that starts the passage; it leaves out how Ibarra responds.",
+    "C": "Correct. This captures the contrast at the heart of the passage: his claim not to miss the work versus his evident pleasure in doing it.",
+    "D": "Incorrect. He grumbles at first, but by evening he is mending the coat."
   },
   "traps": {
-    "B": "reversed",
-    "C": "too_broad",
-    "D": "too_narrow"
+    "A": "too_broad",
+    "B": "too_narrow",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

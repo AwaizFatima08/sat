@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "sacred",
-    "B": "exclusionary",
-    "C": "autonomous",
-    "D": "regulated"
+    "B": "regulated",
+    "C": "exclusionary",
+    "D": "autonomous"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The colon tells you that the blank is explained by what follows: the coffeehouses were places where people could talk \"beyond the direct oversight\" of religious or state authorities. The blank must describe spaces that operated on their own, outside official control, which is what \"autonomous\" means.",
     "A": "Incorrect. The text contrasts the coffeehouses with mosques and stresses that they were outside religious oversight, so calling them sacred does not fit.",
-    "B": "Incorrect. The coffeehouses \"brought together men of different trades and neighborhoods,\" so they welcomed many kinds of people rather than shutting groups out.",
-    "C": "Correct. Autonomous spaces are self-governing, which matches places where people gathered \"beyond the direct oversight of religious or state authorities.\"",
-    "D": "Incorrect. The text says the coffeehouses were beyond the \"direct oversight\" of authorities, and that officials tried to close them rather than control them. Regulated spaces would be under official control."
+    "B": "Incorrect. The text says the coffeehouses were beyond the \"direct oversight\" of authorities, and that officials tried to close them rather than control them. Regulated spaces would be under official control.",
+    "C": "Incorrect. The coffeehouses \"brought together men of different trades and neighborhoods,\" so they welcomed many kinds of people rather than shutting groups out.",
+    "D": "Correct. Autonomous spaces are self-governing, which matches places where people gathered \"beyond the direct oversight of religious or state authorities.\""
   },
   "traps": {
     "A": "not_in_text",
     "B": "reversed",
-    "D": "reversed"
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

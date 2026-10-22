@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "them, \"it",
-    "B": "them. \"It",
+    "A": "them. It",
+    "B": "them, \"it",
     "C": "them \"it",
-    "D": "them. It"
+    "D": "them. \"It"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The quotation is interrupted by \"she told them,\" but the two quoted parts are separate sentences: \"A textile is not a picture of a thing\" and \"It is the thing itself, and you have to be able to see how it was made.\" Because the second part is a new independent clause, a period must follow the speaker tag, and the next quoted sentence begins with a capital letter.",
-    "A": "Incorrect. Joining the second complete quoted sentence to the first with a comma creates a comma splice.",
-    "B": "Correct. The period ends the first sentence after the speaker tag, and the capitalized \"It\" begins the second quoted sentence.",
+    "A": "Incorrect. The period correctly ends the first sentence, but the words \"It is the thing itself ...\" are still Marchetti's, so they need an opening quotation mark; without it, the closing quotation mark at the end has no partner.",
+    "B": "Incorrect. Joining the second complete quoted sentence to the first with a comma creates a comma splice.",
     "C": "Incorrect. With no punctuation after the speaker tag, the two independent clauses run together as a run-on sentence.",
-    "D": "Incorrect. The period correctly ends the first sentence, but the words \"It is the thing itself ...\" are still Marchetti's, so they need an opening quotation mark; without it, the closing quotation mark at the end has no partner."
+    "D": "Correct. The period ends the first sentence after the speaker tag, and the capitalized \"It\" begins the second quoted sentence."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "B": "grammar_rule",
+    "C": "grammar_rule"
   },
   "grammar": "punctuation",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -15,22 +15,22 @@
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
     "A": "It recounts a text's recovery, raises doubts about its authenticity, and then exposes the text as a forgery.",
-    "B": "It contrasts two scholars' readings of a text and then argues that the earlier reading was correct.",
-    "C": "It summarizes a text's contents, explains how it shaped a court, and then describes its rediscovery.",
-    "D": "It recounts a text's recovery and early reception, notes findings that revised it, and reframes its value."
+    "B": "It recounts a text's recovery and early reception, notes findings that revised it, and reframes its value.",
+    "C": "It contrasts two scholars' readings of a text and then argues that the earlier reading was correct.",
+    "D": "It summarizes a text's contents, explains how it shaped a court, and then describes its rediscovery."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text first describes how the Arthashastra was found in 1905 and \"greeted as a window\" onto one court. \"Subsequent scholarship has complicated that picture\" introduces evidence that it was assembled over centuries. The last sentence reframes its worth: still \"invaluable,\" but as a record of political thought accumulating \"over generations.\"",
     "A": "Incorrect. The text questions the date and single authorship, not whether the work is genuine, and calls it \"invaluable.\"",
-    "B": "Incorrect. The text contrasts a traditional view with later scholarship and sides with the later view, not the earlier one.",
-    "C": "Incorrect. The text does not summarize the treatise's contents or describe its influence on a court, and the rediscovery comes first, not last.",
-    "D": "Correct. Recovery and first reception, then revising evidence, then a new account of what the text can show."
+    "B": "Correct. Recovery and first reception, then revising evidence, then a new account of what the text can show.",
+    "C": "Incorrect. The text contrasts a traditional view with later scholarship and sides with the later view, not the earlier one.",
+    "D": "Incorrect. The text does not summarize the treatise's contents or describe its influence on a court, and the rediscovery comes first, not last."
   },
   "traps": {
     "A": "too_broad",
-    "B": "reversed",
-    "C": "not_in_text"
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

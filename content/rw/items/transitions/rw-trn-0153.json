@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Nonetheless,",
-    "B": "Consequently,",
-    "C": "Instead,",
-    "D": "For example,"
+    "A": "Consequently,",
+    "B": "Nonetheless,",
+    "C": "For example,",
+    "D": "Instead,"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The second sentence explains that each print was inexpensive because so many could be made from one set of blocks. The last sentence states what followed from that low price: ordinary townspeople could afford the prints. A cause-and-effect transition is needed.",
-    "A": "Incorrect. \"Nonetheless\" means \"in spite of that,\" but ordinary buyers purchased the prints because they were cheap, not in spite of it.",
-    "B": "Correct. \"Consequently\" shows that the low cost of each print led to its being bought by ordinary townspeople.",
-    "C": "Incorrect. \"Instead\" is tempting because the sentence contrasts wealthy collectors with townspeople, but that contrast is inside the sentence; the sentence as a whole follows from the low price rather than replacing anything said before.",
-    "D": "Incorrect. The sentence about buyers is not an example of the low price; it describes the effect of the low price."
+    "A": "Correct. \"Consequently\" shows that the low cost of each print led to its being bought by ordinary townspeople.",
+    "B": "Incorrect. \"Nonetheless\" means \"in spite of that,\" but ordinary buyers purchased the prints because they were cheap, not in spite of it.",
+    "C": "Incorrect. The sentence about buyers is not an example of the low price; it describes the effect of the low price.",
+    "D": "Incorrect. \"Instead\" is tempting because the sentence contrasts wealthy collectors with townspeople, but that contrast is inside the sentence; the sentence as a whole follows from the low price rather than replacing anything said before."
   },
   "traps": {
-    "A": "wrong_logic",
+    "B": "wrong_logic",
     "C": "wrong_logic",
     "D": "wrong_logic"
   },
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

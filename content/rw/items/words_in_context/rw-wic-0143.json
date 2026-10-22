@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "an example of",
-    "B": "a consequence of",
-    "C": "an exception to",
-    "D": "a remedy for"
+    "A": "a consequence of",
+    "B": "a remedy for",
+    "C": "an example of",
+    "D": "an exception to"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The text contrasts the Karakoram glaciers, which \"have remained stable or even gained a little mass,\" with most glaciers, which are \"shrinking.\" The word \"anomaly\" also signals something unusual. So the glaciers are not following the trend; they are \"an exception to\" it.",
-    "A": "Incorrect. The global trend is shrinking, but these glaciers have held steady, so they do not illustrate the trend.",
-    "B": "Incorrect. The text does not say the global trend causes the Karakoram glaciers' behavior; the proposed explanation is local snowfall.",
-    "C": "Correct. The Karakoram glaciers behave differently from most glaciers, so they are an exception to the global pattern of shrinking.",
-    "D": "Incorrect. Nothing in the text suggests that these glaciers could fix or reverse the global trend."
+    "A": "Incorrect. The text does not say the global trend causes the Karakoram glaciers' behavior; the proposed explanation is local snowfall.",
+    "B": "Incorrect. Nothing in the text suggests that these glaciers could fix or reverse the global trend.",
+    "C": "Incorrect. The global trend is shrinking, but these glaciers have held steady, so they do not illustrate the trend.",
+    "D": "Correct. The Karakoram glaciers behave differently from most glaciers, so they are an exception to the global pattern of shrinking."
   },
   "traps": {
-    "A": "reversed",
+    "A": "not_in_text",
     "B": "not_in_text",
-    "D": "not_in_text"
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

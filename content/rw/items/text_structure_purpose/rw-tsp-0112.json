@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It describes the materials the brothers used to build their balloon.",
+    "A": "It suggests that the first flight with animals ended in failure.",
     "B": "It reports the outcome of a test that led the brothers to their next step.",
-    "C": "It suggests that the first flight with animals ended in failure.",
+    "C": "It describes the materials the brothers used to build their balloon.",
     "D": "It explains why the brothers decided to test the balloon with animals first."
   },
   "answer": "B",
   "explanation": {
     "why": "The sentence before the underlined one describes a test flight with animals, and the underlined sentence tells how it turned out: the animals \"survived.\" The next sentence begins \"Encouraged,\" showing that this result led the brothers to build a balloon for people.",
-    "A": "Incorrect. The materials are named in the first sentence; the underlined sentence is about the outcome of the animal flight.",
+    "A": "Incorrect. All three animals survived, so the flight succeeded.",
     "B": "Correct. The animals' safe flight is the result that encouraged the brothers to try a flight with people.",
-    "C": "Incorrect. All three animals survived, so the flight succeeded.",
+    "C": "Incorrect. The materials are named in the first sentence; the underlined sentence is about the outcome of the animal flight.",
     "D": "Incorrect. The text never says why animals were sent up first."
   },
   "traps": {
-    "A": "wrong_logic",
-    "C": "reversed",
+    "A": "reversed",
+    "C": "wrong_logic",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

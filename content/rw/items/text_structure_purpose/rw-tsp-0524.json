@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It argues that Macbeth was written to be performed after dark.",
+    "A": "It suggests that Globe audiences were often confused about when scenes took place.",
     "B": "It gives an example of one way plays dealt with the limitation described in the previous sentence.",
     "C": "It explains why the Globe was built as an open-air theater.",
-    "D": "It suggests that Globe audiences were often confused about when scenes took place."
+    "D": "It argues that Macbeth was written to be performed after dark."
   },
   "answer": "B",
   "explanation": {
     "why": "The previous sentence states a problem: the stage could not be darkened, so audiences \"had to be told\" when a scene was at night. The underlined sentence, beginning with \"therefore,\" describes one solution, characters mentioning the darkness, and gives an example from Macbeth. The final sentence adds a second method, torches and lanterns.",
-    "A": "Incorrect. The text says plays at the Globe were performed in daylight; the Macbeth line is an example of describing night, not evidence that the play was staged at night.",
+    "A": "Incorrect. The sentence shows how plays prevented confusion; it does not say audiences were often confused.",
     "B": "Correct. Having characters talk about the darkness is one way plays told daylight audiences that a scene took place at night.",
     "C": "Incorrect. The text never explains why the Globe had no roof.",
-    "D": "Incorrect. The sentence shows how plays prevented confusion; it does not say audiences were often confused."
+    "D": "Incorrect. The text says plays at the Globe were performed in daylight; the Macbeth line is an example of describing night, not evidence that the play was staged at night."
   },
   "traps": {
-    "A": "reversed",
+    "A": "not_in_text",
     "C": "not_in_text",
-    "D": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

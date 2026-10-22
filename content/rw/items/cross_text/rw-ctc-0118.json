@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the explanation in Text 1?",
   "choices": {
-    "A": "By rejecting it on the grounds that factory cloth never competed with muslin",
-    "B": "By arguing that the loss of a cotton plant, not trade policy, caused the collapse",
-    "C": "By suggesting that British duties on Bengali cloth were lower than historians assume",
-    "D": "By accepting it but adding a reason why the craft has proved difficult to revive"
+    "A": "By suggesting that British duties on Bengali cloth were lower than historians assume",
+    "B": "By rejecting it on the grounds that factory cloth never competed with muslin",
+    "C": "By accepting it but adding a reason why the craft has proved difficult to revive",
+    "D": "By arguing that the loss of a cotton plant, not trade policy, caused the collapse"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Text 1 attributes the collapse of Dhaka's muslin industry to British trade policy and factory cloth. Text 2 agrees that factory competition \"undoubtedly ruined the muslin trade\" but says this \"cannot by itself explain\" why revival has struggled: the special cotton the weavers needed was lost. So Text 2 accepts the explanation for the collapse and adds a separate reason the craft is hard to restore.",
-    "A": "Incorrect. Text 2 says competition from factory cloth \"undoubtedly ruined the muslin trade.\"",
-    "B": "Incorrect. Text 2 uses the loss of phuti karpas to explain why revival has struggled, not why the industry collapsed in the first place.",
-    "C": "Incorrect. Text 2 does not discuss the size of British duties.",
-    "D": "Correct. Text 2 accepts that factory cloth ruined the trade and adds that the loss of phuti karpas made the craft hard to bring back."
+    "A": "Incorrect. Text 2 does not discuss the size of British duties.",
+    "B": "Incorrect. Text 2 says competition from factory cloth \"undoubtedly ruined the muslin trade.\"",
+    "C": "Correct. Text 2 accepts that factory cloth ruined the trade and adds that the loss of phuti karpas made the craft hard to bring back.",
+    "D": "Incorrect. Text 2 uses the loss of phuti karpas to explain why revival has struggled, not why the industry collapsed in the first place."
   },
   "traps": {
-    "A": "reversed",
-    "B": "wrong_logic",
-    "C": "not_in_text"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Similarly,",
+    "A": "In other words,",
     "B": "For instance,",
     "C": "Nevertheless,",
-    "D": "In other words,"
+    "D": "Similarly,"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The second sentence describes genetically identical sisters that grow different bodies in different water. The last sentence states the general meaning of that observation in plainer terms: the same genes can produce either body type, depending on the environment. A restatement transition fits.",
-    "A": "Incorrect. \"Similarly\" introduces a new case that resembles the previous one, but the last sentence describes the same water fleas, not a parallel case. This is the closest near miss.",
+    "A": "Correct. \"In other words\" signals that the last sentence restates the observation about identical sisters as a general point about genes and environment.",
     "B": "Incorrect. \"For instance\" introduces an example, but the last sentence is a general statement; the specific example came in the sentence before it.",
     "C": "Incorrect. \"Nevertheless\" signals a contrast, but the last sentence agrees with and sums up the previous sentence.",
-    "D": "Correct. \"In other words\" signals that the last sentence restates the observation about identical sisters as a general point about genes and environment."
+    "D": "Incorrect. \"Similarly\" introduces a new case that resembles the previous one, but the last sentence describes the same water fleas, not a parallel case. This is the closest near miss."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

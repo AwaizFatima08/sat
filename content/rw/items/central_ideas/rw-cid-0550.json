@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Limited food on islands is the main reason that large mammals evolve smaller bodies there.",
-    "B": "Surveys of hundreds of species show that the island rule does not hold for any mammal group.",
-    "C": "The island rule may reflect conditions found on some islands rather than a universal pattern.",
+    "A": "Surveys of hundreds of species show that the island rule does not hold for any mammal group.",
+    "B": "The island rule may reflect conditions found on some islands rather than a universal pattern.",
+    "C": "Limited food on islands is the main reason that large mammals evolve smaller bodies there.",
     "D": "Mammals isolated on islands generally grow larger because they face few predators there."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The text explains the island rule and its proposed causes, then turns with \"Yet\": the causes depend on conditions that vary between islands, and the trend is strong in some groups but \"weak or absent in others.\" The final sentence concludes, cautiously, that the rule \"may describe a frequent outcome of particular circumstances rather than a general law.\" The key keeps that hedge and that contrast.",
-    "A": "Incorrect. This is part of the proponents' explanation for one half of the pattern, not the text's main point, and the text questions how general that explanation is.",
-    "B": "Incorrect. The text says the trend is \"strong in some groups,\" so it does not claim the rule fails everywhere.",
-    "C": "Correct. This matches the text's cautious conclusion that the rule depends on particular circumstances rather than holding as a general law.",
+    "A": "Incorrect. The text says the trend is \"strong in some groups,\" so it does not claim the rule fails everywhere.",
+    "B": "Correct. This matches the text's cautious conclusion that the rule depends on particular circumstances rather than holding as a general law.",
+    "C": "Incorrect. This is part of the proponents' explanation for one half of the pattern, not the text's main point, and the text questions how general that explanation is.",
     "D": "Incorrect. The text says only small mammals tend to grow larger; large ones tend to shrink, so this overgeneralizes."
   },
   "traps": {
-    "A": "too_narrow",
-    "B": "reversed",
+    "A": "reversed",
+    "C": "too_narrow",
     "D": "too_broad"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

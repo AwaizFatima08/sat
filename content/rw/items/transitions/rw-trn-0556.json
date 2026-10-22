@@ -15,21 +15,21 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "However,",
-    "B": "Specifically,",
-    "C": "Accordingly,",
-    "D": "Similarly,"
+    "B": "Accordingly,",
+    "C": "Similarly,",
+    "D": "Specifically,"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The fourth sentence establishes that the gas in a bubble is younger than the surrounding ice. The last sentence states what researchers must do because of that fact: estimate the age difference before comparing records. The transition must signal that the last sentence follows from the one before it.",
     "A": "Incorrect. \"However\" signals a contrast, but needing to estimate the age gap follows from the gap rather than contrasting with it. It may tempt a reader who notices that the passage describes a complication.",
-    "B": "Incorrect. \"Specifically\" would introduce a precise detail about how the gas is younger, but the last sentence moves on to what researchers must do about it.",
-    "C": "Correct. \"Accordingly\" signals that researchers must estimate the age difference because the gas is younger than the ice.",
-    "D": "Incorrect. \"Similarly\" introduces a parallel case, but the last sentence describes a consequence of the same fact, not a similar fact."
+    "B": "Correct. \"Accordingly\" signals that researchers must estimate the age difference because the gas is younger than the ice.",
+    "C": "Incorrect. \"Similarly\" introduces a parallel case, but the last sentence describes a consequence of the same fact, not a similar fact.",
+    "D": "Incorrect. \"Specifically\" would introduce a precise detail about how the gas is younger, but the last sentence moves on to what researchers must do about it."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

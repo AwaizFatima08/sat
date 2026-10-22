@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "ignored",
-    "B": "created",
-    "C": "argued about",
-    "D": "relied on"
+    "A": "argued about",
+    "B": "ignored",
+    "C": "relied on",
+    "D": "created"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "\"Instead\" contrasts compasses and maps with what the navigators actually used. The list after the colon (stars, swells, seabirds) names those natural signs. The blank must mean \"depended on,\" so \"relied on\" fits.",
-    "A": "Incorrect. The colon introduces the signs the navigators used to find their way; ignoring them is the opposite.",
-    "B": "Incorrect. People cannot create stars, ocean swells, or seabird flight paths; the navigators read these signs.",
-    "C": "Incorrect. The text describes no disagreement among navigators; it explains how they found their way.",
-    "D": "Correct. With no compasses or maps, navigators depended on, or relied on, the stars, swells, and birds the text lists."
+    "A": "Incorrect. The text describes no disagreement among navigators; it explains how they found their way.",
+    "B": "Incorrect. The colon introduces the signs the navigators used to find their way; ignoring them is the opposite.",
+    "C": "Correct. With no compasses or maps, navigators depended on, or relied on, the stars, swells, and birds the text lists.",
+    "D": "Incorrect. People cannot create stars, ocean swells, or seabird flight paths; the navigators read these signs."
   },
   "traps": {
-    "A": "reversed",
-    "B": "wrong_logic",
-    "C": "not_in_text"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

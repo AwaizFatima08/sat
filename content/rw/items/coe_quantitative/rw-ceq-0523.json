@@ -50,23 +50,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Mwakyusa's conclusion?",
   "choices": {
-    "A": "Arabic contributed 150 of the words, while Persian, Indian languages, Portuguese and English together contributed 70.",
-    "B": "Words of Bantu origin, at 180, made up the largest single group among the 400 words in the sample.",
-    "C": "Arabic contributed 150 of the words, far more than the 20 words that came from Portuguese.",
-    "D": "Persian, Indian languages, Portuguese and English together contributed more of the words than Arabic did."
+    "A": "Words of Bantu origin, at 180, made up the largest single group among the 400 words in the sample.",
+    "B": "Arabic contributed 150 of the words, far more than the 20 words that came from Portuguese.",
+    "C": "Persian, Indian languages, Portuguese and English together contributed more of the words than Arabic did.",
+    "D": "Arabic contributed 150 of the words, while Persian, Indian languages, Portuguese and English together contributed 70."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Mwakyusa compares Arabic with all other foreign languages combined, so add up the bars for Persian (20), Indian languages (15), Portuguese (20) and English (15): 70 words. Arabic's 150 words are more than that total, and only one choice makes this comparison.",
-    "A": "Correct. It compares Arabic with all the other foreign sources combined (20 + 15 + 20 + 15 = 70), which is the comparison the conclusion makes.",
-    "B": "Incorrect. This is true, but Bantu words are native to Swahili, not borrowed, so they are not part of Mwakyusa's comparison.",
-    "C": "Incorrect. This is true, but it compares Arabic with only one other language, not with all the other foreign languages combined.",
-    "D": "Incorrect. These four sources together contributed 70 words, fewer than Arabic's 150, so this misreads the graph."
+    "A": "Incorrect. This is true, but Bantu words are native to Swahili, not borrowed, so they are not part of Mwakyusa's comparison.",
+    "B": "Incorrect. This is true, but it compares Arabic with only one other language, not with all the other foreign languages combined.",
+    "C": "Incorrect. These four sources together contributed 70 words, fewer than Arabic's 150, so this misreads the graph.",
+    "D": "Correct. It compares Arabic with all the other foreign sources combined (20 + 15 + 20 + 15 = 70), which is the comparison the conclusion makes."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "too_narrow",
-    "D": "reversed"
+    "A": "true_irrelevant",
+    "B": "too_narrow",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -79,13 +79,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

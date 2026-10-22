@@ -20,21 +20,21 @@
   "data": null,
   "stem": "The student wants to present Pritchard's argument along with historical evidence that supports it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Pritchard argues that commercial needs, not government action, were chiefly responsible for the standardization of time in Britain.",
-    "B": "Railways adopted Greenwich Mean Time decades before it became legal standard time, supporting Pritchard's view that commerce drove standardization.",
-    "C": "As railways spread, differing local times complicated timetables, and by the end of the 1840s most British railways had adopted Greenwich Mean Time.",
+    "A": "Railways adopted Greenwich Mean Time decades before it became legal standard time, supporting Pritchard's view that commerce drove standardization.",
+    "B": "As railways spread, differing local times complicated timetables, and by the end of the 1840s most British railways had adopted Greenwich Mean Time.",
+    "C": "Pritchard argues that commercial needs, not government action, were chiefly responsible for the standardization of time in Britain.",
     "D": "Before the mid-1800s, British towns kept their own local time, so that noon in Bristol came about ten minutes after noon in London."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The goal has two parts: Pritchard's argument (commerce, not government, drove the standardization of time) and evidence for it. The strongest evidence in the notes is the timing: the railways, which are businesses, adopted Greenwich Mean Time decades before the law did. The key must join that evidence to the argument.",
-    "A": "Incorrect. This states the argument clearly, but it offers no evidence for it, so it meets only half the goal.",
-    "B": "Correct. It pairs the evidence (railways adopted the standard decades before the government made it law) with the argument that commerce drove standardization.",
-    "C": "Incorrect. This presents relevant history, but it never mentions Pritchard's argument, and it leaves out the 1880 law that makes the railways' head start clear.",
+    "A": "Correct. It pairs the evidence (railways adopted the standard decades before the government made it law) with the argument that commerce drove standardization.",
+    "B": "Incorrect. This presents relevant history, but it never mentions Pritchard's argument, and it leaves out the 1880 law that makes the railways' head start clear.",
+    "C": "Incorrect. This states the argument clearly, but it offers no evidence for it, so it meets only half the goal.",
     "D": "Incorrect. This describes the situation before standardization. It neither states the argument nor gives evidence for it."
   },
   "traps": {
-    "A": "too_narrow",
+    "B": "too_narrow",
     "C": "too_narrow",
     "D": "true_irrelevant"
   },
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

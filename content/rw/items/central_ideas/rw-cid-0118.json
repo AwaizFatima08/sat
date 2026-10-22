@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "The captain is relieved that he no longer has to steer the old ferry each day.",
-    "B": "The captain criticizes the young officer for steering the new ferry carelessly.",
-    "C": "The captain, who expected to disapprove of the new ferry, ends up approving.",
-    "D": "The new ferry is cleaner and more modern than the one the captain steered."
+    "A": "The new ferry is cleaner and more modern than the one the captain steered.",
+    "B": "The captain, who expected to disapprove of the new ferry, ends up approving.",
+    "C": "The captain criticizes the young officer for steering the new ferry carelessly.",
+    "D": "The captain is relieved that he no longer has to steer the old ferry each day."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The text says the captain \"had planned to find fault with something.\" Instead, when the ferry turns \"exactly where he would have turned it,\" he nods and raises \"a hand in salute.\" The main idea is this shift from expected disapproval to approval.",
-    "A": "Incorrect. The text never says the captain feels relieved about retiring.",
-    "B": "Incorrect. The captain finds nothing to criticize; he salutes the officer's steering.",
-    "C": "Correct. This captures the turn in the text from planning to find fault to quietly saluting.",
-    "D": "Incorrect. The description of the new ferry is a detail; the text focuses on the captain's reaction."
+    "A": "Incorrect. The description of the new ferry is a detail; the text focuses on the captain's reaction.",
+    "B": "Correct. This captures the turn in the text from planning to find fault to quietly saluting.",
+    "C": "Incorrect. The captain finds nothing to criticize; he salutes the officer's steering.",
+    "D": "Incorrect. The text never says the captain feels relieved about retiring."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "reversed",
-    "D": "too_narrow"
+    "A": "too_narrow",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

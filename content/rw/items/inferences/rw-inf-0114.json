@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "messages could cross long distances faster than one rider could have carried them.",
-    "B": "each messenger had to know the entire route from one end of the empire to the other.",
-    "C": "messages were delivered more slowly than if one rider had traveled the whole way.",
-    "D": "ordinary people across the empire came to depend on the system for their letters."
+    "A": "each messenger had to know the entire route from one end of the empire to the other.",
+    "B": "messages were delivered more slowly than if one rider had traveled the whole way.",
+    "C": "ordinary people across the empire came to depend on the system for their letters.",
+    "D": "messages could cross long distances faster than one rider could have carried them."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "In a relay, each messenger covers only one short stage and hands the message to someone rested. Since nobody has to slow down from exhaustion over the whole route, the message keeps moving quickly, faster than one tiring rider could manage.",
-    "A": "Correct. Fresh riders and horses at each post let the message move quickly over the full distance.",
-    "B": "Incorrect. Each messenger traveled only to the next post, so no one needed to know the whole route.",
-    "C": "Incorrect. This reverses the point of the relay; rested messengers at each stage would make delivery faster, not slower.",
-    "D": "Incorrect. The text describes official messages only; it says nothing about ordinary people's letters."
+    "A": "Incorrect. Each messenger traveled only to the next post, so no one needed to know the whole route.",
+    "B": "Incorrect. This reverses the point of the relay; rested messengers at each stage would make delivery faster, not slower.",
+    "C": "Incorrect. The text describes official messages only; it says nothing about ordinary people's letters.",
+    "D": "Correct. Fresh riders and horses at each post let the message move quickly over the full distance."
   },
   "traps": {
+    "A": "reversed",
     "B": "reversed",
-    "C": "reversed",
-    "D": "not_in_text"
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

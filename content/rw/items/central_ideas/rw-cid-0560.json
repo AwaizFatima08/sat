@@ -15,22 +15,22 @@
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
     "A": "Ghazal couplets lack any real unity, which is why readers of European poetry find them disconnected.",
-    "B": "A ghazal's couplets are bound chiefly by shared patterns of sound rather than by a line of thought.",
-    "C": "Each couplet of a ghazal is complete in itself and can be quoted without the rest of the poem.",
-    "D": "Audiences at recitations appreciate ghazals more fully than readers of printed poems do."
+    "B": "Audiences at recitations appreciate ghazals more fully than readers of printed poems do.",
+    "C": "A ghazal's couplets are bound chiefly by shared patterns of sound rather than by a line of thought.",
+    "D": "Each couplet of a ghazal is complete in itself and can be quoted without the rest of the poem."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The text acknowledges that ghazals can seem \"disconnected\" because each couplet stands alone, then explains what unifies them: \"less a developing argument than a shared form\" of meter, rhyme, and refrain. Its final sentence restates this: the unity \"is heard before it is understood.\" The main idea is that the ghazal's unity lies in sound patterns rather than in a continuous argument.",
     "A": "Incorrect. The text explains that ghazals do have unity, of a kind that some readers do not expect.",
-    "B": "Correct. This states the text's central claim that shared meter, rhyme, and refrain, not an argument, hold the poem together.",
-    "C": "Incorrect. This is the feature that makes ghazals seem disconnected, not the text's explanation of what unifies them.",
-    "D": "Incorrect. The text never compares how fully listeners and readers appreciate ghazals."
+    "B": "Incorrect. The text never compares how fully listeners and readers appreciate ghazals.",
+    "C": "Correct. This states the text's central claim that shared meter, rhyme, and refrain, not an argument, hold the poem together.",
+    "D": "Incorrect. This is the feature that makes ghazals seem disconnected, not the text's explanation of what unifies them."
   },
   "traps": {
     "A": "reversed",
-    "C": "too_narrow",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

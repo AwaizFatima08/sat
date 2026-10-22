@@ -45,22 +45,22 @@
   "stem": "Which choice most effectively uses data from the table to support Obi's argument?",
   "choices": {
     "A": "At 20°C, the dough took more than three hours to double in size.",
-    "B": "Loaf volume was greatest at 20°C and decreased with each increase in dough temperature.",
-    "C": "Raising the temperature from 24°C to 32°C halved the rising time but shrank loaf volume from 1,480 to 1,290 cubic centimeters.",
-    "D": "Rising time decreased with each increase in dough temperature shown in the table."
+    "B": "Rising time decreased with each increase in dough temperature shown in the table.",
+    "C": "Loaf volume was greatest at 20°C and decreased with each increase in dough temperature.",
+    "D": "Raising the temperature from 24°C to 32°C halved the rising time but shrank loaf volume from 1,480 to 1,290 cubic centimeters."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Obi's argument has two linked parts: above a moderate temperature, dough rises faster, but the loaves are smaller. Support must use both columns over the same temperature change. From 24°C to 32°C, rising time fell from 2.0 to 1.0 hours while loaf volume fell from 1,480 to 1,290 cubic centimeters.",
     "A": "Incorrect. This is true, but it gives one reading at the coolest temperature and shows neither a trade-off nor what happens above a moderate temperature.",
-    "B": "Incorrect. Loaf volume was greatest at 24°C (1,480), not at 20°C (1,450), so this misreads the table.",
-    "C": "Correct. It shows both the time saved and the loss in volume when the temperature rises beyond a moderate level, which is exactly the trade-off Obi describes.",
-    "D": "Incorrect. This is true, but it supports only the point Obi already grants (warmth speeds rising) and says nothing about the cost in loaf size."
+    "B": "Incorrect. This is true, but it supports only the point Obi already grants (warmth speeds rising) and says nothing about the cost in loaf size.",
+    "C": "Incorrect. Loaf volume was greatest at 24°C (1,480), not at 20°C (1,450), so this misreads the table.",
+    "D": "Correct. It shows both the time saved and the loss in volume when the temperature rises beyond a moderate level, which is exactly the trade-off Obi describes."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "reversed",
-    "D": "too_narrow"
+    "B": "too_narrow",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

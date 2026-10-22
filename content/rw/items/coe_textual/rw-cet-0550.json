@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Ortega's argument?",
   "choices": {
-    "A": "Tortoises dug basins on many of the afternoons that came before heavy summer storms.",
-    "B": "Tortoises drank from their basins within a few hours after a storm had passed.",
+    "A": "Tortoises dug basins before storms that arrived at night, when gathering clouds could not be seen.",
+    "B": "Tortoises dug basins on many of the afternoons that came before heavy summer storms.",
     "C": "Under dimmed light with steady air pressure, captive tortoises began digging basins.",
-    "D": "Tortoises dug basins before storms that arrived at night, when gathering clouds could not be seen."
+    "D": "Tortoises drank from their basins within a few hours after a storm had passed."
   },
   "answer": "C",
   "explanation": {
     "why": "Ortega claims falling air pressure, not darkening, triggers digging. A test that dims the light while keeping pressure steady separates the two cues. If tortoises dig anyway, darkening alone is enough to trigger the behavior, contrary to Ortega.",
-    "A": "Incorrect. Digging before storms is the behavior both explanations try to account for, so it does not favor either one.",
-    "B": "Incorrect. Drinking after the storm shows what the basins are for, not what cue prompts the digging.",
+    "A": "Incorrect. Digging when the sky's darkening could not be seen rules out the colleague's cue, which supports Ortega.",
+    "B": "Incorrect. Digging before storms is the behavior both explanations try to account for, so it does not favor either one.",
     "C": "Correct. Digging with no drop in pressure shows that darkening can trigger the behavior by itself, which undercuts Ortega.",
-    "D": "Incorrect. Digging when the sky's darkening could not be seen rules out the colleague's cue, which supports Ortega."
+    "D": "Incorrect. Drinking after the storm shows what the basins are for, not what cue prompts the digging."
   },
   "traps": {
-    "A": "true_irrelevant",
+    "A": "reversed",
     "B": "true_irrelevant",
-    "D": "reversed"
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "lengthy",
-    "B": "borrowed",
-    "C": "confusing",
-    "D": "vivid"
+    "B": "confusing",
+    "C": "vivid",
+    "D": "borrowed"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "\"Instead\" contrasts long explanations with the poet's real method: a few images that can \"call up a whole scene or feeling.\" For so few words to do so much, the images must be strong and clear. \"Vivid\" fits.",
     "A": "Incorrect. The text stresses that a haiku has \"so little room\"; lengthy images are exactly what the form cannot hold.",
-    "B": "Incorrect. Nothing in the text says poets take images from other writers.",
-    "C": "Incorrect. Images meant to call up \"a whole scene or feeling\" in the reader's mind must be clear, not confusing.",
-    "D": "Correct. With no room for explanations, the poet relies on a few images strong and clear enough to \"call up a whole scene,\" which is what \"vivid\" means."
+    "B": "Incorrect. Images meant to call up \"a whole scene or feeling\" in the reader's mind must be clear, not confusing.",
+    "C": "Correct. With no room for explanations, the poet relies on a few images strong and clear enough to \"call up a whole scene,\" which is what \"vivid\" means.",
+    "D": "Incorrect. Nothing in the text says poets take images from other writers."
   },
   "traps": {
     "A": "reversed",
-    "B": "not_in_text",
-    "C": "wrong_tone"
+    "B": "wrong_tone",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

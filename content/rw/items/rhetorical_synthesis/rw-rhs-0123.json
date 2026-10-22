@@ -21,22 +21,22 @@
   "stem": "The student wants to make a generalization about why some plants catch insects. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
     "A": "The Venus flytrap, pitcher plants, and sundews each use a different method to trap insects.",
-    "B": "The Venus flytrap, pitcher plants, and sundews all get from insects the nitrogen their boggy soils lack.",
-    "C": "Sundews, which grow in bogs where the soil has little nitrogen, trap insects with sticky drops on their leaves.",
-    "D": "Pitcher plants catch insects in deep, slippery leaves that are filled with liquid."
+    "B": "Sundews, which grow in bogs where the soil has little nitrogen, trap insects with sticky drops on their leaves.",
+    "C": "Pitcher plants catch insects in deep, slippery leaves that are filled with liquid.",
+    "D": "The Venus flytrap, pitcher plants, and sundews all get from insects the nitrogen their boggy soils lack."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The goal has two parts: make a broad statement about several plants, and explain why they catch insects. The notes say these plants grow in soil with little nitrogen and absorb nitrogen from insects. The key must combine all three plants with that reason.",
     "A": "Incorrect. This is a generalization about all three plants, but it is about how they trap insects, not why.",
-    "B": "Correct. It makes a broad statement about all three plants and gives the reason: insects supply nitrogen their soils lack.",
-    "C": "Incorrect. This hints at the reason, but it describes only one kind of plant, so it is not a generalization.",
-    "D": "Incorrect. This describes how one kind of plant catches insects and gives no reason."
+    "B": "Incorrect. This hints at the reason, but it describes only one kind of plant, so it is not a generalization.",
+    "C": "Incorrect. This describes how one kind of plant catches insects and gives no reason.",
+    "D": "Correct. It makes a broad statement about all three plants and gives the reason: insects supply nitrogen their soils lack."
   },
   "traps": {
     "A": "misses_goal",
-    "C": "too_narrow",
-    "D": "too_narrow"
+    "B": "too_narrow",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

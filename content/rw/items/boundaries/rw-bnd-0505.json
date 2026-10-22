@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "tongue, a",
-    "B": "tongue; a",
-    "C": "tongue. A",
+    "A": "tongue; a",
+    "B": "tongue. A",
+    "C": "tongue, a",
     "D": "tongue a"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "\"A sticky, muscular organ that can stretch …\" is not a complete sentence; it is a phrase that renames and describes \"tongue.\" A phrase like this, added at the end of a sentence, is set off with a comma.",
-    "A": "Correct. The comma sets off the descriptive phrase that renames \"tongue.\"",
-    "B": "Incorrect. A semicolon must be followed by an independent clause, but \"a sticky, muscular organ that can stretch …\" has no main verb of its own.",
-    "C": "Incorrect. A period would leave \"A sticky, muscular organ that can stretch …\" as a sentence fragment.",
+    "A": "Incorrect. A semicolon must be followed by an independent clause, but \"a sticky, muscular organ that can stretch …\" has no main verb of its own.",
+    "B": "Incorrect. A period would leave \"A sticky, muscular organ that can stretch …\" as a sentence fragment.",
+    "C": "Correct. The comma sets off the descriptive phrase that renames \"tongue.\"",
     "D": "Incorrect. Without a comma, the descriptive phrase runs into \"tongue\" and the sentence is hard to read; nonessential phrases must be set off."
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "supplements",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

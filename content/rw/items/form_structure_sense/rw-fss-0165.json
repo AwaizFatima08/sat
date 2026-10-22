@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "the request from his granddaughter's fiancé surprised Mr. Varga, who accepted it anyway.",
-    "B": "Mr. Varga surprised himself by agreeing to make a wedding suit for his granddaughter's fiancé.",
-    "C": "Mr. Varga's decision to make a wedding suit for his granddaughter's fiancé surprised everyone.",
-    "D": "a wedding suit for his granddaughter's fiancé was the one order that Mr. Varga could not refuse."
+    "A": "a wedding suit for his granddaughter's fiancé was the one order that Mr. Varga could not refuse.",
+    "B": "Mr. Varga's decision to make a wedding suit for his granddaughter's fiancé surprised everyone.",
+    "C": "the request from his granddaughter's fiancé surprised Mr. Varga, who accepted it anyway.",
+    "D": "Mr. Varga surprised himself by agreeing to make a wedding suit for his granddaughter's fiancé."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The introductory phrase \"Having sworn on the day he closed the shop that he would never again accept an order\" describes a person: the tailor who made the vow. A modifier at the start of a sentence applies to the subject that comes right after the comma, so that subject must be Mr. Varga himself.",
-    "A": "Incorrect. This makes \"the request\" the subject, so the sentence says the request had sworn never to accept an order.",
-    "B": "Correct. \"Mr. Varga\" comes right after the introductory phrase, so it is clear that he is the one who had sworn.",
-    "C": "Incorrect. The subject is \"decision,\" not Mr. Varga; \"Mr. Varga's\" only describes the decision, which did not swear anything.",
-    "D": "Incorrect. This makes \"a wedding suit\" the subject, so the sentence says the suit had sworn never to accept an order."
+    "A": "Incorrect. This makes \"a wedding suit\" the subject, so the sentence says the suit had sworn never to accept an order.",
+    "B": "Incorrect. The subject is \"decision,\" not Mr. Varga; \"Mr. Varga's\" only describes the decision, which did not swear anything.",
+    "C": "Incorrect. This makes \"the request\" the subject, so the sentence says the request had sworn never to accept an order.",
+    "D": "Correct. \"Mr. Varga\" comes right after the introductory phrase, so it is clear that he is the one who had sworn."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "B": "grammar_rule",
+    "C": "grammar_rule"
   },
   "grammar": "modifier",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

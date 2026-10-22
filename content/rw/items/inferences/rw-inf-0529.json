@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "not every ostrakon was inscribed by the citizen who used it to vote.",
-    "B": "Themistocles was sent into exile because of these particular ostraka.",
-    "C": "most citizens of Athens were unable to write names on their own.",
-    "D": "ostracism votes were counted by a group of about fourteen officials."
+    "A": "ostracism votes were counted by a group of about fourteen officials.",
+    "B": "most citizens of Athens were unable to write names on their own.",
+    "C": "not every ostrakon was inscribed by the citizen who used it to vote.",
+    "D": "Themistocles was sent into exile because of these particular ostraka."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "About 190 ballots were written by only about fourteen people, so they were prepared for others to use. Whatever the purpose, this shows that some voters could cast an ostrakon that someone else had written.",
-    "A": "Correct. Ballots prepared in bulk by a few writers were meant to be used by other people, so voters did not always write their own.",
-    "B": "Incorrect. The text says these ostraka appear to have been thrown away unused, so they could not have decided any vote.",
-    "C": "Incorrect. This goes too far: helping voters who could not write is only one possible purpose, and it would not show that most citizens were unable to write.",
-    "D": "Incorrect. The fourteen people were the writers of the ostraka; the text says nothing about who counted votes."
+    "A": "Incorrect. The fourteen people were the writers of the ostraka; the text says nothing about who counted votes.",
+    "B": "Incorrect. This goes too far: helping voters who could not write is only one possible purpose, and it would not show that most citizens were unable to write.",
+    "C": "Correct. Ballots prepared in bulk by a few writers were meant to be used by other people, so voters did not always write their own.",
+    "D": "Incorrect. The text says these ostraka appear to have been thrown away unused, so they could not have decided any vote."
   },
   "traps": {
-    "B": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

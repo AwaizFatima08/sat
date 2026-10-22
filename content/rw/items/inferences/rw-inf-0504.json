@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "fewer carved blocks than a print that used three colors.",
-    "B": "more carved blocks than a print that used three colors.",
-    "C": "one carved block holding all ten colors at the same time.",
-    "D": "a carver who had also designed the picture being printed."
+    "A": "a carver who had also designed the picture being printed.",
+    "B": "one carved block holding all ten colors at the same time.",
+    "C": "more carved blocks than a print that used three colors.",
+    "D": "fewer carved blocks than a print that used three colors."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The text says each color had its own block. A ten-color print therefore needed ten blocks, which is more than the three blocks a three-color print needed.",
-    "A": "Incorrect. This reverses the relationship: more colors means more blocks, not fewer.",
-    "B": "Correct. One block per color means ten blocks for ten colors, more than a three-color print needed.",
-    "C": "Incorrect. The text says a separate block was cut for each color, not one block for all of them.",
-    "D": "Incorrect. The text describes teams of workers but never says carvers designed the pictures."
+    "A": "Incorrect. The text describes teams of workers but never says carvers designed the pictures.",
+    "B": "Incorrect. The text says a separate block was cut for each color, not one block for all of them.",
+    "C": "Correct. One block per color means ten blocks for ten colors, more than a three-color print needed.",
+    "D": "Incorrect. This reverses the relationship: more colors means more blocks, not fewer."
   },
   "traps": {
-    "A": "reversed",
-    "C": "reversed",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

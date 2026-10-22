@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It presents the assumption that the study was designed to test.",
-    "B": "It describes how the shrimp were trained to choose between colors.",
-    "C": "It offers evidence that mantis shrimp distinguish more shades than humans do.",
+    "A": "It offers evidence that mantis shrimp distinguish more shades than humans do.",
+    "B": "It presents the assumption that the study was designed to test.",
+    "C": "It describes how the shrimp were trained to choose between colors.",
     "D": "It reports a result that runs counter to a widely held assumption."
   },
   "answer": "D",
   "explanation": {
     "why": "The text first states an assumption: with twelve cell types, the shrimp \"must therefore be able to tell apart far more shades than people can.\" The underlined sentence reports what the study found: the shrimp failed at color differences \"that humans notice easily.\" That result contradicts the assumption and leads to the researchers' different conclusion in the last sentence.",
-    "A": "Incorrect. The assumption appears in the second sentence; the underlined sentence gives the study's result.",
-    "B": "Incorrect. The training method is described in the sentence before; the underlined sentence tells how the shrimp performed.",
-    "C": "Incorrect. The shrimp did worse than humans at telling similar colors apart, so the sentence weakens this idea rather than supporting it.",
+    "A": "Incorrect. The shrimp did worse than humans at telling similar colors apart, so the sentence weakens this idea rather than supporting it.",
+    "B": "Incorrect. The assumption appears in the second sentence; the underlined sentence gives the study's result.",
+    "C": "Incorrect. The training method is described in the sentence before; the underlined sentence tells how the shrimp performed.",
     "D": "Correct. The shrimp's poor performance with similar colors challenges the belief that more cell types meant finer color discrimination."
   },
   "traps": {
-    "A": "wrong_logic",
-    "B": "too_narrow",
-    "C": "reversed"
+    "A": "reversed",
+    "B": "wrong_logic",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

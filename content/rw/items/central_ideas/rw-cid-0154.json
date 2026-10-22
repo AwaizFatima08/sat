@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Magnetotactic bacteria use their magnetite chains as compasses to travel long distances.",
-    "B": "Following Earth's tilted magnetic field seems to guide these bacteria toward the sediment they favor.",
-    "C": "Bacteria in the Southern Hemisphere build their magnetite chains quite differently from those in the north.",
-    "D": "Magnetic field lines tilt more steeply in the Northern Hemisphere than in the Southern Hemisphere."
+    "A": "Bacteria in the Southern Hemisphere build their magnetite chains quite differently from those in the north.",
+    "B": "Magnetic field lines tilt more steeply in the Northern Hemisphere than in the Southern Hemisphere.",
+    "C": "Following Earth's tilted magnetic field seems to guide these bacteria toward the sediment they favor.",
+    "D": "Magnetotactic bacteria use their magnetite chains as compasses to travel long distances."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The text raises a puzzle (why would a microbe that travels only millimeters need a compass?) and answers it: because field lines tilt into the ground, following them leads the bacteria down to the low-oxygen sediment they favor. The hemisphere difference is offered as evidence for this explanation. The main idea is the proposed purpose of the bacteria's magnetic sense.",
-    "A": "Incorrect. The text says these bacteria \"travel only millimeters\"; the compass matters for direction, not distance.",
-    "B": "Correct. This states the text's answer to its central puzzle, with the text's own hedge (\"appears\").",
-    "C": "Incorrect. The text says bacteria in the two hemispheres swim in different directions, not that they build their chains differently.",
-    "D": "Incorrect. The text never compares how steeply the field lines tilt in the two hemispheres."
+    "A": "Incorrect. The text says bacteria in the two hemispheres swim in different directions, not that they build their chains differently.",
+    "B": "Incorrect. The text never compares how steeply the field lines tilt in the two hemispheres.",
+    "C": "Correct. This states the text's answer to its central puzzle, with the text's own hedge (\"appears\").",
+    "D": "Incorrect. The text says these bacteria \"travel only millimeters\"; the compass matters for direction, not distance."
   },
   "traps": {
-    "A": "reversed",
-    "C": "not_in_text",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

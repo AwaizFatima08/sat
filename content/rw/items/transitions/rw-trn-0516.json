@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "Moreover,",
-    "B": "Nevertheless,",
+    "B": "Specifically,",
     "C": "Instead,",
-    "D": "Specifically,"
+    "D": "Nevertheless,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The second sentence mentions the archerfish's weapon only in general terms: something \"built into its own mouth.\" The last sentence explains exactly what that weapon is and how it works, a tube formed by the tongue that shoots water. A transition that introduces a precise account of something just mentioned is needed.",
     "A": "Incorrect. \"Moreover\" adds a new point, but the last sentence does not add a second fact; it explains the weapon already mentioned.",
-    "B": "Incorrect. The description of the water jet does not go against anything in the earlier sentences; it fills in their details.",
+    "B": "Correct. \"Specifically\" signals that the last sentence states exactly what the weapon \"built into its own mouth\" is.",
     "C": "Incorrect. \"Instead\" would mean the fish uses the water jet in place of its mouth, but the jet is made by its mouth.",
-    "D": "Correct. \"Specifically\" signals that the last sentence states exactly what the weapon \"built into its own mouth\" is."
+    "D": "Incorrect. The description of the water jet does not go against anything in the earlier sentences; it fills in their details."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

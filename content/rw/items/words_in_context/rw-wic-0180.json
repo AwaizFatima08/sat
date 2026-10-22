@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "beholden to",
-    "B": "oblivious to",
-    "C": "antagonistic to",
-    "D": "reconciled to"
+    "A": "antagonistic to",
+    "B": "reconciled to",
+    "C": "beholden to",
+    "D": "oblivious to"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Epictetus taught that outcomes \"lie ultimately beyond our control\" and that suffering comes from our judgments about events. He asked students to keep acting while accepting results calmly. The blank must mean having come to peaceful acceptance of something: \"reconciled to.\"",
-    "A": "Incorrect. To be beholden to something is to depend on it. Epictetus taught the opposite: our well-being should not depend on things outside our control.",
-    "B": "Incorrect. To be oblivious is to be unaware. Epictetus asked students to accept outcomes, not to fail to notice them.",
-    "C": "Incorrect. Being antagonistic to outcomes would mean opposing or resenting them, which is the kind of disturbing judgment Epictetus warned against.",
-    "D": "Correct. To be reconciled to something is to accept it calmly. Epictetus wanted students to act well while accepting outcomes beyond their control."
+    "A": "Incorrect. Being antagonistic to outcomes would mean opposing or resenting them, which is the kind of disturbing judgment Epictetus warned against.",
+    "B": "Correct. To be reconciled to something is to accept it calmly. Epictetus wanted students to act well while accepting outcomes beyond their control.",
+    "C": "Incorrect. To be beholden to something is to depend on it. Epictetus taught the opposite: our well-being should not depend on things outside our control.",
+    "D": "Incorrect. To be oblivious is to be unaware. Epictetus asked students to accept outcomes, not to fail to notice them."
   },
   "traps": {
     "A": "reversed",
-    "B": "wrong_tone",
-    "C": "reversed"
+    "C": "reversed",
+    "D": "wrong_tone"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

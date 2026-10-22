@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "its",
-    "B": "it's",
-    "C": "their",
-    "D": "they're"
+    "A": "their",
+    "B": "they're",
+    "C": "it's",
+    "D": "its"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The sound waves belong to \"the two instruments of a pair,\" which is plural. A plural antecedent needs the plural possessive pronoun \"their.\" The singular nouns \"gamelan\" and \"pair\" are nearby, but each instrument produces its own wave, and it is the two instruments whose waves combine.",
-    "A": "Incorrect. \"Its\" is singular, but the waves belong to the plural \"two instruments.\"",
-    "B": "Incorrect. \"It's\" means \"it is\" or \"it has\"; \"it is slightly different sound waves\" makes no sense, and a possessive is needed.",
-    "C": "Correct. \"Their\" is the plural possessive pronoun, matching \"the two instruments.\"",
-    "D": "Incorrect. \"They're\" means \"they are\"; \"they are slightly different sound waves combine\" is not grammatical, and a possessive is needed."
+    "A": "Correct. \"Their\" is the plural possessive pronoun, matching \"the two instruments.\"",
+    "B": "Incorrect. \"They're\" means \"they are\"; \"they are slightly different sound waves combine\" is not grammatical, and a possessive is needed.",
+    "C": "Incorrect. \"It's\" means \"it is\" or \"it has\"; \"it is slightly different sound waves\" makes no sense, and a possessive is needed.",
+    "D": "Incorrect. \"Its\" is singular, but the waves belong to the plural \"two instruments.\""
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "pronoun",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

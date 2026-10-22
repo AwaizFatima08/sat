@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the explanation in Text 1?",
   "choices": {
-    "A": "By rejecting it, on the grounds that bats share food with unrelated roostmates far more than with kin",
-    "B": "By accepting it, since food sharing among relatives promotes the survival of the genes they share",
+    "A": "By accepting it, since food sharing among relatives promotes the survival of the genes they share",
+    "B": "By rejecting it, on the grounds that bats share food with unrelated roostmates far more than with kin",
     "C": "By arguing that the danger of starvation, rather than kinship or partnership, explains the sharing",
     "D": "By granting that kinship plays a role while contending that it cannot fully account for the sharing"
   },
   "answer": "D",
   "explanation": {
     "why": "Text 1 explains food sharing through kin selection. Fonoti \"does not deny that bats favor their kin\" but \"doubts that kinship is the whole story,\" because bats fed unrelated partners and past help predicted sharing \"at least as well as kinship did.\" She therefore accepts kinship as a factor while adding reciprocal partnerships.",
-    "A": "Incorrect. Fonoti does not reject kin selection, and Text 2 never says bats share with non-relatives more often than with relatives; it says past help predicted sharing \"at least as well as\" kinship.",
-    "B": "Incorrect. Fonoti accepts that kinship matters but argues it is not \"the whole story,\" so she would not simply accept the explanation.",
+    "A": "Incorrect. Fonoti accepts that kinship matters but argues it is not \"the whole story,\" so she would not simply accept the explanation.",
+    "B": "Incorrect. Fonoti does not reject kin selection, and Text 2 never says bats share with non-relatives more often than with relatives; it says past help predicted sharing \"at least as well as\" kinship.",
     "C": "Incorrect. Text 2 does not treat the risk of starvation as a rival explanation; it adds reciprocity to kinship.",
     "D": "Correct. Fonoti grants that bats favor their kin but argues that reciprocal partnerships also help sustain food sharing."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "reversed",
+    "A": "reversed",
+    "B": "too_broad",
     "C": "not_in_text"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

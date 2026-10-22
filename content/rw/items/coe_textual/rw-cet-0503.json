@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Nwosu's proposal?",
   "choices": {
-    "A": "The tale about the hare is among the oldest stories still told in the coastal villages that Nwosu visited.",
-    "B": "Storytellers in inland villages tell the tale with the same seashore setting that coastal storytellers use.",
-    "C": "In inland versions, the hare outwits a crocodile at a riverbank instead of a shark at the sea.",
-    "D": "Many listeners in the villages Nwosu visited said they enjoy tales about clever animals more than other tales."
+    "A": "Many listeners in the villages Nwosu visited said they enjoy tales about clever animals more than other tales.",
+    "B": "In inland versions, the hare outwits a crocodile at a riverbank instead of a shark at the sea.",
+    "C": "Storytellers in inland villages tell the tale with the same seashore setting that coastal storytellers use.",
+    "D": "The tale about the hare is among the oldest stories still told in the coastal villages that Nwosu visited."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Nwosu predicts that the plot stays the same while the setting shifts to match each storyteller's surroundings. Inland villages are far from the sea, so her idea predicts that their versions would replace the sea with something local. A version with the same plot set at a river does exactly that.",
-    "A": "Incorrect. The age of the tale does not show whether storytellers change its details to fit where they live.",
-    "B": "Incorrect. If inland storytellers keep the seashore setting, the tale is not being adapted to their surroundings, so this would weaken the proposal.",
-    "C": "Correct. The plot stays the same, but the setting and animal change to match an inland landscape, just as Nwosu proposes.",
-    "D": "Incorrect. Listeners' favorite kinds of tales say nothing about how storytellers change a tale's details."
+    "A": "Incorrect. Listeners' favorite kinds of tales say nothing about how storytellers change a tale's details.",
+    "B": "Correct. The plot stays the same, but the setting and animal change to match an inland landscape, just as Nwosu proposes.",
+    "C": "Incorrect. If inland storytellers keep the seashore setting, the tale is not being adapted to their surroundings, so this would weaken the proposal.",
+    "D": "Incorrect. The age of the tale does not show whether storytellers change its details to fit where they live."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "reversed",
+    "C": "reversed",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

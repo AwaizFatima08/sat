@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "economy",
-    "B": "obscurity",
-    "C": "rigidity",
-    "D": "ornamentation"
+    "A": "rigidity",
+    "B": "ornamentation",
+    "C": "economy",
+    "D": "obscurity"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The text stresses that the rules are \"brief\" and \"compressed,\" and it explains the purpose: a grammar \"compact enough to be memorized.\" The blank must name the quality of saying a great deal in very few words, which is \"economy.\"",
-    "A": "Correct. Economy of expression means using as few words as possible. The compactness of the rules made the whole grammar easy to memorize.",
-    "B": "Incorrect. The rules are hard to understand without commentary, but that difficulty was a side effect. The stated purpose, memorizing the whole grammar, depended on compactness, not on being hard to understand.",
-    "C": "Incorrect. The text never says the rules were inflexible; its focus is on how short they were.",
-    "D": "Incorrect. Ornamentation means decoration, the opposite of rules reduced to \"only a few syllables.\""
+    "A": "Incorrect. The text never says the rules were inflexible; its focus is on how short they were.",
+    "B": "Incorrect. Ornamentation means decoration, the opposite of rules reduced to \"only a few syllables.\"",
+    "C": "Correct. Economy of expression means using as few words as possible. The compactness of the rules made the whole grammar easy to memorize.",
+    "D": "Incorrect. The rules are hard to understand without commentary, but that difficulty was a side effect. The stated purpose, memorizing the whole grammar, depended on compactness, not on being hard to understand."
   },
   "traps": {
-    "B": "wrong_logic",
-    "C": "not_in_text",
-    "D": "reversed"
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

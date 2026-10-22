@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that desert ants have a better sense of direction than any other insect",
-    "B": "To describe how the flat sand of the Sahara makes landmarks hard to find",
-    "C": "To describe an experiment that tested how desert ants judge distance",
-    "D": "To explain how desert ants locate sources of food far from the nest"
+    "A": "To explain how desert ants locate sources of food far from the nest",
+    "B": "To argue that desert ants have a better sense of direction than any other insect",
+    "C": "To describe how the flat sand of the Sahara makes landmarks hard to find",
+    "D": "To describe an experiment that tested how desert ants judge distance"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The text states a suspicion (the ants \"judge distance by counting their steps\"), describes how one team tested it with stilts and shortened legs, and reports results \"as expected\" if the idea is right. Its main purpose is to present that test of how the ants measure distance.",
-    "A": "Incorrect. The text never compares desert ants with other insects.",
-    "B": "Incorrect. The featureless sand is background that explains why the ants' navigation is interesting; it is not the focus.",
-    "C": "Correct. Most of the text describes how researchers altered the ants' legs to test the step-counting idea and what happened.",
-    "D": "Incorrect. The experiment is about how the ants find their way home, not how they find food."
+    "A": "Incorrect. The experiment is about how the ants find their way home, not how they find food.",
+    "B": "Incorrect. The text never compares desert ants with other insects.",
+    "C": "Incorrect. The featureless sand is background that explains why the ants' navigation is interesting; it is not the focus.",
+    "D": "Correct. Most of the text describes how researchers altered the ants' legs to test the step-counting idea and what happened."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "too_narrow",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

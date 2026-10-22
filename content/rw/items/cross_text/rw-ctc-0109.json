@@ -15,22 +15,22 @@
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the assumption in Text 1?",
   "choices": {
     "A": "By agreeing that Napoleon was unusually short for a man of his time",
-    "B": "By questioning its basis, since Napoleon was likely of average height",
-    "C": "By arguing that Napoleon was in fact taller than most men in France",
-    "D": "By claiming that British cartoonists invented the term \"Napoleon complex\""
+    "B": "By claiming that British cartoonists invented the term \"Napoleon complex\"",
+    "C": "By questioning its basis, since Napoleon was likely of average height",
+    "D": "By arguing that Napoleon was in fact taller than most men in France"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The assumption in Text 1 depends on Napoleon being \"physically small.\" Text 2 says historians estimate he was \"close to average for a Frenchman of his era\" and explains where the idea that he was tiny came from. So the author of Text 2 would question the starting point of the assumption.",
     "A": "Incorrect. Text 2 says Napoleon's height was close to average, so its author would not call him unusually short.",
-    "B": "Correct. Text 2 shows that Napoleon was probably of average height, which undercuts an assumption built on his being small.",
-    "C": "Incorrect. Text 2 says he was \"close to average,\" not taller than most men.",
-    "D": "Incorrect. Text 2 says British cartoonists drew Napoleon as small; it does not say they created the term."
+    "B": "Incorrect. Text 2 says British cartoonists drew Napoleon as small; it does not say they created the term.",
+    "C": "Correct. Text 2 shows that Napoleon was probably of average height, which undercuts an assumption built on his being small.",
+    "D": "Incorrect. Text 2 says he was \"close to average,\" not taller than most men."
   },
   "traps": {
     "A": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

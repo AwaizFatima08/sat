@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "elastic",
-    "B": "rigid",
-    "C": "empty",
-    "D": "delicate"
+    "B": "empty",
+    "C": "delicate",
+    "D": "rigid"
   },
   "answer": "A",
   "explanation": {
     "why": "The stomach \"can swell until the pufferfish is several times its normal size.\" Only a stomach that stretches a great deal could do that, so the blank needs a word meaning \"stretchy,\" such as \"elastic.\"",
     "A": "Correct. An elastic stomach stretches easily, which is exactly what lets it \"swell\" to several times the fish's normal size.",
-    "B": "Incorrect. A rigid stomach would not stretch at all, the opposite of one that can swell to several times its size.",
-    "C": "Incorrect. The fish fills the stomach with water; describing it as empty does not explain how it can swell so much.",
-    "D": "Incorrect. Nothing in the text suggests the stomach is fragile; it must be tough and stretchy to hold that much water."
+    "B": "Incorrect. The fish fills the stomach with water; describing it as empty does not explain how it can swell so much.",
+    "C": "Incorrect. Nothing in the text suggests the stomach is fragile; it must be tough and stretchy to hold that much water.",
+    "D": "Incorrect. A rigid stomach would not stretch at all, the opposite of one that can swell to several times its size."
   },
   "traps": {
-    "B": "reversed",
-    "C": "wrong_logic",
-    "D": "wrong_tone"
+    "B": "wrong_logic",
+    "C": "wrong_tone",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the critics' reading of Brutalism in Text 1?",
   "choices": {
-    "A": "By denying that Brutalist buildings ever became unpopular with the people who used them",
+    "A": "By agreeing that the architects meant their buildings to look harsh while defending that choice",
     "B": "By arguing that the critics misread both the name's origin and the architects' aims",
-    "C": "By agreeing that the architects meant their buildings to look harsh while defending that choice",
+    "C": "By denying that Brutalist buildings ever became unpopular with the people who used them",
     "D": "By pointing out that Le Corbusier, not later architects, first gave the style the name Brutalism"
   },
   "answer": "B",
   "explanation": {
     "why": "The critics in Text 1 read the name as a confession of \"deliberate harshness\" and \"indifference to human comfort.\" Text 2 traces the name to béton brut, \"raw concrete,\" and says the architects saw exposed materials as \"honesty\" and designed buildings \"to serve broad social purposes.\" Text 2 thus challenges the critics on two points: the meaning of the name and the architects' intentions.",
-    "A": "Incorrect. Text 2 admits that many buildings \"later fell out of favor\"; it disputes why, not whether.",
+    "A": "Incorrect. Text 2 denies that harshness was the aim; it says the architects valued honesty and social purpose.",
     "B": "Correct. Text 2 corrects the critics about where the name comes from and argues that the architects aimed at honesty and social purpose, not harshness.",
-    "C": "Incorrect. Text 2 denies that harshness was the aim; it says the architects valued honesty and social purpose.",
+    "C": "Incorrect. Text 2 admits that many buildings \"later fell out of favor\"; it disputes why, not whether.",
     "D": "Incorrect. Text 2 says Le Corbusier used the phrase béton brut for his buildings' surfaces, not that he named the style Brutalism."
   },
   "traps": {
-    "A": "too_broad",
-    "C": "reversed",
+    "A": "reversed",
+    "C": "too_broad",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

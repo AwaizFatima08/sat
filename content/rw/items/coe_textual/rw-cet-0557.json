@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Tupou's explanation?",
   "choices": {
-    "A": "Leaves of shrubs growing near the shore carried far more salt on their surfaces than leaves inland.",
-    "B": "Shore shrubs grown behind screens that blocked salt spray but not wind still produced small, thick leaves.",
-    "C": "Inland shrubs sheltered from wind but misted with salt water produced small, thick leaves.",
+    "A": "Shore shrubs grown behind screens that blocked salt spray but not wind still produced small, thick leaves.",
+    "B": "Inland shrubs sheltered from wind but misted with salt water produced small, thick leaves.",
+    "C": "Leaves of shrubs growing near the shore carried far more salt on their surfaces than leaves inland.",
     "D": "Small, thick leaves lost water more slowly than the larger, thinner leaves of inland shrubs."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Near the shore, salt spray and strong wind come together, so either could explain the small, thick leaves. Blocking the salt while leaving the wind tests Tupou directly. If the shore shrubs still grow small, thick leaves without salt, salt is not needed, and wind becomes the likelier cause.",
-    "A": "Incorrect. More salt on shore leaves is expected under both explanations, since spray is heaviest near the shore; it does not show that salt shapes the leaves.",
-    "B": "Correct. The leaf shape persists without the salt, so salt cannot be the main cause.",
-    "C": "Incorrect. Salt producing small, thick leaves without wind would support Tupou, not weaken her.",
+    "A": "Correct. The leaf shape persists without the salt, so salt cannot be the main cause.",
+    "B": "Incorrect. Salt producing small, thick leaves without wind would support Tupou, not weaken her.",
+    "C": "Incorrect. More salt on shore leaves is expected under both explanations, since spray is heaviest near the shore; it does not show that salt shapes the leaves.",
     "D": "Incorrect. This describes an advantage of the leaf shape, not which condition causes the shrubs to produce it."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "reversed",
+    "B": "reversed",
+    "C": "true_irrelevant",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

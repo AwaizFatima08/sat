@@ -49,23 +49,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Baig's claim?",
   "choices": {
-    "A": "The number of boys enrolled at the academy was higher in 2025 than in 2021.",
-    "B": "More girls than boys were enrolled at the academy in 2025.",
-    "C": "Girls were about 12% of players in 2021 but about 38% in 2025.",
-    "D": "The academy enrolled 118 girls in 2025, more than in any other year shown."
+    "A": "More girls than boys were enrolled at the academy in 2025.",
+    "B": "Girls were about 12% of players in 2021 but about 38% in 2025.",
+    "C": "The academy enrolled 118 girls in 2025, more than in any other year shown.",
+    "D": "The number of boys enrolled at the academy was higher in 2025 than in 2021."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Baig's claim is about proportion: the share of all players who are girls. A rising number of girls alone does not prove this, since the number of boys could rise too. In 2021 girls were 24 of 204 players (about 12%), and in 2025 they were 118 of 314 (about 38%).",
-    "A": "Incorrect. This is true (196 versus 180), but it is about boys and does not show the girls' share growing.",
-    "B": "Incorrect. This misreads the table: in 2025 there were 196 boys and only 118 girls.",
-    "C": "Correct. The girls' share of all players roughly tripled, from about 12% to about 38%, which directly supports a claim about proportion.",
-    "D": "Incorrect. This is true, but it gives only a number of girls, not their share of all players, so it cannot show that the proportion grew."
+    "A": "Incorrect. This misreads the table: in 2025 there were 196 boys and only 118 girls.",
+    "B": "Correct. The girls' share of all players roughly tripled, from about 12% to about 38%, which directly supports a claim about proportion.",
+    "C": "Incorrect. This is true, but it gives only a number of girls, not their share of all players, so it cannot show that the proportion grew.",
+    "D": "Incorrect. This is true (196 versus 180), but it is about boys and does not show the girls' share growing."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
-    "D": "too_narrow"
+    "A": "reversed",
+    "C": "too_narrow",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -74,8 +74,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

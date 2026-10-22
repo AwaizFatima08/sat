@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "efficiently",
-    "B": "slowly",
-    "C": "nervously",
-    "D": "unevenly"
+    "A": "unevenly",
+    "B": "nervously",
+    "C": "slowly",
+    "D": "efficiently"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The colon after \"well suited to this challenge\" introduces the birds' advantages. Since the challenge is air with \"far less oxygen,\" the blank must describe blood that captures oxygen well. \"Efficiently\" fits.",
-    "A": "Correct. The geese are \"well suited\" to air with little oxygen, so their blood must be good at capturing the oxygen that is there: it takes it up efficiently.",
-    "B": "Incorrect. Blood that took up oxygen slowly would make the birds poorly suited to thin air, the opposite of what the text says.",
-    "C": "Incorrect. Blood cannot be nervous; the word describes feelings, not how the body handles oxygen.",
-    "D": "Incorrect. Uneven oxygen uptake would be a weakness, and nothing in the text suggests it. The sentence lists advantages."
+    "A": "Incorrect. Uneven oxygen uptake would be a weakness, and nothing in the text suggests it. The sentence lists advantages.",
+    "B": "Incorrect. Blood cannot be nervous; the word describes feelings, not how the body handles oxygen.",
+    "C": "Incorrect. Blood that took up oxygen slowly would make the birds poorly suited to thin air, the opposite of what the text says.",
+    "D": "Correct. The geese are \"well suited\" to air with little oxygen, so their blood must be good at capturing the oxygen that is there: it takes it up efficiently."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "wrong_tone"
+    "A": "wrong_tone",
+    "B": "not_in_text",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

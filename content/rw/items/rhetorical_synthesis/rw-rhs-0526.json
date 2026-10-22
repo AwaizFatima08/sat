@@ -21,23 +21,23 @@
   "data": null,
   "stem": "The student wants to explain why the tower began to lean. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "From 1990 to 2001, engineers reduced the tower's tilt by removing soil from beneath its north side.",
-    "B": "Resting on a shallow foundation over soft ground, the tower tilted as its softer south side sank under the heavy walls.",
-    "C": "Construction of the Leaning Tower of Pisa began in 1173 and continued, with long pauses, until 1372.",
-    "D": "The ground beneath the Leaning Tower of Pisa is soft clay and sand, and it is softer on the south side than on the north side."
+    "A": "The ground beneath the Leaning Tower of Pisa is soft clay and sand, and it is softer on the south side than on the north side.",
+    "B": "Construction of the Leaning Tower of Pisa began in 1173 and continued, with long pauses, until 1372.",
+    "C": "Resting on a shallow foundation over soft ground, the tower tilted as its softer south side sank under the heavy walls.",
+    "D": "From 1990 to 2001, engineers reduced the tower's tilt by removing soil from beneath its north side."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "An explanation of why the tower leans must connect the ground conditions to the tilt. The notes say the shallow foundation sat on soft ground and that the softer south side sank more under the weight of the walls. Only one choice makes that connection.",
-    "A": "Incorrect. It describes how engineers reduced the lean, not what caused it.",
-    "B": "Correct. It links the shallow foundation, the soft ground, and the heavy walls to the tower's tilt.",
-    "C": "Incorrect. It gives the dates of construction, which do not explain the lean.",
-    "D": "Incorrect. It describes the uneven ground but never connects it to the tower's tilt, so it gives only part of the explanation."
+    "A": "Incorrect. It describes the uneven ground but never connects it to the tower's tilt, so it gives only part of the explanation.",
+    "B": "Incorrect. It gives the dates of construction, which do not explain the lean.",
+    "C": "Correct. It links the shallow foundation, the soft ground, and the heavy walls to the tower's tilt.",
+    "D": "Incorrect. It describes how engineers reduced the lean, not what caused it."
   },
   "traps": {
-    "A": "misses_goal",
-    "C": "misses_goal",
-    "D": "too_narrow"
+    "A": "too_narrow",
+    "B": "misses_goal",
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -50,13 +50,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Sunita's father regrets letting her help with such an urgent order.",
-    "B": "Sunita discovers that setting type is much harder than it looked.",
-    "C": "Sunita is finally allowed to use the press and earns her father's trust.",
-    "D": "Sunita's father carefully explains to her how to set the letters backward."
+    "A": "Sunita is finally allowed to use the press and earns her father's trust.",
+    "B": "Sunita's father regrets letting her help with such an urgent order.",
+    "C": "Sunita's father carefully explains to her how to set the letters backward.",
+    "D": "Sunita discovers that setting type is much harder than it looked."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Sunita's father \"had never let her touch\" the press, but today he points her toward it. After studying her first card, he \"handed her the next order,\" which shows he trusts her work. The text as a whole shows her being given this chance and succeeding.",
-    "A": "Incorrect. After examining her card, her father hands her the next order, which shows approval rather than regret.",
-    "B": "Incorrect. Her fingers tremble from nerves, but the text never says the work is harder than she expected; she sets the line correctly.",
-    "C": "Correct. This covers both the start (she was never allowed to touch the press) and the end (her father gives her more work).",
-    "D": "Incorrect. Her father points her to the letters \"without a word\"; she learned by watching him for years."
+    "A": "Correct. This covers both the start (she was never allowed to touch the press) and the end (her father gives her more work).",
+    "B": "Incorrect. After examining her card, her father hands her the next order, which shows approval rather than regret.",
+    "C": "Incorrect. Her father points her to the letters \"without a word\"; she learned by watching him for years.",
+    "D": "Incorrect. Her fingers tremble from nerves, but the text never says the work is harder than she expected; she sets the line correctly."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "reversed"
+    "B": "reversed",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

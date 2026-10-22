@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the view held by Mensah in Text 1?",
   "choices": {
-    "A": "By questioning whether the sequences seen during sleep truly match the rat's earlier route",
-    "B": "By rejecting the idea that replay plays any part in the formation of lasting memories",
+    "A": "By rejecting the idea that replay plays any part in the formation of lasting memories",
+    "B": "By questioning whether the sequences seen during sleep truly match the rat's earlier route",
     "C": "By agreeing that sleep is indispensable to learning because replay occurs only during sleep",
     "D": "By allowing that replay may aid memory while doubting it explains sleep's special role"
   },
   "answer": "D",
   "explanation": {
     "why": "Text 2 says \"Replay may well support memory,\" so it does not reject Mensah's view of what replay does. But because replay also happens \"during quiet waking,\" Text 2 says it \"cannot by itself explain why sleep in particular is so important.\" Text 2 accepts one part of Mensah's view and rejects the other.",
-    "A": "Incorrect. Text 2 never questions that sleep sequences match the earlier route.",
-    "B": "Incorrect. Text 2 says replay \"may well support memory,\" so it does not deny replay any role.",
+    "A": "Incorrect. Text 2 says replay \"may well support memory,\" so it does not deny replay any role.",
+    "B": "Incorrect. Text 2 never questions that sleep sequences match the earlier route.",
     "C": "Incorrect. Text 2's main point is that replay does not occur only during sleep.",
     "D": "Correct. Text 2 allows that replay may help memory but argues that, since it also occurs while rats are awake, it cannot explain why sleep matters so much."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "too_broad",
+    "A": "too_broad",
+    "B": "not_in_text",
     "C": "reversed"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

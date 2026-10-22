@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "For example,",
-    "B": "Nevertheless,",
-    "C": "Meanwhile,",
-    "D": "In other words,"
+    "A": "Meanwhile,",
+    "B": "In other words,",
+    "C": "Nevertheless,",
+    "D": "For example,"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The first sentence says the style is \"meant to be mistaken for reality,\" and the second gives examples. The last sentence says the same thing as the first in different words: the painter wants viewers to believe the object is really there. A restatement transition is needed.",
-    "A": "Incorrect. The examples came in the sentence before; the last sentence is a general statement of the style's aim, not another example.",
-    "B": "Incorrect. Persuading viewers that an object is real does not contrast with painting things meant to be mistaken for reality.",
-    "C": "Incorrect. \"Meanwhile\" signals something happening at the same time, but the last sentence explains the purpose of the style.",
-    "D": "Correct. \"In other words\" signals that the last sentence restates the meaning of \"meant to be mistaken for reality.\""
+    "A": "Incorrect. \"Meanwhile\" signals something happening at the same time, but the last sentence explains the purpose of the style.",
+    "B": "Correct. \"In other words\" signals that the last sentence restates the meaning of \"meant to be mistaken for reality.\"",
+    "C": "Incorrect. Persuading viewers that an object is real does not contrast with painting things meant to be mistaken for reality.",
+    "D": "Incorrect. The examples came in the sentence before; the last sentence is a general statement of the style's aim, not another example."
   },
   "traps": {
     "A": "wrong_logic",
-    "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

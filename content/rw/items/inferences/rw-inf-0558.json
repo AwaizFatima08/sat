@@ -15,21 +15,21 @@
   "stem": "Which choice most logically completes the text?",
   "choices": {
     "A": "the practice raises the total greenhouse gas emissions of rice fields rather than lowering them.",
-    "B": "the practice may benefit the climate less than its methane savings alone would suggest.",
-    "C": "farmers who use the practice harvest less rice than farmers who keep their fields flooded.",
+    "B": "farmers who use the practice harvest less rice than farmers who keep their fields flooded.",
+    "C": "the practice may benefit the climate less than its methane savings alone would suggest.",
     "D": "nitrous oxide is released mainly while fields remain continuously flooded."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Chowdhury found a gain and a cost. Drying cut methane by nearly half but raised nitrous oxide, another greenhouse gas. Without knowing how large the nitrous oxide increase was, we can say only that the overall benefit is smaller than the methane figure suggests, not that it disappears.",
     "A": "Incorrect. The text gives no amounts for the nitrous oxide increase, so it cannot show that total emissions rose.",
-    "B": "Correct. Lower methane is partly offset by higher nitrous oxide, so the overall climate benefit is likely smaller than the methane cut by itself implies.",
-    "C": "Incorrect. The text says nothing about rice harvests under either practice.",
+    "B": "Incorrect. The text says nothing about rice harvests under either practice.",
+    "C": "Correct. Lower methane is partly offset by higher nitrous oxide, so the overall climate benefit is likely smaller than the methane cut by itself implies.",
     "D": "Incorrect. This reverses the text, which says nitrous oxide rose during the drying periods, as wet soil dries out."
   },
   "traps": {
     "A": "too_broad",
-    "C": "not_in_text",
+    "B": "not_in_text",
     "D": "reversed"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

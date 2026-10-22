@@ -20,21 +20,21 @@
   "stem": "The student wants to explain why cats' eyes seem to glow at night. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
     "A": "A mirrorlike layer behind a cat's retina reflects light back out of the eye, making the eye seem to glow.",
-    "B": "Cats have a layer of tissue called the tapetum lucidum behind the retina of each eye.",
-    "C": "Cats see well in dim light because light reflected inside the eye gives the retina a second chance to detect it.",
-    "D": "When a light shines on them at night, cats' eyes often seem to glow."
+    "B": "When a light shines on them at night, cats' eyes often seem to glow.",
+    "C": "Cats have a layer of tissue called the tapetum lucidum behind the retina of each eye.",
+    "D": "Cats see well in dim light because light reflected inside the eye gives the retina a second chance to detect it."
   },
   "answer": "A",
   "explanation": {
     "why": "To explain the glow, a sentence must give its cause. The notes say a layer behind the retina acts like a mirror and sends light back out of the eye. Only one choice connects that reflection to the glow.",
     "A": "Correct. It gives the cause, a mirrorlike layer that reflects light back out of the eye, and links it to the glow.",
-    "B": "Incorrect. This names the layer but does not say what it does or how it makes the eyes glow.",
-    "C": "Incorrect. This explains why cats see well in dim light, not why their eyes seem to glow.",
-    "D": "Incorrect. This describes the glow but does not explain what causes it."
+    "B": "Incorrect. This describes the glow but does not explain what causes it.",
+    "C": "Incorrect. This names the layer but does not say what it does or how it makes the eyes glow.",
+    "D": "Incorrect. This explains why cats see well in dim light, not why their eyes seem to glow."
   },
   "traps": {
-    "B": "too_narrow",
-    "C": "misses_goal",
+    "B": "misses_goal",
+    "C": "too_narrow",
     "D": "misses_goal"
   },
   "grammar": null,
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

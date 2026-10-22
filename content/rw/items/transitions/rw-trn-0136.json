@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Similarly,",
+    "A": "Instead,",
     "B": "For example,",
-    "C": "Meanwhile,",
-    "D": "Instead,"
+    "C": "Similarly,",
+    "D": "Meanwhile,"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The second sentence rejects the idea that the line began with Marie Antoinette. The last sentence offers the alternative: it seems to come from an earlier source, Rousseau's Confessions. A transition that introduces an alternative to a rejected idea is needed.",
-    "A": "Incorrect. \"Similarly\" signals a parallel point, but the earlier source replaces the rejected idea rather than resembling it.",
+    "A": "Correct. \"Instead\" shows that, rather than originating with the queen, the line appears to come from an earlier source.",
     "B": "Incorrect. The Rousseau passage is not an example of the lack of evidence; it is a different explanation of where the line came from.",
-    "C": "Incorrect. \"Meanwhile\" signals something happening at the same time, but the sentence explains the line's origin.",
-    "D": "Correct. \"Instead\" shows that, rather than originating with the queen, the line appears to come from an earlier source."
+    "C": "Incorrect. \"Similarly\" signals a parallel point, but the earlier source replaces the rejected idea rather than resembling it.",
+    "D": "Incorrect. \"Meanwhile\" signals something happening at the same time, but the sentence explains the line's origin."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

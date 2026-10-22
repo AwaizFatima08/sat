@@ -15,17 +15,17 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "Ibn Battuta's first journey took him across North Africa to Mecca.",
-    "B": "North Africa was crossed by Ibn Battuta on his way to Mecca.",
+    "B": "a journey across North Africa to Mecca was begun by Ibn Battuta.",
     "C": "Ibn Battuta traveled across North Africa on his way to Mecca.",
-    "D": "a journey across North Africa to Mecca was begun by Ibn Battuta."
+    "D": "North Africa was crossed by Ibn Battuta on his way to Mecca."
   },
   "answer": "C",
   "explanation": {
     "why": "The introductory phrase \"Setting out from his hometown of Tangier ... at the age of twenty-one\" describes a person. The subject right after the comma must be that person, Ibn Battuta.",
     "A": "Incorrect. The subject is \"Ibn Battuta's first journey,\" so the sentence says the journey was twenty-one and set out from its hometown.",
-    "B": "Incorrect. The subject is \"North Africa,\" so the sentence says North Africa set out from Tangier.",
+    "B": "Incorrect. The subject is \"a journey,\" so the phrase wrongly describes the journey as setting out from its hometown at twenty-one.",
     "C": "Correct. \"Ibn Battuta\" comes right after the introductory phrase, so he is the one setting out from Tangier at twenty-one.",
-    "D": "Incorrect. The subject is \"a journey,\" so the phrase wrongly describes the journey as setting out from its hometown at twenty-one."
+    "D": "Incorrect. The subject is \"North Africa,\" so the sentence says North Africa set out from Tangier."
   },
   "traps": {
     "A": "grammar_rule",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

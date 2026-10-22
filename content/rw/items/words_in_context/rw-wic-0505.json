@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "confusing",
-    "B": "ancient",
-    "C": "consistent",
-    "D": "secret"
+    "B": "secret",
+    "C": "ancient",
+    "D": "consistent"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Zamenhof wanted Esperanto to be \"easy to pick up.\" The colon introduces examples of its rules: \"every noun\" ends the same way, \"every adjective\" ends the same way, and verbs \"never change form.\" Rules without exceptions are consistent, so \"consistent\" fits.",
     "A": "Incorrect. Zamenhof wanted the language to be \"easy to pick up,\" and the rules listed are simple patterns with no exceptions, the opposite of confusing.",
-    "B": "Incorrect. Esperanto was \"a new language\" published in 1887, so its rules could not be ancient.",
-    "C": "Correct. The examples after the colon show rules that work the same way every time (\"every noun,\" \"every adjective,\" verbs that \"never change\"), which is what \"consistent\" means.",
-    "D": "Incorrect. Zamenhof published his plan so that many people could learn the language; nothing in the text suggests the rules were hidden."
+    "B": "Incorrect. Zamenhof published his plan so that many people could learn the language; nothing in the text suggests the rules were hidden.",
+    "C": "Incorrect. Esperanto was \"a new language\" published in 1887, so its rules could not be ancient.",
+    "D": "Correct. The examples after the colon show rules that work the same way every time (\"every noun,\" \"every adjective,\" verbs that \"never change\"), which is what \"consistent\" means."
   },
   "traps": {
     "A": "reversed",
-    "B": "wrong_logic",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

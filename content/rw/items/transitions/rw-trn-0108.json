@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "For example,",
+    "A": "In addition,",
     "B": "As a result,",
-    "C": "In addition,",
-    "D": "In contrast,"
+    "C": "In contrast,",
+    "D": "For example,"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The first sentence says African elephants have enormous ears. The second says Asian elephants have much smaller ears, and the third sentence notes that the two species \"also differ.\" A transition that signals a difference is needed.",
-    "A": "Incorrect. Asian elephants' small ears are not an example of African elephants' large ears.",
+    "A": "Incorrect. \"In addition\" adds a similar point, but the sentence points out a difference between the species.",
     "B": "Incorrect. The size of African elephants' ears does not cause Asian elephants to have smaller ones.",
-    "C": "Incorrect. \"In addition\" adds a similar point, but the sentence points out a difference between the species.",
-    "D": "Correct. \"In contrast\" signals the difference between the large ears of African elephants and the smaller ears of Asian elephants."
+    "C": "Correct. \"In contrast\" signals the difference between the large ears of African elephants and the smaller ears of Asian elephants.",
+    "D": "Incorrect. Asian elephants' small ears are not an example of African elephants' large ears."
   },
   "traps": {
     "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic"
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

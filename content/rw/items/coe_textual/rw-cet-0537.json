@@ -15,17 +15,17 @@
   "stem": "Which finding, if true, would most directly support Kovač's argument?",
   "choices": {
     "A": "Seedlings held rigidly in place in front of a fan grew stems no thicker than seedlings in still air.",
-    "B": "Seedlings in front of a fan lost water from their leaves faster than seedlings in still air did.",
+    "B": "Seedlings in front of a fan grew shorter, thicker stems than seedlings of the same kind in still air.",
     "C": "Seedlings grown outdoors in natural wind had thicker stems than any of the seedlings grown indoors.",
-    "D": "Seedlings in front of a fan grew shorter, thicker stems than seedlings of the same kind in still air."
+    "D": "Seedlings in front of a fan lost water from their leaves faster than seedlings in still air did."
   },
   "answer": "A",
   "explanation": {
     "why": "Kovač says the fan works by bending the stems, not by changing the air around the leaves. A seedling held rigid still feels the drying, cooling breeze but cannot bend. If such seedlings gain no thickness, bending must be what matters.",
     "A": "Correct. Removing the bending while keeping the breeze removes the effect, which isolates bending as the cause.",
-    "B": "Incorrect. Faster water loss shows that the fan dries the leaves, but not that drying thickens stems; if anything, it points toward the explanation Kovač rejects.",
+    "B": "Incorrect. This simply restates the effect that Kovač is trying to explain; it does not show which cause produces it.",
     "C": "Incorrect. Outdoor plants differ from indoor ones in many ways, such as light and soil, so this does not show what causes the thickening.",
-    "D": "Incorrect. This simply restates the effect that Kovač is trying to explain; it does not show which cause produces it."
+    "D": "Incorrect. Faster water loss shows that the fan dries the leaves, but not that drying thickens stems; if anything, it points toward the explanation Kovač rejects."
   },
   "traps": {
     "B": "true_irrelevant",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

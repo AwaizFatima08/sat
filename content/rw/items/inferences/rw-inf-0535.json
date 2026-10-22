@@ -15,22 +15,22 @@
   "stem": "Which choice most logically completes the text?",
   "choices": {
     "A": "eliminate bat deaths at wind farms while leaving electricity output unchanged.",
-    "B": "increase the number of insects available to bats hunting near wind farms.",
+    "B": "lower electricity output so sharply that the turbines would no longer be worth running.",
     "C": "reduce bat deaths while sacrificing a relatively small share of electricity output.",
-    "D": "lower electricity output so sharply that the turbines would no longer be worth running."
+    "D": "increase the number of insects available to bats hunting near wind farms."
   },
   "answer": "C",
   "explanation": {
     "why": "Two facts combine. Bats die mostly in light winds, and turbines produce little power in light winds. Keeping the blades still in those conditions should therefore protect many bats while giving up only the small amount of power produced at low wind speeds.",
     "A": "Incorrect. Some output would still be lost, and the text says most deaths, not all, happen in light winds, so this overstates the effect.",
-    "B": "Incorrect. The text says nothing about turbines affecting the number of insects.",
+    "B": "Incorrect. This reverses the text's point: output at light wind speeds is small, so holding the blades still then costs relatively little electricity.",
     "C": "Correct. Stopping the blades in light winds targets the conditions in which most bats die, and those are the conditions in which turbines produce little power.",
-    "D": "Incorrect. This reverses the text's point: output at light wind speeds is small, so holding the blades still then costs relatively little electricity."
+    "D": "Incorrect. The text says nothing about turbines affecting the number of insects."
   },
   "traps": {
     "A": "too_broad",
-    "B": "not_in_text",
-    "D": "reversed"
+    "B": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

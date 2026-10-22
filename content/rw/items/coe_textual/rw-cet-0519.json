@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Okafor's argument?",
   "choices": {
-    "A": "On streaming services, listeners are most likely to skip a song during the first few seconds of its intro.",
-    "B": "Short intros have become common in songs written for films as well as in popular music.",
-    "C": "Most of the shortening of intros took place years before streaming services became widely used.",
-    "D": "Some popular songs released in recent years still begin with intros longer than thirty seconds."
+    "A": "Most of the shortening of intros took place years before streaming services became widely used.",
+    "B": "Some popular songs released in recent years still begin with intros longer than thirty seconds.",
+    "C": "Short intros have become common in songs written for films as well as in popular music.",
+    "D": "On streaming services, listeners are most likely to skip a song during the first few seconds of its intro."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Okafor claims streaming caused songwriters to shorten intros. A cause must come before its effect, so if most of the shortening had already happened before streaming was common, streaming cannot be the main cause.",
-    "A": "Incorrect. Listeners skipping during intros gives songwriters a reason to shorten them, so this fits Okafor's argument.",
-    "B": "Incorrect. Short intros in film songs do not show what caused the change, so this neither confirms nor undercuts the streaming explanation.",
-    "C": "Correct. If intros mostly shrank before streaming spread, the change must have had a different main cause.",
-    "D": "Incorrect. Okafor describes an overall trend; a few long intros today do not show that streaming was not behind the trend."
+    "A": "Correct. If intros mostly shrank before streaming spread, the change must have had a different main cause.",
+    "B": "Incorrect. Okafor describes an overall trend; a few long intros today do not show that streaming was not behind the trend.",
+    "C": "Incorrect. Short intros in film songs do not show what caused the change, so this neither confirms nor undercuts the streaming explanation.",
+    "D": "Incorrect. Listeners skipping during intros gives songwriters a reason to shorten them, so this fits Okafor's argument."
   },
   "traps": {
-    "A": "reversed",
     "B": "true_irrelevant",
-    "D": "true_irrelevant"
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

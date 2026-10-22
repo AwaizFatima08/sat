@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "expand",
-    "B": "shrink",
-    "C": "harden",
-    "D": "discolor"
+    "A": "discolor",
+    "B": "harden",
+    "C": "expand",
+    "D": "shrink"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The pleats change \"to make room\" for the water the cactus soaks up, and the last sentence says that in dry spells they \"draw back together.\" So after rain they must do the opposite and open outward, like an accordion being stretched. \"Expand\" fits.",
-    "A": "Correct. To make room for the new water, the folds spread outward, or expand, and later \"draw back together\" when the water is used up.",
-    "B": "Incorrect. Shrinking is what happens \"during long dry spells,\" not after a heavy storm, when the cactus needs more room.",
-    "C": "Incorrect. Nothing in the text says the pleats become stiff, and hardening would not make room for water.",
-    "D": "Incorrect. The text is about the cactus's size and shape, not its color."
+    "A": "Incorrect. The text is about the cactus's size and shape, not its color.",
+    "B": "Incorrect. Nothing in the text says the pleats become stiff, and hardening would not make room for water.",
+    "C": "Correct. To make room for the new water, the folds spread outward, or expand, and later \"draw back together\" when the water is used up.",
+    "D": "Incorrect. Shrinking is what happens \"during long dry spells,\" not after a heavy storm, when the cactus needs more room."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

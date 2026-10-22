@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to emphasize a point of disagreement between Abernathy and Wierzbicki while acknowledging a point on which they agree. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Whereas Abernathy sees Dickinson's dashes as musical marks of pause, Wierzbicki sees them as visual signs of unfinished, open ideas.",
-    "B": "Both Abernathy and Wierzbicki believe that Dickinson's dashes, which early editors often replaced, should be printed as she wrote them.",
-    "C": "Abernathy, who regards Dickinson's dashes as musical pauses, wants them printed as written rather than replaced with commas and periods.",
-    "D": "Abernathy and Wierzbicki agree that the dashes should be printed as written but differ on whether they are chiefly musical or visual."
+    "A": "Abernathy, who regards Dickinson's dashes as musical pauses, wants them printed as written rather than replaced with commas and periods.",
+    "B": "Abernathy and Wierzbicki agree that the dashes should be printed as written but differ on whether they are chiefly musical or visual.",
+    "C": "Both Abernathy and Wierzbicki believe that Dickinson's dashes, which early editors often replaced, should be printed as she wrote them.",
+    "D": "Whereas Abernathy sees Dickinson's dashes as musical marks of pause, Wierzbicki sees them as visual signs of unfinished, open ideas."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The goal has two parts: the scholars' disagreement (musical versus visual dashes) and their agreement (the dashes should be printed as written). The key must contain both and attribute them to both scholars.",
-    "A": "Incorrect. This states the disagreement precisely but never acknowledges what the scholars agree on. It is the most attractive near miss.",
-    "B": "Incorrect. This states the agreement but not the disagreement.",
-    "C": "Incorrect. This presents only Abernathy's views, so neither the disagreement nor the shared position between the two scholars is shown.",
-    "D": "Correct. It acknowledges the agreement (print the dashes as written) and states the disagreement (musical or visual)."
+    "A": "Incorrect. This presents only Abernathy's views, so neither the disagreement nor the shared position between the two scholars is shown.",
+    "B": "Correct. It acknowledges the agreement (print the dashes as written) and states the disagreement (musical or visual).",
+    "C": "Incorrect. This states the agreement but not the disagreement.",
+    "D": "Incorrect. This states the disagreement precisely but never acknowledges what the scholars agree on. It is the most attractive near miss."
   },
   "traps": {
-    "A": "too_narrow",
-    "B": "too_narrow",
-    "C": "misses_goal"
+    "A": "misses_goal",
+    "C": "too_narrow",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

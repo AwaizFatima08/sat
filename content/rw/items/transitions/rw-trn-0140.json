@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "In contrast,",
-    "B": "For example,",
-    "C": "Similarly,",
-    "D": "Meanwhile,"
+    "A": "Similarly,",
+    "B": "Meanwhile,",
+    "C": "In contrast,",
+    "D": "For example,"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The first sentence makes a general claim: the axolotl can repair its own body. The next sentence gives specific cases of that ability, such as regrowing a leg. A transition that introduces examples is needed.",
-    "A": "Incorrect. Regrowing a leg supports the claim about the axolotl's ability; it does not contrast with it.",
-    "B": "Correct. \"For example\" introduces regrowing a leg and parts of the heart and brain as instances of the axolotl's ability to repair itself.",
-    "C": "Incorrect. \"Similarly\" would introduce a second, separate case that resembles the first, but the sentence describes the same ability in detail.",
-    "D": "Incorrect. \"Meanwhile\" signals something happening at the same time, but the sentence illustrates the claim before it."
+    "A": "Incorrect. \"Similarly\" would introduce a second, separate case that resembles the first, but the sentence describes the same ability in detail.",
+    "B": "Incorrect. \"Meanwhile\" signals something happening at the same time, but the sentence illustrates the claim before it.",
+    "C": "Incorrect. Regrowing a leg supports the claim about the axolotl's ability; it does not contrast with it.",
+    "D": "Correct. \"For example\" introduces regrowing a leg and parts of the heart and brain as instances of the axolotl's ability to repair itself."
   },
   "traps": {
     "A": "wrong_logic",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "B": "wrong_logic",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

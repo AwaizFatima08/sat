@@ -15,22 +15,22 @@
   "stem": "Based on the text, why do some archaeologists think the use of Indus weights may have been regulated?",
   "choices": {
     "A": "The weights follow a system that combines doubling with decimal multiples.",
-    "B": "Customs passed informally from trader to trader tend to stay unchanged over great distances.",
-    "C": "Weights found at distant sites were all produced in a single central workshop.",
-    "D": "The weights vary less across distant sites than informal practices would likely allow."
+    "B": "Weights found at distant sites were all produced in a single central workshop.",
+    "C": "The weights vary less across distant sites than informal practices would likely allow.",
+    "D": "Customs passed informally from trader to trader tend to stay unchanged over great distances."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The final sentence gives the reasoning: weights from distant sites match the scheme \"so closely\" that informal traditions, which \"would be expected to drift,\" cannot easily explain them. The inference of regulation rests on consistency, not on the scheme itself, which the text calls less striking.",
     "A": "Incorrect. This describes the scheme, but the text says \"More striking than the scheme itself is its consistency\"; the inference rests on the consistency.",
-    "B": "Incorrect. The text assumes the opposite: informal traditions passed between traders would be expected to drift.",
-    "C": "Incorrect. The text never mentions where or how the weights were produced.",
-    "D": "Correct. This restates the archaeologists' reasoning: the weights are more uniform than informal custom could be expected to keep them."
+    "B": "Incorrect. The text never mentions where or how the weights were produced.",
+    "C": "Correct. This restates the archaeologists' reasoning: the weights are more uniform than informal custom could be expected to keep them.",
+    "D": "Incorrect. The text assumes the opposite: informal traditions passed between traders would be expected to drift."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "reversed",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "becomes",
+    "A": "has become",
     "B": "will become",
-    "C": "has become",
-    "D": "became"
+    "C": "became",
+    "D": "becomes"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The sentence describes an event on a specific past date, June 16, 1963, and the rest of the passage uses the past tense (\"lasted,\" \"orbited\"). The simple past \"became\" is correct.",
-    "A": "Incorrect. \"Becomes\" is present tense, but the event happened in 1963.",
+    "A": "Incorrect. \"Has become\" is present perfect, which does not fit an action tied to a specific past date.",
     "B": "Incorrect. \"Will become\" is future tense, but the event is in the past.",
-    "C": "Incorrect. \"Has become\" is present perfect, which does not fit an action tied to a specific past date.",
-    "D": "Correct. \"Became\" is simple past, matching the specific past date and the other past-tense verbs."
+    "C": "Correct. \"Became\" is simple past, matching the specific past date and the other past-tense verbs.",
+    "D": "Incorrect. \"Becomes\" is present tense, but the event happened in 1963."
   },
   "traps": {
     "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "D": "grammar_rule"
   },
   "grammar": "verb_form",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

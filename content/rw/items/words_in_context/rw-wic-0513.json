@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "conceal",
+    "A": "silence",
     "B": "convey",
-    "C": "repeat",
-    "D": "silence"
+    "C": "conceal",
+    "D": "repeat"
   },
   "answer": "B",
   "explanation": {
     "why": "The text explains that each mudra has \"its own meaning,\" like a word. Combining gestures and facial expressions therefore lets a dancer tell a story \"without speaking a word.\" The blank must mean \"communicate,\" so \"convey\" fits.",
-    "A": "Incorrect. Gestures that each stand for something reveal meaning to the audience; they do not hide the story.",
+    "A": "Incorrect. The dancer does not speak, but the gestures do not silence the story. They are the way the story is told.",
     "B": "Correct. Each gesture has \"its own meaning,\" so by combining them with facial expressions the dancer communicates, or conveys, a whole story without words.",
-    "C": "Incorrect. Nothing in the text says the dancer tells a story more than once; the point is how a story can be told without speech.",
-    "D": "Incorrect. The dancer does not speak, but the gestures do not silence the story. They are the way the story is told."
+    "C": "Incorrect. Gestures that each stand for something reveal meaning to the audience; they do not hide the story.",
+    "D": "Incorrect. Nothing in the text says the dancer tells a story more than once; the point is how a story can be told without speech."
   },
   "traps": {
-    "A": "reversed",
-    "C": "not_in_text",
-    "D": "wrong_logic"
+    "A": "wrong_logic",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

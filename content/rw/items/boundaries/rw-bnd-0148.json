@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "grandparents,",
+    "A": "grandparents;",
     "B": "grandparents—",
-    "C": "grandparents",
-    "D": "grandparents;"
+    "C": "grandparents,",
+    "D": "grandparents"
   },
   "answer": "B",
   "explanation": {
     "why": "The words after the dash, \"many of whom learned to shape clay … from their parents and grandparents,\" add extra information about the potters. Because the information opens with a dash, it must close with a dash. Then the subject \"The potters who work there\" connects to its verb \"sell.\"",
-    "A": "Incorrect. Extra information that opens with a dash must close with a dash, not a comma.",
+    "A": "Incorrect. A semicolon can't separate the subject \"The potters who work there\" from its verb \"sell.\"",
     "B": "Correct. The second dash closes the pair around the extra information, so the subject connects to its verb \"sell.\"",
-    "C": "Incorrect. Without a closing dash, the extra information is never set off and runs into the verb \"sell.\"",
-    "D": "Incorrect. A semicolon can't separate the subject \"The potters who work there\" from its verb \"sell.\""
+    "C": "Incorrect. Extra information that opens with a dash must close with a dash, not a comma.",
+    "D": "Incorrect. Without a closing dash, the extra information is never set off and runs into the verb \"sell.\""
   },
   "traps": {
     "A": "grammar_rule",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

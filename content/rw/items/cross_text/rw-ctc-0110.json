@@ -15,22 +15,22 @@
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the belief in Text 1?",
   "choices": {
     "A": "By agreeing that dogs are unable to distinguish any colors at all",
-    "B": "By arguing that dogs see colors just as well as most humans can",
+    "B": "By noting that dogs see some colors, though fewer than most people",
     "C": "By suggesting that dogs actually depend more on sight than on smell",
-    "D": "By noting that dogs see some colors, though fewer than most people"
+    "D": "By arguing that dogs see colors just as well as most humans can"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "Text 1 describes the belief that dogs see \"only in shades of black, white, and gray.\" Text 2 says dogs have two types of cones and \"can tell blue from yellow\" but struggle with red and green. So the author of Text 2 would say dogs do see color, but a narrower range than most humans.",
     "A": "Incorrect. Text 2 says dogs can tell blue from yellow, so they can distinguish some colors.",
-    "B": "Incorrect. Text 2 says dogs have fewer cone types than humans and have trouble with red and green.",
+    "B": "Correct. Text 2 explains that dogs distinguish blue from yellow but not red from green, so they see some colors but fewer than most people.",
     "C": "Incorrect. Text 2 does not compare how much dogs rely on sight and on smell.",
-    "D": "Correct. Text 2 explains that dogs distinguish blue from yellow but not red from green, so they see some colors but fewer than most people."
+    "D": "Incorrect. Text 2 says dogs have fewer cone types than humans and have trouble with red and green."
   },
   "traps": {
     "A": "reversed",
-    "B": "too_broad",
-    "C": "not_in_text"
+    "C": "not_in_text",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

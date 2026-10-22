@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Fires set by Julius Caesar's forces destroyed the entire library in 48 BCE.",
-    "B": "Papyrus scrolls decay with age unless new copies of them are made.",
+    "A": "Papyrus scrolls decay with age unless new copies of them are made.",
+    "B": "Many historians think the library declined gradually rather than in one fire.",
     "C": "The library held more books than any other library in the ancient world.",
-    "D": "Many historians think the library declined gradually rather than in one fire."
+    "D": "Fires set by Julius Caesar's forces destroyed the entire library in 48 BCE."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text opens with a popular memory (the library \"vanished in a single great fire\"), grants that some books did burn in 48 BCE, and then, with \"however,\" gives historians' view that the end \"was slower and less dramatic,\" listing causes over centuries. The main idea is this gradual-decline view.",
-    "A": "Incorrect. The text says only that some books burned in 48 BCE; it presents total destruction by one fire as the popular memory historians doubt.",
-    "B": "Incorrect. The decay of papyrus is one of several causes listed, not the main point.",
+    "A": "Incorrect. The decay of papyrus is one of several causes listed, not the main point.",
+    "B": "Correct. This captures the contrast the text builds: the popular single-fire story versus historians' view of a slow decline.",
     "C": "Incorrect. The text never compares the library's size with that of other ancient libraries.",
-    "D": "Correct. This captures the contrast the text builds: the popular single-fire story versus historians' view of a slow decline."
+    "D": "Incorrect. The text says only that some books burned in 48 BCE; it presents total destruction by one fire as the popular memory historians doubt."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "too_narrow",
-    "C": "not_in_text"
+    "A": "too_narrow",
+    "C": "not_in_text",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

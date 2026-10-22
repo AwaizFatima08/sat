@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "loaves, he",
+    "A": "loaves; he",
     "B": "loaves he",
-    "C": "loaves; he",
-    "D": "loaves, and, he"
+    "C": "loaves, and, he",
+    "D": "loaves, he"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "\"By the time the first customers came through the door, the shelves were full of warm loaves\" is a complete sentence, and \"he had already been working for three hours\" is another. A semicolon can join two closely related independent clauses.",
-    "A": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice.",
+    "A": "Correct. A semicolon correctly joins the two closely related independent clauses.",
     "B": "Incorrect. With no punctuation, the two independent clauses run together (a run-on sentence).",
-    "C": "Correct. A semicolon correctly joins the two closely related independent clauses.",
-    "D": "Incorrect. A comma before \"and\" is right here, but no comma belongs between \"and\" and the clause it introduces."
+    "C": "Incorrect. A comma before \"and\" is right here, but no comma belongs between \"and\" and the clause it introduces.",
+    "D": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "linking_clauses",
@@ -43,13 +43,14 @@
       {
         "by": "claude-opus-recheck",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "D replaced after blind solve",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "spurious",
+    "A": "preliminary",
     "B": "conclusive",
-    "C": "ambiguous",
-    "D": "preliminary"
+    "C": "spurious",
+    "D": "ambiguous"
   },
   "answer": "B",
   "explanation": {
     "why": "The text says other things \"can produce similar signals,\" so a dip might not mean a planet, and candidates must be \"confirmed by independent measurements.\" The dip by itself does not settle the question: it is not \"conclusive.\"",
-    "A": "Incorrect. Spurious means false. Saying a dip is \"not spurious\" would claim the signal is genuine, but the text explains that a dip can come from something other than a planet.",
+    "A": "Incorrect. A dip is exactly the kind of preliminary evidence that needs confirmation, so saying it is \"not preliminary\" contradicts the text.",
     "B": "Correct. Conclusive evidence settles a question. Because other causes can produce a similar dip, a dip alone does not prove a planet exists.",
-    "C": "Incorrect. A single dip is ambiguous, since it could have several causes. Saying it is \"not ambiguous\" contradicts the rest of the sentence.",
-    "D": "Incorrect. A dip is exactly the kind of preliminary evidence that needs confirmation, so saying it is \"not preliminary\" contradicts the text."
+    "C": "Incorrect. Spurious means false. Saying a dip is \"not spurious\" would claim the signal is genuine, but the text explains that a dip can come from something other than a planet.",
+    "D": "Incorrect. A single dip is ambiguous, since it could have several causes. Saying it is \"not ambiguous\" contradicts the rest of the sentence."
   },
   "traps": {
     "A": "reversed",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

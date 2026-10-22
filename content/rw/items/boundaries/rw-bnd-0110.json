@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "Sun; however,",
-    "B": "Sun, however,",
-    "C": "Sun however,",
+    "A": "Sun, however,",
+    "B": "Sun however,",
+    "C": "Sun; however,",
     "D": "Sun, however;"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "\"The birds appear to rely mainly on the position of the Sun\" and \"pigeons also seem to sense Earth's magnetic field\" are both independent clauses. \"However\" begins the second clause, so a semicolon goes before it and a comma after it.",
-    "A": "Correct. The semicolon joins the two independent clauses, and the comma after \"however\" sets off the transition that begins the second clause.",
-    "B": "Incorrect. A comma before \"however\" can't join two independent clauses; this creates a comma splice.",
-    "C": "Incorrect. With no punctuation before \"however,\" the two independent clauses run together.",
+    "A": "Incorrect. A comma before \"however\" can't join two independent clauses; this creates a comma splice.",
+    "B": "Incorrect. With no punctuation before \"however,\" the two independent clauses run together.",
+    "C": "Correct. The semicolon joins the two independent clauses, and the comma after \"however\" sets off the transition that begins the second clause.",
     "D": "Incorrect. \"However\" introduces the contrast in the second clause, so the semicolon must come before it, not after it."
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "linking_clauses",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

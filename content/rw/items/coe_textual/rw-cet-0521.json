@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Adeyemi's argument?",
   "choices": {
-    "A": "On clear mornings just as cool as foggy ones, the beetles almost never took the headstand position.",
+    "A": "Several other desert animals, including some lizards, also get water from fog in their own ways.",
     "B": "Beetles in the headstand position lost body heat faster than beetles resting flat on the sand.",
-    "C": "The beetles' dark bodies warm up quickly once the sun rises higher over the dunes.",
-    "D": "Several other desert animals, including some lizards, also get water from fog in their own ways."
+    "C": "On clear mornings just as cool as foggy ones, the beetles almost never took the headstand position.",
+    "D": "The beetles' dark bodies warm up quickly once the sun rises higher over the dunes."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Two explanations compete: cooling and water collection. To favor Adeyemi's, a finding must separate them. Comparing mornings with the same temperature but with and without fog does this: if the beetles do the headstand only when there is fog to catch, water is the likely purpose.",
-    "A": "Correct. With temperature held the same, the beetles did the headstand only when fog was present, which points to collecting water rather than cooling.",
+    "A": "Incorrect. Other animals using fog says nothing about the purpose of this beetle's posture.",
     "B": "Incorrect. Losing heat faster in the headstand fits the cooling explanation, so this would favor the researchers Adeyemi disagrees with.",
-    "C": "Incorrect. How fast the beetles warm in the sun does not show why they do the headstand on foggy mornings.",
-    "D": "Incorrect. Other animals using fog says nothing about the purpose of this beetle's posture."
+    "C": "Correct. With temperature held the same, the beetles did the headstand only when fog was present, which points to collecting water rather than cooling.",
+    "D": "Incorrect. How fast the beetles warm in the sun does not show why they do the headstand on foggy mornings."
   },
   "traps": {
+    "A": "true_irrelevant",
     "B": "reversed",
-    "C": "true_irrelevant",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

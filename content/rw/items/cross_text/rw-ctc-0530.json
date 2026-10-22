@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the belief of some art historians in Text 1?",
   "choices": {
-    "A": "By granting the visual similarity but arguing that it does not prove Vermeer used the device",
-    "B": "By claiming that Vermeer's paintings show no effects resembling those of a lens",
-    "C": "By arguing that the camera obscura had not yet been invented in Vermeer's time",
-    "D": "By suggesting that the list of his possessions proves Vermeer never used the device"
+    "A": "By suggesting that the list of his possessions proves Vermeer never used the device",
+    "B": "By arguing that the camera obscura had not yet been invented in Vermeer's time",
+    "C": "By claiming that Vermeer's paintings show no effects resembling those of a lens",
+    "D": "By granting the visual similarity but arguing that it does not prove Vermeer used the device"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Text 1 says some historians think Vermeer used a camera obscura because his paintings show lens-like effects. Text 2 agrees \"the resemblance is real\" but says a careful painter could create the effect by hand and that no optical devices appear among his possessions. Mertens calls the idea \"an interesting possibility rather than an established fact.\"",
-    "A": "Correct. Text 2 accepts the resemblance but says it \"proves less than it seems.\"",
-    "B": "Incorrect. Text 2 begins by saying \"the resemblance is real,\" so it does not deny the effects.",
-    "C": "Incorrect. Text 2 never discusses when the camera obscura was invented.",
-    "D": "Incorrect. Text 2 treats the idea as still \"an interesting possibility,\" so it does not claim proof that Vermeer never used one."
+    "A": "Incorrect. Text 2 treats the idea as still \"an interesting possibility,\" so it does not claim proof that Vermeer never used one.",
+    "B": "Incorrect. Text 2 never discusses when the camera obscura was invented.",
+    "C": "Incorrect. Text 2 begins by saying \"the resemblance is real,\" so it does not deny the effects.",
+    "D": "Correct. Text 2 accepts the resemblance but says it \"proves less than it seems.\""
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "A": "too_broad",
+    "B": "not_in_text",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

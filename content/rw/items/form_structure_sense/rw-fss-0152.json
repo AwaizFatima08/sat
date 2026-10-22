@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "he",
-    "B": "they",
-    "C": "them",
+    "A": "they",
+    "B": "them",
+    "C": "he",
     "D": "it"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The accounts were written by \"Xuanzang and Yijing,\" two people, so the pronoun must be plural. It is also the subject of \"wrote\" in the clause \"that ___ wrote,\" so the subject form \"they\" is needed.",
-    "A": "Incorrect. \"He\" is singular, but the accounts were written by two monks, Xuanzang and Yijing.",
-    "B": "Correct. \"They\" is plural, matching \"Xuanzang and Yijing,\" and is the subject form needed before \"wrote.\"",
-    "C": "Incorrect. \"Them\" is an object pronoun, but the blank is the subject of \"wrote.\"",
+    "A": "Correct. \"They\" is plural, matching \"Xuanzang and Yijing,\" and is the subject form needed before \"wrote.\"",
+    "B": "Incorrect. \"Them\" is an object pronoun, but the blank is the subject of \"wrote.\"",
+    "C": "Incorrect. \"He\" is singular, but the accounts were written by two monks, Xuanzang and Yijing.",
     "D": "Incorrect. \"It\" is singular and would refer to Nalanda, but a place did not write the accounts; the two monks did."
   },
   "traps": {
-    "A": "grammar_rule",
+    "B": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

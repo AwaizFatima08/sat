@@ -15,22 +15,22 @@
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the reading of the story in Text 1?",
   "choices": {
     "A": "By denying that Gurov comes to feel genuine love for Anna by the end of the story",
-    "B": "By granting that Gurov changes but denying that the story resolves his situation",
-    "C": "By claiming that the lovers find a way to live together openly in the story's final scene",
-    "D": "By suggesting that the story's open ending reveals Chekhov's disapproval of the affair"
+    "B": "By suggesting that the story's open ending reveals Chekhov's disapproval of the affair",
+    "C": "By granting that Gurov changes but denying that the story resolves his situation",
+    "D": "By claiming that the lovers find a way to live together openly in the story's final scene"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Text 2 agrees that \"Gurov's change of heart is genuine,\" accepting part of Arslan's reading. It objects that the story \"withholds any sense that this love has delivered him\": the lovers are still hiding, and \"the hardest part has barely begun.\" A redemption reading, Text 2 says, \"completes a story that Chekhov deliberately leaves open.\"",
     "A": "Incorrect. Text 2 says Chekhov \"leaves no doubt that he has come to love Anna.\"",
-    "B": "Correct. Text 2 accepts that Gurov truly changes but says calling it redemption imposes an ending that the open final scene withholds.",
-    "C": "Incorrect. Text 2 says the lovers are \"still unable to imagine how they might live openly.\"",
-    "D": "Incorrect. Text 2 says the ending is open, but it never says Chekhov disapproves of the affair."
+    "B": "Incorrect. Text 2 says the ending is open, but it never says Chekhov disapproves of the affair.",
+    "C": "Correct. Text 2 accepts that Gurov truly changes but says calling it redemption imposes an ending that the open final scene withholds.",
+    "D": "Incorrect. Text 2 says the lovers are \"still unable to imagine how they might live openly.\""
   },
   "traps": {
     "A": "too_broad",
-    "C": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

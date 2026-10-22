@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that the Bauhaus produced better furniture than any earlier school",
-    "B": "To explain how the Bauhaus departed from the usual training of artists",
-    "C": "To describe the events that forced the Bauhaus to close in 1933",
-    "D": "To compare how painters and furniture makers were each trained before 1919"
+    "A": "To explain how the Bauhaus departed from the usual training of artists",
+    "B": "To describe the events that forced the Bauhaus to close in 1933",
+    "C": "To compare how painters and furniture makers were each trained before 1919",
+    "D": "To argue that the Bauhaus produced better furniture than any earlier school"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The text describes the usual practice of teaching art and craft \"separately,\" says Gropius \"wanted to end that division,\" and explains how Bauhaus students combined both. It closes by noting the approach's wide influence. The main purpose is to show how the school's training differed from the norm.",
-    "A": "Incorrect. The text says Bauhaus designs were meant to be beautiful and practical but never claims they were better than any earlier school's.",
-    "B": "Correct. The text contrasts the old separation of art and craft with the Bauhaus's combined training.",
-    "C": "Incorrect. The text gives the year the school closed but not the events behind it.",
-    "D": "Incorrect. The separate training of painters and furniture makers is background for the Bauhaus's new approach, not the text's main focus."
+    "A": "Correct. The text contrasts the old separation of art and craft with the Bauhaus's combined training.",
+    "B": "Incorrect. The text gives the year the school closed but not the events behind it.",
+    "C": "Incorrect. The separate training of painters and furniture makers is background for the Bauhaus's new approach, not the text's main focus.",
+    "D": "Incorrect. The text says Bauhaus designs were meant to be beautiful and practical but never claims they were better than any earlier school's."
   },
   "traps": {
-    "A": "too_broad",
-    "C": "not_in_text",
-    "D": "too_narrow"
+    "B": "not_in_text",
+    "C": "too_narrow",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

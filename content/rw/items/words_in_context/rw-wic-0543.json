@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "rule out",
-    "B": "foreshadow",
-    "C": "predate",
-    "D": "attest to"
+    "A": "foreshadow",
+    "B": "predate",
+    "C": "attest to",
+    "D": "rule out"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The final sentence separates what the Roman objects do show from what they do not: they show contact but \"not the foreign control\" scholars once assumed. The blank must mean \"provide evidence of.\"",
-    "A": "Incorrect. The objects came from Mediterranean traders, so they cannot rule out contact with them; they are evidence for it.",
-    "B": "Incorrect. \"Foreshadow\" means hint at something that comes later, but the contact is what brought the objects there, so it is not a later event.",
-    "C": "Incorrect. The objects arrived through the contact, so they cannot have existed at the site before it.",
-    "D": "Correct. To attest to something is to serve as evidence of it, which is how archaeologists now read the Roman objects: proof of trade, not of rule."
+    "A": "Incorrect. \"Foreshadow\" means hint at something that comes later, but the contact is what brought the objects there, so it is not a later event.",
+    "B": "Incorrect. The objects arrived through the contact, so they cannot have existed at the site before it.",
+    "C": "Correct. To attest to something is to serve as evidence of it, which is how archaeologists now read the Roman objects: proof of trade, not of rule.",
+    "D": "Incorrect. The objects came from Mediterranean traders, so they cannot rule out contact with them; they are evidence for it."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "C": "wrong_logic"
+    "A": "not_in_text",
+    "B": "wrong_logic",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

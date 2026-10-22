@@ -15,22 +15,22 @@
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
     "A": "It describes a character's daily routine and then explains why he decided to move to a new home.",
-    "B": "It shows a character's anger growing until he complains to his neighbors about a pet.",
+    "B": "It compares the habits of two dogs that live in the same neighborhood.",
     "C": "It presents a character's irritation with a pet and then an event that changes his feelings.",
-    "D": "It compares the habits of two dogs that live in the same neighborhood."
+    "D": "It shows a character's anger growing until he complains to his neighbors about a pet."
   },
   "answer": "C",
   "explanation": {
     "why": "The text opens with Mr. Okonjo \"annoyed\" and lists the puppy's misdeeds. The word \"Then\" introduces a turning point: he cares for the lost, soaked puppy and is \"surprised to feel sorry\" when it leaves. The structure moves from irritation to warmer feelings.",
     "A": "Incorrect. The text never describes Mr. Okonjo's routine or says that he moved.",
-    "B": "Incorrect. His feelings grow warmer, not angrier, and he never complains to the neighbors.",
+    "B": "Incorrect. Only one puppy appears in the text.",
     "C": "Correct. Mr. Okonjo starts out annoyed by the puppy, but caring for it on a rainy day changes how he feels.",
-    "D": "Incorrect. Only one puppy appears in the text."
+    "D": "Incorrect. His feelings grow warmer, not angrier, and he never complains to the neighbors."
   },
   "traps": {
     "A": "not_in_text",
-    "B": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

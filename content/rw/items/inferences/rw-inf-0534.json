@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "P was copied from Q, which explains why both lack the same three lines.",
-    "B": "P and Q were both copied from a lost manuscript that already lacked the three lines.",
-    "C": "the scribe of P left out the three lines on purpose because he judged them to be weak.",
+    "A": "the scribe of P left out the three lines on purpose because he judged them to be weak.",
+    "B": "P was copied from Q, which explains why both lack the same three lines.",
+    "C": "P and Q were both copied from a lost manuscript that already lacked the three lines.",
     "D": "P was not copied from Q, though Q may have been copied from P."
   },
   "answer": "D",
   "explanation": {
     "why": "A shared gap means one manuscript copied the other or both share an ancestor. A manuscript cannot be copied from one written decades after it, so P cannot come from Q. That leaves two possibilities, Q copied from P or both from a common source, and the text gives no way to choose between them.",
-    "A": "Incorrect. This reverses the possible direction of copying: P is decades older than Q, so P cannot have been copied from Q.",
-    "B": "Incorrect. A common lost source is one possibility, but Q could just as well have been copied directly from P; the evidence does not decide between them.",
-    "C": "Incorrect. The text describes the omission as the kind of accident scholars call eye-skip and gives no evidence that any scribe left lines out on purpose.",
+    "A": "Incorrect. The text describes the omission as the kind of accident scholars call eye-skip and gives no evidence that any scribe left lines out on purpose.",
+    "B": "Incorrect. This reverses the possible direction of copying: P is decades older than Q, so P cannot have been copied from Q.",
+    "C": "Incorrect. A common lost source is one possibility, but Q could just as well have been copied directly from P; the evidence does not decide between them.",
     "D": "Correct. Since P is older, it cannot have been copied from Q, while copying of Q from P remains one of the possibilities the shared gap allows."
   },
   "traps": {
-    "A": "reversed",
-    "B": "too_broad",
-    "C": "not_in_text"
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

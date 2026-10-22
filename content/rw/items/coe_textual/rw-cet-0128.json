@@ -15,16 +15,16 @@
   "stem": "Which finding, if true, would most directly weaken Mwangi's argument?",
   "choices": {
     "A": "Teenagers reported using screens for more hours each evening than younger children did.",
-    "B": "Teenagers who fall asleep late often find it hard to wake up for early classes at school.",
-    "C": "In a laboratory study, adults exposed to bright screen light in the evening fell asleep later than usual.",
+    "B": "In a laboratory study, adults exposed to bright screen light in the evening fell asleep later than usual.",
+    "C": "Teenagers who fall asleep late often find it hard to wake up for early classes at school.",
     "D": "Teenagers who stopped using screens in the evening for a month still fell asleep about as late as before."
   },
   "answer": "D",
   "explanation": {
     "why": "Mwangi says screen use is the main reason teenagers fall asleep late. If teenagers who gave up evening screens kept falling asleep just as late, screens cannot be the main cause.",
     "A": "Incorrect. Teenagers using screens more than younger children fits Mwangi's argument, so it would support rather than weaken it.",
-    "B": "Incorrect. Trouble waking up is a result of falling asleep late, not evidence about its cause.",
-    "C": "Incorrect. This suggests screen light can delay sleep, which fits Mwangi's view rather than weakening it.",
+    "B": "Incorrect. This suggests screen light can delay sleep, which fits Mwangi's view rather than weakening it.",
+    "C": "Incorrect. Trouble waking up is a result of falling asleep late, not evidence about its cause.",
     "D": "Correct. Removing evening screens did not change when the teenagers fell asleep, so screens are not the main cause."
   },
   "traps": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

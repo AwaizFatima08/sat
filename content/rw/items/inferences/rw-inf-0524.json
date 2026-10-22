@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "may increase the number of bee visits that the flower head receives.",
-    "B": "results from the plant losing its ability to sense sunlight as it ages.",
-    "C": "lets the flower head collect more total sunlight than a moving head would.",
+    "A": "results from the plant losing its ability to sense sunlight as it ages.",
+    "B": "lets the flower head collect more total sunlight than a moving head would.",
+    "C": "may increase the number of bee visits that the flower head receives.",
     "D": "makes the flower head too warm for bees to visit during the morning."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "East-facing heads warm quickly in the morning, and bees prefer warm flowers and visit east-facing heads more often. Facing east, then, probably helps the sunflower attract bees.",
-    "A": "Correct. East-facing heads warm up early, and bees visit warm heads more often, so the position may bring more bee visits.",
-    "B": "Incorrect. The text says nothing about why the heads stop moving or about any loss of the ability to sense light.",
-    "C": "Incorrect. The text discusses morning warmth, not total sunlight, and a head that follows the Sun might well collect more light.",
+    "A": "Incorrect. The text says nothing about why the heads stop moving or about any loss of the ability to sense light.",
+    "B": "Incorrect. The text discusses morning warmth, not total sunlight, and a head that follows the Sun might well collect more light.",
+    "C": "Correct. East-facing heads warm up early, and bees visit warm heads more often, so the position may bring more bee visits.",
     "D": "Incorrect. The text says bees prefer warm flowers and visit east-facing heads more often."
   },
   "traps": {
+    "A": "not_in_text",
     "B": "not_in_text",
-    "C": "not_in_text",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

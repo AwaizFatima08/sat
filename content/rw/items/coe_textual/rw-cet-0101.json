@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Halvorsen's hypothesis?",
   "choices": {
-    "A": "Given a choice, woodpeckers drummed mostly on posts that rang loudly rather than on dull ones.",
-    "B": "Woodpeckers use their strong beaks both for drumming and for digging insects out of tree bark.",
-    "C": "Woodpeckers drummed on loud and quiet surfaces about equally often during the spring.",
-    "D": "Female woodpeckers of some species also drum, though they usually do so less often than males do."
+    "A": "Female woodpeckers of some species also drum, though they usually do so less often than males do.",
+    "B": "Woodpeckers drummed on loud and quiet surfaces about equally often during the spring.",
+    "C": "Given a choice, woodpeckers drummed mostly on posts that rang loudly rather than on dull ones.",
+    "D": "Woodpeckers use their strong beaks both for drumming and for digging insects out of tree bark."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Halvorsen's hypothesis is that woodpeckers pick the spots that make the loudest sound. The best support would show woodpeckers, offered both loud and quiet surfaces, preferring the loud ones.",
-    "A": "Correct. Woodpeckers chose loud-sounding posts far more often than dull ones, which is exactly the preference Halvorsen predicts.",
-    "B": "Incorrect. What else woodpeckers do with their beaks says nothing about how they choose drumming spots.",
-    "C": "Incorrect. If woodpeckers used loud and quiet surfaces equally, they would not be choosing loud spots, so this would weaken the hypothesis.",
-    "D": "Incorrect. Which birds drum and how often does not show whether they prefer loud surfaces."
+    "A": "Incorrect. Which birds drum and how often does not show whether they prefer loud surfaces.",
+    "B": "Incorrect. If woodpeckers used loud and quiet surfaces equally, they would not be choosing loud spots, so this would weaken the hypothesis.",
+    "C": "Correct. Woodpeckers chose loud-sounding posts far more often than dull ones, which is exactly the preference Halvorsen predicts.",
+    "D": "Incorrect. What else woodpeckers do with their beaks says nothing about how they choose drumming spots."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "reversed",
+    "A": "true_irrelevant",
+    "B": "reversed",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

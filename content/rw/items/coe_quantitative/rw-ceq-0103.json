@@ -50,22 +50,22 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "at 4 p.m., when it reached about 10 milligrams per liter.",
+    "A": "at 4 a.m., when it was about 4 milligrams per liter.",
     "B": "at noon, when the algae were releasing the most oxygen.",
-    "C": "at 4 a.m., when it was about 4 milligrams per liter.",
+    "C": "at 4 p.m., when it reached about 10 milligrams per liter.",
     "D": "at midnight, when it had dropped to about 5.6 milligrams per liter."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The statement asks when the oxygen level was lowest, so find the lowest point on the line. The line dips to about 4.1 milligrams per liter at 4 a.m., lower than at any other time shown.",
-    "A": "Incorrect. At 4 p.m. the oxygen level was at its highest, not its lowest.",
+    "A": "Correct. The reading at 4 a.m., about 4 milligrams per liter, is the lowest point on the graph.",
     "B": "Incorrect. At noon the reading was about 8.3 milligrams per liter, well above the lowest value, and the graph does not show when algae released the most oxygen.",
-    "C": "Correct. The reading at 4 a.m., about 4 milligrams per liter, is the lowest point on the graph.",
+    "C": "Incorrect. At 4 p.m. the oxygen level was at its highest, not its lowest.",
     "D": "Incorrect. The level did drop to about 5.6 at midnight, but it fell even lower, to about 4.1, by 4 a.m."
   },
   "traps": {
-    "A": "reversed",
     "B": "not_in_text",
+    "C": "reversed",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -75,8 +75,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

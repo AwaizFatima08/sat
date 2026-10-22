@@ -16,21 +16,21 @@
   "choices": {
     "A": "had been secretly preparing a gift for her mother.",
     "B": "was upset with her mother and wanted to be left alone.",
-    "C": "had forgotten that her mother's birthday was coming.",
-    "D": "was studying for an important test at school."
+    "C": "was studying for an important test at school.",
+    "D": "had forgotten that her mother's birthday was coming."
   },
   "answer": "A",
   "explanation": {
     "why": "Marisol hid something whenever her mother came to the door, and on her mother's birthday she appeared with a package wrapped in paper she painted herself. Her secrecy during the week is best explained by her getting a birthday gift ready.",
     "A": "Correct. The hiding, the timing, and the handmade wrapping all point to a secret birthday gift.",
     "B": "Incorrect. Nothing shows that Marisol was upset; the gift at the end suggests the opposite.",
-    "C": "Incorrect. The prepared package shows that she remembered the birthday.",
-    "D": "Incorrect. The text never mentions a test, and studying would not explain hiding something under the bed."
+    "C": "Incorrect. The text never mentions a test, and studying would not explain hiding something under the bed.",
+    "D": "Incorrect. The prepared package shows that she remembered the birthday."
   },
   "traps": {
     "B": "not_in_text",
-    "C": "reversed",
-    "D": "not_in_text"
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

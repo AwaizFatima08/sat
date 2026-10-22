@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "A merchant is quietly proud that his son has found work that makes him truly happy.",
-    "B": "A merchant angrily refuses to discuss his son's news with his longtime clerk.",
-    "C": "A merchant's businesslike calm hides a disturbance that surfaces in his work.",
-    "D": "A merchant shows that his accounts matter more to him than his son's future."
+    "A": "A merchant angrily refuses to discuss his son's news with his longtime clerk.",
+    "B": "A merchant shows that his accounts matter more to him than his son's future.",
+    "C": "A merchant is quietly proud that his son has found work that makes him truly happy.",
+    "D": "A merchant's businesslike calm hides a disturbance that surfaces in his work."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Two parts of the text must be read together. At first Krasnov treats the letter like an invoice, commenting only on the handwriting and saying \"nothing further.\" But the clerk sees him enter the same shipment twice, miss the error, and stare at the window. The contrast shows that the news has unsettled him beneath his composed surface. The text does not say exactly what he feels, so the key names a disturbance without specifying it.",
-    "A": "Incorrect. His only comment is on the handwriting, and his later distraction suggests unease; nothing in the text shows pride.",
-    "B": "Incorrect. He says nothing more about the letter, but the text shows no anger and no refusal.",
-    "C": "Correct. His calm, invoice-like handling of the letter contrasts with the uncharacteristic errors and distraction the clerk observes.",
-    "D": "Incorrect. This reverses the clue: his mistakes in the ledger show that the letter has pushed his accounts out of his mind."
+    "A": "Incorrect. He says nothing more about the letter, but the text shows no anger and no refusal.",
+    "B": "Incorrect. This reverses the clue: his mistakes in the ledger show that the letter has pushed his accounts out of his mind.",
+    "C": "Incorrect. His only comment is on the handwriting, and his later distraction suggests unease; nothing in the text shows pride.",
+    "D": "Correct. His calm, invoice-like handling of the letter contrasts with the uncharacteristic errors and distraction the clerk observes."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "too_broad",
-    "D": "reversed"
+    "A": "too_broad",
+    "B": "reversed",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

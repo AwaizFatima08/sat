@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Asante's argument?",
   "choices": {
-    "A": "Males waved as vigorously on low tides with few wandering females as on those with many.",
+    "A": "Males waved far less, or stopped entirely, once the rising tide had covered the open mudflats.",
     "B": "Wandering females approached the males that waved fastest more often than they approached the slower ones.",
-    "C": "Males waved far less, or stopped entirely, once the rising tide had covered the open mudflats.",
+    "C": "Males waved as vigorously on low tides with few wandering females as on those with many.",
     "D": "Males waved as vigorously on cool, cloudy low tides as on warm, sunny ones."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Asante says males wave harder because more females are around at low tide. If, during low tide, the number of wandering females makes no difference to how hard males wave, then female numbers cannot be what drives the waving.",
-    "A": "Correct. Waving stays the same whether females are scarce or plentiful, so the number of females does not seem to control it.",
+    "A": "Incorrect. Less waving at high tide is the pattern Asante is explaining; it fits his account and the warmth account equally well.",
     "B": "Incorrect. This shows that females prefer fast wavers, but not that males change their waving according to how many females are nearby.",
-    "C": "Incorrect. Less waving at high tide is the pattern Asante is explaining; it fits his account and the warmth account equally well.",
+    "C": "Correct. Waving stays the same whether females are scarce or plentiful, so the number of females does not seem to control it.",
     "D": "Incorrect. If warmth makes no difference, the rival explanation fails, which supports Asante rather than weakening him."
   },
   "traps": {
+    "A": "true_irrelevant",
     "B": "true_irrelevant",
-    "C": "true_irrelevant",
     "D": "reversed"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

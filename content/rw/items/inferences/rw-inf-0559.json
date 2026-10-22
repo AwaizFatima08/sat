@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "students' own sense of which study method works better may be an unreliable guide.",
-    "B": "rereading a passage does not help students remember any of its content.",
-    "C": "the students in the recall group spent more time studying than the students who reread.",
+    "A": "rereading a passage does not help students remember any of its content.",
+    "B": "the students in the recall group spent more time studying than the students who reread.",
+    "C": "students' own sense of which study method works better may be an unreliable guide.",
     "D": "the recall group remembered more because they found the passage more interesting."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Compare the predictions with the results. The rereading group expected to remember more, but the recall group actually did. Students' confidence pointed to the weaker method, so how well students feel they have learned may not tell them which method works best.",
-    "A": "Correct. The rereaders felt more confident yet remembered less, so students' impressions of which method works may mislead them.",
-    "B": "Incorrect. The rereaders remembered less than the recall group, not nothing; the results do not show rereading is useless.",
-    "C": "Incorrect. The text says both groups had the same total study time.",
+    "A": "Incorrect. The rereaders remembered less than the recall group, not nothing; the results do not show rereading is useless.",
+    "B": "Incorrect. The text says both groups had the same total study time.",
+    "C": "Correct. The rereaders felt more confident yet remembered less, so students' impressions of which method works may mislead them.",
     "D": "Incorrect. The text never mentions how interesting the students found the passage."
   },
   "traps": {
-    "B": "too_broad",
-    "C": "reversed",
+    "A": "too_broad",
+    "B": "reversed",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

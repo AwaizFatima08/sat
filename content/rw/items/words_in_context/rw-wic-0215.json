@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "persuasive",
-    "B": "equivocal",
-    "C": "peripheral",
+    "A": "peripheral",
+    "B": "persuasive",
+    "C": "equivocal",
     "D": "provisional"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The grooves were what the iceberg theory \"was hard pressed to explain,\" and Agassiz argued that \"only moving ice sheets\" could make them. The phrase \"not as a difficulty ... but as\" reverses their role: they became strong evidence for the glacial theory. \"Persuasive\" means convincing.",
-    "A": "Correct. Marks that only moving ice could make became the most convincing evidence for the glacial theory.",
-    "B": "Incorrect. Equivocal support would be unclear or open to two readings, but the text says \"only moving ice sheets\" could leave the grooves.",
-    "C": "Incorrect. Peripheral support would be minor, but the grooves are presented as the central evidence for the theory.",
+    "A": "Incorrect. Peripheral support would be minor, but the grooves are presented as the central evidence for the theory.",
+    "B": "Correct. Marks that only moving ice could make became the most convincing evidence for the glacial theory.",
+    "C": "Incorrect. Equivocal support would be unclear or open to two readings, but the text says \"only moving ice sheets\" could leave the grooves.",
     "D": "Incorrect. Nothing in the text suggests the grooves were temporary support; \"in time\" they came to be seen as strong evidence."
   },
   "traps": {
-    "B": "reversed",
-    "C": "wrong_logic",
+    "A": "wrong_logic",
+    "C": "reversed",
     "D": "wrong_tone"
   },
   "grammar": null,
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

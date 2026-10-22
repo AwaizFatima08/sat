@@ -16,16 +16,16 @@
   "choices": {
     "A": "I",
     "B": "me",
-    "C": "myself",
-    "D": "mine"
+    "C": "mine",
+    "D": "myself"
   },
   "answer": "B",
   "explanation": {
     "why": "The blank is part of the compound object of the preposition \"between\" (\"between my aunt and ___\"). The object of a preposition must be an object pronoun, so the narrator refers to herself as \"me.\" A quick test is to remove \"my aunt and\": \"between ... me\" is correct, not \"between ... I.\"",
     "A": "Incorrect. \"I\" is a subject pronoun, but the blank is the object of the preposition \"between.\"",
     "B": "Correct. \"Me\" is the object pronoun needed after the preposition \"between.\"",
-    "C": "Incorrect. \"Myself\" is reflexive and is used only when \"I\" is the subject of the same clause; here the subject is \"It,\" so the object form \"me\" is needed.",
-    "D": "Incorrect. \"Mine\" is a possessive pronoun meaning \"belonging to me,\" which makes no sense as one of the two people sharing the understanding."
+    "C": "Incorrect. \"Mine\" is a possessive pronoun meaning \"belonging to me,\" which makes no sense as one of the two people sharing the understanding.",
+    "D": "Incorrect. \"Myself\" is reflexive and is used only when \"I\" is the subject of the same clause; here the subject is \"It,\" so the object form \"me\" is needed."
   },
   "traps": {
     "A": "grammar_rule",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

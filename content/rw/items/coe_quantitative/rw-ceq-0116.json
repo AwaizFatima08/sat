@@ -44,23 +44,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Oliveira's conclusion?",
   "choices": {
-    "A": "The native aster received 31 bee visits per hour, more than any other plant in the study.",
+    "A": "The ornamental cultivars were sold in more local nurseries than the native species were.",
     "B": "The ornamental bee balm received more bee visits per hour than the native bee balm did.",
-    "C": "The ornamental cultivars were sold in more local nurseries than the native species were.",
-    "D": "In all four plant groups, the native species drew more bee visits than the cultivar."
+    "C": "In all four plant groups, the native species drew more bee visits than the cultivar.",
+    "D": "The native aster received 31 bee visits per hour, more than any other plant in the study."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Oliveira's conclusion is a general comparison of native plants and cultivars, so the best support compares the two columns across every group. In each row, the native species' number is larger than the cultivar's.",
-    "A": "Incorrect. This is true, but it describes a single plant and does not compare it with a cultivar, so it cannot support a general conclusion.",
+    "A": "Incorrect. The table gives no information about which plants nurseries sell.",
     "B": "Incorrect. This misreads the table: the native bee balm received 18 visits and the cultivar only 15.",
-    "C": "Incorrect. The table gives no information about which plants nurseries sell.",
-    "D": "Correct. Native species drew more visits in every group (31 to 12, 24 to 9, 18 to 15 and 27 to 6), which supports the conclusion."
+    "C": "Correct. Native species drew more visits in every group (31 to 12, 24 to 9, 18 to 15 and 27 to 6), which supports the conclusion.",
+    "D": "Incorrect. This is true, but it describes a single plant and does not compare it with a cultivar, so it cannot support a general conclusion."
   },
   "traps": {
-    "A": "too_narrow",
+    "A": "not_in_text",
     "B": "reversed",
-    "C": "not_in_text"
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

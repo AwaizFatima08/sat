@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Awa finds that she will miss her sister more than she had expected.",
-    "B": "Awa is eager to rearrange the bedroom as soon as her sister leaves.",
-    "C": "Mariama is nervous about leaving home to attend a distant university.",
+    "A": "Awa is eager to rearrange the bedroom as soon as her sister leaves.",
+    "B": "Mariama is nervous about leaving home to attend a distant university.",
+    "C": "Awa finds that she will miss her sister more than she had expected.",
     "D": "Awa and Mariama have long argued about how to share their bedroom."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Awa expects to enjoy having more space, but she does not move anything onto the empty shelves and asks Mariama to \"sit down and talk a little longer.\" These actions show that she is sadder about her sister's departure than she expected to be.",
-    "A": "Correct. Awa's untouched shelves and her request that Mariama stay and talk show feelings she had not expected.",
-    "B": "Incorrect. Awa only tells herself she will spread out; in fact she leaves the shelves empty.",
-    "C": "Incorrect. The text never describes Mariama's feelings about leaving.",
+    "A": "Incorrect. Awa only tells herself she will spread out; in fact she leaves the shelves empty.",
+    "B": "Incorrect. The text never describes Mariama's feelings about leaving.",
+    "C": "Correct. Awa's untouched shelves and her request that Mariama stay and talk show feelings she had not expected.",
     "D": "Incorrect. Awa's past complaints are background; the text focuses on her feelings as her sister leaves."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
+    "A": "reversed",
+    "B": "not_in_text",
     "D": "too_narrow"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

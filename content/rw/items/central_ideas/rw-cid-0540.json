@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the text, in what way do the plaques reflect the Kingdom of Benin's ties with the wider world?",
   "choices": {
-    "A": "They were cast by foreign artisans whose individual names have rarely survived.",
-    "B": "They covered the pillars of a palace built for Portuguese merchants in Benin City.",
-    "C": "They depict foreign visitors and were cast largely from metal obtained in trade.",
-    "D": "They depict warriors and court ceremonies that reveal the kingdom's internal order."
+    "A": "They depict foreign visitors and were cast largely from metal obtained in trade.",
+    "B": "They depict warriors and court ceremonies that reveal the kingdom's internal order.",
+    "C": "They covered the pillars of a palace built for Portuguese merchants in Benin City.",
+    "D": "They were cast by foreign artisans whose individual names have rarely survived."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text says the plaques record \"its widening commercial ties.\" Two details support that: the plaques show \"foreign visitors,\" and much of their metal came as manillas \"traded by Portuguese merchants.\" Only a choice built on those details answers the question.",
-    "A": "Incorrect. The casters were members of a hereditary guild living in Benin City, not foreign artisans.",
-    "B": "Incorrect. The plaques covered pillars of the oba's royal palace; nothing says the palace was built for Portuguese merchants.",
-    "C": "Correct. This combines the two details that link the plaques to the outside world: their subject matter and their traded metal.",
-    "D": "Incorrect. This is accurate, but it describes what the plaques show about the kingdom's internal order, not its outside ties."
+    "A": "Correct. This combines the two details that link the plaques to the outside world: their subject matter and their traded metal.",
+    "B": "Incorrect. This is accurate, but it describes what the plaques show about the kingdom's internal order, not its outside ties.",
+    "C": "Incorrect. The plaques covered pillars of the oba's royal palace; nothing says the palace was built for Portuguese merchants.",
+    "D": "Incorrect. The casters were members of a hereditary guild living in Benin City, not foreign artisans."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "true_irrelevant"
+    "B": "true_irrelevant",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

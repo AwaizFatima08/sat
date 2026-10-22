@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Morita's hypothesis?",
   "choices": {
-    "A": "Woodlice feed mainly on dead leaves and rotting wood found on the forest floor.",
-    "B": "Woodlice are most active at night, when birds and other predators have trouble finding them.",
-    "C": "Woodlice placed in a dry, dark box lived just as long as woodlice placed in a damp, dark box.",
+    "A": "Woodlice placed in a dry, dark box lived just as long as woodlice placed in a damp, dark box.",
+    "B": "Woodlice feed mainly on dead leaves and rotting wood found on the forest floor.",
+    "C": "Woodlice are most active at night, when birds and other predators have trouble finding them.",
     "D": "Given a tray with damp and dry halves, equally dark, most woodlice gathered on the damp side."
   },
   "answer": "D",
   "explanation": {
     "why": "Morita's hypothesis has two parts: woodlice dry out easily, and so they seek damp places. A test in which dampness is the only difference between two areas, and woodlice choose the damp one, supports it directly.",
-    "A": "Incorrect. What woodlice eat says nothing about whether they seek damp places to avoid drying out.",
-    "B": "Incorrect. This gives a reason for their timing (avoiding predators), not evidence that they seek moisture.",
-    "C": "Incorrect. If woodlice survived just as well in dry air, they would not need damp places to avoid drying out, so this weakens the hypothesis.",
+    "A": "Incorrect. If woodlice survived just as well in dry air, they would not need damp places to avoid drying out, so this weakens the hypothesis.",
+    "B": "Incorrect. What woodlice eat says nothing about whether they seek damp places to avoid drying out.",
+    "C": "Incorrect. This gives a reason for their timing (avoiding predators), not evidence that they seek moisture.",
     "D": "Correct. Darkness was the same on both sides, so the woodlice chose the damp side because of the moisture."
   },
   "traps": {
-    "A": "true_irrelevant",
+    "A": "reversed",
     "B": "true_irrelevant",
-    "C": "reversed"
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

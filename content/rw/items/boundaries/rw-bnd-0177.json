@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "summer,",
-    "B": "summer",
-    "C": "summer;",
-    "D": "summer—"
+    "A": "summer",
+    "B": "summer,",
+    "C": "summer—",
+    "D": "summer;"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The phrase \"the glassblower who had agreed to train him after watching him sketch vases … for an entire summer\" renames Signora Ferri. Although the phrase contains a \"who\" clause, it is all one piece of extra information; it opens with a comma, so it must close with a comma before the verb \"handed.\"",
-    "A": "Correct. The comma closes the long phrase that renames Signora Ferri, so the subject connects to its verb \"handed.\"",
-    "B": "Incorrect. Without a closing comma, the extra information never ends, and \"handed\" seems to belong to the \"who\" clause.",
-    "C": "Incorrect. A semicolon can't separate the subject \"Signora Ferri\" from its verb \"handed.\"",
-    "D": "Incorrect. Extra information that opens with a comma must close with a comma; a dash doesn't match."
+    "A": "Incorrect. Without a closing comma, the extra information never ends, and \"handed\" seems to belong to the \"who\" clause.",
+    "B": "Correct. The comma closes the long phrase that renames Signora Ferri, so the subject connects to its verb \"handed.\"",
+    "C": "Incorrect. Extra information that opens with a comma must close with a comma; a dash doesn't match.",
+    "D": "Incorrect. A semicolon can't separate the subject \"Signora Ferri\" from its verb \"handed.\""
   },
   "traps": {
-    "B": "grammar_rule",
+    "A": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

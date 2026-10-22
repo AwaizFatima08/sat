@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "conserves",
-    "B": "squanders",
-    "C": "displays",
-    "D": "replenishes"
+    "A": "squanders",
+    "B": "replenishes",
+    "C": "conserves",
+    "D": "displays"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The bear eats nothing for months, so it must live on stored fat. Slowing its heart and breathing uses less energy, \"making that supply last until spring.\" Using something carefully so it lasts is conserving it, so \"conserves\" fits.",
-    "A": "Correct. By slowing its body, the bear uses its stored fat slowly and makes it last, which is what \"conserves\" means.",
-    "B": "Incorrect. To squander is to waste, the opposite of making the fat supply \"last until spring.\"",
-    "C": "Incorrect. The text is about how the bear uses its fat, not about showing it off.",
-    "D": "Incorrect. The bear is not eating, so it cannot replenish, or refill, its fat supply during the winter; it can only use it slowly."
+    "A": "Incorrect. To squander is to waste, the opposite of making the fat supply \"last until spring.\"",
+    "B": "Incorrect. The bear is not eating, so it cannot replenish, or refill, its fat supply during the winter; it can only use it slowly.",
+    "C": "Correct. By slowing its body, the bear uses its stored fat slowly and makes it last, which is what \"conserves\" means.",
+    "D": "Incorrect. The text is about how the bear uses its fat, not about showing it off."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "wrong_logic"
+    "A": "reversed",
+    "B": "wrong_logic",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

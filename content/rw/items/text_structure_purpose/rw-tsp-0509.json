@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that Kente cloth is more beautiful than other woven fabrics",
-    "B": "To describe the meanings of the colors used in Kente cloth",
-    "C": "To explain how narrow woven strips are made into a large piece of Kente cloth",
-    "D": "To compare the weaving methods used by Asante and Ewe weavers"
+    "A": "To compare the weaving methods used by Asante and Ewe weavers",
+    "B": "To explain how narrow woven strips are made into a large piece of Kente cloth",
+    "C": "To argue that Kente cloth is more beautiful than other woven fabrics",
+    "D": "To describe the meanings of the colors used in Kente cloth"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "After introducing Kente cloth, the text explains a process step by step: weaving narrow strips, cutting them to equal lengths, sewing them side by side, and lining up the patterns. Its purpose is to explain how the large cloth is assembled.",
-    "A": "Incorrect. The text calls the patterns \"bright, bold\" but never compares Kente with other fabrics.",
-    "B": "Incorrect. The text does not discuss what any colors mean.",
-    "C": "Correct. Most of the text describes how narrow strips are cut, sewn together, and planned so their patterns match.",
-    "D": "Incorrect. Both groups are named, but the text describes one process and never compares their methods."
+    "A": "Incorrect. Both groups are named, but the text describes one process and never compares their methods.",
+    "B": "Correct. Most of the text describes how narrow strips are cut, sewn together, and planned so their patterns match.",
+    "C": "Incorrect. The text calls the patterns \"bright, bold\" but never compares Kente with other fabrics.",
+    "D": "Incorrect. The text does not discuss what any colors mean."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "not_in_text",
+    "A": "not_in_text",
+    "C": "too_broad",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

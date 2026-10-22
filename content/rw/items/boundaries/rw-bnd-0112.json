@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "honey,",
-    "B": "honey;",
-    "C": "honey:",
-    "D": "honey"
+    "B": "honey",
+    "C": "honey;",
+    "D": "honey:"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The subject of the second sentence is \"The low water content and natural acidity of honey,\" and its verb is \"make.\" No punctuation should separate a subject from its verb, even when the subject is long.",
     "A": "Incorrect. A single comma can't separate the subject from its verb, \"make.\"",
-    "B": "Incorrect. A semicolon joins two independent clauses; here it would cut the subject off from its verb.",
-    "C": "Incorrect. A colon must follow a complete independent clause, and \"The low water content and natural acidity of honey\" is not one.",
-    "D": "Correct. The long subject flows straight into its verb, \"make,\" with no punctuation."
+    "B": "Correct. The long subject flows straight into its verb, \"make,\" with no punctuation.",
+    "C": "Incorrect. A semicolon joins two independent clauses; here it would cut the subject off from its verb.",
+    "D": "Incorrect. A colon must follow a complete independent clause, and \"The low water content and natural acidity of honey\" is not one."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "punctuation",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

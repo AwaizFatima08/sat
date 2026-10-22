@@ -14,18 +14,18 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "Icehotel",
+    "A": "Icehotel—",
     "B": "Icehotel,",
     "C": "Icehotel;",
-    "D": "Icehotel—"
+    "D": "Icehotel"
   },
   "answer": "B",
   "explanation": {
     "why": "\"A hotel in the village of Jukkasjärvi in northern Sweden\" is extra information that describes the Icehotel. It closes with a comma after \"Sweden,\" so it must open with a comma after \"Icehotel.\"",
-    "A": "Incorrect. Without an opening comma, the extra information has only a closing comma, which wrongly separates the subject from its verb \"is built.\"",
+    "A": "Incorrect. The extra information closes with a comma, so it can't open with a dash; the two marks must match.",
     "B": "Correct. The opening comma matches the comma after \"Sweden\" and completes the pair around the extra information.",
     "C": "Incorrect. A semicolon joins two independent clauses, but \"The Icehotel\" is not an independent clause.",
-    "D": "Incorrect. The extra information closes with a comma, so it can't open with a dash; the two marks must match."
+    "D": "Incorrect. Without an opening comma, the extra information has only a closing comma, which wrongly separates the subject from its verb \"is built.\""
   },
   "traps": {
     "A": "grammar_rule",
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

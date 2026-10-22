@@ -16,21 +16,21 @@
   "choices": {
     "A": "Infections in early childhood offer the main protection against developing allergies.",
     "B": "Early contact with microbes may affect later allergy risk.",
-    "C": "Cleaner households are largely responsible for the rise in allergies.",
-    "D": "Children with many older siblings are more likely to develop hay fever."
+    "C": "Children with many older siblings are more likely to develop hay fever.",
+    "D": "Cleaner households are largely responsible for the rise in allergies."
   },
   "answer": "B",
   "explanation": {
     "why": "Text 1 links fewer early infections, which are caused by microbes, to a higher chance of allergies. Text 2 argues that what matters is \"early contact with a diverse range of mostly harmless microbes.\" The two texts disagree about which microbes matter, but both hold that early microbial exposure can influence allergy risk.",
     "A": "Incorrect. Text 1 suggests this, but Text 2 says many infections \"offer no protection against allergies.\"",
     "B": "Correct. Text 1 ties allergy risk to early infections, and Text 2 ties it to early contact with harmless microbes; both connect early microbial exposure to allergies.",
-    "C": "Incorrect. Text 1 points to cleaner households, but Text 2 says household cleaning \"is unlikely to be the problem.\"",
-    "D": "Incorrect. Text 1 says such children were less likely, not more likely, to develop hay fever."
+    "C": "Incorrect. Text 1 says such children were less likely, not more likely, to develop hay fever.",
+    "D": "Incorrect. Text 1 points to cleaner households, but Text 2 says household cleaning \"is unlikely to be the problem.\""
   },
   "traps": {
     "A": "true_irrelevant",
-    "C": "true_irrelevant",
-    "D": "reversed"
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

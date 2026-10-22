@@ -16,21 +16,21 @@
   "choices": {
     "A": "Instead,",
     "B": "For example,",
-    "C": "However,",
-    "D": "In addition,"
+    "C": "In addition,",
+    "D": "However,"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The first sentence describes one feature of Roman roads: their layered base. The second sentence describes another, separate feature: a surface raised in the middle to shed rain. A transition that adds a further point is needed.",
     "A": "Incorrect. \"Instead\" would mean the engineers raised the middle of the road in place of laying layers, but they did both.",
     "B": "Incorrect. A raised surface is not an example of a layered base; it is a different feature.",
-    "C": "Incorrect. The second feature does not contrast with the first; both help the roads stand up to wet weather.",
-    "D": "Correct. \"In addition\" adds a second feature of Roman road building to the first one."
+    "C": "Correct. \"In addition\" adds a second feature of Roman road building to the first one.",
+    "D": "Incorrect. The second feature does not contrast with the first; both help the roads stand up to wet weather."
   },
   "traps": {
     "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic"
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

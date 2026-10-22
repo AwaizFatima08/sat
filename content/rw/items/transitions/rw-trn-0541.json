@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Likewise,",
-    "B": "Thus,",
-    "C": "Nonetheless,",
+    "A": "Thus,",
+    "B": "Nonetheless,",
+    "C": "Likewise,",
     "D": "For instance,"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The first two sentences give evidence: ASL and BSL differ even though both countries speak English, and ASL descends instead from French Sign Language. The last sentence draws a general conclusion from that evidence. The transition must signal a conclusion.",
-    "A": "Incorrect. \"Likewise\" introduces a similar, separate point, but the last sentence is the conclusion drawn from the ASL and BSL facts, not another case like them.",
-    "B": "Correct. \"Thus\" signals that the last sentence is the conclusion the evidence about ASL and BSL supports.",
-    "C": "Incorrect. \"Nonetheless\" signals a contrast, but the conclusion agrees with the evidence before it. This is a tempting choice because the first sentence contains a contrast (\"yet\"), but that contrast is already resolved.",
+    "A": "Correct. \"Thus\" signals that the last sentence is the conclusion the evidence about ASL and BSL supports.",
+    "B": "Incorrect. \"Nonetheless\" signals a contrast, but the conclusion agrees with the evidence before it. This is a tempting choice because the first sentence contains a contrast (\"yet\"), but that contrast is already resolved.",
+    "C": "Incorrect. \"Likewise\" introduces a similar, separate point, but the last sentence is the conclusion drawn from the ASL and BSL facts, not another case like them.",
     "D": "Incorrect. The last sentence is a general claim, not a specific example; the examples came earlier."
   },
   "traps": {
-    "A": "wrong_logic",
+    "B": "wrong_logic",
     "C": "wrong_logic",
     "D": "wrong_logic"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

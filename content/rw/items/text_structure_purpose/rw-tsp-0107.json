@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To explain why Dilini's grandmother prefers to cook by herself",
+    "A": "To show that Dilini's grandmother is disappointed in her",
     "B": "To list the ingredients needed to prepare a traditional dish",
-    "C": "To show that Dilini's grandmother is disappointed in her",
-    "D": "To portray the moment Dilini succeeds at a task she found hard"
+    "C": "To portray the moment Dilini succeeds at a task she found hard",
+    "D": "To explain why Dilini's grandmother prefers to cook by herself"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The text first tells us that Dilini's attempts \"always came out lumpy and broken.\" Then, on this Sunday, she makes \"a perfect circle,\" and her grandmother nods with a smile. The passage builds toward that moment of success.",
-    "A": "Incorrect. The grandmother hands Dilini the mold, so the text does not suggest she prefers to cook alone.",
+    "A": "Incorrect. The grandmother nods \"smiling,\" which shows approval, not disappointment.",
     "B": "Incorrect. Rice dough is mentioned, but the text does not list ingredients; it focuses on Dilini's experience.",
-    "C": "Incorrect. The grandmother nods \"smiling,\" which shows approval, not disappointment.",
-    "D": "Correct. The text contrasts Dilini's earlier failures with her success this Sunday, which her grandmother approves."
+    "C": "Correct. The text contrasts Dilini's earlier failures with her success this Sunday, which her grandmother approves.",
+    "D": "Incorrect. The grandmother hands Dilini the mold, so the text does not suggest she prefers to cook alone."
   },
   "traps": {
-    "A": "not_in_text",
+    "A": "reversed",
     "B": "too_narrow",
-    "C": "reversed"
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "it's",
-    "B": "their",
-    "C": "its",
-    "D": "its'"
+    "A": "its",
+    "B": "its'",
+    "C": "it's",
+    "D": "their"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The pronoun refers to \"a pangolin,\" a singular noun, and it shows possession of \"first response.\" The singular possessive pronoun is \"its,\" with no apostrophe. The plural \"Pangolins\" at the start of the passage makes \"their\" tempting, but this clause is about one pangolin.",
-    "A": "Incorrect. \"It's\" is a contraction of \"it is\" or \"it has\"; \"it is first response\" makes no sense, and possessive pronouns never take apostrophes.",
-    "B": "Incorrect. \"Their\" is plural, but the antecedent in this sentence is the singular \"a pangolin.\"",
-    "C": "Correct. \"Its\" is the singular possessive pronoun, matching \"a pangolin\" and showing that the first response belongs to it.",
-    "D": "Incorrect. \"Its'\" is not a word in standard English; the possessive form of \"it\" is simply \"its.\""
+    "A": "Correct. \"Its\" is the singular possessive pronoun, matching \"a pangolin\" and showing that the first response belongs to it.",
+    "B": "Incorrect. \"Its'\" is not a word in standard English; the possessive form of \"it\" is simply \"its.\"",
+    "C": "Incorrect. \"It's\" is a contraction of \"it is\" or \"it has\"; \"it is first response\" makes no sense, and possessive pronouns never take apostrophes.",
+    "D": "Incorrect. \"Their\" is plural, but the antecedent in this sentence is the singular \"a pangolin.\""
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "plural_possessive",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

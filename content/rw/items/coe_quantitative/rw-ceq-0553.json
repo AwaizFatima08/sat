@@ -72,23 +72,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to support Mirza's argument?",
   "choices": {
-    "A": "In 2019, the mushaira's online viewers outnumbered its in-person attendees by more than seven to one.",
-    "B": "Online viewers in Pakistan outnumbered online viewers abroad in every year shown.",
-    "C": "In-person attendance rose in each year shown, from 3,100 in 2015 to 3,300 in 2019.",
-    "D": "From 2015 to 2019, viewers abroad increased by about 16,000 and those in Pakistan by fewer than 2,000, while in-person attendance did not decline."
+    "A": "In-person attendance rose in each year shown, from 3,100 in 2015 to 3,300 in 2019.",
+    "B": "In 2019, the mushaira's online viewers outnumbered its in-person attendees by more than seven to one.",
+    "C": "From 2015 to 2019, viewers abroad increased by about 16,000 and those in Pakistan by fewer than 2,000, while in-person attendance did not decline.",
+    "D": "Online viewers in Pakistan outnumbered online viewers abroad in every year shown."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Mirza's argument has two parts: the stream did not empty the hall, and the stream's growth came mainly from abroad rather than from within Pakistan. Support needs all three series. Viewers abroad rose from 2,200 to 18,500 (about 16,000), viewers in Pakistan rose from 4,000 to 5,900 (1,900), and in-person attendance went from 3,100 to 3,300.",
-    "A": "Incorrect. This is true (24,400 versus 3,300), but the size of the online audience says nothing about where its growth came from or whether the hall emptied.",
-    "B": "Incorrect. Viewers abroad outnumbered viewers in Pakistan in 2017 (9,800 versus 5,100) and 2019 (18,500 versus 5,900), so this misreads the graph.",
-    "C": "Incorrect. This is true, but it addresses only the first part of Mirza's argument, not where the stream's growing audience came from.",
-    "D": "Correct. It shows that growth abroad far outpaced growth in Pakistan and that the hall did not empty, covering both parts of Mirza's argument."
+    "A": "Incorrect. This is true, but it addresses only the first part of Mirza's argument, not where the stream's growing audience came from.",
+    "B": "Incorrect. This is true (24,400 versus 3,300), but the size of the online audience says nothing about where its growth came from or whether the hall emptied.",
+    "C": "Correct. It shows that growth abroad far outpaced growth in Pakistan and that the hall did not empty, covering both parts of Mirza's argument.",
+    "D": "Incorrect. Viewers abroad outnumbered viewers in Pakistan in 2017 (9,800 versus 5,100) and 2019 (18,500 versus 5,900), so this misreads the graph."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
-    "C": "too_narrow"
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -97,8 +97,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

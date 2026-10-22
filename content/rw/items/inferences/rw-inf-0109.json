@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "spot predators approaching from far away in the dark.",
+    "A": "avoid being noticed by other animals nearby.",
     "B": "attract prey close to its mouth without chasing it.",
     "C": "warm the cold water that surrounds its body.",
-    "D": "avoid being noticed by other animals nearby."
+    "D": "spot predators approaching from far away in the dark."
   },
   "answer": "B",
   "explanation": {
     "why": "Small fish and shrimp swim toward points of light, and the anglerfish holds a glowing lure in front of its mouth while staying still. The lure therefore brings food to the anglerfish instead of the anglerfish going after its food.",
-    "A": "Incorrect. The text says nothing about using the light to watch for predators.",
+    "A": "Incorrect. A glowing light in total darkness draws attention; it does not help the fish hide.",
     "B": "Correct. Prey drawn to the light come right up to the mouth of the still anglerfish.",
     "C": "Incorrect. The lure gives off light; the text never suggests it gives off heat.",
-    "D": "Incorrect. A glowing light in total darkness draws attention; it does not help the fish hide."
+    "D": "Incorrect. The text says nothing about using the light to watch for predators."
   },
   "traps": {
-    "A": "not_in_text",
+    "A": "reversed",
     "C": "not_in_text",
-    "D": "reversed"
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

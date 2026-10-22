@@ -14,22 +14,22 @@
   "data": null,
   "stem": "According to the text, why was sawdust important to the ice trade between Boston and Calcutta?",
   "choices": {
-    "A": "It let ships carry ice across the equator twice without needing to stop at any port along the way.",
-    "B": "It slowed the melting of the ice on long voyages while costing shippers very little to obtain.",
-    "C": "It replaced the ice house that Calcutta had built to store the shipments that came later.",
+    "A": "It replaced the ice house that Calcutta had built to store the shipments that came later.",
+    "B": "It let ships carry ice across the equator twice without needing to stop at any port along the way.",
+    "C": "It slowed the melting of the ice on long voyages while costing shippers very little to obtain.",
     "D": "It was later replaced on ships by machines that kept the ice frozen for the whole voyage."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The text says that sawdust, \"packed around the blocks, ... slowed melting enough to make such voyages possible,\" and that because lumber mills \"produced it as waste, it cost shippers almost nothing.\" Both effectiveness and low cost made it important.",
-    "A": "Incorrect. The text never discusses stopping at ports during the voyage.",
-    "B": "Correct. This combines the two reasons the text gives: sawdust slowed melting, and it was nearly free.",
-    "C": "Incorrect. The ice house stored ice in Calcutta; sawdust did not replace it.",
+    "A": "Incorrect. The ice house stored ice in Calcutta; sawdust did not replace it.",
+    "B": "Incorrect. The text never discusses stopping at ports during the voyage.",
+    "C": "Correct. This combines the two reasons the text gives: sawdust slowed melting, and it was nearly free.",
     "D": "Incorrect. The machines mentioned manufactured ice, ending the trade; the text never says they were used on ships."
   },
   "traps": {
     "A": "not_in_text",
-    "C": "not_in_text",
+    "B": "not_in_text",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -20,22 +20,22 @@
   "data": null,
   "stem": "The student wants to make a generalization about how living things use bioluminescence. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Living things that produce their own light use it for a variety of purposes, from attracting mates to luring prey.",
+    "A": "Fireflies, which produce light through a chemical reaction, flash light signals to attract mates.",
     "B": "Most bioluminescent species live in the ocean, where the deep-sea anglerfish, for example, has a glowing lure.",
-    "C": "Fireflies, which produce light through a chemical reaction, flash light signals to attract mates.",
+    "C": "Living things that produce their own light use it for a variety of purposes, from attracting mates to luring prey.",
     "D": "Bioluminescence is the production of light by living things through a chemical reaction."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The generalization must be broad (about living things in general) and must concern how they use their light. The firefly, anglerfish, and mushroom examples each use light for a different job, so the generalization is that light serves many purposes.",
-    "A": "Correct. It makes a broad statement about the uses of bioluminescence and supports it with two examples from the notes.",
+    "A": "Incorrect. It describes how one animal uses light, which is a single example rather than a generalization.",
     "B": "Incorrect. It is a generalization, which makes it tempting, but it is about where bioluminescent species live, not how they use their light.",
-    "C": "Incorrect. It describes how one animal uses light, which is a single example rather than a generalization.",
+    "C": "Correct. It makes a broad statement about the uses of bioluminescence and supports it with two examples from the notes.",
     "D": "Incorrect. It defines bioluminescence but says nothing about how living things use it."
   },
   "traps": {
+    "A": "too_narrow",
     "B": "misses_goal",
-    "C": "too_narrow",
     "D": "misses_goal"
   },
   "grammar": null,
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

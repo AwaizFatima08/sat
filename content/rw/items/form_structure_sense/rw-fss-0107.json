@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "her",
-    "B": "their",
-    "C": "hers",
-    "D": "she"
+    "A": "their",
+    "B": "hers",
+    "C": "she",
+    "D": "her"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The projects belong to Hatshepsut, one woman, so the blank needs a singular possessive pronoun that can come before a noun (\"most famous projects\"). That pronoun is \"her.\"",
-    "A": "Correct. \"Her\" is the singular possessive form used before a noun, matching \"Hatshepsut.\"",
-    "B": "Incorrect. \"Their\" is plural, but the antecedent \"Hatshepsut\" is one person.",
-    "C": "Incorrect. \"Hers\" stands alone (\"the idea was hers\") and cannot come directly before a noun such as \"projects.\"",
-    "D": "Incorrect. \"She\" is a subject pronoun, not a possessive one; \"she most famous projects\" is not Standard English."
+    "A": "Incorrect. \"Their\" is plural, but the antecedent \"Hatshepsut\" is one person.",
+    "B": "Incorrect. \"Hers\" stands alone (\"the idea was hers\") and cannot come directly before a noun such as \"projects.\"",
+    "C": "Incorrect. \"She\" is a subject pronoun, not a possessive one; \"she most famous projects\" is not Standard English.",
+    "D": "Correct. \"Her\" is the singular possessive form used before a noun, matching \"Hatshepsut.\""
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "pronoun",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

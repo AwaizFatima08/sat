@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "Sri Lankan leopards have grown larger than the tigers of India.",
-    "B": "the presence of tigers may affect when and what leopards hunt.",
-    "C": "leopards in India hunt by day to avoid competing with tigers.",
+    "A": "the presence of tigers may affect when and what leopards hunt.",
+    "B": "leopards in India hunt by day to avoid competing with tigers.",
+    "C": "Sri Lankan leopards have grown larger than the tigers of India.",
     "D": "leopards everywhere prefer to hunt large prey during the night."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Where tigers are present, leopards hunt mainly at night and take smaller prey; where tigers are absent, leopards are more active by day and take larger prey. The difference suggests that tigers may shape leopards' hunting habits.",
-    "A": "Incorrect. The text compares leopards' behavior, not their size, and never says any leopard is larger than a tiger.",
-    "B": "Correct. Leopards behave differently where tigers are absent, which points to tigers as a possible influence.",
-    "C": "Incorrect. The text says leopards in India tend to hunt at night, not by day.",
+    "A": "Correct. Leopards behave differently where tigers are absent, which points to tigers as a possible influence.",
+    "B": "Incorrect. The text says leopards in India tend to hunt at night, not by day.",
+    "C": "Incorrect. The text compares leopards' behavior, not their size, and never says any leopard is larger than a tiger.",
     "D": "Incorrect. Leopards' habits differ between the two countries, so no single preference holds everywhere."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
+    "B": "reversed",
+    "C": "not_in_text",
     "D": "too_broad"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

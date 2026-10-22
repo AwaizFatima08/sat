@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Nevertheless,",
-    "B": "Similarly,",
+    "A": "Similarly,",
+    "B": "For example,",
     "C": "Therefore,",
-    "D": "For example,"
+    "D": "Nevertheless,"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The second sentence says wood usually rots within decades, which would lead a reader to expect the old piles to have decayed. The last sentence says many remain sound anyway. A transition that signals something true despite what came before is needed.",
-    "A": "Correct. \"Nevertheless\" shows that the piles have survived despite the fact that wood usually rots.",
-    "B": "Incorrect. \"Similarly\" signals a matching idea, but the piles' survival is unlike the usual rotting of wood.",
+    "A": "Incorrect. \"Similarly\" signals a matching idea, but the piles' survival is unlike the usual rotting of wood.",
+    "B": "Incorrect. Sound piles are not an example of wood rotting; they are an exception to it.",
     "C": "Incorrect. Wood usually rotting would not lead to the piles staying sound. The \"because\" later in the sentence may make a cause word tempting, but that cause is the low-oxygen mud, not the rotting.",
-    "D": "Incorrect. Sound piles are not an example of wood rotting; they are an exception to it."
+    "D": "Correct. \"Nevertheless\" shows that the piles have survived despite the fact that wood usually rots."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -16,21 +16,21 @@
   "choices": {
     "A": "It presents a familiar explanation, offers evidence of an additional cause, and concludes the explanation is incomplete.",
     "B": "It presents a familiar explanation, refutes it with new evidence, and concludes people played no part in the loss.",
-    "C": "It describes the arrival of the first settlers and then traces the stages by which they cleared the forests.",
-    "D": "It contrasts two archaeological methods and then explains why one of them produced more reliable evidence."
+    "C": "It contrasts two archaeological methods and then explains why one of them produced more reliable evidence.",
+    "D": "It describes the arrival of the first settlers and then traces the stages by which they cleared the forests."
   },
   "answer": "A",
   "explanation": {
     "why": "The text begins with the familiar account blaming islanders for cutting down the forests. It then says ecological evidence \"complicates the story without wholly overturning it\" and describes rats eating palm nuts. The conclusion keeps a human role (\"People still cleared land\") but says \"human choices alone\" cannot explain the loss.",
     "A": "Correct. The rat evidence adds a second cause, and the conclusion says the human-only explanation is incomplete rather than wrong.",
     "B": "Incorrect. The text says the evidence does not \"wholly\" overturn the story and states that \"People still cleared land.\"",
-    "C": "Incorrect. The settlers' arrival is mentioned only to explain where the rats came from; the text does not trace stages of clearing.",
-    "D": "Incorrect. No archaeological methods are compared; the text discusses causes of the deforestation."
+    "C": "Incorrect. No archaeological methods are compared; the text discusses causes of the deforestation.",
+    "D": "Incorrect. The settlers' arrival is mentioned only to explain where the rats came from; the text does not trace stages of clearing."
   },
   "traps": {
     "B": "too_broad",
-    "C": "wrong_logic",
-    "D": "not_in_text"
+    "C": "not_in_text",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

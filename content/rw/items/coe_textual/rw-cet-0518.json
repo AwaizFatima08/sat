@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Dolma's argument?",
   "choices": {
-    "A": "Ladakh receives very little rain or snow, so its farmers have long relied on melting glacier ice.",
-    "B": "At the same site, ice cones lasted several weeks longer than flat sheets of ice made from equal amounts of water.",
+    "A": "At the same site, ice cones lasted several weeks longer than flat sheets of ice made from equal amounts of water.",
+    "B": "Ice stupas built at higher, colder sites lasted longer than ice stupas built lower in the same valleys.",
     "C": "At the same site, flat sheets of ice lasted just as long as ice cones made from equal amounts of water.",
-    "D": "Ice stupas built at higher, colder sites lasted longer than ice stupas built lower in the same valleys."
+    "D": "Ladakh receives very little rain or snow, so its farmers have long relied on melting glacier ice."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Dolma credits the shape of the ice, not just the cold, for how long it lasts. A fair test would compare a cone and a flat sheet with the same amount of water in the same place, so that only the shape differs. If the cones last much longer, shape is shown to matter.",
-    "A": "Incorrect. This explains why villages need meltwater, not why cone-shaped ice lasts longer.",
-    "B": "Correct. Only the shape differed between the two kinds of ice, and the cones lasted weeks longer, just as Dolma predicts.",
+    "A": "Correct. Only the shape differed between the two kinds of ice, and the cones lasted weeks longer, just as Dolma predicts.",
+    "B": "Incorrect. This shows that colder sites help the ice last, which is about location and temperature, not about the cone shape.",
     "C": "Incorrect. If flat sheets lasted just as long, the cone shape would not matter, so this would weaken the argument.",
-    "D": "Incorrect. This shows that colder sites help the ice last, which is about location and temperature, not about the cone shape."
+    "D": "Incorrect. This explains why villages need meltwater, not why cone-shaped ice lasts longer."
   },
   "traps": {
-    "A": "true_irrelevant",
+    "B": "true_irrelevant",
     "C": "reversed",
     "D": "true_irrelevant"
   },
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

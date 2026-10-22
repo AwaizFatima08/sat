@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the argument made by Siddiqi in Text 1?",
   "choices": {
-    "A": "By accepting the sculptures' classical character while proposing another source for it",
+    "A": "By claiming that the Greek kingdoms themselves commissioned the earliest Gandharan Buddhas",
     "B": "By questioning whether Gandharan sculpture resembles Greco-Roman art in any meaningful way",
-    "C": "By claiming that the Greek kingdoms themselves commissioned the earliest Gandharan Buddhas",
+    "C": "By accepting the sculptures' classical character while proposing another source for it",
     "D": "By suggesting that artists from Rome traveled to Gandhara to carve the sculptures themselves"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "Text 2 says it is \"beyond question\" that Gandharan sculpture draws on Greco-Roman models, so it accepts the resemblance Siddiqi describes. Its disagreement is over \"the route\": the Greek kingdoms were gone before most of the sculptures were carved, and the best parallels lie in later Roman provincial art. Text 2 keeps the classical influence but traces it to Roman-era contact instead of the Greek kingdoms.",
-    "A": "Correct. Text 2 agrees the sculptures look classical but argues that the influence came through later trade with the Roman world, not from the earlier Greek rulers.",
+    "A": "Incorrect. This is closer to Text 1's view; Text 2 notes that the Greek kingdoms had disappeared before most Gandharan Buddhas were made.",
     "B": "Incorrect. Text 2 calls the debt to Greco-Roman models \"beyond question.\"",
-    "C": "Incorrect. This is closer to Text 1's view; Text 2 notes that the Greek kingdoms had disappeared before most Gandharan Buddhas were made.",
+    "C": "Correct. Text 2 agrees the sculptures look classical but argues that the influence came through later trade with the Roman world, not from the earlier Greek rulers.",
     "D": "Incorrect. Text 2 points to trade and artistic parallels, not to Roman artists working in Gandhara."
   },
   "traps": {
+    "A": "reversed",
     "B": "too_broad",
-    "C": "reversed",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

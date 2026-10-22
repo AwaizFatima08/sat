@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "separated",
+    "A": "unified",
     "B": "compared",
-    "C": "unified",
-    "D": "measured"
+    "C": "measured",
+    "D": "separated"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The first sentence says the two forces \"seem to have little in common.\" \"However\" introduces a surprising finding, and the colon explains it: at extremely high energies, the forces \"behave as a single force.\" The blank must mean \"joined into one,\" so \"unified\" fits.",
-    "A": "Incorrect. The forces already seem separate; \"however\" signals the surprising opposite finding, that they act as \"a single force.\"",
+    "A": "Correct. If the two forces \"behave as a single force\" at high energies, they can be combined into one theory, or unified.",
     "B": "Incorrect. The forces can be compared, but that is not the discovery the colon explains. The colon says they \"behave as a single force,\" which is stronger than simply being compared.",
-    "C": "Correct. If the two forces \"behave as a single force\" at high energies, they can be combined into one theory, or unified.",
-    "D": "Incorrect. The text says nothing about measuring the forces; the finding is about what the forces are, not about how strong they are."
+    "C": "Incorrect. The text says nothing about measuring the forces; the finding is about what the forces are, not about how strong they are.",
+    "D": "Incorrect. The forces already seem separate; \"however\" signals the surprising opposite finding, that they act as \"a single force.\""
   },
   "traps": {
-    "A": "reversed",
     "B": "true_irrelevant",
-    "D": "not_in_text"
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

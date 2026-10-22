@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the explanation of autumn leaf color in Text 1?",
   "choices": {
-    "A": "By explaining why trees drop their leaves before winter",
-    "B": "By noting that some autumn colors come from pigments that are newly made",
-    "C": "By agreeing that all autumn colors are present in the leaf during summer",
+    "A": "By agreeing that all autumn colors are present in the leaf during summer",
+    "B": "By explaining why trees drop their leaves before winter",
+    "C": "By noting that some autumn colors come from pigments that are newly made",
     "D": "By suggesting that red leaves capture more sunlight than green leaves"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Text 1 says autumn colors appear because yellow and orange pigments that were \"in the leaf all summer\" are revealed. Text 2 begins, \"Not every autumn color was hiding in the leaf all along,\" and explains that red pigments are made \"only in autumn.\" So Text 2 adds that some colors are newly produced.",
-    "A": "Incorrect. Text 2 never discusses why or when trees drop their leaves.",
-    "B": "Correct. Text 2 explains that red anthocyanins are produced fresh in autumn rather than revealed, which adds to Text 1's explanation.",
-    "C": "Incorrect. Text 2 says the opposite: \"Not every autumn color was hiding in the leaf all along.\"",
+    "A": "Incorrect. Text 2 says the opposite: \"Not every autumn color was hiding in the leaf all along.\"",
+    "B": "Incorrect. Text 2 never discusses why or when trees drop their leaves.",
+    "C": "Correct. Text 2 explains that red anthocyanins are produced fresh in autumn rather than revealed, which adds to Text 1's explanation.",
     "D": "Incorrect. Text 2 does not compare how much sunlight red and green leaves capture."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
+    "A": "reversed",
+    "B": "not_in_text",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

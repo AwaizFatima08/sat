@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the view of the period in Text 1?",
   "choices": {
-    "A": "By denying that cities and trade declined after the fall of Rome",
-    "B": "By arguing that ancient learning was lost during Charlemagne's reign",
-    "C": "By accepting that some decline occurred while arguing that learning was preserved",
-    "D": "By claiming that the early Middle Ages were a time of growth in every area of life"
+    "A": "By arguing that ancient learning was lost during Charlemagne's reign",
+    "B": "By claiming that the early Middle Ages were a time of growth in every area of life",
+    "C": "By denying that cities and trade declined after the fall of Rome",
+    "D": "By accepting that some decline occurred while arguing that learning was preserved"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Text 1 presents the view that learning \"nearly died out\" after Rome fell. Text 2 grants that \"cities and long-distance trade did decline\" but says monasteries kept copying ancient texts and that many Roman works \"survive today only because\" of copies made then. Text 2 concedes some decline but rejects the claim that learning vanished.",
-    "A": "Incorrect. Text 2 explicitly says cities and trade \"did decline,\" so it does not deny this.",
-    "B": "Incorrect. Text 2 says scholars at Charlemagne's court helped preserve ancient works, the opposite of this choice.",
-    "C": "Correct. Text 2 admits that cities and trade declined but shows that monasteries and scholars preserved ancient learning.",
-    "D": "Incorrect. Text 2 concedes decline in cities and trade, so it does not claim growth in every area."
+    "A": "Incorrect. Text 2 says scholars at Charlemagne's court helped preserve ancient works, the opposite of this choice.",
+    "B": "Incorrect. Text 2 concedes decline in cities and trade, so it does not claim growth in every area.",
+    "C": "Incorrect. Text 2 explicitly says cities and trade \"did decline,\" so it does not deny this.",
+    "D": "Correct. Text 2 admits that cities and trade declined but shows that monasteries and scholars preserved ancient learning."
   },
   "traps": {
     "A": "reversed",
-    "B": "reversed",
-    "D": "too_broad"
+    "B": "too_broad",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

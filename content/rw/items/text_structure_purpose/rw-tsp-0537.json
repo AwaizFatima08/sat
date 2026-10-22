@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It identifies a flaw in earlier scripts and argues that monasteries resisted the new script.",
-    "B": "It contrasts two medieval scripts and explains why readers came to prefer the denser one.",
-    "C": "It traces a script from its origins to its decline and argues that its influence ended there.",
-    "D": "It describes a script's features and spread, notes its decline, and traces a later revival."
+    "A": "It traces a script from its origins to its decline and argues that its influence ended there.",
+    "B": "It describes a script's features and spread, notes its decline, and traces a later revival.",
+    "C": "It contrasts two medieval scripts and explains why readers came to prefer the denser one.",
+    "D": "It identifies a flaw in earlier scripts and argues that monasteries resisted the new script."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text explains what made Carolingian minuscule distinctive and how \"it spread,\" then says it was \"giving way\" to Gothic hands. \"Yet the script had a second life\" turns to its revival by fifteenth-century scholars and printers, whose versions became today's lowercase letters.",
-    "A": "Incorrect. The text says scribes across the empire adopted the script; it never says monasteries resisted it.",
-    "B": "Incorrect. Gothic hands are mentioned only as what replaced the script; the text gives no reasons readers preferred them.",
-    "C": "Incorrect. The last two sentences describe the script's influence continuing long after its decline, the opposite of this claim.",
-    "D": "Correct. The text moves from features and spread, to decline, to the script's unexpected revival in print."
+    "A": "Incorrect. The last two sentences describe the script's influence continuing long after its decline, the opposite of this claim.",
+    "B": "Correct. The text moves from features and spread, to decline, to the script's unexpected revival in print.",
+    "C": "Incorrect. Gothic hands are mentioned only as what replaced the script; the text gives no reasons readers preferred them.",
+    "D": "Incorrect. The text says scribes across the empire adopted the script; it never says monasteries resisted it."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "wrong_logic",
-    "C": "reversed"
+    "A": "reversed",
+    "C": "wrong_logic",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

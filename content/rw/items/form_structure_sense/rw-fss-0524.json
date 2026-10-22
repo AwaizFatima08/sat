@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "sits",
-    "B": "has sat",
-    "C": "sitting",
-    "D": "had sat"
+    "A": "sitting",
+    "B": "had sat",
+    "C": "sits",
+    "D": "has sat"
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The story is told in the past tense (\"failed,\" \"gathered,\" \"lit\"). The lamp's sitting on the shelf began long before the father lit it and lasted up to that past moment, so the past perfect \"had sat\" is needed.",
-    "A": "Incorrect. The present tense \"sits\" doesn't fit a story told in the past tense.",
-    "B": "Incorrect. The present perfect \"has sat\" connects to the present, but the lamp's time on the shelf ended at a past moment, when the father lit it.",
-    "C": "Incorrect. \"Sitting\" is not a main verb, so the clause beginning with \"that\" would have no verb.",
-    "D": "Correct. The past perfect \"had sat\" shows an action that lasted until a moment in the past, when the father lit the lamp."
+    "A": "Incorrect. \"Sitting\" is not a main verb, so the clause beginning with \"that\" would have no verb.",
+    "B": "Correct. The past perfect \"had sat\" shows an action that lasted until a moment in the past, when the father lit the lamp.",
+    "C": "Incorrect. The present tense \"sits\" doesn't fit a story told in the past tense.",
+    "D": "Incorrect. The present perfect \"has sat\" connects to the present, but the lamp's time on the shelf ended at a past moment, when the father lit it."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "verb_form",
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

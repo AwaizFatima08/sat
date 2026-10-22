@@ -87,23 +87,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "CD sales in 2024 were less than half of what they had been in 2018.",
-    "B": "vinyl sales first rose above CD sales in 2019.",
-    "C": "most of the store's vinyl buyers had never bought CDs there.",
+    "A": "most of the store's vinyl buyers had never bought CDs there.",
+    "B": "CD sales in 2024 were less than half of what they had been in 2018.",
+    "C": "vinyl sales first rose above CD sales in 2019.",
     "D": "vinyl sales rose by about 4,100 while CD sales fell by about 2,500."
   },
   "answer": "D",
   "explanation": {
     "why": "Bell's claim is that vinyl's gain was larger than the CDs' loss. From 2018 to 2024, vinyl sales rose from about 3,100 to about 7,200 (a gain of about 4,100), while CD sales fell from about 4,800 to about 2,300 (a loss of about 2,500).",
-    "A": "Incorrect. This is true (2,300 is less than half of 4,800), but it only describes the CD decline and does not compare it with the vinyl gain.",
-    "B": "Incorrect. This misreads the graph: in 2019 the store sold about 3,600 records and about 4,300 CDs; vinyl first passed CDs in 2020.",
-    "C": "Incorrect. The graph shows sales totals, not who bought the records.",
+    "A": "Incorrect. The graph shows sales totals, not who bought the records.",
+    "B": "Incorrect. This is true (2,300 is less than half of 4,800), but it only describes the CD decline and does not compare it with the vinyl gain.",
+    "C": "Incorrect. This misreads the graph: in 2019 the store sold about 3,600 records and about 4,300 CDs; vinyl first passed CDs in 2020.",
     "D": "Correct. The vinyl gain of about 4,100 is larger than the CD loss of about 2,500, so vinyl more than made up for the decline."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "reversed",
-    "C": "not_in_text"
+    "A": "not_in_text",
+    "B": "true_irrelevant",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -112,8 +112,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

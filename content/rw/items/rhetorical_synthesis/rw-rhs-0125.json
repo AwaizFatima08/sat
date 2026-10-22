@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to present the aim and the finding of Demir's study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Demir had half of 60 volunteers nap for 30 minutes after studying word pairs, while the rest watched a video.",
-    "B": "To test whether a short nap aids memory, Demir had some volunteers nap after studying word pairs and others watch a video.",
-    "C": "In Demir's study, volunteers who napped later recalled 31 word pairs on average, compared with 26 for the video group.",
-    "D": "Testing whether a short nap helps memory, Demir found that volunteers who napped recalled more word pairs than others did."
+    "A": "In Demir's study, volunteers who napped later recalled 31 word pairs on average, compared with 26 for the video group.",
+    "B": "Testing whether a short nap helps memory, Demir found that volunteers who napped recalled more word pairs than others did.",
+    "C": "To test whether a short nap aids memory, Demir had some volunteers nap after studying word pairs and others watch a video.",
+    "D": "Demir had half of 60 volunteers nap for 30 minutes after studying word pairs, while the rest watched a video."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The goal has two parts: the aim (what Demir wanted to test) and the finding (what she learned). The key must include both the question about naps and memory and the result that nappers recalled more.",
-    "A": "Incorrect. This describes only the method, how the volunteers were divided.",
-    "B": "Incorrect. This gives the aim and the method, but it never says what Demir found.",
-    "C": "Incorrect. This gives the finding in detail, but it never states the aim of the study.",
-    "D": "Correct. \"Testing whether a short nap helps memory\" is the aim, and \"found that volunteers who napped recalled more\" is the finding."
+    "A": "Incorrect. This gives the finding in detail, but it never states the aim of the study.",
+    "B": "Correct. \"Testing whether a short nap helps memory\" is the aim, and \"found that volunteers who napped recalled more\" is the finding.",
+    "C": "Incorrect. This gives the aim and the method, but it never says what Demir found.",
+    "D": "Incorrect. This describes only the method, how the volunteers were divided."
   },
   "traps": {
-    "A": "misses_goal",
-    "B": "too_narrow",
-    "C": "too_narrow"
+    "A": "too_narrow",
+    "C": "too_narrow",
+    "D": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

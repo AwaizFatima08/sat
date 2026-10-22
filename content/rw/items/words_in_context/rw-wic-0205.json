@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "conclusive",
-    "B": "spurious",
-    "C": "suggestive",
-    "D": "incidental"
+    "A": "suggestive",
+    "B": "incidental",
+    "C": "conclusive",
+    "D": "spurious"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text explains why revisions point toward an original: copyists rarely change course, but inventors often do. It then limits the claim: pentimenti are \"seldom\" treated \"as proof on their own.\" The blank must describe evidence that points toward a conclusion without settling it, which is \"suggestive.\"",
-    "A": "Incorrect. Conclusive evidence would settle the question, but the text says pentimenti are \"seldom\" treated \"as proof on their own.\"",
-    "B": "Incorrect. \"Spurious\" means false or misleading. The text gives a reason that pentimenti genuinely indicate originality.",
-    "C": "Correct. Suggestive evidence points toward a conclusion without proving it, matching the text's statement that pentimenti are \"seldom\" treated \"as proof on their own.\"",
-    "D": "Incorrect. The text says the revisions \"matter beyond their technical interest,\" so they are not treated as minor or beside the point."
+    "A": "Correct. Suggestive evidence points toward a conclusion without proving it, matching the text's statement that pentimenti are \"seldom\" treated \"as proof on their own.\"",
+    "B": "Incorrect. The text says the revisions \"matter beyond their technical interest,\" so they are not treated as minor or beside the point.",
+    "C": "Incorrect. Conclusive evidence would settle the question, but the text says pentimenti are \"seldom\" treated \"as proof on their own.\"",
+    "D": "Incorrect. \"Spurious\" means false or misleading. The text gives a reason that pentimenti genuinely indicate originality."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "reversed",
-    "D": "wrong_tone"
+    "B": "wrong_tone",
+    "C": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

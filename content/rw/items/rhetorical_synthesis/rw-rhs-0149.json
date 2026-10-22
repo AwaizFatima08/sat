@@ -20,21 +20,21 @@
   "data": null,
   "stem": "The student wants to introduce Waris Shah's Heer to an unfamiliar audience by identifying the kind of work it is and the story it tells. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Waris Shah's Heer, completed in 1766, became the most celebrated of several versions of its story, and its lines are still quoted and sung.",
-    "B": "Waris Shah's Heer (1766) is a qissa, a long Punjabi narrative poem, about two lovers whose families oppose their marriage.",
-    "C": "A qissa is a long narrative poem, often telling a romance drawn from folk tradition, that flourished in Punjabi literature.",
-    "D": "Waris Shah's Heer tells the story of two lovers, Heer and Ranjha, whose families oppose their marriage."
+    "A": "Waris Shah's Heer (1766) is a qissa, a long Punjabi narrative poem, about two lovers whose families oppose their marriage.",
+    "B": "Waris Shah's Heer, completed in 1766, became the most celebrated of several versions of its story, and its lines are still quoted and sung.",
+    "C": "Waris Shah's Heer tells the story of two lovers, Heer and Ranjha, whose families oppose their marriage.",
+    "D": "A qissa is a long narrative poem, often telling a romance drawn from folk tradition, that flourished in Punjabi literature."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The goal has two specific requirements: say what kind of work Heer is and say what story it tells. The key must identify it as a qissa, explained for new readers as a long narrative poem, and summarize the lovers' story.",
-    "A": "Incorrect. This shows the poem's fame and lasting popularity, but it does not say what kind of work it is or what story it tells. It is an attractive near miss.",
-    "B": "Correct. It identifies the kind of work (a qissa, explained as a long Punjabi narrative poem) and the story (two lovers whose families oppose their marriage).",
-    "C": "Incorrect. This explains the form but never mentions Heer or its story.",
-    "D": "Incorrect. This tells the story, but it does not say what kind of work Heer is."
+    "A": "Correct. It identifies the kind of work (a qissa, explained as a long Punjabi narrative poem) and the story (two lovers whose families oppose their marriage).",
+    "B": "Incorrect. This shows the poem's fame and lasting popularity, but it does not say what kind of work it is or what story it tells. It is an attractive near miss.",
+    "C": "Incorrect. This tells the story, but it does not say what kind of work Heer is.",
+    "D": "Incorrect. This explains the form but never mentions Heer or its story."
   },
   "traps": {
-    "A": "misses_goal",
+    "B": "misses_goal",
     "C": "too_narrow",
     "D": "too_narrow"
   },
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

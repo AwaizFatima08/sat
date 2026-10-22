@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the position taken by Lindgren in Text 1?",
   "choices": {
-    "A": "By arguing that the radio-frequency experiments in fact point to an iron-based sensor",
-    "B": "By granting that the evidence favors the hypothesis while denying that it proves it",
-    "C": "By claiming that robins rely on the position of the sun rather than on magnetic fields",
+    "A": "By claiming that robins rely on the position of the sun rather than on magnetic fields",
+    "B": "By arguing that the radio-frequency experiments in fact point to an iron-based sensor",
+    "C": "By granting that the evidence favors the hypothesis while denying that it proves it",
     "D": "By rejecting the hypothesis because cryptochrome does not respond to magnetic fields"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Lindgren says the question is \"settled.\" Text 2 agrees the results \"fit the cryptochrome hypothesis well\" but notes that no one has shown cryptochrome working \"inside the retina of a living, orienting bird,\" so the case is \"strong but incomplete.\" Text 2 accepts the evidence as support while denying that it settles the matter.",
-    "A": "Incorrect. Text 2 says the results fit the cryptochrome hypothesis; it never links them to an iron-based sensor.",
-    "B": "Correct. Text 2 calls the case \"strong but incomplete,\" agreeing the evidence supports cryptochrome while rejecting Lindgren's claim that the question is settled.",
-    "C": "Incorrect. Text 2 does not discuss the sun or doubt that robins use magnetic fields.",
+    "A": "Incorrect. Text 2 does not discuss the sun or doubt that robins use magnetic fields.",
+    "B": "Incorrect. Text 2 says the results fit the cryptochrome hypothesis; it never links them to an iron-based sensor.",
+    "C": "Correct. Text 2 calls the case \"strong but incomplete,\" agreeing the evidence supports cryptochrome while rejecting Lindgren's claim that the question is settled.",
     "D": "Incorrect. Text 2 reports that cryptochrome \"responds to magnetic fields in the laboratory,\" so it does not reject the hypothesis on those grounds."
   },
   "traps": {
     "A": "not_in_text",
-    "C": "not_in_text",
+    "B": "not_in_text",
     "D": "reversed"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

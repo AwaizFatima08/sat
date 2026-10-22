@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It shows that the object's importance was recognized as soon as it was found.",
+    "A": "It reports the finding that transformed how the object was understood.",
     "B": "It describes the methods the divers used to bring objects up from the wreck.",
-    "C": "It reports the finding that transformed how the object was understood.",
-    "D": "It states the main conclusion that historians have drawn about Greek engineering."
+    "C": "It states the main conclusion that historians have drawn about Greek engineering.",
+    "D": "It shows that the object's importance was recognized as soon as it was found."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "Before the underlined sentence, the bronze lump \"attracted little attention.\" The underlined sentence reveals what X-rays showed inside it, precise gears unlike anything else from the ancient world. That discovery leads to the later sentences about what the device did and how it changed historians' views.",
-    "A": "Incorrect. The text says the object \"attracted little attention\" at first; its importance was recognized only decades later.",
+    "A": "Correct. The X-rays turned an overlooked lump into evidence of a precise geared device, changing how the object was seen.",
     "B": "Incorrect. The sentence is about X-ray images taken decades later, not about how the divers worked.",
-    "C": "Correct. The X-rays turned an overlooked lump into evidence of a precise geared device, changing how the object was seen.",
-    "D": "Incorrect. The conclusion about Greek engineers comes in the last sentence; the underlined sentence gives the discovery that led to it."
+    "C": "Incorrect. The conclusion about Greek engineers comes in the last sentence; the underlined sentence gives the discovery that led to it.",
+    "D": "Incorrect. The text says the object \"attracted little attention\" at first; its importance was recognized only decades later."
   },
   "traps": {
-    "A": "reversed",
     "B": "not_in_text",
-    "D": "wrong_logic"
+    "C": "wrong_logic",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

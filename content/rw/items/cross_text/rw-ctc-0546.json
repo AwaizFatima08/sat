@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the reading of the ending in Text 1?",
   "choices": {
-    "A": "By denying that the novel presents Dorothea's opportunities as limited by her society",
-    "B": "By arguing that Dorothea's influence was in fact widely visible to those around her",
-    "C": "By claiming that Eliot meant Dorothea's marriage to fulfill her longing for a great life",
-    "D": "By granting that her prospects narrowed but denying that her life amounts to a defeat"
+    "A": "By claiming that Eliot meant Dorothea's marriage to fulfill her longing for a great life",
+    "B": "By denying that the novel presents Dorothea's opportunities as limited by her society",
+    "C": "By granting that her prospects narrowed but denying that her life amounts to a defeat",
+    "D": "By arguing that Dorothea's influence was in fact widely visible to those around her"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Text 2 agrees that \"The novel laments the narrowing of her opportunities,\" so it accepts part of Kubová's reading. But it points to the narrator's praise of \"unhistoric acts\" and of Dorothea's \"incalculably diffusive\" effect, and says the novel \"refuses to equate an obscure life with a wasted one.\" Text 2 therefore rejects the conclusion that the ending registers a defeat.",
-    "A": "Incorrect. Text 2 says the novel \"laments the narrowing of her opportunities,\" so it accepts that her society limited her.",
-    "B": "Incorrect. Text 2 calls her influence \"diffusive\" and her life \"obscure\"; it values her influence without claiming it was widely visible.",
-    "C": "Incorrect. Text 2 does not say the marriage fulfilled her epic longing; it argues that a life of quiet influence still has worth.",
-    "D": "Correct. Text 2 accepts that her prospects were narrowed but argues that the ending honors, rather than mourns, an obscure but influential life."
+    "A": "Incorrect. Text 2 does not say the marriage fulfilled her epic longing; it argues that a life of quiet influence still has worth.",
+    "B": "Incorrect. Text 2 says the novel \"laments the narrowing of her opportunities,\" so it accepts that her society limited her.",
+    "C": "Correct. Text 2 accepts that her prospects were narrowed but argues that the ending honors, rather than mourns, an obscure but influential life.",
+    "D": "Incorrect. Text 2 calls her influence \"diffusive\" and her life \"obscure\"; it values her influence without claiming it was widely visible."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "reversed",
-    "C": "not_in_text"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

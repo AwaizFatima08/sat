@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the explanation offered by Haddad in Text 1?",
   "choices": {
-    "A": "By arguing that constantly suppressing one language tires speakers instead of strengthening them",
-    "B": "By claiming that bilingual children actually perform worse than monolingual children on such tests",
-    "C": "By questioning whether the advantage that the explanation is meant to account for really exists",
-    "D": "By accepting that the advantage is real but doubting that large studies are able to detect it"
+    "A": "By accepting that the advantage is real but doubting that large studies are able to detect it",
+    "B": "By questioning whether the advantage that the explanation is meant to account for really exists",
+    "C": "By claiming that bilingual children actually perform worse than monolingual children on such tests",
+    "D": "By arguing that constantly suppressing one language tires speakers instead of strengthening them"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Text 2 says Haddad's mechanism \"may be explaining an effect that is not there,\" because in large, careful studies \"the bilingual advantage ... largely disappeared.\" Its closing sentence asks researchers to \"establish that they do\" have the advantage before explaining it. Text 2 thus doubts the finding that the explanation rests on.",
-    "A": "Incorrect. Text 2 does not offer a different effect of language suppression; it questions whether there is an advantage to explain.",
-    "B": "Incorrect. Text 2 says the advantage \"largely disappeared,\" not that bilingual children do worse.",
-    "C": "Correct. Text 2 argues that larger studies fail to find the advantage, so the explanation may be accounting for something that does not exist.",
-    "D": "Incorrect. This reverses Text 2: the large studies are its evidence that the advantage may not be real."
+    "A": "Incorrect. This reverses Text 2: the large studies are its evidence that the advantage may not be real.",
+    "B": "Correct. Text 2 argues that larger studies fail to find the advantage, so the explanation may be accounting for something that does not exist.",
+    "C": "Incorrect. Text 2 says the advantage \"largely disappeared,\" not that bilingual children do worse.",
+    "D": "Incorrect. Text 2 does not offer a different effect of language suppression; it questions whether there is an advantage to explain."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "too_broad",
-    "D": "reversed"
+    "A": "reversed",
+    "C": "too_broad",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

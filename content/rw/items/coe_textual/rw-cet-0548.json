@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Gurung's argument?",
   "choices": {
-    "A": "Colonies on the highest, least accessible ledges lost fewer combs to bears and honey hunters.",
-    "B": "Honey hunters in Nepal reach the combs by lowering rope ladders from the tops of the cliffs.",
-    "C": "South-facing cliffs in the study valleys receive more hours of winter sunlight than other cliffs do.",
-    "D": "Where north- and south-facing ledges were equally sheer, colonies still chose the south-facing ones."
+    "A": "Honey hunters in Nepal reach the combs by lowering rope ladders from the tops of the cliffs.",
+    "B": "Where north- and south-facing ledges were equally sheer, colonies still chose the south-facing ones.",
+    "C": "Colonies on the highest, least accessible ledges lost fewer combs to bears and honey hunters.",
+    "D": "South-facing cliffs in the study valleys receive more hours of winter sunlight than other cliffs do."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "In Gurung's valleys, south-facing cliffs are both the warmest and the hardest to reach, so either feature could explain the bees' choice. Support for warmth must hold accessibility equal. If bees still pick south-facing ledges when north-facing ones are just as sheer, protection cannot be the reason, leaving warmth.",
-    "A": "Incorrect. Fewer combs lost on inaccessible ledges shows that inaccessibility protects colonies, which favors the protection explanation.",
-    "B": "Incorrect. How honey hunters reach the combs does not show why the bees choose south-facing rock.",
-    "C": "Incorrect. More sunlight on south faces is a premise of Gurung's argument, but those faces are also the sheerest, so this does not separate her explanation from the rival one.",
-    "D": "Correct. With sheerness held equal, the remaining difference between the ledges is warmth, so the preference points to warmth."
+    "A": "Incorrect. How honey hunters reach the combs does not show why the bees choose south-facing rock.",
+    "B": "Correct. With sheerness held equal, the remaining difference between the ledges is warmth, so the preference points to warmth.",
+    "C": "Incorrect. Fewer combs lost on inaccessible ledges shows that inaccessibility protects colonies, which favors the protection explanation.",
+    "D": "Incorrect. More sunlight on south faces is a premise of Gurung's argument, but those faces are also the sheerest, so this does not separate her explanation from the rival one."
   },
   "traps": {
-    "A": "reversed",
-    "B": "true_irrelevant",
-    "C": "true_irrelevant"
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

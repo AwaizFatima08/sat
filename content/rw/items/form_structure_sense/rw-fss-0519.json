@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "work",
-    "B": "have worked",
-    "C": "had worked",
-    "D": "working"
+    "A": "working",
+    "B": "had worked",
+    "C": "work",
+    "D": "have worked"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The phrase \"By the time the main tomb was essentially finished around 1643\" sets a point in the past. Work that went on before and up to that past point needs the past perfect, so \"had worked\" is correct.",
-    "A": "Incorrect. The present tense \"work\" doesn't fit events that the passage places in the 1630s and 1640s.",
-    "B": "Incorrect. The present perfect \"have worked\" connects the past to the present, but this action ended at a past point, \"around 1643.\"",
-    "C": "Correct. The past perfect \"had worked\" shows that the work took place before the past moment named by \"By the time ... 1643.\"",
-    "D": "Incorrect. \"Working\" is not a main verb, so the clause \"thousands of workers working on it\" would have no main verb."
+    "A": "Incorrect. \"Working\" is not a main verb, so the clause \"thousands of workers working on it\" would have no main verb.",
+    "B": "Correct. The past perfect \"had worked\" shows that the work took place before the past moment named by \"By the time ... 1643.\"",
+    "C": "Incorrect. The present tense \"work\" doesn't fit events that the passage places in the 1630s and 1640s.",
+    "D": "Incorrect. The present perfect \"have worked\" connects the past to the present, but this action ended at a past point, \"around 1643.\""
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "verb_form",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

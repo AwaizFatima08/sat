@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "regulate",
-    "B": "predict",
-    "C": "contaminate",
+    "A": "contaminate",
+    "B": "regulate",
+    "C": "predict",
     "D": "adapt to"
   },
   "answer": "D",
   "explanation": {
     "why": "The water level \"rose\" and \"sank\" with the seasons, and the steps let people reach it at any level. The stepwells did not change the water supply; they helped people deal with its changes. \"Adapt to\" fits.",
-    "A": "Incorrect. To regulate the supply would be to control how much water there was, but the water level still rose and sank; the steps only let people reach it.",
-    "B": "Incorrect. The text says nothing about forecasting the water level; it explains how people reached the water at any level.",
-    "C": "Incorrect. Nothing in the text suggests the stepwells polluted the water; they were built to give people access to it.",
+    "A": "Incorrect. Nothing in the text suggests the stepwells polluted the water; they were built to give people access to it.",
+    "B": "Incorrect. To regulate the supply would be to control how much water there was, but the water level still rose and sank; the steps only let people reach it.",
+    "C": "Incorrect. The text says nothing about forecasting the water level; it explains how people reached the water at any level.",
     "D": "Correct. The steps let people reach the water wherever it was, so they could adjust to a supply that rose and fell."
   },
   "traps": {
-    "A": "wrong_logic",
-    "B": "not_in_text",
-    "C": "reversed"
+    "A": "reversed",
+    "B": "wrong_logic",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

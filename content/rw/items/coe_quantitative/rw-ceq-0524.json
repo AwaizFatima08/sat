@@ -49,22 +49,22 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Navarro's conclusion?",
   "choices": {
-    "A": "Most of the lady beetles released onto the rosebushes had flown away to other parts of the garden by week 3.",
-    "B": "One week after release, bushes with beetles had 14 aphids per shoot, far fewer than the 46 on untreated bushes.",
-    "C": "In week 1, bushes with beetles had 14 aphids per shoot to untreated bushes' 46, but by week 4 they had 47 to 52.",
+    "A": "One week after release, bushes with beetles had 14 aphids per shoot, far fewer than the 46 on untreated bushes.",
+    "B": "In week 1, bushes with beetles had 14 aphids per shoot to untreated bushes' 46, but by week 4 they had 47 to 52.",
+    "C": "Most of the lady beetles released onto the rosebushes had flown away to other parts of the garden by week 3.",
     "D": "By week 4, bushes with beetles had more aphids per shoot than untreated bushes had in the same week."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Navarro's conclusion has two parts: an early drop in aphids and a later fading of that effect. The support must compare the two columns at an early week and at a late week. In week 1 the gap was 32 aphids per shoot (14 versus 46), but by week 4 it was only 5 (47 versus 52).",
-    "A": "Incorrect. The table counts aphids only; it gives no information about where the beetles went.",
-    "B": "Incorrect. This is true and shows the early reduction, but it does not show that the effect later nearly disappeared.",
-    "C": "Correct. It shows both a large early reduction and a small difference by week 4, matching both parts of the conclusion.",
+    "A": "Incorrect. This is true and shows the early reduction, but it does not show that the effect later nearly disappeared.",
+    "B": "Correct. It shows both a large early reduction and a small difference by week 4, matching both parts of the conclusion.",
+    "C": "Incorrect. The table counts aphids only; it gives no information about where the beetles went.",
     "D": "Incorrect. In week 4, bushes with beetles had 47 aphids per shoot and untreated bushes had 52, so this misreads the table."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "too_narrow",
+    "A": "too_narrow",
+    "C": "not_in_text",
     "D": "reversed"
   },
   "grammar": null,
@@ -78,13 +78,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -44,23 +44,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Quispe's argument?",
   "choices": {
-    "A": "Fine and extra-fine fiber sold for more than coarse or medium fiber, whether or not it was sold through the cooperative.",
-    "B": "The cooperative raised the price of extra-fine fiber by 20 soles per kilogram but that of coarse fiber by only 1 sol.",
-    "C": "The cooperative paid herders more than independent buyers did for every grade of fiber shown.",
-    "D": "The gap between independent and cooperative prices was roughly the same for all four grades of fiber."
+    "A": "The cooperative paid herders more than independent buyers did for every grade of fiber shown.",
+    "B": "Fine and extra-fine fiber sold for more than coarse or medium fiber, whether or not it was sold through the cooperative.",
+    "C": "The gap between independent and cooperative prices was roughly the same for all four grades of fiber.",
+    "D": "The cooperative raised the price of extra-fine fiber by 20 soles per kilogram but that of coarse fiber by only 1 sol."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "Quispe's argument is about where the cooperative's advantage is concentrated: in the finest grades. The advantage is the difference between the two price columns, so support must compare that difference for fine and coarse fiber. For extra-fine fiber it is 66 − 46 = 20 soles; for coarse fiber it is 13 − 12 = 1 sol.",
-    "A": "Incorrect. This is true, but it shows only that finer fiber is worth more, which the text already states, not that the cooperative helps most with fine grades.",
-    "B": "Correct. It compares the cooperative's advantage for the finest and coarsest grades and shows that the gain is concentrated in the finest fiber.",
-    "C": "Incorrect. This is true, but it shows only that the cooperative always pays more, not that its advantage is mainly in the finest grades.",
-    "D": "Incorrect. The gaps were 1, 5, 14, and 20 soles, which grow sharply with fineness, so this misreads the table."
+    "A": "Incorrect. This is true, but it shows only that the cooperative always pays more, not that its advantage is mainly in the finest grades.",
+    "B": "Incorrect. This is true, but it shows only that finer fiber is worth more, which the text already states, not that the cooperative helps most with fine grades.",
+    "C": "Incorrect. The gaps were 1, 5, 14, and 20 soles, which grow sharply with fineness, so this misreads the table.",
+    "D": "Correct. It compares the cooperative's advantage for the finest and coarsest grades and shows that the gain is concentrated in the finest fiber."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "too_narrow",
-    "D": "reversed"
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

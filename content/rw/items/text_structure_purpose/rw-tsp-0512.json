@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It describes a waterway and then explains why it was abandoned.",
-    "B": "It explains a transportation difficulty and then describes a project that addressed it.",
-    "C": "It compares the Yangtze River with the Yellow River.",
-    "D": "It argues that the canal mattered more to China than its rivers did."
+    "A": "It compares the Yangtze River with the Yellow River.",
+    "B": "It describes a waterway and then explains why it was abandoned.",
+    "C": "It argues that the canal mattered more to China than its rivers did.",
+    "D": "It explains a transportation difficulty and then describes a project that addressed it."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The first sentence explains a difficulty: because the rivers flow west to east, grain was hard to move from south to north. The next sentences describe the Sui dynasty's canal and its long use for carrying grain north. The text moves from a problem to the project that solved it.",
-    "A": "Incorrect. The text says the canal was used for more than a thousand years; it never says why it was abandoned.",
-    "B": "Correct. The text names the north-south transport problem and then describes the Grand Canal that addressed it.",
-    "C": "Incorrect. The two rivers are named as the canal's endpoints, but the text does not compare them.",
-    "D": "Incorrect. The text shows the canal was useful but never claims it was more important than the rivers."
+    "A": "Incorrect. The two rivers are named as the canal's endpoints, but the text does not compare them.",
+    "B": "Incorrect. The text says the canal was used for more than a thousand years; it never says why it was abandoned.",
+    "C": "Incorrect. The text shows the canal was useful but never claims it was more important than the rivers.",
+    "D": "Correct. The text names the north-south transport problem and then describes the Grand Canal that addressed it."
   },
   "traps": {
     "A": "not_in_text",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "B": "not_in_text",
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

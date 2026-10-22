@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "the site's massive T-shaped limestone pillars, some taller than five meters, are carved with foxes, boars, and vultures.",
-    "B": "archaeologists have found massive T-shaped limestone pillars at the site, some taller than five meters, carved with foxes, boars, and vultures.",
-    "C": "the carvings of foxes, boars, and vultures cover massive T-shaped limestone pillars at the site, some taller than five meters.",
-    "D": "visitors to the site can see massive T-shaped limestone pillars, some taller than five meters, carved with foxes, boars, and vultures."
+    "A": "visitors to the site can see massive T-shaped limestone pillars, some taller than five meters, carved with foxes, boars, and vultures.",
+    "B": "the carvings of foxes, boars, and vultures cover massive T-shaped limestone pillars at the site, some taller than five meters.",
+    "C": "archaeologists have found massive T-shaped limestone pillars at the site, some taller than five meters, carved with foxes, boars, and vultures.",
+    "D": "the site's massive T-shaped limestone pillars, some taller than five meters, are carved with foxes, boars, and vultures."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "An introductory modifier describes whatever noun comes right after the comma. \"Raised around 9500 BCE\" describes something that was set upright long ago, which can only be the stone pillars. So the subject that follows must be the pillars themselves.",
-    "A": "Correct. The subject \"the site's massive T-shaped limestone pillars\" comes right after the modifier, so the pillars are what was raised around 9500 BCE.",
-    "B": "Incorrect. Placing \"archaeologists\" right after the modifier says the archaeologists were raised around 9500 BCE, so the modifier dangles.",
-    "C": "Incorrect. The subject \"the carvings\" comes right after the modifier, but carvings are cut into stone, not raised; the modifier is meant for the pillars.",
-    "D": "Incorrect. Placing \"visitors\" right after the modifier says modern visitors were raised around 9500 BCE, which makes no sense."
+    "A": "Incorrect. Placing \"visitors\" right after the modifier says modern visitors were raised around 9500 BCE, which makes no sense.",
+    "B": "Incorrect. The subject \"the carvings\" comes right after the modifier, but carvings are cut into stone, not raised; the modifier is meant for the pillars.",
+    "C": "Incorrect. Placing \"archaeologists\" right after the modifier says the archaeologists were raised around 9500 BCE, so the modifier dangles.",
+    "D": "Correct. The subject \"the site's massive T-shaped limestone pillars\" comes right after the modifier, so the pillars are what was raised around 9500 BCE."
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "modifier",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

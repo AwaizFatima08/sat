@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Hoatzins build their nests over water so that predators cannot reach the eggs.",
+    "A": "Snakes are the most common predators of birds in South American forests.",
     "B": "Young hoatzins have a way to escape predators and then return to their nests.",
-    "C": "Adult hoatzins use the claws on their wings to climb through swampy forests.",
-    "D": "Snakes are the most common predators of birds in South American forests."
+    "C": "Hoatzins build their nests over water so that predators cannot reach the eggs.",
+    "D": "Adult hoatzins use the claws on their wings to climb through swampy forests."
   },
   "answer": "B",
   "explanation": {
     "why": "The text explains what a young hoatzin does when a predator comes near: it drops into the water and swims away, and later it climbs back to the nest using claws on its wings. The main idea must cover both parts of this survival strategy, escaping and returning.",
-    "A": "Incorrect. The text says where hoatzins nest but never says the nests keep predators from reaching eggs.",
+    "A": "Incorrect. The text mentions a snake as one possible predator but never compares predators of forest birds.",
     "B": "Correct. This covers the whole text: the chick escapes by dropping into the water and then climbs back up with its wing claws.",
-    "C": "Incorrect. The text says the claws disappear as the bird grows up, so adults do not use them.",
-    "D": "Incorrect. The text mentions a snake as one possible predator but never compares predators of forest birds."
+    "C": "Incorrect. The text says where hoatzins nest but never says the nests keep predators from reaching eggs.",
+    "D": "Incorrect. The text says the claws disappear as the bird grows up, so adults do not use them."
   },
   "traps": {
     "A": "not_in_text",
-    "C": "reversed",
-    "D": "not_in_text"
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

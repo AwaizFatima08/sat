@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Instead,",
-    "B": "For example,",
-    "C": "Similarly,",
-    "D": "In addition,"
+    "A": "For example,",
+    "B": "Similarly,",
+    "C": "In addition,",
+    "D": "Instead,"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The second sentence says what the sloth bear does not do: gather termites with a sticky tongue. The last sentence describes the method it uses in place of that one. A transition that introduces an alternative is needed.",
-    "A": "Correct. \"Instead\" shows that sucking up termites replaces the sticky-tongue method the bear does not use.",
-    "B": "Incorrect. The sucking method is not an example of gathering insects with a sticky tongue; it is a different method.",
-    "C": "Incorrect. \"Similarly\" would mean the bear's method resembles the anteater's, but the text says it is different.",
-    "D": "Incorrect. \"In addition\" would mean the bear also uses a sticky tongue, but the text says it does not."
+    "A": "Incorrect. The sucking method is not an example of gathering insects with a sticky tongue; it is a different method.",
+    "B": "Incorrect. \"Similarly\" would mean the bear's method resembles the anteater's, but the text says it is different.",
+    "C": "Incorrect. \"In addition\" would mean the bear also uses a sticky tongue, but the text says it does not.",
+    "D": "Correct. \"Instead\" shows that sucking up termites replaces the sticky-tongue method the bear does not use."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

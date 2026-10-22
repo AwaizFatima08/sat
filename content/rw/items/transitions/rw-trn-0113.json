@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "However,",
-    "B": "As a result,",
-    "C": "For example,",
-    "D": "In addition,"
+    "A": "As a result,",
+    "B": "For example,",
+    "C": "In addition,",
+    "D": "However,"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The first sentence repeats a popular saying that suggests bats are blind. The next sentence says that the saying is wrong: no bat species is blind. A transition that signals a contrast is needed.",
-    "A": "Correct. \"However\" signals that the facts about bats contrast with the familiar saying.",
-    "B": "Incorrect. The saying does not cause bats to be able to see.",
-    "C": "Incorrect. The fact that no bat is blind is not an example of the saying; it shows the saying is wrong.",
-    "D": "Incorrect. \"In addition\" adds a point that agrees, but the sentence contradicts the saying."
+    "A": "Incorrect. The saying does not cause bats to be able to see.",
+    "B": "Incorrect. The fact that no bat is blind is not an example of the saying; it shows the saying is wrong.",
+    "C": "Incorrect. \"In addition\" adds a point that agrees, but the sentence contradicts the saying.",
+    "D": "Correct. \"However\" signals that the facts about bats contrast with the familiar saying."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

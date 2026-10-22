@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "laying",
-    "B": "laid",
-    "C": "lain",
-    "D": "lay"
+    "A": "lay",
+    "B": "lain",
+    "C": "laid",
+    "D": "laying"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "The sentence needs a main verb for the subject \"millions of trees,\" and the meaning is that the trees were resting on the ground, which is the verb \"lie.\" The past tense of \"lie\" is \"lay,\" which fits the past-tense narrative (\"found,\" \"arrived\"). \"Laid\" is the past tense of \"lay,\" a different verb that means to put something down and needs an object.",
-    "A": "Incorrect. \"Laying\" is a participle of \"lay\" (to put something down), so the sentence would have no main verb.",
-    "B": "Incorrect. \"Laid\" is the past tense of \"lay,\" which means to put something down and requires an object; the trees were not putting anything down.",
-    "C": "Incorrect. \"Lain\" is the past participle of \"lie\" and cannot be the main verb without a helping verb such as \"had.\"",
-    "D": "Correct. \"Lay,\" the past tense of \"lie,\" gives the subject a main verb and correctly says the trees were resting on the ground."
+    "A": "Correct. \"Lay,\" the past tense of \"lie,\" gives the subject a main verb and correctly says the trees were resting on the ground.",
+    "B": "Incorrect. \"Lain\" is the past participle of \"lie\" and cannot be the main verb without a helping verb such as \"had.\"",
+    "C": "Incorrect. \"Laid\" is the past tense of \"lay,\" which means to put something down and requires an object; the trees were not putting anything down.",
+    "D": "Incorrect. \"Laying\" is a participle of \"lay\" (to put something down), so the sentence would have no main verb."
   },
   "traps": {
-    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule"
+    "C": "grammar_rule",
+    "D": "grammar_rule"
   },
   "grammar": "verb_form",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

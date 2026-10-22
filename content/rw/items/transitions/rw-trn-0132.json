@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Therefore,",
-    "B": "However,",
-    "C": "For instance,",
+    "A": "However,",
+    "B": "For instance,",
+    "C": "Therefore,",
     "D": "In addition,"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The first two sentences show Mateo well prepared and \"calm and certain.\" The last sentence describes the opposite: trembling hands and stiff, uneven notes. A contrast transition is needed.",
-    "A": "Incorrect. \"Therefore\" signals a result, but trembling hands do not follow from being calm and well practiced.",
-    "B": "Correct. \"However\" signals the contrast between Mateo's confidence and his sudden nervousness at the piano.",
-    "C": "Incorrect. His trembling is not an example of his calm confidence; it goes against it.",
+    "A": "Correct. \"However\" signals the contrast between Mateo's confidence and his sudden nervousness at the piano.",
+    "B": "Incorrect. His trembling is not an example of his calm confidence; it goes against it.",
+    "C": "Incorrect. \"Therefore\" signals a result, but trembling hands do not follow from being calm and well practiced.",
     "D": "Incorrect. \"In addition\" adds a point of the same kind, but the last sentence reverses the situation described before it."
   },
   "traps": {
-    "A": "wrong_logic",
+    "B": "wrong_logic",
     "C": "wrong_logic",
     "D": "wrong_logic"
   },
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

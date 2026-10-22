@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Afterward,",
-    "B": "For example,",
-    "C": "In contrast,",
-    "D": "Similarly,"
+    "A": "For example,",
+    "B": "In contrast,",
+    "C": "Similarly,",
+    "D": "Afterward,"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The text describes the steps in making maple syrup. Producers \"first collect the sap,\" and the next sentence describes what they do with it once it has been collected: boil it. A transition that shows the next step in a sequence is needed.",
-    "A": "Correct. \"Afterward\" shows that boiling the sap is the step that comes after collecting it.",
-    "B": "Incorrect. Boiling the sap is not an example of collecting it; it is a separate, later step.",
-    "C": "Incorrect. \"In contrast\" signals a difference, but boiling does not contrast with collecting; it follows it.",
-    "D": "Incorrect. \"Similarly\" signals a step like the one before, but boiling is a different kind of step that comes next."
+    "A": "Incorrect. Boiling the sap is not an example of collecting it; it is a separate, later step.",
+    "B": "Incorrect. \"In contrast\" signals a difference, but boiling does not contrast with collecting; it follows it.",
+    "C": "Incorrect. \"Similarly\" signals a step like the one before, but boiling is a different kind of step that comes next.",
+    "D": "Correct. \"Afterward\" shows that boiling the sap is the step that comes after collecting it."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

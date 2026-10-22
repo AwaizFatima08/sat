@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "shrine,",
-    "B": "shrine",
+    "A": "shrine:",
+    "B": "shrine,",
     "C": "shrine;",
-    "D": "shrine:"
+    "D": "shrine"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "The clause \"which was first dedicated … and later became a Buddhist shrine\" is extra information about the temple. It opens with a comma after \"The temple,\" so it must close with a comma before the verb \"is surrounded.\"",
-    "A": "Correct. The comma closes the nonessential \"which\" clause, so the subject \"The temple\" connects to its verb \"is surrounded.\"",
-    "B": "Incorrect. Without a closing comma, the \"which\" clause runs straight into the main verb \"is surrounded.\"",
+    "A": "Incorrect. A colon must follow a complete independent clause; it can't separate a subject from its verb.",
+    "B": "Correct. The comma closes the nonessential \"which\" clause, so the subject \"The temple\" connects to its verb \"is surrounded.\"",
     "C": "Incorrect. A semicolon can't separate the subject \"The temple\" from its verb \"is surrounded.\"",
-    "D": "Incorrect. A colon must follow a complete independent clause; it can't separate a subject from its verb."
+    "D": "Incorrect. Without a closing comma, the \"which\" clause runs straight into the main verb \"is surrounded.\""
   },
   "traps": {
-    "B": "grammar_rule",
+    "A": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

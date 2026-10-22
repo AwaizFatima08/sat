@@ -15,22 +15,22 @@
   "stem": "Which finding, if true, would most directly support Herrera's argument?",
   "choices": {
     "A": "My Ántonia sold well when it first appeared and is now often taught in American literature classes.",
-    "B": "Cather once wrote that she had always avoided basing characters on people she had actually met.",
-    "C": "Cather's letters describe a Red Cloud neighbor whose life closely matches the life of the character Ántonia.",
-    "D": "Several of Cather's other novels are also set on the prairie and describe the hard work of farming there."
+    "B": "Several of Cather's other novels are also set on the prairie and describe the hard work of farming there.",
+    "C": "Cather once wrote that she had always avoided basing characters on people she had actually met.",
+    "D": "Cather's letters describe a Red Cloud neighbor whose life closely matches the life of the character Ántonia."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Herrera claims that Cather drew her characters from real people in Red Cloud. The strongest support would link a specific character to a specific person Cather knew there.",
     "A": "Incorrect. The novel's sales and its place in classrooms say nothing about where its characters came from.",
-    "B": "Incorrect. Cather saying she avoided real people as models would weaken Herrera's argument, not support it.",
-    "C": "Correct. A real neighbor whose life matches Ántonia's is direct evidence that at least one major character was based on someone Cather knew.",
-    "D": "Incorrect. This concerns the setting of other novels, not whether this novel's characters were based on real people."
+    "B": "Incorrect. This concerns the setting of other novels, not whether this novel's characters were based on real people.",
+    "C": "Incorrect. Cather saying she avoided real people as models would weaken Herrera's argument, not support it.",
+    "D": "Correct. A real neighbor whose life matches Ántonia's is direct evidence that at least one major character was based on someone Cather knew."
   },
   "traps": {
     "A": "true_irrelevant",
-    "B": "reversed",
-    "D": "true_irrelevant"
+    "B": "true_irrelevant",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "appearing",
-    "B": "have appeared",
-    "C": "to appear",
+    "A": "have appeared",
+    "B": "to appear",
+    "C": "appearing",
     "D": "will appear"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The phrase \"Since then\" describes something that began in the past (around 1831) and continues up to the present. That meaning calls for the present perfect, and the plural subject \"copies\" needs \"have,\" so \"have appeared\" is correct.",
-    "A": "Incorrect. \"Appearing\" is not a main verb, so the subject \"copies\" would be left without one.",
-    "B": "Correct. The present perfect \"have appeared\" fits \"Since then\" and agrees with the plural subject \"copies.\"",
-    "C": "Incorrect. \"To appear\" is an infinitive, which can't serve as the main verb of the sentence.",
+    "A": "Correct. The present perfect \"have appeared\" fits \"Since then\" and agrees with the plural subject \"copies.\"",
+    "B": "Incorrect. \"To appear\" is an infinitive, which can't serve as the main verb of the sentence.",
+    "C": "Incorrect. \"Appearing\" is not a main verb, so the subject \"copies\" would be left without one.",
     "D": "Incorrect. The future \"will appear\" doesn't fit \"Since then,\" which points to a period from the past up to now."
   },
   "traps": {
-    "A": "grammar_rule",
+    "B": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,16 +14,16 @@
   "data": null,
   "stem": "Based on the texts, both authors would most likely agree with which statement?",
   "choices": {
-    "A": "The moral lessons at the end of each fable were part of the first versions.",
-    "B": "Aesop's fables were first created mainly to entertain young children.",
+    "A": "Aesop's fables were first created mainly to entertain young children.",
+    "B": "The moral lessons at the end of each fable were part of the first versions.",
     "C": "Picture books have made the fables more popular than they have ever been.",
     "D": "The fables as people know them today differ from the ancient Greek versions."
   },
   "answer": "D",
   "explanation": {
     "why": "Text 1 says the fables are now printed for children \"often in shortened form,\" while in ancient Greece adults used them in arguments. Text 2 says later editors rewrote the tales and added many of the morals, so modern fables are \"not exactly the ones first told in Greece.\" Both authors describe ways the fables have changed since ancient times.",
-    "A": "Incorrect. Text 2 says many of the morals \"were added by these later editors,\" not that they were in the first versions.",
-    "B": "Incorrect. Text 1 says the tales were \"often told by adults\" in ancient Greece, so its author would not agree.",
+    "A": "Incorrect. Text 1 says the tales were \"often told by adults\" in ancient Greece, so its author would not agree.",
+    "B": "Incorrect. Text 2 says many of the morals \"were added by these later editors,\" not that they were in the first versions.",
     "C": "Incorrect. Neither text compares how popular the fables are now with how popular they were in the past.",
     "D": "Correct. Text 1 notes shortened children's versions, and Text 2 notes rewriting and added morals; both show that today's fables differ from the originals."
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

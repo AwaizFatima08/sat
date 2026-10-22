@@ -15,17 +15,17 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "centuries)",
-    "B": "centuries),",
-    "C": "centuries,",
-    "D": "centuries;"
+    "B": "centuries;",
+    "C": "centuries),",
+    "D": "centuries,"
   },
   "answer": "A",
   "explanation": {
     "why": "The words inside the parentheses add extra information about \"The leaves.\" An opening parenthesis needs a closing parenthesis. After it, the subject \"The leaves\" must connect directly to its verb \"become,\" with no other punctuation in between.",
     "A": "Correct. The closing parenthesis ends the extra information, and the subject \"The leaves\" connects directly to its verb \"become.\"",
-    "B": "Incorrect. The parenthesis is closed correctly, but the comma after it separates the subject \"The leaves\" from its verb \"become.\"",
-    "C": "Incorrect. An opening parenthesis must be closed with a parenthesis, not a comma.",
-    "D": "Incorrect. An opening parenthesis must be closed with a parenthesis, and a semicolon can't separate a subject from its verb."
+    "B": "Incorrect. An opening parenthesis must be closed with a parenthesis, and a semicolon can't separate a subject from its verb.",
+    "C": "Incorrect. The parenthesis is closed correctly, but the comma after it separates the subject \"The leaves\" from its verb \"become.\"",
+    "D": "Incorrect. An opening parenthesis must be closed with a parenthesis, not a comma."
   },
   "traps": {
     "B": "grammar_rule",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

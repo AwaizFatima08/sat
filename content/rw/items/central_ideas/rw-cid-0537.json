@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "A retired postmaster resents the young clerk who has replaced him at the landing.",
-    "B": "A retired postmaster quietly helps his successor while avoiding seeming to correct him.",
-    "C": "A young clerk depends on a retired postmaster to help him sort Chandpur's mail every morning.",
-    "D": "A retired postmaster misses the work of carrying the mail back from the landing."
+    "A": "A retired postmaster misses the work of carrying the mail back from the landing.",
+    "B": "A young clerk depends on a retired postmaster to help him sort Chandpur's mail every morning.",
+    "C": "A retired postmaster quietly helps his successor while avoiding seeming to correct him.",
+    "D": "A retired postmaster resents the young clerk who has replaced him at the landing."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "Haripada waits until the boat has gone, then offers the right information \"as if recalling an old story,\" so his help never looks like a correction. When thanked, he is \"embarrassed\" and changes the subject. The text centers on this tactful, nearly hidden help.",
-    "A": "Incorrect. Nothing in his behavior suggests resentment; he helps the clerk and is embarrassed by thanks.",
-    "B": "Correct. His indirect hints and his embarrassment at being thanked show help given without any air of correction.",
-    "C": "Incorrect. Haripada helps only twice and does no sorting; he \"simply stood\" at the landing's edge.",
-    "D": "Incorrect. The text says he no longer carries anything, but it never says he misses doing so."
+    "A": "Incorrect. The text says he no longer carries anything, but it never says he misses doing so.",
+    "B": "Incorrect. Haripada helps only twice and does no sorting; he \"simply stood\" at the landing's edge.",
+    "C": "Correct. His indirect hints and his embarrassment at being thanked show help given without any air of correction.",
+    "D": "Incorrect. Nothing in his behavior suggests resentment; he helps the clerk and is embarrassed by thanks."
   },
   "traps": {
-    "A": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "too_broad",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

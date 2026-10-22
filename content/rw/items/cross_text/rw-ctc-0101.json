@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the belief in Text 1?",
   "choices": {
-    "A": "By agreeing that purring is a reliable sign that a cat is content",
-    "B": "By noting that cats also purr when they are hurt or under stress",
-    "C": "By arguing that cats purr only when they are in pain or afraid",
-    "D": "By claiming that cats purr most often when they are being stroked"
+    "A": "By noting that cats also purr when they are hurt or under stress",
+    "B": "By arguing that cats purr only when they are in pain or afraid",
+    "C": "By claiming that cats purr most often when they are being stroked",
+    "D": "By agreeing that purring is a reliable sign that a cat is content"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Text 1 describes the belief that \"a purring cat is always a happy cat.\" Text 2 reports that cats also purr when they are \"injured, giving birth, or close to death\" and that purring may help a cat \"calm itself during stress.\" So the author of Text 2 would point out that purring does not always mean contentment.",
-    "A": "Incorrect. Text 2 gives examples of cats purring in unpleasant situations, so its author would not call purring a reliable sign of contentment.",
-    "B": "Correct. Text 2 lists painful and stressful situations in which cats purr, which challenges the idea that purring always means a cat is happy.",
-    "C": "Incorrect. Text 2 says purring may \"sometimes\" help a cat calm itself; it does not say cats purr only when in pain.",
-    "D": "Incorrect. Text 2 never compares how often cats purr in different situations."
+    "A": "Correct. Text 2 lists painful and stressful situations in which cats purr, which challenges the idea that purring always means a cat is happy.",
+    "B": "Incorrect. Text 2 says purring may \"sometimes\" help a cat calm itself; it does not say cats purr only when in pain.",
+    "C": "Incorrect. Text 2 never compares how often cats purr in different situations.",
+    "D": "Incorrect. Text 2 gives examples of cats purring in unpleasant situations, so its author would not call purring a reliable sign of contentment."
   },
   "traps": {
-    "A": "reversed",
-    "C": "too_broad",
-    "D": "not_in_text"
+    "B": "too_broad",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "the burrs were seen to be covered in tiny hooks.",
-    "B": "tiny hooks were found covering the burrs.",
-    "C": "de Mestral saw that the burrs were covered in tiny hooks.",
-    "D": "de Mestral's microscope showed tiny hooks on the burrs."
+    "A": "de Mestral's microscope showed tiny hooks on the burrs.",
+    "B": "de Mestral saw that the burrs were covered in tiny hooks.",
+    "C": "tiny hooks were found covering the burrs.",
+    "D": "the burrs were seen to be covered in tiny hooks."
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The phrase \"Studying them under a microscope\" describes the person who did the studying, so that person must be named right after the comma. Only one choice begins with \"de Mestral.\"",
-    "A": "Incorrect. This choice says the burrs studied themselves under a microscope.",
-    "B": "Incorrect. This choice says tiny hooks did the studying, which makes no sense.",
-    "C": "Correct. \"De Mestral\" comes right after the introductory phrase, so it is clear he studied the burrs.",
-    "D": "Incorrect. This choice says the microscope studied the burrs; \"de Mestral's\" only describes the microscope, which is the subject."
+    "A": "Incorrect. This choice says the microscope studied the burrs; \"de Mestral's\" only describes the microscope, which is the subject.",
+    "B": "Correct. \"De Mestral\" comes right after the introductory phrase, so it is clear he studied the burrs.",
+    "C": "Incorrect. This choice says tiny hooks did the studying, which makes no sense.",
+    "D": "Incorrect. This choice says the burrs studied themselves under a microscope."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "modifier",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

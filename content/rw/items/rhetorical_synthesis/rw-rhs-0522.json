@@ -20,22 +20,22 @@
   "data": null,
   "stem": "The student wants to present the method and the finding of Kamau's study. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Kamau's study showed that intercropped plots produced slightly less maize than maize-only plots but more food in total.",
-    "B": "Comparing unfertilized maize-only plots with maize-and-bean plots, Kamau found that the mixed plots produced more food overall.",
-    "C": "Kamau planted 30 small plots without fertilizer, half with maize alone and half with maize and beans in alternating rows.",
+    "A": "Kamau planted 30 small plots without fertilizer, half with maize alone and half with maize and beans in alternating rows.",
+    "B": "Kamau's study showed that intercropped plots produced slightly less maize than maize-only plots but more food in total.",
+    "C": "Comparing unfertilized maize-only plots with maize-and-bean plots, Kamau found that the mixed plots produced more food overall.",
     "D": "Intercropping, a common practice in western Kenya, combines maize with beans, which can add nitrogen to the soil."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The goal needs both the method (how Kamau set up her test) and the finding (what she learned). One choice describes the comparison of unfertilized maize-only and maize-and-bean plots and then reports that the mixed plots produced more food.",
-    "A": "Incorrect. It reports the finding but leaves out how the study was carried out.",
-    "B": "Correct. The opening phrase gives the method, and the main clause gives the finding.",
-    "C": "Incorrect. It describes the method in detail but never says what Kamau found.",
+    "A": "Incorrect. It describes the method in detail but never says what Kamau found.",
+    "B": "Incorrect. It reports the finding but leaves out how the study was carried out.",
+    "C": "Correct. The opening phrase gives the method, and the main clause gives the finding.",
     "D": "Incorrect. It gives background about intercropping and beans but nothing about Kamau's study."
   },
   "traps": {
     "A": "too_narrow",
-    "C": "too_narrow",
+    "B": "too_narrow",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Instead,",
-    "B": "As a result,",
-    "C": "In addition,",
-    "D": "Nevertheless,"
+    "A": "Nevertheless,",
+    "B": "Instead,",
+    "C": "As a result,",
+    "D": "In addition,"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The text lists Rokeya Sakhawat Hossain's contributions to the cause of girls' education. After her story, the last sentence names a second, separate contribution: the school she founded. A transition that adds another point is needed.",
-    "A": "Incorrect. \"Instead\" would mean she opened the school in place of writing the story, but she did both.",
-    "B": "Incorrect. The text does not say the story caused her to open the school; the school is simply another of her achievements.",
-    "C": "Correct. \"In addition\" adds the founding of the school to her work as a writer.",
-    "D": "Incorrect. \"Nevertheless\" signals something true despite the previous point, but opening a school fits with her writing; it does not go against it."
+    "A": "Incorrect. \"Nevertheless\" signals something true despite the previous point, but opening a school fits with her writing; it does not go against it.",
+    "B": "Incorrect. \"Instead\" would mean she opened the school in place of writing the story, but she did both.",
+    "C": "Incorrect. The text does not say the story caused her to open the school; the school is simply another of her achievements.",
+    "D": "Correct. \"In addition\" adds the founding of the school to her work as a writer."
   },
   "traps": {
     "A": "wrong_logic",
     "B": "wrong_logic",
-    "D": "wrong_logic"
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

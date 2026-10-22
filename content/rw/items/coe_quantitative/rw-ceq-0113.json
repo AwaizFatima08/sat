@@ -71,23 +71,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "in September, about 18% of the exposed reef's corals were bleached, versus about 47% in the bay.",
+    "A": "in September, about 47% of the exposed reef's corals were bleached, versus about 18% in the bay.",
     "B": "at both reefs, a larger share of corals was bleached in September than in June.",
-    "C": "in September, about 47% of the exposed reef's corals were bleached, versus about 18% in the bay.",
-    "D": "bleaching at the exposed reef began only after the water there warmed past 29°C."
+    "C": "bleaching at the exposed reef began only after the water there warmed past 29°C.",
+    "D": "in September, about 18% of the exposed reef's corals were bleached, versus about 47% in the bay."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "To show that the exposed reef was partly protected, the choice must compare the two reefs and show less bleaching at the exposed point. At the peak in September, the exposed point line is at about 18% and the sheltered bay line is at about 47%.",
-    "A": "Correct. The exposed reef had far less bleaching than the sheltered reef in September (about 18% versus 47%), but some bleaching, which fits \"partly protected.\"",
+    "A": "Incorrect. This swaps the two reefs; the graph shows the sheltered bay, not the exposed point, at about 47%.",
     "B": "Incorrect. This is true, but it describes a change over time at both reefs and does not compare the exposed reef with the sheltered one.",
-    "C": "Incorrect. This swaps the two reefs; the graph shows the sheltered bay, not the exposed point, at about 47%.",
-    "D": "Incorrect. The graph shows the percentage of corals bleached, not water temperatures."
+    "C": "Incorrect. The graph shows the percentage of corals bleached, not water temperatures.",
+    "D": "Correct. The exposed reef had far less bleaching than the sheltered reef in September (about 18% versus 47%), but some bleaching, which fits \"partly protected.\""
   },
   "traps": {
+    "A": "reversed",
     "B": "true_irrelevant",
-    "C": "reversed",
-    "D": "not_in_text"
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -96,8 +96,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "wait",
-    "B": "are waiting",
-    "C": "had been waiting",
+    "A": "are waiting",
+    "B": "had been waiting",
+    "C": "wait",
     "D": "will have waited"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "The story is told in the past tense (\"drove,\" \"reached,\" \"ran\"). The waiting began before Mr. Haddad arrived and continued up to that past moment, which \"By the time he finally reached\" signals. An action that continued up to a point in the past takes the past perfect progressive, \"had been waiting.\"",
-    "A": "Incorrect. The present tense \"wait\" doesn't fit a story told in the past.",
-    "B": "Incorrect. The present progressive \"are waiting\" doesn't fit a story told in the past.",
-    "C": "Correct. \"Had been waiting\" shows that the waiting went on before and up to the past moment when he arrived.",
+    "A": "Incorrect. The present progressive \"are waiting\" doesn't fit a story told in the past.",
+    "B": "Correct. \"Had been waiting\" shows that the waiting went on before and up to the past moment when he arrived.",
+    "C": "Incorrect. The present tense \"wait\" doesn't fit a story told in the past.",
     "D": "Incorrect. The future perfect \"will have waited\" refers to the future, but the arrival already happened."
   },
   "traps": {
     "A": "grammar_rule",
-    "B": "grammar_rule",
+    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "verb_form",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

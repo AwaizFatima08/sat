@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the description of ajrak in Text 1?",
   "choices": {
-    "A": "By adding that making ajrak is a long and skilled process",
-    "B": "By arguing that ajrak is no longer worn at festivals in Sindh",
-    "C": "By claiming that ajrak is valued only for the work needed to make it",
-    "D": "By noting that most ajrak is now printed by machines in a single day"
+    "A": "By noting that most ajrak is now printed by machines in a single day",
+    "B": "By adding that making ajrak is a long and skilled process",
+    "C": "By arguing that ajrak is no longer worn at festivals in Sindh",
+    "D": "By claiming that ajrak is valued only for the work needed to make it"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Text 1 describes what ajrak means to people: it is worn at festivals, given to guests, and seen as \"a symbol of Sindhi identity.\" Text 2 says ajrak \"is also\" a demanding craft with \"more than a dozen separate stages\" that can take \"two weeks or more.\" Text 2 adds to Text 1 rather than disagreeing with it.",
-    "A": "Correct. Text 2 explains that ajrak is made by hand in many stages over weeks, which adds to Text 1's account of its meaning.",
-    "B": "Incorrect. Text 2 never mentions festivals, and nothing in it suggests that people have stopped wearing ajrak.",
-    "C": "Incorrect. Text 2 says ajrak is \"also\" a demanding craft, so it adds a point instead of replacing Text 1's view of its meaning.",
-    "D": "Incorrect. Text 2 describes hand-carved blocks and a process that takes two weeks or more, the opposite of fast machine printing."
+    "A": "Incorrect. Text 2 describes hand-carved blocks and a process that takes two weeks or more, the opposite of fast machine printing.",
+    "B": "Correct. Text 2 explains that ajrak is made by hand in many stages over weeks, which adds to Text 1's account of its meaning.",
+    "C": "Incorrect. Text 2 never mentions festivals, and nothing in it suggests that people have stopped wearing ajrak.",
+    "D": "Incorrect. Text 2 says ajrak is \"also\" a demanding craft, so it adds a point instead of replacing Text 1's view of its meaning."
   },
   "traps": {
-    "B": "not_in_text",
-    "C": "too_broad",
-    "D": "reversed"
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

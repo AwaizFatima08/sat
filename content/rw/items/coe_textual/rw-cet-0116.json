@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Ben-Ami's hypothesis?",
   "choices": {
-    "A": "Young maples grown in salted soil turned red earlier in the fall than identical maples grown in unsalted soil.",
-    "B": "Road salt is usually spread during the coldest months of winter, months before the leaves change color.",
-    "C": "Salt levels in roadside soil are highest within a few meters of the road's edge.",
-    "D": "Maples beside roads treated with sand rather than salt also change color weeks before forest maples."
+    "A": "Road salt is usually spread during the coldest months of winter, months before the leaves change color.",
+    "B": "Young maples grown in salted soil turned red earlier in the fall than identical maples grown in unsalted soil.",
+    "C": "Maples beside roads treated with sand rather than salt also change color weeks before forest maples.",
+    "D": "Salt levels in roadside soil are highest within a few meters of the road's edge."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Ben-Ami says salt from the roads causes the early color change. If maples beside roads that never get salt change color just as early, something else about roadsides must be responsible.",
-    "A": "Incorrect. Salted soil causing early color would support the hypothesis, not weaken it.",
-    "B": "Incorrect. Salt can stay in the soil for months, so the timing of spreading does not show that salt is harmless; it neither confirms nor undercuts the claim.",
-    "C": "Incorrect. Where salt collects in the soil is consistent with the hypothesis but does not test whether salt causes the color change.",
-    "D": "Correct. Roadside maples change color early even without salt, so salt is not needed to explain the pattern."
+    "A": "Incorrect. Salt can stay in the soil for months, so the timing of spreading does not show that salt is harmless; it neither confirms nor undercuts the claim.",
+    "B": "Incorrect. Salted soil causing early color would support the hypothesis, not weaken it.",
+    "C": "Correct. Roadside maples change color early even without salt, so salt is not needed to explain the pattern.",
+    "D": "Incorrect. Where salt collects in the soil is consistent with the hypothesis but does not test whether salt causes the color change."
   },
   "traps": {
-    "A": "reversed",
-    "B": "true_irrelevant",
-    "C": "true_irrelevant"
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

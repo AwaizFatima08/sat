@@ -19,23 +19,23 @@
   "data": null,
   "stem": "The student wants to introduce Naidu to an unfamiliar audience, emphasizing that she achieved distinction in both literature and public life. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Sarojini Naidu, an English-language poet known as \"the Nightingale of India,\" was also the first woman to govern an Indian state.",
-    "B": "Sarojini Naidu (1879–1949), whose lyrical English verse earned her the nickname \"the Nightingale of India,\" published her first collection in 1905.",
-    "C": "Sarojini Naidu, an activist in India's independence movement, led the Indian National Congress in 1925 and became a state governor in 1947.",
-    "D": "In 1925, Naidu became the first Indian woman to serve as president of the Indian National Congress."
+    "A": "Sarojini Naidu, an activist in India's independence movement, led the Indian National Congress in 1925 and became a state governor in 1947.",
+    "B": "In 1925, Naidu became the first Indian woman to serve as president of the Indian National Congress.",
+    "C": "Sarojini Naidu (1879–1949), whose lyrical English verse earned her the nickname \"the Nightingale of India,\" published her first collection in 1905.",
+    "D": "Sarojini Naidu, an English-language poet known as \"the Nightingale of India,\" was also the first woman to govern an Indian state."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The goal has three requirements: introduce Naidu by full name to new readers, show distinction in literature, and show distinction in public life. Only one choice identifies her as a celebrated poet and also gives a public-life milestone.",
-    "A": "Correct. It introduces Sarojini Naidu by name and pairs her literary distinction (\"the Nightingale of India\") with a public one (the first woman to govern an Indian state).",
-    "B": "Incorrect. This introduces her and shows her literary distinction, but it says nothing about her public life.",
-    "C": "Incorrect. This introduces her and shows her public achievements, but it leaves out her poetry entirely. It is an attractive near miss because its achievements are impressive.",
-    "D": "Incorrect. This gives a public-life milestone only, and it uses her surname alone, without introducing her to new readers."
+    "A": "Incorrect. This introduces her and shows her public achievements, but it leaves out her poetry entirely. It is an attractive near miss because its achievements are impressive.",
+    "B": "Incorrect. This gives a public-life milestone only, and it uses her surname alone, without introducing her to new readers.",
+    "C": "Incorrect. This introduces her and shows her literary distinction, but it says nothing about her public life.",
+    "D": "Correct. It introduces Sarojini Naidu by name and pairs her literary distinction (\"the Nightingale of India\") with a public one (the first woman to govern an Indian state)."
   },
   "traps": {
-    "B": "too_narrow",
-    "C": "too_narrow",
-    "D": "misses_goal"
+    "A": "too_narrow",
+    "B": "misses_goal",
+    "C": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -44,8 +44,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

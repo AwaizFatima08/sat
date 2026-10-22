@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "obscurity",
-    "B": "popularity",
+    "B": "formality",
     "C": "concision",
-    "D": "formality"
+    "D": "popularity"
   },
   "answer": "C",
   "explanation": {
     "why": "The passage stresses the haiku's \"brevity\" and \"limits,\" then says Basho turned them to his advantage. The blank must name the quality of being very short, which \"concision\" does.",
     "A": "Incorrect. Basho's images are described as \"sharp,\" and the text says readers fill in feelings left unsaid, not that the poems are hard to understand. The quality being discussed is shortness.",
-    "B": "Incorrect. The text mentions that Basho's haiku are celebrated, but the point of the last sentences is how the form's limited length gave the poems depth.",
+    "B": "Incorrect. Nothing in the text discusses how formal or ceremonial the poems are.",
     "C": "Correct. Concision means expressing much in few words. The haiku's shortness, which \"might seem to leave little room for meaning,\" became a strength for Basho.",
-    "D": "Incorrect. Nothing in the text discusses how formal or ceremonial the poems are."
+    "D": "Incorrect. The text mentions that Basho's haiku are celebrated, but the point of the last sentences is how the form's limited length gave the poems depth."
   },
   "traps": {
     "A": "wrong_tone",
-    "B": "true_irrelevant",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

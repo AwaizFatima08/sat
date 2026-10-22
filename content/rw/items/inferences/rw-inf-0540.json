@@ -15,22 +15,22 @@
   "stem": "Which choice most logically completes the text?",
   "choices": {
     "A": "the two plains may be similar in age.",
-    "B": "Plain 1 is considerably younger than Plain 2.",
+    "B": "crater counts cannot be used to estimate the ages of planetary surfaces.",
     "C": "Plain 2 was struck more often because of its location on Mars.",
-    "D": "crater counts cannot be used to estimate the ages of planetary surfaces."
+    "D": "Plain 1 is considerably younger than Plain 2."
   },
   "answer": "A",
   "explanation": {
     "why": "Plain 1's shortage of small craters could come from dust hiding them rather than from youth. When Ferreyra counted only large craters, which dust cannot hide, the plains matched. So the evidence points toward similar ages, and the small-crater difference is explained by the dust.",
     "A": "Correct. Large craters, which the dust cannot hide, are about equally common on both plains, so the plains may well be about the same age.",
-    "B": "Incorrect. This is the conclusion the dust evidence undercuts: the missing small craters on Plain 1 can be explained by burial, not youth.",
+    "B": "Incorrect. Ferreyra still uses crater counts; she simply counts the craters the dust cannot hide.",
     "C": "Incorrect. The text never links the number of craters to a plain's location on Mars.",
-    "D": "Incorrect. Ferreyra still uses crater counts; she simply counts the craters the dust cannot hide."
+    "D": "Incorrect. This is the conclusion the dust evidence undercuts: the missing small craters on Plain 1 can be explained by burial, not youth."
   },
   "traps": {
-    "B": "reversed",
+    "B": "too_broad",
     "C": "not_in_text",
-    "D": "too_broad"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

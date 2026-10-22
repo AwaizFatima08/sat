@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "decorated",
-    "B": "expressive",
-    "C": "inscrutable",
-    "D": "concealed"
+    "A": "concealed",
+    "B": "inscrutable",
+    "C": "decorated",
+    "D": "expressive"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The actors \"cannot rely on speech to convey a character's feelings,\" so they must show those feelings in other ways, through \"movements of the eyes and eyebrows.\" Their faces must be able to show emotion clearly, which is what \"expressive\" means.",
-    "A": "Incorrect. The faces are painted, but the sentence's reasoning (\"Because the actors cannot rely on speech\") calls for faces that convey feelings, not faces that are decorated.",
-    "B": "Correct. An expressive face shows feelings clearly, which the actors need because they cannot use words.",
-    "C": "Incorrect. An inscrutable face is hard to read. The actors must make a character's feelings clear without words, so their faces must be easy to read, not inscrutable.",
-    "D": "Incorrect. The actors' faces are shown and painted boldly, not hidden."
+    "A": "Incorrect. The actors' faces are shown and painted boldly, not hidden.",
+    "B": "Incorrect. An inscrutable face is hard to read. The actors must make a character's feelings clear without words, so their faces must be easy to read, not inscrutable.",
+    "C": "Incorrect. The faces are painted, but the sentence's reasoning (\"Because the actors cannot rely on speech\") calls for faces that convey feelings, not faces that are decorated.",
+    "D": "Correct. An expressive face shows feelings clearly, which the actors need because they cannot use words."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "C": "reversed",
-    "D": "reversed"
+    "A": "reversed",
+    "B": "reversed",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

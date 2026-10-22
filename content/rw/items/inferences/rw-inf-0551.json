@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "could buy less with a day's wages, even though they received more coins.",
-    "B": "could buy about twice as much with a day's wages as before.",
-    "C": "were paid partly in gold to protect them from the loss of silver.",
-    "D": "earned more than workers in any other part of the kingdom."
+    "A": "could buy about twice as much with a day's wages as before.",
+    "B": "were paid partly in gold to protect them from the loss of silver.",
+    "C": "earned more than workers in any other part of the kingdom.",
+    "D": "could buy less with a day's wages, even though they received more coins."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Work out the silver in a day's pay. Laborers got twice as many coins, but each coin held less than half as much silver, so a day's pay held less silver than before. Since goods were priced by silver and those prices barely changed, a day's wages bought less in 1560 than in 1540.",
-    "A": "Correct. Twice as many coins, each with less than half the silver, means less silver per day; with silver prices steady, that buys less.",
-    "B": "Incorrect. This takes the doubled wage at face value, ignoring that each coin contained less than half its former silver.",
-    "C": "Incorrect. The text says laborers were paid in silver coins and never mentions payment in gold.",
-    "D": "Incorrect. Lindqvist's data cover building laborers in the capital only, so they cannot show how their pay compared with that of all other workers."
+    "A": "Incorrect. This takes the doubled wage at face value, ignoring that each coin contained less than half its former silver.",
+    "B": "Incorrect. The text says laborers were paid in silver coins and never mentions payment in gold.",
+    "C": "Incorrect. Lindqvist's data cover building laborers in the capital only, so they cannot show how their pay compared with that of all other workers.",
+    "D": "Correct. Twice as many coins, each with less than half the silver, means less silver per day; with silver prices steady, that buys less."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

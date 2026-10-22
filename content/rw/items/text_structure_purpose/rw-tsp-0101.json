@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To compare the platypus with other mammals that lay eggs",
-    "B": "To argue that the platypus is the most skilled hunter in Australian streams",
-    "C": "To explain how the platypus locates prey without using its eyes",
-    "D": "To describe the shrimp and insect larvae that live in Australian streams"
+    "A": "To explain how the platypus locates prey without using its eyes",
+    "B": "To describe the shrimp and insect larvae that live in Australian streams",
+    "C": "To compare the platypus with other mammals that lay eggs",
+    "D": "To argue that the platypus is the most skilled hunter in Australian streams"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The first sentence sets up a puzzle: the platypus hunts \"with its eyes, ears, and nostrils tightly closed.\" The rest of the text answers it by explaining that sensors on the bill detect touch and the \"weak electric signals\" of prey. So the text mainly explains how the platypus finds food without sight.",
-    "A": "Incorrect. The text mentions that the platypus lays eggs but never compares it with any other egg-laying mammal.",
-    "B": "Incorrect. The text explains how the platypus hunts; it never ranks it against other hunters, so this claims far more than the text does.",
-    "C": "Correct. The text explains that the platypus closes its eyes underwater and relies on touch and electric sensors in its bill to find prey.",
-    "D": "Incorrect. Shrimp and insect larvae are named only as examples of prey; the text does not describe them."
+    "A": "Correct. The text explains that the platypus closes its eyes underwater and relies on touch and electric sensors in its bill to find prey.",
+    "B": "Incorrect. Shrimp and insect larvae are named only as examples of prey; the text does not describe them.",
+    "C": "Incorrect. The text mentions that the platypus lays eggs but never compares it with any other egg-laying mammal.",
+    "D": "Incorrect. The text explains how the platypus hunts; it never ranks it against other hunters, so this claims far more than the text does."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "too_broad",
-    "D": "too_narrow"
+    "B": "too_narrow",
+    "C": "not_in_text",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

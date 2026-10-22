@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It explains how scientists predicted an explosion and then how its damage was limited.",
-    "B": "It describes an event, notes evidence that defied expectations, and gives a current explanation.",
-    "C": "It describes a search for meteorite fragments and argues that the search should continue.",
-    "D": "It describes an event's effects on nearby villages and then describes the forest's slow recovery."
+    "A": "It describes an event's effects on nearby villages and then describes the forest's slow recovery.",
+    "B": "It describes a search for meteorite fragments and argues that the search should continue.",
+    "C": "It describes an event, notes evidence that defied expectations, and gives a current explanation.",
+    "D": "It explains how scientists predicted an explosion and then how its damage was limited."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The text first describes the 1908 explosion. Scientists who reached the site \"expected to find a large crater\" and meteorite pieces but \"found neither,\" and the pattern of trees was puzzling. The last sentence gives the conclusion most researchers now accept: a space rock exploded in the air.",
-    "A": "Incorrect. The text never says anyone predicted the explosion or limited its damage.",
-    "B": "Correct. The text moves from the explosion, to the unexpected lack of a crater, to the airburst explanation researchers now favor.",
-    "C": "Incorrect. The text says no meteorite pieces were found and offers an explanation for their absence; it does not call for more searching.",
-    "D": "Incorrect. The text describes fallen trees, not effects on villages, and says nothing about the forest's recovery."
+    "A": "Incorrect. The text describes fallen trees, not effects on villages, and says nothing about the forest's recovery.",
+    "B": "Incorrect. The text says no meteorite pieces were found and offers an explanation for their absence; it does not call for more searching.",
+    "C": "Correct. The text moves from the explosion, to the unexpected lack of a crater, to the airburst explanation researchers now favor.",
+    "D": "Incorrect. The text never says anyone predicted the explosion or limited its damage."
   },
   "traps": {
     "A": "not_in_text",
-    "C": "reversed",
+    "B": "reversed",
     "D": "not_in_text"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

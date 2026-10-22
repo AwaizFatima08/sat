@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "small flying insects become trapped in the dangling threads.",
-    "B": "the larvae trap small flying insects in the dangling threads.",
-    "C": "the dangling threads trap small flying insects.",
-    "D": "the larvae's threads catch small flying insects."
+    "A": "the larvae trap small flying insects in the dangling threads.",
+    "B": "the larvae's threads catch small flying insects.",
+    "C": "small flying insects become trapped in the dangling threads.",
+    "D": "the dangling threads trap small flying insects."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The phrase \"Attracted by the glow in the darkness\" describes whatever is attracted, and it is the insects, not the larvae or the threads, that fly toward the light. So \"small flying insects\" must come right after the comma.",
-    "A": "Correct. \"Small flying insects\" comes right after the introductory phrase, so it is clear the insects are attracted by the glow.",
-    "B": "Incorrect. This choice says the larvae are attracted by the glow, but the larvae produce the glow; the insects are drawn to it.",
-    "C": "Incorrect. This choice says the threads are attracted by the glow, which makes no sense.",
-    "D": "Incorrect. The subject here is \"threads\"; \"the larvae's\" only describes them, so the sentence says the threads are attracted by the glow."
+    "A": "Incorrect. This choice says the larvae are attracted by the glow, but the larvae produce the glow; the insects are drawn to it.",
+    "B": "Incorrect. The subject here is \"threads\"; \"the larvae's\" only describes them, so the sentence says the threads are attracted by the glow.",
+    "C": "Correct. \"Small flying insects\" comes right after the introductory phrase, so it is clear the insects are attracted by the glow.",
+    "D": "Incorrect. This choice says the threads are attracted by the glow, which makes no sense."
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "modifier",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

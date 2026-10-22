@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "clogs",
-    "B": "cleans",
-    "C": "strengthens",
-    "D": "cools"
+    "A": "cools",
+    "B": "strengthens",
+    "C": "clogs",
+    "D": "cleans"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The text explains that the slime makes it \"hard to breathe\" for the attacker, which then \"lets go.\" Since fish breathe through their gills, the blank must mean \"blocks,\" so \"clogs\" fits.",
-    "A": "Correct. The slime makes it \"hard to breathe,\" so it must block the gills the predator breathes with. That is what \"clogs\" means.",
-    "B": "Incorrect. Cleaning the gills would help the predator breathe, but the text says the slime makes breathing hard.",
-    "C": "Incorrect. Stronger gills would not make breathing harder or cause the predator to let go.",
-    "D": "Incorrect. The text says nothing about temperature; the slime works by making it hard for the predator to breathe."
+    "A": "Incorrect. The text says nothing about temperature; the slime works by making it hard for the predator to breathe.",
+    "B": "Incorrect. Stronger gills would not make breathing harder or cause the predator to let go.",
+    "C": "Correct. The slime makes it \"hard to breathe,\" so it must block the gills the predator breathes with. That is what \"clogs\" means.",
+    "D": "Incorrect. Cleaning the gills would help the predator breathe, but the text says the slime makes breathing hard."
   },
   "traps": {
-    "B": "reversed",
-    "C": "wrong_logic",
-    "D": "not_in_text"
+    "A": "not_in_text",
+    "B": "wrong_logic",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

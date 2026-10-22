@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
     "A": "overwhelmed",
-    "B": "deterred",
+    "B": "fooled",
     "C": "starved",
-    "D": "fooled"
+    "D": "deterred"
   },
   "answer": "A",
   "explanation": {
     "why": "Predators \"feast\" and \"eat until they can eat no more,\" yet most cicadas survive. The cicadas escape not because predators avoid them but because there are far too many for the predators to eat. Being faced with more than one can handle is being overwhelmed, so \"overwhelmed\" fits.",
     "A": "Correct. With more than a million cicadas per acre, predators fill up long before they can eat most of them; they are overwhelmed by the sheer numbers.",
-    "B": "Incorrect. \"Deterred\" would mean the predators are discouraged from eating cicadas, but the text says they \"feast\" on them.",
+    "B": "Incorrect. Nothing in the text suggests the cicadas trick predators; they survive because there are too many to eat.",
     "C": "Incorrect. The predators \"eat until they can eat no more,\" so they are full, the opposite of starved.",
-    "D": "Incorrect. Nothing in the text suggests the cicadas trick predators; they survive because there are too many to eat."
+    "D": "Incorrect. \"Deterred\" would mean the predators are discouraged from eating cicadas, but the text says they \"feast\" on them."
   },
   "traps": {
-    "B": "reversed",
+    "B": "not_in_text",
     "C": "reversed",
-    "D": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

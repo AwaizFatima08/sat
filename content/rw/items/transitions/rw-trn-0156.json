@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "Similarly,",
-    "B": "Consequently,",
-    "C": "For example,",
-    "D": "By contrast,"
+    "B": "For example,",
+    "C": "By contrast,",
+    "D": "Consequently,"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The first sentence says the forest is \"far from uniform.\" The text then describes the fresher eastern part, where sundari trees dominate, and the saltier western part, where they are scarce. A transition that sets up a contrast between the two parts is needed.",
     "A": "Incorrect. \"Similarly\" would mean the western part resembles the eastern part, but the text describes it as different.",
-    "B": "Incorrect. \"Consequently\" is tempting because the sentence contains a cause (salty water) and an effect (few sundari trees), but the western forest is not a result of the eastern forest's fresh water.",
-    "C": "Incorrect. The western portion is not an example of the eastern portion; it is the opposite case.",
-    "D": "Correct. \"By contrast\" signals the difference between the sundari-dominated east and the saltier west."
+    "B": "Incorrect. The western portion is not an example of the eastern portion; it is the opposite case.",
+    "C": "Correct. \"By contrast\" signals the difference between the sundari-dominated east and the saltier west.",
+    "D": "Incorrect. \"Consequently\" is tempting because the sentence contains a cause (salty water) and an effect (few sundari trees), but the western forest is not a result of the eastern forest's fresh water."
   },
   "traps": {
     "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic"
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

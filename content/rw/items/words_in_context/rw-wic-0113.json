@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "delightful",
+    "A": "uncomfortable",
     "B": "tedious",
     "C": "silent",
-    "D": "uncomfortable"
+    "D": "delightful"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "Leila expected complaints, but \"Instead\" her brothers played happy games all the way. She is \"surprised\" at how the trip turned out, so it must have been better than she feared. \"Delightful\" fits.",
-    "A": "Correct. The brothers' games turned a ride Leila \"dreaded\" into a fun one, so she is surprised to find it was delightful.",
+    "A": "Incorrect. Nothing in the text describes the trip as unpleasant, and Leila's surprise shows the trip turned out better than she feared, not worse.",
     "B": "Incorrect. \"Tedious\" means boring, which is what Leila expected. She is \"surprised,\" so the trip must have been different from what she feared.",
     "C": "Incorrect. The brothers were counting out loud and playing games; nothing suggests the trip was quiet.",
-    "D": "Incorrect. Nothing in the text describes the trip as unpleasant, and Leila's surprise shows the trip turned out better than she feared, not worse."
+    "D": "Correct. The brothers' games turned a ride Leila \"dreaded\" into a fun one, so she is surprised to find it was delightful."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "reversed",
-    "C": "not_in_text",
-    "D": "wrong_logic"
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

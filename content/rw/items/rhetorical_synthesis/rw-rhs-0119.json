@@ -21,21 +21,21 @@
   "stem": "The student wants to emphasize a similarity in how hummingbirds and hummingbird hawk-moths feed. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
     "A": "The hawk-moth drinks nectar through a long, tubelike mouthpart, while the hummingbird uses its long tongue.",
-    "B": "Both hummingbirds and hummingbird hawk-moths hover in front of flowers while they drink nectar.",
-    "C": "The hummingbird hawk-moth, an insect found across Europe and Asia, hovers in front of flowers to drink nectar.",
+    "B": "The hummingbird hawk-moth, an insect found across Europe and Asia, hovers in front of flowers to drink nectar.",
+    "C": "Both hummingbirds and hummingbird hawk-moths hover in front of flowers while they drink nectar.",
     "D": "Hummingbirds are covered in feathers, whereas hummingbird hawk-moths are covered in tiny scales."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The goal names a similarity in feeding. The notes give one: both animals hover in front of flowers while drinking nectar. The key must mention both animals and that shared behavior.",
     "A": "Incorrect. This is about feeding, but it describes a difference (mouthpart versus tongue), not a similarity.",
-    "B": "Correct. \"Both\" signals the similarity, and hovering while drinking nectar is how they feed.",
-    "C": "Incorrect. This describes the hawk-moth's feeding, but it leaves out the hummingbird, so no similarity is shown.",
+    "B": "Incorrect. This describes the hawk-moth's feeding, but it leaves out the hummingbird, so no similarity is shown.",
+    "C": "Correct. \"Both\" signals the similarity, and hovering while drinking nectar is how they feed.",
     "D": "Incorrect. This describes a difference in body covering, not a similarity in feeding."
   },
   "traps": {
     "A": "misses_goal",
-    "C": "too_narrow",
+    "B": "too_narrow",
     "D": "misses_goal"
   },
   "grammar": null,
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

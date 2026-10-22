@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "genuine",
-    "B": "contagious",
-    "C": "studied",
-    "D": "habitual"
+    "A": "contagious",
+    "B": "genuine",
+    "C": "habitual",
+    "D": "studied"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "Lars sees signs of strain (the ring turned fifty times, laughter \"a moment too quickly\"), and the phrase after the comma defines the blank: \"a surface held in place by effort.\" The word must describe a calm that is deliberately put on rather than truly felt.",
-    "A": "Incorrect. \"Genuine\" means real and sincere, but Lars sees that the calm is only \"a surface.\"",
-    "B": "Incorrect. \"Contagious\" means spreading to others; the text is about whether Ingrid's own calm is real, not about its effect on the guests.",
-    "C": "Correct. \"Studied\" here means carefully and deliberately produced, which fits a calm that is \"held in place by effort.\"",
-    "D": "Incorrect. \"Habitual\" means done out of habit, which suggests something automatic and easy, not something \"held in place by effort.\""
+    "A": "Incorrect. \"Contagious\" means spreading to others; the text is about whether Ingrid's own calm is real, not about its effect on the guests.",
+    "B": "Incorrect. \"Genuine\" means real and sincere, but Lars sees that the calm is only \"a surface.\"",
+    "C": "Incorrect. \"Habitual\" means done out of habit, which suggests something automatic and easy, not something \"held in place by effort.\"",
+    "D": "Correct. \"Studied\" here means carefully and deliberately produced, which fits a calm that is \"held in place by effort.\""
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "wrong_tone"
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "wrong_tone"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

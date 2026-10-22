@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to present Dekker's argument along with the evidence she uses to support it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Dekker argues that buyers in Rubens's time understood his Antwerp workshop as a collaborative enterprise and accepted its products on those terms.",
-    "B": "In a 1618 letter, Rubens told a prospective buyer which paintings he had made himself and which assistants had begun and he had retouched.",
+    "A": "In a 1618 letter, Rubens told a prospective buyer which paintings he had made himself and which assistants had begun and he had retouched.",
+    "B": "Rubens employed many assistants in his Antwerp workshop, and Dekker argues that scholars have focused too narrowly on his \"own\" works.",
     "C": "Citing a 1618 letter in which Rubens told a buyer which works assistants had begun, Dekker argues buyers accepted his workshop as collaborative.",
-    "D": "Rubens employed many assistants in his Antwerp workshop, and Dekker argues that scholars have focused too narrowly on his \"own\" works."
+    "D": "Dekker argues that buyers in Rubens's time understood his Antwerp workshop as a collaborative enterprise and accepted its products on those terms."
   },
   "answer": "C",
   "explanation": {
     "why": "The goal has two parts: Dekker's argument and the evidence she uses. The notes say her principal evidence is the 1618 letter in which Rubens openly told a buyer which works assistants had begun. The key must pair the letter with her claim about how buyers viewed the workshop.",
-    "A": "Incorrect. This states Dekker's argument fully, but it leaves out the letter she relies on.",
-    "B": "Incorrect. This describes the letter accurately, but it never connects it to Dekker or her argument.",
+    "A": "Incorrect. This describes the letter accurately, but it never connects it to Dekker or her argument.",
+    "B": "Incorrect. This joins her argument to a fact about the workshop, but that fact is background, not the evidence Dekker cites. It is the most attractive near miss.",
     "C": "Correct. It cites the 1618 letter, the evidence Dekker names, and attaches it to her argument that buyers accepted the workshop as collaborative.",
-    "D": "Incorrect. This joins her argument to a fact about the workshop, but that fact is background, not the evidence Dekker cites. It is the most attractive near miss."
+    "D": "Incorrect. This states Dekker's argument fully, but it leaves out the letter she relies on."
   },
   "traps": {
     "A": "too_narrow",
-    "B": "too_narrow",
-    "D": "misses_goal"
+    "B": "misses_goal",
+    "D": "too_narrow"
   },
   "grammar": null,
   "source": {
@@ -45,8 +45,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

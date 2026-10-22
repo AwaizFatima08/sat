@@ -14,23 +14,23 @@
   "data": null,
   "stem": "According to the text, what did the 2012 test show?",
   "choices": {
-    "A": "The moai were most likely dragged from the quarry on wooden sleds.",
-    "B": "The island's stories of walking moai were invented by later visitors.",
-    "C": "A small team using ropes could move an upright statue by rocking it.",
-    "D": "Every moai on the island was moved by being walked upright to its site."
+    "A": "A small team using ropes could move an upright statue by rocking it.",
+    "B": "Every moai on the island was moved by being walked upright to its site.",
+    "C": "The island's stories of walking moai were invented by later visitors.",
+    "D": "The moai were most likely dragged from the quarry on wooden sleds."
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text describes the test in its last sentence: by pulling ropes \"from alternating sides,\" eighteen people \"rocked the upright statue forward, making it waddle along a path.\" The test showed that such a method could work, which fits the oral traditions that the moai \"walked.\"",
-    "A": "Incorrect. The text never mentions sleds; the test moved the statue standing upright.",
-    "B": "Incorrect. The test supported the island's oral traditions rather than showing they were invented.",
-    "C": "Correct. This restates the result: eighteen people with ropes moved an upright replica by rocking it forward.",
-    "D": "Incorrect. A test with one replica shows the method was possible, not that every statue was moved this way."
+    "A": "Correct. This restates the result: eighteen people with ropes moved an upright replica by rocking it forward.",
+    "B": "Incorrect. A test with one replica shows the method was possible, not that every statue was moved this way.",
+    "C": "Incorrect. The test supported the island's oral traditions rather than showing they were invented.",
+    "D": "Incorrect. The text never mentions sleds; the test moved the statue standing upright."
   },
   "traps": {
-    "A": "not_in_text",
-    "B": "reversed",
-    "D": "too_broad"
+    "B": "too_broad",
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

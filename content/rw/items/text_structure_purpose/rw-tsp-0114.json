@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that the Ajanta paintings are the finest religious art ever produced in India",
-    "B": "To describe how a British officer came upon the caves while hunting in 1819",
-    "C": "To introduce the Ajanta Caves and explain why their paintings are valued today",
-    "D": "To explain why Buddhist monks abandoned the Ajanta Caves after the fifth century"
+    "A": "To introduce the Ajanta Caves and explain why their paintings are valued today",
+    "B": "To explain why Buddhist monks abandoned the Ajanta Caves after the fifth century",
+    "C": "To describe how a British officer came upon the caves while hunting in 1819",
+    "D": "To argue that the Ajanta paintings are the finest religious art ever produced in India"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text tells when and by whom the caves were made, what the paintings show, how the site was rediscovered, and finally why the paintings matter: they are valued as religious art and as \"a rare record of everyday life.\" A choice must cover this overview and its point about the paintings' value.",
-    "A": "Incorrect. The text says the paintings are valued, but it never ranks them against all other religious art in India.",
-    "B": "Incorrect. The officer's discovery is one detail in the history of the site, not the purpose of the whole text.",
-    "C": "Correct. The text presents the caves' history and contents and ends by explaining the two reasons the paintings are prized.",
-    "D": "Incorrect. The text says the site was abandoned but never gives a reason."
+    "A": "Correct. The text presents the caves' history and contents and ends by explaining the two reasons the paintings are prized.",
+    "B": "Incorrect. The text says the site was abandoned but never gives a reason.",
+    "C": "Incorrect. The officer's discovery is one detail in the history of the site, not the purpose of the whole text.",
+    "D": "Incorrect. The text says the paintings are valued, but it never ranks them against all other religious art in India."
   },
   "traps": {
-    "A": "too_broad",
-    "B": "too_narrow",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "too_narrow",
+    "D": "too_broad"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

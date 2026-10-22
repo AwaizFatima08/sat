@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "delayed",
+    "A": "imitated",
     "B": "expanded",
-    "C": "imitated",
-    "D": "concealed"
+    "C": "concealed",
+    "D": "delayed"
   },
   "answer": "B",
   "explanation": {
     "why": "The cost of shipping a ton of goods fell from about $100 to about $10. When moving goods becomes that much cheaper, people ship more of them, so the canal increased trade. \"Expanded\" fits.",
-    "A": "Incorrect. Cheaper shipping would speed trade up and make it grow, not hold it back.",
+    "A": "Incorrect. A canal cannot imitate trade, and nothing in the text is about copying anything.",
     "B": "Correct. Shipping became about ten times cheaper, so trade between the regions grew, or expanded.",
-    "C": "Incorrect. A canal cannot imitate trade, and nothing in the text is about copying anything.",
-    "D": "Incorrect. The text says nothing about trade being hidden; it is about trade becoming cheaper."
+    "C": "Incorrect. The text says nothing about trade being hidden; it is about trade becoming cheaper.",
+    "D": "Incorrect. Cheaper shipping would speed trade up and make it grow, not hold it back."
   },
   "traps": {
-    "A": "reversed",
+    "A": "not_in_text",
     "C": "not_in_text",
-    "D": "not_in_text"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

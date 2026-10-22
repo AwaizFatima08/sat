@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the overall structure of the text?",
   "choices": {
-    "A": "It describes a lake and then explains how its water became salty.",
-    "B": "It presents an early explanation for a landform and then describes evidence that led to a different one.",
-    "C": "It compares two lakes in Maharashtra that formed in different ways.",
-    "D": "It describes a meteorite strike and then explains how the strike created volcanic rock."
+    "A": "It describes a meteorite strike and then explains how the strike created volcanic rock.",
+    "B": "It describes a lake and then explains how its water became salty.",
+    "C": "It presents an early explanation for a landform and then describes evidence that led to a different one.",
+    "D": "It compares two lakes in Maharashtra that formed in different ways."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "After describing the hollow, the text gives the early view that it was \"the mouth of an ancient volcano.\" Then \"Later studies found something different\": signs of a sudden shock, which led scientists to conclude a meteorite made it. The text moves from an old explanation to the evidence for a new one.",
-    "A": "Incorrect. The text says nothing about the lake's water being salty.",
-    "B": "Correct. The volcano idea is presented first, and then shock evidence leads to the meteorite explanation.",
-    "C": "Incorrect. Only one lake is discussed.",
-    "D": "Incorrect. The volcanic rock was already there; the text never says the meteorite created it."
+    "A": "Incorrect. The volcanic rock was already there; the text never says the meteorite created it.",
+    "B": "Incorrect. The text says nothing about the lake's water being salty.",
+    "C": "Correct. The volcano idea is presented first, and then shock evidence leads to the meteorite explanation.",
+    "D": "Incorrect. Only one lake is discussed."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "not_in_text",
-    "D": "reversed"
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

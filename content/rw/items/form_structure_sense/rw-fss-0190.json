@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "al-Biruni's detailed study of Indian astronomy, philosophy, and customs was completed around 1030 and drew directly on those texts.",
-    "B": "al-Biruni completed around 1030 a detailed study of Indian astronomy, philosophy, and customs that drew directly on those texts.",
-    "C": "a detailed study of Indian astronomy, philosophy, and customs, drawing directly on those texts, was completed by al-Biruni around 1030.",
+    "A": "a detailed study of Indian astronomy, philosophy, and customs, drawing directly on those texts, was completed by al-Biruni around 1030.",
+    "B": "al-Biruni's detailed study of Indian astronomy, philosophy, and customs was completed around 1030 and drew directly on those texts.",
+    "C": "al-Biruni completed around 1030 a detailed study of Indian astronomy, philosophy, and customs that drew directly on those texts.",
     "D": "around 1030 there appeared al-Biruni's detailed study of Indian astronomy, philosophy, and customs, which drew directly on those texts."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The introductory phrase \"Having learned Sanskrit well enough to read works ... in the original\" describes a person who learned a language. A modifier at the start of a sentence applies to the subject that comes right after the comma, so that subject must be al-Biruni himself, not his book.",
-    "A": "Incorrect. The subject is \"study\"; \"al-Biruni's\" only describes it, so the sentence says the study learned Sanskrit.",
-    "B": "Correct. \"Al-Biruni\" is the subject right after the introductory phrase, so it is clear that he is the one who learned Sanskrit.",
-    "C": "Incorrect. This makes \"a detailed study\" the subject, so the sentence says the study learned Sanskrit.",
+    "A": "Incorrect. This makes \"a detailed study\" the subject, so the sentence says the study learned Sanskrit.",
+    "B": "Incorrect. The subject is \"study\"; \"al-Biruni's\" only describes it, so the sentence says the study learned Sanskrit.",
+    "C": "Correct. \"Al-Biruni\" is the subject right after the introductory phrase, so it is clear that he is the one who learned Sanskrit.",
     "D": "Incorrect. The sentence uses \"there appeared,\" so the subject is the study, not al-Biruni; the modifier is left describing a book that learned Sanskrit."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
+    "B": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "modifier",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

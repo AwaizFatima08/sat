@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "inflated",
-    "B": "arbitrary",
-    "C": "deceptive",
-    "D": "unverifiable"
+    "A": "unverifiable",
+    "B": "inflated",
+    "C": "arbitrary",
+    "D": "deceptive"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The text grants that the figure is accurate (\"not invented\") but says \"nonetheless\" something is wrong with it: the average hides the fact that adults often lived much longer. The blank needs a word for something technically true that gives a false impression.",
-    "A": "Incorrect. \"Inflated\" means too high, but the text says the average is pulled down, so it makes lives look shorter, not longer.",
-    "B": "Incorrect. \"Arbitrary\" means chosen without reason, but the average is based on real estimates and has a clear cause, the deaths of young children.",
-    "C": "Correct. \"Deceptive\" means giving a false impression. The average is accurate yet misleads people into thinking most adults died at thirty.",
-    "D": "Incorrect. \"Unverifiable\" means impossible to check, but the text says estimates for the period do support the figure."
+    "A": "Incorrect. \"Unverifiable\" means impossible to check, but the text says estimates for the period do support the figure.",
+    "B": "Incorrect. \"Inflated\" means too high, but the text says the average is pulled down, so it makes lives look shorter, not longer.",
+    "C": "Incorrect. \"Arbitrary\" means chosen without reason, but the average is based on real estimates and has a clear cause, the deaths of young children.",
+    "D": "Correct. \"Deceptive\" means giving a false impression. The average is accurate yet misleads people into thinking most adults died at thirty."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "wrong_logic"
+    "A": "wrong_logic",
+    "B": "reversed",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

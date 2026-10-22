@@ -16,21 +16,21 @@
   "choices": {
     "A": "It explains why the researchers concluded that attention caused workers' output to rise.",
     "B": "It suggests that the Hawthorne researchers deliberately concealed their original lighting data.",
-    "C": "It provides evidence that the Hawthorne effect was a genuine and powerful phenomenon.",
-    "D": "It points out a weakness in how a famous result was known, setting up a later reexamination."
+    "C": "It points out a weakness in how a famous result was known, setting up a later reexamination.",
+    "D": "It provides evidence that the Hawthorne effect was a genuine and powerful phenomenon."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The underlined sentence, introduced by \"Yet,\" notes that the data were \"long believed lost,\" so the result was known \"chiefly through secondhand summaries.\" The next sentence describes economists finding and reanalyzing the records, with weaker results. The sentence therefore exposes a gap in the evidence that the reanalysis then addresses.",
     "A": "Incorrect. The researchers' reasoning appears in the second sentence; the underlined sentence concerns how the data were later known.",
     "B": "Incorrect. The data were \"believed lost\"; nothing suggests anyone hid them on purpose.",
-    "C": "Incorrect. The sentence raises doubt about the evidence, and the reanalysis it sets up found the effect weaker than claimed.",
-    "D": "Correct. Reliance on secondhand summaries is a weakness, and the final sentence reports what a reexamination of the records found."
+    "C": "Correct. Reliance on secondhand summaries is a weakness, and the final sentence reports what a reexamination of the records found.",
+    "D": "Incorrect. The sentence raises doubt about the evidence, and the reanalysis it sets up found the effect weaker than claimed."
   },
   "traps": {
     "A": "wrong_logic",
     "B": "not_in_text",
-    "C": "reversed"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

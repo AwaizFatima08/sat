@@ -15,22 +15,22 @@
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
     "A": "However,",
-    "B": "For example,",
-    "C": "Instead,",
-    "D": "Similarly,"
+    "B": "Instead,",
+    "C": "Similarly,",
+    "D": "For example,"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The first sentence makes a general claim: some cities turn old industrial buildings into places for art. The second sentence names one specific case: a London art museum in a former power station. A transition that introduces an example is needed.",
     "A": "Incorrect. The Tate Modern supports the general claim rather than contrasting with it.",
-    "B": "Correct. \"For example\" introduces the Tate Modern as one industrial building that has been turned into a place for art.",
-    "C": "Incorrect. \"Instead\" would mean the museum is an alternative to the practice just described, but it is a case of that practice.",
-    "D": "Incorrect. \"Similarly\" would compare the Tate Modern to an earlier example, but no example has been given yet."
+    "B": "Incorrect. \"Instead\" would mean the museum is an alternative to the practice just described, but it is a case of that practice.",
+    "C": "Incorrect. \"Similarly\" would compare the Tate Modern to an earlier example, but no example has been given yet.",
+    "D": "Correct. \"For example\" introduces the Tate Modern as one industrial building that has been turned into a place for art."
   },
   "traps": {
     "A": "wrong_logic",
-    "C": "wrong_logic",
-    "D": "wrong_logic"
+    "B": "wrong_logic",
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

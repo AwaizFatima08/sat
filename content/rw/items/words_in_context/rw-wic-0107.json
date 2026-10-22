@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "annoyed",
-    "B": "bored",
-    "C": "impressed",
-    "D": "bewildered"
+    "A": "bewildered",
+    "B": "impressed",
+    "C": "bored",
+    "D": "annoyed"
   },
-  "answer": "C",
+  "answer": "B",
   "explanation": {
     "why": "Mrs. Qureshi expected nerves might make Bilal forget his lines, but \"every word came out clearly.\" She then shakes his hand, a sign of congratulation. The blank describes her reaction to \"how well he had done,\" so a word showing admiration, such as \"impressed,\" fits.",
-    "A": "Incorrect. Bilal did well and she shakes his hand; nothing suggests she is irritated by his success.",
-    "B": "Incorrect. Her strong reaction to \"how well he had done\" shows interest, not boredom.",
-    "C": "Correct. Bilal did better than she had warned he might, and she shakes his hand, so she is impressed by his performance.",
-    "D": "Incorrect. Shaking his hand is a sign of approval; the text gives no hint that she is confused or bewildered by what happened."
+    "A": "Incorrect. Shaking his hand is a sign of approval; the text gives no hint that she is confused or bewildered by what happened.",
+    "B": "Correct. Bilal did better than she had warned he might, and she shakes his hand, so she is impressed by his performance.",
+    "C": "Incorrect. Her strong reaction to \"how well he had done\" shows interest, not boredom.",
+    "D": "Incorrect. Bilal did well and she shakes his hand; nothing suggests she is irritated by his success."
   },
   "traps": {
-    "A": "reversed",
-    "B": "not_in_text",
-    "D": "wrong_tone"
+    "A": "wrong_tone",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "C",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

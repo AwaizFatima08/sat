@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice most logically completes the text?",
   "choices": {
-    "A": "took more pleasure in Amaka's success than in the kite itself.",
-    "B": "was disappointed that the kite had needed four tries to fly.",
-    "C": "wanted to take a turn running across the field with the kite.",
-    "D": "did not notice that the kite had finally risen into the air."
+    "A": "did not notice that the kite had finally risen into the air.",
+    "B": "wanted to take a turn running across the field with the kite.",
+    "C": "took more pleasure in Amaka's success than in the kite itself.",
+    "D": "was disappointed that the kite had needed four tries to fly."
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "When the kite finally rises, the grandmother is not looking at the kite; she is looking at Amaka, smiling and clapping. Her attention and joy are focused on her granddaughter's achievement.",
-    "A": "Correct. She watches Amaka rather than the kite and claps happily, showing that Amaka's success is what delights her.",
-    "B": "Incorrect. Smiling widely and clapping show delight, not disappointment.",
-    "C": "Incorrect. Nothing in the text suggests she wanted to run with the kite herself.",
-    "D": "Incorrect. She is clapping as the kite flies, which shows she knows it has risen."
+    "A": "Incorrect. She is clapping as the kite flies, which shows she knows it has risen.",
+    "B": "Incorrect. Nothing in the text suggests she wanted to run with the kite herself.",
+    "C": "Correct. She watches Amaka rather than the kite and claps happily, showing that Amaka's success is what delights her.",
+    "D": "Incorrect. Smiling widely and clapping show delight, not disappointment."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
+    "A": "reversed",
+    "B": "not_in_text",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

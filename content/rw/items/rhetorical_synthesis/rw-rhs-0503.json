@@ -20,23 +20,23 @@
   "data": null,
   "stem": "The student wants to explain how the builders kept water from leaking out of the Great Bath. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "Mohenjo-daro, an ancient city in Sindh, Pakistan, was built around 2500 BCE.",
-    "B": "To keep water in, the builders fitted the bricks tightly, sealed the joints with gypsum plaster, and added bitumen behind the walls.",
-    "C": "The Great Bath at Mohenjo-daro is a brick-lined pool about 12 meters long and 7 meters wide.",
-    "D": "Steps at each end of the Great Bath lead down into the brick-lined pool."
+    "A": "The Great Bath at Mohenjo-daro is a brick-lined pool about 12 meters long and 7 meters wide.",
+    "B": "Steps at each end of the Great Bath lead down into the brick-lined pool.",
+    "C": "Mohenjo-daro, an ancient city in Sindh, Pakistan, was built around 2500 BCE.",
+    "D": "To keep water in, the builders fitted the bricks tightly, sealed the joints with gypsum plaster, and added bitumen behind the walls."
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The goal is to explain how water was kept from leaking out. The notes give the answer in three steps: tight bricks, joints sealed with gypsum plaster, and a layer of bitumen that water cannot pass through. Only one choice describes these methods.",
-    "A": "Incorrect. It gives the city's location and age, not how the pool was made watertight.",
-    "B": "Correct. It names the three methods the builders used to keep water in the pool.",
-    "C": "Incorrect. It gives the size of the pool but nothing about how it held water.",
-    "D": "Incorrect. The steps are a detail of the pool's design that has nothing to do with stopping leaks."
+    "A": "Incorrect. It gives the size of the pool but nothing about how it held water.",
+    "B": "Incorrect. The steps are a detail of the pool's design that has nothing to do with stopping leaks.",
+    "C": "Incorrect. It gives the city's location and age, not how the pool was made watertight.",
+    "D": "Correct. It names the three methods the builders used to keep water in the pool."
   },
   "traps": {
     "A": "misses_goal",
-    "C": "misses_goal",
-    "D": "true_irrelevant"
+    "B": "true_irrelevant",
+    "C": "misses_goal"
   },
   "grammar": null,
   "source": {
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

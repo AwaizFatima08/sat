@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Raghunathan's claim?",
   "choices": {
-    "A": "Tea companies spent more money on advertising in India during the 1930s than in any earlier decade.",
-    "B": "Tea drinking spread just as fast in regions the campaigns never reached as in regions where they were most active.",
-    "C": "Even in the 1960s, a large share of the tea grown in India was still being shipped to buyers abroad.",
+    "A": "Tea drinking spread just as fast in regions the campaigns never reached as in regions where they were most active.",
+    "B": "Even in the 1960s, a large share of the tea grown in India was still being shipped to buyers abroad.",
+    "C": "Tea companies spent more money on advertising in India during the 1930s than in any earlier decade.",
     "D": "Many railway passengers who were given free tea at station stalls had rarely tasted the drink before."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Raghunathan says advertising was the main reason tea drinking spread in India. If the campaigns mattered most, tea should have spread faster where they were active. Equal growth in places the campaigns never reached suggests something else drove the change.",
-    "A": "Incorrect. Heavy spending shows the campaigns were large, which fits Raghunathan's claim rather than weakening it.",
-    "B": "Correct. If tea spread equally fast without any advertising, the campaigns cannot have been the chief cause.",
-    "C": "Incorrect. Continued exports do not show what made people in India start drinking tea.",
+    "A": "Correct. If tea spread equally fast without any advertising, the campaigns cannot have been the chief cause.",
+    "B": "Incorrect. Continued exports do not show what made people in India start drinking tea.",
+    "C": "Incorrect. Heavy spending shows the campaigns were large, which fits Raghunathan's claim rather than weakening it.",
     "D": "Incorrect. Passengers being new to tea shows the campaigns reached new drinkers, which fits the claim instead of weakening it."
   },
   "traps": {
-    "A": "reversed",
-    "C": "true_irrelevant",
+    "B": "true_irrelevant",
+    "C": "reversed",
     "D": "reversed"
   },
   "grammar": null,
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

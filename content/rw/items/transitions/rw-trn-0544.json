@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Nevertheless,",
-    "B": "Similarly,",
-    "C": "Conversely,",
-    "D": "For example,"
+    "A": "Conversely,",
+    "B": "Nevertheless,",
+    "C": "For example,",
+    "D": "Similarly,"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The second sentence says a long reverberation time suits blended music. The last sentence states the reverse case: a short reverberation time suits speech. The transition must introduce the opposite side of the same relationship.",
-    "A": "Incorrect. \"Nevertheless\" signals that something is true in spite of what came before, but short reverberation suiting speech does not go against long reverberation suiting choral music. This is the closest near miss.",
-    "B": "Incorrect. \"Similarly\" signals a parallel point, but the last sentence describes the opposite case, not a matching one.",
-    "C": "Correct. \"Conversely\" signals that the last sentence reverses the previous case: short instead of long, speech instead of choral music.",
-    "D": "Incorrect. A short reverberation time for speech is not an example of a long reverberation time suiting music."
+    "A": "Correct. \"Conversely\" signals that the last sentence reverses the previous case: short instead of long, speech instead of choral music.",
+    "B": "Incorrect. \"Nevertheless\" signals that something is true in spite of what came before, but short reverberation suiting speech does not go against long reverberation suiting choral music. This is the closest near miss.",
+    "C": "Incorrect. A short reverberation time for speech is not an example of a long reverberation time suiting music.",
+    "D": "Incorrect. \"Similarly\" signals a parallel point, but the last sentence describes the opposite case, not a matching one."
   },
   "traps": {
-    "A": "wrong_logic",
     "B": "wrong_logic",
+    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

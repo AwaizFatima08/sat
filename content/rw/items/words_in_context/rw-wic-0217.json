@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "obsolete",
-    "B": "hypothetical",
-    "C": "demonstrable",
-    "D": "ubiquitous"
+    "A": "demonstrable",
+    "B": "ubiquitous",
+    "C": "obsolete",
+    "D": "hypothetical"
   },
-  "answer": "C",
+  "answer": "A",
   "explanation": {
     "why": "The text contrasts the old view of atoms as \"a convenient fiction\" and \"a mere heuristic\" with what happened after experiments \"matched\" Einstein's predictions and skeptics \"conceded the point.\" The atom had become something whose existence could be shown by evidence: \"demonstrable.\"",
-    "A": "Incorrect. The experiments strengthened the idea of the atom; they did not make it outdated.",
-    "B": "Incorrect. The atom had been hypothetical before; the experiments moved it beyond that status.",
-    "C": "Correct. Once experiments confirmed predictions that depended on atoms existing, their reality could be shown, or demonstrated.",
-    "D": "Incorrect. Atoms may be everywhere, but the text's point is that their existence was now supported by evidence, not how widespread they are."
+    "A": "Correct. Once experiments confirmed predictions that depended on atoms existing, their reality could be shown, or demonstrated.",
+    "B": "Incorrect. Atoms may be everywhere, but the text's point is that their existence was now supported by evidence, not how widespread they are.",
+    "C": "Incorrect. The experiments strengthened the idea of the atom; they did not make it outdated.",
+    "D": "Incorrect. The atom had been hypothetical before; the experiments moved it beyond that status."
   },
   "traps": {
-    "A": "reversed",
-    "B": "reversed",
-    "D": "true_irrelevant"
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

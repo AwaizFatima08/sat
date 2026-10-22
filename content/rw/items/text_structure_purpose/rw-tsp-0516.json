@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice best states the main purpose of the text?",
   "choices": {
-    "A": "To argue that ice cores are too unreliable to reveal anything about past air",
-    "B": "To explain how ice cores record past air and identify a limit on that record's precision",
+    "A": "To explain how ice cores record past air and identify a limit on that record's precision",
+    "B": "To argue that ice cores are too unreliable to reveal anything about past air",
     "C": "To describe the methods scientists use to drill ice cores in Antarctica",
     "D": "To explain why carbon dioxide levels have changed over hundreds of thousands of years"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The first sentence explains what ice cores can do: trapped bubbles let scientists measure ancient carbon dioxide. \"However\" introduces a qualification: because air keeps moving through the snow before it becomes ice, each bubble holds air \"averaged over a span of years.\" The text presents a method and then a limit on its precision.",
-    "A": "Incorrect. The text says the record is \"not a perfect snapshot,\" not that it is useless; it still lets scientists measure carbon dioxide from long ago.",
-    "B": "Correct. The text explains how bubbles preserve old air and then explains why each bubble blurs together several years.",
+    "A": "Correct. The text explains how bubbles preserve old air and then explains why each bubble blurs together several years.",
+    "B": "Incorrect. The text says the record is \"not a perfect snapshot,\" not that it is useless; it still lets scientists measure carbon dioxide from long ago.",
     "C": "Incorrect. The text mentions that cores are drilled but never describes how the drilling is done.",
     "D": "Incorrect. The text discusses how past carbon dioxide is measured, not why its levels changed."
   },
   "traps": {
-    "A": "too_broad",
+    "B": "too_broad",
     "C": "not_in_text",
     "D": "not_in_text"
   },
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

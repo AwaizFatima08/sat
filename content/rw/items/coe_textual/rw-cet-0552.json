@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken de Vries's argument?",
   "choices": {
-    "A": "Snails traveled faster along their own old slime trails than across clean, unmarked ground.",
-    "B": "Several snails often shared the same resting spot beneath a single stone, day after day.",
-    "C": "Snails released downwind of their resting spot returned home no faster than those released upwind.",
-    "D": "Snails whose outgoing trails had been washed away returned home as reliably as other snails."
+    "A": "Snails released downwind of their resting spot returned home no faster than those released upwind.",
+    "B": "Snails whose outgoing trails had been washed away returned home as reliably as other snails.",
+    "C": "Snails traveled faster along their own old slime trails than across clean, unmarked ground.",
+    "D": "Several snails often shared the same resting spot beneath a single stone, day after day."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "De Vries says snails find home chiefly by following their own outgoing trail. If snails whose trails were removed still find home just as reliably, the trail cannot be what guides them, which leaves room for another cue such as scent.",
-    "A": "Incorrect. Moving faster along old trails suggests snails do make use of trails, which fits de Vries's argument.",
-    "B": "Incorrect. Sharing a resting spot shows that snails return to the same place, which is the behavior being explained, not its cause.",
-    "C": "Incorrect. If wind direction makes no difference, scent is probably not guiding the snails, which supports de Vries rather than weakening him.",
-    "D": "Correct. Homing works just as well without the trail, so the trail is not what the snails chiefly rely on."
+    "A": "Incorrect. If wind direction makes no difference, scent is probably not guiding the snails, which supports de Vries rather than weakening him.",
+    "B": "Correct. Homing works just as well without the trail, so the trail is not what the snails chiefly rely on.",
+    "C": "Incorrect. Moving faster along old trails suggests snails do make use of trails, which fits de Vries's argument.",
+    "D": "Incorrect. Sharing a resting spot shows that snails return to the same place, which is the behavior being explained, not its cause."
   },
   "traps": {
     "A": "reversed",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

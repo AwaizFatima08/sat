@@ -50,23 +50,23 @@
   },
   "stem": "Which choice most effectively uses data from the graph to complete the statement?",
   "choices": {
-    "A": "2024, the year with the highest attendance shown.",
-    "B": "2019, when about 3,200 people visited the museum.",
-    "C": "2020, when about 1,900 people visited the museum.",
-    "D": "2021, when about 1,400 people visited the museum."
+    "A": "2021, when about 1,400 people visited the museum.",
+    "B": "2024, the year with the highest attendance shown.",
+    "C": "2019, when about 3,200 people visited the museum.",
+    "D": "2020, when about 1,900 people visited the museum."
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The statement asks for the year of lowest attendance, so find the lowest point on the line. The line drops to about 1,900 visitors in 2020, its lowest value.",
-    "A": "Incorrect. 2024 had the highest attendance, which is the opposite of what the statement describes.",
-    "B": "Incorrect. About 3,200 people did visit in 2019, but that is more than the roughly 1,900 who visited in 2020.",
-    "C": "Correct. About 1,900 people visited in 2020, fewer than in any other year shown.",
-    "D": "Incorrect. This misreads the graph: about 4,100 people visited in 2021, not about 1,400."
+    "A": "Incorrect. This misreads the graph: about 4,100 people visited in 2021, not about 1,400.",
+    "B": "Incorrect. 2024 had the highest attendance, which is the opposite of what the statement describes.",
+    "C": "Incorrect. About 3,200 people did visit in 2019, but that is more than the roughly 1,900 who visited in 2020.",
+    "D": "Correct. About 1,900 people visited in 2020, fewer than in any other year shown."
   },
   "traps": {
     "A": "reversed",
-    "B": "true_irrelevant",
-    "D": "reversed"
+    "B": "reversed",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -75,8 +75,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

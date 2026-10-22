@@ -15,17 +15,17 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "bacteria",
-    "B": "bacteria,",
-    "C": "bacteria—",
-    "D": "bacteria;"
+    "B": "bacteria;",
+    "C": "bacteria,",
+    "D": "bacteria—"
   },
   "answer": "A",
   "explanation": {
     "why": "The clause \"that live inside small swellings … on the plants' roots\" tells which bacteria the legumes partner with, so it is essential information. A \"that\" clause like this is never set off from the noun it describes with punctuation.",
     "A": "Correct. No punctuation is needed because the \"that\" clause is essential: it identifies which bacteria are meant.",
-    "B": "Incorrect. A comma can't separate a noun from the essential \"that\" clause that identifies it.",
-    "C": "Incorrect. A dash would set off the \"that\" clause as extra information, but it is essential and needs no punctuation.",
-    "D": "Incorrect. A semicolon must join two independent clauses, but \"that live inside small swellings …\" is not one."
+    "B": "Incorrect. A semicolon must join two independent clauses, but \"that live inside small swellings …\" is not one.",
+    "C": "Incorrect. A comma can't separate a noun from the essential \"that\" clause that identifies it.",
+    "D": "Incorrect. A dash would set off the \"that\" clause as extra information, but it is essential and needs no punctuation."
   },
   "traps": {
     "B": "grammar_rule",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

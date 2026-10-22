@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It presents evidence that challenges the mechanism proposed in the widely told account.",
-    "B": "It provides support for the claim that elk avoided streams out of fear of the wolves.",
-    "C": "It explains why the willows recovered along only some of the streams in the national park.",
-    "D": "It establishes that the wolves played no role at all in the recovery of the willows."
+    "A": "It establishes that the wolves played no role at all in the recovery of the willows.",
+    "B": "It explains why the willows recovered along only some of the streams in the national park.",
+    "C": "It provides support for the claim that elk avoided streams out of fear of the wolves.",
+    "D": "It presents evidence that challenges the mechanism proposed in the widely told account."
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "The widely told account says elk avoided streams out of fear. The underlined sentence, signaled by \"however,\" reports that elk \"often continue to use such areas.\" That evidence undercuts the fear mechanism, and the last sentence (\"therefore\") offers another explanation in which wolves still contribute to the decline in elk numbers.",
-    "A": "Correct. The tracking studies cast doubt on the claim that fear kept elk away from streams, the mechanism in the popular account.",
-    "B": "Incorrect. The sentence reports that elk keep using streamside areas, which works against the claim that they avoided them.",
-    "C": "Incorrect. The text mentions that willows returned along \"some streams\" but never explains why only some.",
-    "D": "Incorrect. The final sentence still counts wolves among the predators that reduced elk numbers, so the text does not deny them any role."
+    "A": "Incorrect. The final sentence still counts wolves among the predators that reduced elk numbers, so the text does not deny them any role.",
+    "B": "Incorrect. The text mentions that willows returned along \"some streams\" but never explains why only some.",
+    "C": "Incorrect. The sentence reports that elk keep using streamside areas, which works against the claim that they avoided them.",
+    "D": "Correct. The tracking studies cast doubt on the claim that fear kept elk away from streams, the mechanism in the popular account."
   },
   "traps": {
-    "B": "reversed",
-    "C": "not_in_text",
-    "D": "too_broad"
+    "A": "too_broad",
+    "B": "not_in_text",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

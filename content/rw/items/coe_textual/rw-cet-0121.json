@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which finding, if true, would most directly weaken Brunner's argument?",
   "choices": {
-    "A": "In the village's past, houses with gently sloping roofs suffered no more snow damage than houses with steep roofs.",
-    "B": "Most of the village's farmhouses also have wide wooden balconies on the side that faces south.",
-    "C": "Records show that several houses with gently sloping roofs in the village collapsed under snow during hard winters.",
+    "A": "Records show that several houses with gently sloping roofs in the village collapsed under snow during hard winters.",
+    "B": "In the village's past, houses with gently sloping roofs suffered no more snow damage than houses with steep roofs.",
+    "C": "Most of the village's farmhouses also have wide wooden balconies on the side that faces south.",
     "D": "Many of the farmhouses in the village were built more than two hundred years ago."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Brunner says steep roofs were chosen because they protect houses from the weight of snow. If gently sloping roofs suffered no more snow damage, steep roofs gave no practical advantage, which makes her explanation less likely.",
-    "A": "Correct. If gentle roofs held up just as well, steep roofs did not protect against snow damage, so that practical reason loses its force.",
-    "B": "Incorrect. Balconies are a different feature and say nothing about why the roofs are steep.",
-    "C": "Incorrect. Gently sloping roofs collapsing under snow shows that steep roofs had a real advantage, which supports Brunner.",
+    "A": "Incorrect. Gently sloping roofs collapsing under snow shows that steep roofs had a real advantage, which supports Brunner.",
+    "B": "Correct. If gentle roofs held up just as well, steep roofs did not protect against snow damage, so that practical reason loses its force.",
+    "C": "Incorrect. Balconies are a different feature and say nothing about why the roofs are steep.",
     "D": "Incorrect. The age of the houses does not show why their roofs were built steep."
   },
   "traps": {
-    "B": "true_irrelevant",
-    "C": "reversed",
+    "A": "reversed",
+    "C": "true_irrelevant",
     "D": "true_irrelevant"
   },
   "grammar": null,
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

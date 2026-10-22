@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Granted,",
-    "B": "Consequently,",
-    "C": "For example,",
-    "D": "Indeed,"
+    "A": "Indeed,",
+    "B": "For example,",
+    "C": "Granted,",
+    "D": "Consequently,"
   },
-  "answer": "A",
+  "answer": "C",
   "explanation": {
     "why": "The author argues that the name \"Arabic numerals\" hides their Indian origin. The blank sentence admits a fact that seems to favor the name (Europeans learned the system from Arabic sources), and the final sentence answers it (\"but it says nothing about where the numerals were invented\"). A transition that concedes a point before the author returns to the main argument is needed.",
-    "A": "Correct. \"Granted\" acknowledges the Arabic route of transmission before the author explains why it does not change the system's origin.",
-    "B": "Incorrect. The Indian development of the system did not cause Europeans to learn it from Arabic sources; the sentence is not a result of the one before.",
-    "C": "Incorrect. Learning the system from Arabic translations is not an example of its development in India.",
-    "D": "Incorrect. \"Indeed\" would strengthen the previous point about Indian origins, but the blank sentence points the other way, toward the source of the Arabic name. This is the closest near miss."
+    "A": "Incorrect. \"Indeed\" would strengthen the previous point about Indian origins, but the blank sentence points the other way, toward the source of the Arabic name. This is the closest near miss.",
+    "B": "Incorrect. Learning the system from Arabic translations is not an example of its development in India.",
+    "C": "Correct. \"Granted\" acknowledges the Arabic route of transmission before the author explains why it does not change the system's origin.",
+    "D": "Incorrect. The Indian development of the system did not cause Europeans to learn it from Arabic sources; the sentence is not a result of the one before."
   },
   "traps": {
+    "A": "wrong_logic",
     "B": "wrong_logic",
-    "C": "wrong_logic",
     "D": "wrong_logic"
   },
   "grammar": null,
@@ -41,6 +41,7 @@
     "written": "2026-10-22",
     "checks": [],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "draft",
+    "shuffled": true
   }
 }

@@ -49,23 +49,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to support Okonkwo's report?",
   "choices": {
-    "A": "In 2022, the market had 260 phone and accessory stalls and 330 food and spice stalls, out of 1,310 stalls in all.",
-    "B": "Fabric and clothing stalls were the most common type of stall in the market in both 2012 and 2022.",
-    "C": "Household goods stalls increased by more than phone and accessory stalls did between 2012 and 2022.",
+    "A": "Fabric and clothing stalls were the most common type of stall in the market in both 2012 and 2022.",
+    "B": "Household goods stalls increased by more than phone and accessory stalls did between 2012 and 2022.",
+    "C": "In 2022, the market had 260 phone and accessory stalls and 330 food and spice stalls, out of 1,310 stalls in all.",
     "D": "Phone and accessory stalls rose by 215, yet fabric and clothing stalls, at 405, were still the most common type in 2022."
   },
   "answer": "D",
   "explanation": {
     "why": "Okonkwo reports two things: phone stalls grew by far the most, and fabric and clothing stalls were still the most numerous in 2022. The support must show both. Phone stalls rose from 45 to 260 (an increase of 215), and fabric and clothing, at 405, remained the largest group.",
-    "A": "Incorrect. These numbers are accurate, but they describe 2022 only and do not show how much any type of stall grew.",
-    "B": "Incorrect. This is true and supports the second part of the report, but it says nothing about the growth of phone stalls.",
-    "C": "Incorrect. Household goods stalls rose by only 25, while phone stalls rose by 215, so this misreads the table.",
+    "A": "Incorrect. This is true and supports the second part of the report, but it says nothing about the growth of phone stalls.",
+    "B": "Incorrect. Household goods stalls rose by only 25, while phone stalls rose by 215, so this misreads the table.",
+    "C": "Incorrect. These numbers are accurate, but they describe 2022 only and do not show how much any type of stall grew.",
     "D": "Correct. It shows both parts of the report: the largest increase (215, compared with at most 25 for any other type) and fabric and clothing still in first place."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "too_narrow",
-    "C": "reversed"
+    "A": "too_narrow",
+    "B": "reversed",
+    "C": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -85,6 +85,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

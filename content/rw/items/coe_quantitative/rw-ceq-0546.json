@@ -44,23 +44,23 @@
   },
   "stem": "Which choice most effectively uses data from the table to complete the statement?",
   "choices": {
-    "A": "flowers open to all visitors had the highest seed set of any treatment, with 78% producing seed.",
-    "B": "flowers open only in the morning were four times as likely to produce seed as flowers bagged throughout.",
+    "A": "flowers open only at night set seed nearly as often as fully open flowers, while morning-only flowers rarely did.",
+    "B": "flowers open to all visitors had the highest seed set of any treatment, with 78% producing seed.",
     "C": "flowers open only at night produced more seeds per fruit than flowers open to all visitors did.",
-    "D": "flowers open only at night set seed nearly as often as fully open flowers, while morning-only flowers rarely did."
+    "D": "flowers open only in the morning were four times as likely to produce seed as flowers bagged throughout."
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "Carrillo's hypothesis has two parts: moths (night visitors) account for almost all pollination, and bees (morning visitors) add little. Support therefore needs the night-only treatment to come close to the fully open flowers and the morning-only treatment to fall far short. Night-only flowers set seed 71% of the time, close to the 78% for fully open flowers, while morning-only flowers did so only 12% of the time.",
-    "A": "Incorrect. This is true, but fully open flowers receive both moths and bees, so their seed set cannot show which visitor matters.",
-    "B": "Incorrect. This is true (12% versus 3%), but it highlights a contribution from morning visitors rather than showing that the plant depends almost entirely on moths.",
+    "A": "Correct. It compares each partial treatment with the fully open flowers and shows that night visits alone nearly match full access, while morning visits alone accomplish little.",
+    "B": "Incorrect. This is true, but fully open flowers receive both moths and bees, so their seed set cannot show which visitor matters.",
     "C": "Incorrect. Night-only flowers averaged 389 seeds per fruit, fewer than the 412 for fully open flowers, so this misreads the table.",
-    "D": "Correct. It compares each partial treatment with the fully open flowers and shows that night visits alone nearly match full access, while morning visits alone accomplish little."
+    "D": "Incorrect. This is true (12% versus 3%), but it highlights a contribution from morning visitors rather than showing that the plant depends almost entirely on moths."
   },
   "traps": {
-    "A": "true_irrelevant",
     "B": "true_irrelevant",
-    "C": "reversed"
+    "C": "reversed",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -69,8 +69,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "rare",
+    "A": "decorated",
     "B": "fragile",
-    "C": "decorated",
-    "D": "plentiful"
+    "C": "plentiful",
+    "D": "rare"
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "The text contrasts hand copying, which took months per book, with a press that could make \"many copies\" in the same time. \"As a result\" signals that the blank names the effect of faster production: more books. \"Plentiful\" fits.",
-    "A": "Incorrect. Hand copying made books rare. The press produced \"many copies\" quickly, so books became less rare, not more.",
+    "A": "Incorrect. The text is about speed and the number of copies, not decoration. Faster printing explains why there were more books, not why they were more decorated.",
     "B": "Incorrect. The text says nothing about how sturdy printed books were; it is about how quickly they could be made.",
-    "C": "Incorrect. The text is about speed and the number of copies, not decoration. Faster printing explains why there were more books, not why they were more decorated.",
-    "D": "Correct. When a shop can make \"many copies\" in the time it once took to make one, there are many more books available. Books became plentiful."
+    "C": "Correct. When a shop can make \"many copies\" in the time it once took to make one, there are many more books available. Books became plentiful.",
+    "D": "Incorrect. Hand copying made books rare. The press produced \"many copies\" quickly, so books became less rare, not more."
   },
   "traps": {
-    "A": "reversed",
+    "A": "wrong_logic",
     "B": "not_in_text",
-    "C": "wrong_logic"
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

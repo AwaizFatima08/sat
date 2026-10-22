@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical transition?",
   "choices": {
-    "A": "Instead,",
-    "B": "Therefore,",
-    "C": "Nevertheless,",
-    "D": "Similarly,"
+    "A": "Therefore,",
+    "B": "Instead,",
+    "C": "Similarly,",
+    "D": "Nevertheless,"
   },
-  "answer": "C",
+  "answer": "D",
   "explanation": {
     "why": "The first two sentences build an expectation that octopuses cannot distinguish colors, and lab tests support it. The last sentence reports something that seems to conflict with that expectation: octopuses still match colors accurately. The transition must show that this ability exists in spite of what came before, while the earlier facts remain true.",
-    "A": "Incorrect. \"Instead\" signals that one thing replaces another, but the color matching does not replace the single pigment or the test results; all of these facts stand together. This is the closest near miss because it also sounds like a contrast.",
-    "B": "Incorrect. \"Therefore\" would make accurate color matching a result of having only one pigment, which reverses the logic: one pigment would lead us to expect poor color matching.",
-    "C": "Correct. \"Nevertheless\" shows that octopuses match colors well despite the evidence that they cannot tell colors apart.",
-    "D": "Incorrect. \"Similarly\" introduces a point that resembles the previous one, but the color matching conflicts with the test results rather than resembling them."
+    "A": "Incorrect. \"Therefore\" would make accurate color matching a result of having only one pigment, which reverses the logic: one pigment would lead us to expect poor color matching.",
+    "B": "Incorrect. \"Instead\" signals that one thing replaces another, but the color matching does not replace the single pigment or the test results; all of these facts stand together. This is the closest near miss because it also sounds like a contrast.",
+    "C": "Incorrect. \"Similarly\" introduces a point that resembles the previous one, but the color matching conflicts with the test results rather than resembling them.",
+    "D": "Correct. \"Nevertheless\" shows that octopuses match colors well despite the evidence that they cannot tell colors apart."
   },
   "traps": {
     "A": "wrong_logic",
     "B": "wrong_logic",
-    "D": "wrong_logic"
+    "C": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

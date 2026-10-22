@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the texts, both authors would most likely agree with which statement?",
   "choices": {
-    "A": "Hatchlings mainly follow the sound of breaking waves to find the sea.",
-    "B": "Hatchlings use what they see to find their way to the ocean.",
-    "C": "Hatchlings reach the ocean most easily on very dark, moonless nights.",
-    "D": "Hatchlings move away from tall shapes such as sand dunes and trees."
+    "A": "Hatchlings use what they see to find their way to the ocean.",
+    "B": "Hatchlings move away from tall shapes such as sand dunes and trees.",
+    "C": "Hatchlings mainly follow the sound of breaking waves to find the sea.",
+    "D": "Hatchlings reach the ocean most easily on very dark, moonless nights."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Text 1 says hatchlings crawl \"toward the brightest part of the horizon.\" Text 2 adds that they also turn \"away from tall, dark shapes.\" Both clues are things the turtles see, so both authors would agree that hatchlings use vision to find the ocean.",
-    "A": "Incorrect. Neither text mentions sound; both describe visual clues.",
-    "B": "Correct. Text 1 describes turtles following brightness, and Text 2 adds turning away from dark shapes; both are visual clues.",
-    "C": "Incorrect. Text 1 says the sea is bright because it reflects light from the Moon and stars, so neither author suggests dark nights help.",
-    "D": "Incorrect. This is stated only in Text 2; Text 1 mentions brightness alone."
+    "A": "Correct. Text 1 describes turtles following brightness, and Text 2 adds turning away from dark shapes; both are visual clues.",
+    "B": "Incorrect. This is stated only in Text 2; Text 1 mentions brightness alone.",
+    "C": "Incorrect. Neither text mentions sound; both describe visual clues.",
+    "D": "Incorrect. Text 1 says the sea is bright because it reflects light from the Moon and stars, so neither author suggests dark nights help."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
-    "D": "true_irrelevant"
+    "B": "true_irrelevant",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best states the main idea of the text?",
   "choices": {
-    "A": "Mehrgarh is one of the earliest known farming villages in South Asia.",
-    "B": "Teeth found at Mehrgarh suggest that people there practiced an early form of dentistry.",
-    "C": "Researchers found that the teeth from Mehrgarh had been drilled after their owners died.",
-    "D": "Farming at Mehrgarh caused tooth decay that forced villagers to drill their teeth."
+    "A": "Teeth found at Mehrgarh suggest that people there practiced an early form of dentistry.",
+    "B": "Mehrgarh is one of the earliest known farming villages in South Asia.",
+    "C": "Farming at Mehrgarh caused tooth decay that forced villagers to drill their teeth.",
+    "D": "Researchers found that the teeth from Mehrgarh had been drilled after their owners died."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "After one sentence of background on farming, the text turns to \"a less expected discovery\" and spends the rest on it: drilled molars whose worn edges show the drilling was done on living people, which researchers read as \"an early form of dentistry.\" That discovery is the text's main point.",
-    "A": "Incorrect. This is background from the first sentence; most of the text is about the drilled teeth.",
-    "B": "Correct. This captures the discovery the text focuses on and the conclusion the researchers drew from it.",
-    "C": "Incorrect. The worn edges led researchers to conclude the opposite: the drilling was done while the people were alive.",
-    "D": "Incorrect. The text never says farming caused tooth decay or explains why the teeth were drilled."
+    "A": "Correct. This captures the discovery the text focuses on and the conclusion the researchers drew from it.",
+    "B": "Incorrect. This is background from the first sentence; most of the text is about the drilled teeth.",
+    "C": "Incorrect. The text never says farming caused tooth decay or explains why the teeth were drilled.",
+    "D": "Incorrect. The worn edges led researchers to conclude the opposite: the drilling was done while the people were alive."
   },
   "traps": {
-    "A": "too_narrow",
-    "C": "reversed",
-    "D": "not_in_text"
+    "B": "too_narrow",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

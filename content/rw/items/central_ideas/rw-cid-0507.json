@@ -15,22 +15,22 @@
   "stem": "Based on the text, why did the number of letters mailed in Britain most likely rise after 1840?",
   "choices": {
     "A": "People could now refuse letters they did not want.",
-    "B": "Letters were now delivered faster than before.",
+    "B": "Senders paid one low price for any distance.",
     "C": "Prices now depended on how far a letter traveled.",
-    "D": "Senders paid one low price for any distance."
+    "D": "Letters were now delivered faster than before."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text describes the old system (receivers paid, and the cost depended on distance) and then the 1840 reform: senders paid in advance, and a light letter cost \"one penny to send anywhere in the country.\" The rise in letters came right after this change, so the new single low price is the most likely reason.",
     "A": "Incorrect. Refusing letters was possible under the old system, before 1840, when receivers paid.",
-    "B": "Incorrect. The text never mentions how fast letters were delivered.",
+    "B": "Correct. The reform set a single penny price for a light letter sent anywhere, and letter numbers then rose sharply.",
     "C": "Incorrect. Distance-based prices belong to the old system; after the reform, one penny covered any distance.",
-    "D": "Correct. The reform set a single penny price for a light letter sent anywhere, and letter numbers then rose sharply."
+    "D": "Incorrect. The text never mentions how fast letters were delivered."
   },
   "traps": {
     "A": "reversed",
-    "B": "not_in_text",
-    "C": "reversed"
+    "C": "reversed",
+    "D": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

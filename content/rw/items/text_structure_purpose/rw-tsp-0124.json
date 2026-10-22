@@ -15,22 +15,22 @@
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
     "A": "It shows that Kirsten cannot keep the lamp burning without her father.",
-    "B": "It explains how Kirsten learned to trim the lamp's wick.",
-    "C": "It reveals that the storm has damaged the lamp and its equipment.",
-    "D": "It conveys Kirsten's fear even as she succeeds at her task."
+    "B": "It reveals that the storm has damaged the lamp and its equipment.",
+    "C": "It conveys Kirsten's fear even as she succeeds at her task.",
+    "D": "It explains how Kirsten learned to trim the lamp's wick."
   },
-  "answer": "D",
+  "answer": "C",
   "explanation": {
     "why": "Kirsten is alone in a storm, tending the lamp as her father usually does. The underlined sentence shows her hands shaking with nerves, and the next sentence, starting with \"But,\" shows that the flame still \"steadied and burned brighter.\" The sentence highlights her fear, which the next sentence sets against her success.",
     "A": "Incorrect. The next sentence says the flame \"steadied and burned brighter,\" so she does keep the lamp burning.",
-    "B": "Incorrect. How she learned (by watching her father) is told in the previous sentence; the underlined sentence describes her shaking hands.",
-    "C": "Incorrect. The text never says the storm damaged the lamp; the shaking comes from Kirsten's hands.",
-    "D": "Correct. Her shaking hands show her fear, and the following sentence shows that she succeeds anyway."
+    "B": "Incorrect. The text never says the storm damaged the lamp; the shaking comes from Kirsten's hands.",
+    "C": "Correct. Her shaking hands show her fear, and the following sentence shows that she succeeds anyway.",
+    "D": "Incorrect. How she learned (by watching her father) is told in the previous sentence; the underlined sentence describes her shaking hands."
   },
   "traps": {
     "A": "reversed",
-    "B": "wrong_logic",
-    "C": "not_in_text"
+    "B": "not_in_text",
+    "D": "wrong_logic"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "D",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

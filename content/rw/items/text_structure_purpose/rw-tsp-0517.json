@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice best describes the function of the underlined sentence in the text as a whole?",
   "choices": {
-    "A": "It reveals that Halvard had been secretly using the fish finder all along.",
-    "B": "It explains why Halvard's nets had been empty for three days.",
-    "C": "It suggests that Sigrid regrets her choice of birthday gift.",
+    "A": "It explains why Halvard's nets had been empty for three days.",
+    "B": "It suggests that Sigrid regrets her choice of birthday gift.",
+    "C": "It reveals that Halvard had been secretly using the fish finder all along.",
     "D": "It stresses how long Halvard resisted the gift, which gives weight to his final action."
   },
   "answer": "D",
   "explanation": {
     "why": "Halvard dismisses the gift, and the underlined sentence shows the result over a whole summer: the box stays on the shelf \"its tape unbroken,\" meaning it was never opened. The next sentence begins \"But\" and shows him finally taking it to the boat. The long, stubborn refusal makes that quiet change in September stand out.",
-    "A": "Incorrect. The unbroken tape shows the box was never opened, so he had not been using the device.",
-    "B": "Incorrect. The text does not explain why the nets were empty; the underlined sentence describes the unopened box, not the fishing.",
-    "C": "Incorrect. The text tells nothing about Sigrid's feelings toward the gift; she only observes her father.",
+    "A": "Incorrect. The text does not explain why the nets were empty; the underlined sentence describes the unopened box, not the fishing.",
+    "B": "Incorrect. The text tells nothing about Sigrid's feelings toward the gift; she only observes her father.",
+    "C": "Incorrect. The unbroken tape shows the box was never opened, so he had not been using the device.",
     "D": "Correct. Months of leaving the box unopened emphasize Halvard's pride, so his secretive decision to use it at last becomes meaningful."
   },
   "traps": {
-    "A": "reversed",
-    "B": "wrong_logic",
-    "C": "not_in_text"
+    "A": "wrong_logic",
+    "B": "not_in_text",
+    "C": "reversed"
   },
   "grammar": null,
   "source": {
@@ -50,6 +50,7 @@
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

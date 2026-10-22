@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "reproach",
-    "B": "welcome",
-    "C": "exonerate",
+    "A": "exonerate",
+    "B": "reproach",
+    "C": "welcome",
     "D": "conceal"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "Joaquín is \"unsettled,\" and the comparison at the end imagines the streets \"asking where he had been all this time,\" a question that sounds like an accusation. The blank must mean \"express disapproval of\" or \"blame.\"",
-    "A": "Correct. To reproach someone is to express disappointment or blame, which fits streets that seem to ask where he has been all these years.",
-    "B": "Incorrect. A welcoming town would comfort Joaquín, but the text says its sameness \"unsettled him.\"",
-    "C": "Incorrect. \"Exonerate\" means free from blame, but the streets seem to ask where he has been, which suggests blame rather than forgiveness.",
+    "A": "Incorrect. \"Exonerate\" means free from blame, but the streets seem to ask where he has been, which suggests blame rather than forgiveness.",
+    "B": "Correct. To reproach someone is to express disappointment or blame, which fits streets that seem to ask where he has been all these years.",
+    "C": "Incorrect. A welcoming town would comfort Joaquín, but the text says its sameness \"unsettled him.\"",
     "D": "Incorrect. The unchanged town makes Joaquín's own change more obvious to him; it does not hide him or anything about him."
   },
   "traps": {
-    "B": "reversed",
+    "A": "reversed",
     "C": "reversed",
     "D": "not_in_text"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

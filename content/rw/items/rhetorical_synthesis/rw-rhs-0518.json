@@ -20,21 +20,21 @@
   "data": null,
   "stem": "The student wants to emphasize a similarity between ancient Greek theater and Noh. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
   "choices": {
-    "A": "In both ancient Greek theater and Japanese Noh, actors wore masks and the roles were traditionally played by men.",
-    "B": "Ancient Greek plays were performed in large open-air theaters, while Noh plays are performed on a square stage with its own roof.",
-    "C": "Noh developed in Japan in the 1300s, more than 1,500 years after theater flourished in ancient Athens.",
+    "A": "Noh developed in Japan in the 1300s, more than 1,500 years after theater flourished in ancient Athens.",
+    "B": "In both ancient Greek theater and Japanese Noh, actors wore masks and the roles were traditionally played by men.",
+    "C": "Ancient Greek plays were performed in large open-air theaters, while Noh plays are performed on a square stage with its own roof.",
     "D": "In Noh, the lead actor often wears a carved wooden mask, and men have traditionally performed the roles."
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "A similarity must name both traditions and state what they share. The notes show that both used masks and that men traditionally played the roles in both. Only one choice joins the two traditions on these shared features.",
-    "A": "Correct. It names both traditions and points to what they share: masks and male performers.",
-    "B": "Incorrect. It discusses both traditions, which makes it tempting, but it contrasts their stages, so it shows a difference.",
-    "C": "Incorrect. It compares the traditions' dates, which emphasizes how far apart they are rather than what they share.",
+    "A": "Incorrect. It compares the traditions' dates, which emphasizes how far apart they are rather than what they share.",
+    "B": "Correct. It names both traditions and points to what they share: masks and male performers.",
+    "C": "Incorrect. It discusses both traditions, which makes it tempting, but it contrasts their stages, so it shows a difference.",
     "D": "Incorrect. It describes the very features the traditions share, but only for Noh, so the reader never sees the similarity to Greek theater."
   },
   "traps": {
-    "B": "misses_goal",
+    "A": "misses_goal",
     "C": "misses_goal",
     "D": "too_narrow"
   },
@@ -49,13 +49,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "A",
+        "answer": "B",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

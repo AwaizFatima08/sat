@@ -15,21 +15,21 @@
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
     "A": "Earth's circumference was calculated by Eratosthenes to be about 250,000 stadia.",
-    "B": "Eratosthenes calculated that Earth's circumference was about 250,000 stadia.",
-    "C": "Eratosthenes' calculation put Earth's circumference at about 250,000 stadia.",
-    "D": "an estimate of about 250,000 stadia for Earth's circumference was the result."
+    "B": "an estimate of about 250,000 stadia for Earth's circumference was the result.",
+    "C": "Eratosthenes calculated that Earth's circumference was about 250,000 stadia.",
+    "D": "Eratosthenes' calculation put Earth's circumference at about 250,000 stadia."
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "The introductory phrase \"Comparing the angle of that shadow with the distance between the two cities\" describes the person doing the comparing. The noun right after the comma must be that person, Eratosthenes, used as the subject of the main clause.",
     "A": "Incorrect. The subject \"Earth's circumference\" comes right after the modifier, so the sentence says the circumference did the comparing; the phrase \"by Eratosthenes\" comes too late to fix this.",
-    "B": "Correct. \"Eratosthenes\" is the subject and comes right after the modifier, so he is the one who compared the angle with the distance.",
-    "C": "Incorrect. \"Eratosthenes'\" is a possessive, so the subject is \"calculation\"; the sentence says a calculation compared the angle and distance.",
-    "D": "Incorrect. The subject \"an estimate\" comes right after the modifier, so the sentence says an estimate did the comparing."
+    "B": "Incorrect. The subject \"an estimate\" comes right after the modifier, so the sentence says an estimate did the comparing.",
+    "C": "Correct. \"Eratosthenes\" is the subject and comes right after the modifier, so he is the one who compared the angle with the distance.",
+    "D": "Incorrect. \"Eratosthenes'\" is a possessive, so the subject is \"calculation\"; the sentence says a calculation compared the angle and distance."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
+    "B": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "modifier",
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "long, the",
-    "B": "long the",
-    "C": "long; the",
-    "D": "long: the"
+    "A": "long; the",
+    "B": "long: the",
+    "C": "long the",
+    "D": "long, the"
   },
-  "answer": "A",
+  "answer": "D",
   "explanation": {
     "why": "\"An insect rarely more than two centimeters long\" is an introductory phrase that renames the subject, \"the bombardier beetle.\" An introductory element like this is separated from the main clause by a comma.",
-    "A": "Correct. The comma separates the introductory phrase from the main clause \"the bombardier beetle defends itself with a chemical weapon.\"",
-    "B": "Incorrect. Without a comma, the introductory phrase runs into the subject, and the sentence seems to describe \"two centimeters long the bombardier beetle.\"",
-    "C": "Incorrect. A semicolon must join two independent clauses, but \"An insect rarely more than two centimeters long\" is only a phrase.",
-    "D": "Incorrect. A colon must follow a complete independent clause, but \"An insect rarely more than two centimeters long\" is only a phrase."
+    "A": "Incorrect. A semicolon must join two independent clauses, but \"An insect rarely more than two centimeters long\" is only a phrase.",
+    "B": "Incorrect. A colon must follow a complete independent clause, but \"An insect rarely more than two centimeters long\" is only a phrase.",
+    "C": "Incorrect. Without a comma, the introductory phrase runs into the subject, and the sentence seems to describe \"two centimeters long the bombardier beetle.\"",
+    "D": "Correct. The comma separates the introductory phrase from the main clause \"the bombardier beetle defends itself with a chemical weapon.\""
   },
   "traps": {
+    "A": "grammar_rule",
     "B": "grammar_rule",
-    "C": "grammar_rule",
-    "D": "grammar_rule"
+    "C": "grammar_rule"
   },
   "grammar": "supplements",
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

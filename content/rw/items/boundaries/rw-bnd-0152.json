@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "orchard, where",
-    "B": "orchard. Where",
-    "C": "orchard; where",
-    "D": "orchard: where"
+    "A": "orchard; where",
+    "B": "orchard, where",
+    "C": "orchard: where",
+    "D": "orchard. Where"
   },
-  "answer": "A",
+  "answer": "B",
   "explanation": {
     "why": "\"Aunt Rosa calmly pulled on her veil, shook …, and carried it to the far end of the orchard\" is an independent clause. \"Where the new colony would have room to settle\" is a dependent clause that adds information about the orchard, so it is attached to the main clause with a comma.",
-    "A": "Correct. The comma attaches the dependent \"where\" clause to the independent clause it describes.",
-    "B": "Incorrect. A period would leave \"Where the new colony would have room to settle …\" as a sentence fragment.",
-    "C": "Incorrect. A semicolon must join two independent clauses, but the \"where\" clause is dependent.",
-    "D": "Incorrect. A colon can follow an independent clause, but it can't introduce a dependent clause such as \"where the new colony would have room to settle.\""
+    "A": "Incorrect. A semicolon must join two independent clauses, but the \"where\" clause is dependent.",
+    "B": "Correct. The comma attaches the dependent \"where\" clause to the independent clause it describes.",
+    "C": "Incorrect. A colon can follow an independent clause, but it can't introduce a dependent clause such as \"where the new colony would have room to settle.\"",
+    "D": "Incorrect. A period would leave \"Where the new colony would have room to settle …\" as a sentence fragment."
   },
   "traps": {
-    "B": "grammar_rule",
+    "A": "grammar_rule",
     "C": "grammar_rule",
     "D": "grammar_rule"
   },
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

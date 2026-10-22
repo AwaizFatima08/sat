@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "hurried",
-    "B": "patient",
+    "A": "talkative",
+    "B": "hurried",
     "C": "forgetful",
-    "D": "talkative"
+    "D": "patient"
   },
-  "answer": "B",
+  "answer": "D",
   "explanation": {
     "why": "The grandfather repeats the same stroke \"again and again,\" waits \"quietly,\" never raises his voice, and calmly gives Li Na a fresh sheet after each failure. Someone who stays calm through repeated mistakes is patient, so \"patient\" fits.",
-    "A": "Incorrect. It is Li Na who wants to rush; her grandfather \"would not let her\" and takes his time.",
-    "B": "Correct. Calmly repeating the lesson and offering a fresh sheet after every failure shows a patient teacher.",
+    "A": "Incorrect. The grandfather \"waited quietly\" and \"simply\" handed over a new sheet; he is not described as talking much.",
+    "B": "Incorrect. It is Li Na who wants to rush; her grandfather \"would not let her\" and takes his time.",
     "C": "Incorrect. Nothing suggests the grandfather forgets anything; he repeats the stroke on purpose.",
-    "D": "Incorrect. The grandfather \"waited quietly\" and \"simply\" handed over a new sheet; he is not described as talking much."
+    "D": "Correct. Calmly repeating the lesson and offering a fresh sheet after every failure shows a patient teacher."
   },
   "traps": {
     "A": "reversed",
-    "C": "not_in_text",
-    "D": "reversed"
+    "B": "reversed",
+    "C": "not_in_text"
   },
   "grammar": null,
   "source": {
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "D",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

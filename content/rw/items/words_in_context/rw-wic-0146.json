@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which choice completes the text with the most logical and precise word or phrase?",
   "choices": {
-    "A": "conventional",
-    "B": "restrained",
+    "A": "adventurous",
+    "B": "conventional",
     "C": "devout",
-    "D": "adventurous"
+    "D": "restrained"
   },
-  "answer": "D",
+  "answer": "A",
   "explanation": {
     "why": "\"By contrast\" shows that Hildegard's music differs from the cautious, narrow chant of her era: it \"leap[s] dramatically\" and covers a wide range. The blank must describe music that takes bold risks, which is \"adventurous.\"",
-    "A": "Incorrect. Conventional music would follow the norms of the era, but the text says her melodies differ \"by contrast\" from typical chant.",
-    "B": "Incorrect. Restrained describes the narrow, step-by-step chant of the era, not Hildegard's dramatic leaps.",
+    "A": "Correct. Large leaps and a range of more than two octaves were bold choices compared with the narrow chant of her time.",
+    "B": "Incorrect. Conventional music would follow the norms of the era, but the text says her melodies differ \"by contrast\" from typical chant.",
     "C": "Incorrect. Hildegard was an abbess, but the text's reasoning (\"therefore\") is based on the range and leaps of her melodies, not on their religious feeling.",
-    "D": "Correct. Large leaps and a range of more than two octaves were bold choices compared with the narrow chant of her time."
+    "D": "Incorrect. Restrained describes the narrow, step-by-step chant of the era, not Hildegard's dramatic leaps."
   },
   "traps": {
-    "A": "reversed",
     "B": "reversed",
-    "C": "true_irrelevant"
+    "C": "true_irrelevant",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

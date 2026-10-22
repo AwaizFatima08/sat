@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Which finding, if true, would most directly support Bello's hypothesis?",
   "choices": {
-    "A": "The star returned to its usual brightness within a few months after the dimming began.",
-    "B": "Bello's telescope measures the red light of stars more precisely than their blue light.",
-    "C": "The star's blue light and red light dimmed by the same amount during the event.",
-    "D": "The star's blue light dimmed much more than its red light during the event."
+    "A": "The star's blue light and red light dimmed by the same amount during the event.",
+    "B": "The star's blue light dimmed much more than its red light during the event.",
+    "C": "The star returned to its usual brightness within a few months after the dimming began.",
+    "D": "Bello's telescope measures the red light of stars more precisely than their blue light."
   },
-  "answer": "D",
+  "answer": "B",
   "explanation": {
     "why": "The text says dust blocks blue light more strongly than red light. So if dust caused the dimming, the star's blue light should have faded more than its red light, and a finding that it did supports Bello's hypothesis.",
-    "A": "Incorrect. A star could brighten again whether its light was blocked by dust or it had briefly given off less light, so this does not favor either explanation.",
-    "B": "Incorrect. How precisely the telescope measures each color says nothing about what caused the dimming.",
-    "C": "Incorrect. Equal dimming in both colors is not the pattern dust produces, so this would weaken the hypothesis.",
-    "D": "Correct. Blue light fading more than red light is the pattern the text says dust produces."
+    "A": "Incorrect. Equal dimming in both colors is not the pattern dust produces, so this would weaken the hypothesis.",
+    "B": "Correct. Blue light fading more than red light is the pattern the text says dust produces.",
+    "C": "Incorrect. A star could brighten again whether its light was blocked by dust or it had briefly given off less light, so this does not favor either explanation.",
+    "D": "Incorrect. How precisely the telescope measures each color says nothing about what caused the dimming."
   },
   "traps": {
-    "A": "true_irrelevant",
-    "B": "true_irrelevant",
-    "C": "reversed"
+    "A": "reversed",
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

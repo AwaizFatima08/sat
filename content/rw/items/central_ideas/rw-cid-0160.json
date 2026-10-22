@@ -14,23 +14,23 @@
   "data": null,
   "stem": "Based on the text, why are modern scholars unable to determine how some early chants sounded?",
   "choices": {
-    "A": "Guido of Arezzo's staff replaced the neumes before many chants had been written down.",
-    "B": "Those chants survive only in a notation meant to remind singers of melodies they knew.",
-    "C": "The neumes did not show whether a melody rose or fell from one note to the next.",
-    "D": "Singers of the ninth century deliberately altered the melodies each time that they performed them."
+    "A": "Those chants survive only in a notation meant to remind singers of melodies they knew.",
+    "B": "Guido of Arezzo's staff replaced the neumes before many chants had been written down.",
+    "C": "Singers of the ninth century deliberately altered the melodies each time that they performed them.",
+    "D": "The neumes did not show whether a melody rose or fell from one note to the next."
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "The text explains that neumes showed direction and grouping \"but not which pitches are sung,\" because they were meant \"to jog a memory already stocked with melodies.\" For chants that dropped out of use before staff notation, only these memory aids survive, so scholars cannot recover the exact melodies.",
-    "A": "Incorrect. The text says the problem concerns chants that fell out of use before staff notation spread; they were written down, but only in neumes.",
-    "B": "Correct. This combines the two parts of the text: what neumes were for and why they cannot reveal the lost melodies.",
-    "C": "Incorrect. The text says neumes did show whether the melody rises or falls; what they lacked was exact pitch.",
-    "D": "Incorrect. The text never says singers changed the melodies; it says they learned them by ear."
+    "A": "Correct. This combines the two parts of the text: what neumes were for and why they cannot reveal the lost melodies.",
+    "B": "Incorrect. The text says the problem concerns chants that fell out of use before staff notation spread; they were written down, but only in neumes.",
+    "C": "Incorrect. The text never says singers changed the melodies; it says they learned them by ear.",
+    "D": "Incorrect. The text says neumes did show whether the melody rises or falls; what they lacked was exact pitch."
   },
   "traps": {
-    "A": "not_in_text",
-    "C": "reversed",
-    "D": "not_in_text"
+    "B": "not_in_text",
+    "C": "not_in_text",
+    "D": "reversed"
   },
   "grammar": null,
   "source": {
@@ -39,8 +39,18 @@
   "provenance": {
     "written_by": "claude-opus-5-5",
     "written": "2026-10-22",
-    "checks": [],
+    "checks": [
+      {
+        "by": "claude-opus",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
     "reviewed_by": null,
-    "status": "draft"
+    "status": "checked",
+    "shuffled": true
   }
 }

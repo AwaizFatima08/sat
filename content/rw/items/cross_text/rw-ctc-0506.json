@@ -14,21 +14,21 @@
   "data": null,
   "stem": "Based on the texts, how would the author of Text 2 most likely respond to the legend in Text 1?",
   "choices": {
-    "A": "By agreeing that Alexander's army was the first to make use of the salt",
-    "B": "By suggesting that local people probably knew of the salt long before Alexander",
+    "A": "By suggesting that local people probably knew of the salt long before Alexander",
+    "B": "By agreeing that Alexander's army was the first to make use of the salt",
     "C": "By arguing that the Khewra mine is smaller than it is often said to be",
     "D": "By claiming that Alexander's army never traveled through the region"
   },
-  "answer": "B",
+  "answer": "A",
   "explanation": {
     "why": "Text 1 reports the legend that Alexander's horses led to the salt's discovery. Text 2 says historians doubt this, since people had lived in the hills \"for many centuries before Alexander arrived\" and were \"very likely using it long before any foreign army came.\" So Text 2 offers a different, earlier discovery.",
-    "A": "Incorrect. Text 2 argues that local people were likely using the salt before Alexander's army arrived.",
-    "B": "Correct. Text 2 says local communities were \"very likely using it long before any foreign army came.\"",
+    "A": "Correct. Text 2 says local communities were \"very likely using it long before any foreign army came.\"",
+    "B": "Incorrect. Text 2 argues that local people were likely using the salt before Alexander's army arrived.",
     "C": "Incorrect. Text 2 never discusses the size of the mine.",
     "D": "Incorrect. Text 2 doubts only that the horses explain the discovery; it does not deny that Alexander's army came to the region."
   },
   "traps": {
-    "A": "reversed",
+    "B": "reversed",
     "C": "not_in_text",
     "D": "too_broad"
   },
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "A",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }

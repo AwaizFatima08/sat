@@ -14,22 +14,22 @@
   "data": null,
   "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
   "choices": {
-    "A": "traveled? By",
-    "B": "traveled. By",
-    "C": "traveled, by",
-    "D": "traveled by"
+    "A": "traveled by",
+    "B": "traveled? By",
+    "C": "traveled. By",
+    "D": "traveled, by"
   },
-  "answer": "B",
+  "answer": "C",
   "explanation": {
     "why": "\"Visitors have long wondered how far these stones had traveled\" is a statement that reports a question; it does not ask one directly. A reported (indirect) question ends with a period, and the next sentence, \"By comparing …,\" begins after it.",
-    "A": "Incorrect. A question mark is used only for a direct question; this sentence is a statement about what visitors wondered.",
-    "B": "Correct. A period ends the statement containing the indirect question, and a new sentence begins.",
-    "C": "Incorrect. A comma alone can't join the two independent clauses; this creates a comma splice.",
-    "D": "Incorrect. With no punctuation, the two sentences run together, and \"traveled by comparing\" seems to say the stones moved by comparing minerals."
+    "A": "Incorrect. With no punctuation, the two sentences run together, and \"traveled by comparing\" seems to say the stones moved by comparing minerals.",
+    "B": "Incorrect. A question mark is used only for a direct question; this sentence is a statement about what visitors wondered.",
+    "C": "Correct. A period ends the statement containing the indirect question, and a new sentence begins.",
+    "D": "Incorrect. A comma alone can't join the two independent clauses; this creates a comma splice."
   },
   "traps": {
     "A": "grammar_rule",
-    "C": "grammar_rule",
+    "B": "grammar_rule",
     "D": "grammar_rule"
   },
   "grammar": "punctuation",
@@ -43,13 +43,14 @@
       {
         "by": "claude-sonnet",
         "date": "2026-10-22",
-        "answer": "B",
+        "answer": "C",
         "second": null,
         "note": "",
         "result": "agree"
       }
     ],
     "reviewed_by": null,
-    "status": "checked"
+    "status": "checked",
+    "shuffled": true
   }
 }
