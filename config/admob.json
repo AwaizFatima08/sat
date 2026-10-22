@@ -1,0 +1,35 @@
+{
+  "_note": "AdMob config for Module Up: Digital SAT Prep (Android). Created 22 Oct 2026 in the AdMob account homilabs.smc@gmail.com. Ad ids are not secrets (they are visible in any APK), but debug builds must use Google's sample ids and release builds these.",
+  "account": "homilabs.smc@gmail.com",
+  "publisher_id": "pub-2087846699268567",
+  "app": {
+    "name": "Module Up: Digital SAT Prep",
+    "platform": "android",
+    "app_id": "ca-app-pub-2087846699268567~8610929166",
+    "status": "requires review (link the Play listing once published)"
+  },
+  "ad_units": {
+    "home_banner": {
+      "name": "moduleup_home_banner",
+      "format": "banner",
+      "id": "ca-app-pub-2087846699268567/5287420967",
+      "placement": "Home and progress board only"
+    },
+    "break_interstitial": {
+      "name": "moduleup_break_interstitial",
+      "format": "interstitial",
+      "id": "ca-app-pub-2087846699268567/6631633081",
+      "placement": "after a drill set or quiz results screen; max 1 per 3 sets, 4 min apart, not on day 1, never around a full paper"
+    },
+    "challenge_rewarded": {
+      "name": "moduleup_challenge_rewarded",
+      "format": "rewarded",
+      "id": "ca-app-pub-2087846699268567/9613678789",
+      "reward": { "amount": 1, "item": "Challenge set" },
+      "placement": "opt-in button, shown only when an ad is loaded; max 3 earned per day"
+    }
+  },
+  "app_ads_txt": "google.com, pub-2087846699268567, DIRECT, f08c47fec0942fa0",
+  "max_ad_content_rating": "PG",
+  "consent": "Google UMP (EEA/UK) before SDK init"
+}

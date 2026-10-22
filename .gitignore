@@ -1,0 +1,30 @@
+# Logs and local scratch
+*.log
+*.part
+__pycache__/
+.claude/
+.secrets/
+
+# Built apps: rebuildable, kept out of the repo and backups
+releases/
+*.apk
+*.aab
+
+# Signing keys and other secrets: local and Drive backups only, never the public repo
+*.keystore
+*.jks
+key.properties
+
+# Flutter / Android build output
+app/build/
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/android/.gradle/
+app/android/local.properties
+app/android/app/build/
+app/.idea/
+*.iml
+
+# Review sheets and pipeline output that can be rebuilt
+pipeline/out/
