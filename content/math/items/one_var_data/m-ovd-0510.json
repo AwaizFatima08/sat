@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0510",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following data sets has a range of \\(10\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12, 6, 15, 2\\)",
+    "B": "\\(4, 9, 10, 11\\)",
+    "C": "\\(1, 11, 21\\)",
+    "D": "\\(9, 3, 13, 7\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The range is the greatest value minus the least value, wherever those values appear in the list.",
+    "For \\(9, 3, 13, 7\\): the greatest value is 13 and the least is 3, so the range is \\(13 - 3 = 10\\).",
+    "The other ranges are 7, 13 and 20."
+  ],
+  "explanation": {
+    "A": "Incorrect. The first value minus the last value is \\(12 - 2 = 10\\), but the range uses the greatest and least values: \\(15 - 2 = 13\\).",
+    "B": "Incorrect. This data set contains the value 10, but its range is \\(11 - 4 = 7\\).",
+    "C": "Incorrect. The gaps between neighboring values are 10, but the range is \\(21 - 1 = 20\\).",
+    "D": "Correct. The greatest value is 13 and the least is 3, and \\(13 - 3 = 10\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nL = lambda s: [Integer(t) for t in s.replace('\\\\(', '').replace('\\\\)', '').split(',')]\nrg = {k: max(L(v)) - min(L(v)) for k, v in choices.items()}\nassert rg[answer] == 10\nassert all(rg[k] != 10 for k in rg if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

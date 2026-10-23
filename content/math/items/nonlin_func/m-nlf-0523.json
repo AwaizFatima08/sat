@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0523",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A laboratory in Pune is studying a substance that breaks down over time. The amount of the substance, in milligrams, \\(t\\) hours after the start of the study is \\(A(t) = 640\\left(\\frac{1}{2}\\right)^{\\frac{t}{6}}\\). How many hours after the start of the study will 40 milligrams of the substance remain?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(16\\)",
+    "B": "\\(4\\)",
+    "C": "\\(96\\)",
+    "D": "\\(24\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Set \\(640\\left(\\frac{1}{2}\\right)^{\\frac{t}{6}} = 40\\) and divide by \\(640\\): \\(\\left(\\frac{1}{2}\\right)^{\\frac{t}{6}} = \\frac{1}{16}\\).",
+    "\\(\\frac{1}{16} = \\left(\\frac{1}{2}\\right)^{4}\\), so \\(\\frac{t}{6} = 4\\): the amount halves 4 times.",
+    "Each halving takes 6 hours, so \\(t = 24\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(16\\) is the ratio \\(\\frac{640}{40}\\), how many times smaller the amount becomes, not a number of hours.",
+    "B": "Incorrect. \\(4\\) is the number of halvings, \\(\\frac{t}{6}\\), not the number of hours; each halving takes 6 hours.",
+    "C": "Incorrect. This is the result of multiplying the ratio \\(\\frac{640}{40} = 16\\) by 6; the number of halvings is 4, not 16.",
+    "D": "Correct. \\(\\frac{t}{6} = 4\\), so \\(t = 24\\), and \\(A(24) = 640 \\cdot \\frac{1}{16} = 40\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nA = lambda t: 640*Rational(1, 2)**(Rational(t)/6)\nassert A(24) == 40\nassert A(value(choices[answer])) == 40\nassert all(A(value(choices[k])) != 40 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

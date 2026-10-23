@@ -1,0 +1,44 @@
+{
+  "id": "m-tvd-0008",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A biologist models the number of fish in a lake \\(t\\) years after the lake was stocked with the function \\(f(t) = a(b)^{t}\\), where \\(a\\) and \\(b\\) are positive constants. The model predicts 720 fish 2 years after stocking and 1,620 fish 4 years after stocking. According to the model, how many fish were in the lake when it was stocked?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "320"
+  ],
+  "solution": [
+    "Divide the two predictions: \\(\\frac{f(4)}{f(2)} = \\frac{ab^{4}}{ab^{2}} = b^{2} = \\frac{1620}{720} = 2.25\\), so \\(b = 1.5\\) (\\(b\\) is positive).",
+    "Then \\(a(1.5)^{2} = 720\\), so \\(a = \\frac{720}{2.25} = 320\\).",
+    "The number of fish at stocking is \\(f(0) = a = 320\\)."
+  ],
+  "verify": "a, b = symbols('a b', positive=True)\nsol = solve([Eq(a*b**2, 720), Eq(a*b**4, 1620)], [a, b], dict=True)\nassert len(sol) == 1 and sol[0][b] == Rational(3, 2)\nassert sol[0][a] == 320\nassert Rational(spr_answers[0]) == sol[0][a] and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "320",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

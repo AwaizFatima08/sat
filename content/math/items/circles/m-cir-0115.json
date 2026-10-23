@@ -1,0 +1,59 @@
+{
+  "id": "m-cir-0115",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The circle \\(x^{2} + y^{2} = 36\\) in the \\(xy\\)-plane is translated 4 units to the right and 3 units down, and then its radius is doubled while the center stays fixed. The equation of the resulting circle can be written as \\(x^{2} + y^{2} - 8x + 6y + c = 0\\), where \\(c\\) is a constant. What is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-11\\)",
+    "B": "\\(-47\\)",
+    "C": "\\(-119\\)",
+    "D": "\\(119\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The new center is \\((4, -3)\\) and the new radius is \\(2 \\cdot 6 = 12\\).",
+    "\\((x - 4)^{2} + (y + 3)^{2} = 144\\) expands to \\(x^{2} - 8x + 16 + y^{2} + 6y + 9 = 144\\).",
+    "\\(x^{2} + y^{2} - 8x + 6y - 119 = 0\\), so \\(c = -119\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This keeps the radius 6: \\(16 + 9 - 36 = -11\\); the radius still must be doubled.",
+    "B": "Incorrect. This doubles \\(r^{2}\\) instead of the radius: \\(16 + 9 - 72 = -47\\).",
+    "C": "Correct. \\(16 + 9 - 144 = -119\\).",
+    "D": "Incorrect. This has the wrong sign; moving 144 to the left side gives \\(25 - 144 = -119\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx,y,c=symbols('x y c')\nlhs=expand((x-4)**2+(y+3)**2-12**2)\nans=solve(Eq(lhs,x**2+y**2-8*x+6*y+c),c)[0]\nassert ans==-119\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0181",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Two savings plans each start with a balance of 8,000 dollars. Under plan P, the balance increases by 400 dollars each year. Under plan Q, the balance increases by \\(5\\%\\) each year. After how many years will the balance under plan Q first be greater than the balance under plan P?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(20\\)",
+    "C": "\\(1\\)",
+    "D": "\\(2\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Plan P: \\(8{,}000 + 400n\\). Plan Q: \\(8{,}000(1.05)^{n}\\).",
+    "After 1 year: P has 8,400 dollars and Q has 8,400 dollars, which are equal.",
+    "After 2 years: P has 8,800 dollars and Q has 8,820 dollars, so Q is first greater after 2 years."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the percent, 5, as the number of years. Compare the balances year by year.",
+    "B": "Incorrect. This is \\(\\frac{8{,}000}{400}\\), the number of years for plan P to add 8,000 dollars, not when Q passes P.",
+    "C": "Incorrect. After 1 year both balances are equal, 8,400 dollars, so Q is not yet greater than P.",
+    "D": "Correct. After 1 year both balances are 8,400 dollars. After 2 years, P has 8,800 dollars and Q has \\(8{,}000(1.05)^{2} = 8{,}820\\) dollars."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nn = 1\nwhile not 8000*Rational(105, 100)**n > 8000 + 400*n:\n    n += 1\nassert n == 2\nassert value(choices[answer]) == n\nassert all(value(choices[k]) != n for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

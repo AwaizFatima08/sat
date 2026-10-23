@@ -1,0 +1,73 @@
+{
+  "id": "m-ovd-0524",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows how many of the 25 students in a class earned each score on a 10-point quiz, where \\(k\\) is a constant. What is the median score?",
+  "figure": {
+    "kind": "table",
+    "title": "Quiz scores",
+    "columns": [
+      "Score",
+      "Number of students"
+    ],
+    "rows": [
+      [
+        "6",
+        "3"
+      ],
+      [
+        "7",
+        "5"
+      ],
+      [
+        "8",
+        "k"
+      ],
+      [
+        "9",
+        "7"
+      ],
+      [
+        "10",
+        "4"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "There are 25 students, so \\(3 + 5 + k + 7 + 4 = 25\\) and \\(k = 6\\).",
+    "With 25 values, the median is the 13th value in order.",
+    "3 students scored 6, \\(3 + 5 = 8\\) scored 7 or less, and \\(8 + 6 = 14\\) scored 8 or less. So the 13th score is 8."
+  ],
+  "verify": "k = symbols('k')\nf = [(int(a), b) for a, b in figure['rows']]\nkv = solve(Eq(sum(Integer(b) if b != 'k' else k for a, b in f), 25), k)[0]\nassert kv == 6\nv = []\nfor a, b in f:\n    v += [a] * int(kv if b == 'k' else b)\nr = sorted(v)[12]\nassert r == 8\nassert Rational(spr_answers[0]) == r and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

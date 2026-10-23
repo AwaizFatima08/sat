@@ -1,0 +1,82 @@
+{
+  "id": "m-stc-0540",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The manager of tutoring center P claims that center P is better than center Q because a greater percent of its students passed an exam. The table shows the results for both centers by level. By how many percentage points is center P's overall pass rate (for both levels combined) greater than center Q's overall pass rate?",
+  "figure": {
+    "kind": "table",
+    "title": "Exam results by level",
+    "columns": [
+      "Center",
+      "Level",
+      "Students",
+      "Passed"
+    ],
+    "rows": [
+      [
+        "P",
+        "Beginner",
+        "20",
+        "10"
+      ],
+      [
+        "P",
+        "Advanced",
+        "80",
+        "72"
+      ],
+      [
+        "Q",
+        "Beginner",
+        "80",
+        "48"
+      ],
+      [
+        "Q",
+        "Advanced",
+        "20",
+        "19"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "15"
+  ],
+  "solution": [
+    "Center P: \\(\\frac{10 + 72}{20 + 80} = \\frac{82}{100}\\), or 82%.",
+    "Center Q: \\(\\frac{48 + 19}{80 + 20} = \\frac{67}{100}\\), or 67%.",
+    "The difference is \\(82 - 67 = 15\\) percentage points.",
+    "Note that center Q has the higher pass rate at each level (60% vs 50%, 95% vs 90%); P's overall rate is higher only because most of its students were at the advanced level, so the manager's claim is not supported."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "def rate(c):\n    rs = [r for r in figure['rows'] if r[0] == c]\n    return Rational(sum(int(r[3]) for r in rs), sum(int(r[2]) for r in rs)) * 100\nd = rate('P') - rate('Q')\nassert d == 15\nlev = lambda c, l: [Rational(int(r[3]), int(r[2])) for r in figure['rows'] if r[0] == c and r[1] == l][0]\nassert all(lev('Q', l) > lev('P', l) for l in ['Beginner', 'Advanced'])\nassert [Rational(a) for a in spr_answers] == [d]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "15",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

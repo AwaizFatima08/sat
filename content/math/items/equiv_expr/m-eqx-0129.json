@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0129",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Leena runs 6 kilometers at an average speed of \\(x\\) kilometers per hour and then runs another 6 kilometers at an average speed of \\((x + 2)\\) kilometers per hour. Her total running time, in hours, is \\(\\frac{6}{x} + \\frac{6}{x + 2}\\). Which of the following is equivalent to this expression?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{12}{2x + 2}\\)",
+    "B": "\\(\\frac{12x + 12}{x^{2} + 2x}\\)",
+    "C": "\\(\\frac{12x + 2}{x^{2} + 2x}\\)",
+    "D": "\\(\\frac{12}{x^{2} + 2x}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Use the common denominator \\(x(x + 2) = x^{2} + 2x\\).",
+    "Rewrite: \\(\\frac{6(x + 2)}{x(x + 2)} + \\frac{6x}{x(x + 2)}\\).",
+    "Add the numerators: \\(6x + 12 + 6x = 12x + 12\\), giving \\(\\frac{12x + 12}{x^{2} + 2x}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding the numerators and adding the denominators, which is not how fractions are added.",
+    "B": "Correct. Over the common denominator \\(x^{2} + 2x\\), the numerator is \\(6(x + 2) + 6x = 12x + 12\\).",
+    "C": "Incorrect. This is the result of writing \\(6(x + 2)\\) as \\(6x + 2\\) instead of \\(6x + 12\\).",
+    "D": "Incorrect. This is the result of adding the original numerators over the common denominator without multiplying each by the missing factor."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = 6/x + 6/(x + 2)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

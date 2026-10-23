@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0147",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "How many distinct real solutions does the equation \\(|x^{2} - 4| = 3\\) have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4\\)",
+    "B": "\\(1\\)",
+    "C": "\\(2\\)",
+    "D": "\\(3\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The expression inside the absolute value equals \\(3\\) or \\(-3\\).",
+    "\\(x^{2} - 4 = 3\\) gives \\(x^{2} = 7\\), so \\(x = \\pm\\sqrt{7}\\).",
+    "\\(x^{2} - 4 = -3\\) gives \\(x^{2} = 1\\), so \\(x = \\pm 1\\). That is 4 distinct solutions."
+  ],
+  "explanation": {
+    "A": "Correct. The solutions are \\(-\\sqrt{7}\\), \\(-1\\), \\(1\\) and \\(\\sqrt{7}\\).",
+    "B": "Incorrect. This counts only one value from one case; each case gives two values.",
+    "C": "Incorrect. This counts only the case \\(x^{2} - 4 = 3\\) and misses \\(x^{2} - 4 = -3\\).",
+    "D": "Incorrect. This misses one of the four values \\(-\\sqrt{7}\\), \\(-1\\), \\(1\\) and \\(\\sqrt{7}\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x', real=True)\nsols = solve(Eq(Abs(x**2 - 4), 3), x)\nans = len(set(sols))\nassert ans == 4\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

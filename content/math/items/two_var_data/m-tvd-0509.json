@@ -1,0 +1,58 @@
+{
+  "id": "m-tvd-0509",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A savings account has a balance of 2,000 dollars. No deposits or withdrawals are made, and the balance increases by \\(3\\%\\) each year. Which of the following best describes the relationship between the number of years and the balance?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Decreasing exponential",
+    "B": "Decreasing linear",
+    "C": "Increasing exponential",
+    "D": "Increasing linear"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Each year the balance is multiplied by 1.03, the same factor every year.",
+    "Multiplying by the same factor greater than 1 is increasing exponential growth (the yearly increases are 60, then 61.80, and so on, not a constant amount)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The balance goes up, not down. A decreasing exponential has a factor between 0 and 1.",
+    "B": "Incorrect. The balance increases, and it changes by a constant percent, not a constant amount.",
+    "C": "Correct. The balance is multiplied by 1.03 each year, a constant growth factor greater than 1.",
+    "D": "Incorrect. A linear model adds the same amount each year. Here the increase grows each year because \\(3\\%\\) is taken of a larger balance."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nbal = [2000 * Rational(103, 100)**t for t in range(4)]\ndiffs = {bal[i+1] - bal[i] for i in range(3)}\nratios = {bal[i+1] / bal[i] for i in range(3)}\nassert len(diffs) == 3 and ratios == {Rational(103, 100)}\nassert choices[answer] == 'Increasing exponential'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

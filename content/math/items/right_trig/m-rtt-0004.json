@@ -1,0 +1,98 @@
+{
+  "id": "m-rtt-0004",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A straight playground slide makes a \\(30^{\\circ}\\) angle with the level ground, as shown. The sliding surface is 3.6 meters long. How high above the ground, in meters, is the top of the slide?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "G": [
+        0,
+        0
+      ],
+      "T": [
+        3.118,
+        1.8
+      ],
+      "F": [
+        3.118,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "G",
+        "T"
+      ],
+      [
+        "T",
+        "F"
+      ],
+      [
+        "F",
+        "G"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          0.773,
+          0.207
+        ],
+        "text": "30°"
+      },
+      {
+        "at": [
+          1.209,
+          1.45
+        ],
+        "text": "3.6 m"
+      }
+    ],
+    "right_angles": [
+      "F"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "9/5",
+    "1.8"
+  ],
+  "solution": [
+    "The slide, the ground, and the vertical height form a 30°-60°-90° triangle with hypotenuse 3.6.",
+    "The side opposite the \\(30^{\\circ}\\) angle is half the hypotenuse: \\(h = \\frac{3.6}{2} = 1.8\\).",
+    "(Equivalently, \\(h = 3.6 \\sin 30^{\\circ} = 1.8\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('G','T')-Rational('3.6'))<0.01 and abs(ang('T','G','F')-30)<0.1 and abs(ang('G','F','T')-90)<0.1\nans=Rational('3.6')*sin(pi/6)\nassert abs(P['T'][1]-ans)<0.01\nassert all(Rational(s)==ans==Rational(9,5) for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "1.8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

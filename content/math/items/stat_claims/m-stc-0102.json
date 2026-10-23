@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0102",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A teacher selected 60 students at random from the 600 ninth graders at her school. She randomly assigned 30 of these students to review for a unit test with short daily quizzes and the other 30 to review by rereading their notes. The students who reviewed with daily quizzes had a higher average score on the test. What is the largest group to which the results of this study can appropriately be generalized?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The 600 ninth graders at the school",
+    "B": "All students at the school",
+    "C": "All ninth graders in the country",
+    "D": "Only the 60 students in the study"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The 60 students were selected at random from the school's 600 ninth graders, so the results can be generalized to that population.",
+    "Random assignment to the two review methods also supports a cause-and-effect conclusion, but only for the population that was sampled."
+  ],
+  "explanation": {
+    "A": "Correct. The participants were a random sample of the school's 600 ninth graders, so the results generalize to that group.",
+    "B": "Incorrect. Students in other grades were not sampled, so the results cannot be generalized to them.",
+    "C": "Incorrect. The students came from only one school, so they do not represent all ninth graders in the country.",
+    "D": "Incorrect. Because the 60 students were a random sample of the school's ninth graders, the results can be generalized beyond the 60 students."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\ndesign = {'random_sample_from': '600 ninth graders at the school', 'random_assignment': True}\nassert design['random_assignment']\nassert design['random_sample_from'] in choices[answer]\nassert sum(1 for k in choices if design['random_sample_from'] in choices[k]) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

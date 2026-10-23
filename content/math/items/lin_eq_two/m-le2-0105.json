@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0105",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A cloth shop in Faisalabad sells cotton fabric for 350 rupees per meter and silk fabric for 1,200 rupees per meter. The equation \\(350x + 1{,}200y = 42{,}000\\) represents the shop's sales of these fabrics on one day, where \\(x\\) is the number of meters of cotton sold and \\(y\\) is the number of meters of silk sold. What does the number 42,000 represent?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The total amount, in rupees, earned from cotton and silk sales",
+    "B": "The total number of meters of fabric sold",
+    "C": "The amount, in rupees, earned from cotton sales",
+    "D": "The price, in rupees, of 1 meter of silk"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "\\(350x\\) is the amount, in rupees, earned from cotton, and \\(1{,}200y\\) is the amount earned from silk.",
+    "Their sum, 42,000, is the total amount, in rupees, earned from both fabrics."
+  ],
+  "explanation": {
+    "A": "Correct. The left side adds the cotton sales \\(350x\\) and the silk sales \\(1{,}200y\\), so 42,000 is the total amount earned.",
+    "B": "Incorrect. The total number of meters is \\(x + y\\); 42,000 is measured in rupees.",
+    "C": "Incorrect. The amount earned from cotton is \\(350x\\), only one part of the total.",
+    "D": "Incorrect. The price of 1 meter of silk is 1,200 rupees, the coefficient of \\(y\\)."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nassert (350*x + 1200*y).subs({x: 24, y: 28}) == 42000\nkey = 'total amount, in rupees, earned from cotton and silk'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

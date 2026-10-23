@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0511",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A grower had 120 tomato plants of the same variety in one greenhouse. She randomly assigned 60 of the plants to receive 16 hours of light per day and the other 60 to receive 12 hours of light per day. The plants that received 16 hours of light produced more tomatoes, on average. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "No conclusion can be drawn, because each group had only 60 plants.",
+    "B": "The 16-hour light schedule likely caused greater tomato production for plants like those in the study.",
+    "C": "The 16-hour light schedule causes greater tomato production for every tomato plant of any variety.",
+    "D": "There is only an association between light and tomato production, because the plants were not randomly selected."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The plants were randomly assigned to the two light schedules, so a cause-and-effect conclusion is supported.",
+    "The plants were all one variety in one greenhouse, not a random sample of all tomato plants, so the conclusion applies to plants like those in the study."
+  ],
+  "explanation": {
+    "A": "Incorrect. Groups of 60 are enough to compare averages; the design, not the size, decides what can be concluded.",
+    "B": "Correct. Random assignment supports cause and effect for plants like the ones studied.",
+    "C": "Incorrect. The plants were one variety from one greenhouse, so the result cannot be generalized to every tomato plant.",
+    "D": "Incorrect. Random selection affects generalizing; random assignment, which this study used, supports cause and effect."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\ndesign = {'random_assignment': True, 'random_sample': False}\nclaims = {'A': ('cause', 'study'), 'B': ('cause', 'all'), 'C': ('assoc', 'study'), 'D': ('none', 'none')}\nok = [k for k, (c, s) in claims.items() if c == 'cause' and s == ('all' if design['random_sample'] else 'study')]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

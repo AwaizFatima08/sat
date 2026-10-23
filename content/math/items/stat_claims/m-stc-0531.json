@@ -1,0 +1,60 @@
+{
+  "id": "m-stc-0531",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A researcher selected 1,000 adults at random from all adults in a country and asked how many hours they usually sleep each night. Each adult also took a short concentration test. Adults who usually sleep at least 7 hours had a higher average test score than adults who usually sleep less. Which of the following statements is (are) supported by the study? I. Among adults in the country, sleeping at least 7 hours is associated with higher concentration test scores. II. For adults in the country, sleeping at least 7 hours causes higher concentration test scores. III. Each adult in the sample who sleeps at least 7 hours scored higher than each adult in the sample who sleeps less.",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "I, II, and III",
+    "B": "I only",
+    "C": "II only",
+    "D": "I and III only"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Statement I: the adults were a random sample of the country's adults, and the study found an association, so I is supported.",
+    "Statement II: the adults chose their own sleep habits (no random assignment), so a causal claim is not supported.",
+    "Statement III: a higher average for one group does not mean every member of that group scored higher than every member of the other group.",
+    "Only statement I is supported."
+  ],
+  "explanation": {
+    "A": "Incorrect. Statements II and III are not supported.",
+    "B": "Correct. Only the generalized association (I) is supported.",
+    "C": "Incorrect. Statement II is a causal claim, which needs random assignment; statement I is the one that is supported.",
+    "D": "Incorrect. Statement III confuses a difference in averages with a difference for every individual."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nsupported = {'I': True, 'II': False, 'III': False}\nkey = sorted(s for s, v in supported.items() if v)\nparse = {'A': ['I'], 'B': ['II'], 'C': ['I', 'III'], 'D': ['I', 'II', 'III']}\nok = [k for k, v in parse.items() if v == key]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

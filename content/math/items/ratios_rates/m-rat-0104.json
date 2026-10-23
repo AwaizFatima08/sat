@@ -1,0 +1,45 @@
+{
+  "id": "m-rat-0104",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The ratio of a number to 18 is equal to the ratio of 10 to 12. What is the number?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "15"
+  ],
+  "solution": [
+    "Let the number be \\(n\\). Then \\(\\frac{n}{18} = \\frac{10}{12}\\).",
+    "\\(n = \\frac{10 \\cdot 18}{12} = 15\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "ans = Rational(10, 12) * 18\nassert ans == 15\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "15",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

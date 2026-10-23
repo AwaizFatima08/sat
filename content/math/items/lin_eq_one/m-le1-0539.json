@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0539",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Five years ago, Marcus was 3 times as old as his daughter was then. Today, the sum of their ages is 58 years. How old, in years, is Marcus's daughter today?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12\\)",
+    "B": "\\(9.5\\)",
+    "C": "\\(17\\)",
+    "D": "\\(14.5\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(d\\) be the daughter's age today. Marcus is \\(58 - d\\).",
+    "Five years ago: \\(58 - d - 5 = 3(d - 5)\\), so \\(53 - d = 3d - 15\\).",
+    "Then \\(68 = 4d\\) and \\(d = 17\\). (Check: five years ago they were 36 and 12.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the daughter's age five years ago, not today.",
+    "B": "Incorrect. This is the result of writing \\(3(d - 5)\\) as \\(3d + 15\\): \\(53 - d = 3d + 15\\) gives \\(d = 9.5\\).",
+    "C": "Correct. \\(53 - d = 3d - 15\\) gives \\(d = 17\\); five years ago Marcus was 36 and his daughter was 12.",
+    "D": "Incorrect. This is the result of ignoring the five-year shift and using today's ages: \\(58 - d = 3d\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nd = symbols('d')\ns = solve(Eq(58 - d - 5, 3*(d - 5)), d)[0]\nassert s == 17\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

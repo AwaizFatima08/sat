@@ -1,0 +1,58 @@
+{
+  "id": "m-rtt-0517",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(ABC\\), angle \\(C\\) is a right angle, \\(AB = 14\\), and \\(BC = 7\\). What is the measure of angle \\(B\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(45^{\\circ}\\)",
+    "B": "\\(30^{\\circ}\\)",
+    "C": "\\(60^{\\circ}\\)",
+    "D": "\\(63.4^{\\circ}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "For angle \\(B\\), \\(BC = 7\\) is the adjacent leg and \\(AB = 14\\) is the hypotenuse.",
+    "\\(\\cos B = \\frac{7}{14} = \\frac{1}{2}\\), so \\(B = 60^{\\circ}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This assumes the triangle is isosceles; the legs are 7 and \\(7\\sqrt{3}\\), which are not equal.",
+    "B": "Incorrect. This is the measure of angle \\(A\\), the angle opposite the 7-unit side.",
+    "C": "Correct. \\(\\cos B = \\frac{BC}{AB} = \\frac{1}{2}\\), so angle \\(B\\) measures \\(60^{\\circ}\\).",
+    "D": "Incorrect. This comes from \\(\\tan B = \\frac{14}{7} = 2\\), which treats the hypotenuse as a leg."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nans=acos(Rational(7,14))*180/pi\nassert ans==60\nassert abs(N(atan(Rational(14,7))*180/pi)-Rational('63.4'))<0.05\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

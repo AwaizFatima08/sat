@@ -1,0 +1,141 @@
+{
+  "id": "m-prb-0530",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The figure shows square \\(ABCD\\) with side length 10 and a circle with center \\(O\\) and radius 3 that lies inside the square. A point is selected at random from the interior of the square, with every point equally likely. What is the probability that the point lies inside the circle?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        10,
+        0
+      ],
+      "C": [
+        10,
+        10
+      ],
+      "D": [
+        0,
+        10
+      ],
+      "O": [
+        5,
+        5
+      ],
+      "P": [
+        8,
+        5
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "O",
+        "P"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          5,
+          5
+        ],
+        "radius": 3
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          5,
+          -0.7
+        ],
+        "text": "10"
+      },
+      {
+        "at": [
+          6.5,
+          5.5
+        ],
+        "text": "3"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1 - \\frac{9\\pi}{100}\\)",
+    "B": "\\(\\frac{9\\pi}{100}\\)",
+    "C": "\\(\\frac{3\\pi}{50}\\)",
+    "D": "\\(\\frac{9\\pi}{25}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "With every point equally likely, the probability is \\(\\frac{\\text{area of circle}}{\\text{area of square}}\\).",
+    "Area of circle: \\(\\pi(3)^{2} = 9\\pi\\). Area of square: \\(10^{2} = 100\\).",
+    "The probability is \\(\\frac{9\\pi}{100}\\) (about 0.28)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the probability that the point lies OUTSIDE the circle.",
+    "B": "Correct. The probability is the ratio of the areas: \\(\\frac{\\pi(3)^{2}}{10^{2}} = \\frac{9\\pi}{100}\\).",
+    "C": "Incorrect. This uses the circumference \\(2\\pi(3) = 6\\pi\\) instead of the area of the circle.",
+    "D": "Incorrect. This uses the diameter, 6, as the radius: \\(\\frac{\\pi(6)^{2}}{100} = \\frac{36\\pi}{100}\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "radius_diameter"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nr = figure['circles'][0]['radius']\ns = figure['points']['B'][0] - figure['points']['A'][0]\np = pi * r**2 / s**2\nassert simplify(value(choices[answer]) - p) == 0\nassert all(simplify(value(choices[k]) - p) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

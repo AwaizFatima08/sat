@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0507",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "\\[x + 2y = 8\\] \\[3x - y = 3\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(x + y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(11\\)",
+    "B": "\\(8\\)",
+    "C": "\\(3\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From the second equation, \\(y = 3x - 3\\).",
+    "Substitute into the first: \\(x + 2(3x - 3) = 8\\), so \\(7x = 14\\) and \\(x = 2\\).",
+    "Then \\(y = 3(2) - 3 = 3\\), and \\(x + y = 5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Adding the equations gives \\(4x + y = 11\\), not \\(x + y = 11\\).",
+    "B": "Incorrect. 8 is the value of \\(x + 2y\\), not \\(x + y\\).",
+    "C": "Incorrect. This is the value of \\(y\\) alone; the question asks for \\(x + y\\).",
+    "D": "Correct. The solution is \\((2, 3)\\), so \\(x + y = 2 + 3 = 5\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nsol = solve([x + 2*y - 8, 3*x - y - 3], [x, y])\nassert sol == {x: 2, y: 3}\nassert value(choices[answer]) == sol[x] + sol[y]\nassert all(value(choices[k]) != sol[x] + sol[y] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

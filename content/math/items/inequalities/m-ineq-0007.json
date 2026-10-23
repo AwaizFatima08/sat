@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0007",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "In the inequality \\(6 - kx < 2x - 10\\), \\(k\\) is a constant. If the solution set of the inequality is \\(x > 4\\), what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-6\\)",
+    "B": "\\(-2\\)",
+    "C": "\\(\\frac{1}{2}\\)",
+    "D": "\\(2\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Collect terms: \\(16 < 2x + kx\\), that is, \\((k + 2)x > 16\\).",
+    "For the solution set to have the form \\(x > \\ldots\\), the coefficient \\(k + 2\\) must be positive; then \\(x > \\frac{16}{k + 2}\\).",
+    "Set \\(\\frac{16}{k + 2} = 4\\): \\(k + 2 = 4\\), so \\(k = 2\\).",
+    "Check: \\(6 - 2x < 2x - 10\\) gives \\(16 < 4x\\), so \\(x > 4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This comes from a sign slip when collecting terms, writing \\((-k - 2)x > 16\\) and then solving \\(-k - 2 = 4\\); with \\(k = -6\\) the solution set is actually \\(x < -4\\).",
+    "B": "Incorrect. With \\(k = -2\\) the \\(x\\)-terms cancel, leaving \\(6 < -10\\), which is never true: there is no solution at all.",
+    "C": "Incorrect. This drops the 6 on the left side, so that \\((k + 2)x > 10\\); with \\(k = \\frac{1}{2}\\) the solution set is actually \\(x > 6.4\\).",
+    "D": "Correct. The inequality becomes \\((k + 2)x > 16\\); with \\(k = 2\\) this is \\(4x > 16\\), so \\(x > 4\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "C": "arithmetic"
+  },
+  "verify": "x = symbols('x')\ntarget = Interval.open(4, oo)\nok = [c for c in choices if solve_univariate_inequality(6 - value(choices[c])*x < 2*x - 10, x, relational=False) == target]\nassert ok == [answer]\nassert value(choices[answer]) == 2",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "m-rat-0116",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(\\frac{x}{y} = 3\\), where \\(y \\ne 0\\), what is the value of \\(\\frac{x^{2} - y^{2}}{xy}\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8/3"
+  ],
+  "solution": [
+    "Substitute \\(x = 3y\\): \\(\\frac{9y^{2} - y^{2}}{3y^{2}} = \\frac{8y^{2}}{3y^{2}}\\).",
+    "This equals \\(\\frac{8}{3}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "y = symbols('y', nonzero=True)\nx = 3*y\nans = simplify((x**2 - y**2) / (x*y))\nassert ans == Rational(8, 3)\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "8/3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

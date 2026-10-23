@@ -1,0 +1,115 @@
+{
+  "id": "m-lat-0520",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In quadrilateral \\(ABCD\\), \\(\\overline{AB}\\) is parallel to \\(\\overline{DC}\\), and diagonals \\(\\overline{AC}\\) and \\(\\overline{BD}\\) intersect at point \\(E\\). If \\(AB = 6\\), \\(DC = 15\\), and \\(AC = 14\\), what is the length of \\(\\overline{AE}\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        3,
+        7.211
+      ],
+      "B": [
+        9,
+        7.211
+      ],
+      "C": [
+        15,
+        0
+      ],
+      "D": [
+        0,
+        0
+      ],
+      "E": [
+        6.429,
+        5.151
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "A",
+        "C"
+      ],
+      [
+        "B",
+        "D"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          6.0,
+          7.811
+        ],
+        "text": "6"
+      },
+      {
+        "at": [
+          7.5,
+          -0.7
+        ],
+        "text": "15"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4"
+  ],
+  "solution": [
+    "Angles \\(AEB\\) and \\(CED\\) are vertical angles, and because \\(\\overline{AB} \\parallel \\overline{DC}\\), angles \\(BAE\\) and \\(DCE\\) are alternate interior angles. So triangle \\(ABE\\) is similar to triangle \\(CDE\\).",
+    "The ratio of corresponding sides is \\(\\frac{AE}{CE} = \\frac{AB}{CD} = \\frac{6}{15}\\), so \\(AE\\) is 6 parts and \\(CE\\) is 15 parts of the diagonal.",
+    "\\(AE = 14 \\cdot \\frac{6}{6 + 15} = 4\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['A'][1]==P['B'][1] and P['C'][1]==P['D'][1] and abs(d('A','B')-6)<0.01 and abs(d('D','C')-15)<0.01 and abs(d('A','C')-14)<0.01\nassert abs(ang('A','E','C')-180)<0.1 and abs(ang('B','E','D')-180)<0.1\nans=Rational(14*6,6+15)\nassert abs(d('A','E')-ans)<0.01\nassert Rational(spr_answers[0])==ans==4\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

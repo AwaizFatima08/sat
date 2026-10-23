@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0130",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The length of a rectangular garden must be at least 3 meters more than twice its width, and the perimeter of the garden can be at most 60 meters. What is the greatest possible width, in meters, of the garden?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(13.5\\)",
+    "B": "\\(19\\)",
+    "C": "\\(11\\)",
+    "D": "\\(9\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let the width be \\(w\\) and the length \\(L\\): \\(L \\ge 2w + 3\\) and \\(2L + 2w \\le 60\\), so \\(L \\le 30 - w\\).",
+    "A length exists only if \\(2w + 3 \\le 30 - w\\).",
+    "So \\(3w \\le 27\\) and \\(w \\le 9\\). With \\(w = 9\\), \\(L = 21\\) works: \\(21 \\ge 21\\) and \\(2(21) + 2(9) = 60\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of using \\(2w + 3 \\le 30\\), forgetting to subtract the width when finding the greatest possible length.",
+    "B": "Incorrect. This is the result of using \\(L + w\\) as the perimeter instead of \\(2L + 2w\\).",
+    "C": "Incorrect. This is the result of using \\(L \\ge 2w - 3\\) (3 less than twice the width) instead of \\(L \\ge 2w + 3\\).",
+    "D": "Correct. The two conditions require \\(2w + 3 \\le L \\le 30 - w\\), which is possible only when \\(w \\le 9\\)."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "wrong_formula",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nw = symbols('w')\ns = solve_univariate_inequality(2*w + 3 <= 30 - w, w, relational=False)\nbest = s.sup\nassert best == 9 and 2*(2*best + 3) + 2*best <= 60\nassert value(choices[answer]) == best\nassert all(value(choices[k]) != best for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

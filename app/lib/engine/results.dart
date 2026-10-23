@@ -78,7 +78,7 @@ Breakdown breakdown(Iterable<ItemResponse> responses, Map<String, Item> items) {
   for (final r in responses) {
     final item = items[r.itemId];
     if (item == null) continue;
-    final ok = r.answer == item.answer;
+    final ok = item.isCorrect(r.answer);
     overall = overall.add(isCorrect: ok);
     byDomain[item.domain] = (byDomain[item.domain] ?? const Tally(0, 0)).add(
       isCorrect: ok,
@@ -176,7 +176,7 @@ PaperResult scorePaper({
   final responses = <Response>[
     for (final r in [...module1, ...module2])
       if (items[r.itemId] case final item?)
-        (difficulty: item.difficulty, correct: r.answer == item.answer),
+        (difficulty: item.difficulty, correct: item.isCorrect(r.answer)),
   ];
   return PaperResult(
     formId: form.id,

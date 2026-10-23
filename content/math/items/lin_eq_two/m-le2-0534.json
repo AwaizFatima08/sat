@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0534",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, the graph of \\((k - 2)x + (k + 1)y = 6\\), where \\(k\\) is a constant, is a line with slope 2. What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4\\)",
+    "B": "\\(0\\)",
+    "C": "\\(1\\)",
+    "D": "\\(-4\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Solve for \\(y\\): the slope is \\(-\\frac{k - 2}{k + 1}\\).",
+    "Set \\(-\\frac{k - 2}{k + 1} = 2\\): \\(-(k - 2) = 2(k + 1)\\), so \\(-k + 2 = 2k + 2\\).",
+    "So \\(3k = 0\\) and \\(k = 0\\). Check: \\(-2x + y = 6\\) is \\(y = 2x + 6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This sets the coefficient of \\(x\\) equal to 2 and ignores the coefficient of \\(y\\); with \\(k = 4\\) the slope is \\(-\\frac{2}{5}\\).",
+    "B": "Correct. With \\(k = 0\\), the equation is \\(-2x + y = 6\\), or \\(y = 2x + 6\\).",
+    "C": "Incorrect. This sets the slope equal to \\(\\frac{1}{2}\\) instead of 2; with \\(k = 1\\) the line is \\(-x + 2y = 6\\), with slope \\(\\frac{1}{2}\\).",
+    "D": "Incorrect. This uses \\(\\frac{k - 2}{k + 1}\\) as the slope, leaving out the negative sign: \\(k - 2 = 2k + 2\\) gives \\(k = -4\\), and the slope is then \\(-2\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "reciprocal",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nx, y, k = symbols('x y k')\nslope = lambda kv: diff(solve(Eq((kv - 2)*x + (kv + 1)*y, 6), y)[0], x)\nsol = solve(Eq(-(k - 2)/(k + 1), 2), k)\nassert sol == [0] and slope(0) == 2\nassert value(choices[answer]) == 0\nassert all(slope(value(choices[c])) != 2 for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

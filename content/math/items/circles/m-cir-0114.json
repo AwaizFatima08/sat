@@ -1,0 +1,124 @@
+{
+  "id": "m-cir-0114",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Points \\(A\\), \\(B\\), and \\(C\\) lie on the circle with center \\(O\\) shown. The radius of the circle is 9, and the measure of angle \\(ACB\\) is \\(45^{\\circ}\\). What is the length of chord \\(\\overline{AB}\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        -8.457,
+        -3.078
+      ],
+      "B": [
+        3.078,
+        -8.457
+      ],
+      "C": [
+        3.078,
+        8.457
+      ],
+      "O": [
+        0,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "C",
+        "A"
+      ],
+      [
+        "C",
+        "B"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "O",
+        "A"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 9
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          2.75,
+          6.4
+        ],
+        "text": "45°"
+      },
+      {
+        "at": [
+          -4.0,
+          -0.6
+        ],
+        "text": "9"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9\\)",
+    "B": "\\(\\frac{9\\pi}{2}\\)",
+    "C": "\\(9\\sqrt{2}\\)",
+    "D": "\\(18\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "An inscribed angle is half its central angle, so the measure of angle \\(AOB\\) is \\(2 \\cdot 45^{\\circ} = 90^{\\circ}\\).",
+    "Triangle \\(AOB\\) is an isosceles right triangle with legs \\(OA = OB = 9\\).",
+    "\\(AB = 9\\sqrt{2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This assumes triangle \\(AOB\\) is equilateral, which would need a \\(60^{\\circ}\\) central angle.",
+    "B": "Incorrect. This is the length of minor arc \\(AB\\), not the straight chord.",
+    "C": "Correct. The central angle is \\(90^{\\circ}\\), so \\(AB = \\sqrt{9^{2} + 9^{2}} = 9\\sqrt{2}\\).",
+    "D": "Incorrect. This is the diameter; chord \\(\\overline{AB}\\) does not pass through the center."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "D": "radius_diameter"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert all(abs(d('O',k)-9)<0.01 for k in 'ABC') and abs(ang('A','C','B')-45)<0.1\nans=sqrt(9**2+9**2)\nassert abs(d('A','B')-ans)<0.01\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

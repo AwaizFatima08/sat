@@ -1,0 +1,45 @@
+{
+  "id": "m-nle-0104",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What is the solution to the equation \\(x^{2} - 10x + 25 = 0\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "5"
+  ],
+  "solution": [
+    "The left side is a perfect square: \\(x^{2} - 10x + 25 = (x - 5)^{2}\\).",
+    "\\((x - 5)^{2} = 0\\) gives \\(x - 5 = 0\\), so \\(x = 5\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nsol = solve(Eq(x**2 - 10*x + 25, 0), x)\nassert sol == [5]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

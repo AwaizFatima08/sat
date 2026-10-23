@@ -1,0 +1,58 @@
+{
+  "id": "m-arv-0519",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The length of a rectangle is 3 times its width. The perimeter of the rectangle is \\(48\\). What is the area of the rectangle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(24\\)",
+    "B": "\\(54\\)",
+    "C": "\\(18\\)",
+    "D": "\\(108\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let the width be \\(w\\). Then \\(2(3w + w) = 48\\), so \\(8w = 48\\) and \\(w = 6\\).",
+    "The length is \\(18\\), and the area is \\(18 \\cdot 6 = 108\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(18 + 6\\), half the perimeter; the length and width must be multiplied.",
+    "B": "Incorrect. This is \\(\\frac{1}{2}(18)(6)\\), the triangle area formula, not the rectangle formula.",
+    "C": "Incorrect. This is the length of the rectangle, not its area.",
+    "D": "Correct. The width is 6 and the length is 18, so the area is 108."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_formula",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nw=symbols('w')\nws=solve(Eq(2*(3*w+w),48),w)[0]\nassert ws==6\nans=3*ws*ws\nassert ans==108\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (w = 6, l = 18, area 108)",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

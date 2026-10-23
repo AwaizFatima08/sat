@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0525",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "\\[\\frac{x}{3} + \\frac{y}{2} = 4\\] \\[\\frac{x}{2} - \\frac{y}{4} = 3\\] What is the value of \\(x\\) in the solution to the system of equations above?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{15}{2}\\)",
+    "B": "\\(5\\)",
+    "C": "\\(15\\)",
+    "D": "\\(3\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Clear the fractions: multiply the first equation by 6 to get \\(2x + 3y = 24\\), and the second by 4 to get \\(2x - y = 12\\).",
+    "Subtract: \\(4y = 12\\), so \\(y = 3\\).",
+    "Then \\(2x - 3 = 12\\), so \\(2x = 15\\) and \\(x = \\frac{15}{2}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The cleared equations \\(2x + 3y = 24\\) and \\(2x - y = 12\\) give \\(y = 3\\) and \\(x = \\frac{15}{2}\\).",
+    "B": "Incorrect. This comes from multiplying only the left side of the first equation by 6 (\\(2x + 3y = 4\\)), which gives \\(y = -2\\) and \\(x = 5\\).",
+    "C": "Incorrect. This is the value of \\(2x\\); the last step, dividing by 2, is missing.",
+    "D": "Incorrect. This is the value of \\(y\\), not \\(x\\)."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nsol = solve([x/3 + y/2 - 4, x/2 - y/4 - 3], [x, y])\nassert sol == {x: Rational(15, 2), y: 3}\nassert value(choices[answer]) == sol[x]\nassert all(value(choices[k]) != sol[x] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

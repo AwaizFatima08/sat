@@ -1,0 +1,59 @@
+{
+  "id": "m-pct-0539",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The fare for a bus route in Dhaka increased by \\(r\\%\\), and a year later it increased again by \\(r\\%\\). Over the two increases, the fare rose from 100 taka to 121 taka. What is the value of \\(r\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(110\\)",
+    "B": "\\(10.5\\)",
+    "C": "\\(21\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Two increases of \\(r\\%\\) multiply the fare by \\(\\left(1 + \\frac{r}{100}\\right)^{2}\\).",
+    "\\(100\\left(1 + \\frac{r}{100}\\right)^{2} = 121\\), so \\(1 + \\frac{r}{100} = 1.1\\).",
+    "Therefore \\(r = 10\\). Check: \\(100 \\cdot 1.1 = 110\\) and \\(110 \\cdot 1.1 = 121\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the fare, in taka, after the first increase, not the value of \\(r\\).",
+    "B": "Incorrect. This halves the total increase of \\(21\\%\\). The second increase is taken of the larger fare, so the two increases multiply rather than add.",
+    "C": "Incorrect. This is the total percent increase over both years, not the percent of each increase.",
+    "D": "Correct. \\(100 \\cdot 1.1^{2} = 121\\), so each increase was \\(10\\%\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "percent_add",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nr = symbols('r', positive=True)\nsol = solve(Eq(100 * (1 + r / 100)**2, 121), r)\nassert sol == [10]\nv = sol[0]\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

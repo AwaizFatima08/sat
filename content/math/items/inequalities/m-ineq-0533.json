@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0533",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Print shop X charges a \\$30 setup fee plus \\$0.12 per page. Print shop Y charges \\$0.20 per page with no setup fee, but it takes 25% off the total cost of any order of more than 500 pages. For which of the following numbers of pages is shop X's price less than shop Y's price?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(600\\)",
+    "B": "\\(1{,}200\\)",
+    "C": "\\(1{,}000\\)",
+    "D": "\\(350\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Up to 500 pages, X is cheaper when \\(30 + 0.12n < 0.20n\\), that is, \\(30 < 0.08n\\), so \\(n > 375\\).",
+    "Above 500 pages, shop Y charges 75% of \\(0.20n\\), which is \\(0.15n\\). X is cheaper when \\(30 + 0.12n < 0.15n\\), that is, \\(n > 1{,}000\\).",
+    "So X is cheaper for \\(375 < n \\le 500\\) and for \\(n > 1{,}000\\). Of the choices, only \\(1{,}200\\) works: \\(174 < 180\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This ignores the 25% discount. For 600 pages, X costs 102 dollars, but Y costs \\(0.75(120) = 90\\) dollars.",
+    "B": "Correct. For \\(1{,}200\\) pages, X costs \\(30 + 144 = 174\\) dollars and Y costs \\(0.75(240) = 180\\) dollars.",
+    "C": "Incorrect. For \\(1{,}000\\) pages the prices are equal, 150 dollars each, so X's price is not less than Y's.",
+    "D": "Incorrect. This reverses the result \\(n > 375\\). For 350 pages, X costs \\(30 + 42 = 72\\) dollars and Y costs 70 dollars."
+  },
+  "traps": {
+    "A": "percent_add",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nX = lambda n: 30 + Rational(12, 100)*n\nY = lambda n: Rational(20, 100)*n*(Rational(3, 4) if n > 500 else 1)\nok = [k for k in choices if X(value(choices[k])) < Y(value(choices[k]))]\nassert ok == [answer]\nassert X(1000) == Y(1000) and X(375) == Y(375)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

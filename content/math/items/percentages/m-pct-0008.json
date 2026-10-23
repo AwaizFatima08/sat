@@ -1,0 +1,44 @@
+{
+  "id": "m-pct-0008",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A store in Karachi offers a \\(10\\%\\) discount on the list price of a phone. An \\(18\\%\\) sales tax is then added to the discounted price. A customer pays a total of 26,550 rupees for the phone. What is the list price of the phone, in rupees?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "25000"
+  ],
+  "solution": [
+    "Let \\(L\\) be the list price. After the discount the price is \\(0.9L\\); after the tax it is \\(1.18 \\cdot 0.9L = 1.062L\\).",
+    "Solve \\(1.062L = 26550\\): \\(L = \\frac{26550}{1.062} = 25000\\).",
+    "Check: \\(0.9 \\cdot 25000 = 22500\\) and \\(1.18 \\cdot 22500 = 26550\\)."
+  ],
+  "verify": "L = symbols('L')\nsol = solve(Eq(L * Rational(9, 10) * Rational(118, 100), 26550), L)\nassert sol == [25000]\nassert Rational(spr_answers[0]) == sol[0] and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "25000",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "m-rtt-0118",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In right triangle \\(ABC\\) shown, angle \\(C\\) is a right angle, \\(AC = 15\\), and \\(\\tan B = \\frac{15}{16}\\). Point \\(D\\) is the midpoint of \\(\\overline{BC}\\). What is the value of \\(\\cos(\\angle CAD)\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "C": [
+        0,
+        0
+      ],
+      "A": [
+        0,
+        15
+      ],
+      "B": [
+        16,
+        0
+      ],
+      "D": [
+        8,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "C"
+      ],
+      [
+        "C",
+        "B"
+      ],
+      [
+        "B",
+        "A"
+      ],
+      [
+        "A",
+        "D"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          -1.2,
+          7.5
+        ],
+        "text": "15"
+      }
+    ],
+    "right_angles": [
+      "C"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{15}{\\sqrt{481}}\\)",
+    "B": "\\(\\frac{15}{17}\\)",
+    "C": "\\(\\frac{8}{15}\\)",
+    "D": "\\(\\frac{8}{17}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(\\tan B = \\frac{AC}{BC} = \\frac{15}{16}\\) and \\(AC = 15\\), so \\(BC = 16\\) and \\(CD = 8\\).",
+    "In right triangle \\(ACD\\), \\(AD = \\sqrt{15^{2} + 8^{2}} = 17\\).",
+    "\\(\\cos(\\angle CAD) = \\frac{AC}{AD} = \\frac{15}{17}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\cos(\\angle CAB) = \\frac{AC}{AB}\\); it uses \\(\\overline{AB}\\) instead of \\(\\overline{AD}\\).",
+    "B": "Correct. \\(CD = 8\\) and \\(AD = 17\\), so \\(\\cos(\\angle CAD) = \\frac{15}{17}\\).",
+    "C": "Incorrect. This is \\(\\tan(\\angle CAD) = \\frac{CD}{AC}\\).",
+    "D": "Incorrect. This is \\(\\sin(\\angle CAD) = \\frac{CD}{AD}\\), the opposite side over the hypotenuse."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('A','C')==15 and abs(ang('A','C','B')-90)<0.1 and d('A','C')/d('B','C')==Rational(15,16) and d('C','D')==d('D','B')\nans=Rational(15)/sqrt(15**2+8**2)\nassert ans==Rational(15,17) and abs(cos(ang('C','A','D')*pi/180)-ans)<0.001\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

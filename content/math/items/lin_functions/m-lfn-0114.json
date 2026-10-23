@@ -1,0 +1,89 @@
+{
+  "id": "m-lfn-0114",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The graph shows the mass \\(y\\), in grams, of filament left on a spool \\(x\\) hours after a 3D printer begins a long print job. What is the best interpretation of the \\(x\\)-intercept of the graph?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      0,
+      18
+    ],
+    "y": [
+      0,
+      900
+    ],
+    "curves": [
+      {
+        "expr": "750 - 50*x",
+        "label": "filament"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 750,
+        "label": "(0, 750)"
+      },
+      {
+        "x": 15,
+        "y": 0,
+        "label": "(15, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "Time (hours)",
+    "y_label": "Filament left (grams)"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The spool held 15 grams of filament when the print job began.",
+    "B": "The printer uses 15 grams of filament each hour.",
+    "C": "The spool runs out of filament 15 hours after the print job begins.",
+    "D": "The spool runs out of filament 750 hours after the print job begins."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The \\(x\\)-intercept is the point \\((15, 0)\\), where the mass of filament left is 0 grams.",
+    "So the spool runs out of filament 15 hours after printing begins."
+  ],
+  "explanation": {
+    "A": "Incorrect. 15 is a number of hours, read from the horizontal axis. The spool held 750 grams at the start.",
+    "B": "Incorrect. The printer uses \\(\\frac{750}{15} = 50\\) grams each hour; 15 is the number of hours until the spool is empty.",
+    "C": "Correct. At the \\(x\\)-intercept \\((15, 0)\\), 0 grams are left, so the filament runs out after 15 hours.",
+    "D": "Incorrect. This reads the vertical-axis value 750, which is grams, as if it were a time in hours."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\ny = sympify(figure['curves'][0]['expr'])\nassert solve(y, x) == [15] and y.subs(x, 0) == 750 and diff(y, x) == -50\nkey = 'runs out of filament 15 hours'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

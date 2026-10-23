@@ -1,0 +1,93 @@
+{
+  "id": "m-tvd-0525",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The scatterplot shows a set of data and an exponential curve of best fit with the equation \\(y = 40(1.25)^{x}\\). According to the curve, by what percent does the predicted value of \\(y\\) increase for each increase of 1 in \\(x\\)?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        0,
+        41
+      ],
+      [
+        1,
+        48
+      ],
+      [
+        2,
+        64
+      ],
+      [
+        3,
+        76
+      ],
+      [
+        4,
+        100
+      ],
+      [
+        5,
+        119
+      ],
+      [
+        6,
+        156
+      ]
+    ],
+    "line": "40*1.25**x"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(25\\%\\)",
+    "B": "\\(40\\%\\)",
+    "C": "\\(1.25\\%\\)",
+    "D": "\\(125\\%\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Each increase of 1 in \\(x\\) multiplies the predicted \\(y\\) by 1.25.",
+    "A factor of \\(1.25 = 1 + 0.25\\) is an increase of \\(25\\%\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Each step multiplies \\(y\\) by \\(1.25\\), which adds \\(25\\%\\) of the previous value.",
+    "B": "Incorrect. 40 is the predicted value of \\(y\\) at \\(x = 0\\), not a rate of increase.",
+    "C": "Incorrect. This writes the growth factor 1.25 as a percent. A factor of 1.25 means a \\(25\\%\\) increase.",
+    "D": "Incorrect. Multiplying by 1.25 makes the new value \\(125\\%\\) of the old value, an increase of only \\(25\\%\\). A \\(125\\%\\) increase would be a factor of 2.25."
+  },
+  "traps": {
+    "B": "misread_graph",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = 40 * Rational(5, 4)**x\npct = (f.subs(x, 3) / f.subs(x, 2) - 1) * 100\nassert pct == 25\nassert value(choices[answer]) * 100 == pct\nassert all(value(choices[k]) * 100 != pct for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

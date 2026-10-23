@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0530",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A machine is set to fill bags of rice with a mean weight of 500 grams. A quality inspector weighed a random sample of 40 bags filled by the machine. The mean weight of the sampled bags was 494 grams, with a margin of error of 4 grams. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The mean weight of all bags filled by the machine is plausibly between 490 and 498 grams, so it is likely less than 500 grams.",
+    "B": "The mean weight of all bags filled by the machine is plausibly 500 grams, because 494 grams is close to 500 grams.",
+    "C": "The mean weight of all bags filled by the machine is exactly 494 grams.",
+    "D": "Every bag filled by the machine weighs between 490 and 498 grams."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Plausible values for the mean weight of all bags: \\(494 - 4 = 490\\) to \\(494 + 4 = 498\\) grams.",
+    "500 grams is not in this range, so the mean weight of all bags filled by the machine is likely less than 500 grams."
+  ],
+  "explanation": {
+    "A": "Correct. The plausible values, 490 to 498 grams, are all less than 500 grams.",
+    "B": "Incorrect. Whether 500 is plausible depends on the margin of error: the plausible values, 490 to 498, do not include 500.",
+    "C": "Incorrect. 494 grams is an estimate from a sample; the mean of all bags is known only within the margin of error.",
+    "D": "Incorrect. The margin of error describes the uncertainty in the MEAN weight, not the range of individual bag weights."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nlo, hi = 494 - 4, 494 + 4\nassert (lo, hi) == (490, 498) and hi < 500\nkey = choices[answer]\nassert answer == 'D' and 'mean' in key and '490' in key and '498' in key and 'less than 500' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

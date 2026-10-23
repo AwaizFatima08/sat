@@ -1,0 +1,44 @@
+{
+  "id": "m-sys-0128",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[0.4x + 0.3y = 5\\] \\[0.2x - 0.1y = 0.5\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(y\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "Multiply both equations by 10: \\(4x + 3y = 50\\) and \\(2x - y = 5\\).",
+    "From the second, \\(y = 2x - 5\\). Substitute: \\(4x + 6x - 15 = 50\\), so \\(x = 6.5\\).",
+    "Then \\(y = 2(6.5) - 5 = 8\\)."
+  ],
+  "verify": "x, y = symbols('x y')\nsol = solve([Rational(4, 10)*x + Rational(3, 10)*y - 5, Rational(2, 10)*x - Rational(1, 10)*y - Rational(1, 2)], [x, y])\nassert sol == {x: Rational(13, 2), y: 8}\nassert [Rational(a) for a in spr_answers] == [sol[y]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

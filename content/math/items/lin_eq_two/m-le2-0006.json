@@ -1,0 +1,89 @@
+{
+  "id": "m-le2-0006",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A caterer in Lahore spends exactly 9,000 rupees on \\(x\\) samosas, at 30 rupees each, and \\(y\\) kebab rolls, at 150 rupees each. The graph of \\(30x + 150y = 9000\\) is shown. Which statement best interprets the slope of the graph?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      0,
+      320
+    ],
+    "y": [
+      0,
+      70
+    ],
+    "curves": [
+      {
+        "expr": "60 - x/5",
+        "label": "30x + 150y = 9000"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 60,
+        "label": "(0, 60)"
+      },
+      {
+        "x": 300,
+        "y": 0,
+        "label": "(300, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "Samosas",
+    "y_label": "Kebab rolls"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "For every 5 additional samosas, the caterer buys 1 fewer kebab roll.",
+    "B": "For every 5 additional kebab rolls, the caterer buys 1 fewer samosa.",
+    "C": "For every 5 additional samosas, the caterer buys 1 more kebab roll.",
+    "D": "The caterer can buy at most 60 samosas."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Solve for \\(y\\): \\(y = -\\frac{1}{5}x + 60\\), so the slope is \\(-\\frac{1}{5}\\).",
+    "A slope of \\(-\\frac{1}{5}\\) means that when \\(x\\) increases by 5, \\(y\\) decreases by 1.",
+    "In context: for every 5 additional samosas, the caterer buys 1 fewer kebab roll (one kebab roll costs as much as 5 samosas)."
+  ],
+  "explanation": {
+    "A": "Correct. The slope is \\(-\\frac{1}{5}\\): an increase of 5 in \\(x\\) (samosas) goes with a decrease of 1 in \\(y\\) (kebab rolls).",
+    "B": "Incorrect. This swaps the roles of the variables; it describes a slope of \\(-5\\), the reciprocal.",
+    "C": "Incorrect. The slope is negative, so buying more samosas means buying fewer kebab rolls, not more.",
+    "D": "Incorrect. 60 is the \\(y\\)-intercept, the most kebab rolls (not samosas) the caterer can buy; the caterer can buy up to 300 samosas."
+  },
+  "traps": {
+    "B": "reciprocal",
+    "C": "sign_error",
+    "D": "misread_graph"
+  },
+  "verify": "x, y = symbols('x y')\nline = solve(Eq(30*x + 150*y, 9000), y)[0]\nm = diff(line, x)\nassert m == Rational(-1, 5) and line.subs(x, 0) == 60\nassert all(line.subs(x, pt['x']) == pt['y'] for pt in figure['points'])\nkey = 'every 5 additional samosas, the caterer buys 1 fewer kebab roll'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

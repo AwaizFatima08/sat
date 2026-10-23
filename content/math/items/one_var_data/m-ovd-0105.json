@@ -1,0 +1,80 @@
+{
+  "id": "m-ovd-0105",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The box plots summarize the heights, in centimeters, of tomato plants grown with Fertilizer P and of tomato plants grown with Fertilizer Q. Which statement is true?",
+  "figure": {
+    "kind": "boxplot",
+    "x_label": "Height (centimeters)",
+    "plots": [
+      {
+        "name": "Fertilizer P",
+        "min": 30,
+        "q1": 38,
+        "median": 44,
+        "q3": 49,
+        "max": 58
+      },
+      {
+        "name": "Fertilizer Q",
+        "min": 26,
+        "q1": 35,
+        "median": 46,
+        "q3": 55,
+        "max": 61
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The interquartile range of the Fertilizer Q heights is greater than the interquartile range of the Fertilizer P heights.",
+    "B": "The tallest of all the plants was grown with Fertilizer P.",
+    "C": "The median height of the Fertilizer P plants is greater than the median height of the Fertilizer Q plants.",
+    "D": "The two data sets have the same range."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Fertilizer P: median 44, range \\(58 - 30 = 28\\), interquartile range \\(49 - 38 = 11\\).",
+    "Fertilizer Q: median 46, range \\(61 - 26 = 35\\), interquartile range \\(55 - 35 = 20\\).",
+    "Only the statement about the interquartile ranges is true: 20 is greater than 11."
+  ],
+  "explanation": {
+    "A": "Correct. The interquartile range is \\(55 - 35 = 20\\) for Fertilizer Q and \\(49 - 38 = 11\\) for Fertilizer P.",
+    "B": "Incorrect. The greatest height for Fertilizer P is 58 centimeters, but the greatest for Fertilizer Q is 61 centimeters.",
+    "C": "Incorrect. The median for Fertilizer P is 44 and the median for Fertilizer Q is 46, so the Fertilizer Q median is greater.",
+    "D": "Incorrect. The ranges are \\(58 - 30 = 28\\) and \\(61 - 26 = 35\\), which are not equal."
+  },
+  "traps": {
+    "B": "misread_graph",
+    "C": "misread_graph",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nP, Q = figure['plots']\nassert not P['median'] > Q['median']\nassert not P['max'] > Q['max']\nassert P['max'] - P['min'] != Q['max'] - Q['min']\nassert Q['q3'] - Q['q1'] > P['q3'] - P['q1']\nassert answer == 'D' and 'interquartile' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

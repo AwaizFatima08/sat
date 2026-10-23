@@ -1,0 +1,59 @@
+{
+  "id": "m-tvd-0114",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A data set has the line of best fit \\(y = 0.8x + 12\\). The data point with \\(x = 20\\) has a residual of \\(-3\\). Another data point has the same \\(y\\)-value as this point and a residual of 5. What is the \\(x\\)-value of the other data point? (Residual = actual \\(y\\)-value \\(-\\) predicted \\(y\\)-value.)",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10\\)",
+    "B": "\\(30\\)",
+    "C": "\\(16.25\\)",
+    "D": "\\(22.5\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "At \\(x = 20\\), the predicted value is \\(0.8(20) + 12 = 28\\). The residual is \\(-3\\), so the actual \\(y\\)-value is \\(28 - 3 = 25\\).",
+    "The other point also has \\(y = 25\\) and a residual of 5, so its predicted value is \\(25 - 5 = 20\\).",
+    "Solve \\(0.8x + 12 = 20\\): \\(0.8x = 8\\), so \\(x = 10\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The shared \\(y\\)-value is 25, the other point's predicted value is \\(25 - 5 = 20\\), and \\(0.8x + 12 = 20\\) gives \\(x = 10\\).",
+    "B": "Incorrect. The residual changes from \\(-3\\) to 5, so the predicted value is 8 less, which means \\(x\\) is \\(\\frac{8}{0.8} = 10\\) less than 20, not 10 more.",
+    "C": "Incorrect. This ignores the second residual and solves \\(0.8x + 12 = 25\\), treating the actual value 25 as the predicted value.",
+    "D": "Incorrect. This adds the residual to the actual value, \\(25 + 5 = 30\\), and solves \\(0.8x + 12 = 30\\). The predicted value is actual minus residual: \\(25 - 5 = 20\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = Rational('0.8')*x + 12\nyv = f.subs(x, 20) - 3\nassert yv == 25\ns = solve(Eq(yv - f, 5), x)\nassert s == [10]\nassert value(choices[answer]) == s[0]\nassert all(value(choices[k]) != s[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

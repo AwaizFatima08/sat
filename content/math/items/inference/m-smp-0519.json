@@ -1,0 +1,80 @@
+{
+  "id": "m-smp-0519",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A survey company asked a random sample of 400 cricket fans in Lahore, Pakistan, which format of cricket they prefer. The results are shown in the table. Suppose the 25,000 fans at a match in Lahore are similar to the fans in the sample. Based on the survey, about how many more of these 25,000 fans would prefer T20 than would prefer ODI?",
+  "figure": {
+    "kind": "table",
+    "title": "Preferred cricket format",
+    "columns": [
+      "Format",
+      "Number of fans"
+    ],
+    "rows": [
+      [
+        "Test",
+        64
+      ],
+      [
+        "ODI",
+        116
+      ],
+      [
+        "T20",
+        220
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(7{,}250\\)",
+    "B": "\\(104\\)",
+    "C": "\\(6{,}500\\)",
+    "D": "\\(13{,}750\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "In the sample, \\(220 - 116 = 104\\) more fans preferred T20 than ODI.",
+    "As a proportion of the sample: \\(\\frac{104}{400} = 0.26\\).",
+    "For 25,000 fans: \\(0.26(25{,}000) = 6{,}500\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the estimated number of fans who prefer ODI, \\(\\frac{116}{400}(25{,}000)\\), not the difference.",
+    "B": "Incorrect. 104 is the difference in the SAMPLE of 400 fans; it has not been scaled up to 25,000 fans.",
+    "C": "Correct. The difference is \\(\\frac{104}{400} = 0.26\\) of the sample, and \\(0.26(25{,}000) = 6{,}500\\).",
+    "D": "Incorrect. This is the estimated number of fans who prefer T20, \\(\\frac{220}{400}(25{,}000)\\); the ODI fans still need to be subtracted."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nrows = dict((r[0], r[1]) for r in figure['rows'])\nn = sum(rows.values())\nassert n == 400\nest = Rational(rows['T20'] - rows['ODI'], n) * 25000\nassert est == 6500 and value(choices[answer]) == est\nassert all(value(choices[k]) != est for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

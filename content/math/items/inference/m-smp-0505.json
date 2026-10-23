@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0505",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Based on a random sample, the plausible values for the mean of a population range from 18.4 to 22.0. What is the margin of error associated with the sample mean?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1.8\\)",
+    "B": "\\(3.6\\)",
+    "C": "\\(20.2\\)",
+    "D": "\\(0.9\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The estimate is the midpoint of the plausible values, and the margin of error is the distance from the midpoint to either end.",
+    "The range is \\(22.0 - 18.4 = 3.6\\) wide, so the margin of error is half of that: \\(\\frac{3.6}{2} = 1.8\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The margin of error is half the width of the range: \\(\\frac{22.0 - 18.4}{2} = 1.8\\).",
+    "B": "Incorrect. 3.6 is the width of the whole range; the margin of error is the distance from the estimate to one end, half the width.",
+    "C": "Incorrect. 20.2 is the sample mean (the midpoint of the range), not the margin of error.",
+    "D": "Incorrect. This halves the width twice; the margin of error is half the width, 1.8."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "wrong_quantity",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nlo, hi = Rational('18.4'), Rational('22.0')\nmoe = (hi - lo) / 2\nassert moe == Rational('1.8')\nassert value(choices[answer]) == moe\nassert all(value(choices[k]) != moe for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

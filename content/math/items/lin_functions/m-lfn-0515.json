@@ -1,0 +1,90 @@
+{
+  "id": "m-lfn-0515",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A cyclist rides home at a constant speed. The graph shows her distance from home \\(d\\), in kilometers, \\(t\\) hours after she starts riding. Which equation represents this relationship?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      0,
+      5
+    ],
+    "y": [
+      0,
+      70
+    ],
+    "curves": [
+      {
+        "expr": "60 - 15*x",
+        "label": "distance"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 60,
+        "label": "(0, 60)"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "label": "(4, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "Time (hours)",
+    "y_label": "Distance from home (km)"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(d = 60 - 15t\\)",
+    "B": "\\(d = 60 + 15t\\)",
+    "C": "\\(d = 4 - 15t\\)",
+    "D": "\\(d = 60 - \\frac{1}{15}t\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The graph passes through \\((0, 60)\\) and \\((4, 0)\\).",
+    "Slope \\(= \\frac{0 - 60}{4 - 0} = -15\\) kilometers per hour, and the \\(d\\)-intercept is 60.",
+    "So \\(d = 60 - 15t\\)."
+  ],
+  "explanation": {
+    "A": "Correct. She starts 60 kilometers from home and gets 15 kilometers closer each hour, reaching home at \\(t = 4\\).",
+    "B": "Incorrect. The distance from home decreases over time, so the slope must be negative.",
+    "C": "Incorrect. This uses 4, the time when she reaches home, as the starting distance.",
+    "D": "Incorrect. This uses \\(\\frac{4}{60} = \\frac{1}{15}\\), the change in time over the change in distance, as the rate; that is the reciprocal of the slope's size."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nt = symbols('t')\np = figure['points']\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if all(rhs(choices[k]).subs(t, q['x']) == q['y'] for q in p)]\nassert ok == [answer]\nassert simplify(rhs(choices[answer]) - sympify(figure['curves'][0]['expr']).subs(symbols('x'), t)) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

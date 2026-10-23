@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0007",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "For a promotion, a café reduced the price of a sandwich by \\(20\\%\\). After the promotion ended, the café increased the reduced price by \\(p\\%\\), so that the sandwich again cost its original price. What is the value of \\(p\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20\\)",
+    "B": "\\(25\\)",
+    "C": "\\(80\\)",
+    "D": "\\(125\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let the original price be \\(x\\). The reduced price is \\(0.8x\\).",
+    "Increasing by \\(p\\%\\) gives \\(0.8x\\left(1 + \\frac{p}{100}\\right) = x\\), so \\(1 + \\frac{p}{100} = \\frac{1}{0.8} = 1.25\\).",
+    "Therefore \\(p = 25\\). The increase is a larger percent because it is taken of the smaller, reduced price."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of assuming that a \\(20\\%\\) increase undoes a \\(20\\%\\) decrease. The increase is taken of the reduced price, so \\(0.8 \\cdot 1.2 = 0.96\\), not 1.",
+    "B": "Correct. The reduced price is \\(0.8\\) times the original, and \\(0.8 \\cdot 1.25 = 1\\), so the price must increase by \\(25\\%\\).",
+    "C": "Incorrect. This is the reduced price as a percent of the original price, \\(80\\%\\), not the percent increase needed.",
+    "D": "Incorrect. This is the growth factor 1.25 written as \\(125\\%\\). The percent increase is \\(125\\% - 100\\% = 25\\%\\)."
+  },
+  "traps": {
+    "A": "percent_add",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "p = symbols('p')\nsol = solve(Eq(Rational(8, 10) * (1 + p / 100), 1), p)\nassert sol == [25]\nassert value(choices[answer]) == sol[0]\nassert all(value(choices[k]) != sol[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

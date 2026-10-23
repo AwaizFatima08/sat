@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0162",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(kx^{2} - 6x + 3 = 0\\), \\(k\\) is a constant. What are all the values of \\(k\\) for which the equation has exactly one real solution?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-3\\) only",
+    "B": "\\(0\\) and \\(3\\)",
+    "C": "\\(3\\) only",
+    "D": "\\(12\\) only"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "If \\(k = 0\\), the equation is linear: \\(-6x + 3 = 0\\), which has exactly one solution, \\(x = \\frac{1}{2}\\).",
+    "If \\(k \\ne 0\\), the equation is quadratic, and it has exactly one real solution when its discriminant is 0: \\((-6)^{2} - 4(k)(3) = 36 - 12k = 0\\), so \\(k = 3\\).",
+    "So the values are \\(0\\) and \\(3\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of a sign error in the discriminant, \\(-36 - 12k = 0\\). With \\(k = -3\\), the discriminant is 72, so there are two real solutions.",
+    "B": "Correct. \\(k = 0\\) gives the linear equation \\(-6x + 3 = 0\\), and \\(k = 3\\) gives \\(3(x - 1)^{2} = 0\\); each has exactly one solution.",
+    "C": "Incorrect. This finds only the value that makes the discriminant 0. When \\(k = 0\\), the equation is linear and also has exactly one solution.",
+    "D": "Incorrect. This is the result of using \\(b^{2} - ac\\) instead of \\(b^{2} - 4ac\\). With \\(k = 12\\), the discriminant is negative, so there are no real solutions."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx, k = symbols('x k')\nassert solve(36 - 12*k, k) == [3]\ngood = [kv for kv in range(-20, 21) if len([s for s in solve(kv*x**2 - 6*x + 3, x) if s.is_real]) == 1]\nassert good == [0, 3]\nassert choices[answer] == '\\\\(0\\\\) and \\\\(3\\\\)'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

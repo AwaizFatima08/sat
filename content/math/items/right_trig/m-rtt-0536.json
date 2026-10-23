@@ -1,0 +1,102 @@
+{
+  "id": "m-rtt-0536",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In triangle \\(ABC\\), the measure of angle \\(B\\) is \\(45^{\\circ}\\), the measure of angle \\(C\\) is \\(30^{\\circ}\\), and \\(AB = 6\\sqrt{2}\\). What is the length of \\(\\overline{AC}\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "B": [
+        0,
+        0
+      ],
+      "C": [
+        16.392,
+        0
+      ],
+      "A": [
+        6,
+        6
+      ]
+    },
+    "segments": [
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "A",
+        "B"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.7,
+          0.6
+        ],
+        "text": "45°"
+      },
+      {
+        "at": [
+          13.6,
+          0.6
+        ],
+        "text": "30°"
+      },
+      {
+        "at": [
+          2.0,
+          3.8
+        ],
+        "text": "6√2"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "12"
+  ],
+  "solution": [
+    "Draw the altitude \\(\\overline{AD}\\) from \\(A\\) to \\(\\overline{BC}\\). Triangle \\(ABD\\) is 45°-45°-90° with hypotenuse \\(6\\sqrt{2}\\), so \\(AD = 6\\).",
+    "Triangle \\(ADC\\) is 30°-60°-90° with \\(AD = 6\\) opposite the \\(30^{\\circ}\\) angle.",
+    "The hypotenuse \\(AC\\) is twice that: \\(AC = 12\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('A','B')-6*sqrt(2))<0.01 and abs(ang('A','B','C')-45)<0.1 and abs(ang('A','C','B')-30)<0.1\nAD=6*sqrt(2)*sin(pi/4)\nans=AD/sin(pi/6)\nassert ans==12 and abs(d('A','C')-ans)<0.01\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "12",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

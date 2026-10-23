@@ -1,0 +1,104 @@
+{
+  "id": "m-lfn-0159",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graphs of the linear functions \\(f\\) and \\(g\\) are shown in the \\(xy\\)-plane. The function \\(h\\) is defined by \\(h(x) = f(x) + g(x)\\). Which equation defines \\(h\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      6
+    ],
+    "y": [
+      -2,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "2*x + 1",
+        "label": "y = f(x)"
+      },
+      {
+        "expr": "-3*x/4 + 4",
+        "label": "y = g(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 1,
+        "label": "(0, 1)"
+      },
+      {
+        "x": 2,
+        "y": 5,
+        "label": "(2, 5)"
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "label": "(0, 4)"
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "label": "(4, 1)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(h(x) = \\frac{11}{4}x + 5\\)",
+    "B": "\\(h(x) = \\frac{5}{4}x + 5\\)",
+    "C": "\\(h(x) = \\frac{5}{4}x + 3\\)",
+    "D": "\\(h(x) = -\\frac{3}{2}x + 4\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(f\\): from \\((0, 1)\\) and \\((2, 5)\\), slope 2, so \\(f(x) = 2x + 1\\).",
+    "\\(g\\): from \\((0, 4)\\) and \\((4, 1)\\), slope \\(-\\frac{3}{4}\\), so \\(g(x) = -\\frac{3}{4}x + 4\\).",
+    "\\(h(x) = 2x + 1 - \\frac{3}{4}x + 4 = \\frac{5}{4}x + 5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The slope \\(\\frac{11}{4}\\) is \\(2 + \\frac{3}{4}\\), which drops the negative sign of the slope of \\(g\\).",
+    "B": "Correct. Adding the functions adds slopes and \\(y\\)-intercepts: \\(2 - \\frac{3}{4} = \\frac{5}{4}\\) and \\(1 + 4 = 5\\).",
+    "C": "Incorrect. The intercept 3 is \\(4 - 1\\); the \\(y\\)-intercepts must be added, not subtracted.",
+    "D": "Incorrect. This multiplies the slopes, \\(2\\left(-\\frac{3}{4}\\right)\\), and uses the \\(y\\)-intercept of \\(g\\) only."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nP = [(q['x'], q['y']) for q in figure['points']]\nline = lambda a, b: Rational(b[1] - a[1], b[0] - a[0])*(x - a[0]) + a[1]\nf, g = line(P[0], P[1]), line(P[2], P[3])\nassert simplify(f - sympify(figure['curves'][0]['expr'])) == 0 and simplify(g - sympify(figure['curves'][1]['expr'])) == 0\nh = expand(f + g)\nrhs = lambda s: value(s.split('=')[1])\nassert [k for k in choices if simplify(rhs(choices[k]) - h) == 0] == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

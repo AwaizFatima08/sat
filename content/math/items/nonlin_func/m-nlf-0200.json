@@ -1,0 +1,46 @@
+{
+  "id": "m-nlf-0200",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = (x - p)(x - q)\\), where \\(p\\) and \\(q\\) are constants. The graph of \\(y = f(x)\\) in the \\(xy\\)-plane crosses the \\(y\\)-axis at \\((0, 12)\\), and its vertex has \\(x\\)-coordinate 4. What is the minimum value of \\(f(x)\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-4"
+  ],
+  "solution": [
+    "\\(f(0) = pq = 12\\), and the vertex is midway between the zeros: \\(\\frac{p + q}{2} = 4\\), so \\(p + q = 8\\).",
+    "So \\(f(x) = x^{2} - 8x + 12 = (x - 2)(x - 6)\\).",
+    "The minimum value is \\(f(4) = (2)(-2) = -4\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, p, q = symbols('x p q')\nsols = solve([p*q - 12, p + q - 8], [p, q], dict=True)\nassert len(sols) == 2\nvals = {((x - s[p])*(x - s[q])).subs(x, 4) for s in sols}\nassert vals == {-4}\nassert Rational(spr_answers[0]) == -4",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "-4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

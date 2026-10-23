@@ -1,0 +1,89 @@
+{
+  "id": "m-smp-0105",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Four inspectors each selected a separate random sample of batteries from the same large shipment to estimate the mean lifetime of all the batteries in the shipment. The table shows each sample's mean lifetime and the associated margin of error. For which sample do the results support the claim that the mean lifetime of all the batteries in the shipment is greater than 40 hours?",
+  "figure": {
+    "kind": "table",
+    "title": "Battery lifetime samples",
+    "columns": [
+      "Sample",
+      "Mean lifetime (hours)",
+      "Margin of error (hours)"
+    ],
+    "rows": [
+      [
+        "1",
+        "47",
+        "6"
+      ],
+      [
+        "2",
+        "52",
+        "13"
+      ],
+      [
+        "3",
+        "44",
+        "5"
+      ],
+      [
+        "4",
+        "41",
+        "2"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Sample 1",
+    "B": "Sample 2",
+    "C": "Sample 4",
+    "D": "Sample 3"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "A sample supports the claim only if every plausible value for the mean, from the sample mean minus the margin of error to the sample mean plus the margin of error, is greater than 40 hours.",
+    "Sample 1: 41 to 53. Sample 2: 39 to 65. Sample 3: 39 to 49. Sample 4: 39 to 43.",
+    "Only Sample 1 has all its plausible values greater than 40 hours."
+  ],
+  "explanation": {
+    "A": "Correct. The plausible values for Sample 1 are \\(47 - 6 = 41\\) to \\(47 + 6 = 53\\) hours, all greater than 40.",
+    "B": "Incorrect. Sample 2 has the greatest mean, but its large margin of error makes 39 hours a plausible value, so the claim is not supported.",
+    "C": "Incorrect. This only checks \\(41 > 40\\); with the margin of error, \\(41 - 2 = 39\\) is also plausible.",
+    "D": "Incorrect. For Sample 3, \\(44 - 5 = 39\\), so a mean of less than 40 hours is plausible."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_formula",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nr = figure['rows']\nok = ['Sample ' + s for s, m, e in r if int(m) - int(e) > 40]\nassert ok == ['Sample 1']\nassert choices[answer] == ok[0]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

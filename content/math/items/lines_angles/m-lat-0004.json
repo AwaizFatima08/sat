@@ -1,0 +1,106 @@
+{
+  "id": "m-lat-0004",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "In the figure, two lines intersect. What is the value of \\(y\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "P": [
+        -6,
+        0
+      ],
+      "Q": [
+        6,
+        0
+      ],
+      "R": [
+        2.052,
+        5.638
+      ],
+      "S": [
+        -2.052,
+        -5.638
+      ]
+    },
+    "segments": [
+      [
+        "P",
+        "Q"
+      ],
+      [
+        "R",
+        "S"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.638,
+          1.147
+        ],
+        "text": "(3x + 10)°"
+      },
+      {
+        "at": [
+          -1.638,
+          -1.147
+        ],
+        "text": "(5x − 30)°"
+      },
+      {
+        "at": [
+          -0.746,
+          1.065
+        ],
+        "text": "y°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "110"
+  ],
+  "solution": [
+    "The angles labeled \\((3x + 10)^{\\circ}\\) and \\((5x - 30)^{\\circ}\\) are vertical angles, so they are equal: \\(3x + 10 = 5x - 30\\), which gives \\(x = 20\\).",
+    "Each of these angles measures \\(3(20) + 10 = 70^{\\circ}\\).",
+    "The angle labeled \\(y^{\\circ}\\) forms a straight line with the \\(70^{\\circ}\\) angle, so \\(y = 180 - 70 = 110\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nx=symbols('x')\nxs=solve(Eq(3*x+10,5*x-30),x)[0]\nans=180-(3*xs+10)\nassert abs(ang('Q','O','R')-(3*xs+10))<0.1 and abs(ang('P','O','S')-(5*xs-30))<0.1 and abs(ang('R','O','P')-ans)<0.1\nassert Rational(spr_answers[0])==ans==110\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "110",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

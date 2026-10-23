@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0536",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "\\[x + y = 10\\] \\[ax + 3y = 18\\] In the system of equations above, \\(a\\) is a constant. The solution \\((x, y)\\) to the system satisfies \\(x = 2y\\). What is the value of \\(a\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6/5"
+  ],
+  "solution": [
+    "Substitute \\(x = 2y\\) into the first equation: \\(3y = 10\\), so \\(y = \\frac{10}{3}\\) and \\(x = \\frac{20}{3}\\).",
+    "Substitute into the second equation: \\(a \\cdot \\frac{20}{3} + 3 \\cdot \\frac{10}{3} = 18\\), so \\(\\frac{20}{3}a = 8\\).",
+    "Then \\(a = \\frac{24}{20} = \\frac{6}{5}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "a, x, y = symbols('a x y')\nxy0 = solve([x + y - 10, x - 2*y], [x, y])\nassert xy0 == {x: Rational(20, 3), y: Rational(10, 3)}\nsol = solve(Eq(a*xy0[x] + 3*xy0[y], 18), a)\nassert sol == [Rational(6, 5)]\nassert [Rational(v) for v in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "6/5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

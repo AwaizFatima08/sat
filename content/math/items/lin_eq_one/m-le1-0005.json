@@ -1,0 +1,79 @@
+{
+  "id": "m-le1-0005",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The table shows the height of a candle at different times after it was lit. The height decreases at a constant rate. How many hours after it was lit will the candle be 4 centimeters tall?",
+  "figure": {
+    "kind": "table",
+    "title": "Candle height",
+    "columns": [
+      "Time (hours)",
+      "Height (centimeters)"
+    ],
+    "rows": [
+      [
+        "0",
+        "24"
+      ],
+      [
+        "2",
+        "20.8"
+      ],
+      [
+        "5",
+        "16"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2.5\\)",
+    "B": "\\(12.5\\)",
+    "C": "\\(15\\)",
+    "D": "\\(17.5\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The rate is \\(\\frac{24 - 20.8}{2} = 1.6\\) centimeters per hour (the 5-hour row agrees: \\(\\frac{24 - 16}{5} = 1.6\\)).",
+    "Height after \\(t\\) hours: \\(h = 24 - 1.6t\\).",
+    "Set \\(24 - 1.6t = 4\\): \\(1.6t = 20\\), so \\(t = 12.5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{4}{1.6}\\), the time it takes to burn 4 centimeters, not the time until 4 centimeters are left.",
+    "B": "Correct. The candle loses 1.6 centimeters per hour, so \\(24 - 1.6t = 4\\) gives \\(t = 12.5\\).",
+    "C": "Incorrect. This is \\(\\frac{24}{1.6}\\), the time until the candle burns down completely (height 0).",
+    "D": "Incorrect. This is the result of adding instead of subtracting: \\(1.6t = 24 + 4\\) gives \\(t = 17.5\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "t = symbols('t')\nr = [[Rational(c) for c in row] for row in figure['rows']]\nrate = (r[0][1] - r[1][1]) / (r[1][0] - r[0][0])\nassert rate == (r[0][1] - r[2][1]) / (r[2][0] - r[0][0])\nsol = solve(Eq(r[0][1] - rate*t, 4), t)\nassert sol == [Rational(25, 2)]\nassert value(choices[answer]) == sol[0]\nassert all(value(choices[k]) != sol[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

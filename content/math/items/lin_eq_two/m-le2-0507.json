@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0507",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A florist spends exactly \\$90 on roses and tulips. The equation \\(2r + 1.5t = 90\\) represents this situation, where \\(r\\) is the number of roses and \\(t\\) is the number of tulips. If the florist buys no tulips, how many roses does the florist buy?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(60\\)",
+    "B": "\\(88\\)",
+    "C": "\\(180\\)",
+    "D": "\\(45\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(t = 0\\): \\(2r = 90\\).",
+    "Divide by 2: \\(r = 45\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{90}{1.5}\\), the number of tulips the florist could buy with no roses.",
+    "B": "Incorrect. This subtracts 2 from 90 instead of dividing 90 by 2.",
+    "C": "Incorrect. This multiplies 90 by 2 instead of dividing by 2.",
+    "D": "Correct. With \\(t = 0\\), \\(2r = 90\\), so \\(r = 45\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_formula",
+    "C": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nr = symbols('r')\nsol = solve(Eq(2*r + Rational(3, 2)*0, 90), r)\nassert sol == [45]\nassert value(choices[answer]) == 45\nassert all(value(choices[k]) != 45 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

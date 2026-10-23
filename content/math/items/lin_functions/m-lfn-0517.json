@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0517",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A scooter-sharing service charges 1 dollar to unlock a scooter plus 0.35 dollar for each minute of riding. Which function gives the total cost \\(C(m)\\), in dollars, of a ride that lasts \\(m\\) minutes?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(C(m) = 1.35m\\)",
+    "B": "\\(C(m) = m + 0.35\\)",
+    "C": "\\(C(m) = 0.35(m + 1)\\)",
+    "D": "\\(C(m) = 0.35m + 1\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The per-minute charge, 0.35 dollar, is multiplied by the number of minutes: \\(0.35m\\).",
+    "The unlock charge, 1 dollar, is paid once: \\(C(m) = 0.35m + 1\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds the unlock charge to the per-minute charge, so the 1 dollar would be paid every minute instead of once.",
+    "B": "Incorrect. This switches the two charges: it charges 1 dollar per minute and 0.35 dollar once.",
+    "C": "Incorrect. This equals \\(0.35m + 0.35\\); the unlock charge of 1 dollar was placed inside the parentheses and multiplied by 0.35.",
+    "D": "Correct. The cost is 0.35 dollar times the number of minutes, plus the one-time unlock charge of 1 dollar."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nm = symbols('m')\nC = Rational(35, 100)*m + 1\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if simplify(rhs(choices[k]) - C) == 0]\nassert ok == [answer]\nassert C.subs(m, 10) == Rational(9, 2)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

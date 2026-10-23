@@ -1,0 +1,57 @@
+{
+  "id": "m-rat-0003",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A passenger train in Pakistan travels at an average speed of 80 kilometers per hour. At this speed, how many minutes does the train take to travel 60 kilometers?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(45\\)",
+    "B": "\\(75\\)",
+    "C": "\\(80\\)",
+    "D": "\\(4800\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Time equals distance divided by speed: \\(\\frac{60}{80} = 0.75\\) hour.",
+    "Convert to minutes: \\(0.75 \\cdot 60 = 45\\) minutes."
+  ],
+  "explanation": {
+    "A": "Correct. The trip takes \\(\\frac{60}{80} = 0.75\\) hour, and \\(0.75 \\cdot 60 = 45\\) minutes.",
+    "B": "Incorrect. This is the result of reading 0.75 hour as 75 minutes. An hour has 60 minutes, so 0.75 hour is \\(0.75 \\cdot 60 = 45\\) minutes.",
+    "C": "Incorrect. This is the result of dividing speed by distance, \\(\\frac{80}{60}\\) hour, which is 80 minutes. Time is distance divided by speed.",
+    "D": "Incorrect. This is the result of multiplying the speed by the distance, \\(80 \\cdot 60\\). Time is distance divided by speed."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "reciprocal",
+    "D": "wrong_formula"
+  },
+  "verify": "hours = Rational(60, 80)\nminutes = hours * 60\nassert minutes == 45\nassert value(choices[answer]) == minutes\nassert all(value(choices[k]) != minutes for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "m-tvd-0507",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The scatterplot shows 8 data points and the line \\(y = x + 2\\). How many of the data points lie above the line?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "line": "x + 2"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(8\\)",
+    "B": "\\(5\\)",
+    "C": "\\(3\\)",
+    "D": "\\(2\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "A point lies above the line when its \\(y\\)-value is greater than \\(x + 2\\).",
+    "Check each point: \\((1, 4)\\), \\((4, 7)\\) and \\((6, 9)\\) are above the line; the other 5 points are below it.",
+    "So 3 points lie above the line."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the total number of data points.",
+    "B": "Incorrect. This is the number of points below the line.",
+    "C": "Correct. Only \\((1, 4)\\), \\((4, 7)\\) and \\((6, 9)\\) have \\(y\\)-values greater than \\(x + 2\\).",
+    "D": "Incorrect. This misses one of the three points above the line, such as \\((1, 4)\\), where \\(4 > 1 + 2\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\npts = figure['points']\nabove = sum(1 for a, b in pts if b > a + 2)\nassert above == 3 and len(pts) == 8\nassert value(choices[answer]) == above\nassert all(value(choices[k]) != above for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

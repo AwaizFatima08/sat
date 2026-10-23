@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0525",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(x^{2} - 8x = 20\\), what are all the possible values of \\(x - 4\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-6\\) and \\(6\\)",
+    "B": "\\(-\\sqrt{20}\\) and \\(\\sqrt{20}\\)",
+    "C": "\\(-2\\) and \\(10\\)",
+    "D": "\\(6\\) only"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Complete the square: add \\(16\\) to both sides, giving \\(x^{2} - 8x + 16 = 36\\).",
+    "So \\((x - 4)^{2} = 36\\), which means \\(x - 4 = 6\\) or \\(x - 4 = -6\\).",
+    "(Check: \\(x = 10\\) or \\(x = -2\\), and both satisfy \\(x^{2} - 8x = 20\\).)"
+  ],
+  "explanation": {
+    "A": "Correct. \\((x - 4)^{2} = 36\\), so \\(x - 4 = \\pm 6\\).",
+    "B": "Incorrect. This is the result of forgetting to add \\(16\\) to the right side when completing the square.",
+    "C": "Incorrect. These are the values of \\(x\\), not the values of \\(x - 4\\).",
+    "D": "Incorrect. This is the result of taking only the positive square root of \\(36\\); \\(x - 4\\) can also equal \\(-6\\)."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "wrong_quantity",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nvals = set(s - 4 for s in solve(Eq(x**2 - 8*x, 20), x))\nassert vals == {-6, 6}\nparse = lambda s: set(value(p.replace(' only', '')) for p in s.split(' and '))\nassert parse(choices[answer]) == vals\nassert all(parse(choices[k]) != vals for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

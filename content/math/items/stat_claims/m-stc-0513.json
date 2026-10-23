@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0513",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "An online store mailed a satisfaction survey to 2,000 customers selected at random from all of its customers. Only 260 customers returned the survey, and 80% of them said they were dissatisfied with the store's delivery times. Which of the following best describes the 80% result?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "It is unreliable only because 2,000 customers is too small a sample for a large store.",
+    "B": "It may not represent all of the store's customers, because the customers who returned the survey chose to respond and may differ from those who did not.",
+    "C": "It is a reliable estimate for all of the store's customers, because the 2,000 customers were selected at random.",
+    "D": "It must be lower than the true percent of all customers who are dissatisfied."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Only 260 of the 2,000 selected customers (13%) responded.",
+    "Customers who bother to return a survey, often those who are unhappy, may differ from the rest, so the 80% may not represent all customers (nonresponse bias)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The problem is the 13% response rate, not the size of the group that was mailed the survey.",
+    "B": "Correct. With so many nonresponses, the responders may not represent all customers.",
+    "C": "Incorrect. The random selection is undone by the low response; the 260 responders chose themselves.",
+    "D": "Incorrect. Nonresponse bias can push the estimate either way; here unhappy customers may be more likely to respond, making 80% too high, not too low."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nmailed, returned = 2000, 260\nrate = Rational(returned, mailed)\nassert rate == Rational(13, 100) and rate < Rational(1, 2)\nok = [k for k, v in choices.items() if 'chose to respond' in v]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

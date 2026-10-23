@@ -1,0 +1,46 @@
+{
+  "id": "m-arv-0536",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A water tank in an apartment building in Colombo is shaped like a rectangular prism. Its base is 2 meters long and 1.5 meters wide, and the water in it is 0.8 meter deep. A solid cube with edges of 0.6 meter is lowered into the tank until it rests on the bottom. The cube is completely under water, and no water overflows. By how many centimeters does the water level rise?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7.2"
+  ],
+  "solution": [
+    "The cube pushes aside its own volume of water: \\(0.6^{3} = 0.216\\) cubic meter.",
+    "That volume spreads over the base area \\(2 \\cdot 1.5 = 3\\) square meters, so the level rises \\(0.216 \\div 3 = 0.072\\) meter.",
+    "\\(0.072\\) meter \\(= 7.2\\) centimeters. (The new depth, 0.872 m, is more than 0.6 m, so the cube is fully under water.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "rise=Rational('0.6')**3/(2*Rational('1.5'))\nassert Rational('0.8')+rise>Rational('0.6')\nans=rise*100\nassert ans==Rational(36,5)\nassert Rational(spr_answers[0])==ans and len(spr_answers)==1\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "7.2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

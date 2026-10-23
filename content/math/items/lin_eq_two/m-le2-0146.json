@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0146",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A hardware store sells rope for \\$2 per meter and chain for \\$15 per meter. The equation \\(2x + 15y = 600\\) represents an order that costs \\$600 for \\(x\\) meters of rope and \\(y\\) meters of chain. If the length of rope in the order is instead given as \\(r\\) centimeters, which equation represents the same order? (1 meter = 100 centimeters)",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2r + 15y = 60{,}000\\)",
+    "B": "\\(2r + 1{,}500y = 600\\)",
+    "C": "\\(0.02r + 15y = 600\\)",
+    "D": "\\(200r + 15y = 600\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "\\(r\\) centimeters is \\(\\frac{r}{100}\\) meters, so \\(x = \\frac{r}{100}\\).",
+    "Substitute: \\(2\\left(\\frac{r}{100}\\right) + 15y = 600\\), which is \\(0.02r + 15y = 600\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Multiplying \\(0.02r + 15y = 600\\) by 100 gives \\(2r + 1{,}500y = 60{,}000\\); this scales only the rope term and the total, not the chain term.",
+    "B": "Incorrect. This multiplies both terms on the left by 100 but leaves the total at 600.",
+    "C": "Correct. Rope costs \\(\\frac{2}{100} = 0.02\\) dollar per centimeter, so the cost of the rope is \\(0.02r\\).",
+    "D": "Incorrect. This multiplies the price by 100 instead of dividing it; rope costs \\$0.02 per centimeter, not \\$200."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nr, y = symbols('r y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\ntarget = 2*(r/100) + 15*y - 600\nok = [k for k in choices if simplify(eq(choices[k])/target).is_number]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

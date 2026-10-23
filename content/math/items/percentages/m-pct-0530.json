@@ -1,0 +1,59 @@
+{
+  "id": "m-pct-0530",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A chemist has 12 liters of a solution that is \\(30\\%\\) salt by volume. How many liters of pure water must be added to make a solution that is \\(20\\%\\) salt by volume?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3.6\\)",
+    "B": "\\(1.2\\)",
+    "C": "\\(6\\)",
+    "D": "\\(18\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The amount of salt stays the same: \\(0.3 \\cdot 12 = 3.6\\) liters.",
+    "For the new total volume \\(T\\): \\(0.2T = 3.6\\), so \\(T = 18\\) liters.",
+    "Water to add: \\(18 - 12 = 6\\) liters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the amount of salt in the solution, not the amount of water to add.",
+    "B": "Incorrect. This takes the difference in percents, \\(30\\% - 20\\% = 10\\%\\), of 12 liters. The salt must stay the same while the total volume grows.",
+    "C": "Correct. After adding 6 liters, the 3.6 liters of salt are \\(\\frac{3.6}{18} = 20\\%\\) of the solution.",
+    "D": "Incorrect. This is the total volume of the new solution. The 12 liters already in the container must be subtracted."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "percent_add",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nw = symbols('w')\nsol = solve(Eq(Rational(30, 100) * 12, Rational(20, 100) * (12 + w)), w)\nassert sol == [6]\nv = sol[0]\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

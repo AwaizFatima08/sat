@@ -1,0 +1,57 @@
+{
+  "id": "m-lfn-0002",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A gym in Karachi charges its members according to the function \\(C(m) = 3500m + 5000\\), where \\(C(m)\\) is the total cost, in rupees, for \\(m\\) months of membership. What is the best interpretation of the number 5000 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The cost, in rupees, of each month of membership",
+    "B": "The total cost, in rupees, of the first month of membership",
+    "C": "A one-time cost, in rupees, that does not depend on the number of months",
+    "D": "The number of months of membership that cost 5,000 rupees"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "In \\(C(m) = 3500m + 5000\\), the term \\(3500m\\) grows with each month, so 3500 is the cost per month.",
+    "The 5000 is added once no matter how many months: \\(C(0) = 5000\\). It is a one-time cost, such as a joining fee."
+  ],
+  "explanation": {
+    "A": "Incorrect. The cost of each month is the coefficient of \\(m\\), 3500 rupees.",
+    "B": "Incorrect. The total for the first month is \\(C(1) = 3500 + 5000 = 8500\\) rupees.",
+    "C": "Correct. The constant term is paid once and does not change with \\(m\\); it is the cost when \\(m = 0\\).",
+    "D": "Incorrect. 5000 is an amount of money in rupees, not a number of months."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "m = symbols('m')\nC = 3500*m + 5000\nassert C.subs(m, 0) == 5000 and diff(C, m) == 3500\nassert C.subs(m, 1) == 8500\nassert 'one-time' in choices[answer]\nassert sum('one-time' in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

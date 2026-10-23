@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0501",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A nutrition researcher recruited 80 adult volunteers and randomly assigned 40 of them to drink two cups of green tea each day and the other 40 to drink two cups of water each day. After eight weeks, the researcher compared the average resting heart rates of the two groups. Which type of study is this?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A census",
+    "B": "A randomized experiment",
+    "C": "An observational study",
+    "D": "A sample survey"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The researcher decided which drink each person had, and made that decision at random.",
+    "Imposing treatments by random assignment and comparing the groups is a randomized experiment."
+  ],
+  "explanation": {
+    "A": "Incorrect. A census collects data from every member of a population; this study used 80 volunteers.",
+    "B": "Correct. The researcher assigned the treatments (tea or water) at random, which makes this a randomized experiment.",
+    "C": "Incorrect. In an observational study the researcher only records what people already do; here the researcher assigned the drinks.",
+    "D": "Incorrect. A sample survey asks questions of a sample; this study imposed treatments and measured an outcome."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\ndesign = {'treatment_imposed': True, 'random_assignment': True, 'whole_population': False}\nkind = 'A randomized experiment' if design['treatment_imposed'] and design['random_assignment'] else 'An observational study'\nok = [k for k, v in choices.items() if v == kind]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

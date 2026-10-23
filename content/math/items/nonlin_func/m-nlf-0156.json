@@ -1,0 +1,45 @@
+{
+  "id": "m-nlf-0156",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A ball is dropped from a height of 512 centimeters. After each bounce, it rises to \\(\\frac{3}{4}\\) of the height from which it last fell. What is the height, in centimeters, that the ball reaches after its third bounce?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "216"
+  ],
+  "solution": [
+    "The height after \\(n\\) bounces is \\(H(n) = 512\\left(\\frac{3}{4}\\right)^{n}\\).",
+    "\\(H(3) = 512 \\cdot \\frac{27}{64} = 216\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "n = symbols('n')\nH = Lambda(n, 512*Rational(3, 4)**n)\nassert H(3) == 216\nassert [Rational(s) for s in spr_answers] == [H(3)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "216",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

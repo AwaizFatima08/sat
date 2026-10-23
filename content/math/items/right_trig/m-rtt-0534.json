@@ -1,0 +1,59 @@
+{
+  "id": "m-rtt-0534",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A right triangle has an acute angle \\(A\\) with \\(\\sin A = \\frac{5}{13}\\). The perimeter of the triangle is 60. What is the area of the triangle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(240\\)",
+    "B": "\\(120\\)",
+    "C": "\\(30\\)",
+    "D": "\\(26\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(\\sin A = \\frac{5}{13}\\), so the sides are \\(5k\\), \\(12k\\), and \\(13k\\) (since \\(\\sqrt{13^{2} - 5^{2}} = 12\\)).",
+    "\\(5k + 12k + 13k = 30k = 60\\), so \\(k = 2\\): the sides are 10, 24, and 26.",
+    "Area \\(= \\frac{1}{2}(10)(24) = 120\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(10 \\cdot 24\\) without the factor \\(\\frac{1}{2}\\).",
+    "B": "Correct. The sides are 10, 24, and 26, so the area is \\(\\frac{1}{2}(10)(24) = 120\\).",
+    "C": "Incorrect. This is the area of a 5-12-13 triangle; the sides must first be scaled so the perimeter is 60.",
+    "D": "Incorrect. This is the length of the hypotenuse, not the area."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nk=symbols('k',positive=True)\nleg=sqrt(13**2-5**2)\nkk=solve(Eq((5+leg+13)*k,60),k)[0]\nassert leg==12 and kk==2\nans=Rational(1,2)*(5*kk)*(leg*kk)\nassert ans==120\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

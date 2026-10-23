@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0537",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A chemist has 12 liters of a salt solution that is 30% salt. How many liters of pure water must be added to make a solution that is 20% salt?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6\\)",
+    "B": "\\(3.6\\)",
+    "C": "\\(1.2\\)",
+    "D": "\\(18\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The amount of salt stays the same: \\(0.30 \\cdot 12 = 3.6\\) liters.",
+    "After adding \\(w\\) liters of water, the volume is \\(12 + w\\), so \\(0.20(12 + w) = 3.6\\).",
+    "Then \\(12 + w = 18\\) and \\(w = 6\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The 3.6 liters of salt must be 20% of the new volume, so \\(12 + w = 18\\) and \\(w = 6\\).",
+    "B": "Incorrect. This is the amount of salt, in liters, in the solution.",
+    "C": "Incorrect. This is the result of adding the water to the salt instead of to the whole volume: \\(0.30 \\cdot 12 = 0.20 \\cdot 12 + w\\).",
+    "D": "Incorrect. This is the total volume of the new solution; the 12 liters already there must be subtracted."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nw = symbols('w')\ns = solve(Eq(Rational(30, 100)*12, Rational(20, 100)*(12 + w)), w)[0]\nassert s == 6\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0519",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A company sells a gadget at a price of \\(p\\) dollars. At this price, it expects to sell \\((200 - 4p)\\) gadgets. Revenue is the price per gadget times the number of gadgets sold. Which expression represents the expected revenue, in dollars?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(200p - 4p^{2}\\)",
+    "B": "\\(196p\\)",
+    "C": "\\(200 - 4p^{2}\\)",
+    "D": "\\(200p - 4p\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Revenue is \\(p(200 - 4p)\\).",
+    "Distribute \\(p\\) to both terms: \\(200p - 4p^{2}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(p(200 - 4p) = 200p - 4p^{2}\\).",
+    "B": "Incorrect. This is the result of combining \\(200\\) and \\(-4p\\) into \\(196\\) before multiplying; they are not like terms.",
+    "C": "Incorrect. This is the result of multiplying only \\(4p\\) by \\(p\\) and not the 200.",
+    "D": "Incorrect. This is the result of writing \\(p \\cdot 4p\\) as \\(4p\\) instead of \\(4p^{2}\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\np = symbols('p')\ntarget = p*(200 - 4*p)\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

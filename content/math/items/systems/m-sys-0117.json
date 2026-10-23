@@ -1,0 +1,82 @@
+{
+  "id": "m-sys-0117",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A café charges the same price for every sandwich and the same price for every juice. The table shows two orders and their total costs. What is the price, in dollars, of one juice?",
+  "figure": {
+    "kind": "table",
+    "title": "Café orders",
+    "columns": [
+      "Order",
+      "Sandwiches",
+      "Juices",
+      "Total cost (dollars)"
+    ],
+    "rows": [
+      [
+        "1",
+        "2",
+        "3",
+        "21.50"
+      ],
+      [
+        "2",
+        "4",
+        "1",
+        "25.50"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9.00\\)",
+    "B": "\\(5.50\\)",
+    "C": "\\(4.30\\)",
+    "D": "\\(3.50\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(s\\) and \\(j\\) be the prices: \\(2s + 3j = 21.50\\) and \\(4s + j = 25.50\\).",
+    "From the second equation, \\(j = 25.50 - 4s\\). Substitute: \\(2s + 76.50 - 12s = 21.50\\), so \\(10s = 55\\) and \\(s = 5.50\\).",
+    "Then \\(j = 25.50 - 22 = 3.50\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the price of one sandwich and one juice together.",
+    "B": "Incorrect. This is the price of one sandwich, not one juice.",
+    "C": "Incorrect. This is \\(21.50 \\div 5\\), which treats sandwiches and juices in order 1 as having the same price.",
+    "D": "Correct. A sandwich costs \\$5.50 and a juice costs \\$3.50; check: \\(2(5.50) + 3(3.50) = 21.50\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\ns, j = symbols('s j')\nr = [[Rational(c) for c in row[1:]] for row in figure['rows']]\nsol = solve([r[0][0]*s + r[0][1]*j - r[0][2], r[1][0]*s + r[1][1]*j - r[1][2]], [s, j])\nassert sol == {s: Rational(11, 2), j: Rational(7, 2)}\nassert value(choices[answer]) == sol[j]\nassert all(value(choices[k]) != sol[j] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

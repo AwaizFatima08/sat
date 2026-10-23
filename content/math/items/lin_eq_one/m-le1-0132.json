@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0132",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(0.15(40 - x) + 0.4x = 9.5\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "14"
+  ],
+  "solution": [
+    "Distribute: \\(6 - 0.15x + 0.4x = 9.5\\), so \\(6 + 0.25x = 9.5\\).",
+    "Subtract 6: \\(0.25x = 3.5\\).",
+    "Divide by 0.25: \\(x = 14\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nsol = solve(Eq(Rational(15, 100)*(40 - x) + Rational(4, 10)*x, Rational(19, 2)), x)\nassert sol == [14]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "14",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

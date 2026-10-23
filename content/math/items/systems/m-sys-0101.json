@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0101",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[x = y + 4\\] \\[2x + 3y = 23\\] What is the solution \\((x, y)\\) to the system of equations above?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((4, 5)\\)",
+    "B": "\\((7, 3)\\)",
+    "C": "\\((5, 1)\\)",
+    "D": "\\((3, 7)\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = y + 4\\) into the second equation: \\(2(y + 4) + 3y = 23\\).",
+    "So \\(5y + 8 = 23\\), \\(5y = 15\\) and \\(y = 3\\).",
+    "Then \\(x = 3 + 4 = 7\\). The solution is \\((7, 3)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This point satisfies \\(2x + 3y = 23\\) but not \\(x = y + 4\\), since \\(4 \\ne 5 + 4\\).",
+    "B": "Correct. \\(7 = 3 + 4\\) and \\(2(7) + 3(3) = 23\\), so \\((7, 3)\\) satisfies both equations.",
+    "C": "Incorrect. This point satisfies \\(x = y + 4\\) but not \\(2x + 3y = 23\\), since \\(2(5) + 3(1) = 13\\).",
+    "D": "Incorrect. This reverses the coordinates: \\(x = 7\\) and \\(y = 3\\), not the other way around."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\npt = lambda s: [value(t) for t in s.strip('\\\\()').split(',')]\n\nx, y = symbols('x y')\nsol = solve([x - (y + 4), 2*x + 3*y - 23], [x, y])\nassert sol == {x: 7, y: 3}\nassert pt(choices[answer]) == [7, 3]\nassert all(pt(choices[k]) != [7, 3] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0156",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is linear, and \\(f(3x) = 3f(x) - 8\\) for all values of \\(x\\). If \\(f(2) = 10\\), what is the value of \\(f(5)\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "19"
+  ],
+  "solution": [
+    "Let \\(f(x) = mx + b\\). Then \\(f(3x) = 3mx + b\\) and \\(3f(x) - 8 = 3mx + 3b - 8\\).",
+    "These are equal for all \\(x\\), so \\(b = 3b - 8\\), which gives \\(b = 4\\).",
+    "\\(f(2) = 2m + 4 = 10\\), so \\(m = 3\\). Then \\(f(5) = 3(5) + 4 = 19\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, m, b = symbols('x m b')\nf = lambda u: m*u + b\neqs = Poly(expand(f(3*x) - (3*f(x) - 8)), x).all_coeffs() + [f(2) - 10]\nsol = solve(eqs, [m, b], dict=True)\nassert sol == [{m: 3, b: 4}]\nans = f(5).subs(sol[0])\nassert ans == 19 and spr_answers == [str(ans)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "19",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

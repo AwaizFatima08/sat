@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0511",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following is the solution set of the inequality \\(3(2x - 5) < 4x + 9\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x < 12\\)",
+    "B": "\\(x < -3\\)",
+    "C": "\\(x < 7\\)",
+    "D": "\\(x > 12\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Distribute: \\(6x - 15 < 4x + 9\\).",
+    "Subtract \\(4x\\) and add 15 on both sides: \\(2x < 24\\).",
+    "Divide by 2: \\(x < 12\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(6x - 15 < 4x + 9\\) gives \\(2x < 24\\), so \\(x < 12\\).",
+    "B": "Incorrect. This moves \\(-15\\) to the right side without changing its sign: \\(2x < 9 - 15\\), so \\(x < -3\\).",
+    "C": "Incorrect. This multiplies only the \\(2x\\) by 3, writing \\(6x - 5\\); then \\(2x < 14\\) gives \\(x < 7\\).",
+    "D": "Incorrect. This reverses the inequality sign, but no step multiplies or divides by a negative number."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nR = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nx = symbols('x')\nS = solve_univariate_inequality(3*(2*x - 5) < 4*x + 9, x, relational=False)\nassert S == Interval.open(-oo, 12)\nok = [k for k in choices if R(choices[k]).as_set() == S]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

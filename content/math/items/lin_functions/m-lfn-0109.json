@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0109",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Ayesha has 2,400 rupees in savings. At the end of each week she adds 600 rupees to her savings, and she makes no withdrawals. Which function gives the amount \\(S(w)\\), in rupees, in her savings after \\(w\\) weeks?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(S(w) = 2{,}400w + 600\\)",
+    "B": "\\(S(w) = 600w + 2{,}400\\)",
+    "C": "\\(S(w) = 2{,}400 - 600w\\)",
+    "D": "\\(S(w) = 3{,}000w\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The savings start at 2,400 rupees, so the constant term is 2,400.",
+    "The savings grow by 600 rupees per week, so the slope is 600: \\(S(w) = 600w + 2{,}400\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This switches the weekly amount and the starting amount.",
+    "B": "Correct. The savings start at 2,400 rupees and increase by 600 rupees per week.",
+    "C": "Incorrect. Ayesha adds money each week, so the savings increase; this function decreases.",
+    "D": "Incorrect. This uses the total after 1 week as a weekly rate; it gives \\(S(0) = 0\\) instead of 2,400."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nw = symbols('w')\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if [rhs(choices[k]).subs(w, t) for t in (0, 1, 2)] == [2400, 3000, 3600]]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0514",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Elif plans her training for a month. The equation \\(5x + 8y = 200\\) represents her plan to run a total of 200 kilometers, where \\(x\\) is the number of short runs and \\(y\\) is the number of long runs. All short runs are the same length, and all long runs are the same length. What does the number 8 represent in this equation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The total number of kilometers of all of Elif's long runs",
+    "B": "The number of kilometers in each long run",
+    "C": "The number of long runs Elif plans",
+    "D": "The number of kilometers in each short run"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Each term is (distance per run) \\(\\times\\) (number of runs).",
+    "In \\(8y\\), \\(y\\) is the number of long runs, so 8 is the distance, in kilometers, of each long run."
+  ],
+  "explanation": {
+    "A": "Incorrect. The total distance of the long runs is \\(8y\\), not 8.",
+    "B": "Correct. \\(8y\\) is the total distance of the long runs, so each long run is 8 kilometers.",
+    "C": "Incorrect. The number of long runs is the variable \\(y\\), not the coefficient 8.",
+    "D": "Incorrect. 8 multiplies \\(y\\), the number of long runs; the length of a short run is 5 kilometers."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\ne = 5*x + 8*y\nassert diff(e, y) == 8 and e.subs({x: 0, y: 25}) == 200\nkey = 'kilometers in each long run'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

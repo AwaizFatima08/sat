@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0524",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What is the sum of all integers \\(x\\) that satisfy \\(-7 \\le 3 - 2x < 5\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "15"
+  ],
+  "solution": [
+    "Subtract 3 from all three parts: \\(-10 \\le -2x < 2\\).",
+    "Divide by \\(-2\\) and reverse both signs: \\(5 \\ge x > -1\\), that is, \\(-1 < x \\le 5\\).",
+    "The integers are 0, 1, 2, 3, 4 and 5, and their sum is 15."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "sols = [n for n in range(-50, 50) if -7 <= 3 - 2*n < 5]\nassert sols == [0, 1, 2, 3, 4, 5]\nassert [Rational(a) for a in spr_answers] == [sum(sols)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "15",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

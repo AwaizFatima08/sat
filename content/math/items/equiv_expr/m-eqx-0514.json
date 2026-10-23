@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0514",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "For \\(x > 0\\), which of the following is equivalent to \\(x^{\\frac{2}{3}}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{2}{3}x\\)",
+    "B": "\\(\\sqrt{x^{3}}\\)",
+    "C": "\\(\\sqrt[3]{x^{2}}\\)",
+    "D": "\\(\\frac{1}{\\sqrt[3]{x^{2}}}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "A rational exponent \\(\\frac{m}{n}\\) means the \\(n\\)th root of the \\(m\\)th power: \\(x^{\\frac{m}{n}} = \\sqrt[n]{x^{m}}\\).",
+    "Here \\(m = 2\\) and \\(n = 3\\), so \\(x^{\\frac{2}{3}} = \\sqrt[3]{x^{2}}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of treating the exponent as a coefficient; an exponent is not multiplied by the base.",
+    "B": "Incorrect. This is the result of swapping the roles of the numerator and denominator: \\(\\sqrt{x^{3}} = x^{\\frac{3}{2}}\\).",
+    "C": "Correct. The denominator 3 gives the cube root and the numerator 2 gives the power: \\(\\sqrt[3]{x^{2}}\\).",
+    "D": "Incorrect. This equals \\(x^{-\\frac{2}{3}}\\); a reciprocal corresponds to a negative exponent, which the expression does not have."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "reciprocal",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nX = Symbol('x')\nfor t in [8, 27, 5]:\n    target = Integer(t)**Rational(2, 3)\n    f = lambda k: value(choices[k]).subs(X, t)\n    assert abs(N(f(answer) - target)) < 1e-9\n    assert all(abs(N(f(k) - target)) > 1e-6 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

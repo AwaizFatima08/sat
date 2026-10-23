@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0183",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Dilani deposits 200,000 rupees in a savings account in Colombo, Sri Lanka. The account earns \\(0.5\\%\\) interest each month, and she makes no other deposits or withdrawals. Which of the following functions gives the balance \\(B(t)\\), in rupees, of the account after \\(t\\) years?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(B(t) = 200{,}000(1.005)^{t}\\)",
+    "B": "\\(B(t) = 200{,}000(1.05)^{12t}\\)",
+    "C": "\\(B(t) = 200{,}000(1.005)^{\\frac{t}{12}}\\)",
+    "D": "\\(B(t) = 200{,}000(1.005)^{12t}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Each month the balance grows by \\(0.5\\%\\), so it is multiplied by \\(1 + 0.005 = 1.005\\).",
+    "In \\(t\\) years there are \\(12t\\) months.",
+    "So \\(B(t) = 200{,}000(1.005)^{12t}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This gives the balance after \\(t\\) months, not \\(t\\) years.",
+    "B": "Incorrect. This writes \\(0.5\\%\\) as 0.05 instead of 0.005.",
+    "C": "Incorrect. This divides by 12 instead of multiplying. There are \\(12t\\) months in \\(t\\) years, not \\(\\frac{t}{12}\\).",
+    "D": "Correct. Each month the balance is multiplied by 1.005, and \\(t\\) years contain \\(12t\\) months."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "arithmetic",
+    "C": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nt = symbols('t')\ndef g(k):\n    return value(choices[k].split('=')[1])\ntarget = {1: 200000*Rational(1005, 1000)**12, 2: 200000*Rational(1005, 1000)**24}\ndef ok(e):\n    return all(e.subs(t, k) == v for k, v in target.items())\nassert ok(g(answer))\nassert all(not ok(g(k)) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

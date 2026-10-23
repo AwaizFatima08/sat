@@ -1,0 +1,58 @@
+{
+  "id": "m-tvd-0533",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The line of best fit for a set of data has the equation \\(y = mx + b\\), where \\(m\\) and \\(b\\) are constants. The data point \\((6, 20)\\) has a residual of 3, and the data point \\((10, 22)\\) has a residual of \\(-1\\) (residual = actual value \\(-\\) predicted value). What is the value of \\(m\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1.5\\)",
+    "B": "\\(0.5\\)",
+    "C": "\\(8\\)",
+    "D": "\\(-0.5\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Predicted value \\(=\\) actual value \\(-\\) residual. At \\(x = 6\\): \\(20 - 3 = 17\\). At \\(x = 10\\): \\(22 - (-1) = 23\\).",
+    "The line passes through \\((6, 17)\\) and \\((10, 23)\\), so \\(m = \\frac{23 - 17}{10 - 6} = \\frac{6}{4} = 1.5\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The predicted values are 17 at \\(x = 6\\) and 23 at \\(x = 10\\), so \\(m = \\frac{6}{4} = 1.5\\).",
+    "B": "Incorrect. This is the slope between the two data points, \\(\\frac{22 - 20}{10 - 6}\\). The line passes through the predicted values, not the data points.",
+    "C": "Incorrect. This is the value of \\(b\\): \\(17 = 1.5(6) + b\\) gives \\(b = 8\\). The question asks for \\(m\\).",
+    "D": "Incorrect. This adds the residuals to the actual values (predicted values 23 and 21). Since residual \\(=\\) actual \\(-\\) predicted, the predicted value is actual \\(-\\) residual."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nm, b = symbols('m b')\nsol = solve([Eq(20 - (6*m + b), 3), Eq(22 - (10*m + b), -1)], [m, b])\nassert sol[m] == Rational(3, 2) and sol[b] == 8\nassert value(choices[answer]) == sol[m]\nassert all(value(choices[k]) != sol[m] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

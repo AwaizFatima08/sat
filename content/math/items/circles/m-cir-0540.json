@@ -1,0 +1,46 @@
+{
+  "id": "m-cir-0540",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In a circle with center \\(O\\) and radius \\(r\\), chord \\(AB\\) has a length of 12, and central angle \\(AOB\\) measures \\(120^{\\circ}\\). What is the value of \\(r^{2}\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "48"
+  ],
+  "solution": [
+    "Triangle \\(AOB\\) is isosceles with \\(OA = OB = r\\) and a \\(120^{\\circ}\\) angle at \\(O\\), so its base angles are \\(30^{\\circ}\\).",
+    "The perpendicular from \\(O\\) to \\(AB\\) splits it into two \\(30^{\\circ}\\)-\\(60^{\\circ}\\)-\\(90^{\\circ}\\) triangles with long leg 6, so the hypotenuse is \\(r = \\frac{6 \\cdot 2}{\\sqrt{3}} = 4\\sqrt{3}\\).",
+    "\\(r^{2} = (4\\sqrt{3})^{2} = 48\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r=symbols('r',positive=True)\ns=solve(Eq(12**2,2*r**2-2*r**2*cos(2*pi/3)),r)\nassert len(s)==1\nans=s[0]**2\nassert ans==48\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "48",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

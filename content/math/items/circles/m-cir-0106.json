@@ -1,0 +1,59 @@
+{
+  "id": "m-cir-0106",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A slice of a round pizza is shaped like a sector of a circle with a radius of 18 centimeters and a central angle of \\(40^{\\circ}\\). What is the perimeter, in centimeters, of the slice?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(18 + 4\\pi\\)",
+    "B": "\\(4\\pi\\)",
+    "C": "\\(36 + 4\\pi\\)",
+    "D": "\\(36\\pi\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The curved crust is an arc of length \\(\\frac{40}{360} \\cdot 2\\pi(18) = 4\\pi\\).",
+    "The two straight edges are radii, each 18 centimeters.",
+    "Perimeter \\(= 18 + 18 + 4\\pi = 36 + 4\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This includes only one of the two straight edges.",
+    "B": "Incorrect. This is only the length of the curved edge; the two straight edges must be added.",
+    "C": "Correct. \\(18 + 18 + 4\\pi = 36 + 4\\pi\\).",
+    "D": "Incorrect. This is \\(\\frac{40}{360}\\pi(18)^{2}\\), the area of the slice, not its perimeter."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "stopped_early",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\narc=Rational(40,360)*2*pi*18\nans=36+arc\nassert arc==4*pi\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

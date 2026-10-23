@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0532",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the system of equations below, \\(k\\) is a positive constant. \\[y = kx\\] \\[y = x^{2} + 9\\] If the graphs of the two equations intersect at exactly one point, what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "Substitute: \\(kx = x^{2} + 9\\), so \\(x^{2} - kx + 9 = 0\\).",
+    "The graphs meet at exactly one point when this quadratic has exactly one solution, so its discriminant is \\(0\\): \\(k^{2} - 36 = 0\\).",
+    "\\(k\\) is positive, so \\(k = 6\\). (The line \\(y = 6x\\) touches the parabola at \\((3, 18)\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, k = symbols('x k')\nks = [v for v in solve(Eq(discriminant(x**2 - k*x + 9, x), 0), k) if v > 0]\nassert ks == [6]\nassert len(solve(x**2 - 6*x + 9, x)) == 1\nassert [Rational(a) for a in spr_answers] == ks",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "m-smp-0504",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A store received a shipment of 900 boxes of eggs. An inspector checked a random sample of 50 of the boxes and found that 4 of them contained at least one cracked egg. Based on the sample, how many boxes in the shipment are estimated to contain at least one cracked egg?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "72"
+  ],
+  "solution": [
+    "In the sample, the proportion of boxes with a cracked egg is \\(\\frac{4}{50} = 0.08\\).",
+    "Apply it to the whole shipment: \\(0.08(900) = 72\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "est = Rational(4, 50) * 900\nassert est == 72\nassert [Rational(a) for a in spr_answers] == [est]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "72",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

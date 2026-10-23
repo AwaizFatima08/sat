@@ -1,0 +1,73 @@
+{
+  "id": "m-ovd-0516",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows the number of siblings reported by each of 20 students. What is the median number of siblings?",
+  "figure": {
+    "kind": "table",
+    "title": "Siblings",
+    "columns": [
+      "Number of siblings",
+      "Number of students"
+    ],
+    "rows": [
+      [
+        "0",
+        "3"
+      ],
+      [
+        "1",
+        "7"
+      ],
+      [
+        "2",
+        "5"
+      ],
+      [
+        "3",
+        "3"
+      ],
+      [
+        "4",
+        "2"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3/2"
+  ],
+  "solution": [
+    "With 20 values, the median is the mean of the 10th and 11th values in order.",
+    "3 students have 0 siblings, and \\(3 + 7 = 10\\) have 0 or 1. So the 10th value is 1 and the 11th value is 2.",
+    "The median is \\(\\frac{1 + 2}{2} = 1.5\\)."
+  ],
+  "verify": "v = []\nfor a, b in figure['rows']:\n    v += [int(a)] * int(b)\nassert len(v) == 20\nv.sort()\nr = Rational(v[9] + v[10], 2)\nassert r == Rational(3, 2)\nassert Rational(spr_answers[0]) == r and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "1.5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

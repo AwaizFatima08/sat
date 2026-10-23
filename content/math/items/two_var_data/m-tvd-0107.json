@@ -1,0 +1,58 @@
+{
+  "id": "m-tvd-0107",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A student recorded the charge \\(y\\), as a percent of full charge, of a phone battery \\(x\\) minutes after it was plugged in. The line of best fit for the data is \\(y = 1.25x + 15\\). According to the line of best fit, how many minutes after the phone was plugged in was the battery charge 65 percent?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(96.25\\)",
+    "B": "\\(40\\)",
+    "C": "\\(52\\)",
+    "D": "\\(64\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Set \\(y = 65\\): \\(65 = 1.25x + 15\\).",
+    "Subtract 15: \\(50 = 1.25x\\). Divide by 1.25: \\(x = 40\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This substitutes 65 for \\(x\\) instead of for \\(y\\): \\(1.25(65) + 15 = 96.25\\).",
+    "B": "Correct. \\(1.25(40) + 15 = 65\\).",
+    "C": "Incorrect. This is \\(\\frac{65}{1.25} = 52\\); it does not subtract the starting charge of 15 percent first.",
+    "D": "Incorrect. This is \\(\\frac{65 + 15}{1.25} = 64\\); 15 was added instead of subtracted."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "stopped_early",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\ns = solve(Eq(Rational('1.25')*x + 15, 65), x)\nassert s == [40]\nassert value(choices[answer]) == s[0]\nassert all(value(choices[k]) != s[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

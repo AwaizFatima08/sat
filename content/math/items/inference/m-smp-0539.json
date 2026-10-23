@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0539",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A researcher is planning a survey to estimate the proportion of a city's adults who use public libraries. She will use the approximation that the margin of error for a sample proportion is \\(\\frac{1}{\\sqrt{n}}\\), where \\(n\\) is the sample size. She wants the interval of plausible values, from the estimate minus the margin of error to the estimate plus the margin of error, to be no more than 0.08 wide. What is the least sample size she can use?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(157\\)",
+    "B": "\\(625\\)",
+    "C": "\\(25\\)",
+    "D": "\\(2{,}500\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The interval is twice the margin of error wide: \\(\\frac{2}{\\sqrt{n}} \\le 0.08\\).",
+    "So \\(\\sqrt{n} \\ge \\frac{2}{0.08} = 25\\), and \\(n \\ge 625\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This sets the margin of error, not the full width, equal to 0.08: \\(\\frac{1}{\\sqrt{n}} \\le 0.08\\) gives \\(n \\ge 157\\), and the width would then be about 0.16.",
+    "B": "Correct. The width is \\(\\frac{2}{\\sqrt{n}}\\); setting \\(\\frac{2}{\\sqrt{n}} \\le 0.08\\) gives \\(\\sqrt{n} \\ge 25\\), so \\(n \\ge 625\\).",
+    "C": "Incorrect. 25 is the least value of \\(\\sqrt{n}\\); it still needs to be squared.",
+    "D": "Incorrect. This halves the target twice, using a margin of error of 0.02; the margin of error only needs to be \\(\\frac{0.08}{2} = 0.04\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "stopped_early",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nn = symbols('n', positive=True)\nb = solve(Eq(2 / sqrt(n), Rational(8, 100)), n)[0]\nassert b == 625 and 2 / sqrt(b) <= Rational(8, 100) and 2 / sqrt(b - 1) > Rational(8, 100)\nassert value(choices[answer]) == b\nassert all(value(choices[k]) != b for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-arv-0531",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A rectangle has a perimeter of \\(40\\) and an area of \\(96\\). What is the length of a diagonal of the rectangle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4\\sqrt{37}\\)",
+    "B": "\\(4\\sqrt{19}\\)",
+    "C": "\\(4\\sqrt{13}\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let the sides be \\(L\\) and \\(W\\). Then \\(L + W = 20\\) and \\(LW = 96\\).",
+    "The diagonal \\(d\\) satisfies \\(d^{2} = L^{2} + W^{2} = (L + W)^{2} - 2LW = 400 - 192 = 208\\).",
+    "\\(d = \\sqrt{208} = 4\\sqrt{13}\\). (The sides are 12 and 8.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\sqrt{400 + 192}\\); \\(2LW\\) must be subtracted from \\((L + W)^{2}\\), not added.",
+    "B": "Incorrect. This is \\(\\sqrt{400 - 96}\\); the area must be doubled, since \\((L + W)^{2} = L^{2} + W^{2} + 2LW\\).",
+    "C": "Correct. \\(d^{2} = (L + W)^{2} - 2LW = 400 - 192 = 208\\), so \\(d = 4\\sqrt{13}\\).",
+    "D": "Incorrect. This is \\(L - W = 12 - 8\\), the difference of the sides, not the diagonal."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "arithmetic",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nL,W=symbols('L W',positive=True)\nsol=solve([L+W-20,L*W-96],[L,W],dict=True)\nds={sqrt(s[L]**2+s[W]**2) for s in sol}\nassert len(ds)==1\nans=ds.pop()\nassert ans==4*sqrt(13)\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

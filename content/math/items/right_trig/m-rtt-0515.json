@@ -1,0 +1,129 @@
+{
+  "id": "m-rtt-0515",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A rectangular solar panel is 1.6 meters long and 1.2 meters wide. A straight brace runs from one corner of the panel to the opposite corner and makes an angle of \\(x^{\\circ}\\) with a 1.6-meter side, as shown. What is the value of \\(\\cos x^{\\circ}\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        1.6,
+        0
+      ],
+      "C": [
+        1.6,
+        1.2
+      ],
+      "D": [
+        0,
+        1.2
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "A",
+        "C"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          0.8,
+          -0.13
+        ],
+        "text": "1.6 m"
+      },
+      {
+        "at": [
+          1.78,
+          0.6
+        ],
+        "text": "1.2 m"
+      },
+      {
+        "at": [
+          0.3,
+          0.08
+        ],
+        "text": "x°"
+      }
+    ],
+    "right_angles": [
+      "B",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{3}{4}\\)",
+    "B": "\\(\\frac{5}{4}\\)",
+    "C": "\\(\\frac{3}{5}\\)",
+    "D": "\\(\\frac{4}{5}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The brace is the hypotenuse of a right triangle with legs 1.6 and 1.2: \\(\\sqrt{1.6^{2} + 1.2^{2}} = \\sqrt{4} = 2\\).",
+    "The 1.6-meter side is adjacent to \\(x^{\\circ}\\): \\(\\cos x^{\\circ} = \\frac{1.6}{2} = \\frac{4}{5}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{1.2}{1.6}\\), which is \\(\\tan x^{\\circ}\\); cosine uses the brace (hypotenuse).",
+    "B": "Incorrect. This is \\(\\frac{2}{1.6}\\), the reciprocal of \\(\\cos x^{\\circ}\\).",
+    "C": "Incorrect. This is \\(\\frac{1.2}{2}\\), opposite over hypotenuse, which is \\(\\sin x^{\\circ}\\).",
+    "D": "Correct. The brace is 2 meters long, so \\(\\cos x^{\\circ} = \\frac{1.6}{2} = \\frac{4}{5}\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "reciprocal",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nLg,W=Rational('1.6'),Rational('1.2')\nassert abs(d('A','B')-Lg)<1e-9 and abs(d('B','C')-W)<1e-9 and abs(ang('A','B','C')-90)<0.1\nans=Lg/sqrt(Lg**2+W**2)\nassert ans==Rational(4,5) and abs(N(cos(ang('C','A','B')*pi/180))-ans)<1e-6\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

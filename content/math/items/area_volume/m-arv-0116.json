@@ -1,0 +1,46 @@
+{
+  "id": "m-arv-0116",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A tank shaped like a rectangular prism has a base that is 40 centimeters by 30 centimeters, and it holds water to a depth of 20 centimeters. All of this water is poured into an empty tank shaped like a rectangular prism with a base that is 60 centimeters by 25 centimeters. What is the depth of the water in the second tank, in centimeters?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "16"
+  ],
+  "solution": [
+    "Volume of water: \\(40 \\cdot 30 \\cdot 20 = 24{,}000\\) cubic centimeters.",
+    "Base of the second tank: \\(60 \\cdot 25 = 1{,}500\\) square centimeters.",
+    "Depth: \\(24{,}000 \\div 1{,}500 = 16\\) centimeters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "d=symbols('d')\nans=solve(Eq(60*25*d,40*30*20),d)[0]\nassert ans==16\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "16",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

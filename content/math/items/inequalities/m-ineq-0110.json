@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0110",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A school in Kathmandu is buying notebooks that cost 80 rupees each and pens that cost 25 rupees each. The school can spend at most 12,000 rupees and needs at least 300 items in total. If \\(n\\) is the number of notebooks and \\(p\\) is the number of pens, which system of inequalities represents this situation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(80n + 25p \\le 300\\) and \\(n + p \\ge 12{,}000\\)",
+    "B": "\\(25n + 80p \\le 12{,}000\\) and \\(n + p \\ge 300\\)",
+    "C": "\\(80n + 25p \\ge 12{,}000\\) and \\(n + p \\le 300\\)",
+    "D": "\\(80n + 25p \\le 12{,}000\\) and \\(n + p \\ge 300\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The cost of \\(n\\) notebooks and \\(p\\) pens is \\(80n + 25p\\) rupees, and it can be at most 12,000: \\(80n + 25p \\le 12{,}000\\).",
+    "The number of items is \\(n + p\\), and it must be at least 300: \\(n + p \\ge 300\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This matches each expression to the wrong limit: 12,000 is a limit on cost and 300 is a limit on the number of items.",
+    "B": "Incorrect. This switches the prices: notebooks cost 80 rupees, so 80 must multiply \\(n\\).",
+    "C": "Incorrect. Both inequality signs are reversed: \"at most\" needs \\(\\le\\) and \"at least\" needs \\(\\ge\\).",
+    "D": "Correct. The total cost is at most 12,000 rupees, and the total number of items is at least 300."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nP = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nn, p = symbols('n p')\ngood = lambda a, b: 80*a + 25*b <= 12000 and a + b >= 300\npts = [(a, b) for a in range(0, 200, 7) for b in range(0, 500, 11)]\npred = lambda c, a, b: all(bool(P(part).subs({n: a, p: b})) for part in c.split(' and '))\nassert all(pred(choices[answer], a, b) == good(a, b) for a, b in pts)\nassert all(any(pred(c, a, b) != good(a, b) for a, b in pts) for k, c in choices.items() if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

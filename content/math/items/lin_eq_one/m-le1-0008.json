@@ -1,0 +1,47 @@
+{
+  "id": "m-le1-0008",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "In the equation \\(\\frac{x + k}{3} - \\frac{x - 2}{4} = \\frac{x}{12} + 2\\), \\(k\\) is a constant. If the equation has infinitely many solutions, what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "9/2"
+  ],
+  "solution": [
+    "Multiply every term by 12: \\(4(x + k) - 3(x - 2) = x + 24\\).",
+    "Simplify the left side: \\(x + 4k + 6 = x + 24\\).",
+    "The \\(x\\)-terms already match, so the equation is true for all \\(x\\) exactly when \\(4k + 6 = 24\\).",
+    "So \\(k = \\frac{18}{4} = \\frac{9}{2}\\), or 4.5. (For any other \\(k\\) there is no solution.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, k = symbols('x k')\nd = expand(12*((x + k)/3 - (x - 2)/4 - x/12 - 2))\nassert d.coeff(x, 1) == 0\nkv = solve(d, k)\nassert kv == [Rational(9, 2)]\nassert [Rational(s) for s in spr_answers] == kv",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "9/2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

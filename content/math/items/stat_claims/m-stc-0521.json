@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0521",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A ride-hailing company selected 400 of its drivers in Bengaluru, India, at random and randomly assigned 200 of them to use a new navigation app; the other 200 kept using the old app. Over the next month, the drivers who used the new app completed more trips per day, on average. Which of the following conclusions is best supported by the study?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The new app is associated with more trips per day, but no causal conclusion is possible because the drivers were not selected from all drivers in India.",
+    "B": "The new app likely causes more trips per day for all of the company's drivers in India.",
+    "C": "The new app likely causes more trips per day for the company's drivers in Bengaluru.",
+    "D": "The new app caused more trips per day only for the 200 drivers who used it."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Random assignment of the two apps supports a cause-and-effect conclusion.",
+    "The 400 drivers were a random sample of the company's Bengaluru drivers, so the conclusion can be generalized to that group, but not to drivers in other cities."
+  ],
+  "explanation": {
+    "A": "Incorrect. Random assignment, not random selection, is what supports cause and effect; this study has it.",
+    "B": "Incorrect. The sample came only from Bengaluru, so the result cannot be generalized to drivers in the rest of India.",
+    "C": "Correct. Random assignment within a random sample of the Bengaluru drivers supports a causal conclusion for all of them.",
+    "D": "Incorrect. Because the 400 drivers were a random sample, the conclusion extends beyond the 200 who used the new app."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\ndesign = {'random_assignment': True, 'sampled_from': 'Bengaluru'}\nclaims = {'A': ('cause', 'Bengaluru'), 'B': ('cause', 'India'), 'C': ('assoc', 'India'), 'D': ('cause', 'sample')}\nok = [k for k, (c, s) in claims.items() if c == 'cause' and s == design['sampled_from']]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:moduleup/core/theme.dart';
+import 'package:moduleup/widgets/math_text.dart';
 
 const _blank = '______';
 
@@ -68,6 +69,9 @@ class RichLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (text.contains(r'\(') || text.contains(r'\[')) {
+      return MathText(text, style: style);
+    }
     final base = style ?? Theme.of(context).textTheme.bodyLarge!;
     return Text.rich(TextSpan(children: styledSpans(text, base)));
   }

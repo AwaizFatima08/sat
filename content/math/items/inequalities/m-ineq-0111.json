@@ -1,0 +1,99 @@
+{
+  "id": "m-ineq-0111",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graphs of the linear functions \\(f\\) and \\(g\\) are shown in the \\(xy\\)-plane. For which values of \\(x\\) is \\(f(x) > g(x)\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      8
+    ],
+    "y": [
+      -2,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "x + 1",
+        "label": "y = f(x)"
+      },
+      {
+        "expr": "-x/2 + 4",
+        "label": "y = g(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 1,
+        "label": "(0, 1)"
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "label": "(0, 4)"
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "label": "(2, 3)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x > 3\\)",
+    "B": "\\(x > 2\\)",
+    "C": "\\(x < 3\\)",
+    "D": "\\(x < 2\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The graphs intersect at \\((2, 3)\\), so \\(f(x) = g(x)\\) when \\(x = 2\\).",
+    "To the right of \\(x = 2\\), the graph of \\(f\\), which rises, lies above the graph of \\(g\\), which falls.",
+    "So \\(f(x) > g(x)\\) for \\(x > 2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the \\(y\\)-coordinate of the intersection point, 3, instead of its \\(x\\)-coordinate, 2.",
+    "B": "Correct. The graphs cross at \\(x = 2\\), and the graph of \\(f\\) is above the graph of \\(g\\) to the right of that point.",
+    "C": "Incorrect. This uses the \\(y\\)-coordinate of the intersection point and the wrong side of it.",
+    "D": "Incorrect. For \\(x < 2\\), the graph of \\(f\\) lies below the graph of \\(g\\), so \\(f(x) < g(x)\\)."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "C": "misread_graph",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nf, g = [sympify(c['expr']) for c in figure['curves']]\nsol = solve_univariate_inequality(f > g, x, relational=False)\nassert sol == Interval.open(2, oo)\nP = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nS = lambda s: solve_univariate_inequality(P(s), x, relational=False)\nassert S(choices[answer]) == sol\nassert all(S(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

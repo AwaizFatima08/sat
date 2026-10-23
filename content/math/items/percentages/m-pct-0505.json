@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0505",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A water tank holds 1,200 liters when it is full. The tank is now \\(65\\%\\) full. How many liters of water are in the tank?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(7.8\\)",
+    "B": "\\(420\\)",
+    "C": "\\(1{,}135\\)",
+    "D": "\\(780\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Find \\(65\\%\\) of 1,200: \\(0.65 \\cdot 1{,}200\\).",
+    "\\(0.65 \\cdot 1{,}200 = 780\\) liters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of writing \\(65\\%\\) as 0.0065 instead of 0.65.",
+    "B": "Incorrect. This is the amount of empty space in the tank, \\(0.35 \\cdot 1{,}200 = 420\\) liters.",
+    "C": "Incorrect. This is the result of subtracting 65 from 1,200 instead of finding \\(65\\%\\) of 1,200.",
+    "D": "Correct. \\(65\\%\\) of 1,200 liters is \\(0.65 \\cdot 1{,}200 = 780\\) liters."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nv = Rational(65, 100) * 1200\nassert v == 780\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

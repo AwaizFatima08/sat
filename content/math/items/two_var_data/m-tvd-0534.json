@@ -1,0 +1,84 @@
+{
+  "id": "m-tvd-0534",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows the number of subscribers to a newsletter at 6-month intervals. The data can be modeled exactly by an exponential function. Which equation models the number of subscribers \\(S\\) after \\(t\\) years?",
+  "figure": {
+    "kind": "table",
+    "title": "Newsletter subscribers",
+    "columns": [
+      "Time (months)",
+      "Subscribers"
+    ],
+    "rows": [
+      [
+        "0",
+        "800"
+      ],
+      [
+        "6",
+        "880"
+      ],
+      [
+        "12",
+        "968"
+      ],
+      [
+        "18",
+        "1,064.8"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(S = 800(1.1)^{\\frac{t}{2}}\\)",
+    "B": "\\(S = 800(1.2)^{t}\\)",
+    "C": "\\(S = 800(1.1)^{2t}\\)",
+    "D": "\\(S = 800(1.1)^{\\frac{t}{6}}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Each 6 months the number is multiplied by \\(\\frac{880}{800} = 1.1\\).",
+    "There are 2 six-month periods in each year, so after \\(t\\) years the factor 1.1 has been applied \\(2t\\) times.",
+    "\\(S = 800(1.1)^{2t}\\). (Check: \\(t = 1\\) gives \\(800(1.21) = 968\\), the value at 12 months.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This applies the factor 1.1 once every 2 years. It is applied twice each year.",
+    "B": "Incorrect. This adds the two \\(10\\%\\) increases to get \\(20\\%\\) per year. Increases compound: \\(1.1^{2} = 1.21\\), so the yearly factor is 1.21, and at \\(t = 1\\) this model gives 960, not 968.",
+    "C": "Correct. The factor 1.1 applies every half year, which is \\(2t\\) times in \\(t\\) years.",
+    "D": "Incorrect. This model applies the factor once every 6 units of \\(t\\), which would be right if \\(t\\) were in months. The question uses years."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "percent_add",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nt = symbols('t')\nrows = [(Rational(int(a), 12), Rational(b.replace(',', ''))) for a, b in figure['rows']]\nS = lambda k: value(choices[k].split('=')[1].strip(' \\\\)'))\nfits = lambda k: all(S(k).subs(t, a) == v for a, v in rows)\nassert fits(answer)\nassert not any(fits(k) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

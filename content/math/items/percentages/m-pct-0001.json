@@ -1,0 +1,57 @@
+{
+  "id": "m-pct-0001",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A jacket originally costs \\$80. During a sale, its price is reduced by \\(25\\%\\). What is the sale price of the jacket, in dollars?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20\\)",
+    "B": "\\(55\\)",
+    "C": "\\(60\\)",
+    "D": "\\(100\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The discount is \\(0.25 \\cdot 80 = 20\\) dollars.",
+    "The sale price is \\(80 - 20 = 60\\) dollars. (Or in one step: \\(0.75 \\cdot 80 = 60\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the amount of the discount, \\(0.25 \\cdot 80 = 20\\) dollars, not the sale price.",
+    "B": "Incorrect. This is the result of subtracting 25 dollars instead of \\(25\\%\\) of 80 dollars.",
+    "C": "Correct. The sale price is \\(75\\%\\) of the original price: \\(0.75 \\cdot 80 = 60\\).",
+    "D": "Incorrect. This is the result of increasing the price by \\(25\\%\\) instead of reducing it: \\(1.25 \\cdot 80 = 100\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "sign_error"
+  },
+  "verify": "price = 80 * (1 - Rational(25, 100))\nassert price == 60\nassert value(choices[answer]) == price\nassert all(value(choices[k]) != price for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0111",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[y = \\frac{2}{3}x + 1\\] \\[4x - 3y = 9\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(3\\)",
+    "C": "\\(6\\)",
+    "D": "\\(12\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Substitute for \\(y\\): \\(4x - 3\\left(\\frac{2}{3}x + 1\\right) = 9\\).",
+    "So \\(4x - 2x - 3 = 9\\), which gives \\(2x = 12\\) and \\(x = 6\\).",
+    "Then \\(y = \\frac{2}{3}(6) + 1 = 5\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(x = 6\\) and \\(y = 5\\); check: \\(4(6) - 3(5) = 9\\).",
+    "B": "Incorrect. This comes from distributing \\(-3\\) as \\(-2x + 3\\) instead of \\(-2x - 3\\), which gives \\(x = 3\\) and \\(y = 3\\).",
+    "C": "Incorrect. This is the value of \\(x\\), not \\(y\\).",
+    "D": "Incorrect. This is \\(2x\\); the work stopped before dividing by 2 and finding \\(y\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "wrong_quantity",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nsol = solve([y - (Rational(2, 3)*x + 1), 4*x - 3*y - 9], [x, y])\nassert sol == {x: 6, y: 5}\nassert value(choices[answer]) == 5\nassert all(value(choices[k]) != 5 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

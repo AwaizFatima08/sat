@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0119",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A carpenter cuts a board that is \\((8x + 20)\\) inches long into 4 pieces of equal length and then trims 3 inches off each piece. Which expression represents the length, in inches, of each trimmed piece?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2x + 17\\)",
+    "B": "\\(2x + \\frac{17}{4}\\)",
+    "C": "\\(2x + 2\\)",
+    "D": "\\(2x + 5\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Each piece is \\(\\frac{8x + 20}{4} = 2x + 5\\) inches long before trimming.",
+    "Trim 3 inches: \\(2x + 5 - 3 = 2x + 2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dividing only \\(8x\\) by 4 and leaving 20 undivided.",
+    "B": "Incorrect. This is the result of trimming 3 inches from the whole board instead of from each piece.",
+    "C": "Correct. Each piece is \\(2x + 5\\) inches, and trimming 3 inches leaves \\(2x + 2\\).",
+    "D": "Incorrect. This is the length of each piece before the 3 inches are trimmed off."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = (8*x + 20)/4 - 3\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

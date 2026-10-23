@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0143",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A square photo with sides \\(x\\) centimeters long is placed in a frame. The frame adds a border 3 centimeters wide on every side of the photo. Which function gives the total area \\(A(x)\\), in square centimeters, of the photo and the frame together?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(A(x) = x^{2} + 36\\)",
+    "B": "\\(A(x) = (x + 3)^{2}\\)",
+    "C": "\\(A(x) = x^{2} + 6\\)",
+    "D": "\\(A(x) = (x + 6)^{2}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The border adds 3 centimeters on each of two opposite sides, so each side of the framed square is \\(x + 3 + 3 = x + 6\\) centimeters.",
+    "\\(A(x) = (x + 6)^{2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This squares \\(x\\) and \\(6\\) separately; \\((x + 6)^{2} = x^{2} + 12x + 36\\).",
+    "B": "Incorrect. This adds the 3-centimeter border to only one side of the square.",
+    "C": "Incorrect. This adds the border widths to the area instead of to the side length.",
+    "D": "Correct. Each side of the framed square is \\(x + 6\\) centimeters, so the area is \\((x + 6)^{2}\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_quantity",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nA = (x + 2*3)**2\nok = [k for k in choices if expand(value(choices[k].split('=')[1]) - A) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

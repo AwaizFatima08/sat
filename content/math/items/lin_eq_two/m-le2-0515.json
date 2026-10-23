@@ -1,0 +1,80 @@
+{
+  "id": "m-le2-0515",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The table shows three pairs of values of \\(x\\) and \\(y\\) that satisfy a linear equation. Which equation is it?",
+  "figure": {
+    "kind": "table",
+    "title": "",
+    "columns": [
+      "x",
+      "y"
+    ],
+    "rows": [
+      [
+        "0",
+        "5"
+      ],
+      [
+        "2",
+        "2"
+      ],
+      [
+        "4",
+        "-1"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2x + 3y = 15\\)",
+    "B": "\\(3x - 2y = -10\\)",
+    "C": "\\(3x + 2y = 10\\)",
+    "D": "\\(3x + 2y = 5\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Slope \\(= \\frac{2 - 5}{2 - 0} = -\\frac{3}{2}\\), and the \\(y\\)-intercept is 5 (the value at \\(x = 0\\)).",
+    "So \\(y = -\\frac{3}{2}x + 5\\). Multiply by 2: \\(2y = -3x + 10\\).",
+    "Rearrange: \\(3x + 2y = 10\\). Check \\((4, -1)\\): \\(12 - 2 = 10\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This line has slope \\(-\\frac{2}{3}\\), the reciprocal of the correct slope; it fits \\((0, 5)\\) but not \\((2, 2)\\).",
+    "B": "Incorrect. This line has slope \\(+\\frac{3}{2}\\); the sign of the slope is wrong.",
+    "C": "Correct. All three pairs satisfy \\(3x + 2y = 10\\).",
+    "D": "Incorrect. This clears the fraction in \\(\\frac{3}{2}x + y = 5\\) by doubling the left side but not the right side; \\((0, 5)\\) gives \\(10 \\ne 5\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\npts = [(int(r[0]), int(r[1])) for r in figure['rows']]\nassert pts == [(0, 5), (2, 2), (4, -1)]\nok = [k for k in choices if all(eq(choices[k]).subs({x: a, y: b}) == 0 for a, b in pts)]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

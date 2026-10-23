@@ -10,9 +10,11 @@ import 'package:moduleup/data/progress.dart';
 import 'package:moduleup/data/progress_repository.dart';
 import 'package:moduleup/engine/results.dart';
 import 'package:moduleup/features/auth/auth_screens.dart';
+import 'package:moduleup/features/math/math_tools.dart';
 import 'package:moduleup/features/practice/drill_session.dart';
 import 'package:moduleup/features/practice/practice_screen.dart';
 import 'package:moduleup/widgets/common.dart';
+import 'package:moduleup/widgets/math_question_view.dart';
 import 'package:moduleup/widgets/question_view.dart';
 import 'package:moduleup/widgets/rich_passage.dart';
 
@@ -30,8 +32,9 @@ class SkillScreen extends ConsumerWidget {
     if (bank == null) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
-    final lesson = bank.lessons[type];
-    final name = bank.blueprint.types[type]?.name ?? type;
+    final bp = bank.bpOfType(type);
+    final lesson = bank.lessonsOf(bp == bank.blueprint ? 'rw' : 'math')[type];
+    final name = bp.types[type]?.name ?? type;
     return DefaultTabController(
       length: 5,
       child: Scaffold(
@@ -99,6 +102,10 @@ class _LessonNotes extends StatelessWidget {
           title: 'American vs British English',
           child: RichLine(note),
         ),
+      ],
+      if (lesson.calculator case final tip?) ...[
+        const SizedBox(height: AppSpace.m),
+        SectionCard(title: 'Using the calculator', child: RichLine(tip)),
       ],
     ],
   );
@@ -180,7 +187,9 @@ class _LevelTab extends ConsumerWidget {
           SectionCard(title: card.title, child: _Numbered(card.steps)),
           const SizedBox(height: AppSpace.m),
           OutlinedButton.icon(
-            onPressed: () => unawaited(_openExample(context, card.example)),
+            onPressed: () => unawaited(
+              _openExample(context, card.example, bank, type, level),
+            ),
             icon: const Icon(Icons.school_outlined),
             label: const Text('Worked example'),
           ),
@@ -202,19 +211,44 @@ class _LevelTab extends ConsumerWidget {
     );
   }
 
-  static Future<void> _openExample(BuildContext context, WorkedExample e) =>
-      Navigator.of(context).push(
-        MaterialPageRoute<void>(
-          builder: (_) => Scaffold(
-            appBar: AppBar(title: const Text('Worked example')),
-            body: QuestionView(
-              content: contentOfExample(e),
-              selected: e.answer,
-              reveal: Reveal(answer: e.answer, why: e.walkthrough.join('\n\n')),
-            ),
+  static Future<void> _openExample(
+    BuildContext context,
+    WorkedExample e,
+    ContentBank bank,
+    String type,
+    int level,
+  ) {
+    final bp = bank.bpOfType(type);
+    final isMath = bp != bank.blueprint;
+    return Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => Scaffold(
+          appBar: AppBar(
+            title: const Text('Worked example'),
+            actions: [if (isMath) const MathToolButtons()],
           ),
+          body: isMath
+              ? MathQuestionView(
+                  item: e.asMathItem(
+                    type: type,
+                    domain: bp.types[type]!.domain,
+                    level: level,
+                  ),
+                  response: e.answer,
+                  revealed: true,
+                )
+              : QuestionView(
+                  content: contentOfExample(e),
+                  selected: e.answer,
+                  reveal: Reveal(
+                    answer: e.answer,
+                    why: e.walkthrough.join('\n\n'),
+                  ),
+                ),
         ),
-      );
+      ),
+    );
+  }
 }
 
 /// Starts a 10-question drill. Challenge sets are limited per day; an

@@ -1,0 +1,57 @@
+{
+  "id": "m-stc-0003",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "Researchers selected 800 high school students at random from a large city and asked each one how many hours per week they read for pleasure. Students who read for pleasure at least 3 hours per week had a higher average grade than students who read less. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Reading for pleasure at least 3 hours per week causes higher grades among high school students in the city.",
+    "B": "Reading for pleasure at least 3 hours per week causes higher grades, but only for the 800 students surveyed.",
+    "C": "Among high school students in the city, reading for pleasure at least 3 hours per week is associated with higher grades.",
+    "D": "No conclusion can be drawn about high school students in the city, because the students were not randomly assigned to read."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The students were selected at random from the city's high school students, so the results can be generalized to that population.",
+    "The students were not assigned to read; they reported their own habits. This is an observational study, so it shows an association, not cause and effect."
+  ],
+  "explanation": {
+    "A": "Incorrect. Without random assignment, other factors (such as free time or study habits) could explain the difference, so a causal claim is not supported.",
+    "B": "Incorrect. A cause-and-effect claim is not supported for anyone, and the random sample allows generalizing beyond the 800 students.",
+    "C": "Correct. A random sample supports generalizing the association to the city's high school students.",
+    "D": "Incorrect. Random assignment is needed for cause and effect, not for generalizing; the random sample still supports a conclusion about association."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "design = {'random_sample': True, 'random_assignment': False}\nassert design['random_sample'] and not design['random_assignment']\nkey = choices[answer]\nassert answer == 'C' and 'associated' in key and 'cause' not in key and 'in the city' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

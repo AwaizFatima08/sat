@@ -1,0 +1,58 @@
+{
+  "id": "m-prb-0513",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "An integer is selected at random from the integers 1 through 50, inclusive. What is the probability that the integer is a perfect square?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{1}{5}\\)",
+    "B": "\\(\\frac{7}{50}\\)",
+    "C": "\\(\\frac{3}{25}\\)",
+    "D": "\\(\\frac{43}{50}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "List the squares up to 50: \\(1, 4, 9, 16, 25, 36, 49\\) (\\(8^{2} = 64\\) is too large). That is 7 integers.",
+    "The probability is \\(\\frac{7}{50}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{10}{50}\\): it counts the 10 squares \\(1^{2}\\) through \\(10^{2}\\), but 64, 81 and 100 are greater than 50.",
+    "B": "Correct. The perfect squares from 1 to 50 are 1, 4, 9, 16, 25, 36 and 49: 7 of the 50 integers.",
+    "C": "Incorrect. This is \\(\\frac{6}{50}\\): it leaves out 1, but \\(1 = 1^{2}\\) is a perfect square.",
+    "D": "Incorrect. This is the probability that the integer is NOT a perfect square."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nn = len([k for k in range(1, 51) if sqrt(k).is_integer])\np = Rational(n, 50)\nassert p == Rational(7, 50)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

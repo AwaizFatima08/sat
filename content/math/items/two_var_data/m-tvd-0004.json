@@ -1,0 +1,90 @@
+{
+  "id": "m-tvd-0004",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The scatterplot shows the number of hours \\(x\\) that each of 10 students practiced typing per week and the student's typing speed \\(y\\), in words per minute. The line of best fit has the equation \\(y = 3.5x + 20\\). One student practiced 12 hours per week and types 68 words per minute. How many words per minute greater is this student's actual typing speed than the speed predicted by the line of best fit?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Practice (hours per week)",
+    "y_label": "Typing speed (words per minute)",
+    "points": [
+      [
+        2,
+        26
+      ],
+      [
+        4,
+        36
+      ],
+      [
+        5,
+        36
+      ],
+      [
+        6,
+        42
+      ],
+      [
+        8,
+        47
+      ],
+      [
+        9,
+        53
+      ],
+      [
+        10,
+        54
+      ],
+      [
+        12,
+        68
+      ],
+      [
+        14,
+        67
+      ],
+      [
+        15,
+        74
+      ]
+    ],
+    "line": "3.5*x + 20"
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "Predicted speed for \\(x = 12\\): \\(3.5(12) + 20 = 42 + 20 = 62\\) words per minute.",
+    "Actual minus predicted: \\(68 - 62 = 6\\)."
+  ],
+  "verify": "x = symbols('x')\nassert [12, 68] in figure['points']\ndiff_ = 68 - sympify(figure['line']).subs(x, 12)\nassert diff_ == 6\nassert Rational(spr_answers[0]) == diff_ and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

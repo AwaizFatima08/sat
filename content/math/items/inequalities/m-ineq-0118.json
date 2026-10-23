@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0118",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A theater group must raise at least \\$5,000 from ticket sales. Adult tickets cost \\$25 each, and student tickets cost \\$10 each. The inequality \\(25x + 10y \\ge 5{,}000\\) represents this situation, where \\(x\\) is the number of adult tickets sold and \\(y\\) is the number of student tickets sold. Which of the following is the best interpretation of the \\(y\\)-intercept of the graph of \\(25x + 10y = 5{,}000\\) in the \\(xy\\)-plane?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "If no adult tickets are sold, the group must sell at least 500 student tickets to reach its goal.",
+    "B": "The group must sell at least 500 tickets in all to reach its goal.",
+    "C": "If no student tickets are sold, the group must sell at least 500 adult tickets to reach its goal.",
+    "D": "If no adult tickets are sold, the group must sell at least 200 student tickets to reach its goal."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The \\(y\\)-intercept is where \\(x = 0\\): \\(10y = 5{,}000\\), so \\(y = 500\\). The point is \\((0, 500)\\).",
+    "\\(x = 0\\) means no adult tickets are sold, and \\(y = 500\\) student tickets bring in exactly \\$5,000.",
+    "So with no adult tickets sold, at least 500 student tickets are needed."
+  ],
+  "explanation": {
+    "A": "Correct. At the \\(y\\)-intercept \\(x = 0\\) and \\(y = 500\\): with no adult tickets, 500 student tickets raise exactly \\$5,000.",
+    "B": "Incorrect. The intercept describes one specific mix of tickets; the total number of tickets needed depends on how many of each type are sold.",
+    "C": "Incorrect. This switches the variables: \\(y\\) is the number of student tickets, not adult tickets.",
+    "D": "Incorrect. 200 is the \\(x\\)-intercept, \\(5{,}000 \\div 25\\), which is the number of adult tickets needed when no student tickets are sold."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nline = Eq(25*x + 10*y, 5000)\nyi = solve(line.subs(x, 0), y)[0]; xi = solve(line.subs(y, 0), x)[0]\nassert (yi, xi) == (500, 200)\nassert choices[answer].startswith('If no adult') and ('%d student' % yi) in choices[answer]\nassert sum(c.startswith('If no adult') and ('%d student' % yi) in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-cir-0532",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A circular fountain is surrounded by a walkway that is 3 meters wide everywhere, so the outer edge of the walkway is a circle with the same center as the fountain. The area of the walkway alone is \\(51\\pi\\) square meters. What is the radius of the fountain, in meters?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7"
+  ],
+  "solution": [
+    "Let \\(r\\) be the radius of the fountain. The outer circle has radius \\(r + 3\\).",
+    "Walkway area: \\(\\pi(r + 3)^{2} - \\pi r^{2} = 51\\pi\\), so \\(6r + 9 = 51\\).",
+    "\\(6r = 42\\), so \\(r = 7\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r=symbols('r',positive=True)\ns=solve(Eq(pi*(r+3)**2-pi*r**2,51*pi),r)\nassert s==[7]\nassert Rational(spr_answers[0])==s[0]\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

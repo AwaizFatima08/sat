@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0199",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A population of an invasive species of fish in a lake triples every 5 years. Which of the following is the factor by which the population is multiplied each year?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3^{\\frac{1}{5}}\\)",
+    "B": "\\(\\frac{3}{5}\\)",
+    "C": "\\(3^{5}\\)",
+    "D": "\\(1.4\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(r\\) be the yearly growth factor. Over 5 years the population is multiplied by \\(r^{5}\\).",
+    "So \\(r^{5} = 3\\).",
+    "Then \\(r = 3^{\\frac{1}{5}}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. If the yearly factor is \\(r\\), then \\(r^{5} = 3\\), so \\(r = 3^{\\frac{1}{5}} \\approx 1.246\\).",
+    "B": "Incorrect. This divides the 5-year factor by 5. A factor less than 1 would make the population decrease.",
+    "C": "Incorrect. This is the factor for 25 years, not for 1 year. The exponent should be \\(\\frac{1}{5}\\), not 5.",
+    "D": "Incorrect. This splits the \\(200\\%\\) increase evenly into five yearly increases of \\(40\\%\\). But \\(1.4^{5} \\approx 5.4\\), not 3."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "reciprocal",
+    "D": "percent_add"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nv = value(choices[answer])\nassert v**5 == 3 and v == 3**Rational(1, 5)\nassert all(value(choices[k])**5 != 3 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

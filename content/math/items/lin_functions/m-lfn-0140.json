@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0140",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The percent of ink remaining in a printer cartridge is a linear function of the number of pages printed since the cartridge was installed. After 150 pages, 85 percent of the ink remains. After 400 pages, 60 percent remains. According to this model, how many more pages can be printed after the first 400 pages before the cartridge is empty?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "600"
+  ],
+  "solution": [
+    "In 250 pages the ink falls by 25 percentage points, or 0.1 percentage point per page.",
+    "After 400 pages, 60 percent remains, so \\(\\frac{60}{0.1} = 600\\) more pages can be printed."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "p = symbols('p')\nm = Rational(60 - 85, 400 - 150)\nI = 85 + m*(p - 150)\nempty = solve(I, p)\nassert empty == [1000]\nans = empty[0] - 400\nassert [Rational(s) for s in spr_answers] == [ans] == [600]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "600",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

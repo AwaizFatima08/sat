@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0537",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The expression \\((2x + k)(x - 3) - 2x^{2}\\), where \\(k\\) is a constant, is equal to the same number for all values of \\(x\\). What is that number?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-18\\)",
+    "B": "\\(18\\)",
+    "C": "\\(0\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Expand: \\(2x^{2} - 6x + kx - 3k - 2x^{2} = (k - 6)x - 3k\\).",
+    "The value does not depend on \\(x\\) only if the coefficient of \\(x\\) is 0: \\(k - 6 = 0\\), so \\(k = 6\\).",
+    "The number is \\(-3k = -3(6) = -18\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The \\(x\\)-term vanishes when \\(k = 6\\), and then the expression equals \\(-3k = -18\\).",
+    "B": "Incorrect. This is the result of a sign slip: the constant term of \\((2x + k)(x - 3)\\) is \\(-3k\\), not \\(3k\\).",
+    "C": "Incorrect. This is the result of assuming the constant value must be 0; only the coefficient of \\(x\\) must be 0.",
+    "D": "Incorrect. This is the value of \\(k\\), not the value of the expression."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx, k = symbols('x k')\ne = expand((2*x + k)*(x - 3) - 2*x**2)\nks = solve(Poly(e, x).coeff_monomial(x), k)\nassert ks == [6]\nc = e.subs(k, 6)\nassert c == -18 and value(choices[answer]) == c\nassert all(value(choices[j]) != c for j in choices if j != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

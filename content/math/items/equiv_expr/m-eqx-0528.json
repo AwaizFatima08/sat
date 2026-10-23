@@ -1,0 +1,44 @@
+{
+  "id": "m-eqx-0528",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The expression \\((2x + 5)^{2} - (2x - 5)^{2}\\) is equivalent to \\(kx\\), where \\(k\\) is a constant. What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "40"
+  ],
+  "solution": [
+    "Use the difference of squares \\(A^{2} - B^{2} = (A + B)(A - B)\\) with \\(A = 2x + 5\\) and \\(B = 2x - 5\\).",
+    "\\(A + B = 4x\\) and \\(A - B = 10\\), so the expression is \\(4x \\cdot 10 = 40x\\).",
+    "So \\(k = 40\\). (Expanding both squares gives the same result: \\(4x^{2} + 20x + 25 - (4x^{2} - 20x + 25) = 40x\\).)"
+  ],
+  "verify": "x = symbols('x')\ne = expand((2*x + 5)**2 - (2*x - 5)**2)\nassert e == 40*x\nassert [Rational(s) for s in spr_answers] == [40]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "40",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

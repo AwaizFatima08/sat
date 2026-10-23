@@ -1,0 +1,82 @@
+{
+  "id": "m-prb-0519",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows the results of a swimming test taken by the students at two schools. Which of the following statements is true?",
+  "figure": {
+    "kind": "table",
+    "title": "Swimming test results",
+    "columns": [
+      "School",
+      "Passed",
+      "Did not pass",
+      "Total"
+    ],
+    "rows": [
+      [
+        "School P",
+        "84",
+        "36",
+        "120"
+      ],
+      [
+        "School Q",
+        "102",
+        "48",
+        "150"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A randomly selected student from School Q is more likely to have passed than a randomly selected student from School P.",
+    "B": "A randomly selected student from School P is more likely to have passed than a randomly selected student from School Q.",
+    "C": "A randomly selected student who passed is more likely to be from School P than from School Q.",
+    "D": "A randomly selected student from School P and a randomly selected student from School Q are equally likely to have passed."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "School P: \\(\\frac{84}{120} = 0.70\\). School Q: \\(\\frac{102}{150} = 0.68\\).",
+    "\\(0.70 > 0.68\\), so a student from School P is more likely to have passed.",
+    "Among the 186 students who passed, 102 are from School Q, so statement D is false."
+  ],
+  "explanation": {
+    "A": "Incorrect. This compares the numbers of students who passed (\\(102 > 84\\)) instead of the probabilities; School Q also has more students.",
+    "B": "Correct. The probability of passing is \\(\\frac{84}{120} = 0.70\\) at School P and \\(\\frac{102}{150} = 0.68\\) at School Q, and \\(0.70 > 0.68\\).",
+    "C": "Incorrect. Of the \\(84 + 102 = 186\\) students who passed, only 84 are from School P, so a student who passed is more likely to be from School Q.",
+    "D": "Incorrect. The probabilities are close (0.70 and 0.68) but not equal; this is the result of rounding too early."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_quantity",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nr = {row[0]: [int(v) for v in row[1:]] for row in figure['rows']}\npP = Rational(r['School P'][0], r['School P'][2])\npQ = Rational(r['School Q'][0], r['School Q'][2])\ntruth = {'A': pP > pQ, 'B': pQ > pP, 'C': pP == pQ, 'D': r['School P'][0] > r['School Q'][0]}\nassert truth[answer] and sum(1 for v in truth.values() if v) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

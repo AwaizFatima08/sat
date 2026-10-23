@@ -1,0 +1,121 @@
+{
+  "id": "m-cir-0534",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A square fountain base with sides 8 meters long sits inside a circular lawn in a park in Chennai, with all four corners of the square on the edge of the lawn, as shown. Grass covers the part of the lawn outside the square. What is the area, in square meters, of the part covered by grass?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "P": [
+        -4,
+        -4
+      ],
+      "Q": [
+        4,
+        -4
+      ],
+      "R": [
+        4,
+        4
+      ],
+      "S": [
+        -4,
+        4
+      ]
+    },
+    "segments": [
+      [
+        "P",
+        "Q"
+      ],
+      [
+        "Q",
+        "R"
+      ],
+      [
+        "R",
+        "S"
+      ],
+      [
+        "S",
+        "P"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 5.657
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          0,
+          -4.6
+        ],
+        "text": "8 m"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(64\\pi - 64\\)",
+    "B": "\\(32\\pi\\)",
+    "C": "\\(32\\pi - 64\\)",
+    "D": "\\(128\\pi - 64\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The diagonal of the square is a diameter of the circle: \\(8\\sqrt{2}\\), so \\(r = 4\\sqrt{2}\\) and \\(r^{2} = 32\\).",
+    "Circle area \\(= 32\\pi\\); square area \\(= 64\\).",
+    "Grass area \\(= 32\\pi - 64\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the side of the square, 8, as the radius; the radius is half the diagonal, \\(4\\sqrt{2}\\).",
+    "B": "Incorrect. This is the area of the whole lawn; the square's area, 64, still has to be subtracted.",
+    "C": "Correct. \\(\\pi(4\\sqrt{2})^{2} - 8^{2} = 32\\pi - 64\\).",
+    "D": "Incorrect. This uses the whole diagonal, \\(8\\sqrt{2}\\), as the radius instead of half of it."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "stopped_early",
+    "D": "radius_diameter"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('P','Q')==8 and d('Q','R')==8 and abs(ang('P','Q','R')-90)<0.01\nr=d('P','R')/2\nassert all(abs(N(d('O',p)-r))<0.01 for p in 'PQRS')\nans=pi*r**2-8**2\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

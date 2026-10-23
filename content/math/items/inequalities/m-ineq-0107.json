@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0107",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A courier service charges a fixed fee plus an amount for each kilogram a package weighs. The inequality \\(7.5 + 2.25w \\le 30\\) represents the weights \\(w\\), in kilograms, of packages that Omar can send for at most \\$30. What is the best interpretation of 2.25 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The greatest weight, in kilograms, of a package Omar can send",
+    "B": "The fixed fee, in dollars, for sending a package",
+    "C": "The amount of money, in dollars, Omar has left after paying the fixed fee",
+    "D": "The charge, in dollars, for each kilogram a package weighs"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "In \\(7.5 + 2.25w\\), the term \\(2.25w\\) changes with the weight \\(w\\), and 7.5 does not.",
+    "So 7.5 is the fixed fee, and 2.25 is the charge, in dollars, for each kilogram."
+  ],
+  "explanation": {
+    "A": "Incorrect. The greatest weight is the solution of the inequality, \\(w \\le 10\\), so it is 10 kilograms, not 2.25.",
+    "B": "Incorrect. The fixed fee is the constant term, 7.5, which does not depend on \\(w\\).",
+    "C": "Incorrect. The money left after the fixed fee is \\(30 - 7.5 = 22.5\\) dollars, not 2.25.",
+    "D": "Correct. 2.25 multiplies the weight \\(w\\), so it is the cost for each kilogram."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nw = symbols('w')\ncost = Rational('7.5') + Rational('2.25')*w\nassert diff(cost, w) == Rational('2.25') and cost.subs(w, 0) == Rational('7.5')\nassert solve(Eq(cost, 30), w) == [10]\nassert 'each kilogram' in choices[answer]\nassert sum('each kilogram' in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

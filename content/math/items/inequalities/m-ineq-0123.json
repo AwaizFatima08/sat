@@ -1,0 +1,60 @@
+{
+  "id": "m-ineq-0123",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A florist has 300 roses for an event. Each small bouquet uses 5 roses, and each large bouquet uses 12 roses. The florist must make at least 30 bouquets in all. What is the greatest number of large bouquets the florist can make?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(25\\)",
+    "B": "\\(12\\)",
+    "C": "\\(21\\)",
+    "D": "\\(22\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "With \\(s\\) small and \\(L\\) large bouquets: \\(5s + 12L \\le 300\\) and \\(s + L \\ge 30\\).",
+    "To make \\(L\\) as large as possible, use as few small bouquets as allowed: \\(s = 30 - L\\).",
+    "Then \\(5(30 - L) + 12L \\le 300\\), so \\(150 + 7L \\le 300\\) and \\(L \\le 21.4...\\).",
+    "The greatest whole number is 21 (with 9 small bouquets, using \\(45 + 252 = 297\\) roses)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(300 \\div 12\\), which ignores the requirement of at least 30 bouquets.",
+    "B": "Incorrect. This assumes all 30 required bouquets are small, leaving \\(300 - 150 = 150\\) roses for \\(150 \\div 12 = 12.5\\) large bouquets; but large bouquets also count toward the 30.",
+    "C": "Correct. With \\(s = 30 - L\\), the rose limit gives \\(150 + 7L \\le 300\\), so \\(L \\le 21.4...\\) and the greatest whole number is 21.",
+    "D": "Incorrect. This rounds 21.4... up; 22 large and 8 small bouquets would need \\(264 + 40 = 304\\) roses."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nok = [L for L in range(0, 40) for s in range(0, 70) if 5*s + 12*L <= 300 and s + L >= 30]\nassert max(ok) == 21 and value(choices[answer]) == max(ok)\nassert all(value(choices[k]) != max(ok) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

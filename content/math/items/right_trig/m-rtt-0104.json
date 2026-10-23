@@ -1,0 +1,45 @@
+{
+  "id": "m-rtt-0104",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The hypotenuse of an isosceles right triangle has length \\(10\\sqrt{2}\\). What is the area of the triangle?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "50"
+  ],
+  "solution": [
+    "In a \\(45^{\\circ}\\)-\\(45^{\\circ}\\)-\\(90^{\\circ}\\) triangle, the hypotenuse is \\(\\sqrt{2}\\) times each leg, so each leg is \\(10\\).",
+    "Area \\(= \\frac{1}{2}(10)(10) = 50\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "a=symbols('a',positive=True)\nleg=solve(Eq(2*a**2,(10*sqrt(2))**2),a)[0]\nans=leg**2/2\nassert leg==10 and ans==50\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "50",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

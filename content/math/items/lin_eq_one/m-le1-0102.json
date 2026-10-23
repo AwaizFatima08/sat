@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0102",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A water tank holds 850 liters of water. Water is drained from the tank at a constant rate of 25 liters per minute. Which equation can be used to find the number of minutes, \\(m\\), after which 300 liters of water remain in the tank?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(850 - 25m = 300\\)",
+    "B": "\\(25m - 850 = 300\\)",
+    "C": "\\(850 + 25m = 300\\)",
+    "D": "\\(300 - 25m = 850\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The tank starts with 850 liters and loses 25 liters each minute, so after \\(m\\) minutes it holds \\(850 - 25m\\) liters.",
+    "Setting this equal to 300 gives \\(850 - 25m = 300\\). (Solving: \\(25m = 550\\), so \\(m = 22\\).)"
+  ],
+  "explanation": {
+    "A": "Correct. The amount left is the starting 850 liters minus 25 liters for each of the \\(m\\) minutes, and that amount is 300 liters.",
+    "B": "Incorrect. This reverses the subtraction, so the expression does not describe 850 liters decreasing by 25 liters each minute.",
+    "C": "Incorrect. This adds water each minute instead of draining it.",
+    "D": "Incorrect. This swaps the starting amount and the remaining amount."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nm = symbols('m')\nassert solve(Eq(850 - 25*m, 300), m) == [22]\nassert choices[answer] == r'\\(850 - 25m = 300\\)'\nfor k in choices:\n    if k != answer:\n        l, r = choices[k][2:-2].split('=')\n        assert solve(Eq(value(l), value(r)), symbols('m')) != [22]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

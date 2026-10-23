@@ -1,0 +1,71 @@
+{
+  "_note": "Single source of truth for the Math section. Read by pipeline/validate_math.py, pipeline/build_packs.py and the app.",
+  "section": "math",
+  "title": "Math",
+  "module_minutes": 35,
+  "module_items": 22,
+  "domains": {
+    "algebra": "Algebra",
+    "advanced_math": "Advanced Math",
+    "psda": "Problem-Solving and Data Analysis",
+    "geometry_trig": "Geometry and Trigonometry"
+  },
+  "types": {
+    "lin_eq_one":     {"abbr": "le1", "domain": "algebra", "name": "Linear equations in one variable"},
+    "lin_functions":  {"abbr": "lfn", "domain": "algebra", "name": "Linear functions"},
+    "lin_eq_two":     {"abbr": "le2", "domain": "algebra", "name": "Linear equations in two variables"},
+    "systems":        {"abbr": "sys", "domain": "algebra", "name": "Systems of two linear equations"},
+    "inequalities":   {"abbr": "ineq", "domain": "algebra", "name": "Linear inequalities"},
+    "equiv_expr":     {"abbr": "eqx", "domain": "advanced_math", "name": "Equivalent expressions"},
+    "nonlin_eq":      {"abbr": "nle", "domain": "advanced_math", "name": "Nonlinear equations and systems"},
+    "nonlin_func":    {"abbr": "nlf", "domain": "advanced_math", "name": "Nonlinear functions"},
+    "ratios_rates":   {"abbr": "rat", "domain": "psda", "name": "Ratios, rates, proportions and units"},
+    "percentages":    {"abbr": "pct", "domain": "psda", "name": "Percentages"},
+    "one_var_data":   {"abbr": "ovd", "domain": "psda", "name": "One-variable data"},
+    "two_var_data":   {"abbr": "tvd", "domain": "psda", "name": "Two-variable data and models"},
+    "probability":    {"abbr": "prb", "domain": "psda", "name": "Probability and conditional probability"},
+    "inference":      {"abbr": "smp", "domain": "psda", "name": "Inference and margin of error"},
+    "stat_claims":    {"abbr": "stc", "domain": "psda", "name": "Evaluating statistical claims"},
+    "area_volume":    {"abbr": "arv", "domain": "geometry_trig", "name": "Area and volume"},
+    "lines_angles":   {"abbr": "lat", "domain": "geometry_trig", "name": "Lines, angles and triangles"},
+    "right_trig":     {"abbr": "rtt", "domain": "geometry_trig", "name": "Right triangles and trigonometry"},
+    "circles":        {"abbr": "cir", "domain": "geometry_trig", "name": "Circles"}
+  },
+  "type_order": ["lin_eq_one", "lin_functions", "lin_eq_two", "systems", "inequalities", "equiv_expr", "nonlin_eq",
+                 "nonlin_func", "ratios_rates", "percentages", "one_var_data", "two_var_data", "probability",
+                 "inference", "stat_claims", "area_volume", "lines_angles", "right_trig", "circles"],
+  "levels": {
+    "1": {"name": "Foundations", "b": -1.5},
+    "2": {"name": "Medium", "b": -0.5},
+    "3": {"name": "Advanced", "b": 0.5},
+    "4": {"name": "Challenge", "b": 1.5}
+  },
+  "traps": {
+    "sign_error": "Sign error: a plus or minus slipped",
+    "wrong_quantity": "Wrong quantity: solved for something other than what was asked",
+    "reciprocal": "Reciprocal or inverted ratio",
+    "percent_add": "Percent slip: added percents or used the wrong base",
+    "radius_diameter": "Mixed up radius and diameter (or similar paired measures)",
+    "misread_graph": "Misread the graph, table or figure",
+    "wrong_formula": "Used the wrong formula or rule",
+    "stopped_early": "Stopped one step early",
+    "arithmetic": "Arithmetic slip",
+    "concept": "Concept mix-up (e.g. slope vs intercept, mean vs median, correlation vs causation)"
+  },
+  "figure_kinds": ["xy", "geometry", "scatter", "bar", "line", "histogram", "dotplot", "boxplot", "table"],
+  "module_blueprint": {
+    "domains": {"algebra": 8, "advanced_math": 8, "psda": 3, "geometry_trig": 3},
+    "spr_per_module": [4, 7]
+  },
+  "paper_quotas": {
+    "lin_eq_one": 44, "lin_functions": 66, "lin_eq_two": 51, "systems": 49, "inequalities": 30,
+    "equiv_expr": 52, "nonlin_eq": 73, "nonlin_func": 115,
+    "ratios_rates": 20, "percentages": 18, "one_var_data": 18, "two_var_data": 15, "probability": 10,
+    "inference": 6, "stat_claims": 3,
+    "area_volume": 28, "lines_angles": 27, "right_trig": 18, "circles": 17
+  },
+  "level_share": {"1": 16, "2": 26, "3": 26, "4": 13},
+  "spr_share": 0.25,
+  "drill_items_per_type_level": 10,
+  "papers": 10
+}

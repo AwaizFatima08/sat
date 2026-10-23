@@ -1,0 +1,46 @@
+{
+  "id": "m-lat-0524",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "On a city plan of Chennai, a triangular park has sides of length 4 centimeters, 5 centimeters, and 6 centimeters. The actual park is similar to the triangle on the plan, and its longest side is 150 meters. What is the perimeter, in meters, of the actual park?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "375"
+  ],
+  "solution": [
+    "The longest side on the plan, 6 centimeters, corresponds to 150 meters, so each centimeter on the plan represents \\(\\frac{150}{6} = 25\\) meters.",
+    "The perimeter on the plan is \\(4 + 5 + 6 = 15\\) centimeters.",
+    "The actual perimeter is \\(15 \\cdot 25 = 375\\) meters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "k=Rational(150,max(4,5,6))\nans=k*(4+5+6)\nassert Rational(spr_answers[0])==ans==375\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "375",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

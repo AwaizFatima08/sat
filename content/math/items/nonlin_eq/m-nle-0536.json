@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0536",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What is the sum of the positive solutions to the equation \\(x^{4} - 13x^{2} + 36 = 0\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "5"
+  ],
+  "solution": [
+    "The equation is quadratic in \\(x^{2}\\): let \\(u = x^{2}\\), so \\(u^{2} - 13u + 36 = 0\\).",
+    "Factor: \\((u - 4)(u - 9) = 0\\), so \\(x^{2} = 4\\) or \\(x^{2} = 9\\).",
+    "The solutions are \\(\\pm 2\\) and \\(\\pm 3\\). The positive solutions are \\(2\\) and \\(3\\), and their sum is \\(5\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x', real=True)\nsols = solve(Eq(x**4 - 13*x**2 + 36, 0), x)\nassert sorted(sols) == [-3, -2, 2, 3]\nans = sum(s for s in sols if s > 0)\nassert [Rational(a) for a in spr_answers] == [ans]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

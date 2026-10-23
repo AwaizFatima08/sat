@@ -1,0 +1,83 @@
+{
+  "id": "m-tvd-0503",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows the total cost \\(y\\), in dollars, of catering an event for \\(x\\) guests. The relationship between \\(x\\) and \\(y\\) is linear. By how many dollars does the total cost increase for each additional guest?",
+  "figure": {
+    "kind": "table",
+    "title": "Catering cost",
+    "columns": [
+      "Guests x",
+      "Total cost y (dollars)"
+    ],
+    "rows": [
+      [
+        "10",
+        "250"
+      ],
+      [
+        "20",
+        "400"
+      ],
+      [
+        "30",
+        "550"
+      ],
+      [
+        "40",
+        "700"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(15\\)",
+    "B": "\\(150\\)",
+    "C": "\\(25\\)",
+    "D": "\\(100\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "From one row to the next, the number of guests increases by 10 and the cost increases by \\(400 - 250 = 150\\) dollars.",
+    "The increase for each additional guest is \\(\\frac{150}{10} = 15\\) dollars."
+  ],
+  "explanation": {
+    "A": "Correct. The cost rises 150 dollars for every 10 guests, which is \\(\\frac{150}{10} = 15\\) dollars per guest.",
+    "B": "Incorrect. This is the increase for 10 additional guests. Divide by 10 to get the increase for one guest.",
+    "C": "Incorrect. This is \\(\\frac{250}{10}\\), the average cost per guest for 10 guests. It includes a fixed cost, so it is not the cost of each additional guest.",
+    "D": "Incorrect. This is the cost when there are 0 guests, \\(250 - 150 = 100\\) dollars, which is the fixed part of the cost."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nrows = [(Integer(a), Integer(b)) for a, b in figure['rows']]\nrates = {(rows[i+1][1] - rows[i][1]) / (rows[i+1][0] - rows[i][0]) for i in range(3)}\nassert rates == {15}\nassert value(choices[answer]) == 15\nassert all(value(choices[k]) != 15 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

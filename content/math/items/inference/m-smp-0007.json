@@ -1,0 +1,59 @@
+{
+  "id": "m-smp-0007",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "Researchers surveyed a random sample of 600 adults in Mirpur and a separate random sample of 600 adults in Uttara, two areas of Dhaka, Bangladesh, about whether they use mobile banking. They estimated that 58% of adults in Mirpur use mobile banking, with a margin of error of 4 percentage points, and that 51% of adults in Uttara use mobile banking, with a margin of error of 4 percentage points. Which of the following conclusions is best supported by the data?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The percent of all adults who use mobile banking is greater in Mirpur than in Uttara.",
+    "B": "More than half of all adults in Uttara use mobile banking.",
+    "C": "The data do not show convincingly that the percent of all adults who use mobile banking differs between Mirpur and Uttara.",
+    "D": "The percent of all adults who use mobile banking in Mirpur is at least 3 percentage points greater than in Uttara."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Plausible values for Mirpur: \\(58 - 4 = 54\\%\\) to \\(58 + 4 = 62\\%\\). For Uttara: \\(51 - 4 = 47\\%\\) to \\(51 + 4 = 55\\%\\).",
+    "The intervals overlap (54% to 55%), so the two percents could plausibly be equal, or Uttara's could even be slightly higher.",
+    "So the data do not show convincingly that the percents differ.",
+    "Uttara's interval also includes values below 50%, so “more than half” is not supported either."
+  ],
+  "explanation": {
+    "A": "Incorrect. This treats the estimates as exact. The plausible ranges, 54% to 62% and 47% to 55%, overlap, so Mirpur's percent is not shown to be greater.",
+    "B": "Incorrect. This treats 51% as exact; Uttara's plausible range, 47% to 55%, includes values below 50%.",
+    "C": "Correct. Because the two plausible ranges overlap, the data do not show a clear difference between the two areas.",
+    "D": "Incorrect. This subtracts the margin of error only once (\\(7 - 4 = 3\\)). The two percents could be as close as 54% and 55%, so no positive gap is guaranteed."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "m = (58 - 4, 58 + 4)\nu = (51 - 4, 51 + 4)\nassert m[0] < u[1]\nassert m[0] - u[1] < 3\nassert u[0] < 50\nassert answer == 'C' and 'do not show' in choices['C']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

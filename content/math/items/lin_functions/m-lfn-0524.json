@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0524",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "For the linear function \\(f\\), \\(f(4) = 9\\), and the graph of \\(y = f(x)\\) in the \\(xy\\)-plane crosses the \\(x\\)-axis at \\(x = 10\\). What is the value of \\(f(0)\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "15"
+  ],
+  "solution": [
+    "The graph passes through \\((4, 9)\\) and \\((10, 0)\\), so the slope is \\(\\frac{0 - 9}{10 - 4} = -\\frac{3}{2}\\).",
+    "From \\(x = 4\\) back to \\(x = 0\\), \\(x\\) decreases by 4, so \\(f(x)\\) increases by \\(4 \\cdot \\frac{3}{2} = 6\\).",
+    "\\(f(0) = 9 + 6 = 15\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nm = Rational(0 - 9, 10 - 4)\nf = 9 + m*(x - 4)\nassert f.subs(x, 10) == 0 and f.subs(x, 0) == 15\nassert [Rational(s) for s in spr_answers] == [f.subs(x, 0)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "15",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

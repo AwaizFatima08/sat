@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0519",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following equations has no solution?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4(x - 2) = 4x - 8\\)",
+    "B": "\\(4(x - 2) = 4x - 2\\)",
+    "C": "\\(4(x - 2) = -4x + 8\\)",
+    "D": "\\(4(x - 2) = 2x - 8\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Each left side is \\(4(x - 2) = 4x - 8\\).",
+    "In \\(4x - 8 = 4x - 2\\), the \\(x\\)-terms are the same but the constants differ, so subtracting \\(4x\\) gives \\(-8 = -2\\), which is never true.",
+    "Choice A is true for every \\(x\\); choices C and D each have exactly one solution."
+  ],
+  "explanation": {
+    "A": "Incorrect. This mixes up no solution with infinitely many: both sides equal \\(4x - 8\\), so every \\(x\\) is a solution.",
+    "B": "Correct. \\(4x - 8 = 4x - 2\\) leads to \\(-8 = -2\\), which is false for every \\(x\\).",
+    "C": "Incorrect. This is the result of misreading the signs: \\(-4x + 8\\) is the opposite of \\(4x - 8\\), not a match with a different constant. \\(4x - 8 = -4x + 8\\) gives \\(8x = 16\\), so \\(x = 2\\) is a solution.",
+    "D": "Incorrect. This equation gives \\(2x = 0\\), so \\(x = 0\\) is a solution; a solution of 0 is still a solution."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\ndef n(k):\n    l, r = choices[k][2:-2].split('=')\n    d = expand(value(l) - value(r))\n    return 'inf' if d == 0 else len(solve(d, x))\nassert n(answer) == 0\nassert all(n(k) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

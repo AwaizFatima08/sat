@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0511",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following is equivalent to \\(x^{2} - 5x - 24\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((x - 8)(x + 3)\\)",
+    "B": "\\((x - 12)(x + 2)\\)",
+    "C": "\\((x + 8)(x - 3)\\)",
+    "D": "\\((x - 6)(x + 4)\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Look for two numbers whose product is \\(-24\\) and whose sum is \\(-5\\): they are \\(-8\\) and \\(3\\).",
+    "So \\(x^{2} - 5x - 24 = (x - 8)(x + 3)\\).",
+    "Check: \\((x - 8)(x + 3) = x^{2} + 3x - 8x - 24 = x^{2} - 5x - 24\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(-8 \\cdot 3 = -24\\) and \\(-8 + 3 = -5\\).",
+    "B": "Incorrect. These numbers have the right product, \\(-24\\), but their sum is \\(-10\\), not \\(-5\\).",
+    "C": "Incorrect. This is the result of reversing the signs; \\((x + 8)(x - 3) = x^{2} + 5x - 24\\).",
+    "D": "Incorrect. These numbers have the right product, \\(-24\\), but their sum is \\(-2\\), not \\(-5\\)."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\ntarget = x**2 - 5*x - 24\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

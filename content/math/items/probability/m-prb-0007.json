@@ -1,0 +1,58 @@
+{
+  "id": "m-prb-0007",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A factory makes phone chargers on two machines. Machine X makes 60% of the chargers, and machine Y makes the rest. Of the chargers made by machine X, 3% are defective, and of the chargers made by machine Y, 5% are defective. If a defective charger from this factory is selected at random, what is the probability that it was made by machine Y?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{2}{5}\\)",
+    "B": "\\(\\frac{10}{19}\\)",
+    "C": "\\(\\frac{5}{8}\\)",
+    "D": "\\(\\frac{1}{20}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Imagine 1,000 chargers: machine X makes 600 and machine Y makes 400.",
+    "Defective chargers: \\(0.03(600) = 18\\) from X and \\(0.05(400) = 20\\) from Y, so 38 in all.",
+    "The condition is “defective,” so the probability is \\(\\frac{20}{38} = \\frac{10}{19}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is machine Y's share of all chargers (40%); it ignores the information that the charger is defective.",
+    "B": "Correct. Of every 38 defective chargers, 20 come from machine Y, so the probability is \\(\\frac{20}{38} = \\frac{10}{19}\\).",
+    "C": "Incorrect. This is \\(\\frac{5}{3 + 5}\\): it compares the two defect rates but ignores that machine X makes more chargers.",
+    "D": "Incorrect. This is the probability that a charger made by machine Y is defective (5%): the condition is reversed."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "wrong_quantity"
+  },
+  "verify": "dx = Rational(60, 100) * Rational(3, 100)\ndy = Rational(40, 100) * Rational(5, 100)\np = dy / (dx + dy)\nassert p == Rational(10, 19)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

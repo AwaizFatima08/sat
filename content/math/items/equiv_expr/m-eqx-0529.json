@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0529",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Priya invests \\(x\\) dollars in account A, which earns 6% interest per year, and the rest of 10,000 dollars in account B, which earns 4% interest per year. The total interest, in dollars, earned in one year is \\(0.06x + 0.04(10{,}000 - x)\\), which is equivalent to \\(0.02x + 400\\). Which of the following is the best interpretation of 400 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The interest, in dollars, earned in one year from account B for every value of \\(x\\)",
+    "B": "The total amount, in dollars, invested in the two accounts",
+    "C": "The interest, in dollars, earned in one year if all 10,000 dollars are invested in account B",
+    "D": "The interest, in dollars, earned in one year if all 10,000 dollars are invested in account A"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Expand: \\(0.06x + 400 - 0.04x = 0.02x + 400\\).",
+    "The constant 400 is the value of the expression when \\(x = 0\\), that is, when nothing is invested in account A.",
+    "Then all 10,000 dollars are in account B, which earns \\(0.04(10{,}000) = 400\\) dollars. So 400 is the interest earned if all 10,000 dollars are invested in account B."
+  ],
+  "explanation": {
+    "A": "Incorrect. The interest from account B is \\(0.04(10{,}000 - x)\\), which changes with \\(x\\); it equals 400 only when \\(x = 0\\).",
+    "B": "Incorrect. The total amount invested is 10,000 dollars, not 400 dollars.",
+    "C": "Correct. When \\(x = 0\\), all 10,000 dollars are in account B, and the interest is \\(0.04(10{,}000) = 400\\) dollars.",
+    "D": "Incorrect. If all 10,000 dollars were in account A, the interest would be \\(0.06(10{,}000) = 600\\) dollars; this is the value at \\(x = 10{,}000\\), not the constant term."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\ne = expand(Rational('0.06')*x + Rational('0.04')*(10000 - x))\nassert e == x/50 + 400 and e.subs(x, 0) == 400\nassert Rational('0.04')*10000 == 400 and Rational('0.06')*10000 != 400\nassert 'all 10,000 dollars are invested in account B' in choices[answer]\nassert all('account B' not in choices[k] or 'all' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

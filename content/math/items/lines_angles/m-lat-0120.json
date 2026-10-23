@@ -1,0 +1,119 @@
+{
+  "id": "m-lat-0120",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A mosaic design is made of 5 congruent isosceles triangular tiles that meet at point \\(O\\), as shown. For each tile, the angle between its two equal sides is at \\(O\\), and the 5 angles at \\(O\\) fill the space around the point exactly, with no gaps or overlaps. What is the measure, in degrees, of each of the other two angles of one tile?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "A": [
+        0.0,
+        5.0
+      ],
+      "B": [
+        -4.755,
+        1.545
+      ],
+      "C": [
+        -2.939,
+        -4.045
+      ],
+      "D": [
+        2.939,
+        -4.045
+      ],
+      "E": [
+        4.755,
+        1.545
+      ]
+    },
+    "segments": [
+      [
+        "O",
+        "A"
+      ],
+      [
+        "O",
+        "B"
+      ],
+      [
+        "O",
+        "C"
+      ],
+      [
+        "O",
+        "D"
+      ],
+      [
+        "O",
+        "E"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "E"
+      ],
+      [
+        "E",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "54"
+  ],
+  "solution": [
+    "The 5 equal angles at \\(O\\) add up to \\(360^{\\circ}\\), so each measures \\(\\frac{360}{5} = 72\\) degrees.",
+    "The other two angles of each tile are equal (the tile is isosceles): \\(\\frac{180 - 72}{2} = 54\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(ang('A','O','B')-72)<0.1 and abs(d('O','A')-d('O','B'))<0.01\nv=Rational(360,5)\nans=(180-v)/2\nassert abs(ang('O','A','B')-ans)<0.1\nassert Rational(spr_answers[0])==ans==54\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "54",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

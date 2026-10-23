@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0537",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Lena spends exactly \\$60 on \\(x\\) pounds of almonds and \\(y\\) pounds of cashews. Each kind of nut has a fixed price per pound. The graph of the equation relating \\(x\\) and \\(y\\) in the \\(xy\\)-plane has an \\(x\\)-intercept of \\((12, 0)\\) and a \\(y\\)-intercept of \\((0, 5)\\). Which statement must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A pound of almonds costs 2.4 times as much as a pound of cashews.",
+    "B": "A pound of almonds costs \\$12.",
+    "C": "A pound of cashews costs \\$7 more than a pound of almonds.",
+    "D": "Lena buys a total of 17 pounds of nuts."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The \\(x\\)-intercept means \\$60 buys 12 pounds of almonds alone, so almonds cost \\(\\frac{60}{12} = 5\\) dollars per pound.",
+    "The \\(y\\)-intercept means \\$60 buys 5 pounds of cashews alone, so cashews cost \\(\\frac{60}{5} = 12\\) dollars per pound.",
+    "Cashews cost \\(12 - 5 = 7\\) dollars more per pound than almonds."
+  ],
+  "explanation": {
+    "A": "Incorrect. This inverts the comparison: cashews cost \\(\\frac{12}{5} = 2.4\\) times as much as almonds, not the other way around.",
+    "B": "Incorrect. 12 is the number of pounds of almonds \\$60 can buy, not the price per pound; the price is \\$5.",
+    "C": "Correct. Almonds cost \\(\\frac{60}{12} = 5\\) dollars per pound and cashews \\(\\frac{60}{5} = 12\\) dollars per pound, a difference of \\$7.",
+    "D": "Incorrect. Adding the intercepts does not give a total; Lena's total weight depends on the mix and is between 5 and 12 pounds."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\na, c = Rational(60, 12), Rational(60, 5)\nassert (a, c) == (5, 12) and c - a == 7 and c/a == Rational(12, 5)\nassert a != 12 and a/c != Rational(12, 5)\nassert '\\\\$7 more' in choices[answer]\nassert sum('\\\\$7 more' in t for t in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

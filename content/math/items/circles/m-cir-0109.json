@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0109",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A shop sells round mirrors in two sizes. The small mirror has a diameter of 40 centimeters, and the large mirror has a diameter of 50 centimeters. The area of the large mirror is how many times the area of the small mirror?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{5}{4}\\)",
+    "B": "\\(\\frac{16}{25}\\)",
+    "C": "\\(\\frac{25}{16}\\)",
+    "D": "\\(\\frac{9}{16}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Area is \\(\\pi r^{2}\\): the radii are 20 and 25 centimeters.",
+    "\\(\\frac{\\pi(25)^{2}}{\\pi(20)^{2}} = \\frac{625}{400} = \\frac{25}{16}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the ratio of the diameters; areas scale by the square of that ratio.",
+    "B": "Incorrect. This is the small area divided by the large area; the ratio is inverted.",
+    "C": "Correct. \\(\\frac{25^{2}}{20^{2}} = \\frac{25}{16}\\).",
+    "D": "Incorrect. This is \\(\\frac{625 - 400}{400}\\), how much greater the large area is as a fraction of the small area, not the ratio of the areas."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "reciprocal",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nans=(pi*25**2)/(pi*20**2)\nassert ans==Rational(25,16)\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

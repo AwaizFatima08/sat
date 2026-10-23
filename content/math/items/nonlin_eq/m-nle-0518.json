@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0518",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The brightness \\(B\\) of a lamp measured at a distance of \\(d\\) meters from the lamp is given by \\(B = \\frac{k}{d^{2}}\\), where \\(k\\) is a positive constant. Which of the following gives \\(d\\) in terms of \\(B\\) and \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\sqrt{\\frac{B}{k}}\\)",
+    "B": "\\(\\frac{k}{\\sqrt{B}}\\)",
+    "C": "\\(\\sqrt{\\frac{k}{B}}\\)",
+    "D": "\\(\\frac{k}{B}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Multiply both sides by \\(d^{2}\\): \\(Bd^{2} = k\\).",
+    "Divide both sides by \\(B\\): \\(d^{2} = \\frac{k}{B}\\).",
+    "A distance is positive, so \\(d = \\sqrt{\\frac{k}{B}}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of inverting the fraction: it is the reciprocal of the correct expression.",
+    "B": "Incorrect. This is the result of taking the square root of \\(B\\) only instead of the whole quotient \\(\\frac{k}{B}\\).",
+    "C": "Correct. \\(d^{2} = \\frac{k}{B}\\), so \\(d = \\sqrt{\\frac{k}{B}}\\).",
+    "D": "Incorrect. This is \\(d^{2}\\), not \\(d\\); the square root step is missing."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "wrong_formula",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nBv, k, d = symbols('B k d', positive=True)\nsol = solve(Eq(Bv, k/d**2), d)\nassert len(sol) == 1\nf = lambda c: value(choices[c]).subs({Symbol('B'): Bv, Symbol('k'): k})\nassert simplify(f(answer) - sol[0]) == 0\nassert all(simplify(f(c) - sol[0]) != 0 for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

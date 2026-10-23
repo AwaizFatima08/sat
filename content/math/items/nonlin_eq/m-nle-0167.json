@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0167",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(\\frac{x^{2} - 5x + a}{x - 2} = 0\\), \\(a\\) is a constant. For which of the following values of \\(a\\) does the equation have exactly one real solution?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{25}{2}\\)",
+    "B": "\\(-6\\)",
+    "C": "\\(6\\)",
+    "D": "\\(25\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The equation is true when the numerator is 0 and \\(x \\ne 2\\). So its solutions are the solutions of \\(x^{2} - 5x + a = 0\\) other than \\(x = 2\\).",
+    "With \\(a = 6\\), the numerator is \\(x^{2} - 5x + 6 = (x - 2)(x - 3)\\). The value \\(x = 2\\) makes the denominator 0, so it is excluded, and the only solution is \\(x = 3\\).",
+    "The other choices give 2 or 0 solutions: \\(a = -6\\) gives \\(x = 6\\) and \\(x = -1\\), and \\(a = \\frac{25}{2}\\) and \\(a = 25\\) make the discriminant \\(25 - 4a\\) negative."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of using \\(25 - 2a = 0\\) instead of \\(25 - 4a = 0\\) to make the discriminant 0. With \\(a = \\frac{25}{2}\\), the discriminant is negative, so there are no real solutions.",
+    "B": "Incorrect. This is the result of a sign error when substituting \\(x = 2\\) into the numerator: \\(4 - 10 + a = 0\\) gives \\(a = 6\\), not \\(-6\\). With \\(a = -6\\), the equation has two solutions, 6 and \\(-1\\).",
+    "C": "Correct. The numerator factors as \\((x - 2)(x - 3)\\), and \\(x = 2\\) is excluded, so \\(x = 3\\) is the only solution.",
+    "D": "Incorrect. This is the result of setting \\(25 - a = 0\\), leaving the 4 out of the discriminant. With \\(a = 25\\), there are no real solutions."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\ndef cnt(av):\n    return len([s for s in solve(x**2 - 5*x + av, x) if s.is_real and s != 2])\nassert value(choices[answer]) == 6 and cnt(6) == 1\nassert all(cnt(value(choices[k])) != 1 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

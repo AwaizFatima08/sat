@@ -1,0 +1,45 @@
+{
+  "id": "m-tvd-0112",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "For a public swimming pool, the line of best fit \\(y = 12x - 150\\) models the number of visitors \\(y\\) on a day when the high temperature is \\(x\\) degrees Celsius. An increase of 1 degree Celsius is equal to an increase of 1.8 degrees Fahrenheit. According to the model, by how many visitors does the predicted number of visitors increase when the high temperature increases by 9 degrees Fahrenheit?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "60"
+  ],
+  "solution": [
+    "An increase of 9 degrees Fahrenheit is an increase of \\(\\frac{9}{1.8} = 5\\) degrees Celsius.",
+    "The slope, 12, is the predicted increase in visitors for each increase of 1 degree Celsius, so the increase is \\(12 \\cdot 5 = 60\\) visitors."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "dc = 9 / Rational('1.8')\nassert dc == 5\nf = lambda c: 12*c - 150\ninc = f(20 + dc) - f(20)\nassert inc == 60\nassert [Rational(s) for s in spr_answers] == [inc]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "60",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

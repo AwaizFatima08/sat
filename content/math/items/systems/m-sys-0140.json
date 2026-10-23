@@ -1,0 +1,44 @@
+{
+  "id": "m-sys-0140",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A freight train leaves a station in Lahore and travels at a constant speed of 60 kilometers per hour. One hour later, an express train leaves the same station on a parallel track and travels in the same direction at a constant speed of 90 kilometers per hour. How many kilometers from the station will the express train be when it catches up with the freight train?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "180"
+  ],
+  "solution": [
+    "Let \\(t\\) be the express train's travel time in hours. The freight train has then traveled \\(t + 1\\) hours.",
+    "They have gone the same distance \\(d\\): \\(d = 60(t + 1)\\) and \\(d = 90t\\).",
+    "So \\(90t = 60t + 60\\), \\(t = 2\\), and \\(d = 90(2) = 180\\)."
+  ],
+  "verify": "t, d = symbols('t d')\nsol = solve([d - 60*(t + 1), d - 90*t], [t, d])\nassert sol == {t: 2, d: 180}\nassert [Rational(a) for a in spr_answers] == [sol[d]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "180",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

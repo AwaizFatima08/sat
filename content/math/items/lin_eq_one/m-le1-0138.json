@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0138",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(\\frac{a}{3}(6x - 9) + 4 = 8x + b\\), \\(a\\) and \\(b\\) are constants. If the equation has infinitely many solutions, which of the following must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(a = 4\\) and \\(b = 8\\)",
+    "B": "\\(a = 4\\) and \\(b = -12\\)",
+    "C": "\\(a = 4\\) and \\(b = -8\\)",
+    "D": "\\(a = 4\\) and \\(b \\ne -8\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Distribute: \\(2ax - 3a + 4 = 8x + b\\).",
+    "For infinitely many solutions, the \\(x\\)-coefficients must match, \\(2a = 8\\), so \\(a = 4\\).",
+    "The constants must also match: \\(-3(4) + 4 = b\\), so \\(b = -8\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of a sign slip in the constant: \\(-3a + 4 = -8\\), not 8.",
+    "B": "Incorrect. This is the result of leaving out the \\(+4\\) when matching constants: \\(b = -3a = -12\\).",
+    "C": "Correct. Matching coefficients gives \\(a = 4\\), and matching constants gives \\(b = -12 + 4 = -8\\).",
+    "D": "Incorrect. With \\(a = 4\\) and \\(b \\ne -8\\), the \\(x\\)-terms cancel but the constants differ, so the equation has no solution."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx, a, b = symbols('x a b')\nd = expand(a/3*(6*x - 9) + 4 - (8*x + b))\nsol = solve([d.coeff(x, 1), d.coeff(x, 0)], [a, b], dict=True)\nassert sol == [{a: 4, b: -8}]\nassert choices[answer] == r'\\(a = 4\\) and \\(b = -8\\)'\nassert expand(d.subs({a: 4, b: -8})) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0122",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The owner of a food truck models the daily profit, in dollars, from selling sandwiches at a price of \\(x\\) dollars each with the function \\(P(x) = -2(x - 15)^{2} + 450\\). Which of the following is the best interpretation of the number \\(450\\) in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The greatest possible daily profit is 450 dollars.",
+    "B": "The daily profit is 450 dollars when the price is 0 dollars.",
+    "C": "The price that gives the greatest daily profit is 450 dollars.",
+    "D": "The daily profit increases by 450 dollars for each 1-dollar increase in price."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "\\(P(x)\\) is in vertex form with a negative leading coefficient, so its vertex \\((15, 450)\\) is a maximum.",
+    "The \\(y\\)-value of the vertex, \\(450\\), is the greatest possible daily profit, in dollars."
+  ],
+  "explanation": {
+    "A": "Correct. The vertex \\((15, 450)\\) is the highest point of the graph, so the greatest daily profit is 450 dollars, at a price of 15 dollars.",
+    "B": "Incorrect. \\(P(0) = -2(225) + 450 = 0\\), so the profit at a price of 0 dollars is 0 dollars.",
+    "C": "Incorrect. The price that gives the greatest profit is the \\(x\\)-coordinate of the vertex, 15 dollars.",
+    "D": "Incorrect. \\(P\\) is quadratic, so the profit does not change by a constant amount per dollar."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nP = -2*(x - 15)**2 + 450\nxv = solve(diff(P, x), x)[0]\nassert (xv, P.subs(x, xv)) == (15, 450) and P.subs(x, 0) == 0\nassert 'greatest possible daily profit' in choices[answer]\nassert all('greatest possible daily profit' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "m-ovd-0538",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The box plot summarizes the lengths, in minutes, of 41 phone calls made at an office. Which of the following must be true?",
+  "figure": {
+    "kind": "boxplot",
+    "x_label": "Call length (minutes)",
+    "plots": [
+      {
+        "name": "Calls",
+        "min": 10,
+        "q1": 20,
+        "median": 28,
+        "q3": 35,
+        "max": 60
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "At least 21 of the calls lasted 28 minutes or longer.",
+    "B": "The mean length of the calls is greater than 28 minutes.",
+    "C": "Exactly 10 of the calls lasted more than 20 minutes and less than 28 minutes.",
+    "D": "The mean length of the calls is 28 minutes."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "With 41 values in order, the median is the 21st value, which is 28.",
+    "The 21st through the 41st values are all at least 28, and that is 21 calls.",
+    "The box plot does not give the mean, and it does not tell how many values equal a quartile, so the other statements might be false."
+  ],
+  "explanation": {
+    "A": "Correct. The median of 41 values is the 21st value in order, 28. The 21st through 41st values, 21 calls in all, are each at least 28 minutes.",
+    "B": "Incorrect. The long right whisker suggests a few long calls, but the mean is not guaranteed to be greater than 28. For example, the box plot also fits a data set in which 19 calls lasted exactly 20 minutes and 10 lasted exactly 28 minutes, and that data set has a mean of less than 28.",
+    "C": "Incorrect. About a quarter of the calls are between the first quartile and the median, but several calls could last exactly 20 or exactly 28 minutes, so the number strictly between them is not fixed.",
+    "D": "Incorrect. 28 minutes is the median. A box plot does not show the mean, and the mean need not equal the median."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nn = 41\nassert n - 21 + 1 == 21 and figure['plots'][0]['median'] == 28\n# a data set with this box plot where A, B and C are all false\nv = sorted([10] + [20] * 19 + [28] * 10 + [35] * 10 + [60])\nassert len(v) == 41 and (v[0], (v[9] + v[10]) / 2, v[20], (v[30] + v[31]) / 2, v[40]) == (10, 20, 28, 35, 60)\nassert Rational(sum(v), 41) < 28 and sum(20 < x < 28 for x in v) != 10\nassert '21' in choices[answer] and sum(x >= 28 for x in v) >= 21",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (21st of 41 values is the median 28, so 21 calls are >= 28); solver's letters were swapped with m-ovd-0539",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

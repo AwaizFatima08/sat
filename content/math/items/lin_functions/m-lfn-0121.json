@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0121",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The amount of money \\(M\\), in dollars, in a school club's fundraising account \\(d\\) days after a fundraiser begins is modeled by \\(M(d) = 75d + 340\\). Which of the following statements is true according to the model?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "After 4 days, the account had 1,660 dollars.",
+    "B": "After 4 days, the account had 640 dollars.",
+    "C": "The account had 75 dollars when the fundraiser began.",
+    "D": "The amount in the account increases by 340 dollars each day."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(M(4) = 75(4) + 340 = 640\\), so after 4 days the account had 640 dollars.",
+    "The account starts at \\(M(0) = 340\\) dollars and grows by 75 dollars per day, which rules out the other statements."
+  ],
+  "explanation": {
+    "A": "Incorrect. This multiplies the sum by 4: \\((75 + 340)(4) = 1{,}660\\). Only the 75 is multiplied by \\(d\\).",
+    "B": "Correct. \\(M(4) = 75(4) + 340 = 300 + 340 = 640\\).",
+    "C": "Incorrect. When the fundraiser began, \\(d = 0\\) and \\(M(0) = 340\\) dollars; 75 is the daily increase.",
+    "D": "Incorrect. The amount increases by 75 dollars per day, the coefficient of \\(d\\); 340 is the starting amount."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nd = symbols('d')\nM = 75*d + 340\nassert M.subs(d, 4) == 640 and M.subs(d, 0) == 340 and diff(M, d) == 75\nkey = 'had 640 dollars'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1\nassert (75 + 340)*4 == 1660",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

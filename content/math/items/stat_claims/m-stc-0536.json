@@ -1,0 +1,71 @@
+{
+  "id": "m-stc-0536",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A region has 120 secondary schools, as shown in the table. Researchers randomly selected 10 of the 40 urban schools and then randomly selected 30 students from each selected school. Of the 300 students, half were randomly assigned to use a new homework website for one term, and the website users had a higher average increase in test scores. What is the greatest number of students in the region to whom the conclusion that the website caused the increase can appropriately be applied?",
+  "figure": {
+    "kind": "table",
+    "title": "Secondary schools in the region",
+    "columns": [
+      "Type of school",
+      "Number of schools",
+      "Number of students"
+    ],
+    "rows": [
+      [
+        "Urban",
+        "40",
+        "22,500"
+      ],
+      [
+        "Rural",
+        "80",
+        "31,500"
+      ],
+      [
+        "Total",
+        "120",
+        "54,000"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "22500"
+  ],
+  "solution": [
+    "Random assignment of the website supports a cause-and-effect conclusion.",
+    "Every urban student had a chance to be selected (a random school, then random students within it), but no rural student did.",
+    "So the conclusion can be generalized to all students at the 40 urban schools: 22,500 students."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "rows = {r[0]: int(r[2].replace(',', '')) for r in figure['rows']}\nassert rows['Urban'] + rows['Rural'] == rows['Total']\nans = rows['Urban']\nassert ans == 22500 and ans != rows['Total']\nassert [Rational(a) for a in spr_answers] == [ans]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "22500",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

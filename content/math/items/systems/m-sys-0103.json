@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0103",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[3x + 2y = 16\\] \\[5x - 2y = 16\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(4\\)",
+    "C": "\\(32\\)",
+    "D": "\\(\\frac{16}{3}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Add the equations to eliminate \\(y\\): \\(8x = 32\\).",
+    "Divide by 8: \\(x = 4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(y\\), not \\(x\\).",
+    "B": "Correct. Adding the equations gives \\(8x = 32\\), so \\(x = 4\\).",
+    "C": "Incorrect. This is \\(8x\\); the last step of dividing by 8 is missing.",
+    "D": "Incorrect. This solves \\(3x = 16\\), ignoring the \\(2y\\) term in the first equation."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nsol = solve([3*x + 2*y - 16, 5*x - 2*y - 16], [x, y])\nassert sol == {x: 4, y: 2}\nassert value(choices[answer]) == 4\nassert all(value(choices[k]) != 4 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

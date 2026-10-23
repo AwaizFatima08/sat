@@ -1,0 +1,80 @@
+{
+  "id": "m-nlf-0005",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A family in Karachi bought a motorcycle. The table shows the value of the motorcycle, in rupees, \\(t\\) years after it was bought. Which of the following functions best models the value \\(V(t)\\), in rupees, \\(t\\) years after purchase?",
+  "figure": {
+    "kind": "table",
+    "title": "Motorcycle value",
+    "columns": [
+      "Years after purchase, t",
+      "Value (rupees)"
+    ],
+    "rows": [
+      [
+        "0",
+        "240,000"
+      ],
+      [
+        "1",
+        "204,000"
+      ],
+      [
+        "2",
+        "173,400"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(V(t) = 240000(0.15)^{t}\\)",
+    "B": "\\(V(t) = 240000(0.85)^{t}\\)",
+    "C": "\\(V(t) = 240000(1.15)^{t}\\)",
+    "D": "\\(V(t) = 240000 - 36000t\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Check the ratios of consecutive values: \\(\\frac{204{,}000}{240{,}000} = 0.85\\) and \\(\\frac{173{,}400}{204{,}000} = 0.85\\).",
+    "A constant ratio means an exponential model with growth factor \\(0.85\\) (a \\(15\\%\\) decrease per year).",
+    "The starting value is \\(240{,}000\\), so \\(V(t) = 240000(0.85)^{t}\\).",
+    "A linear model does not fit: the decreases are \\(36{,}000\\) and then \\(30{,}600\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of using the percent decrease, \\(15\\%\\), as the factor; each year the value keeps \\(85\\%\\), not \\(15\\%\\).",
+    "B": "Correct. Each value is \\(0.85\\) times the one before, starting from \\(240{,}000\\).",
+    "C": "Incorrect. This is the result of treating the \\(15\\%\\) change as an increase; this model would make the value grow.",
+    "D": "Incorrect. This linear model uses only the first decrease; it gives \\(168{,}000\\) for \\(t = 2\\), not \\(173{,}400\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "t = symbols('t')\ndata = [(int(r[0]), int(r[1].replace(',', ''))) for r in figure['rows']]\nassert Rational(data[1][1], data[0][1]) == Rational(data[2][1], data[1][1]) == Rational(17, 20)\nfits = lambda k: all(value(choices[k].split('=')[1]).subs(t, a) == v for a, v in data)\nassert fits(answer)\nassert all(not fits(k) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

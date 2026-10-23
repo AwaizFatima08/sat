@@ -1,0 +1,46 @@
+{
+  "id": "m-prb-0108",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A hiking club has 180 members. Of these members, 96 own a tent, 70 own a kayak, and 34 own neither a tent nor a kayak. If a member who owns a tent is selected at random, what is the probability that the member also owns a kayak?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "5/24"
+  ],
+  "solution": [
+    "Members who own a tent or a kayak (or both): \\(180 - 34 = 146\\).",
+    "Members who own both: \\(96 + 70 - 146 = 20\\).",
+    "Of the 96 tent owners, 20 own a kayak, so the probability is \\(\\frac{20}{96} = \\frac{5}{24}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "both = 96 + 70 - (180 - 34)\nassert both == 20\np = Rational(both, 96)\nassert p == Rational(5, 24)\nassert [Rational(a) for a in spr_answers] == [p]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "5/24",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

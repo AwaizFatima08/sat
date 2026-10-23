@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0510",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What percent of 40 is 50?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(125\\%\\)",
+    "B": "\\(25\\%\\)",
+    "C": "\\(80\\%\\)",
+    "D": "\\(10\\%\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Divide 50 by 40: \\(\\frac{50}{40} = 1.25\\).",
+    "Write the decimal as a percent: \\(1.25 = 125\\%\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\frac{50}{40} = 1.25\\), so 50 is \\(125\\%\\) of 40.",
+    "B": "Incorrect. This is the percent by which 50 is greater than 40, \\(\\frac{10}{40} = 25\\%\\), not 50 as a percent of 40.",
+    "C": "Incorrect. This is 40 as a percent of 50, \\(\\frac{40}{50} = 80\\%\\). The division is upside down.",
+    "D": "Incorrect. This is the difference \\(50 - 40 = 10\\) written as a percent."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nv = Rational(50, 40)\nassert v == Rational(125, 100)\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

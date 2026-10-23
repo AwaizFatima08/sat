@@ -1,0 +1,43 @@
+{
+  "id": "m-le2-0116",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(6x + by = 24\\), where \\(b\\) is a constant, is a line with a slope of \\(\\frac{3}{4}\\). What is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-8"
+  ],
+  "solution": [
+    "Solving for \\(y\\) gives \\(y = -\\frac{6}{b}x + \\frac{24}{b}\\), so the slope is \\(-\\frac{6}{b}\\).",
+    "\\(-\\frac{6}{b} = \\frac{3}{4}\\) gives \\(3b = -24\\), so \\(b = -8\\)."
+  ],
+  "verify": "b, x, y = symbols('b x y')\nm = diff(solve(Eq(6*x + b*y, 24), y)[0], x)\nsol = solve(Eq(m, Rational(3, 4)), b)\nassert sol == [-8]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "-8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

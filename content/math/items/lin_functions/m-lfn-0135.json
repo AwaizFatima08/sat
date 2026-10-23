@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0135",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The number of subscribers to an online language course \\(t\\) years after the course launched is modeled by the function \\(S(t) = 1{,}800t + 14{,}000\\). Which function \\(N\\) gives the number of subscribers, according to this model, \\(m\\) months after the course launched?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(N(m) = 150m + 14{,}000\\)",
+    "B": "\\(N(m) = 1{,}800m + 14{,}000\\)",
+    "C": "\\(N(m) = 21{,}600m + 14{,}000\\)",
+    "D": "\\(N(m) = 150m + 168{,}000\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "\\(m\\) months is \\(\\frac{m}{12}\\) years, so \\(N(m) = S\\left(\\frac{m}{12}\\right)\\).",
+    "\\(N(m) = 1{,}800\\left(\\frac{m}{12}\\right) + 14{,}000 = 150m + 14{,}000\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The model adds 1,800 subscribers per year, which is \\(\\frac{1{,}800}{12} = 150\\) per month, and the starting number does not change.",
+    "B": "Incorrect. This keeps the yearly increase of 1,800 as if it were a monthly increase.",
+    "C": "Incorrect. This multiplies the yearly increase by 12 instead of dividing it by 12.",
+    "D": "Incorrect. The monthly rate is right, but the number of subscribers at launch does not depend on the time unit; it should stay 14,000."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nt, m = symbols('t m')\nS = 1800*t + 14000\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if simplify(rhs(choices[k]).subs(m, 12*t) - S) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

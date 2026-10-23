@@ -1,0 +1,60 @@
+{
+  "id": "m-nle-0521",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A farmer has 60 meters of fencing to build a rectangular pen against a long wall. The wall forms one side of the pen, and the fencing forms the other three sides. Each of the two sides perpendicular to the wall has length \\(x\\) meters. How many values of \\(x\\) give the pen an area of exactly 500 square meters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Exactly one",
+    "B": "Exactly two",
+    "C": "None",
+    "D": "More than two"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The side parallel to the wall is \\(60 - 2x\\) meters, so the area is \\(x(60 - 2x)\\).",
+    "Set the area equal to 500: \\(x(60 - 2x) = 500\\), which simplifies to \\(x^{2} - 30x + 250 = 0\\).",
+    "The discriminant is \\((-30)^{2} - 4(1)(250) = 900 - 1{,}000 = -100\\), which is negative.",
+    "So no real value of \\(x\\) works. (The greatest possible area is \\(15 \\cdot 30 = 450\\) square meters.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. Exactly one value would require a discriminant of \\(0\\); here it is \\(-100\\).",
+    "B": "Incorrect. This is the result of a sign slip in the discriminant, \\(900 + 1{,}000\\) instead of \\(900 - 1{,}000\\), which wrongly suggests two solutions.",
+    "C": "Correct. The discriminant of \\(x^{2} - 30x + 250 = 0\\) is \\(-100\\), so there is no real solution.",
+    "D": "Incorrect. A quadratic equation has at most two real solutions, and this one has none."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x', real=True)\nq = x*(60 - 2*x) - 500\nassert discriminant(expand(q), x) < 0\nn = len(solve(Eq(q, 0), x))\nassert n == 0\nnames = {0: 'None', 1: 'Exactly one', 2: 'Exactly two'}\nassert choices[answer] == names[n]\nassert sum(1 for k in choices if choices[k] == names[n]) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

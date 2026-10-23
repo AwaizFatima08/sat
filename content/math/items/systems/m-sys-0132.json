@@ -1,0 +1,44 @@
+{
+  "id": "m-sys-0132",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A school paid \\$2,070 for 5 desks and 12 chairs. All the desks have the same price, and all the chairs have the same price. The price of one desk is \\$90 more than 3 times the price of one chair. What is the price, in dollars, of one desk?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "270"
+  ],
+  "solution": [
+    "Let \\(d\\) and \\(c\\) be the prices: \\(5d + 12c = 2{,}070\\) and \\(d = 3c + 90\\).",
+    "Substitute: \\(5(3c + 90) + 12c = 2{,}070\\), so \\(27c + 450 = 2{,}070\\) and \\(c = 60\\).",
+    "Then \\(d = 3(60) + 90 = 270\\)."
+  ],
+  "verify": "d, c = symbols('d c')\nsol = solve([5*d + 12*c - 2070, d - (3*c + 90)], [d, c])\nassert sol == {d: 270, c: 60}\nassert [Rational(a) for a in spr_answers] == [sol[d]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "270",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

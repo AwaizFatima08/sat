@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0118",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which equation represents a line in the \\(xy\\)-plane with an \\(x\\)-intercept of \\((-4, 0)\\) and a \\(y\\)-intercept of \\((0, 6)\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6x - 4y = -12\\)",
+    "B": "\\(3x - 2y = 12\\)",
+    "C": "\\(3x - 2y = -12\\)",
+    "D": "\\(2x - 3y = -12\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Slope \\(= \\frac{6 - 0}{0 - (-4)} = \\frac{3}{2}\\), so \\(y = \\frac{3}{2}x + 6\\).",
+    "Multiply by 2: \\(2y = 3x + 12\\), so \\(3x - 2y = -12\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This doubles the left side of the correct equation but not the right side, so its intercepts are \\((-2, 0)\\) and \\((0, 3)\\).",
+    "B": "Incorrect. This line has intercepts \\((4, 0)\\) and \\((0, -6)\\); the signs are reversed.",
+    "C": "Correct. \\(3(-4) - 2(0) = -12\\) and \\(3(0) - 2(6) = -12\\).",
+    "D": "Incorrect. This line has intercepts \\((-6, 0)\\) and \\((0, 4)\\); the coefficients are switched."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "sign_error",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\nok = [k for k in choices if eq(choices[k]).subs({x: -4, y: 0}) == 0 and eq(choices[k]).subs({x: 0, y: 6}) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

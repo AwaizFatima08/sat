@@ -1,0 +1,93 @@
+{
+  "id": "m-tvd-0101",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The scatterplot shows the water temperature \\(x\\), in degrees Celsius, and the time \\(y\\), in seconds, that it took a sugar cube to dissolve in the water for 7 trials. The line of best fit is shown and has the equation \\(y = -1.5x + 150\\). Based on the line of best fit, what is the predicted time, in seconds, for a sugar cube to dissolve in water at 60 degrees Celsius?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Water temperature (degrees Celsius)",
+    "y_label": "Time to dissolve (seconds)",
+    "points": [
+      [
+        20,
+        122
+      ],
+      [
+        30,
+        103
+      ],
+      [
+        40,
+        93
+      ],
+      [
+        50,
+        76
+      ],
+      [
+        60,
+        62
+      ],
+      [
+        70,
+        47
+      ],
+      [
+        80,
+        30
+      ]
+    ],
+    "line": "-1.5*x + 150"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(150\\)",
+    "B": "\\(240\\)",
+    "C": "\\(60\\)",
+    "D": "\\(90\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = 60\\) into the equation of the line of best fit.",
+    "\\(y = -1.5(60) + 150 = -90 + 150 = 60\\) seconds."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the \\(y\\)-intercept, the predicted time at 0 degrees Celsius.",
+    "B": "Incorrect. This adds \\(1.5(60)\\) to 150 instead of subtracting it; the slope is negative.",
+    "C": "Correct. \\(-1.5(60) + 150 = 60\\).",
+    "D": "Incorrect. This is \\(1.5 \\cdot 60 = 90\\), the amount the prediction drops from 150; it is not the predicted time."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "sign_error",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\ny = sympify(figure['line']).subs(x, 60)\nassert y == 60\nassert value(choices[answer]) == y\nassert all(value(choices[k]) != y for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

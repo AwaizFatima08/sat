@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0507",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following describes all solutions to the inequality \\(-2 < x + 3 \\le 7\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-5 < x \\le 7\\)",
+    "B": "\\(-5 < x \\le 4\\)",
+    "C": "\\(1 < x \\le 10\\)",
+    "D": "\\(-5 \\le x < 4\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Subtract 3 from all three parts: \\(-2 - 3 < x \\le 7 - 3\\).",
+    "So \\(-5 < x \\le 4\\). The signs stay the same because nothing was multiplied or divided by a negative number."
+  ],
+  "explanation": {
+    "A": "Incorrect. This subtracts 3 from the left part only and leaves the right part unchanged.",
+    "B": "Correct. Subtracting 3 from every part gives \\(-5 < x \\le 4\\).",
+    "C": "Incorrect. This adds 3 to each part instead of subtracting 3.",
+    "D": "Incorrect. This switches which end is included: \\(-5\\) is not a solution (the left inequality is strict), but 4 is."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\ndef iv(s, v):\n    u = s.strip()[2:-2].replace('\\\\le', '<=').replace('\\\\ge', '>=')\n    if u.startswith(v + ' '):\n        return value(u).as_set()\n    L, Rt = u.split(' ' + v + ' ')\n    return value(L + ' ' + v).as_set() & value(v + ' ' + Rt).as_set()\nx = symbols('x')\nS = solve_univariate_inequality(x + 3 > -2, x, relational=False) & solve_univariate_inequality(x + 3 <= 7, x, relational=False)\nassert S == Interval.Lopen(-5, 4)\nok = [k for k in choices if iv(choices[k], 'x') == S]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

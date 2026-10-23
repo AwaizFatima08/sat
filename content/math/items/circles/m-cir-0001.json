@@ -1,0 +1,99 @@
+{
+  "id": "m-cir-0001",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The cooking surface of a round, flat tawa (griddle) used for making chapatis is a circle with a diameter of 30 centimeters. What is the area of the cooking surface, in square centimeters?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "X": [
+        -15,
+        0
+      ],
+      "Y": [
+        15,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "X",
+        "Y"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 15
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          0,
+          1.5
+        ],
+        "text": "30 cm"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(30\\pi\\)",
+    "B": "\\(225\\pi\\)",
+    "C": "\\(450\\pi\\)",
+    "D": "\\(900\\pi\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The radius is half the diameter: \\(r = 15\\).",
+    "Area \\(= \\pi r^{2} = \\pi (15)^{2} = 225\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\pi d\\), the circumference, not the area.",
+    "B": "Correct. \\(\\pi (15)^{2} = 225\\pi\\).",
+    "C": "Incorrect. This is \\(2\\pi r^{2}\\); the area formula is \\(\\pi r^{2}\\).",
+    "D": "Incorrect. This is \\(\\pi (30)^{2}\\); it uses the diameter in place of the radius."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "wrong_formula",
+    "D": "radius_diameter"
+  },
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nc=figure['circles'][0]\nassert d('X','Y')==30 and c['radius']==15 and list(c['center'])==P['O']\nans=pi*Rational(30,2)**2\nassert simplify(value(choices[answer])-ans)==0 and ans==225*pi\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

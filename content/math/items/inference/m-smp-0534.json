@@ -1,0 +1,59 @@
+{
+  "id": "m-smp-0534",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A district in Nepal has 60,000 registered voters. In a random sample of 500 of these voters, 41% support a proposed road project, and the margin of error for this estimate is 4.4 percentage points. A district official claims that at least 21,000 of the district's registered voters support the project. Which of the following is the best evaluation of the claim?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The claim is supported, because exactly 24,600 of the district's registered voters support the project.",
+    "B": "The claim is not supported, because less than half of the sampled voters support the project.",
+    "C": "The claim is not supported, because 41% of the 500 sampled voters is only 205 voters.",
+    "D": "The claim is supported, because the least plausible number of supporters, 21,960, is greater than 21,000."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Plausible percents for all voters: \\(41 - 4.4 = 36.6\\%\\) to \\(41 + 4.4 = 45.4\\%\\).",
+    "Least plausible number: \\(0.366(60{,}000) = 21{,}960\\).",
+    "Even the least plausible number is greater than 21,000, so the claim is supported."
+  ],
+  "explanation": {
+    "A": "Incorrect. 24,600 is the point estimate; the number of supporters is known only within the margin of error, not exactly.",
+    "B": "Incorrect. The claim is about at least 21,000 voters (35% of 60,000), not about a majority.",
+    "C": "Incorrect. 205 is the number of SAMPLED supporters; the claim is about all 60,000 voters, so the sample percent must be applied to 60,000.",
+    "D": "Correct. The least plausible percent, 36.6%, gives \\(0.366(60{,}000) = 21{,}960\\) voters, which is more than 21,000."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nlo = (Rational('41') - Rational('4.4')) / 100 * 60000\nassert lo == 21960 and lo > 21000\nkey = choices[answer]\nassert answer == 'B' and 'is supported' in key and '21,960' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

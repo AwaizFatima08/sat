@@ -1,0 +1,43 @@
+{
+  "id": "m-tvd-0528",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The line of best fit for a set of data predicts \\(y = 34\\) when \\(x = 6\\) and \\(y = 50\\) when \\(x = 10\\). What value of \\(y\\) does the line of best fit predict when \\(x = 0\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "10"
+  ],
+  "solution": [
+    "Slope of the line: \\(\\frac{50 - 34}{10 - 6} = \\frac{16}{4} = 4\\).",
+    "From \\(x = 6\\) back to \\(x = 0\\), the prediction decreases by \\(6(4) = 24\\): \\(34 - 24 = 10\\)."
+  ],
+  "verify": "m, c = symbols('m c')\nsol = solve([Eq(6*m + c, 34), Eq(10*m + c, 50)], [m, c])\nassert sol[m] == 4 and sol[c] == 10\nassert [Rational(s) for s in spr_answers] == [sol[c]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-23",
+        "answer": "10",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (slope 4, 34 - 24 = 10)",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-tvd-0539",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "An exponential model of the form \\(y = a(b)^{x}\\), where \\(a\\) and \\(b\\) are positive constants, passes through the points \\((1, 12)\\) and \\((3, 27)\\). What value of \\(y\\) does the model predict when \\(x = 5\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(91.125\\)",
+    "B": "\\(40.5\\)",
+    "C": "\\(42\\)",
+    "D": "\\(60.75\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From \\(x = 1\\) to \\(x = 3\\), \\(y\\) is multiplied by \\(b^{2} = \\frac{27}{12} = 2.25\\).",
+    "From \\(x = 3\\) to \\(x = 5\\), \\(y\\) is again multiplied by \\(b^{2} = 2.25\\).",
+    "So the predicted value is \\(27(2.25) = 60.75\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(27(1.5)^{3}\\), the prediction for \\(x = 6\\). From \\(x = 3\\) to \\(x = 5\\) is only 2 steps.",
+    "B": "Incorrect. This is the prediction for \\(x = 4\\): \\(27(1.5) = 40.5\\). One more factor of 1.5 is needed for \\(x = 5\\).",
+    "C": "Incorrect. This extends the points linearly (\\(y\\) increases by 15 for each 2 units of \\(x\\)). The model is exponential, so \\(y\\) is multiplied, not increased by a fixed amount.",
+    "D": "Correct. \\(b^{2} = \\frac{27}{12} = 2.25\\), so \\(y\\) at \\(x = 5\\) is \\(27(2.25) = 60.75\\)."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "stopped_early",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\na, b = symbols('a b', positive=True)\nsol = solve([Eq(a*b, 12), Eq(a*b**3, 27)], [a, b], dict=True)\nassert len(sol) == 1\ny5 = sol[0][a] * sol[0][b]**5\nassert y5 == Rational(243, 4)\nassert value(choices[answer]) == y5\nassert all(value(choices[k]) != y5 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

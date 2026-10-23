@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0118",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x \\neq 5\\) and \\(x \\neq -5\\), which of the following is equivalent to \\(\\frac{x^{2} + 5x}{x^{2} - 25}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{x}{x - 5}\\)",
+    "B": "\\(\\frac{x + 5}{x - 5}\\)",
+    "C": "\\(-\\frac{x}{5}\\)",
+    "D": "\\(\\frac{x}{x + 5}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Factor the numerator: \\(x^{2} + 5x = x(x + 5)\\).",
+    "Factor the denominator: \\(x^{2} - 25 = (x - 5)(x + 5)\\).",
+    "Cancel the common factor \\(x + 5\\): \\(\\frac{x}{x - 5}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\frac{x(x + 5)}{(x - 5)(x + 5)} = \\frac{x}{x - 5}\\).",
+    "B": "Incorrect. This is the result of cancelling the factor \\(x\\) from the numerator instead of the common factor \\(x + 5\\).",
+    "C": "Incorrect. This is the result of cancelling the \\(x^{2}\\)-terms, which are terms of a sum, not common factors.",
+    "D": "Incorrect. This is the result of cancelling \\(x - 5\\) instead of \\(x + 5\\); only \\(x + 5\\) appears in both the numerator and the denominator."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = (x**2 + 5*x)/(x**2 - 25)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

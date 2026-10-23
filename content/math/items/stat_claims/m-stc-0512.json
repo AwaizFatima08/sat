@@ -1,0 +1,86 @@
+{
+  "id": "m-stc-0512",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The table shows the design of six studies, each of which compared two treatments using participants from a population P. For how many of the six studies can a cause-and-effect conclusion about the treatments be generalized to all of population P?",
+  "figure": {
+    "kind": "table",
+    "title": "Design of six studies",
+    "columns": [
+      "Study",
+      "Participants selected at random from P",
+      "Treatments assigned at random"
+    ],
+    "rows": [
+      [
+        "1",
+        "Yes",
+        "No"
+      ],
+      [
+        "2",
+        "Yes",
+        "Yes"
+      ],
+      [
+        "3",
+        "No",
+        "Yes"
+      ],
+      [
+        "4",
+        "No",
+        "No"
+      ],
+      [
+        "5",
+        "Yes",
+        "Yes"
+      ],
+      [
+        "6",
+        "No",
+        "Yes"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "2"
+  ],
+  "solution": [
+    "A cause-and-effect conclusion needs random assignment of the treatments.",
+    "Generalizing to all of P needs participants selected at random from P.",
+    "Only studies 2 and 5 have both, so the answer is 2."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "n = sum(1 for r in figure['rows'] if r[1] == 'Yes' and r[2] == 'Yes')\nassert n == 2\nassert [Rational(a) for a in spr_answers] == [n]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

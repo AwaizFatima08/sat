@@ -1,0 +1,67 @@
+{
+  "id": "m-lfn-0004",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The height of a seedling increases linearly over time. The table shows its height on three days after the start of an experiment. What was the height, in centimeters, of the seedling on day 0?",
+  "figure": {
+    "kind": "table",
+    "title": "Seedling height",
+    "columns": [
+      "Day",
+      "Height (centimeters)"
+    ],
+    "rows": [
+      [
+        "10",
+        "14"
+      ],
+      [
+        "25",
+        "23"
+      ],
+      [
+        "40",
+        "32"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "The rate of growth is \\(\\frac{23 - 14}{25 - 10} = \\frac{9}{15} = 0.6\\) centimeter per day.",
+    "From day 0 to day 10 the seedling grew \\(10 \\cdot 0.6 = 6\\) centimeters.",
+    "So on day 0 its height was \\(14 - 6 = 8\\) centimeters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r = [[Rational(c) for c in row] for row in figure['rows']]\nm = (r[1][1] - r[0][1]) / (r[1][0] - r[0][0])\nassert (r[2][1] - r[1][1]) / (r[2][0] - r[1][0]) == m\nh0 = r[0][1] - m*r[0][0]\nassert h0 == 8\nassert [Rational(s) for s in spr_answers] == [h0]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

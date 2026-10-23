@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0506",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A bus company in Colombo, Sri Lanka, surveyed a random sample of 300 of its customers. Of the customers surveyed, 72% said they were satisfied with the service, and the margin of error for this estimate is 5 percentage points. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Exactly 72% of all the company's customers are satisfied with the service.",
+    "B": "It is plausible that between 67% and 77% of all the company's customers are satisfied with the service.",
+    "C": "It is plausible that between 72% and 77% of all the company's customers are satisfied with the service.",
+    "D": "Between 67% and 77% of the 300 surveyed customers are satisfied with the service."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The margin of error gives plausible values for the percent of ALL the company's customers: \\(72 - 5 = 67\\%\\) to \\(72 + 5 = 77\\%\\).",
+    "The 72% for the 300 surveyed customers is known exactly; the uncertainty is about the whole customer population."
+  ],
+  "explanation": {
+    "A": "Incorrect. 72% is an estimate from a sample; the margin of error shows the percent for all customers is not known exactly.",
+    "B": "Correct. The plausible values for all customers run from \\(72 - 5 = 67\\%\\) to \\(72 + 5 = 77\\%\\).",
+    "C": "Incorrect. This only adds the margin of error; the plausible values extend 5 points below 72% as well.",
+    "D": "Incorrect. The percent for the 300 surveyed customers is exactly 72%; the margin of error describes the uncertainty for ALL customers."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nlo, hi = 72 - 5, 72 + 5\nassert (lo, hi) == (67, 77)\nkey = choices[answer]\nassert answer == 'B' and 'plausible' in key and '67%' in key and '77%' in key and 'all' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0101",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The water authority in Islamabad, Pakistan, wants to estimate the mean monthly water use of all households in the city. Which of the following methods of selecting 400 households is most likely to give an accurate estimate?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Selecting 400 households at random from a list of all households in the city",
+    "B": "Selecting the 400 households that are closest to the water authority's main office",
+    "C": "Selecting 400 households at random from the city's newest housing development",
+    "D": "Selecting the first 400 households that call the water authority's help line"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "An accurate estimate needs a sample that represents all households in the city.",
+    "Selecting households at random from a list of all households gives every household the same chance of being chosen."
+  ],
+  "explanation": {
+    "A": "Correct. A random sample from all households in the city is the method most likely to represent the whole population.",
+    "B": "Incorrect. Households near one office may differ from households elsewhere in the city, so this sample is not representative.",
+    "C": "Incorrect. The sample is random, but only from one development, so it represents that development rather than the whole city.",
+    "D": "Incorrect. Households that call the help line may have water problems or unusual water use, so they are not representative."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nmethods = {'A': (False, 'city'), 'B': (False, 'city'), 'C': (True, 'city'), 'D': (True, 'development')}\ngood = [k for k, (rnd, frame) in methods.items() if rnd and frame == 'city']\nassert good == [answer]\nassert 'at random' in choices[answer] and 'all households in the city' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

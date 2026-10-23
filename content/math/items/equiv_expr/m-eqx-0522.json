@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0522",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "An online seller's total cost to make and ship \\(n\\) mugs is \\((2.5n + 40)\\) dollars, and each mug sells for 7 dollars. The seller's profit per mug is the total profit divided by the number of mugs. Which expression represents the profit per mug, in dollars, when \\(n\\) mugs are sold?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9.5 - \\frac{40}{n}\\)",
+    "B": "\\(4.5 - 40n\\)",
+    "C": "\\(4.5 - \\frac{40}{n}\\)",
+    "D": "\\(4.5n - 40\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Total profit is revenue minus cost: \\(7n - (2.5n + 40) = 4.5n - 40\\).",
+    "Divide by \\(n\\): \\(\\frac{4.5n - 40}{n} = 4.5 - \\frac{40}{n}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding the cost per mug, 2.5, to the price instead of subtracting it.",
+    "B": "Incorrect. This is the result of multiplying 40 by \\(n\\) instead of dividing it by \\(n\\).",
+    "C": "Correct. The total profit \\(4.5n - 40\\) divided by \\(n\\) is \\(4.5 - \\frac{40}{n}\\).",
+    "D": "Incorrect. This is the total profit for \\(n\\) mugs; it still has to be divided by \\(n\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "arithmetic",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nn = symbols('n')\ntarget = (7*n - (Rational('2.5')*n + 40))/n\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

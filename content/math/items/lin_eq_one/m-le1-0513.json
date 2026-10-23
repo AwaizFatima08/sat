@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0513",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Rahul's mobile phone plan in Pune costs 199 rupees per month and includes 100 minutes of calls. Each additional minute costs 2 rupees. Last month, Rahul's bill was 359 rupees. How many minutes of calls did Rahul make last month?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(80\\)",
+    "B": "\\(379\\)",
+    "C": "\\(130\\)",
+    "D": "\\(180\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(m\\) be the total minutes. The extra minutes are \\(m - 100\\), so \\(199 + 2(m - 100) = 359\\).",
+    "Subtract 199: \\(2(m - 100) = 160\\), so \\(m - 100 = 80\\).",
+    "Add 100: \\(m = 180\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the number of additional minutes; the 100 included minutes must be added back.",
+    "B": "Incorrect. This is the result of adding 199 to 359 instead of subtracting it: \\(2(m - 100) = 558\\).",
+    "C": "Incorrect. This is the result of multiplying only \\(m\\) by 2: \\(199 + 2m - 100 = 359\\).",
+    "D": "Correct. \\(2(m - 100) = 160\\), so \\(m - 100 = 80\\) and \\(m = 180\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "sign_error",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nm = symbols('m')\ns = solve(Eq(199 + 2*(m - 100), 359), m)[0]\nassert s == 180\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

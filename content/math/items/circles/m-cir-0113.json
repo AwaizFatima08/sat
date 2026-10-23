@@ -1,0 +1,59 @@
+{
+  "id": "m-cir-0113",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The arm of a center-pivot irrigation system is 400 meters long and rotates about a fixed pivot at a constant rate. In 3 hours, the outer end of the arm travels \\(120\\pi\\) meters. How many hours does the arm take to complete one full rotation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{20}{3}\\)",
+    "B": "\\(40\\)",
+    "C": "\\(20\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "One full rotation moves the outer end the circumference \\(2\\pi(400) = 800\\pi\\) meters.",
+    "The end travels \\(\\frac{120\\pi}{3} = 40\\pi\\) meters per hour.",
+    "Time \\(= \\frac{800\\pi}{40\\pi} = 20\\) hours."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{800\\pi}{120\\pi}\\), the number of 3-hour periods in one rotation; it still must be multiplied by 3.",
+    "B": "Incorrect. This uses 800 meters as the radius; 400 meters is already the radius of the circle the end follows.",
+    "C": "Correct. \\(\\frac{800\\pi}{40\\pi} = 20\\) hours.",
+    "D": "Incorrect. This uses \\(\\pi r\\) instead of \\(2\\pi r\\) for the circumference."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "radius_diameter",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nans=(2*pi*400)/(120*pi/3)\nassert ans==20\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

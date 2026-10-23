@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0007",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "In the \\(xy\\)-plane, line \\(\\ell\\) has equation \\(kx + 6y = 18\\), where \\(k\\) is a constant. Line \\(m\\) passes through the points \\((1, 4)\\) and \\((4, 2)\\). If line \\(\\ell\\) is perpendicular to line \\(m\\), what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-9\\)",
+    "B": "\\(-4\\)",
+    "C": "\\(4\\)",
+    "D": "\\(9\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Slope of \\(m\\): \\(\\frac{2 - 4}{4 - 1} = -\\frac{2}{3}\\).",
+    "Line \\(\\ell\\) must have slope \\(\\frac{3}{2}\\), the negative reciprocal.",
+    "Rewrite \\(\\ell\\): \\(y = -\\frac{k}{6}x + 3\\), so its slope is \\(-\\frac{k}{6}\\).",
+    "Solve \\(-\\frac{k}{6} = \\frac{3}{2}\\): \\(k = -9\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Line \\(m\\) has slope \\(-\\frac{2}{3}\\), so \\(\\ell\\) needs slope \\(\\frac{3}{2}\\); \\(-\\frac{k}{6} = \\frac{3}{2}\\) gives \\(k = -9\\).",
+    "B": "Incorrect. This sets the slope of \\(\\ell\\) to \\(\\frac{2}{3}\\): the sign was changed, but the reciprocal was not taken.",
+    "C": "Incorrect. This sets the slope of \\(\\ell\\) equal to \\(-\\frac{2}{3}\\), which makes the lines parallel, not perpendicular.",
+    "D": "Incorrect. This sets the slope of \\(\\ell\\) to \\(-\\frac{3}{2}\\): the reciprocal was taken, but the sign was not changed."
+  },
+  "traps": {
+    "B": "reciprocal",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "k, x = symbols('k x')\nmm = Rational(2 - 4, 4 - 1)\nml = diff(solve(Eq(k*x + 6*symbols('y'), 18), symbols('y'))[0], x)\nsol = solve(Eq(ml*mm, -1), k)\nassert sol == [-9]\nassert value(choices[answer]) == -9\nassert all(value(choices[c]) != -9 for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

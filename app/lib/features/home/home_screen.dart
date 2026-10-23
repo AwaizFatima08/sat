@@ -8,6 +8,7 @@ import 'package:moduleup/data/content_bank.dart';
 import 'package:moduleup/data/progress.dart';
 import 'package:moduleup/data/progress_repository.dart';
 import 'package:moduleup/engine/results.dart';
+import 'package:moduleup/features/section/section.dart';
 import 'package:moduleup/widgets/common.dart';
 
 /// Weakest question types with enough answers to judge (at least 5).
@@ -28,14 +29,21 @@ class HomeScreen extends ConsumerWidget {
     final p = ref.watch(progressProvider).value ?? ProgressSnapshot.empty;
     if (bank == null) return const Center(child: CircularProgressIndicator());
     final now = ref.watch(clockProvider).now();
+    final section = effectiveSection(ref);
+    final bp = bank.bpOf(section);
+    final forms = bank.formsOf(section);
     final latest = p.latestByForm;
-    final nextPaper = bank.forms
-        .where((f) => !latest.containsKey(f.id))
-        .firstOrNull;
+    final nextPaper = forms.where((f) => !latest.containsKey(f.id)).firstOrNull;
     final last = ([
-      ...p.papers,
+      for (final r in p.papers)
+        if ((bank.form(r.formId)?.section ?? 'rw') == section) r,
     ]..sort((a, b) => b.finishedAt.compareTo(a.finishedAt))).firstOrNull;
-    final weak = weakestTypes(breakdown(p.allResponses, bank.items));
+    final weak = weakestTypes(
+      breakdown(
+        p.allResponses.where((r) => bank.items[r.itemId]?.section == section),
+        bank.items,
+      ),
+    );
     final due = p.dueMistakes(now).length;
     final name = p.profile?.name ?? '';
     return Column(
@@ -50,7 +58,8 @@ class HomeScreen extends ConsumerWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              const SizedBox(height: AppSpace.m),
+              const SectionSwitcher(),
+              const SizedBox(height: AppSpace.s),
               if (p.session case final s?)
                 _ActionCard(
                   icon: Icons.play_circle_outline,
@@ -63,7 +72,9 @@ class HomeScreen extends ConsumerWidget {
                 _ActionCard(
                   icon: Icons.assignment_outlined,
                   title: 'Start ${nextPaper.title}',
-                  subtitle: 'Full adaptive section · 54 questions · 64 min',
+                  subtitle:
+                      'Full adaptive section · ${bp.moduleItems * 2} questions'
+                      ' · ${bp.moduleMinutes * 2} min',
                   onTap: () => context.push('/paper/${nextPaper.id}'),
                   highlight: true,
                 ),
@@ -112,7 +123,7 @@ class HomeScreen extends ConsumerWidget {
                           for (final (t, tally) in weak)
                             ListTile(
                               contentPadding: EdgeInsets.zero,
-                              title: Text(bank.blueprint.types[t]!.name),
+                              title: Text(bank.bpOfType(t).types[t]!.name),
                               subtitle: Text(
                                 '${(tally.ratio * 100).round()}% correct',
                               ),
@@ -125,8 +136,10 @@ class HomeScreen extends ConsumerWidget {
               const SizedBox(height: AppSpace.m),
               _ActionCard(
                 icon: Icons.library_books_outlined,
-                title: 'All 10 papers',
-                subtitle: '${latest.length} of ${bank.forms.length} done',
+                title: 'All ${forms.length} papers',
+                subtitle:
+                    '${forms.where((f) => latest.containsKey(f.id)).length} '
+                    'of ${forms.length} done',
                 onTap: () => context.push('/papers'),
               ),
             ],

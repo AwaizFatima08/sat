@@ -1,0 +1,46 @@
+{
+  "id": "m-cir-0108",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In a circle with a radius of 6 centimeters, an arc has a length of 15 centimeters. What is the measure, in radians, of the central angle that intercepts this arc?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "5/2",
+    "2.5"
+  ],
+  "solution": [
+    "Arc length \\(s = r\\theta\\), with \\(\\theta\\) in radians.",
+    "\\(\\theta = \\frac{s}{r} = \\frac{15}{6} = \\frac{5}{2}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t=symbols('t')\nans=solve(Eq(6*t,15),t)[0]\nassert ans==Rational(5,2)\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "5/2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

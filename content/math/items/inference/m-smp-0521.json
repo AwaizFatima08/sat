@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0521",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A city has 15,000 residents. Based on a random sample of 600 residents, 23% of the city's residents are estimated to ride a bicycle to work at least once a week, with a margin of error of 3 percentage points. Which of the following is the most appropriate conclusion about the number of the city's residents who ride a bicycle to work at least once a week?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The number is plausibly between 3,447 and 3,453.",
+    "B": "Exactly 3,450 of the city's residents ride a bicycle to work at least once a week.",
+    "C": "The number is plausibly between 2,550 and 4,350.",
+    "D": "The number is plausibly between 3,000 and 3,900."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Plausible percents: \\(23 - 3 = 20\\%\\) to \\(23 + 3 = 26\\%\\).",
+    "Plausible numbers of residents: \\(0.20(15{,}000) = 3{,}000\\) to \\(0.26(15{,}000) = 3{,}900\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This subtracts and adds 3 residents, but the margin of error is 3 percentage points, which is 450 residents.",
+    "B": "Incorrect. 3,450 is the point estimate, 23% of 15,000; the margin of error shows the true number is not known exactly.",
+    "C": "Incorrect. This uses a margin of 6 percentage points (900 residents) on each side, twice the given margin of error.",
+    "D": "Correct. The plausible percents, 20% to 26%, give \\(0.20(15{,}000) = 3{,}000\\) to \\(0.26(15{,}000) = 3{,}900\\) residents."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nlo, hi = Rational(20, 100) * 15000, Rational(26, 100) * 15000\nassert (lo, hi) == (3000, 3900)\nkey = choices[answer]\nassert answer == 'D' and '3,000' in key and '3,900' in key and 'plausibly' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

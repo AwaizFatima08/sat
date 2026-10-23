@@ -7,6 +7,7 @@ import 'package:moduleup/data/progress.dart';
 import 'package:moduleup/data/progress_repository.dart';
 import 'package:moduleup/features/auth/auth_screens.dart';
 import 'package:moduleup/features/paper/paper_session.dart';
+import 'package:moduleup/features/section/section.dart';
 import 'package:moduleup/widgets/common.dart';
 
 /// The 10 papers as tiles.
@@ -17,11 +18,15 @@ class PapersScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final bank = ref.watch(contentBankProvider).value;
     final p = ref.watch(progressProvider).value ?? ProgressSnapshot.empty;
+    final forms = bank?.formsOf(effectiveSection(ref)) ?? const [];
     return Scaffold(
-      appBar: AppBar(title: const Text('Full-length papers')),
+      appBar: AppBar(
+        title: const Text('Full-length papers'),
+        bottom: (bank?.hasMath ?? false) ? const SectionSwitcherBar() : null,
+      ),
       body: bank == null
           ? const Center(child: CircularProgressIndicator())
-          : bank.forms.isEmpty
+          : forms.isEmpty
           ? const StateMessage(
               icon: Icons.hourglass_empty,
               text: 'Papers are being prepared.',
@@ -33,7 +38,7 @@ class PapersScreen extends ConsumerWidget {
               crossAxisSpacing: AppSpace.s,
               childAspectRatio: 1.3,
               children: [
-                for (final f in bank.forms)
+                for (final f in forms)
                   _PaperTile(
                     title: f.title,
                     status: p.session?.formId == f.id
@@ -107,6 +112,8 @@ class PaperIntroScreen extends ConsumerWidget {
         body: StateMessage(icon: Icons.error_outline, text: 'Paper not found.'),
       );
     }
+    final bp = bank.bpOf(form.section);
+    final isMath = form.section == 'math';
     final resume = p.session?.formId == formId ? p.session : null;
     final done = p.latestByForm[formId];
     void go({SavedPaperSession? from}) {
@@ -121,24 +128,38 @@ class PaperIntroScreen extends ConsumerWidget {
         padding: const EdgeInsets.all(AppSpace.l),
         children: [
           Text(
-            'Reading and Writing',
+            sectionNames[form.section]!,
             style: Theme.of(context).textTheme.headlineSmall,
           ),
           const SizedBox(height: AppSpace.m),
-          const _Direction(
+          _Direction(
             icon: Icons.view_agenda_outlined,
-            text: '2 modules, 27 questions each, 32 minutes each.',
+            text:
+                '2 modules, ${bp.moduleItems} questions each, '
+                '${bp.moduleMinutes} minutes each.',
           ),
           const _Direction(
             icon: Icons.alt_route,
             text:
                 'Your module 1 result decides whether module 2 is easier or harder. Only the harder module can lead to the top scores.',
           ),
-          const _Direction(
-            icon: Icons.touch_app_outlined,
-            text:
-                'Tap a choice to answer. Use the strike button to eliminate choices, long-press a sentence to highlight it, and mark questions to review.',
-          ),
+          if (isMath) ...[
+            const _Direction(
+              icon: Icons.calculate_outlined,
+              text:
+                  'A calculator and the reference sheet are available on every question (top right).',
+            ),
+            const _Direction(
+              icon: Icons.keyboard_outlined,
+              text:
+                  'Some questions ask you to type your answer: a whole number, decimal or fraction, up to 5 characters (6 with a minus sign).',
+            ),
+          ] else
+            const _Direction(
+              icon: Icons.touch_app_outlined,
+              text:
+                  'Tap a choice to answer. Use the strike button to eliminate choices, long-press a sentence to highlight it, and mark questions to review.',
+            ),
           const _Direction(
             icon: Icons.timer_outlined,
             text:

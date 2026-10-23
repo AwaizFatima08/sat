@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0105",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "In a cricket match in Chattogram, the team batting second has scored 118 runs, and 20 overs remain. To win, the team must finish with a total of more than 245 runs. Which inequality represents the average numbers of runs per over, \\(r\\), that the team must score in the remaining overs to win?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20r > 245 + 118\\)",
+    "B": "\\(118 + 20r < 245\\)",
+    "C": "\\(118 + 20r > 245\\)",
+    "D": "\\(118r + 20 > 245\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Scoring an average of \\(r\\) runs per over for 20 overs adds \\(20r\\) runs.",
+    "The final total is \\(118 + 20r\\), and it must be more than 245: \\(118 + 20r > 245\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The 118 runs already scored should be subtracted from 245, not added to it; this uses the wrong sign for 118.",
+    "B": "Incorrect. This describes averages for which the team's total stays below 245, so the team would lose.",
+    "C": "Correct. The final total, \\(118 + 20r\\), must be greater than 245.",
+    "D": "Incorrect. This multiplies the runs already scored by \\(r\\) instead of multiplying the number of remaining overs by \\(r\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nr = symbols('r')\nsol = solve_univariate_inequality(118 + 20*r > 245, r, relational=False)\nassert sol == Interval.open(Rational(127, 20), oo)\nP = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nS = lambda s: solve_univariate_inequality(P(s), r, relational=False)\nassert S(choices[answer]) == sol\nassert all(S(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "m-tvd-0532",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Two models are used for the same data. The linear model is \\(L(t) = 100 + kt\\), where \\(k\\) is a constant, and the exponential model is \\(E(t) = 100(1.5)^{\\frac{t}{2}}\\). The two models give the same value when \\(t = 4\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "125/4"
+  ],
+  "solution": [
+    "\\(E(4) = 100(1.5)^{2} = 100(2.25) = 225\\).",
+    "Set \\(L(4) = 225\\): \\(100 + 4k = 225\\), so \\(4k = 125\\).",
+    "\\(k = \\frac{125}{4} = 31.25\\)."
+  ],
+  "verify": "k, t = symbols('k t')\nE = 100 * Rational(3, 2)**(t/2)\nsol = solve(Eq(100 + k*4, E.subs(t, 4)), k)\nassert sol == [Rational(125, 4)]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "31.25",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "m-sys-0505",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The graphs of the two equations in a system are shown in the \\(xy\\)-plane. What is the solution \\((x, y)\\) to the system?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      5
+    ],
+    "y": [
+      -2,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "x + 1",
+        "label": "y = x + 1"
+      },
+      {
+        "expr": "-2*x + 7",
+        "label": "y = -2x + 7"
+      }
+    ],
+    "points": [],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((3, 2)\\)",
+    "B": "\\((-1, 0)\\)",
+    "C": "\\((2, 3)\\)",
+    "D": "\\((0, 7)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The solution to a system is the point where the two graphs intersect.",
+    "The lines cross at \\((2, 3)\\).",
+    "Check: \\(3 = 2 + 1\\) and \\(3 = -2(2) + 7\\), so \\((2, 3)\\) satisfies both equations."
+  ],
+  "explanation": {
+    "A": "Incorrect. This gives the coordinates in the wrong order; the lines cross where \\(x = 2\\) and \\(y = 3\\).",
+    "B": "Incorrect. This is where the line \\(y = x + 1\\) crosses the \\(x\\)-axis, not where the two lines meet.",
+    "C": "Correct. The two lines intersect at \\((2, 3)\\), and this point satisfies both equations.",
+    "D": "Incorrect. This is where the line \\(y = -2x + 7\\) crosses the \\(y\\)-axis, not where the two lines meet."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "misread_graph",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\npt = lambda s: [value(t) for t in s[2:-2].strip('()').split(',')]\ne1, e2 = [sympify(c['expr']) for c in figure['curves']]\nX = solve(Eq(e1, e2), x)[0]\nsol = [X, e1.subs(x, X)]\nassert sol == [2, 3]\nassert pt(choices[answer]) == sol\nassert all(pt(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

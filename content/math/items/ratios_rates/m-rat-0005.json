@@ -1,0 +1,58 @@
+{
+  "id": "m-rat-0005",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A leaking faucet drips water at a constant rate of 0.05 milliliter per second. At this rate, how many liters of water does the faucet leak in one day? (1 liter = 1,000 milliliters)",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.072\\)",
+    "B": "\\(4.32\\)",
+    "C": "\\(43.2\\)",
+    "D": "\\(4320\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "One day has \\(24 \\cdot 60 \\cdot 60 = 86400\\) seconds.",
+    "Water leaked in one day: \\(0.05 \\cdot 86400 = 4320\\) milliliters.",
+    "Convert to liters: \\(\\frac{4320}{1000} = 4.32\\) liters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of using only \\(24 \\cdot 60\\) for the number of seconds in a day. That is the number of minutes; a day has \\(24 \\cdot 60 \\cdot 60 = 86400\\) seconds.",
+    "B": "Correct. In one day the faucet leaks \\(0.05 \\cdot 86400 = 4320\\) milliliters, which is \\(4.32\\) liters.",
+    "C": "Incorrect. This is the result of dividing 4,320 milliliters by 100 instead of by 1,000.",
+    "D": "Incorrect. This is the amount in milliliters. It still has to be converted to liters by dividing by 1,000."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "C": "wrong_formula",
+    "D": "wrong_quantity"
+  },
+  "verify": "ml = Rational('0.05') * 24 * 60 * 60\nliters = ml / 1000\nassert liters == Rational('4.32')\nassert value(choices[answer]) == liters\nassert all(value(choices[k]) != liters for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

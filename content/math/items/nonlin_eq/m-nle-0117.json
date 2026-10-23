@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0117",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A tailor in Lahore pays 12,000 rupees per month for her shop and 300 rupees in materials for each shirt she makes. The average cost per shirt, in rupees, of making \\(n\\) shirts in a month is \\(\\frac{12{,}000 + 300n}{n}\\). For what value of \\(n\\) is the average cost per shirt 500 rupees?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(24\\)",
+    "B": "\\(15\\)",
+    "C": "\\(40\\)",
+    "D": "\\(60\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Set the average cost equal to \\(500\\): \\(\\frac{12{,}000 + 300n}{n} = 500\\).",
+    "Multiply by \\(n\\): \\(12{,}000 + 300n = 500n\\).",
+    "So \\(12{,}000 = 200n\\) and \\(n = 60\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of ignoring the materials cost and solving \\(\\frac{12{,}000}{n} = 500\\).",
+    "B": "Incorrect. This is the result of adding \\(300n\\) to the right side instead of subtracting it, giving \\(12{,}000 = 800n\\).",
+    "C": "Incorrect. This is the result of dividing the shop cost by the materials cost, \\(\\frac{12{,}000}{300}\\), which does not use the target average.",
+    "D": "Correct. \\(\\frac{12{,}000 + 300(60)}{60} = \\frac{30{,}000}{60} = 500\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nn = symbols('n', positive=True)\nsol = solve(Eq((12000 + 300*n)/n, 500), n)\nassert sol == [60]\nans = sol[0]\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

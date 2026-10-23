@@ -1,0 +1,94 @@
+{
+  "id": "m-ovd-0107",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The table shows the frequency of each value in data set X and in data set Y. Which statement is true?",
+  "figure": {
+    "kind": "table",
+    "title": "Frequencies",
+    "columns": [
+      "Value",
+      "Frequency in X",
+      "Frequency in Y"
+    ],
+    "rows": [
+      [
+        "1",
+        "1",
+        "6"
+      ],
+      [
+        "2",
+        "2",
+        "2"
+      ],
+      [
+        "3",
+        "12",
+        "2"
+      ],
+      [
+        "4",
+        "2",
+        "2"
+      ],
+      [
+        "5",
+        "1",
+        "6"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The mean of data set Y is greater than the mean of data set X.",
+    "B": "The standard deviations of the two data sets are equal.",
+    "C": "The standard deviation of data set Y is greater than the standard deviation of data set X.",
+    "D": "The standard deviation of data set X is greater than the standard deviation of data set Y."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Both data sets have 18 values, and both are symmetric about 3, so both means are 3.",
+    "In data set X, 12 of the 18 values equal the mean, 3. In data set Y, 12 of the 18 values are at 1 or 5, the values farthest from the mean.",
+    "The values of Y are spread farther from the mean, so Y has the greater standard deviation."
+  ],
+  "explanation": {
+    "A": "Incorrect. Both data sets are symmetric about 3, so both means are 3.",
+    "B": "Incorrect. The two data sets use the same values, 1 through 5, but with different frequencies. Data set Y has many more values far from the mean.",
+    "C": "Correct. Most values of Y are at 1 and 5, far from the mean of 3, while most values of X are at 3, so Y has the greater standard deviation.",
+    "D": "Incorrect. The tall frequency at 3 in data set X means most of its values are at the mean, which makes the spread small, not large."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nrows = [[Integer(c) for c in r] for r in figure['rows']]\nX = [r[0] for r in rows for _ in range(r[1])]\nY = [r[0] for r in rows for _ in range(r[2])]\nmx, my = Rational(sum(X), len(X)), Rational(sum(Y), len(Y))\nsd = lambda v, m: sqrt(Rational(sum((a - m)**2 for a in v), len(v)))\nassert mx == my == 3 and sd(Y, my) > sd(X, mx)\nassert answer == 'D' and 'data set Y is greater' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

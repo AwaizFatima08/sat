@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0538",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "How many solutions does the equation \\(\\frac{1}{2}(6x - 8) - (x - 7) = 2(x + 1) + 1\\) have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Exactly two",
+    "B": "Infinitely many",
+    "C": "Exactly one",
+    "D": "Zero"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Left side: \\(3x - 4 - x + 7 = 2x + 3\\).",
+    "Right side: \\(2x + 2 + 1 = 2x + 3\\).",
+    "Both sides are the same expression, so every value of \\(x\\) is a solution."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of confusing this linear equation with a quadratic one; a linear equation has zero, one or infinitely many solutions, never exactly two.",
+    "B": "Correct. Both sides simplify to \\(2x + 3\\), so the equation is true for every \\(x\\).",
+    "C": "Incorrect. This is the result of assuming every linear equation has exactly one solution. Here the \\(x\\)-terms and the constants both match.",
+    "D": "Incorrect. This is the result of distributing the minus sign to only the first term: \\(-(x - 7) = -x - 7\\). That gives \\(2x - 11 = 2x + 3\\), which looks like no solution."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\ne = expand(Rational(1, 2)*(6*x - 8) - (x - 7) - (2*(x + 1) + 1))\nassert e == 0\nassert choices[answer] == 'Infinitely many'\nassert expand(Rational(1, 2)*(6*x - 8) - x - 7 - (2*(x + 1) + 1)) != 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

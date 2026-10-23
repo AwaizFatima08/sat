@@ -1,0 +1,88 @@
+{
+  "id": "m-tvd-0518",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows the volume \\(y\\), in liters, of water left in a tank \\(x\\) hours after it began to drain. Which statement best describes the relationship between \\(x\\) and \\(y\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "Water left in a tank",
+    "columns": [
+      "Time x (hours)",
+      "Volume y (liters)"
+    ],
+    "rows": [
+      [
+        "0",
+        "96"
+      ],
+      [
+        "1",
+        "84"
+      ],
+      [
+        "2",
+        "72"
+      ],
+      [
+        "3",
+        "60"
+      ],
+      [
+        "4",
+        "48"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The volume decreases by \\(12\\%\\) each hour.",
+    "B": "The volume decreases by 12 liters each hour.",
+    "C": "The volume decreases by 24 liters each hour.",
+    "D": "The volume decreases by \\(12.5\\%\\) each hour."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The differences are all \\(-12\\): \\(84 - 96 = 72 - 84 = 60 - 72 = 48 - 60 = -12\\).",
+    "A constant difference means the relationship is linear: the volume decreases by 12 liters each hour.",
+    "The percent decrease is not constant (\\(\\frac{12}{96} = 12.5\\%\\) in the first hour, \\(\\frac{12}{60} = 20\\%\\) in the fourth), so it is not exponential."
+  ],
+  "explanation": {
+    "A": "Incorrect. The volume drops by 12 liters each hour, not \\(12\\%\\). A constant amount is not a constant percent.",
+    "B": "Correct. Each row the volume falls by exactly 12 liters, so the relationship is linear.",
+    "C": "Incorrect. 24 liters is the decrease over 2 hours, not 1 hour.",
+    "D": "Incorrect. \\(12.5\\%\\) is the decrease only in the first hour (\\(\\frac{12}{96}\\)). Later hours have larger percent decreases, such as \\(\\frac{12}{60} = 20\\%\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "misread_graph",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nv = [Integer(r[1]) for r in figure['rows']]\ndiffs = {v[i+1] - v[i] for i in range(4)}\nratios = {v[i+1] / v[i] for i in range(4)}\nassert diffs == {-12} and len(ratios) == 4\nassert choices[answer] == 'The volume decreases by 12 liters each hour.'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

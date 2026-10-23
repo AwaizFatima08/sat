@@ -1,0 +1,121 @@
+{
+  "id": "m-arv-0126",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The rectangle shown has width \\(w\\) and length \\(2w + 3\\). If the width were increased by \\(2\\) and the length kept the same, the area of the rectangle would increase by \\(26\\). What is the perimeter of the rectangle shown? (Note: Figure not drawn to scale.)",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        10,
+        0
+      ],
+      "C": [
+        10,
+        6
+      ],
+      "D": [
+        0,
+        6
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          5,
+          -0.8
+        ],
+        "text": "2w + 3"
+      },
+      {
+        "at": [
+          10.8,
+          3
+        ],
+        "text": "w"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "not_to_scale": true
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(26\\)",
+    "B": "\\(36\\)",
+    "C": "\\(13\\)",
+    "D": "\\(18\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Increasing the width by 2 adds a strip of area \\(2 \\cdot (\\text{length})\\).",
+    "So \\(2(2w + 3) = 26\\), which gives \\(2w + 3 = 13\\) and \\(w = 5\\).",
+    "Perimeter \\(= 2(5 + 13) = 36\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the increase in area given in the question, not the perimeter of the rectangle.",
+    "B": "Correct. The added area is \\(2(2w + 3) = 26\\), so \\(w = 5\\), the length is 13, and the perimeter is \\(2(5 + 13) = 36\\).",
+    "C": "Incorrect. This is the length of the rectangle, not its perimeter.",
+    "D": "Incorrect. This is \\(5 + 13\\), the sum of one width and one length; the perimeter counts each side twice."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_quantity",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nw=symbols('w')\nsol=solve(Eq((w+2)*(2*w+3)-w*(2*w+3),26),w)\nassert sol==[5]\nW=sol[0]; L=2*W+3\nans=2*(W+L)\nassert ans==36\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

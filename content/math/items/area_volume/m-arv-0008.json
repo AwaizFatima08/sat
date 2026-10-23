@@ -1,0 +1,46 @@
+{
+  "id": "m-arv-0008",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A closed box shaped like a rectangular prism has three faces that meet at one corner. The areas of these three faces are 18, 24, and 48 square centimeters. What is the volume of the box, in cubic centimeters?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "144"
+  ],
+  "solution": [
+    "Let the edge lengths be \\(a\\), \\(b\\), and \\(c\\), with \\(ab = 18\\), \\(bc = 24\\), and \\(ac = 48\\).",
+    "Multiply the three equations: \\((abc)^{2} = 18 \\cdot 24 \\cdot 48 = 20736\\).",
+    "So the volume is \\(abc = \\sqrt{20736} = 144\\). (The edges are 6, 3, and 8 centimeters.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "a,b,c=symbols('a b c',positive=True)\nsol=solve([a*b-18,b*c-24,a*c-48],[a,b,c],dict=True)\nassert len(sol)==1\ns=sol[0]\nassert s[a]*s[b]*s[c]==sqrt(18*24*48)==144\nassert Rational(spr_answers[0])==144\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "144",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "m-rtt-0107",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The cross section of a roof is an isosceles triangle, as shown. The roof spans 12 meters, and each sloped side makes an angle of \\(x^{\\circ}\\) with the horizontal, where \\(\\cos x^{\\circ} = 0.8\\). What is the length, in meters, of each sloped side?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "L": [
+        0,
+        0
+      ],
+      "R": [
+        12,
+        0
+      ],
+      "T": [
+        6,
+        4.5
+      ],
+      "M": [
+        6,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "L",
+        "R"
+      ],
+      [
+        "L",
+        "T"
+      ],
+      [
+        "R",
+        "T"
+      ],
+      [
+        "T",
+        "M"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          6,
+          -0.8
+        ],
+        "text": "12 m"
+      },
+      {
+        "at": [
+          1.5,
+          0.4
+        ],
+        "text": "x°"
+      }
+    ],
+    "right_angles": [
+      "M"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(15\\)",
+    "B": "\\(9.6\\)",
+    "C": "\\(7.5\\)",
+    "D": "\\(4.8\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The height from the peak splits the span into two halves of 6 meters each, forming two right triangles.",
+    "In each right triangle, \\(\\cos x^{\\circ} = \\frac{6}{\\text{sloped side}}\\), so the sloped side is \\(\\frac{6}{0.8} = 7.5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{12}{0.8}\\); the full span was used instead of half the span.",
+    "B": "Incorrect. This is \\(12 \\times 0.8\\); it uses the full span and multiplies instead of dividing.",
+    "C": "Correct. \\(\\frac{6}{0.8} = 7.5\\) meters.",
+    "D": "Incorrect. This is \\(6 \\times 0.8\\); the half span should be divided by \\(\\cos x^{\\circ}\\), not multiplied."
+  },
+  "traps": {
+    "A": "radius_diameter",
+    "B": "arithmetic",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('L','R')==12 and d('L','T')==d('R','T') and abs(cos(ang('T','L','R')*pi/180)-Rational('0.8'))<0.001\nans=6/Rational('0.8')\nassert d('L','T')==ans\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

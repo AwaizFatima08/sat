@@ -1,0 +1,59 @@
+{
+  "id": "m-smp-0503",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A researcher wants to estimate the mean number of hours of sleep per night for all 1,500 students at a high school. She will survey 100 students. Which method of choosing the 100 students is most likely to give an accurate estimate?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Survey the first 100 students who arrive at school one morning.",
+    "B": "Survey 100 members of the school's health and wellness club.",
+    "C": "Survey the first 100 students who answer an online sleep survey posted by the school.",
+    "D": "Survey 100 students selected at random from a list of all students at the school."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "An accurate estimate needs a sample that represents all 1,500 students.",
+    "Choosing students at random from a list of every student gives each student the same chance of being chosen, so the sample is likely to be representative.",
+    "The other methods favor particular groups of students (early arrivals, club members, volunteers)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Students who arrive first may have different sleep habits than other students, so this sample is not representative.",
+    "B": "Incorrect. Club members interested in health may sleep differently than other students, so the sample is not representative.",
+    "C": "Incorrect. Volunteers choose themselves, so the sample may favor students with strong views about sleep.",
+    "D": "Correct. A random sample from a list of all students is likely to represent the whole school."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nkey = choices[answer]\nassert answer == 'B' and 'at random' in key and 'all' in key\nassert all('at random' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

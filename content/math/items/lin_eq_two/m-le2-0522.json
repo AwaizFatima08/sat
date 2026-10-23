@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0522",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A food truck starts with a full tank of propane. The equation \\(1.5h + p = 36\\) represents the relationship between the number of hours, \\(h\\), the truck has been cooking and the amount of propane, \\(p\\), in kilograms, left in the tank. The equation is graphed with \\(h\\) on the horizontal axis and \\(p\\) on the vertical axis. Which statement is the best interpretation of the \\(h\\)-intercept of the graph?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The tank is empty after 36 hours of cooking.",
+    "B": "The truck uses 24 kilograms of propane each hour.",
+    "C": "The tank holds 24 kilograms of propane when it is full.",
+    "D": "The tank is empty after 24 hours of cooking."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The \\(h\\)-intercept is where \\(p = 0\\): \\(1.5h = 36\\), so \\(h = 24\\).",
+    "\\(p = 0\\) means no propane is left, so the tank is empty after 24 hours of cooking."
+  ],
+  "explanation": {
+    "A": "Incorrect. 36 is the amount of propane in a full tank; it is not divided by the rate of 1.5 kilograms per hour.",
+    "B": "Incorrect. The rate of use is the coefficient 1.5 kilograms per hour; 24 is a number of hours.",
+    "C": "Incorrect. A full tank is the amount at \\(h = 0\\), which is 36 kilograms (the \\(p\\)-intercept), not 24.",
+    "D": "Correct. At the \\(h\\)-intercept, \\(p = 0\\) and \\(h = 24\\): after 24 hours of cooking, no propane is left."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nh = symbols('h')\nhi = solve(Eq(Rational(3, 2)*h + 0, 36), h)\nassert hi == [24]\nkey = 'empty after 24 hours'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

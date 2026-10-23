@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0122",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The point \\((3, b)\\) is a solution to the system of inequalities below. \\[ y > 2x - 1 \\] \\[ y \\le -x + 11 \\] Which of the following describes all possible values of \\(b\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5 < b \\le 8\\)",
+    "B": "\\(5 \\le b < 8\\)",
+    "C": "\\(5 < b \\le 14\\)",
+    "D": "\\(7 < b \\le 8\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = 3\\) into the first inequality: \\(b > 2(3) - 1 = 5\\).",
+    "Substitute \\(x = 3\\) into the second inequality: \\(b \\le -3 + 11 = 8\\).",
+    "Together: \\(5 < b \\le 8\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(b > 5\\) from the first inequality and \\(b \\le 8\\) from the second.",
+    "B": "Incorrect. This switches which endpoint is included: the first inequality is strict, so 5 is excluded, and the second allows equality, so 8 is included.",
+    "C": "Incorrect. This is the result of computing \\(-x + 11\\) at \\(x = 3\\) as \\(3 + 11 = 14\\).",
+    "D": "Incorrect. This is the result of computing \\(2(3) - 1\\) as \\(2(3) + 1 = 7\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "arithmetic",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx, y, b = symbols('x y b')\ns1 = solve_univariate_inequality((y > 2*x - 1).subs({x: 3, y: b}), b, relational=False)\ns2 = solve_univariate_inequality((y <= -x + 11).subs({x: 3, y: b}), b, relational=False)\ns = s1.intersect(s2)\nassert s == Interval.Lopen(5, 8)\nassert choices[answer] == '\\\\(%d < b \\\\le %d\\\\)' % (s.inf, s.sup)\nassert len(set(choices.values())) == 4",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-rtt-0516",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(ABC\\), angle \\(C\\) is a right angle and \\(\\sin A = 0.6\\). What is the value of \\(\\cos B\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3/5",
+    "0.6"
+  ],
+  "solution": [
+    "Angles \\(A\\) and \\(B\\) are complementary, so \\(\\cos B = \\sin(90^{\\circ} - B) = \\sin A\\).",
+    "\\(\\cos B = 0.6\\). (Both equal \\(\\frac{BC}{AB}\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "A=asin(Rational(3,5))\nans=simplify(cos(pi/2-A))\nassert ans==Rational(3,5)\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "3/5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

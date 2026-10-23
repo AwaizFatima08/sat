@@ -1,0 +1,60 @@
+{
+  "id": "m-nle-0155",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The surface area \\(A\\) and the volume \\(V\\) of a sphere with radius \\(r\\) are given by \\(A = 4\\pi r^{2}\\) and \\(V = \\frac{4}{3}\\pi r^{3}\\). Which of the following gives \\(V\\) in terms of \\(A\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{A}{48}\\sqrt{\\frac{A}{\\pi}}\\)",
+    "B": "\\(\\frac{A^{3}}{48\\pi^{2}}\\)",
+    "C": "\\(\\frac{A}{3}\\)",
+    "D": "\\(\\frac{A}{6}\\sqrt{\\frac{A}{\\pi}}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Solve the area formula for \\(r\\): \\(r^{2} = \\frac{A}{4\\pi}\\), so \\(r = \\frac{1}{2}\\sqrt{\\frac{A}{\\pi}}\\).",
+    "Cube: \\(r^{3} = \\frac{1}{8} \\cdot \\frac{A}{\\pi}\\sqrt{\\frac{A}{\\pi}}\\).",
+    "Substitute: \\(V = \\frac{4}{3}\\pi \\cdot \\frac{1}{8} \\cdot \\frac{A}{\\pi}\\sqrt{\\frac{A}{\\pi}} = \\frac{A}{6}\\sqrt{\\frac{A}{\\pi}}\\).",
+    "Check with \\(r = 1\\): \\(A = 4\\pi\\), and \\(\\frac{4\\pi}{6}\\sqrt{4} = \\frac{4}{3}\\pi\\), which is \\(V\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of writing \\(\\sqrt{\\frac{A}{4\\pi}}\\) as \\(\\frac{1}{4}\\sqrt{\\frac{A}{\\pi}}\\) instead of \\(\\frac{1}{2}\\sqrt{\\frac{A}{\\pi}}\\).",
+    "B": "Incorrect. This is the result of using \\(\\frac{A}{4\\pi}\\), which equals \\(r^{2}\\), as the value of \\(r\\) without taking its square root.",
+    "C": "Incorrect. This is the result of using \\(r^{2}\\) in place of \\(r^{3}\\) in the volume formula: \\(\\frac{4}{3}\\pi \\cdot \\frac{A}{4\\pi} = \\frac{A}{3}\\).",
+    "D": "Correct. Substituting \\(r = \\frac{1}{2}\\sqrt{\\frac{A}{\\pi}}\\) into \\(V = \\frac{4}{3}\\pi r^{3}\\) gives \\(\\frac{A}{6}\\sqrt{\\frac{A}{\\pi}}\\)."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "stopped_early",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nA = Symbol('A')\nfor rv in [1, 2, 5]:\n    assert simplify(value(choices[answer]).subs(A, 4*pi*rv**2) - Rational(4, 3)*pi*rv**3) == 0\nassert all(simplify(value(choices[k]).subs(A, 16*pi) - Rational(32, 3)*pi) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

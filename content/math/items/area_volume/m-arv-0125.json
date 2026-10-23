@@ -1,0 +1,59 @@
+{
+  "id": "m-arv-0125",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rectangular sheet of cardboard is 30 inches long and 20 inches wide. A square with side length \\(x\\) inches is cut from each of the four corners, and the four flaps are folded up to form an open box with a volume of 1,000 cubic inches. Which equation can be used to find the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x(30 - 2x)(20 - 2x) = 1{,}000\\)",
+    "B": "\\(600 - 4x^{2} = 1{,}000\\)",
+    "C": "\\(x(30 - x)(20 - x) = 1{,}000\\)",
+    "D": "\\((30 - 2x)(20 - 2x) = 1{,}000\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "After a square of side \\(x\\) is cut from each corner, the base of the box is \\(30 - 2x\\) by \\(20 - 2x\\) (each length loses \\(x\\) at both ends).",
+    "The flaps fold up to a height of \\(x\\).",
+    "Volume: \\(x(30 - 2x)(20 - 2x) = 1{,}000\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The box has base \\((30 - 2x)\\) by \\((20 - 2x)\\) and height \\(x\\), so its volume is \\(x(30 - 2x)(20 - 2x)\\).",
+    "B": "Incorrect. This is the area of the cardboard left after the four squares are removed, not the volume of the box.",
+    "C": "Incorrect. This subtracts \\(x\\) from each length only once, but a square is cut from both ends of every side.",
+    "D": "Incorrect. This is the area of the base of the box; it leaves out the height \\(x\\)."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx=symbols('x')\nV=x*(30-2*x)*(20-2*x)-1000\ndef f(k):\n    l,r=choices[k].split('=')\n    return expand(value(l)-value(r))\nassert expand(f(answer)-V)==0\nassert all(expand(f(k)-V)!=0 for k in choices if k!=answer)\nassert V.subs(x,5)==0\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0103",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A random sample of 500 residents of a coastal town was asked whether they support building a seawall. Based on the sample, 64% of the town's residents are estimated to support the seawall, with a margin of error of 4.3 percentage points. Which of the following is NOT a plausible value for the percent of all the town's residents who support the seawall?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "67%",
+    "B": "69%",
+    "C": "62%",
+    "D": "60%"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The plausible values run from \\(64 - 4.3 = 59.7\\) percent to \\(64 + 4.3 = 68.3\\) percent.",
+    "Only 69% is outside this interval, so it is not a plausible value."
+  ],
+  "explanation": {
+    "A": "Incorrect. 67% is between 59.7% and 68.3%, so it is a plausible value.",
+    "B": "Correct. 69% is greater than \\(64 + 4.3 = 68.3\\) percent, so it is not a plausible value.",
+    "C": "Incorrect. 62% is between 59.7% and 68.3%, so it is a plausible value.",
+    "D": "Incorrect. 60% is greater than 59.7%, so it is inside the interval of plausible values."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nlo, hi = Rational(64) - Rational('4.3'), Rational(64) + Rational('4.3')\npl = {k: lo <= Rational(choices[k].rstrip('%')) <= hi for k in choices}\nassert [k for k in pl if not pl[k]] == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

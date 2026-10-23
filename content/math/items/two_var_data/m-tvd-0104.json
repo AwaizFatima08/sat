@@ -1,0 +1,93 @@
+{
+  "id": "m-tvd-0104",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The scatterplot shows the age \\(x\\), in years, and the height \\(y\\), in centimeters, of 10 children. The line of best fit has the equation \\(y = 6.4x + 76\\). One of the children is 7 years old and 124 centimeters tall. What is this child's actual height minus the height predicted by the line of best fit, in centimeters?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Age (years)",
+    "y_label": "Height (centimeters)",
+    "points": [
+      [
+        3,
+        96
+      ],
+      [
+        4,
+        100
+      ],
+      [
+        5,
+        109
+      ],
+      [
+        5,
+        106
+      ],
+      [
+        6,
+        113
+      ],
+      [
+        7,
+        124
+      ],
+      [
+        8,
+        126
+      ],
+      [
+        8,
+        129
+      ],
+      [
+        9,
+        135
+      ],
+      [
+        10,
+        139
+      ]
+    ],
+    "line": "6.4*x + 76"
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3.2",
+    "16/5"
+  ],
+  "solution": [
+    "Predicted height for \\(x = 7\\): \\(6.4(7) + 76 = 44.8 + 76 = 120.8\\) centimeters.",
+    "Actual minus predicted: \\(124 - 120.8 = 3.2\\) centimeters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\npred = sympify(figure['line']).subs(x, 7)\nassert [7, 124] in figure['points']\nr = 124 - nsimplify(pred)\nassert r == Rational(16, 5)\nassert all(Rational(s) == r for s in spr_answers)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "3.2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

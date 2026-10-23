@@ -1,0 +1,46 @@
+{
+  "id": "m-arv-0532",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A sphere is inscribed in a cube, so the sphere touches all six faces of the cube. The surface area of the cube is \\(384\\). The volume of the sphere is \\(k\\pi\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "256/3"
+  ],
+  "solution": [
+    "Each face of the cube has area \\(384 \\div 6 = 64\\), so the edge length is 8.",
+    "The sphere's diameter equals the edge length, so its radius is 4.",
+    "\\(V = \\frac{4}{3}\\pi (4)^{3} = \\frac{256}{3}\\pi\\), so \\(k = \\frac{256}{3}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "s=sqrt(Rational(384,6))\nassert s==8\nk=Rational(4,3)*(s/2)**3\nassert k==Rational(256,3)\nassert Rational(spr_answers[0])==k and len(spr_answers)==1\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "256/3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

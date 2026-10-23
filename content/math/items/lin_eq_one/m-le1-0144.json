@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0144",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A netball player in Colombo scored a mean of 14 goals per match over her first 6 matches of a season. After her 7th match, her mean for all 7 matches was 6 less than the number of goals she scored in the 7th match. How many goals did she score in the 7th match?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "21"
+  ],
+  "solution": [
+    "Her first 6 matches total \\(6 \\cdot 14 = 84\\) goals. Let \\(g\\) be her goals in the 7th match.",
+    "The new mean is \\(\\frac{84 + g}{7}\\), and it equals \\(g - 6\\): \\(84 + g = 7(g - 6)\\).",
+    "So \\(84 + g = 7g - 42\\), \\(126 = 6g\\), and \\(g = 21\\). (Check: the new mean is 15.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "g = symbols('g')\nsol = solve(Eq((6*14 + g)/7, g - 6), g)\nassert sol == [21]\nassert (84 + 21)/Integer(7) == 15\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "21",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

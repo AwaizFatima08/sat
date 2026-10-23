@@ -1,0 +1,46 @@
+{
+  "id": "m-rat-0112",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A conveyor belt in a warehouse moves boxes at a constant speed of 1.8 meters per second. How many kilometers does a box on the belt travel in 25 minutes? (1 kilometer = 1,000 meters)",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "27/10"
+  ],
+  "solution": [
+    "25 minutes is \\(25 \\cdot 60 = 1{,}500\\) seconds.",
+    "Distance: \\(1.8 \\cdot 1{,}500 = 2{,}700\\) meters.",
+    "Convert: \\(\\frac{2{,}700}{1{,}000} = 2.7\\) kilometers."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "ans = Rational('1.8') * 25 * 60 / 1000\nassert ans == Rational(27, 10)\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "2.7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

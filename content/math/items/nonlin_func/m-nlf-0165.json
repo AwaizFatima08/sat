@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0165",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A ball machine launches a tennis ball upward. The height of the ball above the ground, in meters, \\(t\\) seconds after it is launched is modeled by \\(h(t) = -4.9t^{2} + 9.8t + 3\\). Which of the following equivalent forms of \\(h(t)\\) displays the maximum height of the ball, in meters, as a constant or coefficient?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-4.9t(t - 2) + 3\\)",
+    "B": "\\(-4.9(t - 1)^{2} + 7.9\\)",
+    "C": "\\(-4.9(t - 1)(t + 1) + 9.8t - 1.9\\)",
+    "D": "\\(-4.9(t - 2)^{2} - 9.8t + 22.6\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The maximum value of a quadratic appears as the constant \\(k\\) in vertex form \\(a(t - h)^{2} + k\\).",
+    "The vertex is at \\(t = -\\frac{9.8}{2(-4.9)} = 1\\), and \\(h(1) = -4.9 + 9.8 + 3 = 7.9\\).",
+    "So \\(h(t) = -4.9(t - 1)^{2} + 7.9\\), which displays the maximum height, 7.9 meters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This form is equivalent, but the constant 3 is the height of the ball when it is launched, not its maximum height.",
+    "B": "Correct. This is vertex form. The vertex is \\((1, 7.9)\\), so the ball reaches a maximum height of 7.9 meters, shown as the constant 7.9.",
+    "C": "Incorrect. This form is equivalent, but none of its constants is the maximum height of the ball.",
+    "D": "Incorrect. This form is equivalent, but it is not vertex form because of the \\(-9.8t\\) term, so 22.6 is not the maximum height."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nt = symbols('t')\nh = -Rational(49, 10)*t**2 + Rational(98, 10)*t + 3\ntv = solve(diff(h, t), t)[0]\nmx = h.subs(t, tv)\nassert tv == 1 and mx == Rational(79, 10)\nassert all(expand(value(choices[k]) - h) == 0 for k in choices)\nassert '7.9' in choices[answer] and choices[answer].startswith(r'\\(-4.9(t - 1)^{2}')\nassert all('7.9' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

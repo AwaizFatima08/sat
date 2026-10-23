@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0503",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, the graph of \\((x + 3)^{2} + (y - 5)^{2} = 49\\) is a circle. What are the coordinates of the center of the circle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((3, -5)\\)",
+    "B": "\\((-3, 5)\\)",
+    "C": "\\((3, 5)\\)",
+    "D": "\\((-3, -5)\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "A circle \\((x - h)^{2} + (y - k)^{2} = r^{2}\\) has center \\((h, k)\\).",
+    "Write \\(x + 3\\) as \\(x - (-3)\\): \\(h = -3\\) and \\(k = 5\\), so the center is \\((-3, 5)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This reverses both signs; \\(x + 3 = x - (-3)\\) gives \\(h = -3\\), and \\(y - 5\\) gives \\(k = 5\\).",
+    "B": "Correct. \\((x - (-3))^{2} + (y - 5)^{2} = 7^{2}\\), so the center is \\((-3, 5)\\).",
+    "C": "Incorrect. This reverses the sign of the \\(x\\)-coordinate; \\(x + 3\\) means \\(h = -3\\).",
+    "D": "Incorrect. This reverses the sign of the \\(y\\)-coordinate; \\(y - 5\\) means \\(k = 5\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx,y=symbols('x y')\ne=(x+3)**2+(y-5)**2-49\nc=(solve(diff(e,x),x)[0],solve(diff(e,y),y)[0])\nassert c==(-3,5)\nassert tuple(value(choices[answer]))==c\nassert all(tuple(value(choices[k]))!=c for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

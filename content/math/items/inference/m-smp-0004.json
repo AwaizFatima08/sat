@@ -1,0 +1,45 @@
+{
+  "id": "m-smp-0004",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A city has 12,000 streetlights. Inspectors check a random sample of 150 of the streetlights and find that 9 of them are not working. Based on the sample, how many streetlights in the city are estimated to be not working?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "720"
+  ],
+  "solution": [
+    "In the sample, the proportion not working is \\(\\frac{9}{150} = 0.06\\).",
+    "Apply it to all streetlights: \\(0.06(12000) = 720\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "est = Rational(9, 150) * 12000\nassert est == 720\nassert [Rational(a) for a in spr_answers] == [est]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "720",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

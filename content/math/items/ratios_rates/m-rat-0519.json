@@ -1,0 +1,79 @@
+{
+  "id": "m-rat-0519",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows the size and price of two brands of peanut butter. Based on the price per ounce, how many cents per ounce cheaper is Brand B than Brand A?",
+  "figure": {
+    "kind": "table",
+    "title": "Peanut butter prices",
+    "columns": [
+      "Brand",
+      "Size (ounces)",
+      "Price"
+    ],
+    "rows": [
+      [
+        "A",
+        "18",
+        "$4.50"
+      ],
+      [
+        "B",
+        "24",
+        "$5.40"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(22.5\\)",
+    "B": "\\(25\\)",
+    "C": "\\(2.5\\)",
+    "D": "\\(90\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Brand A: \\(\\frac{450}{18} = 25\\) cents per ounce.",
+    "Brand B: \\(\\frac{540}{24} = 22.5\\) cents per ounce.",
+    "Difference: \\(25 - 22.5 = 2.5\\) cents per ounce."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the price per ounce of Brand B, not the difference between the two brands.",
+    "B": "Incorrect. This is the price per ounce of Brand A, not the difference between the two brands.",
+    "C": "Correct. Brand A costs 25 cents per ounce and Brand B costs 22.5 cents per ounce, so Brand B is 2.5 cents per ounce cheaper.",
+    "D": "Incorrect. This is the difference between the jar prices, \\(540 - 450 = 90\\) cents. The jars are different sizes, so compare prices per ounce."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nans = Rational(450, 18) - Rational(540, 24)\nassert ans == Rational(5, 2)\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0508",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A parking garage charges \\$4 for the first hour and \\$2.50 for each additional hour. Ji-ho has \\$21.50 to spend on parking. What is the greatest number of additional hours he can pay for?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7"
+  ],
+  "solution": [
+    "With \\(h\\) additional hours, the cost is \\(4 + 2.5h\\) dollars, and it must be at most 21.50: \\(4 + 2.5h \\le 21.5\\).",
+    "Subtract 4: \\(2.5h \\le 17.5\\). Divide by 2.5: \\(h \\le 7\\).",
+    "The greatest number of additional hours is 7."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "h = symbols('h')\nS = solve_univariate_inequality(4 + Rational(5, 2)*h <= Rational(43, 2), h, relational=False)\nassert S == Interval(-oo, 7)\nassert [Rational(a) for a in spr_answers] == [S.sup]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

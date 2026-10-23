@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0122",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A food truck sets the price of a meal at \\(p\\) dollars. Its daily revenue, in dollars, is \\(-2p^{2} + 60p\\), and its daily cost, in dollars, is \\(-3p + 150\\). Profit is revenue minus cost. Which expression represents the food truck's daily profit, in dollars?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-2p^{2} + 63p + 150\\)",
+    "B": "\\(-2p^{2} + 63p - 150\\)",
+    "C": "\\(-2p^{2} + 57p - 150\\)",
+    "D": "\\(-2p^{2} + 57p + 150\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Profit \\(= (-2p^{2} + 60p) - (-3p + 150)\\).",
+    "Distribute the negative sign: \\(-2p^{2} + 60p + 3p - 150\\).",
+    "Combine like terms: \\(-2p^{2} + 63p - 150\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding 150 instead of subtracting it.",
+    "B": "Correct. Subtracting the cost gives \\(-2p^{2} + 63p - 150\\).",
+    "C": "Incorrect. This is the result of subtracting \\(3p\\) instead of \\(-3p\\); subtracting \\(-3p\\) adds \\(3p\\).",
+    "D": "Incorrect. This is the result of adding the revenue and the cost instead of subtracting the cost."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\np = symbols('p')\nt = (-2*p**2 + 60*p) - (-3*p + 150)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

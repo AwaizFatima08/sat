@@ -1,0 +1,43 @@
+{
+  "id": "m-pct-0004",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A store buys a lamp for \\$35 and sells it at a price that is \\(40\\%\\) greater than the amount the store paid. What is the store's selling price for the lamp, in dollars?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "49"
+  ],
+  "solution": [
+    "A \\(40\\%\\) increase multiplies the amount by \\(1.40\\).",
+    "\\(1.40 \\cdot 35 = 49\\) dollars."
+  ],
+  "verify": "price = 35 * (1 + Rational(40, 100))\nassert price == 49\nassert Rational(spr_answers[0]) == price and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "49",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

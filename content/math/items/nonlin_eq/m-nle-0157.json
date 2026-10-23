@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0157",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is a solution to the equation \\(x^{3} + 2x^{2} - 9x - 18 = 0\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(18\\)",
+    "B": "\\(-3\\)",
+    "C": "\\(2\\)",
+    "D": "\\(9\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Group the terms: \\(x^{2}(x + 2) - 9(x + 2) = 0\\), so \\((x + 2)(x^{2} - 9) = 0\\).",
+    "Then \\((x + 2)(x - 3)(x + 3) = 0\\), and the solutions are \\(-3\\), \\(-2\\), and \\(3\\).",
+    "Of the choices, only \\(-3\\) is a solution."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the constant term of the polynomial with its sign changed, which is not a solution: substituting 18 gives a positive value, not 0.",
+    "B": "Correct. \\((-3)^{3} + 2(-3)^{2} - 9(-3) - 18 = -27 + 18 + 27 - 18 = 0\\).",
+    "C": "Incorrect. This is the result of a sign error: the factor \\(x + 2\\) gives the solution \\(-2\\), not \\(2\\).",
+    "D": "Incorrect. This is the value of \\(x^{2}\\) from the factor \\(x^{2} - 9\\), found one step before taking square roots; that factor gives \\(x = 3\\) and \\(x = -3\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "sign_error",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\np = x**3 + 2*x**2 - 9*x - 18\nassert set(solve(p, x)) == {-3, -2, 3}\nassert p.subs(x, value(choices[answer])) == 0\nassert all(p.subs(x, value(choices[k])) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

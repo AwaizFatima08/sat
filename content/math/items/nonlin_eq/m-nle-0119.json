@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0119",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The volume \\(V\\) of a right circular cone with radius \\(r\\) and height \\(h\\) is given by \\(V = \\frac{1}{3}\\pi r^{2}h\\). Which of the following gives \\(r\\) in terms of \\(V\\) and \\(h\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(r = \\sqrt{\\frac{V}{3\\pi h}}\\)",
+    "B": "\\(r = \\sqrt{\\frac{\\pi h}{3V}}\\)",
+    "C": "\\(r = \\frac{3V}{\\pi h}\\)",
+    "D": "\\(r = \\sqrt{\\frac{3V}{\\pi h}}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Multiply both sides by \\(3\\): \\(3V = \\pi r^{2}h\\).",
+    "Divide by \\(\\pi h\\): \\(r^{2} = \\frac{3V}{\\pi h}\\).",
+    "Take the positive square root: \\(r = \\sqrt{\\frac{3V}{\\pi h}}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dividing \\(V\\) by \\(3\\) instead of multiplying by \\(3\\) to undo the \\(\\frac{1}{3}\\).",
+    "B": "Incorrect. This is the reciprocal of the correct expression under the square root.",
+    "C": "Incorrect. This is \\(r^{2}\\); the square root step is missing.",
+    "D": "Correct. Squaring gives \\(r^{2} = \\frac{3V}{\\pi h}\\), which rearranges to \\(V = \\frac{1}{3}\\pi r^{2}h\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "reciprocal",
+    "C": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nV, h = Symbol('V'), Symbol('h')\nr = symbols('r', positive=True)\nrr = solve(Eq(Rational(10), pi*r**2*2/3), r)[0]\nf = lambda k: value(choices[k].replace('r = ', '')).subs({V: 10, h: 2})\nassert abs(N(f(answer) - rr)) < 1e-9\nassert all(abs(N(f(k) - rr)) > 1e-3 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

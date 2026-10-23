@@ -1,0 +1,378 @@
+{
+  "type": "lines_angles",
+  "title": "Lines, angles and triangles",
+  "what_is_tested": "These questions use angle facts (straight lines, vertical angles, parallel lines cut by a transversal, the \\(180^{\\circ}\\) triangle sum) and similar or congruent triangles to find a missing angle or length. Harder versions put expressions such as \\((3x + 10)^{\\circ}\\) on the angles, hide similar triangles inside one figure, or ask about the areas of similar triangles.",
+  "how_to_spot": "A figure with crossing or parallel lines, or with triangles that share an angle, and a question asking for \\(x\\), an angle measure or a side length. The words **parallel**, **similar**, **isosceles** or **bisects** are strong clues.",
+  "method": [
+    "Mark every given angle and length on the figure (or on a quick sketch).",
+    "Find the fact that connects what you know to what you want: a straight line or a triangle (sum \\(180^{\\circ}\\), on the reference sheet), vertical angles (equal), parallel lines (corresponding and alternate angles equal, same-side interior angles sum to \\(180^{\\circ}\\)).",
+    "For lengths, look for similar triangles (two pairs of equal angles, often created by parallel lines) and write a proportion with matching sides in the same order.",
+    "Write one equation, solve it, and answer the exact quantity asked; an angle written as an expression needs \\(x\\) substituted back.",
+    "Check with the figure: an angle that looks obtuse must be more than \\(90^{\\circ}\\), and the larger triangle must have the longer sides."
+  ],
+  "pitfalls": [
+    "Setting two angles equal when they actually add to \\(180^{\\circ}\\), or the reverse, at a pair of parallel lines (concept).",
+    "Matching the wrong sides in a proportion, such as using the piece \\(DB\\) instead of the whole side \\(AB\\) (wrong_quantity).",
+    "Reporting \\(x\\) when the question asks for the angle measure (stopped_early).",
+    "Multiplying an area by the length ratio \\(k\\) instead of \\(k^{2}\\) for similar triangles (concept).",
+    "Trusting how a figure marked not drawn to scale looks instead of the stated facts (misread_graph)."
+  ],
+  "calculator": "Rarely needed: most angle questions are short linear equations you can solve faster by hand. The Scientific tab can help with an awkward proportion or a square root.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: angle facts",
+      "steps": [
+        "Find the angle you need and the angles you know on the figure.",
+        "Name the fact that links them: straight line or triangle sum \\(180^{\\circ}\\), vertical angles equal, or a parallel-line angle pair.",
+        "Write the equation (for example \\(x + 70 = 180\\)) and solve it.",
+        "Check against the picture: acute angles are less than \\(90^{\\circ}\\), obtuse ones more."
+      ],
+      "worked_example": {
+        "stem": "In triangle \\(ABC\\), \\(AB = AC\\) and the measure of angle \\(A\\) is \\(40^{\\circ}\\). What is the measure, in degrees, of angle \\(B\\)?",
+        "figure": {
+          "kind": "geometry",
+          "points": {
+            "A": [
+              5,
+              13.737
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              10,
+              0
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ]
+          ],
+          "circles": [],
+          "labels": [
+            {
+              "at": [
+                5,
+                11.6
+              ],
+              "text": "40°"
+            }
+          ],
+          "right_angles": [],
+          "not_to_scale": false
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(40\\)",
+          "B": "\\(70\\)",
+          "C": "\\(100\\)",
+          "D": "\\(140\\)"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "Sides \\(AB\\) and \\(AC\\) are equal, so the angles opposite them, \\(C\\) and \\(B\\), are equal. Call each one \\(x\\).",
+          "The angles of a triangle sum to \\(180^{\\circ}\\) (reference sheet): \\(40 + x + x = 180\\).",
+          "\\(2x = 140\\), so \\(x = 70\\), choice B.",
+          "Choice D, 140, stops at \\(2x\\), the sum of both base angles; the figure shows angle \\(B\\) is acute, so it cannot be \\(140^{\\circ}\\). Choice A wrongly assumes all three angles are equal."
+        ],
+        "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('A','B')-d('A','C'))<0.01 and abs(ang('B','A','C')-40)<0.1\nx=symbols('x')\nans=solve(Eq(40+2*x,180),x)[0]\nassert abs(ang('A','B','C')-ans)<0.1 and abs(ang('A','C','B')-ans)<0.1\nassert value(choices[answer])==ans==70\nassert all(value(choices[c])!=ans for c in choices if c!=answer)"
+      },
+      "tryit": [
+        "m-lat-0001",
+        "m-lat-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: parallel lines and similar triangles",
+      "steps": [
+        "Mark the parallel lines and the equal angles they create (alternate and corresponding), plus vertical angles where two lines cross.",
+        "If two triangles have two pairs of equal angles, they are similar; list the matching vertices in the same order.",
+        "Write a proportion of matching sides, or an equation for the angle expressions.",
+        "Solve, and check that the larger triangle gets the longer side."
+      ],
+      "worked_example": {
+        "stem": "In the figure, \\(\\overline{AE}\\) and \\(\\overline{BD}\\) intersect at point \\(C\\), and \\(\\overline{AB}\\) is parallel to \\(\\overline{DE}\\). If \\(AC = 6\\), \\(CE = 9\\), and \\(AB = 8\\), what is the length of \\(\\overline{DE}\\)?",
+        "figure": {
+          "kind": "geometry",
+          "points": {
+            "A": [
+              -6,
+              0
+            ],
+            "B": [
+              -2,
+              6.928
+            ],
+            "C": [
+              0,
+              0
+            ],
+            "D": [
+              3,
+              -10.392
+            ],
+            "E": [
+              9,
+              0
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "E"
+            ],
+            [
+              "B",
+              "D"
+            ],
+            [
+              "A",
+              "B"
+            ],
+            [
+              "D",
+              "E"
+            ]
+          ],
+          "circles": [],
+          "labels": [
+            {
+              "at": [
+                -3,
+                -0.8
+              ],
+              "text": "6"
+            },
+            {
+              "at": [
+                4.5,
+                0.8
+              ],
+              "text": "9"
+            },
+            {
+              "at": [
+                -4.8,
+                3.9
+              ],
+              "text": "8"
+            }
+          ],
+          "right_angles": [],
+          "not_to_scale": false
+        },
+        "answer_type": "spr",
+        "spr_answers": [
+          "12"
+        ],
+        "walkthrough": [
+          "Angles \\(ACB\\) and \\(ECD\\) are vertical angles, so they are equal.",
+          "Because \\(\\overline{AB} \\parallel \\overline{DE}\\), the alternate interior angles \\(BAC\\) and \\(DEC\\) are equal. With two pairs of equal angles, triangle \\(ABC\\) is similar to triangle \\(EDC\\).",
+          "Match the sides in that order: \\(\\frac{DE}{AB} = \\frac{EC}{AC}\\), so \\(\\frac{DE}{8} = \\frac{9}{6}\\).",
+          "\\(DE = 8 \\cdot \\frac{3}{2} = 12\\). Enter 12. Flipping the ratio gives \\(8 \\cdot \\frac{6}{9} \\approx 5.3\\), but triangle \\(EDC\\) is the larger one, so its side must be longer than 8."
+        ],
+        "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['A'][1]==P['C'][1]==P['E'][1] and P['C']==[0,0]\nassert abs(P['D'][0]*P['B'][1]-P['D'][1]*P['B'][0])<0.01\nassert abs((P['B'][0]-P['A'][0])*(P['E'][1]-P['D'][1])-(P['B'][1]-P['A'][1])*(P['E'][0]-P['D'][0]))<0.05\nassert abs(d('A','C')-6)<0.01 and abs(d('C','E')-9)<0.01 and abs(d('A','B')-8)<0.01\nans=8*Rational(9,6)\nassert abs(d('D','E')-ans)<0.01\nassert Rational(spr_answers[0])==ans==12"
+      },
+      "tryit": [
+        "m-lat-0003",
+        "m-lat-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: angle expressions and exterior angles",
+      "steps": [
+        "Write each labeled angle as its expression and note how the angles are related.",
+        "Use the right fact: an exterior angle of a triangle equals the sum of the two interior angles not next to it; parallel-line pairs are equal or add to \\(180^{\\circ}\\).",
+        "Solve the linear equation for \\(x\\).",
+        "Substitute \\(x\\) back to get the angle the question asks for, and check that all the angles fit the figure."
+      ],
+      "worked_example": {
+        "stem": "In the figure, point \\(D\\) lies on the extension of \\(\\overline{BC}\\). The measures of angle \\(BAC\\), angle \\(ABC\\), and exterior angle \\(ACD\\) are \\((3x + 6)^{\\circ}\\), \\((2x + 10)^{\\circ}\\), and \\((7x - 4)^{\\circ}\\), respectively. What is the measure, in degrees, of angle \\(ACB\\)?",
+        "figure": {
+          "kind": "geometry",
+          "points": {
+            "A": [
+              13.46,
+              7.771
+            ],
+            "B": [
+              0,
+              0
+            ],
+            "C": [
+              10,
+              0
+            ],
+            "D": [
+              18,
+              0
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "D"
+            ],
+            [
+              "C",
+              "A"
+            ]
+          ],
+          "circles": [],
+          "labels": [
+            {
+              "at": [
+                12.4,
+                6.3
+              ],
+              "text": "(3x + 6)°"
+            },
+            {
+              "at": [
+                3.2,
+                0.6
+              ],
+              "text": "(2x + 10)°"
+            },
+            {
+              "at": [
+                12.3,
+                0.9
+              ],
+              "text": "(7x − 4)°"
+            }
+          ],
+          "right_angles": [],
+          "not_to_scale": false
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(10\\)",
+          "B": "\\(36\\)",
+          "C": "\\(66\\)",
+          "D": "\\(114\\)"
+        },
+        "answer": "D",
+        "walkthrough": [
+          "Angle \\(ACD\\) is an exterior angle of triangle \\(ABC\\), so it equals the sum of the two interior angles not next to it: \\(7x - 4 = (3x + 6) + (2x + 10)\\).",
+          "Simplify: \\(7x - 4 = 5x + 16\\), so \\(2x = 20\\) and \\(x = 10\\).",
+          "The exterior angle is \\(7(10) - 4 = 66^{\\circ}\\). Angles \\(ACB\\) and \\(ACD\\) form a straight line, so angle \\(ACB = 180 - 66 = 114^{\\circ}\\), choice D.",
+          "Check: angle \\(BAC = 36^{\\circ}\\), angle \\(ABC = 30^{\\circ}\\), and \\(36 + 30 + 114 = 180\\). Choice C, 66, is the exterior angle, not angle \\(ACB\\), and choice A is \\(x\\) itself."
+        ],
+        "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['B'][1]==P['C'][1]==P['D'][1] and P['B'][0]<P['C'][0]<P['D'][0]\nx=symbols('x')\nxs=solve(Eq(7*x-4,(3*x+6)+(2*x+10)),x)[0]\nans=180-(7*xs-4)\nassert abs(ang('B','A','C')-(3*xs+6))<0.1 and abs(ang('A','B','C')-(2*xs+10))<0.1\nassert abs(ang('A','C','D')-(7*xs-4))<0.1 and abs(ang('A','C','B')-ans)<0.1\nassert value(choices[answer])==ans==114\nassert all(value(choices[c])!=ans for c in choices if c!=answer)"
+      },
+      "tryit": [
+        "m-lat-0005",
+        "m-lat-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: similar triangles inside one figure",
+      "steps": [
+        "Look for smaller triangles inside the figure that share an angle with the big one (made by an altitude, a parallel segment or a bisector).",
+        "Prove the similarity with two pairs of equal angles and write the vertices in matching order.",
+        "Set up a proportion (or an area ratio of \\(k^{2}\\)) with the parts the question gives you.",
+        "Solve, then check the answer in a second way, such as the Pythagorean theorem or the other triangle."
+      ],
+      "worked_example": {
+        "stem": "In the figure, angle \\(ACB\\) is a right angle and \\(\\overline{CD}\\) is perpendicular to \\(\\overline{AB}\\). If \\(AD = 4\\) and \\(DB = 9\\), what is the length of \\(\\overline{CD}\\)?",
+        "figure": {
+          "kind": "geometry",
+          "points": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              13,
+              0
+            ],
+            "C": [
+              4,
+              6
+            ],
+            "D": [
+              4,
+              0
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ],
+            [
+              "C",
+              "D"
+            ]
+          ],
+          "circles": [],
+          "labels": [
+            {
+              "at": [
+                2,
+                -0.8
+              ],
+              "text": "4"
+            },
+            {
+              "at": [
+                8.5,
+                -0.8
+              ],
+              "text": "9"
+            }
+          ],
+          "right_angles": [
+            "C",
+            "D"
+          ],
+          "not_to_scale": false
+        },
+        "answer_type": "spr",
+        "spr_answers": [
+          "6"
+        ],
+        "walkthrough": [
+          "In right triangle \\(ADC\\), angle \\(ACD = 90^{\\circ} - A\\). In the big triangle, angle \\(B = 90^{\\circ} - A\\) too, so angle \\(ACD\\) equals angle \\(B\\). In the same way, angle \\(BCD\\) equals angle \\(A\\).",
+          "So triangle \\(ADC\\) is similar to triangle \\(CDB\\), with \\(A\\) matching \\(C\\), \\(D\\) matching \\(D\\), and \\(C\\) matching \\(B\\).",
+          "Matching legs give \\(\\frac{CD}{AD} = \\frac{DB}{CD}\\), so \\(CD^{2} = AD \\cdot DB = 4 \\cdot 9 = 36\\).",
+          "\\(CD = 6\\). Enter 6. A common slip is to average 4 and 9 to get 6.5; the length is \\(\\sqrt{36}\\), not the average.",
+          "Check: \\(AC^{2} = 4^{2} + 6^{2} = 52\\) and \\(CB^{2} = 9^{2} + 6^{2} = 117\\), and \\(52 + 117 = 169 = 13^{2} = AB^{2}\\)."
+        ],
+        "verify": "P=figure['points']\nassert P['A'][1]==P['D'][1]==P['B'][1] and P['C'][0]==P['D'][0]\nassert (P['A'][0]-P['C'][0])*(P['B'][0]-P['C'][0])+(P['A'][1]-P['C'][1])*(P['B'][1]-P['C'][1])==0\nassert P['D'][0]-P['A'][0]==4 and P['B'][0]-P['D'][0]==9\nh=symbols('h',positive=True)\nhs=solve(Eq(h/4,9/h),h)\nassert hs==[6] and P['C'][1]-P['D'][1]==6\nassert Rational(spr_answers[0])==hs[0]"
+      },
+      "tryit": [
+        "m-lat-0007",
+        "m-lat-0008"
+      ]
+    }
+  ]
+}

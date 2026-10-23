@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0160",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Two candles, A and B, are lit at the same time, and each burns at its own constant rate. Candle A is 30 centimeters tall when it is lit, and its height decreases by 2 centimeters per hour. Five hours after they are lit, the two candles have the same height. Candle B burns out completely 2 hours before candle A does. What was the height, in centimeters, of candle B when it was lit?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "65/2"
+  ],
+  "solution": [
+    "Candle A: \\(A(t) = 30 - 2t\\). It burns out when \\(t = 15\\), and \\(A(5) = 20\\).",
+    "Candle B is also 20 centimeters tall at \\(t = 5\\) and burns out at \\(t = 13\\), so it loses 20 centimeters in 8 hours: 2.5 centimeters per hour.",
+    "At \\(t = 0\\) its height was \\(20 + 5(2.5) = 32.5\\) centimeters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t, h0, r = symbols('t h0 r')\nA = 30 - 2*t\ntA = solve(A, t)[0]\nB = h0 - r*t\nsol = solve([Eq(B.subs(t, 5), A.subs(t, 5)), Eq(B.subs(t, tA - 2), 0)], [h0, r], dict=True)\nassert sol == [{h0: Rational(65, 2), r: Rational(5, 2)}]\nassert [Rational(s) for s in spr_answers] == [Rational(65, 2)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "32.5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

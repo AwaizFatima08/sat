@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0538",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Ravi deposits \\(P\\) rupees in a savings account in Pune that earns 8% interest compounded annually. The interest, in rupees, earned after 2 years is \\(P(1.08)^{2} - P\\). Which of the following is equivalent to this expression?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(P(0.08)(2.08)\\)",
+    "B": "\\(P(1.08)(0.08)\\)",
+    "C": "\\(2P(0.08)\\)",
+    "D": "\\(P(0.08)^{2}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Factor out \\(P\\): \\(P\\left((1.08)^{2} - 1\\right)\\).",
+    "Use the difference of squares \\(a^{2} - 1 = (a - 1)(a + 1)\\) with \\(a = 1.08\\): \\((1.08)^{2} - 1 = (0.08)(2.08)\\).",
+    "So the interest is \\(P(0.08)(2.08)\\), which is \\(0.1664P\\) rupees."
+  ],
+  "explanation": {
+    "A": "Correct. \\(P\\left((1.08)^{2} - 1\\right) = P(1.08 - 1)(1.08 + 1) = P(0.08)(2.08)\\).",
+    "B": "Incorrect. This is the interest earned in the second year only, not the total interest over 2 years.",
+    "C": "Incorrect. This is the result of adding 8% twice, as for simple interest; compound interest also earns interest on the first year's interest.",
+    "D": "Incorrect. This is the result of writing \\((1.08)^{2} - 1\\) as \\((1.08 - 1)^{2}\\); the square of a difference is not the difference of squares."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "percent_add",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nP = symbols('P')\ntarget = P*Rational('1.08')**2 - P\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

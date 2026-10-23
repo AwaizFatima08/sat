@@ -1,0 +1,58 @@
+{
+  "id": "m-prb-0006",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "At a high school with 300 students, 120 students take Spanish. Of the students who take Spanish, 45 are in the school band, and of the students who do not take Spanish, 30 are in the band. If a band member at this school is selected at random, what is the probability that the student takes Spanish?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{3}{20}\\)",
+    "B": "\\(\\frac{3}{8}\\)",
+    "C": "\\(\\frac{2}{5}\\)",
+    "D": "\\(\\frac{3}{5}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The condition is “band member,” so the denominator is the number of band members: \\(45 + 30 = 75\\).",
+    "Of these, 45 take Spanish.",
+    "The probability is \\(\\frac{45}{75} = \\frac{3}{5}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{45}{300}\\): it divides by all 300 students instead of only the 75 band members.",
+    "B": "Incorrect. This is \\(\\frac{45}{120}\\), the probability that a Spanish student is in the band: the condition is reversed.",
+    "C": "Incorrect. This is \\(\\frac{30}{75}\\), the probability that a band member does NOT take Spanish.",
+    "D": "Correct. 45 of the 75 band members take Spanish, and \\(\\frac{45}{75} = \\frac{3}{5}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "C": "wrong_quantity"
+  },
+  "verify": "band = 45 + 30\np = Rational(45, band)\nassert p == Rational(3, 5)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

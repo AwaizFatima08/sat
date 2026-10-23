@@ -1,0 +1,86 @@
+{
+  "id": "m-ovd-0002",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The table shows the number of runs a batter scored in each of five cricket matches. What is the mean number of runs per match?",
+  "figure": {
+    "kind": "table",
+    "title": "Runs scored",
+    "columns": [
+      "Match",
+      "Runs"
+    ],
+    "rows": [
+      [
+        "1",
+        "34"
+      ],
+      [
+        "2",
+        "52"
+      ],
+      [
+        "3",
+        "18"
+      ],
+      [
+        "4",
+        "76"
+      ],
+      [
+        "5",
+        "60"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(48\\)",
+    "B": "\\(52\\)",
+    "C": "\\(58\\)",
+    "D": "\\(240\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Add the runs: \\(34 + 52 + 18 + 76 + 60 = 240\\).",
+    "Divide by the number of matches: \\(\\frac{240}{5} = 48\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The total is 240 runs in 5 matches, and \\(\\frac{240}{5} = 48\\).",
+    "B": "Incorrect. This is the median: in order the runs are 18, 34, 52, 60, 76, and the middle value is 52.",
+    "C": "Incorrect. This is the range, \\(76 - 18 = 58\\), not the mean.",
+    "D": "Incorrect. This is the total number of runs. It still has to be divided by the 5 matches."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "runs = [Integer(r[1]) for r in figure['rows']]\nmean = Rational(sum(runs), len(runs))\nassert mean == 48\nassert value(choices[answer]) == mean\nassert all(value(choices[k]) != mean for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0513",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "How many real solutions does the equation \\(|x - 5| + 8 = 3\\) have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Zero",
+    "B": "Infinitely many",
+    "C": "Exactly one",
+    "D": "Exactly two"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Isolate the absolute value: subtract \\(8\\) from both sides to get \\(|x - 5| = -5\\).",
+    "An absolute value is never negative, so no real number makes \\(|x - 5|\\) equal to \\(-5\\).",
+    "The equation has zero real solutions."
+  ],
+  "explanation": {
+    "A": "Correct. \\(|x - 5| = -5\\) is impossible, because an absolute value is always \\(0\\) or greater.",
+    "B": "Incorrect. An equation has infinitely many solutions only when it is true for every value; here no value works.",
+    "C": "Incorrect. This is the result of treating the equation as \\(|x - 5| = 0\\), which has the single solution \\(x = 5\\); subtracting \\(8\\) from \\(3\\) gives \\(-5\\), not \\(0\\).",
+    "D": "Incorrect. This is the result of solving \\(x - 5 = 5\\) and \\(x - 5 = -5\\) without noticing that \\(|x - 5|\\) must equal \\(-5\\); neither \\(10\\) nor \\(0\\) satisfies the original equation."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x', real=True)\nsols = solve(Eq(Abs(x - 5) + 8, 3), x)\nn = len(sols)\nassert n == 0\nnames = {0: 'Zero', 1: 'Exactly one', 2: 'Exactly two'}\nassert choices[answer] == names[n]\nassert sum(1 for k in choices if choices[k] == names[n]) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

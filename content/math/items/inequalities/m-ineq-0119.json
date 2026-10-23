@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0119",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the inequality \\(ax + 6 > 2x - 9\\), \\(a\\) is a constant. If \\(x = -3\\) is a solution to the inequality, which of the following describes all possible values of \\(a\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(a < -7\\)",
+    "B": "\\(a < 7\\)",
+    "C": "\\(a < 3\\)",
+    "D": "\\(a > 7\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = -3\\): \\(-3a + 6 > 2(-3) - 9\\), so \\(-3a + 6 > -15\\).",
+    "Subtract 6: \\(-3a > -21\\).",
+    "Divide by \\(-3\\) and reverse the sign: \\(a < 7\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of a sign slip that turns \\(-3a > -21\\) into \\(-3a > 21\\).",
+    "B": "Correct. Substituting \\(x = -3\\) gives \\(-3a > -21\\), so \\(a < 7\\).",
+    "C": "Incorrect. This is the result of adding 6 to \\(-15\\) instead of subtracting 6, which gives \\(-3a > -9\\).",
+    "D": "Incorrect. This is the result of dividing by \\(-3\\) without reversing the inequality sign."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\na, x = symbols('a x')\nsol = solve_univariate_inequality((a*x + 6 > 2*x - 9).subs(x, -3), a, relational=False)\nassert sol == Interval.open(-oo, 7)\nP = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nS = lambda s: solve_univariate_inequality(P(s), a, relational=False)\nassert S(choices[answer]) == sol\nassert all(S(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

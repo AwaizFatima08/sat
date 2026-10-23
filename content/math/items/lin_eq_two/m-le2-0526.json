@@ -1,0 +1,89 @@
+{
+  "id": "m-le2-0526",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A memory card has 2,000 megabytes (MB) of free space. All songs are the same size, and all videos are the same size. The graph shows the combinations of \\(x\\) songs and \\(y\\) videos that would exactly fill the free space. What is the size, in megabytes, of one video?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      0,
+      600
+    ],
+    "y": [
+      0,
+      50
+    ],
+    "curves": [
+      {
+        "expr": "40 - 2*x/25",
+        "label": ""
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 40,
+        "label": "(0, 40)"
+      },
+      {
+        "x": 500,
+        "y": 0,
+        "label": "(500, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "Songs",
+    "y_label": "Videos"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(40\\)",
+    "B": "\\(12.5\\)",
+    "C": "\\(4\\)",
+    "D": "\\(50\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The point \\((0, 40)\\) means 40 videos and no songs fill exactly 2,000 MB.",
+    "So one video is \\(\\frac{2{,}000}{40} = 50\\) MB."
+  ],
+  "explanation": {
+    "A": "Incorrect. 40 is the number of videos that fill the card, read from the graph, not the size of one video.",
+    "B": "Incorrect. \\(\\frac{500}{40} = 12.5\\) is the number of songs that take the same space as one video, not a size in megabytes.",
+    "C": "Incorrect. This is the size of one song: 500 songs fill 2,000 MB, so a song is \\(\\frac{2{,}000}{500} = 4\\) MB.",
+    "D": "Correct. 40 videos fill 2,000 MB, so each video is 50 MB."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\np = {(q['x'], q['y']) for q in figure['points']}\nassert p == {(0, 40), (500, 0)}\nsong, video = Rational(2000, 500), Rational(2000, 40)\nassert (song, video) == (4, 50)\nassert value(choices[answer]) == video\nassert all(value(choices[k]) != video for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

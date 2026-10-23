@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0511",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A boat travels 36 kilometers downstream in 2 hours, and the return trip of 36 kilometers upstream takes 3 hours. Downstream, the boat's speed equals its speed in still water plus the speed of the current; upstream, it equals its speed in still water minus the speed of the current. Both speeds are constant. What is the speed of the current, in kilometers per hour?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(15\\)",
+    "B": "\\(3\\)",
+    "C": "\\(6\\)",
+    "D": "\\(12\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Downstream speed: \\(36 \\div 2 = 18\\), so \\(b + c = 18\\). Upstream speed: \\(36 \\div 3 = 12\\), so \\(b - c = 12\\).",
+    "Subtract the second equation from the first: \\(2c = 6\\).",
+    "So \\(c = 3\\) kilometers per hour (and \\(b = 15\\))."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the boat's speed in still water, not the speed of the current.",
+    "B": "Correct. The equations \\(b + c = 18\\) and \\(b - c = 12\\) give \\(2c = 6\\), so \\(c = 3\\).",
+    "C": "Incorrect. This is \\(2c\\); the last step, dividing by 2, is missing.",
+    "D": "Incorrect. This is the boat's upstream speed, not the speed of the current."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nb, c = symbols('b c')\nsol = solve([b + c - Rational(36, 2), b - c - Rational(36, 3)], [b, c])\nassert sol == {b: 15, c: 3}\nassert value(choices[answer]) == sol[c]\nassert all(value(choices[k]) != sol[c] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

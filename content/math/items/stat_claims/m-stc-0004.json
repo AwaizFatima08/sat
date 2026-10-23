@@ -1,0 +1,81 @@
+{
+  "id": "m-stc-0004",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A science class designed five studies to test whether background music affects how quickly people solve puzzles. The table shows whether each study selected its participants at random from a population and whether it assigned the treatments (music or no music) at random. For how many of the five studies can a cause-and-effect conclusion be drawn about the participants in that study?",
+  "figure": {
+    "kind": "table",
+    "title": "Design of the five studies",
+    "columns": [
+      "Study",
+      "Participants selected at random",
+      "Treatments assigned at random"
+    ],
+    "rows": [
+      [
+        "I",
+        "Yes",
+        "No"
+      ],
+      [
+        "II",
+        "No",
+        "Yes"
+      ],
+      [
+        "III",
+        "Yes",
+        "Yes"
+      ],
+      [
+        "IV",
+        "No",
+        "No"
+      ],
+      [
+        "V",
+        "No",
+        "Yes"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3"
+  ],
+  "solution": [
+    "A cause-and-effect conclusion requires random assignment of treatments; random selection is not needed for a conclusion about the participants themselves.",
+    "Studies II, III and V assigned treatments at random.",
+    "So the answer is 3."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "n = sum(1 for row in figure['rows'] if row[2] == 'Yes')\nassert n == 3\nassert [Rational(a) for a in spr_answers] == [n]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

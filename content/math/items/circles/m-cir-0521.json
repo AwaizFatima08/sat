@@ -1,0 +1,59 @@
+{
+  "id": "m-cir-0521",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The graph of \\(x^{2} + y^{2} + 6x - 10y = 2\\) in the \\(xy\\)-plane is a circle. Which of the following gives the center and the radius of the circle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Center \\((3, -5)\\), radius \\(6\\)",
+    "B": "Center \\((-3, 5)\\), radius \\(6\\)",
+    "C": "Center \\((-3, 5)\\), radius \\(\\sqrt{2}\\)",
+    "D": "Center \\((-3, 5)\\), radius \\(36\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Complete the square in \\(x\\) and in \\(y\\): \\((x^{2} + 6x + 9) + (y^{2} - 10y + 25) = 2 + 9 + 25\\).",
+    "\\((x + 3)^{2} + (y - 5)^{2} = 36\\).",
+    "The center is \\((-3, 5)\\) and the radius is \\(\\sqrt{36} = 6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The signs of the center are reversed; \\((x + 3)^{2}\\) means \\(h = -3\\) and \\((y - 5)^{2}\\) means \\(k = 5\\).",
+    "B": "Correct. \\((x + 3)^{2} + (y - 5)^{2} = 36\\) gives center \\((-3, 5)\\) and radius 6.",
+    "C": "Incorrect. This uses the constant 2 as \\(r^{2}\\) without adding the 9 and 25 that complete the squares.",
+    "D": "Incorrect. 36 is \\(r^{2}\\); the radius is its square root, 6."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx,y=symbols('x y')\nparts=lambda s: [value('\\\\('+p.split('\\\\)')[0]+'\\\\)') for p in s.split('\\\\(')[1:]]\ne=x**2+y**2+6*x-10*y-2\nh,k=solve(diff(e,x),x)[0],solve(diff(e,y),y)[0]\nr=sqrt(-e.subs({x:h,y:k}))\nassert (h,k,r)==(-3,5,6)\nassert parts(choices[answer])==[(h,k),r]\nassert all(parts(choices[c])!=[(h,k),r] for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

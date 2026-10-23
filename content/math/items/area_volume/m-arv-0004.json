@@ -1,0 +1,45 @@
+{
+  "id": "m-arv-0004",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A cylindrical storage canister has a diameter of 20 centimeters and a height of 35 centimeters. The volume of the canister is \\(k\\pi\\) cubic centimeters. What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3500"
+  ],
+  "solution": [
+    "The radius is half the diameter: \\(r = 10\\).",
+    "\\(V = \\pi r^{2} h = \\pi (10)^{2}(35) = 3500\\pi\\), so \\(k = 3500\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r=Rational(20,2)\nk=r**2*35\nassert Rational(spr_answers[0])==k==3500\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "3500",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

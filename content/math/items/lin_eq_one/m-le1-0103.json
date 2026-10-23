@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0103",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(\\frac{x}{3} + 4 = 11\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{7}{3}\\)",
+    "B": "\\(21\\)",
+    "C": "\\(7\\)",
+    "D": "\\(45\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Subtract 4 from both sides: \\(\\frac{x}{3} = 7\\).",
+    "Multiply both sides by 3: \\(x = 21\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dividing 7 by 3 instead of multiplying by 3.",
+    "B": "Correct. Subtracting 4 gives \\(\\frac{x}{3} = 7\\), so \\(x = 21\\). Check: \\(\\frac{21}{3} + 4 = 11\\).",
+    "C": "Incorrect. This is the value of \\(\\frac{x}{3}\\), not \\(x\\); the last step, multiplying by 3, was skipped.",
+    "D": "Incorrect. This is the result of adding 4 to 11 instead of subtracting it: \\(\\frac{x}{3} = 15\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "C": "stopped_early",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\ns = solve(Eq(x/3 + 4, 11), x)[0]\nassert s == 21\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

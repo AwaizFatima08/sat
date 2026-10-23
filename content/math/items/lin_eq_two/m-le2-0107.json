@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0107",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A baker uses all of her 9 kilograms of flour to make \\(x\\) loaves of bread and \\(y\\) cakes. Each loaf uses 0.5 kilogram of flour, and each cake uses 0.75 kilogram of flour. The graph of \\(0.5x + 0.75y = 9\\) in the \\(xy\\)-plane has a \\(y\\)-intercept of \\((0, 12)\\). Which statement is the best interpretation of the \\(y\\)-intercept?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The baker has 12 kilograms of flour.",
+    "B": "The baker makes a total of 12 loaves and cakes.",
+    "C": "If the baker makes no cakes, she can make 12 loaves.",
+    "D": "If the baker makes no loaves, she can make 12 cakes."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "At the \\(y\\)-intercept, \\(x = 0\\): the baker makes no loaves.",
+    "Then \\(0.75y = 9\\), so \\(y = 12\\): she can make 12 cakes."
+  ],
+  "explanation": {
+    "A": "Incorrect. The baker has 9 kilograms of flour; the 12 counts cakes, the quantity on the \\(y\\)-axis.",
+    "B": "Incorrect. At the \\(y\\)-intercept she makes 0 loaves and 12 cakes; the total of 12 is not true for other points on the graph.",
+    "C": "Incorrect. This describes the \\(x\\)-intercept, and that intercept is \\((18, 0)\\): with no cakes she can make 18 loaves.",
+    "D": "Correct. The \\(y\\)-intercept has \\(x = 0\\) loaves and \\(y = 12\\) cakes."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nyi = solve(Eq(Rational(3, 4)*y, 9), y)[0]\nxi = solve(Eq(Rational(1, 2)*x, 9), x)[0]\nassert (yi, xi) == (12, 18)\nkey = 'no loaves, she can make 12 cakes'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

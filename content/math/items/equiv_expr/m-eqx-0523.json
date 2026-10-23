@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0523",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "For \\(x > 0\\), which of the following is equivalent to \\(\\sqrt{50x^{3}} - x\\sqrt{8x}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3x \\sqrt{2x}\\)",
+    "B": "\\(x \\sqrt{42x}\\)",
+    "C": "\\(7x \\sqrt{2x}\\)",
+    "D": "\\(3x^{2} \\sqrt{2x}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Simplify each radical: \\(\\sqrt{50x^{3}} = \\sqrt{25x^{2} \\cdot 2x} = 5x\\sqrt{2x}\\) and \\(x\\sqrt{8x} = x\\sqrt{4 \\cdot 2x} = 2x\\sqrt{2x}\\).",
+    "The terms are now like terms: \\(5x\\sqrt{2x} - 2x\\sqrt{2x} = 3x\\sqrt{2x}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(5x\\sqrt{2x} - 2x\\sqrt{2x} = 3x\\sqrt{2x}\\).",
+    "B": "Incorrect. This is the result of subtracting the numbers under the radicals, \\(50 - 8\\); a difference of square roots is not the square root of the difference.",
+    "C": "Incorrect. This is the result of adding the like terms \\(5x\\sqrt{2x}\\) and \\(2x\\sqrt{2x}\\) instead of subtracting.",
+    "D": "Incorrect. This is the result of taking \\(x^{2}\\) instead of \\(x\\) out of \\(\\sqrt{x^{3}}\\); \\(\\sqrt{x^{3}} = x\\sqrt{x}\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nX = Symbol('x')\nfor t in [2, 3, 7]:\n    target = sqrt(50*t**3) - t*sqrt(8*t)\n    f = lambda k: value(choices[k]).subs(X, t)\n    assert abs(N(f(answer) - target)) < 1e-9\n    assert all(abs(N(f(k) - target)) > 1e-6 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

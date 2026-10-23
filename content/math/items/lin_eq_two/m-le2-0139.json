@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0139",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "On a city map drawn on a coordinate grid, Main Street lies along the line \\(2x - y = 3\\). A new street will pass through the library at the point \\((6, 1)\\) and will be perpendicular to Main Street. At which point will the new street cross the \\(y\\)-axis?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((0, 13)\\)",
+    "B": "\\((0, 4)\\)",
+    "C": "\\((0, -11)\\)",
+    "D": "\\((0, -2)\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Main Street is \\(y = 2x - 3\\), with slope 2. The new street has slope \\(-\\frac{1}{2}\\).",
+    "\\(y - 1 = -\\frac{1}{2}(x - 6)\\) gives \\(y = -\\frac{1}{2}x + 4\\).",
+    "The new street crosses the \\(y\\)-axis at \\((0, 4)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses slope \\(-2\\), which changes the sign but does not take the reciprocal.",
+    "B": "Correct. The new street is \\(y = -\\frac{1}{2}x + 4\\).",
+    "C": "Incorrect. This is the \\(y\\)-intercept of the line through \\((6, 1)\\) with slope 2, which is parallel to Main Street.",
+    "D": "Incorrect. This uses slope \\(\\frac{1}{2}\\); a perpendicular slope must also have the opposite sign."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\npt = lambda s: [value(t) for t in s.replace('\\\\(', '').replace('\\\\)', '').strip()[1:-1].split(',')]\nm0 = diff(solve(Eq(2*x - y, 3), y)[0], x)\nline = -1/m0*(x - 6) + 1\nyi = line.subs(x, 0)\nassert yi == 4\nok = [k for k in choices if pt(choices[k]) == [0, yi]]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

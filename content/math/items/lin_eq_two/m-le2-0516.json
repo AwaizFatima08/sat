@@ -1,0 +1,45 @@
+{
+  "id": "m-le2-0516",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(ax + 3y = 12\\), where \\(a\\) is a constant, passes through the point \\((2, 6)\\). What is the value of \\(a\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-3"
+  ],
+  "solution": [
+    "Substitute \\(x = 2\\) and \\(y = 6\\): \\(2a + 18 = 12\\).",
+    "Subtract 18: \\(2a = -6\\), so \\(a = -3\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "a = symbols('a')\nsol = solve(Eq(a*2 + 3*6, 12), a)\nassert sol == [-3]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "-3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

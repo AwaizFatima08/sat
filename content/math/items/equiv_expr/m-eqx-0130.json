@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0130",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x \\neq 3\\), \\(x \\neq -3\\), \\(x \\neq 4\\), and \\(x \\neq -5\\), which of the following is equivalent to \\(\\frac{x^{2} - x - 12}{x^{2} - 9} \\div \\frac{x - 4}{x + 5}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{x + 5}{x + 3}\\)",
+    "B": "\\(\\frac{x + 5}{x - 3}\\)",
+    "C": "\\(\\frac{(x - 4)^{2}}{(x - 3)(x + 5)}\\)",
+    "D": "\\(\\frac{x - 3}{x + 5}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Dividing by a fraction is multiplying by its reciprocal: \\(\\frac{x^{2} - x - 12}{x^{2} - 9} \\cdot \\frac{x + 5}{x - 4}\\).",
+    "Factor: \\(x^{2} - x - 12 = (x - 4)(x + 3)\\) and \\(x^{2} - 9 = (x - 3)(x + 3)\\).",
+    "Cancel \\(x + 3\\) and \\(x - 4\\): \\(\\frac{x + 5}{x - 3}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of factoring \\(x^{2} - x - 12\\) as \\((x - 4)(x - 3)\\); the correct factors are \\((x - 4)(x + 3)\\).",
+    "B": "Correct. \\(\\frac{(x - 4)(x + 3)}{(x - 3)(x + 3)} \\cdot \\frac{x + 5}{x - 4} = \\frac{x + 5}{x - 3}\\).",
+    "C": "Incorrect. This is the result of multiplying by \\(\\frac{x - 4}{x + 5}\\) instead of by its reciprocal.",
+    "D": "Incorrect. This is the reciprocal of the correct expression."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "concept",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = (x**2 - x - 12)/(x**2 - 9) / ((x - 4)/(x + 5))\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

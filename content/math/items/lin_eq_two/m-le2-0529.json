@@ -1,0 +1,80 @@
+{
+  "id": "m-le2-0529",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A club sells T-shirts and caps to reach a fundraising goal. Every T-shirt sells for the same price, and every cap sells for the same price. The table shows three combinations of \\(x\\) T-shirts and \\(y\\) caps that would each raise exactly the goal amount. Which equation could represent this relationship?",
+  "figure": {
+    "kind": "table",
+    "title": "Combinations that meet the goal",
+    "columns": [
+      "T-shirts, x",
+      "Caps, y"
+    ],
+    "rows": [
+      [
+        "0",
+        "60"
+      ],
+      [
+        "10",
+        "36"
+      ],
+      [
+        "20",
+        "12"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12x + 5y = 60\\)",
+    "B": "\\(12x + 5y = 300\\)",
+    "C": "\\(12x - 5y = 300\\)",
+    "D": "\\(5x + 12y = 300\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "From the table, each increase of 10 T-shirts goes with a decrease of 24 caps, so the slope is \\(-\\frac{24}{10} = -\\frac{12}{5}\\).",
+    "The \\(y\\)-intercept is 60, so \\(y = -\\frac{12}{5}x + 60\\).",
+    "Multiply by 5 and rearrange: \\(12x + 5y = 300\\). All three pairs check."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the \\(y\\)-intercept 60 as the constant without multiplying it by the coefficient of \\(y\\); \\((0, 60)\\) gives 300, not 60.",
+    "B": "Correct. \\(12(0) + 5(60) = 300\\), \\(12(10) + 5(36) = 300\\) and \\(12(20) + 5(12) = 300\\).",
+    "C": "Incorrect. This line has a positive slope, but the number of caps decreases as the number of T-shirts increases.",
+    "D": "Incorrect. This swaps the coefficients, giving slope \\(-\\frac{5}{12}\\), the reciprocal of the correct slope; \\((0, 60)\\) gives 720."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "sign_error",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\n\npts = [(int(r[0]), int(r[1])) for r in figure['rows']]\nassert pts == [(0, 60), (10, 36), (20, 12)]\nok = [k for k in choices if all(eq(choices[k]).subs({x: a, y: b}) == 0 for a, b in pts)]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-rtt-0108",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In triangle \\(PQR\\), angle \\(R\\) is a right angle, \\(\\sin P = \\frac{11}{61}\\), and \\(PR = 120\\). What is the length of \\(\\overline{QR}\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "22"
+  ],
+  "solution": [
+    "\\(\\sin P = \\frac{QR}{PQ} = \\frac{11}{61}\\), so let \\(QR = 11k\\) and \\(PQ = 61k\\).",
+    "Then \\(PR = \\sqrt{(61k)^{2} - (11k)^{2}} = 60k\\).",
+    "\\(60k = 120\\), so \\(k = 2\\) and \\(QR = 22\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "k=symbols('k',positive=True)\nkk=solve(Eq(sqrt((61*k)**2-(11*k)**2),120),k)[0]\nans=11*kk\nassert ans==22\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "22",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

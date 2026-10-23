@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0507",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What are all the solutions to the equation \\(x^{2} = 6x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0\\) and \\(6\\)",
+    "B": "\\(-6\\) and \\(6\\)",
+    "C": "\\(0\\) only",
+    "D": "\\(6\\) only"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Move every term to one side: \\(x^{2} - 6x = 0\\).",
+    "Factor: \\(x(x - 6) = 0\\), so \\(x = 0\\) or \\(x = 6\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(x(x - 6) = 0\\) gives \\(x = 0\\) or \\(x = 6\\); both check in the original equation.",
+    "B": "Incorrect. This is the result of treating the equation as \\(x^{2} = 36\\).",
+    "C": "Incorrect. This is the result of factoring correctly but keeping only the factor \\(x\\) and dropping \\(x - 6 = 0\\).",
+    "D": "Incorrect. This is the result of dividing both sides by \\(x\\), which loses the solution \\(x = 0\\)."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nsols = set(solve(Eq(x**2, 6*x), x))\nassert sols == {0, 6}\nparse = lambda s: set(value(p.replace(' only', '')) for p in s.split(' and '))\nassert parse(choices[answer]) == sols\nassert all(parse(choices[k]) != sols for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

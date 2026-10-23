@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0150",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The expression \\(x^{2} + bx + c\\), where \\(b\\) and \\(c\\) are constants, is equivalent to \\((x + 4)^{2} - 9\\). It is also equivalent to \\((x + m)(x + n)\\), where \\(m\\) and \\(n\\) are constants and \\(m < n\\). What is the value of \\(m\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1\\)",
+    "B": "\\(-7\\)",
+    "C": "\\(-1\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Write \\(9 = 3^{2}\\) and use the difference of squares: \\((x + 4)^{2} - 3^{2} = (x + 4 - 3)(x + 4 + 3)\\).",
+    "This is \\((x + 1)(x + 7)\\), so \\(m = 1\\) and \\(n = 7\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\((x + 4)^{2} - 9 = (x + 1)(x + 7)\\), so \\(m = 1\\).",
+    "B": "Incorrect. This is the result of factoring \\((x - 4)^{2} - 9\\) instead; the sign of 4 was changed.",
+    "C": "Incorrect. This is the result of writing the factors as \\((x - 1)(x + 7)\\); \\(x + 4 - 3 = x + 1\\).",
+    "D": "Incorrect. This is the value of \\(n\\), the greater of the two constants."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "sign_error",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx, m, n = symbols('x m n')\nsols = solve(Poly(expand((x + m)*(x + n) - ((x + 4)**2 - 9)), x).all_coeffs(), [m, n], dict=True)\nms = [s[m] for s in sols if s[m] < s[n]]\nassert len(ms) == 1\nval = ms[0]\nassert simplify(value(choices[answer]) - val) == 0\nassert all(simplify(value(choices[k]) - val) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

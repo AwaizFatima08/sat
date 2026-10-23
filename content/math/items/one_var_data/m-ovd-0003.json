@@ -1,0 +1,89 @@
+{
+  "id": "m-ovd-0003",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The histogram summarizes the one-way commute times, in minutes, of the 30 employees at an office. Each interval includes its left endpoint but not its right endpoint. Which interval contains the median commute time?",
+  "figure": {
+    "kind": "histogram",
+    "x_label": "Commute time (minutes)",
+    "y_label": "Number of employees",
+    "bins": [
+      [
+        0,
+        10,
+        4
+      ],
+      [
+        10,
+        20,
+        9
+      ],
+      [
+        20,
+        30,
+        8
+      ],
+      [
+        30,
+        40,
+        6
+      ],
+      [
+        40,
+        50,
+        3
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "0 to 10 minutes",
+    "B": "10 to 20 minutes",
+    "C": "20 to 30 minutes",
+    "D": "30 to 40 minutes"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "With 30 values, the median is the average of the 15th and 16th values in order.",
+    "Count up from the shortest times: 4 employees take under 10 minutes, \\(4 + 9 = 13\\) take under 20 minutes, and \\(13 + 8 = 21\\) take under 30 minutes.",
+    "The 15th and 16th values are both among the employees counted from 14 to 21, so the median is in the interval from 20 to 30 minutes."
+  ],
+  "explanation": {
+    "A": "Incorrect. Only the 4 shortest commute times are in this interval. The median is the average of the 15th and 16th values.",
+    "B": "Incorrect. This interval has the tallest bar (the most employees), or it contains 15 minutes if the 15th position is mistaken for 15 minutes. Only 13 employees have commutes under 20 minutes, so the 15th and 16th values are not here.",
+    "C": "Correct. 13 employees commute less than 20 minutes and 21 commute less than 30 minutes, so the 15th and 16th values, and therefore the median, are in this interval.",
+    "D": "Incorrect. This is the interval whose bar height, 6, is the median of the bar heights 3, 4, 6, 8 and 9. The median must be found from the 30 commute times, not from the bar heights."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "pos = [15, 16]\ncum, found = 0, set()\nfor lo, hi, f in figure['bins']:\n    found |= {(lo, hi) for q in pos if cum < q <= cum + f}\n    cum += f\nassert cum == 30 and found == {(20, 30)}\nassert choices[answer] == '20 to 30 minutes'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

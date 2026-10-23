@@ -1,0 +1,46 @@
+{
+  "id": "m-eqx-0144",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x \\neq 1\\) and \\(x \\neq -1\\), \\(\\frac{3}{x + 1} + \\frac{2}{x - 1} = \\frac{ax + b}{x^{2} - 1}\\), where \\(a\\) and \\(b\\) are constants. What is the value of \\(a + b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4"
+  ],
+  "solution": [
+    "Use the common denominator \\((x + 1)(x - 1) = x^{2} - 1\\).",
+    "The numerator is \\(3(x - 1) + 2(x + 1) = 3x - 3 + 2x + 2 = 5x - 1\\).",
+    "So \\(a = 5\\) and \\(b = -1\\), and \\(a + b = 4\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nnum = Poly(expand(cancel((3/(x + 1) + 2/(x - 1))*(x**2 - 1))), x)\na, b = num.coeff_monomial(x), num.coeff_monomial(1)\nassert (a, b) == (5, -1)\nassert [Rational(v) for v in spr_answers] == [a + b]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

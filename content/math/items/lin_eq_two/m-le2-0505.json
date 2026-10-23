@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0505",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What is the slope of the graph of \\(6x + 2y = 9\\) in the \\(xy\\)-plane?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6\\)",
+    "B": "\\(\\frac{9}{2}\\)",
+    "C": "\\(3\\)",
+    "D": "\\(-3\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Solve for \\(y\\): \\(2y = -6x + 9\\).",
+    "Divide by 2: \\(y = -3x + \\frac{9}{2}\\). The slope is \\(-3\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This takes the coefficient of \\(x\\) in the standard form as the slope; the equation must first be solved for \\(y\\).",
+    "B": "Incorrect. \\(\\frac{9}{2}\\) is the \\(y\\)-intercept, not the slope.",
+    "C": "Incorrect. This forgets that moving \\(6x\\) to the other side makes it \\(-6x\\).",
+    "D": "Correct. \\(y = -3x + \\frac{9}{2}\\), so the slope is \\(-3\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nline = solve(Eq(6*x + 2*y, 9), y)[0]\nm = diff(line, x)\nassert m == -3\nassert value(choices[answer]) == m\nassert all(value(choices[k]) != m for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

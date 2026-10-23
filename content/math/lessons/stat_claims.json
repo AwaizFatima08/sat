@@ -1,0 +1,188 @@
+{
+  "type": "stat_claims",
+  "title": "Evaluating statistical claims",
+  "what_is_tested": "You decide what a study's design allows you to conclude. Random selection from a population lets you generalize the results to that population; random assignment of treatments lets you conclude cause and effect. Without random assignment, you can claim only an association.",
+  "how_to_spot": "The question describes how participants were chosen and how treatments were given, then asks for the most appropriate conclusion, the largest group the results apply to, or which design would allow a cause-and-effect claim.",
+  "method": [
+    "Ask: were the participants selected at random from a larger population? If so, results generalize to that population, and no wider.",
+    "Ask: were the treatments assigned at random? If so, a cause-and-effect conclusion is possible.",
+    "If people chose their own treatment or were only observed, you can claim an association, never \"causes\".",
+    "Combine the two answers: cause and effect for a whole population needs both random selection and random assignment.",
+    "Check the exact group named in each choice: a state or a city, all employees or only app users, volunteers or everyone."
+  ],
+  "pitfalls": [
+    "Saying \"causes\" for an observational study, even a large random one.",
+    "Generalizing to a bigger group than the one the sample came from.",
+    "Thinking volunteers rule out every conclusion: random assignment still supports cause and effect for the volunteers themselves.",
+    "Thinking a bigger sample fixes a design that has no random selection or no random assignment."
+  ],
+  "calculator": null,
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: who do the results describe?",
+      "steps": [
+        "Find the population the sample was randomly selected from.",
+        "The results apply to that population, not to a bigger or different group.",
+        "Rule out choices that are too wide (the whole country) or too narrow (only the people surveyed).",
+        "Check that the choice does not include people who had no chance to be selected."
+      ],
+      "worked_example": {
+        "stem": "A public library selected 300 of its members at random and asked whether they would use a new evening study room. Of those surveyed, \\(70\\%\\) said they would. What is the largest group to which the results of the survey can appropriately be generalized?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "Only the 300 members who were surveyed",
+          "B": "All members of the public library",
+          "C": "All people who live in the library's city",
+          "D": "All members of every public library in the country"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "The 300 members were selected at random from the library's members, so the population is all members of the library.",
+          "Results from a random sample generalize to the population it was drawn from.",
+          "Choice B is correct. Choice C is too wide: people who are not members of the library had no chance to be selected. Choice A is too narrow, because random selection is exactly what lets the results describe all members."
+        ],
+        "verify": "random_selection, population = True, 'All members of the public library'\nassert random_selection\nassert answer == 'B' and choices[answer] == population"
+      },
+      "tryit": [
+        "m-stc-0001",
+        "m-stc-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: association or cause and effect?",
+      "steps": [
+        "Check how the groups were formed: did the researchers assign the treatment at random, or did people choose or simply report?",
+        "Without random assignment, use words like \"is associated with\", never \"causes\".",
+        "Use random selection to decide which population the association describes.",
+        "Reject choices that claim cause, or that shrink or stretch the population."
+      ],
+      "worked_example": {
+        "stem": "Researchers selected 1,000 adults at random from a large city and asked each one how many minutes they walk on a typical day and how many hours they sleep on a typical night. Adults who walked at least 30 minutes a day slept longer, on average, than adults who walked less. Which of the following is the most appropriate conclusion?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "Walking at least 30 minutes a day causes adults in the city to sleep longer.",
+          "B": "Among adults in the city, walking at least 30 minutes a day is associated with sleeping longer.",
+          "C": "Walking at least 30 minutes a day causes all adults everywhere to sleep longer.",
+          "D": "No conclusion can be drawn about adults in the city, because the adults were not assigned to walk."
+        },
+        "answer": "B",
+        "walkthrough": [
+          "The adults were selected at random from the city, so the results describe adults in the city.",
+          "The researchers did not assign how much anyone walked; they only asked. So the study shows an association, not cause and effect.",
+          "Choice B is correct. Choice A is the strongest trap: adults who walk more may differ in other ways (age, work, health) that also affect sleep. Choice D goes too far the other way: random selection still lets you describe an association in the city's population."
+        ],
+        "verify": "random_selection, random_assignment = True, False\nassert random_selection and not random_assignment\nassert answer == 'B' and 'associated with' in choices[answer] and 'in the city' in choices[answer]"
+      },
+      "tryit": [
+        "m-stc-0003",
+        "m-stc-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: reading a study design",
+      "steps": [
+        "For each study, note two things: random selection from the population? Random assignment of treatments?",
+        "Random assignment only: cause and effect for the participants in the study.",
+        "Random selection only: an association that generalizes to the population.",
+        "Both: cause and effect that generalizes to the population. Neither: only an association among the participants."
+      ],
+      "worked_example": {
+        "stem": "Six studies tested whether a new study app improves vocabulary test scores among the students at a large university. The table shows whether each study selected its participants at random from all students at the university and whether it assigned the app to participants at random. For how many of the six studies can a cause-and-effect conclusion be generalized to all students at the university?",
+        "figure": {
+          "kind": "table",
+          "title": "Design of the six studies",
+          "columns": [
+            "Study",
+            "Participants selected at random",
+            "App assigned at random"
+          ],
+          "rows": [
+            [
+              "I",
+              "Yes",
+              "No"
+            ],
+            [
+              "II",
+              "No",
+              "Yes"
+            ],
+            [
+              "III",
+              "Yes",
+              "Yes"
+            ],
+            [
+              "IV",
+              "No",
+              "No"
+            ],
+            [
+              "V",
+              "Yes",
+              "Yes"
+            ],
+            [
+              "VI",
+              "No",
+              "Yes"
+            ]
+          ]
+        },
+        "answer_type": "spr",
+        "spr_answers": [
+          "2"
+        ],
+        "walkthrough": [
+          "To generalize a cause-and-effect conclusion to all students, a study needs both random selection and random assignment.",
+          "Check each row: only studies III and V have Yes in both columns.",
+          "Enter 2.",
+          "Trap: counting every study with random assignment (II, III, V and VI) gives 4, but studies II and VI support cause and effect only for their own participants."
+        ],
+        "verify": "rows = figure['rows']\nboth = [r[0] for r in rows if r[1] == 'Yes' and r[2] == 'Yes']\nassert both == ['III', 'V']\nassert [Rational(s) for s in spr_answers] == [len(both)]"
+      },
+      "tryit": [
+        "m-stc-0005",
+        "m-stc-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: the scope of a cause-and-effect conclusion",
+      "steps": [
+        "Name the population the participants were randomly selected from; it may be a subgroup (one year group, one city, app users).",
+        "Check that the treatments were randomly assigned within the sample.",
+        "The cause-and-effect conclusion applies to that subgroup: not to everyone, and not only to the participants.",
+        "Reject choices that change the population or that claim more (or less) than the design allows."
+      ],
+      "worked_example": {
+        "stem": "A university has 12,000 students, and 3,000 of them are first-year students. Researchers selected 120 first-year students at random. They randomly assigned 60 of these students to attend a weekly study-skills workshop and the other 60 to not attend. At the end of the term, the students who attended the workshop had a higher average grade. Which of the following conclusions is best supported by the study?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "Attending the workshop causes higher grades for all students at the university.",
+          "B": "Attending the workshop likely causes higher grades for first-year students at the university.",
+          "C": "Attending the workshop likely caused higher grades only for the 60 students who attended it.",
+          "D": "No cause-and-effect conclusion can be drawn, because only first-year students were selected."
+        },
+        "answer": "B",
+        "walkthrough": [
+          "Random selection was from the 3,000 first-year students, so the population is the first-year students at the university.",
+          "The workshop was assigned at random, so a cause-and-effect conclusion is possible.",
+          "Together: attending the workshop likely causes higher grades for first-year students at this university. Choice B is correct.",
+          "Choice A is the strongest trap: students in other years had no chance to be selected, so the result cannot be stretched to all 12,000 students. Choice C is too narrow, because random selection lets the result reach all first-year students."
+        ],
+        "verify": "population, random_selection, random_assignment = 3000, True, True\nassert random_selection and random_assignment and population < 12000\nassert answer == 'B' and 'first-year students at the university' in choices[answer]"
+      },
+      "tryit": [
+        "m-stc-0007",
+        "m-stc-0008"
+      ]
+    }
+  ]
+}

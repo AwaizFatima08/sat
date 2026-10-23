@@ -1,0 +1,45 @@
+{
+  "id": "m-smp-0512",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A study of office workers in a city used a random sample to estimate the mean amount a worker spends on lunch on a workday. Based on the sample, the plausible values for the mean amount spent by all office workers in the city are from \\$7.40 to \\$9.20. What is the sample mean amount, in dollars?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8.3"
+  ],
+  "solution": [
+    "The plausible values are the sample mean minus and plus the margin of error, so the sample mean is the midpoint.",
+    "\\(\\frac{7.40 + 9.20}{2} = 8.30\\), so the sample mean is \\$8.30."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "mid = (Rational('7.40') + Rational('9.20')) / 2\nassert mid == Rational('8.3')\nassert [Rational(a) for a in spr_answers] == [mid]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "8.3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

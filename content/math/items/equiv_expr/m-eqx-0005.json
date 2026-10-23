@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0005",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "Which of the following is equivalent to \\(\\frac{2}{x - 3} - \\frac{1}{x + 2}\\) for \\(x \\neq 3\\) and \\(x \\neq -2\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{x + 1}{x^{2} - x - 6}\\)",
+    "B": "\\(\\frac{1}{x^{2} - x - 6}\\)",
+    "C": "\\(\\frac{x + 7}{x^{2} - 6}\\)",
+    "D": "\\(\\frac{x + 7}{x^{2} - x - 6}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Use the common denominator \\((x - 3)(x + 2) = x^{2} - x - 6\\).",
+    "Rewrite each fraction: \\(\\frac{2(x + 2)}{(x - 3)(x + 2)} - \\frac{x - 3}{(x - 3)(x + 2)}\\).",
+    "Subtract the numerators, keeping the parentheses: \\(2x + 4 - (x - 3) = 2x + 4 - x + 3 = x + 7\\).",
+    "The result is \\(\\frac{x + 7}{x^{2} - x - 6}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of subtracting only \\(x\\) from \\(2x + 4\\) and then also subtracting \\(3\\): \\(2x + 4 - x - 3\\). The \\(-3\\) inside \\(x - 3\\) becomes \\(+3\\) when subtracted.",
+    "B": "Incorrect. This is the result of subtracting the original numerators, \\(2 - 1\\), over the common denominator without first multiplying each numerator by the missing factor.",
+    "C": "Incorrect. This is the result of multiplying \\((x - 3)(x + 2)\\) incorrectly; the product is \\(x^{2} - x - 6\\), not \\(x^{2} - 6\\).",
+    "D": "Correct. Over the common denominator, the numerator is \\(2(x + 2) - (x - 3) = x + 7\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "C": "arithmetic"
+  },
+  "verify": "x = symbols('x')\ntarget = 2/(x - 3) - 1/(x + 2)\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

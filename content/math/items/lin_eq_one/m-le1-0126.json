@@ -1,0 +1,79 @@
+{
+  "id": "m-le1-0126",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The table shows the rates at two parking garages. Each garage charges an entry fee plus an hourly rate. For what number of hours of parking will the total charge be the same at both garages?",
+  "figure": {
+    "kind": "table",
+    "title": "Parking rates",
+    "columns": [
+      "Garage",
+      "Entry fee (dollars)",
+      "Hourly rate (dollars)"
+    ],
+    "rows": [
+      [
+        "P",
+        "6.00",
+        "2.50"
+      ],
+      [
+        "Q",
+        "1.50",
+        "3.75"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1.8\\)",
+    "B": "\\(6\\)",
+    "C": "\\(3.6\\)",
+    "D": "\\(0.72\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "For \\(h\\) hours, Garage P charges \\(6 + 2.5h\\) dollars and Garage Q charges \\(1.5 + 3.75h\\) dollars.",
+    "Set them equal: \\(6 + 2.5h = 1.5 + 3.75h\\), so \\(4.5 = 1.25h\\).",
+    "Then \\(h = 3.6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dividing the difference in entry fees by Garage P's hourly rate only: \\(\\frac{4.5}{2.5} = 1.8\\).",
+    "B": "Incorrect. This is the result of adding the entry fees instead of subtracting them: \\(\\frac{7.5}{1.25} = 6\\).",
+    "C": "Correct. \\(4.5 = 1.25h\\) gives \\(h = 3.6\\). Both garages then charge \\$15.",
+    "D": "Incorrect. This is the result of adding the hourly rates instead of subtracting them: \\(\\frac{4.5}{6.25} = 0.72\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nh = symbols('h')\nr = figure['rows']\nf1, r1, f2, r2 = [Rational(v) for v in (r[0][1], r[0][2], r[1][1], r[1][2])]\ns = solve(Eq(f1 + r1*h, f2 + r2*h), h)[0]\nassert s == Rational(18, 5)\nassert f1 + r1*s == 15\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

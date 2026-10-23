@@ -1,0 +1,58 @@
+{
+  "id": "m-ovd-0007",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A data set of daily high temperatures, in degrees Celsius, has a mean of \\(20\\) and a standard deviation of \\(5\\). Each temperature \\(C\\) is converted to degrees Fahrenheit using \\(F = 1.8C + 32\\). What are the mean and the standard deviation of the converted temperatures, in degrees Fahrenheit?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Mean \\(68\\), standard deviation \\(9\\)",
+    "B": "Mean \\(68\\), standard deviation \\(5\\)",
+    "C": "Mean \\(68\\), standard deviation \\(41\\)",
+    "D": "Mean \\(36\\), standard deviation \\(9\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Multiplying every value by 1.8 multiplies both the mean and the standard deviation by 1.8.",
+    "Adding 32 to every value adds 32 to the mean but does not change the standard deviation, because the values do not become more or less spread out.",
+    "Mean: \\(1.8 \\cdot 20 + 32 = 68\\). Standard deviation: \\(1.8 \\cdot 5 = 9\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The mean is converted like any temperature, \\(1.8 \\cdot 20 + 32 = 68\\); the standard deviation is only scaled, \\(1.8 \\cdot 5 = 9\\).",
+    "B": "Incorrect. Multiplying every value by 1.8 spreads the values out by a factor of 1.8, so the standard deviation changes to \\(1.8 \\cdot 5 = 9\\).",
+    "C": "Incorrect. This is the result of converting the standard deviation with the full formula, \\(1.8 \\cdot 5 + 32 = 41\\). Adding 32 to every value shifts the data but does not change its spread.",
+    "D": "Incorrect. This is the result of forgetting to add 32 to the mean: \\(1.8 \\cdot 20 = 36\\). Every converted value, and so the mean, is 32 degrees higher."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_formula",
+    "D": "stopped_early"
+  },
+  "verify": "data = [Integer(15), Integer(25)]  # any data set with mean 20 and SD 5\nsd = lambda d: sqrt(sum((x - Rational(sum(d), len(d)))**2 for x in d) / len(d))\nassert Rational(sum(data), 2) == 20 and sd(data) == 5\nF = [Rational(9, 5) * c + 32 for c in data]\nm, s = Rational(sum(F), 2), sd(F)\nassert (m, s) == (68, 9)\nassert choices[answer] == f\"Mean \\\\({m}\\\\), standard deviation \\\\({s}\\\\)\"",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (1.8*20+32=68, SD 1.8*5=9; solver's D halves the mean)",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

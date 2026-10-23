@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0501",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following is the solution to the inequality \\(5x + 4 \\le 29\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x \\ge 5\\)",
+    "B": "\\(x \\le \\frac{33}{5}\\)",
+    "C": "\\(x \\le 25\\)",
+    "D": "\\(x \\le 5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Subtract 4 from both sides: \\(5x \\le 25\\).",
+    "Divide both sides by 5. Dividing by a positive number keeps the sign: \\(x \\le 5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This reverses the inequality sign, but both sides were divided by a positive number, so the sign stays the same.",
+    "B": "Incorrect. This is the result of adding 4 to 29 instead of subtracting it, which gives \\(5x \\le 33\\).",
+    "C": "Incorrect. This is the bound on \\(5x\\), not on \\(x\\); the last step, dividing by 5, was skipped.",
+    "D": "Correct. Subtracting 4 gives \\(5x \\le 25\\), and dividing by 5 gives \\(x \\le 5\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "C": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nR = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nx = symbols('x')\nS = solve_univariate_inequality(5*x + 4 <= 29, x, relational=False)\nassert S == Interval(-oo, 5)\nok = [k for k in choices if R(choices[k]).as_set() == S]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

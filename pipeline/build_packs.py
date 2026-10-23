@@ -22,6 +22,32 @@ def load_dir(d):
     return [json.loads(p.read_text()) for p in sorted(d.glob("*.json"))] if d.exists() else []
 
 
+def build_math(ok, version):
+    m = ROOT / "content" / "math"
+    if not (m / "blueprint.json").exists():
+        return None
+    bp = json.loads((m / "blueprint.json").read_text())
+    items = []
+    for p in sorted((m / "items").glob("*/*.json")):
+        it = json.loads(p.read_text())
+        if it["provenance"]["status"] in ok:
+            items.append({k: v for k, v in it.items() if k not in (DROP - {"section"}) | {"verify"} and v is not None})
+    ids = {i["id"] for i in items}
+    forms = [f for f in load_dir(m / "forms")
+             if all(i in ids for mod in f["modules"].values() for i in mod)]
+    blueprint = {k: bp[k] for k in ["section", "title", "module_minutes", "module_items", "domains", "type_order",
+                                     "levels", "traps"]}
+    blueprint["types"] = bp["types"]
+    blueprint["module_blueprint"] = bp["module_blueprint"]
+    bank = {"version": version, "blueprint": blueprint, "items": items, "forms": forms,
+            "lessons": load_dir(m / "lessons"),
+            "reference": {p.stem: json.loads(p.read_text()) for p in sorted((m / "reference").glob("*.json"))}}
+    (OUT / "math_bank.json").write_text(json.dumps(bank, ensure_ascii=False, separators=(",", ":")))
+    print(f"math_bank.json: {len(items)} items, {len(forms)} forms, {len(bank['lessons'])} lessons, "
+          f"{(OUT / 'math_bank.json').stat().st_size / 1024:.0f} KB")
+    return {"items": len(items), "forms": len(forms), "lessons": len(bank["lessons"])}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--include-draft", action="store_true")
@@ -57,9 +83,10 @@ def main():
     bank = {"version": release["version"], "blueprint": blueprint, "items": items, "forms": forms,
             "lessons": lessons, "reference": reference}
     (OUT / "rw_bank.json").write_text(json.dumps(bank, ensure_ascii=False, separators=(",", ":")))
+    math = build_math(ok, release["version"])
     manifest = {"schema": 1, "version": release["version"], "built": date.today().isoformat(),
                 "items": len(items), "forms": len(forms), "lessons": len(lessons),
-                "reference": sorted(reference)}
+                "reference": sorted(reference), "math": math}
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=1))
     size = (OUT / "rw_bank.json").stat().st_size
     print(f"rw_bank.json: {len(items)} items, {len(forms)} forms, {len(lessons)} lessons, "

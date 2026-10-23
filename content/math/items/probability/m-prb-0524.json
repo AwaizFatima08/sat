@@ -1,0 +1,75 @@
+{
+  "id": "m-prb-0524",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The incomplete table shows the sophomores and juniors at a high school and whether they are in the robotics club. If a sophomore is selected at random, the probability that the student is in the robotics club is \\(\\frac{1}{6}\\). If a member of the robotics club is selected at random, what is the probability that the student is a junior?",
+  "figure": {
+    "kind": "table",
+    "title": "Robotics club membership",
+    "columns": [
+      "Grade",
+      "In robotics club",
+      "Not in robotics club",
+      "Total"
+    ],
+    "rows": [
+      [
+        "Sophomore",
+        "",
+        "",
+        "180"
+      ],
+      [
+        "Junior",
+        "",
+        "",
+        "150"
+      ],
+      [
+        "Total",
+        "48",
+        "",
+        "330"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3/8"
+  ],
+  "solution": [
+    "Sophomores in the club: \\(\\frac{1}{6}(180) = 30\\).",
+    "Juniors in the club: \\(48 - 30 = 18\\).",
+    "The probability is \\(\\frac{18}{48} = \\frac{3}{8}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r = figure['rows']\nsoph = Rational(1, 6) * int(r[0][3])\njun = int(r[2][1]) - soph\nassert soph == 30 and jun == 18\nassert [Rational(a) for a in spr_answers] == [jun / int(r[2][1])]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "3/8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

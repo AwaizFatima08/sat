@@ -1,0 +1,45 @@
+{
+  "id": "m-cir-0512",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, the points \\((-1, 4)\\) and \\((7, -2)\\) are the endpoints of a diameter of a circle. What is the radius of the circle?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "5"
+  ],
+  "solution": [
+    "The diameter is the distance between the endpoints: \\(\\sqrt{(7 - (-1))^{2} + (-2 - 4)^{2}} = \\sqrt{64 + 36} = 10\\).",
+    "The radius is half the diameter: \\(\\frac{10}{2} = 5\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "dd=sqrt((7-(-1))**2+(-2-4)**2)\nassert dd==10\nans=dd/2\nassert Rational(spr_answers[0])==ans==5\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

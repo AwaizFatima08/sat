@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0505",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A circular rug has an area of \\(81\\pi\\) square feet. What is the radius of the rug, in feet?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{81}{2}\\)",
+    "B": "\\(81\\)",
+    "C": "\\(9\\)",
+    "D": "\\(18\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Set the area formula equal to the area: \\(\\pi r^{2} = 81\\pi\\), so \\(r^{2} = 81\\).",
+    "\\(r = \\sqrt{81} = 9\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This comes from \\(2\\pi r = 81\\pi\\), the circumference formula, instead of \\(\\pi r^{2}\\).",
+    "B": "Incorrect. This is \\(r^{2}\\); the radius is its square root.",
+    "C": "Correct. \\(r^{2} = 81\\), so \\(r = 9\\).",
+    "D": "Incorrect. This is the diameter, \\(2r\\), not the radius."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "stopped_early",
+    "D": "radius_diameter"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nr=symbols('r',positive=True)\ns=solve(Eq(pi*r**2,81*pi),r)\nassert s==[9]\nans=s[0]\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

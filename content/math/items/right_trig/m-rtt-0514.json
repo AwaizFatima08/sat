@@ -1,0 +1,58 @@
+{
+  "id": "m-rtt-0514",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A square courtyard has a straight walkway along one of its diagonals. The walkway is 12 meters long. What is the side length, in meters, of the courtyard?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(72\\)",
+    "B": "\\(6\\sqrt{2}\\)",
+    "C": "\\(6\\)",
+    "D": "\\(12\\sqrt{2}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The diagonal splits the square into two 45°-45°-90° triangles with legs \\(s\\) and hypotenuse 12.",
+    "\\(s^{2} + s^{2} = 144\\), so \\(s^{2} = 72\\) and \\(s = \\sqrt{72} = 6\\sqrt{2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(s^{2}\\), from \\(2s^{2} = 144\\); the square root still must be taken.",
+    "B": "Correct. The diagonal of a square is \\(\\sqrt{2}\\) times a side, so \\(s = \\frac{12}{\\sqrt{2}} = 6\\sqrt{2}\\).",
+    "C": "Incorrect. This takes half of the diagonal; a side of a square is not half its diagonal.",
+    "D": "Incorrect. This multiplies the diagonal by \\(\\sqrt{2}\\) instead of dividing by it."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\ns=symbols('s',positive=True)\nans=solve(Eq(2*s**2,144),s)[0]\nassert simplify(ans-6*sqrt(2))==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

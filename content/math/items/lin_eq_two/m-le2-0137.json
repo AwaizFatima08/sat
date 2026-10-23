@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0137",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A bike shop rents road bikes for \\$30 per day and mountain bikes for \\$40 per day. The graph of \\(30x + 40y = 1{,}200\\) in the \\(xy\\)-plane shows the combinations of \\(x\\) road bike rentals and \\(y\\) mountain bike rentals that earn the shop exactly \\$1,200 in one day. Suppose the price of a mountain bike rental increases to \\$50 per day, and the graph of \\(30x + 50y = 1{,}200\\) is drawn. How does the new graph compare with the original graph?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The new graph has the same \\(x\\)-intercept as the original graph, and its \\(y\\)-intercept is 6 less.",
+    "B": "The new graph has the same \\(x\\)-intercept as the original graph, and its \\(y\\)-intercept is 10 less.",
+    "C": "The new graph has the same \\(y\\)-intercept as the original graph, and its \\(x\\)-intercept is 6 less.",
+    "D": "The new graph is parallel to the original graph, and its \\(y\\)-intercept is 6 less."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Original intercepts: \\(x = \\frac{1{,}200}{30} = 40\\) and \\(y = \\frac{1{,}200}{40} = 30\\).",
+    "New intercepts: \\(x = \\frac{1{,}200}{30} = 40\\) and \\(y = \\frac{1{,}200}{50} = 24\\).",
+    "The \\(x\\)-intercept is unchanged and the \\(y\\)-intercept is \\(30 - 24 = 6\\) less."
+  ],
+  "explanation": {
+    "A": "Correct. The \\(x\\)-intercept stays at 40, and the \\(y\\)-intercept falls from 30 to 24.",
+    "B": "Incorrect. 10 is the change in price, in dollars; the \\(y\\)-intercept changes from 30 to 24 rentals.",
+    "C": "Incorrect. The mountain bike price affects the \\(y\\)-intercept, not the \\(x\\)-intercept; the road bike price and the \\(x\\)-intercept do not change.",
+    "D": "Incorrect. The slope changes from \\(-\\frac{3}{4}\\) to \\(-\\frac{3}{5}\\), so the graphs are not parallel."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nxi = lambda p, q: Rational(1200, p)\nyi = lambda p, q: Rational(1200, q)\nassert xi(30, 40) == xi(30, 50) == 40 and yi(30, 40) - yi(30, 50) == 6\nassert Rational(-30, 40) != Rational(-30, 50)\nkey = 'same \\\\(x\\\\)-intercept as the original graph, and its \\\\(y\\\\)-intercept is 6 less'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0135",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, a line with a slope of 2 passes through the points \\((2, k)\\) and \\((k, 8)\\), where \\(k\\) is a constant. What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{10}{3}\\)",
+    "B": "\\(4\\)",
+    "C": "\\(-4\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(\\frac{8 - k}{k - 2} = 2\\), so \\(8 - k = 2k - 4\\).",
+    "\\(12 = 3k\\), so \\(k = 4\\). Check: \\((2, 4)\\) and \\((4, 8)\\) give slope \\(\\frac{4}{2} = 2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This multiplies only \\(k\\) by 2, writing \\(8 - k = 2k - 2\\) instead of \\(2(k - 2) = 2k - 4\\).",
+    "B": "Correct. With \\(k = 4\\), the points \\((2, 4)\\) and \\((4, 8)\\) give a slope of 2.",
+    "C": "Incorrect. This subtracts the \\(y\\)-coordinates in the opposite order from the \\(x\\)-coordinates; with \\(k = -4\\) the slope is \\(-2\\).",
+    "D": "Incorrect. This divides the change in \\(x\\) by the change in \\(y\\); with \\(k = 6\\) the slope is \\(\\frac{1}{2}\\)."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "C": "sign_error",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nk = symbols('k')\nsol = solve(Eq(8 - k, 2*(k - 2)), k)\nassert sol == [4]\nsl = lambda v: (8 - v)/(v - 2)\nassert sl(value(choices[answer])) == 2\nassert all(sl(value(choices[c])) != 2 for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

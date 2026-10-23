@@ -1,0 +1,90 @@
+{
+  "id": "m-sys-0529",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The graph of line \\(k\\) is shown in the \\(xy\\)-plane. The labeled points lie on the line. The system of equations formed by line \\(k\\) and the line \\(y = 2x + b\\), where \\(b\\) is a constant, has a solution with \\(x = 4\\). What is the value of \\(b\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      8
+    ],
+    "y": [
+      -2,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "-x + 6",
+        "label": "k"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 6,
+        "label": "(0, 6)"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "label": "(6, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(-4\\)",
+    "C": "\\(6\\)",
+    "D": "\\(-6\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Line \\(k\\) passes through \\((0, 6)\\) and \\((6, 0)\\), so its equation is \\(y = -x + 6\\).",
+    "At \\(x = 4\\), line \\(k\\) gives \\(y = 2\\), so the solution is \\((4, 2)\\).",
+    "This point is also on \\(y = 2x + b\\): \\(2 = 2(4) + b\\), so \\(b = -6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. 2 is the \\(y\\)-coordinate of the solution, not the value of \\(b\\).",
+    "B": "Incorrect. This reads the point on line \\(k\\) at \\(x = 4\\) as \\((4, 4)\\); the line is at \\(y = 2\\) there.",
+    "C": "Incorrect. This comes from a sign error in the last step: \\(b = 2 - 8 = -6\\), not \\(8 - 2\\).",
+    "D": "Correct. Line \\(k\\) is \\(y = -x + 6\\), so the solution is \\((4, 2)\\), and \\(2 = 8 + b\\) gives \\(b = -6\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "misread_graph",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx, b = symbols('x b')\nP = [(q['x'], q['y']) for q in figure['points']]\nk = (P[1][1] - P[0][1])*(x - P[0][0])/(P[1][0] - P[0][0]) + P[0][1]\nassert simplify(sympify(figure['curves'][0]['expr']) - k) == 0\nsol = solve(Eq(k.subs(x, 4), 2*4 + b), b)\nassert sol == [-6]\nassert value(choices[answer]) == sol[0]\nassert all(value(choices[k]) != sol[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

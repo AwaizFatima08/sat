@@ -1,0 +1,45 @@
+{
+  "id": "m-cir-0004",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "A circle in the \\(xy\\)-plane has its center at \\((2, -1)\\) and passes through the point \\((7, 11)\\). An equation of the circle is \\((x - 2)^{2} + (y + 1)^{2} = k\\), where \\(k\\) is a constant. What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "169"
+  ],
+  "solution": [
+    "\\(k\\) is the square of the radius, the squared distance from the center to any point on the circle.",
+    "Substitute \\((7, 11)\\): \\(k = (7 - 2)^{2} + (11 + 1)^{2} = 25 + 144 = 169\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x,y=7,11\nk=(x-2)**2+(y+1)**2\nassert k==169\nassert Rational(spr_answers[0])==k\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "169",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

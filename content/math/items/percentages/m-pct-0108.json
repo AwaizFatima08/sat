@@ -1,0 +1,45 @@
+{
+  "id": "m-pct-0108",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A gym charges \\$45 per month for a membership. A member who pays for 12 months in advance receives a \\(12\\%\\) discount on the total cost of the 12 months. How much, in dollars, does a member pay for 12 months in advance?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "475.2"
+  ],
+  "solution": [
+    "Cost of 12 months without the discount: \\(45 \\cdot 12 = 540\\) dollars.",
+    "With the discount: \\(0.88 \\cdot 540 = 475.2\\) dollars."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "ans = 45 * 12 * (1 - Rational(12, 100))\nassert ans == Rational('475.2')\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "475.2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

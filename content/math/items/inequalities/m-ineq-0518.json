@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0518",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A gym offers two monthly memberships. Option A costs \\$40 per month plus \\$3 per visit. Option B costs \\$70 per month with unlimited visits. Which inequality describes all numbers of visits, \\(v\\), in a month for which Option A costs less than Option B?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(v < 10\\)",
+    "B": "\\(v < \\frac{110}{3}\\)",
+    "C": "\\(v < \\frac{70}{3}\\)",
+    "D": "\\(v > 10\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Option A costs \\(40 + 3v\\) dollars, and it must be less than 70: \\(40 + 3v < 70\\).",
+    "Subtract 40: \\(3v < 30\\). Divide by 3: \\(v < 10\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(40 + 3v < 70\\) gives \\(v < 10\\).",
+    "B": "Incorrect. This adds 40 to 70 instead of subtracting it, which gives \\(3v < 110\\).",
+    "C": "Incorrect. This ignores the \\$40 monthly charge of Option D and solves \\(3v < 70\\).",
+    "D": "Incorrect. This reverses the inequality; for more than 10 visits, Option D costs more than Option C."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nR = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nv = symbols('v')\nS = solve_univariate_inequality(40 + 3*v < 70, v, relational=False)\nassert S == Interval.open(-oo, 10)\nok = [k for k in choices if R(choices[k]).as_set() == S]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "m-tvd-0515",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The table shows four pairs of values of \\(x\\) and \\(y\\). Which equation represents the linear relationship between \\(x\\) and \\(y\\)?",
+  "figure": {
+    "kind": "table",
+    "columns": [
+      "x",
+      "y"
+    ],
+    "rows": [
+      [
+        "2",
+        "11"
+      ],
+      [
+        "4",
+        "17"
+      ],
+      [
+        "6",
+        "23"
+      ],
+      [
+        "8",
+        "29"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = 6x - 1\\)",
+    "B": "\\(y = 3x + 11\\)",
+    "C": "\\(y = 3x + 5\\)",
+    "D": "\\(y = 2x + 7\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "When \\(x\\) increases by 2, \\(y\\) increases by 6, so the slope is \\(\\frac{6}{2} = 3\\).",
+    "Using \\((2, 11)\\): \\(11 = 3(2) + b\\), so \\(b = 5\\).",
+    "The equation is \\(y = 3x + 5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the change in \\(y\\), 6, as the slope without dividing by the change in \\(x\\), 2. It fits \\((2, 11)\\) but gives 23 for \\(x = 4\\), not 17.",
+    "B": "Incorrect. This uses the first \\(y\\)-value in the table, 11, as the \\(y\\)-intercept. But 11 is the value when \\(x = 2\\), not when \\(x = 0\\).",
+    "C": "Correct. The slope is 3 and the line passes through \\((2, 11)\\), so \\(b = 11 - 6 = 5\\). It fits every row.",
+    "D": "Incorrect. This uses the step in \\(x\\), 2, as the slope. It fits \\((2, 11)\\) but gives 15 for \\(x = 4\\), not 17."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "misread_graph",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nrows = [(Integer(a), Integer(b)) for a, b in figure['rows']]\nfits = lambda k: all(value(choices[k].split('=')[1].strip(' \\\\)')).subs(x, a) == b for a, b in rows)\nassert fits(answer)\nassert not any(fits(k) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0172",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(x^{2} + (k - 2)x + k + 1 = 0\\), \\(k\\) is a constant. The equation has exactly one real solution, and that solution is negative. What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "Exactly one real solution means the discriminant is 0: \\((k - 2)^{2} - 4(k + 1) = 0\\).",
+    "Expand: \\(k^{2} - 4k + 4 - 4k - 4 = k^{2} - 8k = 0\\), so \\(k = 0\\) or \\(k = 8\\).",
+    "If \\(k = 0\\), the equation is \\(x^{2} - 2x + 1 = 0\\), with the solution \\(x = 1\\), which is positive. If \\(k = 8\\), it is \\(x^{2} + 6x + 9 = 0\\), with the solution \\(x = -3\\). So \\(k = 8\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, k = symbols('x k')\nks = solve(discriminant(x**2 + (k - 2)*x + k + 1, x), k)\nassert sorted(ks) == [0, 8]\ngood = [kv for kv in ks if solve(x**2 + (kv - 2)*x + kv + 1, x)[0] < 0]\nassert good == [8]\nassert [Rational(a) for a in spr_answers] == good",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

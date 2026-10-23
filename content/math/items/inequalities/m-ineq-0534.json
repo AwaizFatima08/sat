@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0534",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(3 \\le a \\le 7\\) and \\(-4 \\le b \\le 2\\), what is the greatest possible value of \\(a - b\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(11\\)",
+    "C": "\\(7\\)",
+    "D": "\\(9\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "To make \\(a - b\\) as great as possible, make \\(a\\) as great as possible and \\(b\\) as small as possible.",
+    "The greatest \\(a\\) is 7 and the least \\(b\\) is \\(-4\\).",
+    "So the greatest value of \\(a - b\\) is \\(7 - (-4) = 11\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the greatest value of \\(b\\), 2, but subtracting a greater number makes the difference smaller: \\(7 - 2 = 5\\).",
+    "B": "Correct. The greatest value of \\(a\\) minus the least value of \\(b\\) gives \\(7 - (-4) = 11\\).",
+    "C": "Incorrect. This uses the least value of \\(a\\), 3: \\(3 - (-4) = 7\\).",
+    "D": "Incorrect. This computes \\(7 + 2\\), adding the greatest value of \\(b\\) instead of subtracting the least value."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\ncorners = [(p, q) for p in (3, 7) for q in (-4, 2)]\nbest = max(p - q for p, q in corners)\nassert best == 11 and value(choices[answer]) == best\nassert all(value(choices[k]) != best for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

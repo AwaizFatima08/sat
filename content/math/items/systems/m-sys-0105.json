@@ -1,0 +1,83 @@
+{
+  "id": "m-sys-0105",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graphs of \\(y = -2x + 1\\) and \\(y = x - 5\\) are shown in the \\(xy\\)-plane. What is the solution \\((x, y)\\) to the system formed by these two equations?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -4,
+      6
+    ],
+    "y": [
+      -8,
+      6
+    ],
+    "curves": [
+      {
+        "expr": "-2*x + 1",
+        "label": "y = -2x + 1"
+      },
+      {
+        "expr": "x - 5",
+        "label": "y = x - 5"
+      }
+    ],
+    "points": [],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((0, 1)\\)",
+    "B": "\\((5, 0)\\)",
+    "C": "\\((2, -3)\\)",
+    "D": "\\((-3, 2)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "A solution of the system is a point on both lines, so it is the point where the lines intersect.",
+    "The lines cross at \\(x = 2\\), \\(y = -3\\).",
+    "Check: \\(-2(2) + 1 = -3\\) and \\(2 - 5 = -3\\). The solution is \\((2, -3)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is where the line \\(y = -2x + 1\\) crosses the \\(y\\)-axis; it is not on the other line.",
+    "B": "Incorrect. This is where the line \\(y = x - 5\\) crosses the \\(x\\)-axis; it is not on the other line.",
+    "C": "Correct. The lines intersect at \\((2, -3)\\), which satisfies both equations.",
+    "D": "Incorrect. This reverses the coordinates of the intersection point \\((2, -3)\\)."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "misread_graph",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\npt = lambda s: [value(t) for t in s.strip('\\\\()').split(',')]\n\nx = symbols('x')\nf, g = [sympify(c['expr']) for c in figure['curves']]\nxs = solve(Eq(f, g), x)\nsol = [xs[0], f.subs(x, xs[0])]\nassert sol == [2, -3]\nassert pt(choices[answer]) == sol\nassert all(pt(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

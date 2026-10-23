@@ -1,0 +1,59 @@
+{
+  "id": "m-arv-0523",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A cylindrical water tank has an inside diameter of 1.4 meters and an inside height of 2 meters. One cubic meter is equal to 1,000 liters. Which of the following is closest to the capacity of the tank, in liters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12{,}315\\)",
+    "B": "\\(4{,}398\\)",
+    "C": "\\(3{,}079\\)",
+    "D": "\\(980\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The radius is \\(1.4 \\div 2 = 0.7\\) meters.",
+    "\\(V = \\pi (0.7)^{2}(2) = 0.98\\pi \\approx 3.079\\) cubic meters.",
+    "\\(3.079 \\cdot 1{,}000 \\approx 3{,}079\\) liters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the diameter, 1.4, as the radius: \\(\\pi (1.4)^{2}(2)(1{,}000) \\approx 12{,}315\\).",
+    "B": "Incorrect. This is \\(\\pi (0.7)(2)(1{,}000)\\); the radius must be squared.",
+    "C": "Correct. \\(\\pi (0.7)^{2}(2) \\approx 3.079\\) cubic meters, which is about 3,079 liters.",
+    "D": "Incorrect. This is \\((0.7)^{2}(2)(1{,}000)\\); it leaves out the factor \\(\\pi\\)."
+  },
+  "traps": {
+    "A": "radius_diameter",
+    "B": "wrong_formula",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nr=Rational('1.4')/2\nans=N(pi*r**2*2*1000)\nassert abs(value(choices[answer])-ans)<1\nassert all(abs(value(choices[k])-ans)>500 for k in choices if k!=answer)\nassert abs(value(choices['D'])-N(pi*Rational('1.4')**2*2000))<1\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

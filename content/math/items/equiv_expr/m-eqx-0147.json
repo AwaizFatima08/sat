@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0147",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A courier drives \\(d\\) kilometers from a depot to a customer at an average speed of \\(x\\) kilometers per hour and returns along the same route at an average speed of \\(y\\) kilometers per hour. The average speed for the whole trip is the total distance divided by the total time, \\(\\frac{2d}{\\frac{d}{x} + \\frac{d}{y}}\\). Which of the following is equivalent to this expression?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{xy}{x + y}\\)",
+    "B": "\\(\\frac{2xy}{x + y}\\)",
+    "C": "\\(\\frac{x + y}{2xy}\\)",
+    "D": "\\(\\frac{x + y}{2}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Total time: \\(\\frac{d}{x} + \\frac{d}{y} = \\frac{dy + dx}{xy} = \\frac{d(x + y)}{xy}\\).",
+    "Divide: \\(2d \\div \\frac{d(x + y)}{xy} = \\frac{2d \\cdot xy}{d(x + y)}\\).",
+    "Cancel \\(d\\): \\(\\frac{2xy}{x + y}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dropping the factor 2 from the total distance \\(2d\\).",
+    "B": "Correct. \\(\\frac{2d \\cdot xy}{d(x + y)} = \\frac{2xy}{x + y}\\).",
+    "C": "Incorrect. This is the reciprocal of the correct expression: total time divided by total distance.",
+    "D": "Incorrect. This is the mean of the two speeds; the trip spends more time at the slower speed, so the average speed is not this mean."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "C": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nd, x, y = symbols('d x y', positive=True)\nD, X, Y = symbols('d x y')\nv = lambda k: value(choices[k]).subs([(D, d), (X, x), (Y, y)])\nt = 2*d/(d/x + d/y)\nassert simplify(v(answer) - t) == 0\nassert all(simplify(v(k) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

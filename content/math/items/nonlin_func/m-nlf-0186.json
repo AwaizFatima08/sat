@@ -1,0 +1,80 @@
+{
+  "id": "m-nlf-0186",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The table shows the number of electric cars registered in a city \\(t\\) years after 2010 for three values of \\(t\\). The number of electric cars increased by the same percent every 5 years. Which of the following functions best models the number of electric cars \\(E(t)\\) registered in the city \\(t\\) years after 2010?",
+  "figure": {
+    "kind": "table",
+    "title": "Electric cars registered",
+    "columns": [
+      "t (years after 2010)",
+      "E(t)"
+    ],
+    "rows": [
+      [
+        "0",
+        "1,600"
+      ],
+      [
+        "5",
+        "2,400"
+      ],
+      [
+        "10",
+        "3,600"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(E(t) = 1{,}600(1.5)^{t}\\)",
+    "B": "\\(E(t) = 1{,}600(1.5)^{\\frac{t}{5}}\\)",
+    "C": "\\(E(t) = 1{,}600(1.5)^{5t}\\)",
+    "D": "\\(E(t) = 1{,}600(1.1)^{t}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "From \\(t = 0\\) to \\(t = 5\\): \\(\\frac{2{,}400}{1{,}600} = 1.5\\). From \\(t = 5\\) to \\(t = 10\\): \\(\\frac{3{,}600}{2{,}400} = 1.5\\).",
+    "So the number is multiplied by 1.5 every 5 years, starting from 1,600.",
+    "In \\(t\\) years there are \\(\\frac{t}{5}\\) five-year periods: \\(E(t) = 1{,}600(1.5)^{\\frac{t}{5}}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This applies the 5-year growth factor every year. It gives \\(E(5) \\approx 12{,}150\\), not 2,400.",
+    "B": "Correct. The number is multiplied by \\(\\frac{2{,}400}{1{,}600} = 1.5\\) every 5 years, which is \\(\\frac{t}{5}\\) times in \\(t\\) years.",
+    "C": "Incorrect. This multiplies by 1.5 five times each year. The factor 1.5 applies once every 5 years, so the exponent is \\(\\frac{t}{5}\\).",
+    "D": "Incorrect. This splits the \\(50\\%\\) increase into five equal yearly increases of \\(10\\%\\). Then \\(E(5) = 1{,}600(1.1)^{5} \\approx 2{,}577\\), not 2,400."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "reciprocal",
+    "D": "percent_add"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nt = symbols('t')\nrows = [(int(r[0]), int(r[1].replace(',', ''))) for r in figure['rows']]\ndef g(k):\n    return value(choices[k].split('=')[1])\ndef fits(e):\n    return all(e.subs(t, a) == b for a, b in rows)\nassert fits(g(answer))\nassert all(not fits(g(k)) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

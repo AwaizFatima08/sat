@@ -1,0 +1,92 @@
+{
+  "id": "m-pct-0529",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The line graph shows the monthly electricity use, in kilowatt-hours, of a small office from January to May. Over which of the following periods did the office's electricity use decrease by the greatest percent?",
+  "figure": {
+    "kind": "line",
+    "title": "Monthly electricity use of an office",
+    "x_label": "Month",
+    "y_label": "Electricity use (kilowatt-hours)",
+    "series": [
+      {
+        "name": "Electricity use",
+        "points": [
+          [
+            "Jan",
+            320
+          ],
+          [
+            "Feb",
+            240
+          ],
+          [
+            "Mar",
+            400
+          ],
+          [
+            "Apr",
+            310
+          ],
+          [
+            "May",
+            300
+          ]
+        ]
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "February to March",
+    "B": "January to February",
+    "C": "March to April",
+    "D": "April to May"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "January to February: from 320 to 240, a decrease of \\(\\frac{80}{320} = 25\\%\\).",
+    "February to March: from 240 to 400, an increase.",
+    "March to April: from 400 to 310, a decrease of \\(\\frac{90}{400} = 22.5\\%\\). April to May: from 310 to 300, a decrease of \\(\\frac{10}{310} \\approx 3.2\\%\\).",
+    "The greatest percent decrease is from January to February."
+  ],
+  "explanation": {
+    "A": "Incorrect. Use rose from 240 to 400 kilowatt-hours over this period. This is the greatest percent change, but it is an increase, not a decrease.",
+    "B": "Correct. Use fell by 80 kilowatt-hours from 320, a decrease of \\(25\\%\\), the greatest percent decrease.",
+    "C": "Incorrect. This period has the greatest decrease in kilowatt-hours, 90, but compared with 400 it is only \\(22.5\\%\\).",
+    "D": "Incorrect. Use fell only from 310 to 300 kilowatt-hours, a decrease of about \\(3.2\\%\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nv = [p[1] for p in figure['series'][0]['points']]\nch = [Rational(v[i + 1] - v[i], v[i]) for i in range(4)]\nnames = ['January to February', 'February to March', 'March to April', 'April to May']\ni = ch.index(min(ch))\nassert i == 0 and ch[0] == Rational(-1, 4)\nassert choices[answer] == names[i]\nd = [v[i + 1] - v[i] for i in range(4)]\nassert d.index(min(d)) != i",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

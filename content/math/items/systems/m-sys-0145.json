@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0145",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Working together at their constant rates, pump A and pump B can empty a tank in 6 hours. The same tank, when full, can also be emptied if pump A works alone for 4 hours and then pump B works alone for 9 hours. How many hours would it take pump A, working alone, to empty the full tank?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10\\)",
+    "B": "\\(6\\)",
+    "C": "\\(12\\)",
+    "D": "\\(15\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(a\\) and \\(b\\) be the fractions of the tank that pumps A and B empty per hour: \\(6a + 6b = 1\\) and \\(4a + 9b = 1\\).",
+    "From the first equation, \\(a = \\frac{1}{6} - b\\). Substitute: \\(\\frac{2}{3} - 4b + 9b = 1\\), so \\(b = \\frac{1}{15}\\).",
+    "Then \\(a = \\frac{1}{6} - \\frac{1}{15} = \\frac{1}{10}\\), so pump A alone takes 10 hours."
+  ],
+  "explanation": {
+    "A": "Correct. Pump A empties \\(\\frac{1}{10}\\) of the tank per hour and pump B \\(\\frac{1}{15}\\); check: \\(\\frac{4}{10} + \\frac{9}{15} = 1\\).",
+    "B": "Incorrect. This is the time for both pumps working together, not for pump A alone.",
+    "C": "Incorrect. This assumes the two pumps work at the same rate, so each alone would take twice as long as both together.",
+    "D": "Incorrect. This is the time for pump B alone, not pump A."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\na, b = symbols('a b')\nsol = solve([6*a + 6*b - 1, 4*a + 9*b - 1], [a, b])\nassert sol == {a: Rational(1, 10), b: Rational(1, 15)}\nh = 1/sol[a]\nassert value(choices[answer]) == h == 10\nassert all(value(choices[k]) != h for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

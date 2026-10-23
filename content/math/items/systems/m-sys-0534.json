@@ -1,0 +1,60 @@
+{
+  "id": "m-sys-0534",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "\\[ax + 2y = 6\\] \\[3x + (a + 1)y = 9\\] In the system of equations above, \\(a\\) is a constant. For what value or values of \\(a\\) does the system have no solution?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\) only",
+    "B": "\\(-3\\) only",
+    "C": "\\(-3\\) and \\(2\\)",
+    "D": "\\(-2\\) and \\(3\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The lines can only fail to meet if they are parallel, which requires \\(\\frac{a}{3} = \\frac{2}{a + 1}\\), or \\(a(a + 1) = 6\\).",
+    "So \\(a^{2} + a - 6 = 0\\), which factors as \\((a + 3)(a - 2) = 0\\): \\(a = -3\\) or \\(a = 2\\).",
+    "If \\(a = 2\\): \\(2x + 2y = 6\\) and \\(3x + 3y = 9\\) both reduce to \\(x + y = 3\\), the same line, so there are infinitely many solutions.",
+    "If \\(a = -3\\): \\(-3x + 2y = 6\\) and \\(3x - 2y = 9\\), or \\(-3x + 2y = -9\\); the lines are parallel and distinct. Only \\(a = -3\\) gives no solution."
+  ],
+  "explanation": {
+    "A": "Incorrect. When \\(a = 2\\), both equations reduce to \\(x + y = 3\\), so the system has infinitely many solutions, not none.",
+    "B": "Correct. Equal slopes require \\(a = -3\\) or \\(a = 2\\); only \\(a = -3\\) gives parallel, distinct lines.",
+    "C": "Incorrect. Both values make the slopes equal, but for \\(a = 2\\) the equations describe the same line; the constants must also be checked.",
+    "D": "Incorrect. This comes from a sign error in factoring: \\(a^{2} + a - 6 = (a + 3)(a - 2)\\), not \\((a - 3)(a + 2)\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\na, x, y = symbols('a x y')\ncand = solve(a*(a + 1) - 6, a)\nassert sorted(cand) == [-3, 2]\nnone = [v for v in cand if solve([v*x + 2*y - 6, 3*x + (v + 1)*y - 9], [x, y]) == []]\nassert none == [-3]\nassert '-3' in choices[answer] and '2' not in choices[answer] and 'only' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

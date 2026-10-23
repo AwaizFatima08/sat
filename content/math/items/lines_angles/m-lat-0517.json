@@ -1,0 +1,130 @@
+{
+  "id": "m-lat-0517",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A straight ramp rises from the ground at point \\(S\\). A vertical support post that is 0.15 meter tall stands 2 meters (measured along the ground) from \\(S\\) and touches the ramp. The ramp ends directly above a point on the ground 8 meters from \\(S\\). How high, in meters, is the end of the ramp above the ground? Note: Figure not drawn to scale.",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "S": [
+        0,
+        0
+      ],
+      "P": [
+        2,
+        0
+      ],
+      "Q": [
+        2,
+        1.5
+      ],
+      "G": [
+        8,
+        0
+      ],
+      "R": [
+        8,
+        6.0
+      ]
+    },
+    "segments": [
+      [
+        "S",
+        "G"
+      ],
+      [
+        "S",
+        "R"
+      ],
+      [
+        "P",
+        "Q"
+      ],
+      [
+        "G",
+        "R"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          3.2,
+          0.75
+        ],
+        "text": "0.15 m"
+      },
+      {
+        "at": [
+          1.0,
+          -0.6
+        ],
+        "text": "2 m"
+      },
+      {
+        "at": [
+          4,
+          -1.4
+        ],
+        "text": "8 m"
+      }
+    ],
+    "right_angles": [
+      "P",
+      "G"
+    ],
+    "not_to_scale": true
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.45\\)",
+    "B": "\\(0.2\\)",
+    "C": "\\(0.6\\)",
+    "D": "\\(0.0375\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The post, the ramp, and the ground form a small right triangle that is similar to the large right triangle formed by the whole ramp (they share the angle at \\(S\\)).",
+    "\\(\\frac{h}{8} = \\frac{0.15}{2}\\).",
+    "\\(h = 8 \\cdot 0.075 = 0.6\\) meter."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(0.15 \\cdot \\frac{6}{2}\\), how much higher the end is than the top of the post, not its height above the ground.",
+    "B": "Incorrect. This is \\(0.15 \\cdot \\frac{8}{6}\\); it compares the 8-meter run with the 6 meters between the post and the end instead of with the 2 meters from \\(S\\) to the post.",
+    "C": "Correct. \\(\\frac{h}{8} = \\frac{0.15}{2}\\), so \\(h = 0.6\\).",
+    "D": "Incorrect. This is \\(0.15 \\cdot \\frac{2}{8}\\); the scale factor is inverted, which makes the end of the ramp lower than the post."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "misread_graph",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nassert figure['not_to_scale']\nans=Rational(15,100)*8/2\nassert ans==Rational(3,5)\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

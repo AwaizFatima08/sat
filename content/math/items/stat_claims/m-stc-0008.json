@@ -1,0 +1,46 @@
+{
+  "id": "m-stc-0008",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A fitness club has 6,000 members, and 2,400 of them use the club's mobile app. A researcher selected 200 members at random from the app users and randomly assigned half of them to receive daily workout reminders through the app; the other half received no reminders. Over the next month, the members who received reminders visited the club more often, on average. What is the greatest number of club members to whom the conclusion that the reminders caused more visits can appropriately be applied?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "2400"
+  ],
+  "solution": [
+    "Random assignment supports a cause-and-effect conclusion.",
+    "The 200 participants were a random sample of the app users only, so the conclusion can be generalized to the population they were drawn from.",
+    "That population is the 2,400 app users, not all 6,000 members."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "members, app_users, sample = 6000, 2400, 200\ndesign = {'random_assignment': True, 'sampled_from': app_users}\nassert design['random_assignment'] and sample < design['sampled_from'] < members\nassert [Rational(a) for a in spr_answers] == [design['sampled_from']]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "2400",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

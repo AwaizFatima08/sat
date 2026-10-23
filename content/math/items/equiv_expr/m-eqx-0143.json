@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0143",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A bakery in Colombo makes \\(n\\) cakes each day. Its daily revenue, in rupees, is \\(n(900 - 5n)\\), and its daily cost, in rupees, is \\((n + 20)(300 - n)\\). Which expression represents the bakery's daily profit (revenue minus cost), in rupees?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-4n^{2} + 620n + 6{,}000\\)",
+    "B": "\\(-4n^{2} + 620n - 6{,}000\\)",
+    "C": "\\(-6n^{2} + 620n - 6{,}000\\)",
+    "D": "\\(-4n^{2} + 580n - 6{,}000\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Revenue: \\(n(900 - 5n) = -5n^{2} + 900n\\).",
+    "Cost: \\((n + 20)(300 - n) = 300n - n^{2} + 6{,}000 - 20n = -n^{2} + 280n + 6{,}000\\).",
+    "Profit: \\((-5n^{2} + 900n) - (-n^{2} + 280n + 6{,}000) = -4n^{2} + 620n - 6{,}000\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding the cost's constant term 6,000 instead of subtracting it.",
+    "B": "Correct. Revenue minus cost is \\(-4n^{2} + 620n - 6{,}000\\).",
+    "C": "Incorrect. This is the result of subtracting \\(n^{2}\\) instead of \\(-n^{2}\\); subtracting \\(-n^{2}\\) adds \\(n^{2}\\).",
+    "D": "Incorrect. This is the result of combining \\(300n\\) and \\(-20n\\) in the cost as \\(320n\\) instead of \\(280n\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nn = symbols('n')\nt = n*(900 - 5*n) - (n + 20)*(300 - n)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

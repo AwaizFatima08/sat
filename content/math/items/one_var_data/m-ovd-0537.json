@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0537",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A data set of 20 values has a mean of 15. The values are split into two groups of 10 values each, and the first group has a mean of 12. If 3 is added to each value in the second group, what is the mean of all 20 values?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(18\\)",
+    "B": "\\(21\\)",
+    "C": "\\(15\\)",
+    "D": "\\(16.5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Adding 3 to each of the 10 values in the second group increases the total by \\(10 \\cdot 3 = 30\\).",
+    "The original total is \\(20 \\cdot 15 = 300\\), so the new total is 330.",
+    "The new mean is \\(\\frac{330}{20} = 16.5\\). (The first group's mean is not needed.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds 3 to the mean of all 20 values, as if 3 were added to every value. Only half of the values increase, so the mean increases by 1.5.",
+    "B": "Incorrect. This is the new mean of the second group alone: its old mean is \\(\\frac{300 - 120}{10} = 18\\), and \\(18 + 3 = 21\\). The question asks for the mean of all 20 values.",
+    "C": "Incorrect. The total increases by 30 when 3 is added to 10 of the values, so the mean cannot stay the same.",
+    "D": "Correct. The total rises from 300 to 330, and \\(\\frac{330}{20} = 16.5\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\ng2 = Rational(20 * 15 - 10 * 12, 10)\nassert g2 == 18\nr = Rational(10 * 12 + 10 * (g2 + 3), 20)\nassert r == Rational(33, 2)\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

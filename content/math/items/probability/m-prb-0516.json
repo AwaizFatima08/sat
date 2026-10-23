@@ -1,0 +1,75 @@
+{
+  "id": "m-prb-0516",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The incomplete table summarizes the 250 visitors to a science museum one morning and whether each visitor rented an audio guide. If a visitor who rented an audio guide is selected at random, what is the probability that the visitor is a child?",
+  "figure": {
+    "kind": "table",
+    "title": "Museum visitors and audio guides",
+    "columns": [
+      "Visitor",
+      "Audio guide",
+      "No audio guide",
+      "Total"
+    ],
+    "rows": [
+      [
+        "Adult",
+        "54",
+        "",
+        "140"
+      ],
+      [
+        "Child",
+        "",
+        "",
+        "110"
+      ],
+      [
+        "Total",
+        "90",
+        "",
+        "250"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "2/5"
+  ],
+  "solution": [
+    "Children who rented an audio guide: \\(90 - 54 = 36\\).",
+    "The condition is “rented an audio guide,” so the denominator is 90.",
+    "The probability is \\(\\frac{36}{90} = \\frac{2}{5}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r = figure['rows']\nchild_guide = int(r[2][1]) - int(r[0][1])\nassert int(r[0][3]) + int(r[1][3]) == int(r[2][3])\np = Rational(child_guide, int(r[2][1]))\nassert [Rational(a) for a in spr_answers] == [p] == [Rational(2, 5)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "2/5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

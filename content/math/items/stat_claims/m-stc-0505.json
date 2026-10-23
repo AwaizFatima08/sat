@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0505",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A student wants to estimate the average number of hours of sleep per night for all students at her school. She asks the 30 students in her own mathematics class. Which change would best improve her method?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Ask the same 30 students again one week later and average the two answers.",
+    "B": "Post a question on the school website and use the first 30 answers.",
+    "C": "Select 30 students at random from a list of all students at the school.",
+    "D": "Ask 30 students who are studying in the school library instead."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Students in one class are a convenience sample; they may share a grade level or schedule that affects their sleep.",
+    "A random sample from a list of all students gives every student the same chance of being chosen, so it is likely to represent the school."
+  ],
+  "explanation": {
+    "A": "Incorrect. Asking the same students twice does not make them more representative of the school.",
+    "B": "Incorrect. Students who choose to answer form a voluntary response sample, which may be biased.",
+    "C": "Correct. A random sample of all students is the best way to represent the whole school.",
+    "D": "Incorrect. Students in the library are another convenience sample and may differ from the school as a whole."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nmethods = {'A': 'repeat', 'B': 'convenience', 'C': 'voluntary', 'D': 'random'}\nok = [k for k, v in methods.items() if v == 'random']\nassert ok == [answer]\nassert 'at random' in choices[answer] and 'all students' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

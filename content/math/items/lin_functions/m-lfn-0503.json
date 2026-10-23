@@ -1,0 +1,89 @@
+{
+  "id": "m-lfn-0503",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The graph of the linear function \\(g\\) is shown in the \\(xy\\)-plane. What is the \\(y\\)-intercept of the graph of \\(y = g(x)\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -3,
+      5
+    ],
+    "y": [
+      -3,
+      7
+    ],
+    "curves": [
+      {
+        "expr": "-2*x + 4",
+        "label": "y = g(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 4,
+        "label": "(0, 4)"
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "label": "(2, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((2, 0)\\)",
+    "B": "\\((4, 0)\\)",
+    "C": "\\((0, 4)\\)",
+    "D": "\\((0, -2)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The \\(y\\)-intercept is the point where the graph crosses the \\(y\\)-axis, where \\(x = 0\\).",
+    "The graph crosses the \\(y\\)-axis at \\((0, 4)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\((2, 0)\\) is where the graph crosses the \\(x\\)-axis, the \\(x\\)-intercept.",
+    "B": "Incorrect. This switches the coordinates of the \\(y\\)-intercept \\((0, 4)\\); the point \\((4, 0)\\) is not on the graph.",
+    "C": "Correct. The graph crosses the \\(y\\)-axis at \\((0, 4)\\).",
+    "D": "Incorrect. \\(-2\\) is the slope of the graph, not where it crosses the \\(y\\)-axis."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "misread_graph",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\ng = sympify(figure['curves'][0]['expr'])\nassert g.subs(x, 0) == 4 and solve(g, x) == [2]\nassert choices[answer] == '\\\\((0, 4)\\\\)'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

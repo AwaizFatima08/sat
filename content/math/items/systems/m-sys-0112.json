@@ -1,0 +1,44 @@
+{
+  "id": "m-sys-0112",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A lab technician mixes a 20% salt solution with a 50% salt solution to make 30 liters of a 40% salt solution. How many liters of the 20% solution does the technician use?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "10"
+  ],
+  "solution": [
+    "Let \\(p\\) and \\(q\\) be the liters of the 20% and 50% solutions: \\(p + q = 30\\).",
+    "The salt adds up: \\(0.20p + 0.50q = 0.40(30) = 12\\).",
+    "Substitute \\(q = 30 - p\\): \\(0.20p + 15 - 0.50p = 12\\), so \\(0.30p = 3\\) and \\(p = 10\\)."
+  ],
+  "verify": "p, q = symbols('p q')\nsol = solve([p + q - 30, Rational(20, 100)*p + Rational(50, 100)*q - Rational(40, 100)*30], [p, q])\nassert sol == {p: 10, q: 20}\nassert [Rational(a) for a in spr_answers] == [sol[p]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "10",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

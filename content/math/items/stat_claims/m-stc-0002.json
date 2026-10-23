@@ -1,0 +1,57 @@
+{
+  "id": "m-stc-0002",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A teacher asked her students for volunteers and got 60. She randomly assigned 30 of the volunteers to study a list of new vocabulary words with flashcards and the other 30 to study the same words by rereading the list. After two weeks, the flashcard group had a higher average score on a vocabulary test. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Using flashcards causes higher vocabulary scores for all students in the country.",
+    "B": "Using flashcards likely caused the higher vocabulary scores for the students in the study.",
+    "C": "No cause-and-effect conclusion can be drawn, because the students were volunteers.",
+    "D": "Students who are better at vocabulary are more likely to choose flashcards."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The students were randomly ASSIGNED to the two study methods, so a cause-and-effect conclusion is possible.",
+    "The students were volunteers, not a random sample of a larger group, so the conclusion applies to the students in the study."
+  ],
+  "explanation": {
+    "A": "Incorrect. The volunteers were not randomly selected from all students in the country, so the result cannot be generalized that far.",
+    "B": "Correct. Random assignment supports a cause-and-effect conclusion for the students who took part.",
+    "C": "Incorrect. Volunteers limit how far the results can be GENERALIZED; random assignment still allows a cause-and-effect conclusion for them.",
+    "D": "Incorrect. The students did not choose their method; the teacher assigned it at random."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "design = {'random_sample': False, 'random_assignment': True}\nassert design['random_assignment'] and not design['random_sample']\nkey = choices[answer]\nassert answer == 'B' and 'caused' in key and 'in the study' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

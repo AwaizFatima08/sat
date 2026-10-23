@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0525",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The value \\(V\\), in dollars, of a delivery van \\(t\\) years after it was bought is modeled by the equation \\(V = 24{,}000(0.85)^{t}\\). Which of the following best describes the meaning of 0.85 in this model?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The value of the van decreases by \\(15\\%\\) each year.",
+    "B": "The value of the van decreases by \\(85\\%\\) each year.",
+    "C": "The value of the van decreases by \\$0.85 each year.",
+    "D": "After 1 year, the value of the van is \\(15\\%\\) of its value when it was bought."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Each year the value is multiplied by 0.85, so it keeps \\(85\\%\\) of the previous year's value.",
+    "Keeping \\(85\\%\\) means losing \\(100\\% - 85\\% = 15\\%\\) each year."
+  ],
+  "explanation": {
+    "A": "Correct. Multiplying by 0.85 each year keeps \\(85\\%\\) of the value, which is a \\(15\\%\\) decrease each year.",
+    "B": "Incorrect. The factor 0.85 is the part of the value that remains each year, not the part that is lost. The van keeps \\(85\\%\\) and loses \\(15\\%\\).",
+    "C": "Incorrect. A decrease of the same amount each year would be a linear model. In this exponential model the value is multiplied by 0.85 each year.",
+    "D": "Incorrect. After 1 year, the value is \\(85\\%\\) of its original value, not \\(15\\%\\). The \\(15\\%\\) is the amount lost."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_formula",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nr = 1 - Rational(85, 100)\nassert r == Rational(15, 100)\nkey = r'decreases by \\(15\\%\\) each year'\nassert key in choices[answer]\nassert sum(key in s for s in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

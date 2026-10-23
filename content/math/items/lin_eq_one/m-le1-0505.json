@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0505",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(2x + 5 = 17\\), what is the value of \\(2x + 15\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6\\)",
+    "B": "\\(12\\)",
+    "C": "\\(27\\)",
+    "D": "\\(21\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "\\(2x + 15\\) is 10 more than \\(2x + 5\\).",
+    "So \\(2x + 15 = 17 + 10 = 27\\).",
+    "Or: \\(2x = 12\\), so \\(2x + 15 = 12 + 15 = 27\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(x\\), not the value of \\(2x + 15\\).",
+    "B": "Incorrect. This is the value of \\(2x\\); 15 still has to be added.",
+    "C": "Correct. \\(2x + 15 = (2x + 5) + 10 = 17 + 10 = 27\\).",
+    "D": "Incorrect. This is the result of adding 15 to \\(x = 6\\) instead of to \\(2x = 12\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nxs = solve(Eq(2*x + 5, 17), x)[0]\ns = 2*xs + 15\nassert s == 27\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

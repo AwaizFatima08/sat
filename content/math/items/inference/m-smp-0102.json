@@ -1,0 +1,84 @@
+{
+  "id": "m-smp-0102",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "An internet provider in Kathmandu, Nepal, has 18,000 customers. The table summarizes the number of service outages reported last month by each of 250 customers selected at random. Based on the table, which of the following is the best estimate of the number of the provider's customers who reported at least 2 outages last month?",
+  "figure": {
+    "kind": "table",
+    "title": "Outages reported by sampled customers",
+    "columns": [
+      "Number of outages",
+      "Number of customers"
+    ],
+    "rows": [
+      [
+        "0",
+        "110"
+      ],
+      [
+        "1",
+        "75"
+      ],
+      [
+        "2",
+        "40"
+      ],
+      [
+        "3 or more",
+        "25"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4{,}680\\)",
+    "B": "\\(10{,}080\\)",
+    "C": "\\(1{,}800\\)",
+    "D": "\\(2{,}880\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "In the sample, \\(40 + 25 = 65\\) of the 250 customers reported at least 2 outages.",
+    "The sample proportion is \\(\\frac{65}{250} = 0.26\\).",
+    "Estimate: \\(0.26(18{,}000) = 4{,}680\\) customers."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\frac{65}{250} = 0.26\\) of the sample reported at least 2 outages, and \\(0.26(18{,}000) = 4{,}680\\).",
+    "B": "Incorrect. This uses the customers who reported at least 1 outage, \\(\\frac{140}{250}(18{,}000)\\).",
+    "C": "Incorrect. This uses only the customers who reported 3 or more outages, \\(\\frac{25}{250}(18{,}000)\\).",
+    "D": "Incorrect. This uses only the customers who reported exactly 2 outages, \\(\\frac{40}{250}(18{,}000)\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nr = figure['rows']\nn = sum(int(c) for _, c in r)\nassert n == 250\nest = Rational(int(r[2][1]) + int(r[3][1]), n) * 18000\nassert est == 4680\nassert value(choices[answer]) == est\nassert all(value(choices[k]) != est for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0509",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A city council plans to survey residents about repairing an old public park. Which of the following survey questions is least likely to bias the residents' answers?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Most residents want the old park repaired. Do you want it repaired too?",
+    "B": "Do you support or oppose spending city funds to repair the old park?",
+    "C": "Don't you agree that our beautiful old park deserves to be repaired?",
+    "D": "Should the city waste money on repairing the old park?"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "A biased question pushes people toward one answer through loaded words or by telling them what others think.",
+    "Only the question that offers both sides (support or oppose) in neutral words avoids this."
+  ],
+  "explanation": {
+    "A": "Incorrect. Telling people what most residents want pressures them to agree.",
+    "B": "Correct. The question is neutral and offers both possible answers.",
+    "C": "Incorrect. \"Don't you agree\" and \"beautiful\" push people toward saying yes.",
+    "D": "Incorrect. The word \"waste\" pushes people toward saying no."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nloaded = ['agree', 'beautiful', 'waste', 'Most residents']\nok = [k for k, v in choices.items() if not any(w in v for w in loaded)]\nassert ok == [answer]\nassert 'support or oppose' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

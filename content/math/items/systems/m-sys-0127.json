@@ -1,0 +1,105 @@
+{
+  "id": "m-sys-0127",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The graph shows the total cost, in dollars, of ordering \\(x\\) posters from print shop A and from print shop B. The labeled points lie on the lines. For one number of posters, the two shops charge the same total cost. What is that cost, in dollars?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      0,
+      40
+    ],
+    "y": [
+      0,
+      120
+    ],
+    "curves": [
+      {
+        "expr": "40 + 1.5*x",
+        "label": "Shop A"
+      },
+      {
+        "expr": "10 + 2.75*x",
+        "label": "Shop B"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 40,
+        "label": "(0, 40)"
+      },
+      {
+        "x": 20,
+        "y": 70,
+        "label": "(20, 70)"
+      },
+      {
+        "x": 0,
+        "y": 10,
+        "label": "(0, 10)"
+      },
+      {
+        "x": 20,
+        "y": 65,
+        "label": "(20, 65)"
+      }
+    ],
+    "segments": [],
+    "x_label": "Number of posters",
+    "y_label": "Total cost (dollars)"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(70\\)",
+    "B": "\\(76\\)",
+    "C": "\\(24\\)",
+    "D": "\\(66\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Shop A: starts at 40 and rises \\(\\frac{70 - 40}{20} = 1.5\\) dollars per poster, so \\(C = 40 + 1.5x\\).",
+    "Shop B: starts at 10 and rises \\(\\frac{65 - 10}{20} = 2.75\\) dollars per poster, so \\(C = 10 + 2.75x\\).",
+    "Set them equal: \\(40 + 1.5x = 10 + 2.75x\\), so \\(1.25x = 30\\) and \\(x = 24\\).",
+    "The cost is \\(40 + 1.5(24) = 76\\) dollars."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is shop A's cost at the labeled point \\((20, 70)\\), where shop B's cost is only 65.",
+    "B": "Correct. The costs \\(40 + 1.5x\\) and \\(10 + 2.75x\\) are equal at \\(x = 24\\), when each is \\$76.",
+    "C": "Incorrect. This is the number of posters at which the costs are equal, not the cost.",
+    "D": "Incorrect. This is \\(2.75(24)\\), shop B's per-poster charges only; the \\$10 starting amount was left out."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "C": "wrong_quantity",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nP = [(q['x'], q['y']) for q in figure['points']]\nline = lambda a, b: (b[1] - a[1])*(x - a[0])/(b[0] - a[0]) + a[1]\nA, Bl = line(P[0], P[1]), line(P[2], P[3])\nassert [simplify(sympify(c['expr']) - l) for c, l in zip(figure['curves'], (A, Bl))] == [0, 0]\nxs = solve(Eq(A, Bl), x)\nassert xs == [24] and A.subs(x, 24) == 76\nassert value(choices[answer]) == 76\nassert all(value(choices[k]) != 76 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

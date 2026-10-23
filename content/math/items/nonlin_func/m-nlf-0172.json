@@ -1,0 +1,46 @@
+{
+  "id": "m-nlf-0172",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The main cable of a small suspension footbridge hangs between two towers. The height of the cable above the deck of the bridge, in meters, is modeled by \\(h(x) = 0.01x^{2} - 0.8x + 20\\), where \\(x\\) is the horizontal distance, in meters, from one of the towers. According to the model, what is the least height, in meters, of the cable above the deck?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4"
+  ],
+  "solution": [
+    "The parabola opens upward, so its vertex gives the least height.",
+    "The vertex is at \\(x = -\\frac{-0.8}{2(0.01)} = 40\\).",
+    "\\(h(40) = 0.01(1{,}600) - 0.8(40) + 20 = 16 - 32 + 20 = 4\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nh = Rational(1, 100)*x**2 - Rational(8, 10)*x + 20\nxv = solve(diff(h, x), x)[0]\nassert xv == 40 and h.subs(x, xv) == 4\nassert Rational(spr_answers[0]) == h.subs(x, xv)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

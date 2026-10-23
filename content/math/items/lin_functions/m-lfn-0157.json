@@ -1,0 +1,59 @@
+{
+  "id": "m-lfn-0157",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For the linear function \\(f\\), \\(f(p) = q\\) and \\(f(q) = p\\), where \\(p\\) and \\(q\\) are constants and \\(p \\ne q\\). Which of the following must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The slope of the graph of \\(y = f(x)\\) is \\(-1\\).",
+    "B": "The slope of the graph of \\(y = f(x)\\) is \\(1\\).",
+    "C": "\\(f(0) = 0\\)",
+    "D": "\\(f(p) + f(q) = 0\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The slope is \\(\\frac{f(q) - f(p)}{q - p} = \\frac{p - q}{q - p} = -1\\), which is defined because \\(p \\ne q\\).",
+    "So \\(f(x) = -x + b\\), and \\(f(p) = q\\) gives \\(b = p + q\\): \\(f(x) = -x + p + q\\).",
+    "Then \\(f(0) = p + q\\) and \\(f(p) + f(q) = p + q\\), which need not be 0."
+  ],
+  "explanation": {
+    "A": "Correct. The slope is \\(\\frac{f(q) - f(p)}{q - p} = \\frac{p - q}{q - p} = -1\\).",
+    "B": "Incorrect. The slope is \\(\\frac{p - q}{q - p}\\); the numerator and denominator are opposites, so the slope is \\(-1\\), not 1.",
+    "C": "Incorrect. \\(f(0) = p + q\\), which is 0 only when \\(q = -p\\). For example, \\(p = 1\\) and \\(q = 2\\) give \\(f(0) = 3\\).",
+    "D": "Incorrect. \\(f(p) + f(q) = q + p\\), which is not 0 unless \\(q = -p\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx, p, q = symbols('x p q')\nm = (p - q)/(q - p)\nassert simplify(m) == -1\nf = lambda u: -u + p + q\nassert f(p) == q and f(q) == p\nassert simplify(f(0)).subs({p: 1, q: 2}) == 3 and (f(p) + f(q)).subs({p: 1, q: 2}) == 3\nassert answer == 'D' and '-1' in choices['D'] and '-1' not in choices['A']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

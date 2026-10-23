@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0509",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A storage tank already contains 12 liters of water. A hose adds 3 liters of water per minute. The inequality \\(12 + 3m \\le 60\\) represents the numbers of minutes, \\(m\\), that water can be added without the tank overflowing. What is the best interpretation of 60 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The greatest number of liters of water the tank can hold",
+    "B": "The number of liters of water the hose adds each minute",
+    "C": "The greatest number of minutes that water can be added",
+    "D": "The number of liters of water in the tank before the hose is turned on"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The left side, \\(12 + 3m\\), is the amount of water in the tank, in liters, after \\(m\\) minutes.",
+    "The inequality says this amount must be at most 60 liters, so 60 is the most water the tank can hold."
+  ],
+  "explanation": {
+    "A": "Correct. The amount of water, \\(12 + 3m\\) liters, must stay at or below 60 liters, the capacity of the tank.",
+    "B": "Incorrect. The hose adds 3 liters per minute; that is the coefficient of \\(m\\).",
+    "C": "Incorrect. 60 is measured in liters, not minutes. Solving the inequality gives \\(m \\le 16\\), so water can be added for at most 16 minutes.",
+    "D": "Incorrect. The tank starts with 12 liters; that is the constant term on the left side."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nm = symbols('m')\nS = solve_univariate_inequality(12 + 3*m <= 60, m, relational=False)\nassert S.sup == 16\nassert 'tank can hold' in choices[answer]\nassert sum('can hold' in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

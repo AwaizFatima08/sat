@@ -1,0 +1,104 @@
+{
+  "id": "m-sys-0125",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "In an experiment, liquid A is heated and liquid B is cooled, each at a constant rate. The graph shows the temperature, in degrees Celsius, of each liquid \\(t\\) minutes after the experiment starts. The labeled points lie on the lines. What is the temperature, in degrees Celsius, at the moment when the two liquids have the same temperature?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      0,
+      10
+    ],
+    "y": [
+      0,
+      90
+    ],
+    "curves": [
+      {
+        "expr": "20 + 4*x",
+        "label": "Liquid A"
+      },
+      {
+        "expr": "80 - 6*x",
+        "label": "Liquid B"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 20,
+        "label": "(0, 20)"
+      },
+      {
+        "x": 5,
+        "y": 40,
+        "label": "(5, 40)"
+      },
+      {
+        "x": 0,
+        "y": 80,
+        "label": "(0, 80)"
+      },
+      {
+        "x": 5,
+        "y": 50,
+        "label": "(5, 50)"
+      }
+    ],
+    "segments": [],
+    "x_label": "Time (minutes)",
+    "y_label": "Temperature (°C)"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(44\\)",
+    "B": "\\(6\\)",
+    "C": "\\(26\\)",
+    "D": "\\(40\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Liquid A: starts at 20 and rises \\(\\frac{40 - 20}{5} = 4\\) degrees per minute, so \\(T = 20 + 4t\\).",
+    "Liquid B: starts at 80 and falls \\(\\frac{80 - 50}{5} = 6\\) degrees per minute, so \\(T = 80 - 6t\\).",
+    "Set them equal: \\(20 + 4t = 80 - 6t\\), so \\(10t = 60\\) and \\(t = 6\\). The temperature is \\(20 + 4(6) = 44\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The temperatures are \\(20 + 4t\\) and \\(80 - 6t\\); they are equal at \\(t = 6\\), when both are 44 degrees.",
+    "B": "Incorrect. This is the time, in minutes, when the temperatures are equal, not the temperature.",
+    "C": "Incorrect. This adds the 6 minutes to liquid A's starting temperature without multiplying by the rate of 4 degrees per minute.",
+    "D": "Incorrect. This is liquid A's temperature at the labeled point \\((5, 40)\\), when the liquids are not yet at the same temperature."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nP = [(q['x'], q['y']) for q in figure['points']]\nline = lambda a, b: (b[1] - a[1])*(x - a[0])/(b[0] - a[0]) + a[1]\nA, Bl = line(P[0], P[1]), line(P[2], P[3])\nassert [simplify(sympify(c['expr']) - l) for c, l in zip(figure['curves'], (A, Bl))] == [0, 0]\nts = solve(Eq(A, Bl), x)\nassert ts == [6] and A.subs(x, 6) == 44\nassert value(choices[answer]) == 44\nassert all(value(choices[k]) != 44 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

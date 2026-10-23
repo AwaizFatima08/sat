@@ -1,0 +1,46 @@
+{
+  "id": "m-prb-0512",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A sweet shop in Lahore packs a box of 36 sweets, each either gulab jamun or barfi. If one sweet is selected at random from the full box, the probability that it is barfi is \\(\\frac{4}{9}\\). If 4 barfi are removed from the box, what is the probability that a sweet selected at random from the remaining sweets is barfi?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3/8"
+  ],
+  "solution": [
+    "Barfi in the full box: \\(\\frac{4}{9}(36) = 16\\).",
+    "After 4 barfi are removed, there are \\(16 - 4 = 12\\) barfi among \\(36 - 4 = 32\\) sweets.",
+    "The probability is \\(\\frac{12}{32} = \\frac{3}{8}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "barfi = Rational(4, 9) * 36\nassert barfi == 16\np = (barfi - 4) / (36 - 4)\nassert [Rational(a) for a in spr_answers] == [p] == [Rational(3, 8)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "3/8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

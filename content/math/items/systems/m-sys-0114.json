@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0114",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rental shop charges a fixed fee plus a constant hourly rate to rent a kayak. Renting a kayak for 3 hours costs \\$47, and renting it for 7 hours costs \\$83. What is the fixed fee, in dollars?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(36\\)",
+    "B": "\\(20\\)",
+    "C": "\\(38\\)",
+    "D": "\\(9\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(f\\) be the fixed fee and \\(r\\) the hourly rate: \\(f + 3r = 47\\) and \\(f + 7r = 83\\).",
+    "Subtract the first equation from the second: \\(4r = 36\\), so \\(r = 9\\).",
+    "Then \\(f = 47 - 3(9) = 20\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the cost of the 4 extra hours, \\(4r\\); the work stopped before finding \\(r\\) and the fee.",
+    "B": "Correct. The rate is \\$9 per hour, so the fee is \\(47 - 27 = 20\\) dollars; check: \\(20 + 7(9) = 83\\).",
+    "C": "Incorrect. This subtracts the cost of only 1 hour from \\$47 instead of the cost of 3 hours.",
+    "D": "Incorrect. This is the hourly rate, not the fixed fee."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nf, r = symbols('f r')\nsol = solve([f + 3*r - 47, f + 7*r - 83], [f, r])\nassert sol == {f: 20, r: 9}\nassert value(choices[answer]) == 20\nassert all(value(choices[k]) != 20 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

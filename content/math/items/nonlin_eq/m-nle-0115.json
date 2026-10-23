@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0115",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Sana deposited 50,000 rupees in a savings account in Karachi that earns interest compounded annually at a rate of \\(r\\), written as a decimal. The balance, in rupees, after \\(t\\) years is \\(50{,}000(1 + r)^{t}\\). After 2 years, with no other deposits or withdrawals, the balance was 60,500 rupees. What is the value of \\(r\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.1\\)",
+    "B": "\\(1.1\\)",
+    "C": "\\(0.21\\)",
+    "D": "\\(0.105\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Set up the equation: \\(50{,}000(1 + r)^{2} = 60{,}500\\).",
+    "Divide by \\(50{,}000\\): \\((1 + r)^{2} = 1.21\\).",
+    "Take the positive square root: \\(1 + r = 1.1\\), so \\(r = 0.1\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(50{,}000(1.1)^{2} = 50{,}000(1.21) = 60{,}500\\).",
+    "B": "Incorrect. This is the value of \\(1 + r\\), not \\(r\\).",
+    "C": "Incorrect. This is the total growth over 2 years; the yearly rate is applied twice, so \\((1 + r)^{2} = 1.21\\).",
+    "D": "Incorrect. This is the result of splitting the total growth of \\(21\\%\\) equally between the 2 years instead of taking a square root."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "percent_add",
+    "D": "percent_add"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nr = symbols('r', positive=True)\nans = solve(Eq(50000*(1 + r)**2, 60500), r)[0]\nassert ans == Rational(1, 10)\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

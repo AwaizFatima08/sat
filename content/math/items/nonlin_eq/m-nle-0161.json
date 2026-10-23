@@ -1,0 +1,118 @@
+{
+  "id": "m-nle-0161",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rectangular tile has a perimeter of 46 centimeters, and its diagonal is 17 centimeters long, as shown. What is the area, in square centimeters, of the tile?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "P": [
+        0,
+        0
+      ],
+      "Q": [
+        15,
+        0
+      ],
+      "R": [
+        15,
+        8
+      ],
+      "S": [
+        0,
+        8
+      ]
+    },
+    "segments": [
+      [
+        "P",
+        "Q"
+      ],
+      [
+        "Q",
+        "R"
+      ],
+      [
+        "R",
+        "S"
+      ],
+      [
+        "S",
+        "P"
+      ],
+      [
+        "P",
+        "R"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          7,
+          4.8
+        ],
+        "text": "17"
+      }
+    ],
+    "right_angles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(240\\)",
+    "B": "\\(529\\)",
+    "C": "\\(120\\)",
+    "D": "\\(289\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let the side lengths be \\(l\\) and \\(w\\). The perimeter gives \\(l + w = 23\\), and the Pythagorean theorem gives \\(l^{2} + w^{2} = 17^{2} = 289\\).",
+    "Square the first equation: \\(l^{2} + 2lw + w^{2} = 529\\).",
+    "Subtract: \\(2lw = 529 - 289 = 240\\), so the area is \\(lw = 120\\) square centimeters. (The sides are 15 and 8 centimeters.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(2lw\\), found one step before dividing by 2.",
+    "B": "Incorrect. This is \\((l + w)^{2}\\), which equals \\(l^{2} + w^{2}\\) plus twice the area, not the area itself.",
+    "C": "Correct. A 15-centimeter by 8-centimeter tile has perimeter 46, diagonal \\(\\sqrt{225 + 64} = 17\\), and area 120.",
+    "D": "Incorrect. This is \\(l^{2} + w^{2}\\), the square of the diagonal, not the area."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nl, w = symbols('l w', positive=True)\ns = solve([Eq(2*(l + w), 46), Eq(l**2 + w**2, 289)], [l, w])\nareas = {p[0]*p[1] for p in s}\nassert areas == {120}\nassert value(choices[answer]) == 120\nassert all(value(choices[k]) != 120 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0119",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Two cyclists start at the same time from towns 66 kilometers apart and ride toward each other on the same road, each at a constant speed. They meet after 3 hours. One cyclist rides 4 kilometers per hour faster than the other. What is the speed, in kilometers per hour, of the faster cyclist?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9\\)",
+    "B": "\\(22\\)",
+    "C": "\\(13\\)",
+    "D": "\\(11\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(u\\) and \\(v\\) be the speeds, with \\(u\\) the faster: \\(3u + 3v = 66\\), so \\(u + v = 22\\), and \\(u - v = 4\\).",
+    "Add the equations: \\(2u = 26\\), so \\(u = 13\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the speed of the slower cyclist.",
+    "B": "Incorrect. This is the combined speed of both cyclists, \\(66 \\div 3\\); the work stopped before splitting it.",
+    "C": "Correct. The speeds add to 22 and differ by 4, so they are 13 and 9 kilometers per hour.",
+    "D": "Incorrect. This is the average of the two speeds, \\(22 \\div 2\\); it ignores the 4-kilometer-per-hour difference."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nu, v = symbols('u v')\nsol = solve([3*u + 3*v - 66, u - v - 4], [u, v])\nassert sol == {u: 13, v: 9}\nassert value(choices[answer]) == 13\nassert all(value(choices[k]) != 13 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

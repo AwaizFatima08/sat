@@ -1,0 +1,71 @@
+{
+  "id": "m-ovd-0103",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The dot plot shows a data set of 8 values. What is the mean of the data set?",
+  "figure": {
+    "kind": "dotplot",
+    "x_label": "Value",
+    "values": [
+      2,
+      4,
+      4,
+      5,
+      6,
+      6,
+      6,
+      7
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5.5\\)",
+    "B": "\\(6\\)",
+    "C": "\\(5\\)",
+    "D": "\\(8\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The sum of the 8 values is \\(2 + 4 + 4 + 5 + 6 + 6 + 6 + 7 = 40\\).",
+    "The mean is \\(\\frac{40}{8} = 5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the median, \\(\\frac{5 + 6}{2} = 5.5\\), not the mean.",
+    "B": "Incorrect. This is the mode, the value with the most dots, not the mean.",
+    "C": "Correct. The sum is 40 and there are 8 values, so the mean is \\(\\frac{40}{8} = 5\\).",
+    "D": "Incorrect. This divides the sum, 40, by the number of different values, 5, instead of by the number of data values, 8."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nv = figure['values']\nm = Rational(sum(v), len(v))\nassert m == 5\nassert value(choices[answer]) == m\nassert all(value(choices[k]) != m for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

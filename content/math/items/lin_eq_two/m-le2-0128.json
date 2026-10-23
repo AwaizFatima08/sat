@@ -1,0 +1,44 @@
+{
+  "id": "m-le2-0128",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(\\ell\\) passes through the point \\((-2, 5)\\) and is perpendicular to the graph of \\(3x - 2y = 7\\). Line \\(\\ell\\) crosses the \\(x\\)-axis at the point \\((a, 0)\\). What is the value of \\(a\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "11/2"
+  ],
+  "solution": [
+    "\\(3x - 2y = 7\\) has slope \\(\\frac{3}{2}\\), so line \\(\\ell\\) has slope \\(-\\frac{2}{3}\\).",
+    "Line \\(\\ell\\): \\(y - 5 = -\\frac{2}{3}(x + 2)\\).",
+    "Set \\(y = 0\\): \\(-5 = -\\frac{2}{3}(a + 2)\\), so \\(a + 2 = \\frac{15}{2}\\) and \\(a = \\frac{11}{2}\\)."
+  ],
+  "verify": "x, y = symbols('x y')\nm0 = diff(solve(Eq(3*x - 2*y, 7), y)[0], x)\nm = -1/m0\nline = m*(x + 2) + 5\na = solve(line, x)[0]\nassert a == Rational(11, 2)\nassert [Rational(s) for s in spr_answers] == [a]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "11/2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

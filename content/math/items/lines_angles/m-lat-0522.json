@@ -1,0 +1,134 @@
+{
+  "id": "m-lat-0522",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "To find the height of a building, Ana places a small mirror flat on level ground 18 meters from the base of the building. She stands 2.4 meters from the mirror, on the opposite side, at the point where she can see the top of the building in the mirror. Her eyes are 1.6 meters above the ground. The light makes equal angles with the ground on both sides of the mirror, and Ana and the building are both vertical. What is the height, in meters, of the building?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "F": [
+        0,
+        0
+      ],
+      "E": [
+        0,
+        1.6
+      ],
+      "M": [
+        2.4,
+        0
+      ],
+      "B": [
+        20.4,
+        0
+      ],
+      "T": [
+        20.4,
+        12
+      ]
+    },
+    "segments": [
+      [
+        "F",
+        "B"
+      ],
+      [
+        "F",
+        "E"
+      ],
+      [
+        "B",
+        "T"
+      ],
+      [
+        "E",
+        "M"
+      ],
+      [
+        "M",
+        "T"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          -1.4,
+          0.8
+        ],
+        "text": "1.6 m"
+      },
+      {
+        "at": [
+          1.2,
+          -0.8
+        ],
+        "text": "2.4 m"
+      },
+      {
+        "at": [
+          11.4,
+          -0.8
+        ],
+        "text": "18 m"
+      }
+    ],
+    "right_angles": [
+      "F",
+      "B"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12\\)",
+    "B": "\\(27\\)",
+    "C": "\\(13.6\\)",
+    "D": "\\(17.2\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The two right triangles (Ana–mirror and building–mirror) have equal angles at the mirror, so they are similar.",
+    "\\(\\frac{h}{18} = \\frac{1.6}{2.4}\\).",
+    "\\(h = 18 \\cdot \\frac{2}{3} = 12\\) meters."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\frac{h}{18} = \\frac{1.6}{2.4}\\), so \\(h = 12\\).",
+    "B": "Incorrect. This is \\(18 \\cdot \\frac{2.4}{1.6}\\); the ratio of height to ground distance is inverted.",
+    "C": "Incorrect. This is \\(1.6 \\cdot \\frac{20.4}{2.4}\\); it uses the distance from Ana to the building (20.4 meters) instead of the distance from the mirror to the building (18 meters).",
+    "D": "Incorrect. This is \\(1.6 + (18 - 2.4)\\); similar triangles require multiplying by a scale factor, not adding and subtracting lengths."
+  },
+  "traps": {
+    "B": "reciprocal",
+    "C": "misread_graph",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(ang('E','M','F')-ang('T','M','B'))<0.1\nans=18*Rational(16,10)/Rational(24,10)\nassert ans==12 and abs(P['B'][0]-P['M'][0]-18)<0.01 and abs(P['M'][0]-P['F'][0]-Rational(24,10))<0.01 and abs(P['T'][1]-ans)<0.01\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

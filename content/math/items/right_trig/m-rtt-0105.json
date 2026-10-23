@@ -1,0 +1,58 @@
+{
+  "id": "m-rtt-0105",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A straight footpath on a hillside at a tea estate in Sri Lanka is 74 meters long. The path rises at a constant angle of \\(x^{\\circ}\\) with the horizontal, where \\(\\sin x^{\\circ} = \\frac{12}{37}\\). How many meters higher is the top of the path than the bottom?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{888}{35}\\)",
+    "B": "\\(\\frac{1{,}369}{6}\\)",
+    "C": "\\(24\\)",
+    "D": "\\(70\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The path is the hypotenuse of a right triangle, and the rise is the side opposite the angle \\(x^{\\circ}\\).",
+    "Rise \\(= 74 \\sin x^{\\circ} = 74 \\cdot \\frac{12}{37} = 24\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(74 \\cdot \\frac{12}{35}\\), using \\(\\tan x^{\\circ}\\) instead of \\(\\sin x^{\\circ}\\) with the path length.",
+    "B": "Incorrect. This is \\(74 \\cdot \\frac{37}{12}\\); the ratio was inverted.",
+    "C": "Correct. Rise \\(= 74 \\cdot \\frac{12}{37} = 24\\) meters.",
+    "D": "Incorrect. This is \\(74 \\cdot \\frac{35}{37} = 74 \\cos x^{\\circ}\\), the horizontal distance, not the rise."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nans=74*Rational(12,37)\nassert ans==24\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-arv-0127",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rancher has 60 meters of fencing to build a rectangular enclosure. The fencing goes around all four sides of the rectangle, and one more straight piece of fencing, parallel to two of the sides, divides the enclosure into two pens. What is the greatest possible total area of the enclosure, in square meters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(225\\)",
+    "B": "\\(150\\)",
+    "C": "\\(10\\)",
+    "D": "\\(144\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(w\\) be the length of each of the three parallel pieces and \\(\\ell\\) the length of the other two sides: \\(2\\ell + 3w = 60\\), so \\(\\ell = 30 - 1.5w\\).",
+    "Area \\(A = w(30 - 1.5w) = 30w - 1.5w^{2}\\), a downward-opening parabola.",
+    "Its vertex is at \\(w = \\frac{30}{2(1.5)} = 10\\), so \\(\\ell = 15\\) and \\(A = 150\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the area of a 15-by-15 square that uses all 60 meters on the outside; it ignores the dividing fence.",
+    "B": "Correct. With \\(2\\ell + 3w = 60\\), the area \\(w(30 - 1.5w)\\) is greatest when \\(w = 10\\) and \\(\\ell = 15\\), giving 150.",
+    "C": "Incorrect. This is the width that gives the greatest area, not the greatest area itself.",
+    "D": "Incorrect. This assumes all five pieces of fencing have the same length, 12 meters; that does not give the greatest area."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nw=symbols('w',positive=True)\nA=w*(60-3*w)/2\nwv=solve(diff(A,w),w)\nassert wv==[10]\nans=A.subs(w,wv[0])\nassert ans==150\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\nassert value(choices['B'])==12*12 and value(choices['D'])==15*15\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

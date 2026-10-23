@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0526",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A coffee-shop chain noticed that its stores that play live music on weekends have higher weekend sales, on average, than its stores that do not. The chain wants to find out whether playing live music causes higher weekend sales. Which of the following study designs would best answer this question?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Ask customers at every store whether they enjoy live music.",
+    "B": "Collect weekend sales data from more of its stores that already play live music.",
+    "C": "From 60 of its stores that do not currently play live music, randomly assign 30 to start playing live music on weekends, and compare the weekend sales of the two groups over the next three months.",
+    "D": "Compare each music-playing store's weekend sales this year with its weekend sales in the year before it started playing music."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Stores that chose to play music may differ in other ways (location, size), so the observed difference could have other causes.",
+    "Randomly assigning stores to play music or not, and comparing them over the same period, is what allows a cause-and-effect conclusion."
+  ],
+  "explanation": {
+    "A": "Incorrect. Customers' opinions about music do not measure whether music changes sales.",
+    "B": "Incorrect. More observational data of the same kind still cannot separate the effect of music from other differences between stores.",
+    "C": "Correct. Random assignment of the stores to the two conditions supports a cause-and-effect conclusion.",
+    "D": "Incorrect. Sales can change from year to year for many reasons, such as prices or the economy, so this comparison is confounded by time."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\ndesigns = {'A': (True, True), 'B': (False, False), 'C': (False, True), 'D': (False, False)}\nok = [k for k, (ra, comp) in designs.items() if ra and comp]\nassert ok == [answer]\nassert 'randomly assign' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

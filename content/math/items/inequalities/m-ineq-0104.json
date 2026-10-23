@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0104",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(5 - 2x \\ge -9\\), what is the greatest possible value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7"
+  ],
+  "solution": [
+    "Subtract 5 from both sides: \\(-2x \\ge -14\\).",
+    "Divide by \\(-2\\) and reverse the sign: \\(x \\le 7\\).",
+    "The inequality includes equality, so the greatest possible value of \\(x\\) is 7."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\ns = solve_univariate_inequality(5 - 2*x >= -9, x, relational=False)\nassert s == Interval(-oo, 7)\nassert [Rational(a) for a in spr_answers] == [s.sup]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0519",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A savings account pays simple interest: each year, the account earns \\(6\\%\\) of the original deposit. Lena deposits \\$5,000 and makes no other deposits or withdrawals. What is the total amount in the account after 3 years, in dollars?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5{,}955.08\\)",
+    "B": "\\(900\\)",
+    "C": "\\(5{,}300\\)",
+    "D": "\\(5{,}900\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Interest each year: \\(0.06 \\cdot 5{,}000 = 300\\) dollars.",
+    "Interest in 3 years: \\(3 \\cdot 300 = 900\\) dollars, so the total is \\(5{,}000 + 900 = 5{,}900\\) dollars."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of compounding, \\(5{,}000(1.06)^{3} \\approx 5{,}955.08\\). With simple interest, the account earns \\(6\\%\\) of the original deposit only.",
+    "B": "Incorrect. This is the total interest earned in 3 years, not the total amount in the account.",
+    "C": "Incorrect. This is the amount in the account after 1 year.",
+    "D": "Correct. The account earns 300 dollars each year, so after 3 years it holds \\(5{,}000 + 900 = 5{,}900\\) dollars."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_quantity",
+    "C": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nv = 5000 + 3 * Rational(6, 100) * 5000\nassert v == 5900\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

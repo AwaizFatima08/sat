@@ -1,0 +1,86 @@
+{
+  "id": "m-pct-0005",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The bar graph shows the total July rainfall, in millimeters, recorded at a weather station in Lahore for each year from 2020 to 2023. By what percent did the July rainfall decrease from 2022 to 2023?",
+  "figure": {
+    "kind": "bar",
+    "title": "July rainfall at a Lahore weather station",
+    "x_label": "Year",
+    "y_label": "Rainfall (millimeters)",
+    "series": [
+      {
+        "name": "July rainfall",
+        "points": [
+          [
+            "2020",
+            210
+          ],
+          [
+            "2021",
+            180
+          ],
+          [
+            "2022",
+            300
+          ],
+          [
+            "2023",
+            240
+          ]
+        ]
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20\\%\\)",
+    "B": "\\(25\\%\\)",
+    "C": "\\(60\\%\\)",
+    "D": "\\(80\\%\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Read the graph: 300 millimeters in 2022 and 240 millimeters in 2023.",
+    "The decrease is \\(300 - 240 = 60\\) millimeters.",
+    "Divide by the earlier value: \\(\\frac{60}{300} = 0.20\\), which is \\(20\\%\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The rainfall fell by 60 millimeters from 300 millimeters, and \\(\\frac{60}{300} = 20\\%\\).",
+    "B": "Incorrect. This is the result of dividing the decrease by the 2023 value instead of the 2022 value: \\(\\frac{60}{240} = 25\\%\\).",
+    "C": "Incorrect. This is the decrease in millimeters, 60, written as a percent. It must be compared with the 2022 rainfall.",
+    "D": "Incorrect. This is the 2023 rainfall as a percent of the 2022 rainfall, \\(\\frac{240}{300} = 80\\%\\), not the percent decrease."
+  },
+  "traps": {
+    "B": "percent_add",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "pts = dict(figure['series'][0]['points'])\nold, new = pts['2022'], pts['2023']\ndec = Rational(old - new, old)\nassert dec == Rational(20, 100)\nassert value(choices[answer]) == dec\nassert all(value(choices[k]) != dec for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

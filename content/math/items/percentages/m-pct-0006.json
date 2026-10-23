@@ -1,0 +1,79 @@
+{
+  "id": "m-pct-0006",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The table shows the number of subscribers to a local newsletter in three years. The number of subscribers increased by the same percent each year. If this pattern continues, how many subscribers will the newsletter have in 2025?",
+  "figure": {
+    "kind": "table",
+    "title": "Newsletter subscribers",
+    "columns": [
+      "Year",
+      "Subscribers"
+    ],
+    "rows": [
+      [
+        "2021",
+        "625"
+      ],
+      [
+        "2022",
+        "750"
+      ],
+      [
+        "2023",
+        "900"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1080\\)",
+    "B": "\\(1200\\)",
+    "C": "\\(1260\\)",
+    "D": "\\(1296\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Find the yearly growth factor: \\(\\frac{750}{625} = 1.2\\) and \\(\\frac{900}{750} = 1.2\\), so the number grows by \\(20\\%\\) each year.",
+    "2024: \\(900 \\cdot 1.2 = 1080\\) subscribers.",
+    "2025: \\(1080 \\cdot 1.2 = 1296\\) subscribers (or \\(900 \\cdot 1.2^{2} = 1296\\))."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the number of subscribers predicted for 2024, \\(900 \\cdot 1.2 = 1080\\). One more year of growth is needed to reach 2025.",
+    "B": "Incorrect. This is the result of adding 150 subscribers each year, as if the growth were linear. The number grows by the same percent, so the yearly increase gets larger.",
+    "C": "Incorrect. This is the result of adding \\(20\\%\\) of 900, which is 180, in each of the two years. The second increase is \\(20\\%\\) of 1,080, not of 900.",
+    "D": "Correct. The number grows by a factor of 1.2 each year, so in 2025 it is \\(900 \\cdot 1.2^{2} = 1296\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "concept",
+    "C": "percent_add"
+  },
+  "verify": "v = [Integer(r[1]) for r in figure['rows']]\ng = v[1] / v[0]\nassert g == v[2] / v[1] == Rational(6, 5)\nn2025 = v[2] * g**2\nassert n2025 == 1296\nassert value(choices[answer]) == n2025\nassert all(value(choices[k]) != n2025 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

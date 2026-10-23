@@ -1,0 +1,59 @@
+{
+  "id": "m-stc-0534",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A tea company in Sri Lanka has 2,400 workers across its estates. It wants to find out whether a new pruning tool increases the amount of tea a worker can prune per day, and to apply the conclusion to all 2,400 workers. Which of the following study designs is most appropriate?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Select 100 workers at random from a list of all 2,400 workers, let each worker choose which tool to use, and compare the two groups.",
+    "B": "Select 100 workers at random from a list of all 2,400 workers, randomly assign 50 of them to the new tool and 50 to the current tool, and compare the two groups.",
+    "C": "Randomly choose one estate to receive the new tool for all its workers and another estate to keep the current tool, and compare the two estates.",
+    "D": "Ask for 100 volunteers to use the new tool for a month, and compare the amount each one prunes per day with the amount the same worker pruned last year."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "To apply the conclusion to all 2,400 workers, the participants must be a random sample of all workers.",
+    "To conclude cause and effect, the tools must be randomly assigned to individual workers so that the two groups are alike apart from the tool.",
+    "Only the design that does both is appropriate."
+  ],
+  "explanation": {
+    "A": "Incorrect. Random selection allows generalizing, but workers who choose the new tool may differ from those who do not, so there is no causal conclusion.",
+    "B": "Correct. Random selection from all workers plus random assignment supports a causal conclusion for all 2,400 workers.",
+    "C": "Incorrect. With only one estate per tool, any difference between the two estates (slope, weather, bushes) is mixed up with the tool's effect.",
+    "D": "Incorrect. Volunteers may not represent all workers, and comparing with last year mixes the tool's effect with changes such as weather and tea growth."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\ndesigns = {'A': (False, False), 'B': (True, False), 'C': (True, True), 'D': (False, False)}\nok = [k for k, (rs, ra) in designs.items() if rs and ra]\nassert ok == [answer]\nassert 'at random from a list of all' in choices[answer] and 'randomly assign' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

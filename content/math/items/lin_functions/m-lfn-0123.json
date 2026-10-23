@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0123",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A warehouse has 2,400 boxes of face masks. It ships 160 boxes each day, and no new boxes arrive. Which function gives the number of boxes \\(B(d)\\) left in the warehouse after \\(d\\) days?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(B(d) = 2{,}400 + 160d\\)",
+    "B": "\\(B(d) = 2{,}400d - 160\\)",
+    "C": "\\(B(d) = 160d - 2{,}400\\)",
+    "D": "\\(B(d) = 2{,}400 - 160d\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The warehouse starts with 2,400 boxes, so the constant term is 2,400.",
+    "The number of boxes falls by 160 each day, so the slope is \\(-160\\): \\(B(d) = 2{,}400 - 160d\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Boxes are shipped out, so the number left decreases; this function increases by 160 each day.",
+    "B": "Incorrect. This switches the starting number of boxes and the number shipped each day.",
+    "C": "Incorrect. This gives \\(B(0) = -2{,}400\\); the signs of both terms are reversed.",
+    "D": "Correct. The warehouse starts with 2,400 boxes and loses 160 boxes per day."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nd = symbols('d')\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if [rhs(choices[k]).subs(d, t) for t in (0, 1, 2)] == [2400, 2240, 2080]]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

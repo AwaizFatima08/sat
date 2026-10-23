@@ -1,0 +1,72 @@
+{
+  "id": "m-ovd-0526",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The box plot summarizes the scores of 60 students on a history exam. Approximately how many of the students had scores between 61 and 97?",
+  "figure": {
+    "kind": "boxplot",
+    "x_label": "Exam score",
+    "plots": [
+      {
+        "name": "Scores",
+        "min": 42,
+        "q1": 61,
+        "median": 70,
+        "q3": 78,
+        "max": 97
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(45\\)",
+    "B": "\\(15\\)",
+    "C": "\\(36\\)",
+    "D": "\\(30\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "61 is the first quartile and 97 is the maximum.",
+    "About 25% of the scores are below the first quartile, so about 75% are between 61 and 97.",
+    "\\(0.75 \\cdot 60 = 45\\) students."
+  ],
+  "explanation": {
+    "A": "Correct. From the first quartile to the maximum is about 75% of the data, and \\(0.75 \\cdot 60 = 45\\).",
+    "B": "Incorrect. This is about one quarter of the students, the number from the third quartile (78) to the maximum. The scores from 61 to 97 cover three quarters of the data.",
+    "C": "Incorrect. This is \\(97 - 61 = 36\\), the difference between the scores, not a number of students.",
+    "D": "Incorrect. This is about half the students, the number in the box from 61 to 78. The scores from 78 to 97 are also between 61 and 97."
+  },
+  "traps": {
+    "B": "misread_graph",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\np = figure['plots'][0]\nassert (p['q1'], p['max']) == (61, 97)\nr = Rational(3, 4) * 60\nassert r == 45\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

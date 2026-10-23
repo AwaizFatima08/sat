@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0102",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A print shop runs its press for \\(x\\) hours printing posters and \\(y\\) hours printing flyers. The press prints 120 posters per hour and 300 flyers per hour. On Monday, the press printed a total of 3,600 posters and flyers. Which equation represents this situation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x + y = 3{,}600\\)",
+    "B": "\\(420(x + y) = 3{,}600\\)",
+    "C": "\\(120y + 300x = 3{,}600\\)",
+    "D": "\\(120x + 300y = 3{,}600\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "In \\(x\\) hours the press prints \\(120x\\) posters; in \\(y\\) hours it prints \\(300y\\) flyers.",
+    "The total is 3,600 items: \\(120x + 300y = 3{,}600\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(x + y\\) is the total number of hours, not the total number of items printed.",
+    "B": "Incorrect. This adds the two rates and applies the sum to all hours, which would be true only if both kinds of items were printed at the same time.",
+    "C": "Incorrect. This swaps the rates: it multiplies the poster hours \\(x\\) by the flyer rate 300.",
+    "D": "Correct. Posters printed plus flyers printed: \\(120x + 300y = 3{,}600\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_formula",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\ntarget = 120*x + 300*y - 3600\nok = [k for k in choices if simplify(eq(choices[k]) - target) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

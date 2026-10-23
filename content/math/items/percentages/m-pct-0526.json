@@ -1,0 +1,59 @@
+{
+  "id": "m-pct-0526",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A shoe store sets the price of a pair of boots \\(40\\%\\) above the store's cost for the boots. During a sale, the store sells the boots for \\(25\\%\\) off this price. Which of the following describes the store's result on this sale, compared with the store's cost?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A profit of \\(5\\%\\)",
+    "B": "A profit of \\(15\\%\\)",
+    "C": "A profit of \\(30\\%\\)",
+    "D": "A profit of \\(105\\%\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(C\\) be the cost. The price is \\(1.4C\\).",
+    "The sale price is \\(0.75 \\cdot 1.4C = 1.05C\\).",
+    "\\(1.05C\\) is \\(5\\%\\) more than \\(C\\), so the store makes a profit of \\(5\\%\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The sale price is \\(0.75 \\cdot 1.4 = 1.05\\) times the cost, a profit of \\(5\\%\\).",
+    "B": "Incorrect. This subtracts the percents, \\(40\\% - 25\\% = 15\\%\\). The \\(25\\%\\) discount is taken of the larger marked price, not of the cost.",
+    "C": "Incorrect. This applies the \\(25\\%\\) discount only to the \\(40\\%\\) markup: \\(40\\% - 0.25 \\cdot 40\\% = 30\\%\\). The discount applies to the whole price.",
+    "D": "Incorrect. This is the sale price as a percent of the cost, \\(105\\%\\), not the profit as a percent of the cost."
+  },
+  "traps": {
+    "B": "percent_add",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nf = Rational(140, 100) * Rational(75, 100)\nassert f == Rational(105, 100)\nassert choices[answer] == r'A profit of \\(5\\%\\)'\nassert value(choices[answer].replace('A profit of ', '')) == f - 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

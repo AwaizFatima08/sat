@@ -1,0 +1,58 @@
+{
+  "id": "m-arv-0509",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A water tank on a roof is shaped like a rectangular prism. Inside, it is 2 meters long, 1.5 meters wide, and 1.2 meters tall. What is the volume of the inside of the tank, in cubic meters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4.7\\)",
+    "B": "\\(14.4\\)",
+    "C": "\\(3\\)",
+    "D": "\\(3.6\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Volume of a rectangular prism \\(=\\) length \\(\\times\\) width \\(\\times\\) height.",
+    "\\(2 \\cdot 1.5 \\cdot 1.2 = 3.6\\) cubic meters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(2 + 1.5 + 1.2\\); volume requires multiplying the three dimensions.",
+    "B": "Incorrect. This is the surface area, \\(2(2 \\cdot 1.5 + 2 \\cdot 1.2 + 1.5 \\cdot 1.2)\\), not the volume.",
+    "C": "Incorrect. This is \\(2 \\cdot 1.5\\), the area of the base only; it still must be multiplied by the height, 1.2.",
+    "D": "Correct. \\(2 \\cdot 1.5 \\cdot 1.2 = 3.6\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "C": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nans=2*Rational('1.5')*Rational('1.2')\nassert ans==Rational(18,5)\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

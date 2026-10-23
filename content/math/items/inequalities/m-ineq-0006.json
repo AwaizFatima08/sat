@@ -1,0 +1,89 @@
+{
+  "id": "m-ineq-0006",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "Zara is planning meals with \\(x\\) servings of dal (lentils) and \\(y\\) servings of rice. Each serving of dal has 9 grams of protein, and each serving of rice has 4 grams of protein. She wants at least 60 grams of protein from these servings, using no more than 8 servings in total. Which plan in the table meets both conditions?",
+  "figure": {
+    "kind": "table",
+    "title": "Meal plans",
+    "columns": [
+      "Plan",
+      "Servings of dal",
+      "Servings of rice"
+    ],
+    "rows": [
+      [
+        "Plan 1",
+        "5",
+        "3"
+      ],
+      [
+        "Plan 2",
+        "4",
+        "6"
+      ],
+      [
+        "Plan 3",
+        "6",
+        "2"
+      ],
+      [
+        "Plan 4",
+        "2",
+        "6"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Plan 1",
+    "B": "Plan 2",
+    "C": "Plan 3",
+    "D": "Plan 4"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The conditions are \\(9x + 4y \\ge 60\\) and \\(x + y \\le 8\\).",
+    "Plan 1: \\(45 + 12 = 57\\), not enough protein. Plan 2: \\(36 + 24 = 60\\) grams, but \\(4 + 6 = 10\\) servings, too many.",
+    "Plan 3: \\(54 + 8 = 62\\) grams and \\(6 + 2 = 8\\) servings. Both conditions hold.",
+    "Plan 4: \\(18 + 24 = 42\\) grams, not enough protein."
+  ],
+  "explanation": {
+    "A": "Incorrect. Plan 1 has \\(9(5) + 4(3) = 57\\) grams of protein, 3 grams short of 60.",
+    "B": "Incorrect. Plan 2 meets the protein goal exactly, but it uses 10 servings, more than the limit of 8.",
+    "C": "Correct. Plan 3 has \\(9(6) + 4(2) = 62\\) grams of protein in exactly 8 servings, so both conditions hold.",
+    "D": "Incorrect. This reads the columns the wrong way round: 2 servings of dal and 6 of rice give only \\(18 + 24 = 42\\) grams of protein."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "r = {row[0]: (int(row[1]), int(row[2])) for row in figure['rows']}\nok = [name for name, (x, y) in r.items() if 9*x + 4*y >= 60 and x + y <= 8]\nassert ok == ['Plan 3']\nassert choices[answer] == ok[0]\nassert sorted(choices.values()) == sorted(r)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

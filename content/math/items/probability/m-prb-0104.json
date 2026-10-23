@@ -1,0 +1,46 @@
+{
+  "id": "m-prb-0104",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A number is selected at random from the positive factors of 36. What is the probability that the number is even?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "2/3"
+  ],
+  "solution": [
+    "The positive factors of 36 are 1, 2, 3, 4, 6, 9, 12, 18 and 36, which is 9 factors.",
+    "The even factors are 2, 4, 6, 12, 18 and 36, which is 6 factors.",
+    "The probability is \\(\\frac{6}{9} = \\frac{2}{3}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "d = divisors(36)\np = Rational(len([n for n in d if n % 2 == 0]), len(d))\nassert len(d) == 9 and p == Rational(2, 3)\nassert [Rational(a) for a in spr_answers] == [p]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "2/3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

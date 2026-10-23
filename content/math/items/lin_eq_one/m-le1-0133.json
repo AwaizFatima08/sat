@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0133",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "An apartment building in Karachi has two water tanks. Tank A contains 3,600 liters of water and is losing water at a constant rate of 150 liters per hour. Tank B contains 900 liters of water and is gaining water at a constant rate of 120 liters per hour. When the two tanks contain equal amounts of water, how many liters of water will each tank contain?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10\\)",
+    "B": "\\(2{,}100\\)",
+    "C": "\\(1{,}500\\)",
+    "D": "\\(2{,}250\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "After \\(h\\) hours, tank A holds \\(3{,}600 - 150h\\) liters and tank B holds \\(900 + 120h\\) liters.",
+    "Set them equal: \\(3{,}600 - 150h = 900 + 120h\\), so \\(2{,}700 = 270h\\) and \\(h = 10\\).",
+    "Each tank then holds \\(900 + 120(10) = 2{,}100\\) liters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the number of hours until the amounts are equal, not the amount of water.",
+    "B": "Correct. The amounts are equal after 10 hours, when each tank holds \\(2{,}100\\) liters.",
+    "C": "Incorrect. This is the amount of water tank A loses in 10 hours, not the amount it contains.",
+    "D": "Incorrect. This is the mean of the starting amounts; it assumes the tanks meet halfway, but they change at different rates."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nh = symbols('h')\nhv = solve(Eq(3600 - 150*h, 900 + 120*h), h)[0]\nassert hv == 10\ns = 900 + 120*hv\nassert s == 3600 - 150*hv == 2100\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id": "m-ovd-0115",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The bar graph shows the number of school days missed last term by each of the 25 students in a class. Which statement about the mean and the median of the data is true?",
+  "figure": {
+    "kind": "bar",
+    "title": "School days missed",
+    "x_label": "Number of days missed",
+    "y_label": "Number of students",
+    "series": [
+      {
+        "name": "Students",
+        "points": [
+          [
+            "0",
+            6
+          ],
+          [
+            "1",
+            8
+          ],
+          [
+            "2",
+            5
+          ],
+          [
+            "3",
+            3
+          ],
+          [
+            "4",
+            2
+          ],
+          [
+            "5",
+            0
+          ],
+          [
+            "6",
+            0
+          ],
+          [
+            "7",
+            0
+          ],
+          [
+            "8",
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The mean is equal to the median.",
+    "B": "The mean is greater than the median by 2.",
+    "C": "The median is greater than the mean.",
+    "D": "The mean is greater than the median by 0.72."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Total days missed: \\(0(6) + 1(8) + 2(5) + 3(3) + 4(2) + 8(1) = 43\\), so the mean is \\(\\frac{43}{25} = 1.72\\).",
+    "The median is the 13th value in order. Six students missed 0 days (values 1 to 6) and eight missed 1 day (values 7 to 14), so the median is 1.",
+    "The mean is greater than the median by \\(1.72 - 1 = 0.72\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The mean is 1.72 and the median is 1; the student who missed 8 days and the long right side of the data raise the mean.",
+    "B": "Incorrect. This finds the mean of the listed values 0, 1, 2, 3, 4 and 8 as \\(\\frac{18}{6} = 3\\) without using the numbers of students, and subtracts the median, 1.",
+    "C": "Incorrect. The data are skewed to the right, and the mean, 1.72, is greater than the median, 1.",
+    "D": "Correct. The mean is \\(\\frac{43}{25} = 1.72\\) and the median is 1, so the mean is greater by 0.72."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_formula",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\npts = figure['series'][0]['points']\nv = sorted(Integer(a) for a, n in pts for _ in range(n))\nassert len(v) == 25\nm, med = Rational(sum(v), 25), v[12]\nassert m == Rational(43, 25) and med == 1\nassert answer == 'A' and '0.72' in choices[answer] and m - med == Rational('0.72')",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

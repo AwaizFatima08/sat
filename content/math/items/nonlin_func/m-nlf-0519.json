@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0519",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The functions \\(f\\) and \\(g\\) are defined by \\(f(x) = x^{2} + 1\\) and \\(g(x) = x - 3\\). What is the value of \\(f(g(5))\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(23\\)",
+    "B": "\\(4\\)",
+    "C": "\\(28\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Work from the inside out: \\(g(5) = 5 - 3 = 2\\).",
+    "Then \\(f(g(5)) = f(2) = 2^{2} + 1 = 5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(g(f(5)) = 26 - 3 = 23\\): the functions were applied in the wrong order.",
+    "B": "Incorrect. This is the result of stopping at \\(2^{2} = 4\\) and forgetting to add \\(1\\).",
+    "C": "Incorrect. This is the result of adding \\(f(5) + g(5) = 26 + 2\\) instead of composing the functions.",
+    "D": "Correct. \\(g(5) = 2\\) and \\(f(2) = 5\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "stopped_early",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = Lambda(x, x**2 + 1)\ng = Lambda(x, x - 3)\nassert f(g(5)) == 5\nassert value(choices[answer]) == f(g(5))\nassert all(value(choices[k]) != f(g(5)) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0149",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(x - \\frac{1}{x} = 3\\), what is the value of \\(x^{2} + \\frac{1}{x^{2}}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(7\\)",
+    "B": "\\(9\\)",
+    "C": "\\(11\\)",
+    "D": "\\(\\sqrt{13}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Square both sides: \\(\\left(x - \\frac{1}{x}\\right)^{2} = x^{2} - 2 + \\frac{1}{x^{2}} = 9\\).",
+    "Add 2: \\(x^{2} + \\frac{1}{x^{2}} = 11\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of subtracting 2 instead of adding 2 after squaring: the middle term of the square is \\(-2\\), so 2 must be added to 9.",
+    "B": "Incorrect. This is the result of squaring each term separately, as if \\(\\left(x - \\frac{1}{x}\\right)^{2} = x^{2} + \\frac{1}{x^{2}}\\), and leaving out the middle term.",
+    "C": "Correct. \\(x^{2} - 2 + \\frac{1}{x^{2}} = 9\\), so \\(x^{2} + \\frac{1}{x^{2}} = 11\\).",
+    "D": "Incorrect. This is a possible value of \\(x + \\frac{1}{x}\\), not of \\(x^{2} + \\frac{1}{x^{2}}\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nsols = solve(Eq(x - 1/x, 3), x)\nvals = {simplify(s**2 + 1/s**2) for s in sols}\nassert len(sols) == 2 and len(vals) == 1\nval = vals.pop()\nassert simplify(value(choices[answer]) - val) == 0\nassert all(simplify(value(choices[k]) - val) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

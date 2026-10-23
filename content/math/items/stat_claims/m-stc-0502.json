@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0502",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A researcher wants to conclude that a treatment causes a change in an outcome for the participants in a study. Which feature of the study's design is needed for that conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The participants are assigned to the treatments at random.",
+    "B": "The study includes a large number of participants.",
+    "C": "The participants volunteer to take part in the study.",
+    "D": "The participants are selected at random from a population."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Cause and effect can be concluded only when the groups being compared differ in the treatment and, apart from chance, in nothing else.",
+    "Random assignment of participants to the treatments is what makes the groups alike in every other way."
+  ],
+  "explanation": {
+    "A": "Correct. Random assignment to treatments is what supports a cause-and-effect conclusion.",
+    "B": "Incorrect. A large sample reduces chance variation, but without random assignment other factors could still explain a difference.",
+    "C": "Incorrect. Volunteering affects how far results can be generalized; it does nothing to support cause and effect.",
+    "D": "Incorrect. Random selection lets results be generalized to a population, but it does not by itself support cause and effect."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nrole = {'A': 'generalize', 'B': 'precision', 'C': 'causation', 'D': 'none'}\nok = [k for k, v in role.items() if v == 'causation']\nassert ok == [answer]\nassert 'assigned' in choices[answer] and 'at random' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

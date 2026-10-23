@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0520",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Nimal, a student in Colombo, scored 68, 74 and 81 on his first three math tests. What is the least score he can get on the fourth test so that the mean of his four scores is at least 75?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "77"
+  ],
+  "solution": [
+    "Let \\(s\\) be the fourth score: \\(\\frac{68 + 74 + 81 + s}{4} \\ge 75\\).",
+    "Multiply by 4: \\(223 + s \\ge 300\\).",
+    "Subtract 223: \\(s \\ge 77\\). The least score is 77."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "s = symbols('s')\nS = solve_univariate_inequality((68 + 74 + 81 + s)/4 >= 75, s, relational=False)\nassert S == Interval(77, oo)\nassert [Rational(a) for a in spr_answers] == [S.inf]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "77",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

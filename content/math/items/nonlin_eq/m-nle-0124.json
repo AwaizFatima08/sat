@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0124",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The sum of the first \\(n\\) positive integers is \\(\\frac{n(n + 1)}{2}\\). If the sum of the first \\(n\\) positive integers is 210, what is the value of \\(n\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "20"
+  ],
+  "solution": [
+    "Set \\(\\frac{n(n + 1)}{2} = 210\\), so \\(n^{2} + n = 420\\).",
+    "Then \\(n^{2} + n - 420 = 0\\), which factors as \\((n + 21)(n - 20) = 0\\).",
+    "Since \\(n\\) is positive, \\(n = 20\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "n = symbols('n', positive=True)\nsol = solve(Eq(n*(n + 1)/2, 210), n)\nassert sol == [20]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "20",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

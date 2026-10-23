@@ -1,0 +1,80 @@
+{
+  "id": "m-le2-0117",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A caterer is planning a meal for exactly 120 guests. Each tray of rice serves the same number of guests, and each tray of salad serves the same number of guests. The table shows three combinations of \\(x\\) trays of rice and \\(y\\) trays of salad that serve exactly 120 guests. How many guests does one tray of rice serve?",
+  "figure": {
+    "kind": "table",
+    "title": "",
+    "columns": [
+      "Trays of rice, x",
+      "Trays of salad, y"
+    ],
+    "rows": [
+      [
+        "0",
+        "40"
+      ],
+      [
+        "6",
+        "30"
+      ],
+      [
+        "12",
+        "20"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(3\\)",
+    "C": "\\(6\\)",
+    "D": "\\(\\frac{5}{3}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The row \\((0, 40)\\) shows that 40 trays of salad serve 120 guests, so each tray of salad serves 3 guests.",
+    "The row \\((6, 30)\\): \\(6r + 30(3) = 120\\), so \\(6r = 30\\) and \\(r = 5\\).",
+    "Check \\((12, 20)\\): \\(12(5) + 20(3) = 120\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Salad trays serve 3 guests each, and \\(6r + 90 = 120\\) gives \\(r = 5\\).",
+    "B": "Incorrect. 3 is the number of guests one tray of salad serves.",
+    "C": "Incorrect. 6 is the change in \\(x\\) between rows of the table, not a number of guests.",
+    "D": "Incorrect. \\(\\frac{5}{3}\\) is the number of salad trays that replace one rice tray, not a number of guests."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "misread_graph",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nr, s = symbols('r s')\nrows = [(int(a), int(b)) for a, b in figure['rows']]\nsol = solve([Eq(a*r + b*s, 120) for a, b in rows], [r, s])\nassert sol == {r: 5, s: 3}\nassert value(choices[answer]) == 5\nassert all(value(choices[k]) != 5 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0534",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A store raises the price of an item, originally \\(p\\) dollars, by \\(r\\) percent. Later, it lowers the new price by \\(r\\) percent. Which expression represents the final price, in dollars?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(p\\)",
+    "B": "\\(p\\left(1 - \\frac{r^{2}}{10{,}000}\\right)\\)",
+    "C": "\\(p\\left(1 - \\frac{r^{2}}{100}\\right)\\)",
+    "D": "\\(p\\left(1 + \\frac{r^{2}}{10{,}000}\\right)\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Raising by \\(r\\) percent multiplies the price by \\(1 + \\frac{r}{100}\\); lowering by \\(r\\) percent multiplies by \\(1 - \\frac{r}{100}\\).",
+    "The final price is \\(p\\left(1 + \\frac{r}{100}\\right)\\left(1 - \\frac{r}{100}\\right)\\).",
+    "This is a difference of squares: \\(p\\left(1 - \\frac{r^{2}}{100^{2}}\\right) = p\\left(1 - \\frac{r^{2}}{10{,}000}\\right)\\). The final price is less than \\(p\\) for any \\(r > 0\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of assuming that an increase and a decrease of the same percent cancel; the decrease is taken of a larger amount.",
+    "B": "Correct. \\(p\\left(1 + \\frac{r}{100}\\right)\\left(1 - \\frac{r}{100}\\right) = p\\left(1 - \\frac{r^{2}}{10{,}000}\\right)\\).",
+    "C": "Incorrect. This is the result of squaring \\(r\\) but not the 100 when squaring \\(\\frac{r}{100}\\).",
+    "D": "Incorrect. This is the result of a sign slip in the difference of squares: \\((1 + u)(1 - u) = 1 - u^{2}\\), not \\(1 + u^{2}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "arithmetic",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\np, r = symbols('p r')\ntarget = p*(1 + r/100)*(1 - r/100)\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0536",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A group of friends shares the cost of a dinner equally, and each person pays \\$36. If 3 more friends had joined and the same total cost had been shared equally, each person would have paid \\$27. What is the total cost, in dollars, of the dinner?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "324"
+  ],
+  "solution": [
+    "Let \\(n\\) be the number of friends. The total cost is \\(36n\\), and also \\(27(n + 3)\\).",
+    "\\(36n = 27n + 81\\), so \\(9n = 81\\) and \\(n = 9\\).",
+    "Total cost: \\(36 \\cdot 9 = 324\\) dollars."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "n = symbols('n')\nns = solve(Eq(36*n, 27*(n + 3)), n)\nassert ns == [9]\ns = 36*ns[0]\nassert s == 324\nassert Rational(spr_answers[0]) == s and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "324",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

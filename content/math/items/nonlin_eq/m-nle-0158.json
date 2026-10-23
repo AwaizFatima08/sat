@@ -1,0 +1,126 @@
+{
+  "id": "m-nle-0158",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A garden bed is shaped like a trapezoid, as shown. The height and the shorter base of the trapezoid are each \\(x\\) feet, and the longer base is 6 feet longer than the shorter base. The area of a trapezoid is \\(\\frac{1}{2}(b_{1} + b_{2})h\\), where \\(b_{1}\\) and \\(b_{2}\\) are the lengths of the bases and \\(h\\) is the height. The area of the garden bed is 54 square feet. What is the length, in feet, of the longer base?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "P": [
+        0,
+        0
+      ],
+      "Q": [
+        12,
+        0
+      ],
+      "R": [
+        6,
+        6
+      ],
+      "S": [
+        0,
+        6
+      ]
+    },
+    "segments": [
+      [
+        "P",
+        "Q"
+      ],
+      [
+        "Q",
+        "R"
+      ],
+      [
+        "R",
+        "S"
+      ],
+      [
+        "S",
+        "P"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          6,
+          -0.7
+        ],
+        "text": "x + 6"
+      },
+      {
+        "at": [
+          3,
+          6.6
+        ],
+        "text": "x"
+      },
+      {
+        "at": [
+          -0.8,
+          3
+        ],
+        "text": "x"
+      }
+    ],
+    "right_angles": [
+      "P",
+      "S"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6\\)",
+    "B": "\\(18\\)",
+    "C": "\\(15\\)",
+    "D": "\\(12\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Substitute into the area formula: \\(\\frac{1}{2}(x + x + 6)(x) = 54\\), so \\(x(x + 3) = 54\\), or \\(x^{2} + 3x - 54 = 0\\).",
+    "Factor: \\((x + 9)(x - 6) = 0\\). A length is positive, so \\(x = 6\\).",
+    "The longer base is \\(x + 6 = 12\\) feet."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(x\\), the length of the shorter base and of the height, not the longer base.",
+    "B": "Incorrect. This is the sum of the two bases, \\(6 + 12\\), not the length of the longer base.",
+    "C": "Incorrect. This is the result of taking the solution \\(x = -9\\) as \\(x = 9\\) and adding 6.",
+    "D": "Correct. With \\(x = 6\\), the area is \\(\\frac{1}{2}(6 + 12)(6) = 54\\) square feet."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_quantity",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x', positive=True)\nsol = solve(Eq(Rational(1, 2)*(x + x + 6)*x, 54), x)\nassert sol == [6]\nL = sol[0] + 6\nassert value(choices[answer]) == L == 12\nassert all(value(choices[k]) != L for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

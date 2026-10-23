@@ -1,0 +1,97 @@
+{
+  "id": "m-tvd-0505",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following equations best represents a line of best fit for the data shown in the scatterplot?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        0,
+        3.5
+      ],
+      [
+        1,
+        4.8
+      ],
+      [
+        2,
+        7.3
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        10.6
+      ],
+      [
+        5,
+        13.4
+      ],
+      [
+        6,
+        15
+      ],
+      [
+        7,
+        16.8
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = 2x - 3\\)",
+    "B": "\\(y = -2x + 3\\)",
+    "C": "\\(y = 3x + 2\\)",
+    "D": "\\(y = 2x + 3\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The points rise from left to right, so the slope is positive. They rise about 2 units for each increase of 1 in \\(x\\).",
+    "Near \\(x = 0\\) the points are close to \\(y = 3\\), so the \\(y\\)-intercept is about 3.",
+    "The best choice is \\(y = 2x + 3\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This line has the right slope but crosses the \\(y\\)-axis at \\(-3\\). The data near \\(x = 0\\) are close to 3, not \\(-3\\).",
+    "B": "Incorrect. This line has a negative slope, so it falls from left to right, but the data rise.",
+    "C": "Incorrect. This swaps the slope and the intercept. It rises 3 units per unit of \\(x\\), too steep: at \\(x = 7\\) it gives 23, but the data are near 17.",
+    "D": "Correct. The data rise about 2 units for each unit of \\(x\\) and are near 3 when \\(x = 0\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\npts = [(Rational(str(a)), Rational(str(b))) for a, b in figure['points']]\nsse = {k: sum((value(choices[k].split('=')[1].strip(' \\\\)')) .subs(x, a) - b)**2 for a, b in pts) for k in choices}\nbest = min(sse, key=sse.get)\nassert best == answer\nassert all(sse[k] > 10 * sse[answer] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

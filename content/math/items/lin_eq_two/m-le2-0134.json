@@ -1,0 +1,80 @@
+{
+  "id": "m-le2-0134",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A gallery is hanging large and small paintings along a wall that is 24 meters long. Each large painting, together with the space beside it, takes up the same length of wall, and the same is true for each small painting. The table shows three combinations of \\(x\\) large paintings and \\(y\\) small paintings that fill the wall exactly. Which equation represents the relationship between \\(x\\) and \\(y\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "",
+    "columns": [
+      "Large paintings, x",
+      "Small paintings, y"
+    ],
+    "rows": [
+      [
+        "0",
+        "16"
+      ],
+      [
+        "4",
+        "10"
+      ],
+      [
+        "8",
+        "4"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2x + 3y = 32\\)",
+    "B": "\\(3x + 2y = 24\\)",
+    "C": "\\(3x + 2y = 32\\)",
+    "D": "\\(3x - 2y = -32\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "From \\((0, 16)\\), each small painting takes \\(\\frac{24}{16} = 1.5\\) meters.",
+    "From \\((4, 10)\\), \\(4L + 15 = 24\\), so each large painting takes 2.25 meters.",
+    "\\(2.25x + 1.5y = 24\\); multiplying by \\(\\frac{4}{3}\\) gives \\(3x + 2y = 32\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This switches the coefficients; \\((0, 16)\\) gives \\(48 \\ne 32\\).",
+    "B": "Incorrect. This keeps the wall length 24 on the right side after scaling the left side; \\((0, 16)\\) gives \\(32 \\ne 24\\).",
+    "C": "Correct. All three rows satisfy \\(3x + 2y = 32\\), for example \\(3(4) + 2(10) = 32\\).",
+    "D": "Incorrect. This line fits \\((0, 16)\\) but has a positive slope; as \\(x\\) increases, \\(y\\) must decrease. \\((4, 10)\\) gives \\(-8\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\nrows = [(int(a), int(b)) for a, b in figure['rows']]\nok = [k for k in choices if all(eq(choices[k]).subs({x: a, y: b}) == 0 for a, b in rows)]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

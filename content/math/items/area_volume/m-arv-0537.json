@@ -1,0 +1,58 @@
+{
+  "id": "m-arv-0537",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A right circular cylinder and a sphere have the same radius \\(r\\) and the same volume. Which expression represents the height of the cylinder in terms of \\(r\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4r\\)",
+    "B": "\\(\\frac{3r}{4}\\)",
+    "C": "\\(\\frac{2r}{3}\\)",
+    "D": "\\(\\frac{4r}{3}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Set the volumes equal: \\(\\pi r^{2} h = \\frac{4}{3}\\pi r^{3}\\).",
+    "Divide both sides by \\(\\pi r^{2}\\): \\(h = \\frac{4r}{3}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This drops the 3 in the denominator of the sphere formula \\(\\frac{4}{3}\\pi r^{3}\\).",
+    "B": "Incorrect. This inverts the fraction \\(\\frac{4}{3}\\) when solving for \\(h\\).",
+    "C": "Incorrect. This sets the cylinder equal to a hemisphere, \\(\\frac{2}{3}\\pi r^{3}\\), instead of a whole sphere.",
+    "D": "Correct. \\(\\pi r^{2} h = \\frac{4}{3}\\pi r^{3}\\) gives \\(h = \\frac{4r}{3}\\)."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "reciprocal",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nr,h=symbols('r h')\nhs=solve(Eq(pi*r**2*h,Rational(4,3)*pi*r**3),h)\nassert len(hs)==1\nans=hs[0]\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

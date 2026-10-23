@@ -1,0 +1,83 @@
+{
+  "id": "m-ovd-0503",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A survey recorded the number of people living in each of 12 households in a village in Nepal. The table shows the results. What is the mode of the number of people per household?",
+  "figure": {
+    "kind": "table",
+    "title": "People per household",
+    "columns": [
+      "Number of people",
+      "Number of households"
+    ],
+    "rows": [
+      [
+        "3",
+        "2"
+      ],
+      [
+        "4",
+        "3"
+      ],
+      [
+        "5",
+        "6"
+      ],
+      [
+        "6",
+        "1"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4.5\\)",
+    "B": "\\(5\\)",
+    "C": "\\(3\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The mode is the value that occurs most often.",
+    "The greatest number of households, 6, have 5 people, so the mode is 5."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the mean household size, \\(\\frac{54}{12} = 4.5\\), not the mode.",
+    "B": "Correct. More households (6 of them) have 5 people than any other size, so 5 is the mode.",
+    "C": "Incorrect. This is the range of the household sizes, \\(6 - 3 = 3\\), not the mode.",
+    "D": "Incorrect. 6 is the number of households that have 5 people, not the household size that occurs most often."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nf = {int(r[0]): int(r[1]) for r in figure['rows']}\nassert sum(f.values()) == 12\nr = max(f, key=f.get)\nassert r == 5 and sorted(f.values())[-1] > sorted(f.values())[-2]\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

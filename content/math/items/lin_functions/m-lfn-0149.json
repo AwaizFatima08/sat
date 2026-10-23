@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0149",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "An escape room charges a group of \\(n\\) people a total of \\(C(n) = 12(n - 3) + 60\\) dollars, where \\(n \\ge 3\\). Which of the following is the best interpretation of the number 60 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The total cost, in dollars, for a group of 3 people",
+    "B": "A fee, in dollars, that every group pays in addition to 12 dollars for each person",
+    "C": "The cost, in dollars, for each person in the group beyond the first 3",
+    "D": "The cost, in dollars, for each person in the group"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "When \\(n = 3\\), the term \\(12(n - 3)\\) is 0, so \\(C(3) = 60\\).",
+    "So 60 is the total cost for a group of 3 people; each person beyond the first 3 adds 12 dollars."
+  ],
+  "explanation": {
+    "A": "Correct. \\(C(3) = 12(0) + 60 = 60\\), so 60 dollars is the total cost for a group of 3 people.",
+    "B": "Incorrect. Written as \\(12n + c\\), the function is \\(C(n) = 12n + 24\\), so the fee paid in addition to 12 dollars per person would be 24 dollars, not 60.",
+    "C": "Incorrect. Each person beyond the first 3 adds 12 dollars, the coefficient of \\(n - 3\\).",
+    "D": "Incorrect. The total for a group of 3 people is 60 dollars, so each person in such a group pays 20 dollars, not 60."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nn = symbols('n')\nC = 12*(n - 3) + 60\nassert C.subs(n, 3) == 60\nassert expand(C) == 12*n + 24\nassert '3 people' in choices[answer]\nassert sum('3 people' in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

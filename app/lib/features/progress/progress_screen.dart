@@ -12,6 +12,7 @@ import 'package:moduleup/data/progress_repository.dart';
 import 'package:moduleup/engine/results.dart';
 import 'package:moduleup/engine/scoring.dart';
 import 'package:moduleup/features/practice/practice_screen.dart';
+import 'package:moduleup/features/section/section.dart';
 import 'package:moduleup/widgets/common.dart';
 
 /// The progress board: score trend, papers, skill mastery, traps, pace,
@@ -25,15 +26,24 @@ class ProgressScreen extends ConsumerWidget {
     final p = ref.watch(progressProvider).value ?? ProgressSnapshot.empty;
     if (bank == null) return const Center(child: CircularProgressIndicator());
     final now = ref.watch(clockProvider).now();
-    final all = breakdown(p.allResponses, bank.items);
-    final papers = [...p.papers]
-      ..sort((a, b) => a.finishedAt.compareTo(b.finishedAt));
+    final section = effectiveSection(ref);
+    final bp = bank.bpOf(section);
+    final all = breakdown(
+      p.allResponses.where((r) => bank.items[r.itemId]?.section == section),
+      bank.items,
+    );
+    final papers = [
+      for (final r in p.papers)
+        if ((bank.form(r.formId)?.section ?? 'rw') == section) r,
+    ]..sort((a, b) => a.finishedAt.compareTo(b.finishedAt));
+    final pace = bp.moduleMinutes * 60 / bp.moduleItems;
     return Column(
       children: [
         Expanded(
           child: ListView(
             padding: const EdgeInsets.all(AppSpace.m),
             children: [
+              const SectionSwitcher(),
               _HabitRow(progress: p, now: now),
               const SizedBox(height: AppSpace.m),
               SectionCard(
@@ -55,11 +65,11 @@ class ProgressScreen extends ConsumerWidget {
                 title: 'Skill mastery',
                 child: Column(
                   children: [
-                    for (final t in bank.blueprint.typeOrder)
+                    for (final t in bp.typeOrder)
                       ListTile(
                         dense: true,
                         contentPadding: EdgeInsets.zero,
-                        title: Text(bank.blueprint.types[t]!.name),
+                        title: Text(bp.types[t]!.name),
                         trailing: MasteryDots(
                           levels: [
                             for (var l = 1; l <= 4; l++)
@@ -84,17 +94,17 @@ class ProgressScreen extends ConsumerWidget {
                     ? const Text('Answer some questions to see your accuracy.')
                     : Column(
                         children: [
-                          for (final t in bank.blueprint.typeOrder)
+                          for (final t in bp.typeOrder)
                             if (all.byType[t] case final tally?)
                               RatioBar(
-                                label: bank.blueprint.types[t]!.name,
+                                label: bp.types[t]!.name,
                                 tally: tally,
                                 trailing:
                                     '${all.secondsByType[t]!.round()} s/q',
                               ),
                           const SizedBox(height: AppSpace.s),
                           Text(
-                            'Target pace: about ${targetSecondsPerQuestion.round()} seconds per question.',
+                            'Target pace: about ${pace.round()} seconds per question.',
                             style: const TextStyle(color: AppColors.muted),
                           ),
                         ],
@@ -103,7 +113,7 @@ class ProgressScreen extends ConsumerWidget {
               const SizedBox(height: AppSpace.m),
               TrapProfileCard(
                 counts: all.trapCounts,
-                blueprint: bank.blueprint,
+                blueprint: bp,
               ),
             ],
           ),

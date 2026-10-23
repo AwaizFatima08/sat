@@ -1,0 +1,44 @@
+{
+  "id": "m-sys-0136",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[y = mx + 2\\] \\[4x + 6y = 9\\] In the system of equations above, \\(m\\) is a constant. For what value of \\(m\\) does the system have no solution?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-2/3"
+  ],
+  "solution": [
+    "Write the second equation in slope-intercept form: \\(y = -\\frac{2}{3}x + \\frac{3}{2}\\).",
+    "The system has no solution when the lines are parallel and distinct: same slope, different \\(y\\)-intercepts.",
+    "The \\(y\\)-intercepts, 2 and \\(\\frac{3}{2}\\), already differ, so \\(m = -\\frac{2}{3}\\)."
+  ],
+  "verify": "x, y, m = symbols('x y m')\nms = [diff(solve(4*x + 6*y - 9, y)[0], x)]\nassert ms == [-Rational(2, 3)]\nassert linsolve([y - (ms[0]*x + 2), 4*x + 6*y - 9], [x, y]) == EmptySet\nassert [Rational(a) for a in spr_answers] == ms",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "-2/3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

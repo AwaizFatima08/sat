@@ -1,0 +1,129 @@
+{
+  "id": "m-rtt-0533",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Two boats are on the sea, in a straight line with the base of a vertical cliff 60 meters high, as shown. From the nearer boat, the angle of elevation to the top of the cliff is \\(45^{\\circ}\\); from the farther boat, it is \\(30^{\\circ}\\). What is the distance, in meters, between the two boats?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "T": [
+        0,
+        60
+      ],
+      "F": [
+        0,
+        0
+      ],
+      "N": [
+        60,
+        0
+      ],
+      "R": [
+        103.923,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "T",
+        "F"
+      ],
+      [
+        "F",
+        "N"
+      ],
+      [
+        "N",
+        "R"
+      ],
+      [
+        "T",
+        "N"
+      ],
+      [
+        "T",
+        "R"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          -8,
+          30
+        ],
+        "text": "60 m"
+      },
+      {
+        "at": [
+          55.5,
+          2.2
+        ],
+        "text": "45°"
+      },
+      {
+        "at": [
+          97,
+          1.5
+        ],
+        "text": "30°"
+      }
+    ],
+    "right_angles": [
+      "F"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(60\\sqrt{3} - 60\\)",
+    "B": "\\(60 - 20\\sqrt{3}\\)",
+    "C": "\\(60\\sqrt{3}\\)",
+    "D": "\\(120 - 60\\sqrt{2}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Nearer boat (\\(45^{\\circ}\\)): its distance from the base is \\(\\frac{60}{\\tan 45^{\\circ}} = 60\\).",
+    "Farther boat (\\(30^{\\circ}\\)): its distance from the base is \\(\\frac{60}{\\tan 30^{\\circ}} = 60\\sqrt{3}\\).",
+    "Distance between the boats \\(= 60\\sqrt{3} - 60\\) (about 43.9 meters)."
+  ],
+  "explanation": {
+    "A": "Correct. The boats are \\(60\\sqrt{3}\\) and 60 meters from the base, so they are \\(60\\sqrt{3} - 60\\) meters apart.",
+    "B": "Incorrect. This uses \\(60\\tan 30^{\\circ} = 20\\sqrt{3}\\) for the farther boat's distance; the height must be divided by \\(\\tan 30^{\\circ}\\).",
+    "C": "Incorrect. This is the distance from the base of the cliff to the farther boat; the nearer boat's distance still must be subtracted.",
+    "D": "Incorrect. This subtracts the lines of sight (\\(120\\) and \\(60\\sqrt{2}\\)), not the distances along the water."
+  },
+  "traps": {
+    "B": "reciprocal",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('T','F')==60 and abs(ang('T','N','F')-45)<0.1 and abs(ang('T','R','F')-30)<0.1\nans=60/tan(pi/6)-60/tan(pi/4)\nassert simplify(ans-(60*sqrt(3)-60))==0 and abs(d('N','R')-ans)<0.01\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

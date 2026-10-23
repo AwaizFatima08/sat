@@ -1,0 +1,43 @@
+{
+  "id": "m-le2-0124",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A line in the \\(xy\\)-plane has a slope of \\(-\\frac{1}{2}\\) and passes through the points \\((3, a)\\) and \\((7, 2)\\). What is the value of \\(a\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4"
+  ],
+  "solution": [
+    "\\(\\frac{2 - a}{7 - 3} = -\\frac{1}{2}\\), so \\(2 - a = -2\\).",
+    "So \\(a = 4\\)."
+  ],
+  "verify": "a = symbols('a')\nsol = solve(Eq((2 - a)/(7 - 3), Rational(-1, 2)), a)\nassert sol == [4]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

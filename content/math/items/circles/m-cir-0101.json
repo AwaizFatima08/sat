@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0101",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(x^{2} + (y - 4)^{2} = 20\\) is a circle. What is the radius of the circle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20\\)",
+    "B": "\\(2\\sqrt{5}\\)",
+    "C": "\\(4\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The equation has the form \\((x - h)^{2} + (y - k)^{2} = r^{2}\\), so \\(r^{2} = 20\\).",
+    "\\(r = \\sqrt{20} = 2\\sqrt{5}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. 20 is \\(r^{2}\\); the square root still must be taken.",
+    "B": "Correct. \\(r^{2} = 20\\), so \\(r = 2\\sqrt{5}\\).",
+    "C": "Incorrect. 4 is the \\(y\\)-coordinate of the center, read from \\((y - 4)^{2}\\), not the radius.",
+    "D": "Incorrect. This is half of 20; the radius is the square root of 20, not half of it."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "misread_graph",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nr=symbols('r',positive=True)\nans=solve(Eq(r**2,20),r)[0]\nassert simplify(ans-2*sqrt(5))==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

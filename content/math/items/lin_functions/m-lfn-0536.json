@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0536",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "For the linear function \\(f\\), \\(f(3) + f(7) = 40\\) and \\(f(7) - f(3) = 12\\). What is the value of \\(f(10)\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "35"
+  ],
+  "solution": [
+    "Adding the equations: \\(2f(7) = 52\\), so \\(f(7) = 26\\) and \\(f(3) = 14\\).",
+    "Slope \\(= \\frac{26 - 14}{7 - 3} = 3\\).",
+    "\\(f(10) = f(7) + 3 \\cdot 3 = 35\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, a, b = symbols('x a b')\nf = a*x + b\ns = solve([Eq(f.subs(x, 3) + f.subs(x, 7), 40), Eq(f.subs(x, 7) - f.subs(x, 3), 12)], [a, b], dict=True)\nv = f.subs(s[0]).subs(x, 10)\nassert len(s) == 1 and v == 35\nassert [Rational(t) for t in spr_answers] == [v]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "35",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

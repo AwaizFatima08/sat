@@ -1,0 +1,46 @@
+{
+  "id": "m-cir-0528",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A paper fan opens into the shape of a sector of a circle with a radius of 6 inches. When fully open, the fan has an area of \\(15\\pi\\) square inches. What is the measure, in degrees, of the central angle of the open fan?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "150"
+  ],
+  "solution": [
+    "The full circle has area \\(\\pi(6)^{2} = 36\\pi\\).",
+    "The fan is \\(\\frac{15\\pi}{36\\pi} = \\frac{5}{12}\\) of the circle.",
+    "The angle is \\(\\frac{5}{12} \\cdot 360 = 150^{\\circ}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t=symbols('t',positive=True)\ns=solve(Eq(t/360*pi*6**2,15*pi),t)\nassert s==[150]\nassert Rational(spr_answers[0])==s[0]\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "150",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

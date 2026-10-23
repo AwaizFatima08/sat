@@ -1,0 +1,46 @@
+{
+  "id": "m-eqx-0124",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The expression \\((4x - 1)(x + 3) - 11x\\) is equivalent to \\(ax^{2} + c\\), where \\(a\\) and \\(c\\) are constants. What is the value of \\(a - c\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7"
+  ],
+  "solution": [
+    "Expand: \\((4x - 1)(x + 3) = 4x^{2} + 12x - x - 3 = 4x^{2} + 11x - 3\\).",
+    "Subtract \\(11x\\): \\(4x^{2} - 3\\), so \\(a = 4\\) and \\(c = -3\\).",
+    "\\(a - c = 4 - (-3) = 7\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\np = Poly(expand((4*x - 1)*(x + 3) - 11*x), x)\nassert p.coeff_monomial(x) == 0\na, c = p.coeff_monomial(x**2), p.coeff_monomial(1)\nassert a - c == 7\nassert [Rational(v) for v in spr_answers] == [a - c]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

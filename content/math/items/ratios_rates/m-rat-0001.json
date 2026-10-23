@@ -1,0 +1,57 @@
+{
+  "id": "m-rat-0001",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A delivery van travels 186 miles on 6 gallons of gasoline. At this rate, how many miles can the van travel on 10 gallons of gasoline?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(31\\)",
+    "B": "\\(196\\)",
+    "C": "\\(310\\)",
+    "D": "\\(1860\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Find the unit rate: \\(\\frac{186}{6} = 31\\) miles per gallon.",
+    "Multiply by the number of gallons: \\(31 \\cdot 10 = 310\\) miles."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the unit rate, 31 miles per gallon. It still has to be multiplied by 10 gallons.",
+    "B": "Incorrect. This is the result of adding 10 to 186. The distance grows in proportion to the gasoline, so the rate must be multiplied, not added.",
+    "C": "Correct. The van travels \\(\\frac{186}{6} = 31\\) miles per gallon, so on 10 gallons it travels \\(31 \\cdot 10 = 310\\) miles.",
+    "D": "Incorrect. This is the result of treating 186 miles as the distance for 1 gallon: \\(186 \\cdot 10 = 1860\\). The 186 miles is for 6 gallons."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "rate = Rational(186, 6)\nmiles = rate * 10\nassert miles == 310\nassert value(choices[answer]) == miles\nassert all(value(choices[k]) != miles for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

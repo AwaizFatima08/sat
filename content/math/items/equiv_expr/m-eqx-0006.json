@@ -1,0 +1,120 @@
+{
+  "id": "m-eqx-0006",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A rectangular solar panel array has an area of \\((6x^{2} + 7x - 20)\\) square meters. The length of the array is \\((3x - 4)\\) meters, as shown. Which expression represents the perimeter of the array, in meters?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        8,
+        0
+      ],
+      "C": [
+        8,
+        4
+      ],
+      "D": [
+        0,
+        4
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          4.0,
+          -0.6
+        ],
+        "text": "3x - 4"
+      },
+      {
+        "at": [
+          9.0,
+          2.0
+        ],
+        "text": "width"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10x + 2\\)",
+    "B": "\\(5x + 1\\)",
+    "C": "\\(10x - 18\\)",
+    "D": "\\(2x + 5\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The width is the area divided by the length. Factor the area: \\(6x^{2} + 7x - 20 = (3x - 4)(2x + 5)\\), so the width is \\((2x + 5)\\) meters.",
+    "Check: \\((3x - 4)(2x + 5) = 6x^{2} + 15x - 8x - 20 = 6x^{2} + 7x - 20\\).",
+    "Perimeter \\(= 2(3x - 4) + 2(2x + 5) = 6x - 8 + 4x + 10 = 10x + 2\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The width is \\(2x + 5\\), so the perimeter is \\(2(3x - 4) + 2(2x + 5) = 10x + 2\\).",
+    "B": "Incorrect. This is the result of adding the length and width once, \\((3x - 4) + (2x + 5)\\), which is half the perimeter.",
+    "C": "Incorrect. This is the result of a sign slip when factoring, which gives a width of \\(2x - 5\\); but \\((3x - 4)(2x - 5)\\) has middle term \\(-23x\\), not \\(7x\\).",
+    "D": "Incorrect. This is the width of the array, not its perimeter."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "sign_error",
+    "D": "wrong_quantity"
+  },
+  "verify": "x = symbols('x')\nw = cancel((6*x**2 + 7*x - 20)/(3*x - 4))\nassert simplify(w - (2*x + 5)) == 0\ntarget = expand(2*(3*x - 4) + 2*w)\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

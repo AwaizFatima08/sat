@@ -1,0 +1,44 @@
+{
+  "id": "m-eqx-0540",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The first row of a stadium section has 21 seats, and each row after the first has 2 more seats than the row in front of it. The total number of seats in the first \\(n\\) rows is \\(21n + n(n - 1)\\). This expression can be written as \\((n + a)^{2} - c\\), where \\(a\\) and \\(c\\) are positive constants. What is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "100"
+  ],
+  "solution": [
+    "Simplify: \\(21n + n^{2} - n = n^{2} + 20n\\).",
+    "Complete the square: \\(n^{2} + 20n = (n + 10)^{2} - 100\\).",
+    "So \\(a = 10\\) and \\(c = 100\\)."
+  ],
+  "verify": "n, j = symbols('n j', integer=True, positive=True)\ne = expand(21*n + n*(n - 1))\nassert simplify(summation(21 + 2*(j - 1), (j, 1, n)) - e) == 0\nassert expand((n + 10)**2 - 100) == e\nassert [Rational(s) for s in spr_answers] == [100]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "100",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

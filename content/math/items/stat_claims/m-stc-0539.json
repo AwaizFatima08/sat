@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0539",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A large company selected 500 of its employees at random. Each selected employee was interviewed in person by his or her own manager and asked, \"Are you satisfied with the way your manager supervises you?\" Of the employees interviewed, 92% answered yes. Which of the following best describes a problem with the survey and how to reduce it?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A percent as high as 92% cannot be accurate; the survey should be repeated until the percent is lower.",
+    "B": "The sample was not selected at random; selecting the employees at random would fix the problem.",
+    "C": "The sample is too small; interviewing 1,000 employees in the same way would remove the bias.",
+    "D": "Employees may not answer honestly when their own manager asks the question; an anonymous survey would reduce this bias."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The sample was random, so the problem is not who was selected but how the question was asked.",
+    "Employees questioned by their own manager may not feel free to say they are unhappy, which pushes the answers toward yes. An anonymous survey, so no one can link answers to employees, reduces this response bias."
+  ],
+  "explanation": {
+    "A": "Incorrect. Repeating a survey until it gives a wanted result is not a valid method.",
+    "B": "Incorrect. The 500 employees were already selected at random.",
+    "C": "Incorrect. A larger sample asked the same way would have the same bias, so the 92% would still be too high.",
+    "D": "Correct. The bias comes from who asks the question; anonymity reduces the pressure to answer yes."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\ndesign = {'random_sample': True, 'asked_by_manager': True}\nassert design['random_sample'] and design['asked_by_manager']\nok = [k for k, v in choices.items() if 'anonymous' in v]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

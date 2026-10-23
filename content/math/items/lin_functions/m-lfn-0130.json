@@ -1,0 +1,79 @@
+{
+  "id": "m-lfn-0130",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For the linear function \\(f\\), the table shows three values of \\(x\\) and their corresponding values of \\(f(x)\\). What is the value of \\(k\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "Values of f",
+    "columns": [
+      "x",
+      "f(x)"
+    ],
+    "rows": [
+      [
+        "1",
+        "5"
+      ],
+      [
+        "4",
+        "14"
+      ],
+      [
+        "k",
+        "32"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{32}{3}\\)",
+    "B": "\\(98\\)",
+    "C": "\\(22\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From \\(x = 1\\) to \\(x = 4\\), \\(f(x)\\) rises by 9, so the slope is 3 and \\(f(x) = 3x + 2\\).",
+    "Set \\(3k + 2 = 32\\): \\(3k = 30\\), so \\(k = 10\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This solves \\(3k = 32\\), leaving out the constant term 2.",
+    "B": "Incorrect. This is \\(f(32) = 3(32) + 2\\), not the input whose output is 32.",
+    "C": "Incorrect. This adds the change in \\(f(x)\\), \\(32 - 14 = 18\\), to the \\(x\\)-value 4; the change in \\(x\\) is the change in \\(f(x)\\) divided by the slope.",
+    "D": "Correct. \\(f(x) = 3x + 2\\), and \\(f(10) = 32\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nr = figure['rows']\nm = Rational(int(r[1][1]) - int(r[0][1]), int(r[1][0]) - int(r[0][0]))\nf = int(r[0][1]) + m*(x - int(r[0][0]))\nsol = solve(Eq(f, int(r[2][1])), x)\nassert r[2][0] == 'k' and sol == [10]\nans = sol[0]\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

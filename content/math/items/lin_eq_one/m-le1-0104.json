@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0104",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A tailor in Dhaka charges 350 taka to stitch each shirt and adds a single delivery charge of 150 taka to an order. Rafiq's order cost 2,600 taka in total. How many shirts were in Rafiq's order?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7"
+  ],
+  "solution": [
+    "Let \\(s\\) be the number of shirts: \\(350s + 150 = 2{,}600\\).",
+    "Subtract 150: \\(350s = 2{,}450\\).",
+    "Divide by 350: \\(s = 7\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "s = symbols('s')\nsol = solve(Eq(350*s + 150, 2600), s)\nassert sol == [7]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

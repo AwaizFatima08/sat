@@ -1,0 +1,59 @@
+{
+  "id": "m-cir-0531",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, the line \\(3x + 4y = 20\\) intersects the circle \\(x^{2} + y^{2} = r^{2}\\), where \\(r\\) is a positive constant, at exactly one point. What is the value of \\(r\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(16\\)",
+    "B": "\\(\\frac{20}{7}\\)",
+    "C": "\\(20\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Meeting at exactly one point means the line is tangent, so \\(r\\) equals the distance from the center \\((0, 0)\\) to the line.",
+    "Distance \\(= \\frac{|3(0) + 4(0) - 20|}{\\sqrt{3^{2} + 4^{2}}} = \\frac{20}{5} = 4\\).",
+    "(Or substitute \\(y = \\frac{20 - 3x}{4}\\) into the circle and set the discriminant of the quadratic to 0.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(r^{2}\\); the question asks for \\(r\\).",
+    "B": "Incorrect. This divides by \\(3 + 4\\) instead of \\(\\sqrt{3^{2} + 4^{2}} = 5\\).",
+    "C": "Incorrect. This uses the numerator 20 without dividing by \\(\\sqrt{3^{2} + 4^{2}}\\).",
+    "D": "Correct. The distance from the origin to the line is \\(\\frac{20}{5} = 4\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_formula",
+    "C": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nx,r=symbols('x r',positive=True)\nq=Poly(expand(x**2+((20-3*x)/4)**2-r**2),x)\ns=solve(Eq(discriminant(q),0),r)\nassert s==[4]\nans=s[0]\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

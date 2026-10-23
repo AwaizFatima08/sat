@@ -1,0 +1,106 @@
+{
+  "id": "m-lat-0504",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the figure, point \\(D\\) lies on the extension of \\(\\overline{BC}\\). What is the value of \\(x\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        1.937,
+        7.23
+      ],
+      "B": [
+        0,
+        0
+      ],
+      "C": [
+        7,
+        0
+      ],
+      "D": [
+        11,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "D"
+      ],
+      [
+        "C",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          2.198,
+          5.753
+        ],
+        "text": "50°"
+      },
+      {
+        "at": [
+          0.952,
+          0.731
+        ],
+        "text": "x°"
+      },
+      {
+        "at": [
+          7.6,
+          1.153
+        ],
+        "text": "125°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "75"
+  ],
+  "solution": [
+    "An exterior angle of a triangle equals the sum of the two interior angles that are not next to it.",
+    "\\(125 = 50 + x\\), so \\(x = 75\\).",
+    "Check: angle \\(ACB = 180 - 125 = 55^{\\circ}\\), and \\(50 + 75 + 55 = 180\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['B'][1]==P['C'][1]==P['D'][1]\nassert abs(ang('A','C','D')-125)<0.1 and abs(ang('B','A','C')-50)<0.1\nans=125-50\nassert abs(ang('A','B','C')-ans)<0.1\nassert Rational(spr_answers[0])==ans==75\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "75",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

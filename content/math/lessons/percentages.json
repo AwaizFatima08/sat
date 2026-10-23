@@ -1,0 +1,145 @@
+{
+  "type": "percentages",
+  "title": "Percentages",
+  "what_is_tested": "Percent questions ask you to find a percent of a number, a percent increase or decrease, an original value before a change, or the result of several changes in a row. They appear as word problems, tables and graphs, and they reward writing every change as a multiplier.",
+  "how_to_spot": "Look for the % sign or the words percent, discount, tax, markup, \"increased by\", \"decreased by\", \"percent greater than\", or a question about the original value.",
+  "method": [
+    "Turn each percent into a decimal: \\(35\\%\\) is 0.35.",
+    "Percent of a number: multiply, for example \\(0.35 \\times 640\\).",
+    "Percent change: divide the change by the original (starting) value, then multiply by 100.",
+    "Write each change as a multiplier: an increase of \\(5\\%\\) multiplies by 1.05, a decrease of \\(20\\%\\) multiplies by 0.80.",
+    "For several changes, multiply the multipliers; to go back to an original value, divide by the multiplier."
+  ],
+  "pitfalls": [
+    "Dividing by the new value instead of the original value when finding a percent change.",
+    "Adding or subtracting percents for changes in a row: a \\(20\\%\\) rise followed by a \\(10\\%\\) fall is not a \\(10\\%\\) rise.",
+    "Undoing an increase by taking the same percent off the new value: to undo \\(+15\\%\\), divide by 1.15.",
+    "Giving the amount of the change when the question asks for the new value, or the other way around."
+  ],
+  "calculator": "The Scientific tab is quick for multipliers such as \\(25{,}000 \\times 0.9 \\times 1.18\\). For repeated growth, type a power directly, such as \\(625 \\times 1.2^{2}\\).",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: percent of a number",
+      "steps": [
+        "Change the percent to a decimal by dividing by 100.",
+        "Multiply the decimal by the whole amount.",
+        "If the question asks for the rest, or for a price after a discount, subtract from the whole (or multiply by 1 minus the decimal).",
+        "Check: for a percent under 100, the part must be smaller than the whole."
+      ],
+      "worked_example": {
+        "stem": "A school has 450 students. Of these students, \\(24\\%\\) take a bus to school. How many of the students do not take a bus to school?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(108\\)",
+          "B": "\\(342\\)",
+          "C": "\\(426\\)",
+          "D": "\\(558\\)"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "\\(24\\% = 0.24\\), so \\(0.24 \\times 450 = 108\\) students take a bus.",
+          "The question asks for the students who do not: \\(450 - 108 = 342\\). In one step: \\(0.76 \\times 450 = 342\\).",
+          "Choice B is correct. Choice A, 108, is the number who do take a bus, so it answers a different question. Choice C subtracts 24 as if it were a number of students rather than a percent, and choice D adds 108 instead of subtracting."
+        ],
+        "verify": "bus = Rational(24, 100)*450\nassert bus == 108\nassert value(choices[answer]) == 450 - bus == Rational(76, 100)*450\nassert all(value(choices[k]) != 342 for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-pct-0001",
+        "m-pct-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: percent increase and decrease",
+      "steps": [
+        "Find the change: new value minus original value.",
+        "Divide the change by the original value (the \"from\" number).",
+        "Multiply by 100 to turn the decimal into a percent.",
+        "Check with a multiplier: the original times (1 + percent/100) should give the new value."
+      ],
+      "worked_example": {
+        "stem": "At a market in Multan, the price of 1 kilogram of mangoes rose from 250 rupees to 290 rupees. The price increased by \\(p\\%\\). What is the value of \\(p\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "16"
+        ],
+        "walkthrough": [
+          "Change: \\(290 - 250 = 40\\) rupees.",
+          "Divide by the original price: \\(\\frac{40}{250} = 0.16\\).",
+          "Multiply by 100: \\(p = 16\\). Check: \\(250 \\times 1.16 = 290\\).",
+          "Trap: dividing by the new price, \\(\\frac{40}{290} \\approx 0.138\\), gives about 13.8. That is wrong because a percent change is measured from the starting value."
+        ],
+        "verify": "p = Rational(290 - 250, 250)*100\nassert p == 16 and 250*(1 + p/100) == 290\nassert [Rational(s) for s in spr_answers] == [p]"
+      },
+      "tryit": [
+        "m-pct-0003",
+        "m-pct-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: finding the original value",
+      "steps": [
+        "Write the change as a multiplier: up 15% is 1.15, down 20% is 0.80.",
+        "Write the equation: original value × multiplier = new value.",
+        "Divide the new value by the multiplier to get the original value.",
+        "Check by applying the change to your answer."
+      ],
+      "worked_example": {
+        "stem": "After its membership grew by \\(15\\%\\), a community gym has 690 members. How many members did the gym have before the increase?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(586.5\\)",
+          "B": "\\(600\\)",
+          "C": "\\(675\\)",
+          "D": "\\(793.5\\)"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "A \\(15\\%\\) increase multiplies by 1.15, so if \\(m\\) is the original number of members, \\(1.15m = 690\\).",
+          "Divide: \\(m = 690 \\div 1.15 = 600\\). On the Scientific tab, type 690/1.15.",
+          "Check: \\(600 \\times 1.15 = 690\\). Choice B is correct.",
+          "Choice A takes \\(15\\%\\) off 690 (\\(690 \\times 0.85 = 586.5\\)). That is wrong because the \\(15\\%\\) was a percent of the original number, not of 690. Choice C subtracts 15 members instead of \\(15\\%\\), and choice D increases 690 again."
+        ],
+        "verify": "m = symbols('m')\norig = solve(Eq(Rational(115, 100)*m, 690), m)\nassert orig == [600]\nassert value(choices[answer]) == 600\nassert all(value(choices[k]) != 600 for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-pct-0005",
+        "m-pct-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: changes in a row",
+      "steps": [
+        "Turn every change into a multiplier, in order.",
+        "Multiply the multipliers to get one overall multiplier; the starting number does not matter.",
+        "Read the overall change: 1.08 means 8% greater, and 0.96 means 4% less.",
+        "If a final value is given, divide it by the overall multiplier to go back to the start."
+      ],
+      "worked_example": {
+        "stem": "The population of a town increased by \\(20\\%\\) from 2010 to 2015 and then decreased by \\(10\\%\\) from 2015 to 2020. The town's population in 2020 was \\(k\\%\\) greater than its population in 2010. What is the value of \\(k\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "8"
+        ],
+        "walkthrough": [
+          "Multipliers: 1.20 for the increase and 0.90 for the decrease.",
+          "Overall multiplier: \\(1.20 \\times 0.90 = 1.08\\).",
+          "A multiplier of 1.08 means the 2020 population is \\(108\\%\\) of the 2010 population, so \\(k = 8\\).",
+          "Trap: \\(20 - 10 = 10\\) adds the percents, but the \\(10\\%\\) decrease is taken from the larger 2015 population, so it removes more people than \\(10\\%\\) of the 2010 population would."
+        ],
+        "verify": "overall = Rational(120, 100)*Rational(90, 100)\nk = (overall - 1)*100\nassert k == 8\nassert [Rational(s) for s in spr_answers] == [k]"
+      },
+      "tryit": [
+        "m-pct-0007",
+        "m-pct-0008"
+      ]
+    }
+  ]
+}

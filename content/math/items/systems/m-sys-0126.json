@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0126",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[6x - 9y = c\\] \\[2x - 3y = 5\\] In the system of equations above, \\(c\\) is a constant. If the system has infinitely many solutions, what is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(30\\)",
+    "B": "\\(-15\\)",
+    "C": "\\(5\\)",
+    "D": "\\(15\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The system has infinitely many solutions only if one equation is a multiple of the other.",
+    "The left side \\(6x - 9y\\) is 3 times \\(2x - 3y\\).",
+    "So the right side must also be 3 times 5: \\(c = 15\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This multiplies 5 by 6, the coefficient of \\(x\\), instead of by the factor 3 that relates the two equations.",
+    "B": "Incorrect. This multiplies 5 by \\(-3\\) instead of 3; with \\(c = -15\\) the lines are parallel and the system has no solution.",
+    "C": "Incorrect. This keeps the same constant without scaling it; with \\(c = 5\\) the lines are parallel and the system has no solution.",
+    "D": "Correct. The first equation is 3 times the second exactly when \\(c = 3(5) = 15\\), so both describe the same line."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx, y, c = symbols('x y c')\nok = [cv for cv in (-15, 5, 15, 30) if len(linsolve([6*x - 9*y - cv, 2*x - 3*y - 5], [x, y]).free_symbols) > 0]\nassert ok == [15]\nassert value(choices[answer]) == 15\nassert all(value(choices[k]) != 15 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

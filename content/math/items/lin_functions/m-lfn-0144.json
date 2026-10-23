@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0144",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A utility company charges a fixed monthly fee plus a fixed amount for each kilowatt-hour of electricity used. The monthly charge \\(C\\), in dollars, for \\(k\\) kilowatt-hours is \\(C(k) = 0.14k + 18\\). A household's charge was 60 dollars in February and 81 dollars in March. How many more kilowatt-hours of electricity did the household use in March than in February?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "150"
+  ],
+  "solution": [
+    "The charges differ by \\(81 - 60 = 21\\) dollars, and the fixed fee is the same both months.",
+    "Each kilowatt-hour costs 0.14 dollar, so the difference is \\(\\frac{21}{0.14} = 150\\) kilowatt-hours."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "k = symbols('k')\nC = Rational(14, 100)*k + 18\nfeb = solve(Eq(C, 60), k)[0]\nmar = solve(Eq(C, 81), k)[0]\nassert (feb, mar) == (300, 450)\nassert [Rational(s) for s in spr_answers] == [mar - feb] == [150]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "150",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

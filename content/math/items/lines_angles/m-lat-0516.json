@@ -1,0 +1,122 @@
+{
+  "id": "m-lat-0516",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the figure, line \\(CD\\) is parallel to line \\(EF\\). Point \\(A\\) lies on line \\(CD\\), and point \\(B\\) lies on line \\(EF\\). What is the value of \\(x\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "C": [
+        -3,
+        5
+      ],
+      "D": [
+        9,
+        5
+      ],
+      "E": [
+        -3,
+        0
+      ],
+      "F": [
+        9,
+        0
+      ],
+      "A": [
+        0,
+        5
+      ],
+      "B": [
+        0.84,
+        0
+      ],
+      "P": [
+        3.277,
+        2.706
+      ]
+    },
+    "segments": [
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "A",
+        "P"
+      ],
+      [
+        "P",
+        "B"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.431,
+          4.549
+        ],
+        "text": "35°"
+      },
+      {
+        "at": [
+          2.211,
+          0.61
+        ],
+        "text": "48°"
+      },
+      {
+        "at": [
+          2.382,
+          2.604
+        ],
+        "text": "x°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "83"
+  ],
+  "solution": [
+    "Draw a line through \\(P\\) parallel to the two given lines. It splits angle \\(APB\\) into two parts.",
+    "The upper part is an alternate interior angle with the \\(35^{\\circ}\\) angle, and the lower part is an alternate interior angle with the \\(48^{\\circ}\\) angle.",
+    "\\(x = 35 + 48 = 83\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['C'][1]==P['D'][1] and P['E'][1]==P['F'][1]\nassert abs(ang('D','A','P')-35)<0.1 and abs(ang('F','B','P')-48)<0.1\nans=35+48\nassert abs(ang('A','P','B')-ans)<0.1\nassert Rational(spr_answers[0])==ans==83\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "83",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

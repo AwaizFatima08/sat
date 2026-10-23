@@ -1,0 +1,68 @@
+{
+  "id": "m-ovd-0512",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A bakery recorded the number of wedding cakes it sold each day for 10 days. The table shows the results. What is the mean number of wedding cakes sold per day?",
+  "figure": {
+    "kind": "table",
+    "title": "Wedding cakes sold",
+    "columns": [
+      "Cakes sold in a day",
+      "Number of days"
+    ],
+    "rows": [
+      [
+        "3",
+        "2"
+      ],
+      [
+        "4",
+        "3"
+      ],
+      [
+        "5",
+        "4"
+      ],
+      [
+        "6",
+        "1"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "22/5"
+  ],
+  "solution": [
+    "Total cakes: \\(3 \\cdot 2 + 4 \\cdot 3 + 5 \\cdot 4 + 6 \\cdot 1 = 6 + 12 + 20 + 6 = 44\\).",
+    "There are 10 days, so the mean is \\(\\frac{44}{10} = 4.4\\)."
+  ],
+  "verify": "f = [(int(a), int(b)) for a, b in figure['rows']]\nn = sum(b for a, b in f)\nassert n == 10\nr = Rational(sum(a * b for a, b in f), n)\nassert r == Rational(22, 5)\nassert Rational(spr_answers[0]) == r and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "4.4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

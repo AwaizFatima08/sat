@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0142",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The original price of a jacket is \\(p\\) dollars. Store A sells the jacket for 20% off the original price and then subtracts a \\$6 coupon. Store B subtracts \\$10 from the original price and then takes 15% off that reduced price. For what value of \\(p\\) are the final prices at the two stores equal?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(104\\)",
+    "B": "\\(74\\)",
+    "C": "\\(80\\)",
+    "D": "\\(50\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Store A's price is \\(0.8p - 6\\). Store B's price is \\(0.85(p - 10) = 0.85p - 8.5\\).",
+    "Set them equal: \\(0.8p - 6 = 0.85p - 8.5\\), so \\(2.5 = 0.05p\\).",
+    "Then \\(p = 50\\). Check: both stores charge \\$34."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of reversing the order of both discounts: \\(0.8(p - 6) = 0.85p - 10\\).",
+    "B": "Incorrect. This is the result of subtracting the \\$6 at Store A before taking 20% off: \\(0.8(p - 6) = 0.85(p - 10)\\).",
+    "C": "Incorrect. This is the result of taking 15% off at Store B before subtracting \\$10: \\(0.8p - 6 = 0.85p - 10\\).",
+    "D": "Correct. \\(0.8p - 6 = 0.85(p - 10)\\) gives \\(p = 50\\), and both final prices are \\$34."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_formula",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\np = symbols('p')\ns = solve(Eq(Rational(4, 5)*p - 6, Rational(17, 20)*(p - 10)), p)[0]\nassert s == 50\nassert Rational(4, 5)*s - 6 == 34\nassert solve(Eq(Rational(4, 5)*(p - 6), Rational(17, 20)*(p - 10)), p) == [74]\nassert solve(Eq(Rational(4, 5)*p - 6, Rational(17, 20)*p - 10), p) == [80]\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

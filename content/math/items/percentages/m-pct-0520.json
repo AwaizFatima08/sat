@@ -1,0 +1,43 @@
+{
+  "id": "m-pct-0520",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(0.4\\%\\) of \\(k\\) is 6, what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1500"
+  ],
+  "solution": [
+    "Write \\(0.4\\%\\) as a decimal: \\(0.004\\). So \\(0.004k = 6\\).",
+    "Divide: \\(k = \\frac{6}{0.004} = 1{,}500\\)."
+  ],
+  "verify": "k = symbols('k')\nsol = solve(Eq(Rational(4, 1000) * k, 6), k)\nassert sol == [1500]\nv = sol[0]\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == v",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "1500",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

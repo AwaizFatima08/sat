@@ -1,0 +1,83 @@
+{
+  "id": "m-sys-0006",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The table shows the total fare, in dollars, for rides of different distances with two taxi companies. For each company, the fare is a linear function of the distance. For what distance, in miles, would the two companies charge the same fare?",
+  "figure": {
+    "kind": "table",
+    "title": "Taxi fares (dollars)",
+    "columns": [
+      "Distance (miles)",
+      "Company A",
+      "Company B"
+    ],
+    "rows": [
+      [
+        "2",
+        "9",
+        "10.5"
+      ],
+      [
+        "6",
+        "19",
+        "17.5"
+      ],
+      [
+        "10",
+        "29",
+        "24.5"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(4\\)",
+    "C": "\\(6\\)",
+    "D": "\\(14\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Company A: the fare rises \\(\\frac{19 - 9}{6 - 2} = 2.5\\) dollars per mile, so the fare is \\(2.5d + 4\\).",
+    "Company B: the fare rises \\(\\frac{17.5 - 10.5}{6 - 2} = 1.75\\) dollars per mile, so the fare is \\(1.75d + 7\\).",
+    "Set them equal: \\(2.5d + 4 = 1.75d + 7\\), so \\(0.75d = 3\\) and \\(d = 4\\). (Both fares are then \\$14.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(7 - 4\\), the difference between the fixed parts of the fares; it still has to be divided by the difference in the rates, 0.75.",
+    "B": "Correct. The fares are \\(2.5d + 4\\) and \\(1.75d + 7\\), which are equal when \\(0.75d = 3\\), so \\(d = 4\\).",
+    "C": "Incorrect. At 6 miles the fares in the table are already different (\\$19 and \\$17.5); company B has become cheaper.",
+    "D": "Incorrect. This is the fare, in dollars, when the two companies charge the same, not the distance."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "misread_graph",
+    "D": "wrong_quantity"
+  },
+  "verify": "d = symbols('d')\nr = [[Rational(c) for c in row] for row in figure['rows']]\nfare = lambda j: r[0][j] + (r[1][j] - r[0][j])/(r[1][0] - r[0][0])*(d - r[0][0])\nassert all(fare(j).subs(d, row[0]) == row[j] for j in (1, 2) for row in r)\nsol = solve(Eq(fare(1), fare(2)), d)\nassert sol == [4] and fare(1).subs(d, 4) == 14\nassert value(choices[answer]) == 4\nassert all(value(choices[k]) != 4 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

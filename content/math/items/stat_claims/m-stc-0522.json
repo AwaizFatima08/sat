@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0522",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Two high schools in the same city want to know whether a new reading program improves reading scores. School X used the new program with all of its ninth graders for one year, and School Y did not. At the end of the year, School X's ninth graders had a higher average reading score than School Y's ninth graders. Which of the following is the main reason this result does not show that the program caused the higher scores?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The study should have used more than two teachers at each school.",
+    "B": "Reading scores from two different schools can never be compared.",
+    "C": "The students at the two schools may differ in other ways, such as earlier reading skill, so the program's effect cannot be separated from the effect of the school.",
+    "D": "If the students had been randomly assigned to the program, no conclusion about the program would be possible."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The program was given to a whole school, so every student who got it also attended School X.",
+    "Any other difference between the schools (students' earlier skills, teachers, resources) is mixed up with the program: the school is a confounding variable. Randomly assigning students to the program would remove this problem."
+  ],
+  "explanation": {
+    "A": "Incorrect. The number of teachers is not the issue; the program is confounded with the school.",
+    "B": "Incorrect. Scores can be compared; the comparison just cannot show cause and effect here.",
+    "C": "Correct. Because the program and the school go together, other differences between the schools could explain the result.",
+    "D": "Incorrect. Random assignment is exactly what would allow a cause-and-effect conclusion."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\ndesign = {'random_assignment': False, 'treatment_tied_to_school': True}\nassert design['treatment_tied_to_school'] and not design['random_assignment']\nok = [k for k, v in choices.items() if 'differ in other ways' in v]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

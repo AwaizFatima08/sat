@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0520",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "One solution to the equation \\(x^{2} - 10x + c = 0\\), where \\(c\\) is a constant, is \\(x = 3\\). What is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "21"
+  ],
+  "solution": [
+    "Substitute \\(x = 3\\): \\(3^{2} - 10(3) + c = 0\\).",
+    "Simplify: \\(9 - 30 + c = 0\\), so \\(c = 21\\).",
+    "Check: \\(x^{2} - 10x + 21 = (x - 3)(x - 7)\\), which has \\(3\\) as a solution."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, c = symbols('x c')\ncv = solve(Eq((x**2 - 10*x + c).subs(x, 3), 0), c)\nassert cv == [21]\nassert 3 in solve(x**2 - 10*x + cv[0], x)\nassert [Rational(a) for a in spr_answers] == cv",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "21",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

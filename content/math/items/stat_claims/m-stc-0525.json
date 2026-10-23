@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0525",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In an observational study, the participants were selected at random from population Q. The study found a positive association between variable \\(x\\) and variable \\(y\\). Which of the following statements is best supported by the study?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Members of population Q with greater values of \\(x\\) tend to have greater values of \\(y\\).",
+    "B": "For members of population Q, increasing \\(y\\) causes \\(x\\) to increase.",
+    "C": "Every member of population Q with a greater value of \\(x\\) has a greater value of \\(y\\).",
+    "D": "For members of population Q, increasing \\(x\\) causes \\(y\\) to increase."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Random selection from Q means the association can be generalized to Q.",
+    "An observational study shows only an association, and an association describes a tendency, not a rule for every member."
+  ],
+  "explanation": {
+    "A": "Correct. A positive association generalized to Q means greater \\(x\\) values tend to go with greater \\(y\\) values.",
+    "B": "Incorrect. It cannot show that \\(y\\) causes \\(x\\) either; this is still a causal claim.",
+    "C": "Incorrect. A positive association is a general tendency; some individual members may not follow it.",
+    "D": "Incorrect. An observational study cannot show that \\(x\\) causes \\(y\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nclaims = {'A': 'cause', 'B': 'cause', 'C': 'every', 'D': 'tend'}\nok = [k for k, v in claims.items() if v == 'tend']\nassert ok == [answer]\nassert 'tend to' in choices[answer] and 'cause' not in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

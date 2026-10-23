@@ -1,0 +1,59 @@
+{
+  "id": "m-rtt-0531",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(ABC\\), angle \\(C\\) is a right angle and \\(\\sin A = k\\). Which expression is equal to \\(\\tan B\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\sqrt{1 - k^{2}}\\)",
+    "B": "\\(\\frac{k}{\\sqrt{1 - k^{2}}}\\)",
+    "C": "\\(\\frac{1}{k}\\)",
+    "D": "\\(\\frac{\\sqrt{1 - k^{2}}}{k}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(AB = 1\\) and \\(BC = k\\) (opposite \\(A\\)). Then \\(AC = \\sqrt{1 - k^{2}}\\).",
+    "For angle \\(B\\), the opposite leg is \\(AC\\) and the adjacent leg is \\(BC\\).",
+    "\\(\\tan B = \\frac{AC}{BC} = \\frac{\\sqrt{1 - k^{2}}}{k}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\cos A\\), which equals \\(\\sin B\\); it still must be divided by \\(\\cos B = k\\).",
+    "B": "Incorrect. This is \\(\\tan A\\), the reciprocal of \\(\\tan B\\).",
+    "C": "Incorrect. This is \\(\\frac{AB}{BC}\\), hypotenuse over a leg, not a tangent.",
+    "D": "Correct. \\(\\tan B = \\frac{\\sin B}{\\cos B} = \\frac{\\cos A}{\\sin A} = \\frac{\\sqrt{1 - k^{2}}}{k}\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "reciprocal",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nk=Symbol('k')\nok=lambda e: all(simplify(e.subs(k,v)-tan(pi/2-asin(v)))==0 for v in (Rational(3,5),Rational(5,13)))\nassert ok(value(choices[answer]))\nassert not any(ok(value(choices[c])) for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

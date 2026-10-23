@@ -1,0 +1,83 @@
+{
+  "id": "m-tvd-0527",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A ride-hailing company in Lahore used data from past trips to model the fare \\(y\\), in rupees, for a trip of \\(x\\) kilometers. For auto-rickshaws, the line of best fit is \\(y = 40x + 100\\). For cars, the line of best fit is \\(y = 30x + 250\\). For what trip distance, in kilometers, do the two models predict the same fare?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      0,
+      25
+    ],
+    "y": [
+      0,
+      1100
+    ],
+    "curves": [
+      {
+        "expr": "40*x + 100",
+        "label": "Auto-rickshaw"
+      },
+      {
+        "expr": "30*x + 250",
+        "label": "Car"
+      }
+    ],
+    "points": [],
+    "segments": [],
+    "x_label": "Distance (kilometers)",
+    "y_label": "Fare (rupees)"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(700\\)",
+    "C": "\\(35\\)",
+    "D": "\\(15\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Set the two predictions equal: \\(40x + 100 = 30x + 250\\).",
+    "Subtract \\(30x\\) and 100 from both sides: \\(10x = 150\\), so \\(x = 15\\) kilometers.",
+    "(Both models then predict a fare of 700 rupees.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds the slopes instead of subtracting them: \\(70x = 350\\). The \\(x\\)-terms must be collected on one side.",
+    "B": "Incorrect. This is the fare both models predict at 15 kilometers, not the distance.",
+    "C": "Incorrect. This adds 100 to 250 instead of subtracting it: \\(10x = 350\\).",
+    "D": "Correct. \\(40x + 100 = 30x + 250\\) gives \\(10x = 150\\), so \\(x = 15\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_quantity",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nc = figure['curves']\nsol = solve(Eq(sympify(c[0]['expr']), sympify(c[1]['expr'])), x)\nassert sol == [15]\nassert value(choices[answer]) == 15\nassert all(value(choices[k]) != 15 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

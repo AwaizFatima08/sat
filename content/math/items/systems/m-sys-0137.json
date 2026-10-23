@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0137",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Marisol invested a total of \\$8,000 in two accounts. One account earns 3% simple interest per year, and the other earns 5% simple interest per year. After one year, the two accounts together earned \\$310 in interest. How much money, in dollars, did Marisol invest in the account that earns 5%?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3{,}500\\)",
+    "B": "\\(6{,}200\\)",
+    "C": "\\(7{,}750\\)",
+    "D": "\\(4{,}500\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(p\\) and \\(q\\) be the amounts in the 3% and 5% accounts: \\(p + q = 8{,}000\\) and \\(0.03p + 0.05q = 310\\).",
+    "Substitute \\(p = 8{,}000 - q\\): \\(240 - 0.03q + 0.05q = 310\\), so \\(0.02q = 70\\).",
+    "So \\(q = 3{,}500\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\$4,500 at 3% earns \\$135 and \\$3,500 at 5% earns \\$175, for a total of \\$310.",
+    "B": "Incorrect. This is \\(310 \\div 0.05\\), which assumes all of the interest came from the 5% account.",
+    "C": "Incorrect. This is \\(310 \\div 0.04\\), which uses the average of the two rates for all of the money.",
+    "D": "Incorrect. This is the amount invested in the 3% account, not the 5% account."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\np, q = symbols('p q')\nsol = solve([p + q - 8000, Rational(3, 100)*p + Rational(5, 100)*q - 310], [p, q])\nassert sol == {p: 4500, q: 3500}\nassert value(choices[answer]) == 3500\nassert all(value(choices[k]) != 3500 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

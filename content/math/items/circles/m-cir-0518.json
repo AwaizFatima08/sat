@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0518",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The equation \\((x - 1)^{2} + (y + 4)^{2} = 25\\) represents a circle in the \\(xy\\)-plane. Which of the following points lies on the circle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((6, 1)\\)",
+    "B": "\\((1, -4)\\)",
+    "C": "\\((2, 0)\\)",
+    "D": "\\((4, 0)\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "A point lies on the circle when its coordinates make the equation true.",
+    "For \\((4, 0)\\): \\((4 - 1)^{2} + (0 + 4)^{2} = 9 + 16 = 25\\). The point is on the circle."
+  ],
+  "explanation": {
+    "A": "Incorrect. This moves 5 units right and 5 units up from the center, which is \\(\\sqrt{50}\\) away, not 5: \\(25 + 25 = 50\\).",
+    "B": "Incorrect. \\((1, -4)\\) is the center of the circle, not a point on it.",
+    "C": "Incorrect. \\((2 - 1)^{2} + (0 + 4)^{2} = 17\\). This point works only if the signs are reversed, as in \\((x + 1)^{2} + (y - 4)^{2}\\).",
+    "D": "Correct. \\(3^{2} + 4^{2} = 25\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nf=lambda p: (p[0]-1)**2+(p[1]+4)**2\nassert f(value(choices[answer]))==25\nassert all(f(value(choices[k]))!=25 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

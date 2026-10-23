@@ -1,0 +1,47 @@
+{
+  "id": "m-nle-0164",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What is the sum of all distinct real solutions to the equation \\((x^{2} - 4x)^{2} - 17(x^{2} - 4x) + 60 = 0\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "Let \\(u = x^{2} - 4x\\). Then \\(u^{2} - 17u + 60 = 0\\), so \\((u - 5)(u - 12) = 0\\), and \\(u = 5\\) or \\(u = 12\\).",
+    "\\(x^{2} - 4x = 5\\) gives \\((x - 5)(x + 1) = 0\\), so \\(x = 5\\) or \\(x = -1\\).",
+    "\\(x^{2} - 4x = 12\\) gives \\((x - 6)(x + 2) = 0\\), so \\(x = 6\\) or \\(x = -2\\).",
+    "The four solutions are distinct, and their sum is \\(5 + (-1) + 6 + (-2) = 8\\). (Each pair has sum 4.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nsols = {s for s in solve((x**2 - 4*x)**2 - 17*(x**2 - 4*x) + 60, x) if s.is_real}\nassert sols == {-2, -1, 5, 6}\nassert [Rational(a) for a in spr_answers] == [sum(sols)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "m-ovd-0001",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The dot plot shows the number of books each of 11 students read during summer vacation. What is the median number of books read?",
+  "figure": {
+    "kind": "dotplot",
+    "x_label": "Number of books read",
+    "values": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      3,
+      4,
+      4,
+      5,
+      6,
+      9
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1\\)",
+    "B": "\\(3\\)",
+    "C": "\\(5\\)",
+    "D": "\\(8\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "There are 11 values, so the median is the 6th value when the values are in order.",
+    "In order: 1, 1, 1, 2, 2, 3, 4, 4, 5, 6, 9. The 6th value is 3."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the mode, the value that occurs most often, not the median.",
+    "B": "Correct. With 11 values in order, the 6th value is the middle one, and it is 3.",
+    "C": "Incorrect. This is the middle of the scale from 1 to 9, \\(\\frac{1 + 9}{2} = 5\\). The median is the middle data value, not the middle of the range of values.",
+    "D": "Incorrect. This is the range, \\(9 - 1 = 8\\), not the median."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "v = sorted(figure['values'])\nassert len(v) == 11\nmed = v[5]\nassert med == 3\nassert value(choices[answer]) == med\nassert all(value(choices[k]) != med for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-lfn-0161",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = kx - 2k + 5\\), where \\(k\\) is a constant. For every value of \\(k\\), the graph of \\(y = f(x)\\) in the \\(xy\\)-plane passes through which of the following points?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((-2, 5)\\)",
+    "B": "\\((2, 5)\\)",
+    "C": "\\((0, 5)\\)",
+    "D": "\\((5, 2)\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Factor the terms with \\(k\\): \\(f(x) = k(x - 2) + 5\\).",
+    "When \\(x = 2\\), \\(k(x - 2) = 0\\) for every \\(k\\), so \\(f(2) = 5\\).",
+    "So every graph passes through \\((2, 5)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(f(-2) = -4k + 5\\), which equals 5 only when \\(k = 0\\); the sign of the 2 was reversed.",
+    "B": "Correct. \\(f(x) = k(x - 2) + 5\\), so \\(f(2) = 5\\) no matter what \\(k\\) is.",
+    "C": "Incorrect. \\(f(0) = -2k + 5\\), which depends on \\(k\\); the graph passes through \\((0, 5)\\) only when \\(k = 0\\).",
+    "D": "Incorrect. This switches the coordinates. \\(f(5) = 3k + 5\\), which is 2 only when \\(k = -1\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx, k = symbols('x k')\nf = k*x - 2*k + 5\npts = {key: value(choices[key]) for key in choices}\nalways = [key for key, (a, b) in pts.items() if expand(f.subs(x, a) - b) == 0]\nassert always == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

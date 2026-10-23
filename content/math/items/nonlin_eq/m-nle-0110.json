@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0110",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is a solution to the equation \\((x - 2)^{2} = 16\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(18\\)",
+    "B": "\\(-6\\)",
+    "C": "\\(6\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Take the square root of both sides: \\(x - 2 = 4\\) or \\(x - 2 = -4\\).",
+    "So \\(x = 6\\) or \\(x = -2\\). Only \\(6\\) is a choice."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of solving \\(x - 2 = 16\\), without taking the square root.",
+    "B": "Incorrect. This is the result of subtracting \\(2\\) from \\(-4\\) instead of adding it.",
+    "C": "Correct. \\((6 - 2)^{2} = 4^{2} = 16\\).",
+    "D": "Incorrect. This is the value of \\(x - 2\\), not \\(x\\); \\(2\\) still has to be added."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "sign_error",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nsols = solve(Eq((x - 2)**2, 16), x)\nassert sorted(sols) == [-2, 6]\nassert value(choices[answer]) in sols\nassert all(value(choices[k]) not in sols for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

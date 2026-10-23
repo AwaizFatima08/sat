@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0150",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A stack of identical tinted glass sheets reduces the intensity of light passing through it. The intensity of the light, in lux, after it passes through \\(n\\) sheets is modeled by \\(I(n) = 1{,}000(0.8)^{n}\\). What is the least number of sheets the light must pass through for its intensity to be less than 500 lux?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(3\\)",
+    "C": "\\(5\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Evaluate the model: \\(I(3) = 1{,}000(0.512) = 512\\), which is not less than 500.",
+    "\\(I(4) = 1{,}000(0.4096) = 409.6\\), which is less than 500.",
+    "So the least number of sheets is 4."
+  ],
+  "explanation": {
+    "A": "Incorrect. This assumes each sheet removes half of the light. Each sheet keeps \\(80\\%\\), so after 2 sheets the intensity is still 640 lux.",
+    "B": "Incorrect. After 3 sheets the intensity is \\(512\\) lux, which is not yet less than 500.",
+    "C": "Incorrect. The intensity is already below 500 lux after 4 sheets, so 5 is not the least number.",
+    "D": "Correct. \\(I(3) = 512\\) and \\(I(4) = 409.6\\), so 4 sheets is the least number."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "stopped_early",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nn = symbols('n')\nI = Lambda(n, 1000*Rational(8, 10)**n)\nleast = next(m for m in range(20) if I(m) < 500)\nassert least == 4 and I(3) >= 500\nassert value(choices[answer]) == least\nassert all(value(choices[k]) != least for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

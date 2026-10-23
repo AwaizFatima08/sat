@@ -1,0 +1,109 @@
+{
+  "id": "m-rtt-0501",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(ABC\\), what is the length of \\(\\overline{AB}\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        24,
+        0
+      ],
+      "C": [
+        24,
+        10
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          10.6,
+          6.6
+        ],
+        "text": "26"
+      },
+      {
+        "at": [
+          25.2,
+          5
+        ],
+        "text": "10"
+      }
+    ],
+    "right_angles": [
+      "B"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(36\\)",
+    "B": "\\(576\\)",
+    "C": "\\(\\sqrt{776}\\)",
+    "D": "\\(24\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "\\(\\overline{AC}\\) is opposite the right angle, so it is the hypotenuse: \\(AB^{2} + 10^{2} = 26^{2}\\).",
+    "\\(AB^{2} = 676 - 100 = 576\\), so \\(AB = 24\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(26 + 10\\). Side lengths of a right triangle are related through their squares, not by adding the lengths.",
+    "B": "Incorrect. This is \\(AB^{2}\\); the square root still must be taken.",
+    "C": "Incorrect. This is \\(\\sqrt{26^{2} + 10^{2}}\\). Squares of the legs are added only to find the hypotenuse; here \\(\\overline{AC}\\) is the hypotenuse, so subtract.",
+    "D": "Correct. \\(AB = \\sqrt{26^{2} - 10^{2}} = \\sqrt{576} = 24\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "stopped_early",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('A','C')==26 and d('B','C')==10 and abs(ang('A','B','C')-90)<0.1\nans=sqrt(26**2-10**2)\nassert d('A','B')==ans==24\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

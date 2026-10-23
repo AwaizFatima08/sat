@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0501",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A circular flower garden has a radius of 7 meters. A gardener puts a fence around the entire edge of the garden. What is the length of the fence, in meters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(28\\pi\\)",
+    "B": "\\(49\\pi\\)",
+    "C": "\\(7\\pi\\)",
+    "D": "\\(14\\pi\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The fence goes around the edge, so its length is the circumference.",
+    "\\(C = 2\\pi r = 2\\pi(7) = 14\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(2\\pi(14)\\); it uses the diameter, 14, in place of the radius.",
+    "B": "Incorrect. This is \\(\\pi(7)^{2}\\), the area of the garden, not the length of its edge.",
+    "C": "Incorrect. This is \\(\\pi r\\); the circumference is \\(2\\pi r\\), not \\(\\pi r\\).",
+    "D": "Correct. \\(2\\pi(7) = 14\\pi\\)."
+  },
+  "traps": {
+    "A": "radius_diameter",
+    "B": "wrong_formula",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nr=7\nans=2*pi*r\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

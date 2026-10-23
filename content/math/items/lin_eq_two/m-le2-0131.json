@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0131",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(n\\) passes through the midpoint of the segment with endpoints \\((-1, 2)\\) and \\((5, 6)\\), and line \\(n\\) is perpendicular to that segment. Which equation represents line \\(n\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3x - 2y = -2\\)",
+    "B": "\\(3x + 2y = 1\\)",
+    "C": "\\(2x - 3y = -8\\)",
+    "D": "\\(3x + 2y = 14\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The midpoint is \\(\\left(\\frac{-1 + 5}{2}, \\frac{2 + 6}{2}\\right) = (2, 4)\\).",
+    "The segment has slope \\(\\frac{6 - 2}{5 - (-1)} = \\frac{2}{3}\\), so line \\(n\\) has slope \\(-\\frac{3}{2}\\).",
+    "\\(y - 4 = -\\frac{3}{2}(x - 2)\\) gives \\(2y - 8 = -3x + 6\\), so \\(3x + 2y = 14\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This line passes through the midpoint but has slope \\(\\frac{3}{2}\\); a perpendicular slope must have the opposite sign.",
+    "B": "Incorrect. This line has the correct slope but passes through the endpoint \\((-1, 2)\\) instead of the midpoint.",
+    "C": "Incorrect. This line passes through the midpoint but has slope \\(\\frac{2}{3}\\), so it is parallel to the segment.",
+    "D": "Correct. It has slope \\(-\\frac{3}{2}\\) and passes through \\((2, 4)\\): \\(3(2) + 2(4) = 14\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\nmid = (Rational(-1 + 5, 2), Rational(2 + 6, 2))\nms = Rational(6 - 2, 5 + 1)\nsl = lambda s: diff(solve(eq(s), y)[0], x)\nok = [k for k in choices if sl(choices[k])*ms == -1 and eq(choices[k]).subs({x: mid[0], y: mid[1]}) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

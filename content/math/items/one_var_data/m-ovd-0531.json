@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0531",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The data set \\(4, 7, 9, k, 15\\) has a mean equal to its median. Which of the following could be the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9\\)",
+    "B": "\\(12\\)",
+    "C": "\\(5\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The mean is \\(\\frac{35 + k}{5}\\). The median depends on where \\(k\\) falls when the values are put in order.",
+    "If \\(k \\ge 9\\), the order is 4, 7, 9, \\(k\\), 15 (or 4, 7, 9, 15, \\(k\\)) and the median is 9. Then \\(\\frac{35 + k}{5} = 9\\) gives \\(k = 10\\), which is at least 9, so it works.",
+    "Check: 4, 7, 9, 10, 15 has median 9 and mean \\(\\frac{45}{5} = 9\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. With \\(k = 9\\), the median is 9, but the mean is \\(\\frac{44}{5} = 8.8\\).",
+    "B": "Incorrect. With \\(k = 12\\), the median is still 9, but the mean is \\(\\frac{47}{5} = 9.4\\). Keeping the median at 9 is not enough; the mean must also equal 9.",
+    "C": "Incorrect. This comes from leaving \\(k\\) out of the sum: \\(\\frac{35}{5} = 7\\), the median when \\(k\\) is small. With \\(k = 5\\), the mean is \\(\\frac{40}{5} = 8\\), but the median is 7.",
+    "D": "Correct. With \\(k = 10\\), the values in order are 4, 7, 9, 10, 15; the median is 9 and the mean is \\(\\frac{45}{5} = 9\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\ndef ok(k):\n    d = sorted([4, 7, 9, k, 15])\n    return Rational(sum(d), 5) == d[2]\nassert ok(value(choices[answer])) and value(choices[answer]) == 10\nassert not any(ok(value(choices[c])) for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0530",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the inequality \\(5x - c \\le 2x + 7\\), \\(c\\) is a constant. If the solution to the inequality is \\(x \\le 4\\), what is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(-5\\)",
+    "C": "\\(13\\)",
+    "D": "\\(21\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Subtract \\(2x\\) from both sides and add \\(c\\): \\(3x \\le 7 + c\\).",
+    "Divide by 3: \\(x \\le \\frac{7 + c}{3}\\).",
+    "This must be \\(x \\le 4\\), so \\(\\frac{7 + c}{3} = 4\\), which gives \\(7 + c = 12\\) and \\(c = 5\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The inequality becomes \\(x \\le \\frac{7 + c}{3}\\), and \\(\\frac{7 + 5}{3} = 4\\).",
+    "B": "Incorrect. This moves \\(c\\) to the right side without changing its sign, writing \\(3x \\le 7 - c\\); then \\(7 - c = 12\\) gives \\(c = -5\\).",
+    "C": "Incorrect. This ignores the \\(2x\\) on the right side, so that \\(5x \\le 7 + c\\); then \\(20 = 7 + c\\) gives \\(c = 13\\).",
+    "D": "Incorrect. This adds \\(2x\\) to the left side instead of subtracting it, so that \\(7x \\le 7 + c\\); then \\(28 = 7 + c\\) gives \\(c = 21\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\ntarget = Interval(-oo, 4)\nok = [k for k in choices if solve_univariate_inequality(5*x - value(choices[k]) <= 2*x + 7, x, relational=False) == target]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

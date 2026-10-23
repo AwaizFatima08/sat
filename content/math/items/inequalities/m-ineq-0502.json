@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0502",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following values of \\(x\\) is a solution to the inequality \\(10 - 3x > 4\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(3\\)",
+    "C": "\\(2\\)",
+    "D": "\\(1\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Subtract 10 from both sides: \\(-3x > -6\\).",
+    "Divide both sides by \\(-3\\) and reverse the inequality sign: \\(x < 2\\).",
+    "Of the choices, only 1 is less than 2. Check: \\(10 - 3(1) = 7\\), and \\(7 > 4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This comes from dividing \\(-6\\) by \\(-1\\) instead of by \\(-3\\), which gives \\(x < 6\\). But \\(10 - 3(5) = -5\\), which is less than 4.",
+    "B": "Incorrect. This comes from not reversing the sign when dividing by \\(-3\\), which gives \\(x > 2\\). But \\(10 - 3(3) = 1\\), which is less than 4.",
+    "C": "Incorrect. \\(x = 2\\) gives \\(10 - 3(2) = 4\\), which is not greater than 4; the boundary value is not part of a strict inequality.",
+    "D": "Correct. The solution is \\(x < 2\\), and \\(10 - 3(1) = 7\\) is greater than 4."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nS = solve_univariate_inequality(10 - 3*x > 4, x, relational=False)\nassert S == Interval.open(-oo, 2)\nok = [k for k in choices if value(choices[k]) in S]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

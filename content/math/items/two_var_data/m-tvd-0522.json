@@ -1,0 +1,59 @@
+{
+  "id": "m-tvd-0522",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A company models the value \\(V\\), in dollars, of a machine \\(t\\) years after it was bought with the equation \\(V = 48{,}000(0.85)^{t}\\). Which of the following is the best interpretation of the number 0.85 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The value decreases by \\(15\\%\\) each year.",
+    "B": "The value decreases by 0.85 dollar each year.",
+    "C": "The value decreases by \\(85\\%\\) each year.",
+    "D": "The value decreases by \\(15\\%\\) of the purchase price each year."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "In \\(V = 48{,}000(0.85)^{t}\\), each increase of 1 in \\(t\\) multiplies \\(V\\) by 0.85.",
+    "Multiplying by 0.85 keeps \\(85\\%\\) of the value, so the value decreases by \\(100\\% - 85\\% = 15\\%\\) each year.",
+    "The decrease is \\(15\\%\\) of the previous year's value, so the dollar amount of the decrease gets smaller each year."
+  ],
+  "explanation": {
+    "A": "Correct. Multiplying by 0.85 each year leaves \\(85\\%\\) of the value, which is a \\(15\\%\\) decrease each year.",
+    "B": "Incorrect. 0.85 is a multiplier, not an amount subtracted. The model is exponential, not linear.",
+    "C": "Incorrect. 0.85 is the fraction of the value that remains, not the fraction that is lost. An \\(85\\%\\) decrease would be a factor of 0.15.",
+    "D": "Incorrect. This uses the purchase price as the base every year, a constant drop of 7,200 dollars. In the model, each \\(15\\%\\) decrease is taken from the previous year's value: the second-year drop is 6,120 dollars."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "percent_add"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nt = symbols('t')\nV = 48000 * Rational(85, 100)**t\nassert V.subs(t, 2) / V.subs(t, 1) == Rational(85, 100)\nassert 1 - Rational(85, 100) == Rational(15, 100)\nassert V.subs(t, 1) - V.subs(t, 2) != Rational(15, 100) * 48000\nassert choices[answer] == r\"The value decreases by \\(15\\%\\) each year.\"",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

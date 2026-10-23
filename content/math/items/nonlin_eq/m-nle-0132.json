@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0132",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The seats in a hall are arranged in rows. Each row has the same number of seats, and the number of seats in each row is 8 more than the number of rows. The hall has 345 seats in all. How many rows of seats does the hall have?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "15"
+  ],
+  "solution": [
+    "Let \\(r\\) be the number of rows. Then each row has \\(r + 8\\) seats, so \\(r(r + 8) = 345\\).",
+    "So \\(r^{2} + 8r - 345 = 0\\), which factors as \\((r + 23)(r - 15) = 0\\).",
+    "The number of rows is positive, so \\(r = 15\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r = symbols('r', positive=True)\nsol = solve(Eq(r*(r + 8), 345), r)\nassert sol == [15]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "15",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

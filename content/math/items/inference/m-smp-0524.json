@@ -1,0 +1,46 @@
+{
+  "id": "m-smp-0524",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A forest has 9,000 pine trees. Researchers examined a random sample of 120 of the trees and found that 21 of them were infected with a fungus. The margin of error for the estimated percent of infected trees is 7 percentage points. Based on these results, what is the least plausible number of infected pine trees in the forest?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "945"
+  ],
+  "solution": [
+    "Sample percent: \\(\\frac{21}{120} = 0.175\\), or 17.5%.",
+    "Least plausible percent: \\(17.5 - 7 = 10.5\\%\\).",
+    "Least plausible number: \\(0.105(9{,}000) = 945\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "p = Rational(21, 120)\nlo = (p - Rational(7, 100)) * 9000\nassert lo == 945\nassert [Rational(a) for a in spr_answers] == [lo]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "945",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

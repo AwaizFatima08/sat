@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0142",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[x^{2} + y^{2} = 25\\] \\[y = x + 1\\] Which of the following is a solution \\((x, y)\\) to the system of equations above?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((-3, -4)\\)",
+    "B": "\\((4, 3)\\)",
+    "C": "\\((-3, -2)\\)",
+    "D": "\\((3, 4)\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(y = x + 1\\): \\(x^{2} + (x + 1)^{2} = 25\\), so \\(2x^{2} + 2x - 24 = 0\\).",
+    "Divide by \\(2\\): \\(x^{2} + x - 12 = 0\\), so \\((x + 4)(x - 3) = 0\\) and \\(x = 3\\) or \\(x = -4\\).",
+    "The solutions are \\((3, 4)\\) and \\((-4, -3)\\). Only \\((3, 4)\\) is a choice."
+  ],
+  "explanation": {
+    "A": "Incorrect. This point is on the circle, but \\(-4 \\ne -3 + 1\\); it comes from reversing the signs of the correct solution \\((3, 4)\\).",
+    "B": "Incorrect. This point is on the circle, but \\(3 \\ne 4 + 1\\), so it is not on the line; the coordinates are swapped.",
+    "C": "Incorrect. This is the result of a sign slip in solving \\((x + 4)(x - 3) = 0\\), giving \\(x = -3\\); the point \\((-3, -2)\\) is not on the circle.",
+    "D": "Correct. \\(3^{2} + 4^{2} = 25\\) and \\(4 = 3 + 1\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\ndef pair(s):\n    a, b = s.replace('\\\\(', '').replace('\\\\)', '').strip('() ').split(',')\n    return (value(a), value(b))\nx, y = symbols('x y')\nsols = {(s[x], s[y]) for s in solve([Eq(x**2 + y**2, 25), Eq(y, x + 1)], [x, y], dict=True)}\nassert sols == {(3, 4), (-4, -3)}\nassert pair(choices[answer]) in sols\nassert all(pair(choices[k]) not in sols for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

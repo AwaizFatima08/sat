@@ -1,0 +1,59 @@
+{
+  "id": "m-tvd-0115",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A linear function \\(f\\) and an exponential function \\(g\\) both have the value 50 when \\(x = 0\\) and the value 800 when \\(x = 4\\). What is the value of \\(f(2) - g(2)\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0\\)",
+    "B": "\\(225\\)",
+    "C": "\\(375\\)",
+    "D": "\\(-225\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Linear: \\(f\\) increases by \\(800 - 50 = 750\\) over 4 units, so \\(f(2)\\) is halfway: \\(50 + 375 = 425\\).",
+    "Exponential: \\(g(x) = 50b^{x}\\) with \\(50b^{4} = 800\\), so \\(b^{4} = 16\\) and \\(b = 2\\). Then \\(g(2) = 50(2)^{2} = 200\\).",
+    "\\(f(2) - g(2) = 425 - 200 = 225\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The two functions agree at \\(x = 0\\) and \\(x = 4\\), but not between them: \\(f(2) = 425\\) and \\(g(2) = 200\\).",
+    "B": "Correct. \\(f(2) = 425\\) and \\(g(2) = 200\\), so the difference is 225.",
+    "C": "Incorrect. This is \\(f(2) - f(0) = 425 - 50 = 375\\), the increase in \\(f\\), not the difference between \\(f(2)\\) and \\(g(2)\\).",
+    "D": "Incorrect. This is \\(g(2) - f(2)\\). The linear function is greater at \\(x = 2\\): \\(425 > 200\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_quantity",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nx, b = symbols('x b')\nf = 50 + Rational(800 - 50, 4)*x\nbs = [s for s in solve(Eq(50*b**4, 800), b) if s.is_positive]\nassert bs == [2]\nd = f.subs(x, 2) - 50*2**2\nassert d == 225\nassert value(choices[answer]) == d\nassert all(value(choices[k]) != d for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

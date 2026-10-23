@@ -1,0 +1,59 @@
+{
+  "id": "m-tvd-0537",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The populations of two neighboring towns, in thousands, are modeled by lines of best fit. Town P is modeled by \\(12.4 + 0.3t\\) and Town Q by \\(18.0 - 0.4t\\), where \\(t\\) is the number of years after 2015. What is the least integer value of \\(t\\) for which the model predicts that the population of Town P is more than 2 thousand greater than the population of Town Q?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(11\\)",
+    "C": "\\(10\\)",
+    "D": "\\(8\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Write the condition: \\((12.4 + 0.3t) - (18.0 - 0.4t) > 2\\).",
+    "Simplify: \\(0.7t - 5.6 > 2\\), so \\(0.7t > 7.6\\) and \\(t > \\frac{7.6}{0.7} \\approx 10.86\\).",
+    "The least integer value is \\(t = 11\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This solves \\(0.7t > 2\\), ignoring that Town P starts 5.6 thousand behind Town Q.",
+    "B": "Correct. The difference \\(0.7t - 5.6\\) first exceeds 2 when \\(t > 10.86\\), so the least integer is 11.",
+    "C": "Incorrect. This rounds \\(10.86\\) down. At \\(t = 10\\) the difference is \\(7 - 5.6 = 1.4\\) thousand, not more than 2.",
+    "D": "Incorrect. At \\(t = 8\\) the two models predict the same population. Town P must then gain another 2 thousand."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "arithmetic",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nP = lambda t: Rational(124, 10) + Rational(3, 10)*t\nQ = lambda t: 18 - Rational(4, 10)*t\nt = next(t for t in range(0, 100) if P(t) - Q(t) > 2)\nassert t == 11 and P(8) == Q(8)\nassert value(choices[answer]) == t\nassert all(value(choices[k]) != t for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

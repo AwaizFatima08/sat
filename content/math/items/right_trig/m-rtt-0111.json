@@ -1,0 +1,110 @@
+{
+  "id": "m-rtt-0111",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A straight cable for a cable car in Nepal runs from a lower station to an upper station, as shown. The horizontal distance between the stations is \\(1{,}050\\) meters, and the cable makes an angle of \\(x^{\\circ}\\) with the horizontal, where \\(\\tan x^{\\circ} = \\frac{12}{35}\\). What is the length, in meters, of the cable?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "L": [
+        0,
+        0
+      ],
+      "H": [
+        1050,
+        0
+      ],
+      "U": [
+        1050,
+        360
+      ]
+    },
+    "segments": [
+      [
+        "L",
+        "H"
+      ],
+      [
+        "H",
+        "U"
+      ],
+      [
+        "U",
+        "L"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          525,
+          -45
+        ],
+        "text": "1,050 m"
+      },
+      {
+        "at": [
+          140,
+          22
+        ],
+        "text": "x°"
+      }
+    ],
+    "right_angles": [
+      "H"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3{,}062.5\\)",
+    "B": "\\(360\\)",
+    "C": "\\(1{,}110\\)",
+    "D": "\\(1{,}410\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Rise \\(= 1{,}050 \\tan x^{\\circ} = 1{,}050 \\cdot \\frac{12}{35} = 360\\).",
+    "Cable length \\(= \\sqrt{1{,}050^{2} + 360^{2}} = \\sqrt{1{,}232{,}100} = 1{,}110\\).",
+    "(Or: since \\(\\tan x^{\\circ} = \\frac{12}{35}\\), \\(\\cos x^{\\circ} = \\frac{35}{37}\\), and \\(\\frac{1{,}050}{\\cos x^{\\circ}} = 1{,}110\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(1{,}050 \\cdot \\frac{35}{12}\\); the tangent ratio was inverted.",
+    "B": "Incorrect. This is the vertical rise between the stations, not the length of the cable.",
+    "C": "Correct. The rise is 360 meters, so the cable is \\(\\sqrt{1{,}050^{2} + 360^{2}} = 1{,}110\\) meters.",
+    "D": "Incorrect. This is \\(1{,}050 + 360\\); the cable is the hypotenuse, not the sum of the legs."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('L','H')==1050 and abs(ang('L','H','U')-90)<0.1 and d('H','U')/d('L','H')==Rational(12,35)\nans=sqrt(1050**2+(1050*Rational(12,35))**2)\nassert ans==1110==d('L','U')\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

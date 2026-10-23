@@ -1,0 +1,43 @@
+{
+  "id": "m-le2-0112",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A line in the \\(xy\\)-plane passes through the points \\((2, 1)\\) and \\((6, 11)\\). The line crosses the \\(y\\)-axis at the point \\((0, b)\\). What is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-4"
+  ],
+  "solution": [
+    "Slope \\(= \\frac{11 - 1}{6 - 2} = \\frac{5}{2}\\).",
+    "Use \\((2, 1)\\): \\(1 = \\frac{5}{2}(2) + b = 5 + b\\), so \\(b = -4\\)."
+  ],
+  "verify": "m = Rational(11 - 1, 6 - 2)\nb = 1 - m*2\nassert b == -4 and 11 - m*6 == b\nassert [Rational(s) for s in spr_answers] == [b]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "-4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

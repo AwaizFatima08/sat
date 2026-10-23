@@ -1,0 +1,127 @@
+{
+  "id": "m-lat-0124",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, line \\(\\ell\\) is parallel to line \\(m\\), and a transversal intersects \\(\\ell\\) at point \\(P\\) and \\(m\\) at point \\(Q\\). Ray \\(PR\\) bisects angle \\(SPQ\\), and ray \\(QR\\) bisects angle \\(TQP\\). What is the measure, in degrees, of angle \\(PRQ\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "P": [
+        1,
+        6
+      ],
+      "Q": [
+        3.926,
+        0
+      ],
+      "R": [
+        5.801,
+        3.0
+      ],
+      "S": [
+        10,
+        6
+      ],
+      "T": [
+        10,
+        0
+      ],
+      "U": [
+        -1,
+        6
+      ],
+      "V": [
+        -1,
+        0
+      ],
+      "G": [
+        4.584,
+        -1.348
+      ],
+      "H": [
+        0.342,
+        7.348
+      ]
+    },
+    "segments": [
+      [
+        "U",
+        "S"
+      ],
+      [
+        "V",
+        "T"
+      ],
+      [
+        "G",
+        "H"
+      ],
+      [
+        "P",
+        "R"
+      ],
+      [
+        "Q",
+        "R"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          10.5,
+          6.4
+        ],
+        "text": "ℓ"
+      },
+      {
+        "at": [
+          10.5,
+          0.4
+        ],
+        "text": "m"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "90"
+  ],
+  "solution": [
+    "Angles \\(SPQ\\) and \\(TQP\\) are same-side interior angles, so \\(\\angle SPQ + \\angle TQP = 180^{\\circ}\\).",
+    "The bisectors take half of each: \\(\\angle RPQ + \\angle RQP = \\frac{180}{2} = 90\\) degrees.",
+    "In triangle \\(PRQ\\), angle \\(PRQ = 180 - 90 = 90\\) degrees, whatever the angle of the transversal."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['U'][1]==P['S'][1] and P['V'][1]==P['T'][1]\nassert abs(ang('S','P','R')-ang('R','P','Q'))<0.1 and abs(ang('T','Q','R')-ang('R','Q','P'))<0.1\ns=symbols('s')\nans=180-(s/2+(180-s)/2)\nassert simplify(ans-90)==0 and abs(ang('P','R','Q')-90)<0.1\nassert Rational(spr_answers[0])==90\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "90",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

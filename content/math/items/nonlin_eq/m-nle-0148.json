@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0148",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A box in the shape of a rectangular prism has a square base with side length \\(s\\) centimeters. The height of the box is 3 centimeters less than \\(s\\). The volume of the box is 108 cubic centimeters. What is the value of \\(s\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "Volume = base area \\(\\times\\) height: \\(s^{2}(s - 3) = 108\\), so \\(s^{3} - 3s^{2} - 108 = 0\\).",
+    "Test \\(s = 6\\): \\(36 \\cdot 3 = 108\\). Factoring gives \\((s - 6)(s^{2} + 3s + 18) = 0\\), and the quadratic factor has no real roots.",
+    "So \\(s = 6\\). (Graphing \\(y = x^{2}(x - 3)\\) and \\(y = 108\\) also shows one intersection, at \\(x = 6\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "s = symbols('s', real=True)\nsol = solve(Eq(s**2*(s - 3), 108), s)\nassert sol == [6]\nassert [Rational(v) for v in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

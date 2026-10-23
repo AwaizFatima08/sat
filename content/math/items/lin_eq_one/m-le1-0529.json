@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0529",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A print shop charges \\(c\\) dollars per printed page plus a \\$9 binding fee for each booklet. Maya orders 12 booklets, each with 40 pages, and pays \\$252 in total. The equation \\(12(40c + 9) = 252\\) represents this situation. What does the expression \\(40c + 9\\) represent?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The cost, in dollars, of printing one page",
+    "B": "The cost, in dollars, of one booklet",
+    "C": "The total number of pages in Maya's order",
+    "D": "The total cost, in dollars, of all 12 booklets"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(40c\\) is the printing cost of the 40 pages in one booklet, and 9 is that booklet's binding fee.",
+    "So \\(40c + 9\\) is the cost of one booklet, and 12 booklets cost \\(12(40c + 9)\\).",
+    "(Here \\(40c + 9 = 252 \\div 12 = 21\\) dollars, so \\(c = 0.30\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. The cost of printing one page is \\(c\\), not \\(40c + 9\\).",
+    "B": "Correct. 40 pages at \\(c\\) dollars each plus the \\$9 fee is the cost of one booklet.",
+    "C": "Incorrect. The total number of pages is \\(12 \\cdot 40 = 480\\); \\(40c + 9\\) is an amount of money.",
+    "D": "Incorrect. This mixes up the expression with the whole left side; the total cost is \\(12(40c + 9)\\), which equals 252."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nc = symbols('c')\ncv = solve(Eq(12*(40*c + 9), 252), c)[0]\nassert cv == Rational(3, 10)\nassert 40*cv + 9 == Rational(252, 12)\nassert 'one booklet' in choices[answer]\nassert sum('one booklet' in t for t in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

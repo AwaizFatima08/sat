@@ -1,0 +1,97 @@
+{
+  "id": "m-tvd-0526",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The scatterplot shows the distance \\(x\\), in thousands of kilometers, that 8 car tires had been driven and the tread depth \\(y\\), in millimeters, of each tire. Which of the following equations best models the data?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Distance driven (thousands of kilometers)",
+    "y_label": "Tread depth (millimeters)",
+    "points": [
+      [
+        5,
+        7.6
+      ],
+      [
+        10,
+        7.1
+      ],
+      [
+        15,
+        6.3
+      ],
+      [
+        20,
+        5.9
+      ],
+      [
+        25,
+        5.2
+      ],
+      [
+        30,
+        4.6
+      ],
+      [
+        35,
+        4.1
+      ],
+      [
+        40,
+        3.5
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = -0.12x + 3.5\\)",
+    "B": "\\(y = 0.12x + 3.5\\)",
+    "C": "\\(y = -0.12x + 8.2\\)",
+    "D": "\\(y = -1.2x + 8.2\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The tread depth decreases as distance increases, so the slope is negative.",
+    "From \\(x = 5\\) to \\(x = 40\\) the depth falls from about 7.6 to about 3.5, a drop of about 4.1 over 35 thousand kilometers: a slope of about \\(-0.12\\).",
+    "Extending the trend back to \\(x = 0\\) gives about \\(7.6 + 5(0.12) = 8.2\\). So \\(y = -0.12x + 8.2\\) is the best model."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the last depth in the data, 3.5, as the \\(y\\)-intercept. The intercept is the predicted depth at \\(x = 0\\), about 8.2.",
+    "B": "Incorrect. This reads the trend from right to left: it starts at the smallest depth and gives a positive slope, but the depth decreases as distance increases.",
+    "C": "Correct. The depth drops about 0.12 millimeter per thousand kilometers and would be about 8.2 millimeters at 0 kilometers.",
+    "D": "Incorrect. A slope of \\(-1.2\\) is ten times too steep: at \\(x = 5\\) this gives 2.2 millimeters, but the data show about 7.6."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\npts = [(Rational(str(a)), Rational(str(b))) for a, b in figure['points']]\nf = lambda k: value(choices[k].split('=')[1].strip(' \\\\)'))\nsse = {k: sum((f(k).subs(x, a) - b)**2 for a, b in pts) for k in choices}\nassert min(sse, key=sse.get) == answer\nassert all(sse[k] > 20 * sse[answer] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

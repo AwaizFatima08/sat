@@ -1,0 +1,59 @@
+{
+  "id": "m-rat-0533",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "At the start of a school concert, the ratio of adults to children in the audience was 5 to 3. Later, 12 children left and 4 adults arrived, and the ratio of adults to children became 2 to 1. How many people were in the audience at the start of the concert?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(216\\)",
+    "B": "\\(28\\)",
+    "C": "\\(224\\)",
+    "D": "\\(140\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let the starting audience be \\(5k\\) adults and \\(3k\\) children.",
+    "After the changes: \\(\\frac{5k + 4}{3k - 12} = 2\\), so \\(5k + 4 = 6k - 24\\) and \\(k = 28\\).",
+    "Starting audience: \\(8k = 8 \\cdot 28 = 224\\) people (140 adults and 84 children)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the size of the audience after the changes: \\(144 + 72 = 216\\). The question asks about the start of the concert.",
+    "B": "Incorrect. This is the value of \\(k\\), the size of one part of the ratio, not the number of people.",
+    "C": "Correct. \\(k = 28\\), so the starting audience was \\(140 + 84 = 224\\) people. Check: \\(\\frac{144}{72} = 2\\).",
+    "D": "Incorrect. This is the number of adults at the start. The 84 children must be added."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nk = symbols('k', positive=True)\nkv = solve(Eq(5*k + 4, 2*(3*k - 12)), k)[0]\nans = 8*kv\nassert kv == 28 and ans == 224\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

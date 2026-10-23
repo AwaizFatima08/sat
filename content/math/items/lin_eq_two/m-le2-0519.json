@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0519",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A delivery truck carries exactly 2,400 kilograms of cargo in light crates that weigh 40 kilograms each and heavy crates that weigh 60 kilograms each. Which of the following could be the numbers of light crates and heavy crates the truck carries?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "20 light crates and 30 heavy crates",
+    "B": "30 light crates and 20 heavy crates",
+    "C": "50 light crates and 10 heavy crates",
+    "D": "40 light crates and 20 heavy crates"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(x\\) be light crates and \\(y\\) heavy crates: \\(40x + 60y = 2{,}400\\).",
+    "Test each pair. For 30 light and 20 heavy: \\(40(30) + 60(20) = 1{,}200 + 1{,}200 = 2{,}400\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This pair matches the weights to the wrong crates: \\(40(20) + 60(30) = 2{,}600\\).",
+    "B": "Correct. \\(40(30) + 60(20) = 2{,}400\\).",
+    "C": "Incorrect. \\(40(50) + 60(10) = 2{,}000 + 600 = 2{,}600\\), which is more than 2,400.",
+    "D": "Incorrect. \\(40(40) + 60(20) = 1{,}600 + 1{,}200 = 2{,}800\\), which is more than 2,400."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "arithmetic",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nnums = lambda s: [int(w) for w in s.split() if w.isdigit()]\nok = [k for k in choices if 40*nums(choices[k])[0] + 60*nums(choices[k])[1] == 2400]\nassert ok == [answer]\nassert nums(choices[answer]) == [30, 20]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

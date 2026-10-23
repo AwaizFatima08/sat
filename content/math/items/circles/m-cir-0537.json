@@ -1,0 +1,59 @@
+{
+  "id": "m-cir-0537",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A goat is tied with a 10-meter rope to one outside corner of a square shed whose sides are 6 meters long. The goat can move anywhere outside the shed that the rope allows, but it cannot enter the shed. What is the area, in square meters, of the region the goat can reach?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(91\\pi\\)",
+    "B": "\\(83\\pi\\)",
+    "C": "\\(75\\pi\\)",
+    "D": "\\(100\\pi\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Away from the shed, the goat sweeps \\(\\frac{3}{4}\\) of a circle of radius 10: \\(\\frac{3}{4} \\cdot 100\\pi = 75\\pi\\).",
+    "Along each of the two walls that meet at the corner, the rope wraps around the next corner with \\(10 - 6 = 4\\) meters left, sweeping a quarter circle of radius 4 behind the shed: \\(\\frac{1}{4} \\cdot 16\\pi = 4\\pi\\) each.",
+    "These two quarter circles do not overlap (each reaches only 4 of the 6 meters along the back walls). Total: \\(75\\pi + 4\\pi + 4\\pi = 83\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds two half circles of radius 4 (\\(16\\pi\\)) instead of two quarter circles (\\(8\\pi\\)).",
+    "B": "Correct. \\(75\\pi + 2(4\\pi) = 83\\pi\\).",
+    "C": "Incorrect. This counts only the three-quarter circle and misses the two regions the goat reaches by wrapping the rope around the shed's corners.",
+    "D": "Incorrect. This is a full circle of radius 10; the shed blocks one quarter of it."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nL,s=10,6\nrest=L-s\nassert 0<rest and 2*rest<=2*s\nans=Rational(3,4)*pi*L**2+2*Rational(1,4)*pi*rest**2\nassert ans==83*pi\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

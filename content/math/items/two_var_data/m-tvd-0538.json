@@ -1,0 +1,58 @@
+{
+  "id": "m-tvd-0538",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A set of data has the line of best fit \\(y = -1.8x + 95\\). Which of the following statements must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The line of best fit predicts \\(y = 95\\) when \\(x = 1\\).",
+    "B": "Every data point with an \\(x\\)-value of 30 has a \\(y\\)-value of 41.",
+    "C": "The data point \\((20, 57)\\) lies above the line of best fit.",
+    "D": "For each increase of 10 in \\(x\\), the predicted value of \\(y\\) decreases by 18."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The slope is \\(-1.8\\), so for each increase of 10 in \\(x\\), the predicted \\(y\\) changes by \\(10(-1.8) = -18\\).",
+    "The other statements fail: at \\(x = 20\\) the line predicts 59, so \\((20, 57)\\) is below the line; at \\(x = 1\\) it predicts 93.2, not 95; and a line of best fit gives predicted values, not the actual values of data points."
+  ],
+  "explanation": {
+    "A": "Incorrect. 95 is the prediction at \\(x = 0\\). At \\(x = 1\\) the prediction is \\(95 - 1.8 = 93.2\\).",
+    "B": "Incorrect. 41 is the value predicted by the line at \\(x = 30\\). Actual data points can lie above or below the line.",
+    "C": "Incorrect. The line predicts \\(-1.8(20) + 95 = 59\\) at \\(x = 20\\). Since \\(57 < 59\\), the point lies below the line.",
+    "D": "Correct. The slope is \\(-1.8\\), so an increase of 10 in \\(x\\) lowers the predicted \\(y\\) by \\(10(1.8) = 18\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = Rational(-18, 10)*x + 95\nassert f.subs(x, 10) - f.subs(x, 0) == -18\nassert 57 < f.subs(x, 20) and f.subs(x, 1) != 95\nassert 'decreases by 18' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-prb-0514",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A games club has 40 members. Of these members, 22 play chess, 15 play checkers and 6 play both chess and checkers. If a member of the club is selected at random, what is the probability that the member plays chess or checkers (or both)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{37}{40}\\)",
+    "B": "\\(\\frac{9}{40}\\)",
+    "C": "\\(\\frac{31}{40}\\)",
+    "D": "\\(\\frac{3}{20}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Adding 22 and 15 counts the 6 members who play both games twice.",
+    "Members who play at least one game: \\(22 + 15 - 6 = 31\\).",
+    "The probability is \\(\\frac{31}{40}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds 22 and 15 without subtracting the 6 members who play both, so those members are counted twice.",
+    "B": "Incorrect. This is the probability that the member plays NEITHER game: \\(40 - 31 = 9\\).",
+    "C": "Correct. \\(22 + 15 - 6 = 31\\) members play at least one of the games, so the probability is \\(\\frac{31}{40}\\).",
+    "D": "Incorrect. This is \\(\\frac{6}{40}\\), the probability that the member plays BOTH games."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\np = Rational(22 + 15 - 6, 40)\nassert p == Rational(31, 40)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

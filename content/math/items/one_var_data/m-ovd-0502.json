@@ -1,0 +1,58 @@
+{
+  "id": "m-ovd-0502",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What is the median of the data set \\(18, 26, 25, 21, 30, 22\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(22\\)",
+    "B": "\\(23.5\\)",
+    "C": "\\(12\\)",
+    "D": "\\(23\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Put the values in order: 18, 21, 22, 25, 26, 30.",
+    "There are 6 values, so the median is the mean of the 3rd and 4th values: \\(\\frac{22 + 25}{2} = 23.5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is only the lower of the two middle values. With an even number of values, the median is the mean of the two middle values, 22 and 25.",
+    "B": "Correct. In order the values are 18, 21, 22, 25, 26, 30, and the mean of the two middle values is \\(\\frac{22 + 25}{2} = 23.5\\).",
+    "C": "Incorrect. This is the range, \\(30 - 18 = 12\\), not the median.",
+    "D": "Incorrect. This is the mean of the 3rd and 4th values as listed, \\(\\frac{25 + 21}{2} = 23\\). The values must be put in order first."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\ns = sorted([18, 26, 25, 21, 30, 22])\nr = Rational(s[2] + s[3], 2)\nassert r == Rational(47, 2)\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

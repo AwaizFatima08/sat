@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0128",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A swimmer follows a training plan in which the distance she swims each week increases by the same amount from one week to the next. She swims 2,400 meters in week 3 of the plan and 3,400 meters in week 8. How many meters will she swim in week 12 of the plan?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4200"
+  ],
+  "solution": [
+    "From week 3 to week 8 the distance grows by \\(3{,}400 - 2{,}400 = 1{,}000\\) meters in 5 weeks, or 200 meters per week.",
+    "Week 12 is 4 weeks after week 8: \\(3{,}400 + 4(200) = 4{,}200\\) meters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "m = Rational(3400 - 2400, 8 - 3)\nans = 3400 + (12 - 8)*m\nassert m == 200 and ans == 4200\nassert [Rational(s) for s in spr_answers] == [ans]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "4200",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

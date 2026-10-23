@@ -1,0 +1,79 @@
+{
+  "id": "m-pct-0507",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows the number of each kind of fruit tree in an orchard near Multan. What percent of the trees in the orchard are guava trees?",
+  "figure": {
+    "kind": "table",
+    "title": "Fruit trees in an orchard",
+    "columns": [
+      "Kind of tree",
+      "Number of trees"
+    ],
+    "rows": [
+      [
+        "Mango",
+        "36"
+      ],
+      [
+        "Guava",
+        "24"
+      ],
+      [
+        "Citrus",
+        "60"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(80\\%\\)",
+    "B": "\\(20\\%\\)",
+    "C": "\\(40\\%\\)",
+    "D": "\\(24\\%\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Find the total number of trees: \\(36 + 24 + 60 = 120\\).",
+    "Divide: \\(\\frac{24}{120} = 0.2\\), which is \\(20\\%\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the percent of trees that are not guava trees, \\(\\frac{96}{120} = 80\\%\\).",
+    "B": "Correct. There are 24 guava trees out of 120 trees in all, and \\(\\frac{24}{120} = 20\\%\\).",
+    "C": "Incorrect. This compares the guava trees with the citrus trees only, \\(\\frac{24}{60} = 40\\%\\), instead of with all 120 trees.",
+    "D": "Incorrect. This treats the number of guava trees, 24, as a percent instead of comparing it with all 120 trees."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "percent_add",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nrows = {r[0]: Integer(r[1]) for r in figure['rows']}\nv = rows['Guava'] / sum(rows.values())\nassert v == Rational(1, 5)\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

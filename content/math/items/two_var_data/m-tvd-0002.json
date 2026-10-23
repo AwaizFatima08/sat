@@ -1,0 +1,100 @@
+{
+  "id": "m-tvd-0002",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The scatterplot shows the age \\(x\\), in months, and the weight \\(y\\), in kilograms, of 9 calves on a dairy farm in Punjab. The line of best fit has the equation \\(y = 15x + 30\\). Which of the following is the best interpretation of the number 15 in this context?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Age (months)",
+    "y_label": "Weight (kilograms)",
+    "points": [
+      [
+        1,
+        44
+      ],
+      [
+        1.5,
+        54
+      ],
+      [
+        2,
+        61
+      ],
+      [
+        3,
+        74
+      ],
+      [
+        3.5,
+        84
+      ],
+      [
+        4,
+        92
+      ],
+      [
+        5,
+        103
+      ],
+      [
+        5.5,
+        114
+      ],
+      [
+        6,
+        121
+      ]
+    ],
+    "line": "15*x + 30"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "For each additional month of age, a calf's predicted weight increases by 15 kilograms.",
+    "B": "The predicted weight of a newborn calf is 15 kilograms.",
+    "C": "For each additional kilogram of weight, a calf's predicted age increases by 15 months.",
+    "D": "The predicted weight of a 1-month-old calf is 15 kilograms."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "In \\(y = 15x + 30\\), the number 15 is the slope: the change in predicted \\(y\\) for each increase of 1 in \\(x\\).",
+    "Here \\(x\\) is age in months and \\(y\\) is weight in kilograms, so the predicted weight increases by 15 kilograms for each additional month of age."
+  ],
+  "explanation": {
+    "A": "Correct. 15 is the slope, so the predicted weight goes up 15 kilograms for each 1-month increase in age.",
+    "B": "Incorrect. This describes the \\(y\\)-intercept. The predicted weight at age 0 is 30 kilograms, the constant term, not 15.",
+    "C": "Incorrect. This reverses the variables. The slope gives the change in weight (\\(y\\)) per month of age (\\(x\\)), not the change in age per kilogram.",
+    "D": "Incorrect. The predicted weight of a 1-month-old calf is \\(15(1) + 30 = 45\\) kilograms. The number 15 is a rate of change, not a weight."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "reciprocal",
+    "D": "wrong_quantity"
+  },
+  "verify": "x = symbols('x')\nline = sympify(figure['line'])\nassert diff(line, x) == 15 and line.subs(x, 0) == 30\nassert '15 kilograms' in choices[answer] and 'month of age' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

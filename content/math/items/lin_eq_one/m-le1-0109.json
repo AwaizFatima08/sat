@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0109",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "An aquarium contains 6 gallons of water. Water is added at a constant rate of 4 gallons per minute. After how many minutes will the aquarium contain 50 gallons of water?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(44\\)",
+    "B": "\\(12.5\\)",
+    "C": "\\(11\\)",
+    "D": "\\(14\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "After \\(m\\) minutes the aquarium contains \\(6 + 4m\\) gallons, so \\(6 + 4m = 50\\).",
+    "Then \\(4m = 44\\) and \\(m = 11\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the number of gallons that must be added, not the number of minutes.",
+    "B": "Incorrect. This is the result of ignoring the 6 gallons already in the aquarium: \\(\\frac{50}{4} = 12.5\\).",
+    "C": "Correct. \\(6 + 4m = 50\\) gives \\(4m = 44\\), so \\(m = 11\\).",
+    "D": "Incorrect. This is the result of adding 6 to 50 instead of subtracting it: \\(\\frac{56}{4} = 14\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nm = symbols('m')\ns = solve(Eq(6 + 4*m, 50), m)[0]\nassert s == 11\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "m-nlf-0167",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "After an advertising campaign ended, the number of daily visitors to a website decreased exponentially. The table shows the number of daily visitors \\(d\\) days after the campaign ended for two values of \\(d\\). According to an exponential model that fits these values, how many daily visitors did the website have 4 days after the campaign ended?",
+  "figure": {
+    "kind": "table",
+    "title": "Daily visitors to the website",
+    "columns": [
+      "d (days)",
+      "Daily visitors"
+    ],
+    "rows": [
+      [
+        "1",
+        "9,600"
+      ],
+      [
+        "3",
+        "5,400"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12{,}800\\)",
+    "B": "\\(4{,}050\\)",
+    "C": "\\(7{,}200\\)",
+    "D": "\\(3{,}300\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let the daily factor be \\(b\\). From \\(d = 1\\) to \\(d = 3\\): \\(9{,}600b^{2} = 5{,}400\\), so \\(b^{2} = \\frac{9}{16}\\) and \\(b = \\frac{3}{4}\\).",
+    "From \\(d = 3\\) to \\(d = 4\\) the number is multiplied by \\(b\\) once more.",
+    "\\(5{,}400 \\cdot \\frac{3}{4} = 4{,}050\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the model's number of daily visitors when the campaign ended (\\(d = 0\\)), not 4 days later.",
+    "B": "Correct. Over 2 days the number is multiplied by \\(\\frac{5{,}400}{9{,}600} = \\frac{9}{16}\\), so each day it is multiplied by \\(\\frac{3}{4}\\). Day 4: \\(5{,}400 \\cdot \\frac{3}{4} = 4{,}050\\).",
+    "C": "Incorrect. This is the model's number of daily visitors 2 days after the campaign ended, not 4 days.",
+    "D": "Incorrect. This assumes a linear decrease of 2,100 visitors per day. In an exponential model the number is multiplied by the same factor each day."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nrows = [(int(r[0]), int(r[1].replace(',', ''))) for r in figure['rows']]\n(d1, v1), (d3, v3) = rows\nb = Rational(v3, v1)**Rational(1, d3 - d1)\nassert b == Rational(3, 4)\nv4 = v3*b**(4 - d3)\nassert v4 == 4050\nassert value(choices[answer]) == v4\nassert all(value(choices[k]) != v4 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

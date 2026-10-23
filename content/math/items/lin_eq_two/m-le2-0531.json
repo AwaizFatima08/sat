@@ -1,0 +1,60 @@
+{
+  "id": "m-le2-0531",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(ax + by = c\\), where \\(a\\), \\(b\\), and \\(c\\) are positive constants, is a line. Through which quadrant does the line NOT pass?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Quadrant III",
+    "B": "Quadrant II",
+    "C": "Quadrant I",
+    "D": "Quadrant IV"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The \\(x\\)-intercept is \\(\\left(\\frac{c}{a}, 0\\right)\\) and the \\(y\\)-intercept is \\(\\left(0, \\frac{c}{b}\\right)\\); both are on the positive axes.",
+    "The slope is \\(-\\frac{a}{b}\\), which is negative.",
+    "Left of the \\(y\\)-axis the line rises above \\(\\frac{c}{b}\\) (Quadrant II); between the intercepts it is in Quadrant I; right of the \\(x\\)-intercept it falls below the \\(x\\)-axis (Quadrant IV).",
+    "If \\(x < 0\\) and \\(y < 0\\), then \\(ax + by < 0 < c\\), so no point of the line is in Quadrant III."
+  ],
+  "explanation": {
+    "A": "Correct. In Quadrant III both \\(x\\) and \\(y\\) are negative, so \\(ax + by\\) is negative and cannot equal the positive \\(c\\).",
+    "B": "Incorrect. For \\(x < 0\\), \\(y = \\frac{c - ax}{b} > 0\\), so the line passes through Quadrant II.",
+    "C": "Incorrect. Between the two positive intercepts, the line has \\(x > 0\\) and \\(y > 0\\), so it passes through Quadrant I.",
+    "D": "Incorrect. For \\(x > \\frac{c}{a}\\), \\(y\\) is negative, so the line passes through Quadrant IV."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\na, b, c = symbols('a b c', positive=True)\nline = (c - a*x)/b\nassert (c/a).is_positive and line.subs(x, 0).is_positive and diff(line, x).is_negative\nt = symbols('t', positive=True)\nassert all(simplify(line.subs(x, v)).is_positive for v in (-t, c/(2*a))) and simplify(line.subs(x, c/a + t)).is_negative\nassert choices[answer] == 'Quadrant III'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "m-stc-0508",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A newspaper claimed that more than 3 out of 4 voters in a county support a plan to build a new library. A polling group selected 400 voters in the county at random, and 288 of them said they support the plan. What percent of the voters in the sample said they support the plan?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "72"
+  ],
+  "solution": [
+    "Divide the number who support the plan by the sample size: \\(\\frac{288}{400} = 0.72\\).",
+    "So 72% of the sample support the plan, which is less than the 75% in the newspaper's claim."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "support, n = 288, 400\npct = Rational(support, n) * 100\nassert pct == 72 and pct < 75\nassert [Rational(a) for a in spr_answers] == [pct]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "72",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

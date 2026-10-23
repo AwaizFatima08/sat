@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0117",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A data set consists of 5 positive integers. The only mode of the data set is 3, the median is 5, and the range is 8. Which of the following could be the mean of the data set?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(7\\)",
+    "B": "\\(6.2\\)",
+    "C": "\\(5.4\\)",
+    "D": "\\(6.6\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "In order, call the values \\(p \\le q \\le 5 \\le r \\le s\\). The value 3 must appear at least twice, and only \\(p\\) and \\(q\\) can be less than 5, so \\(p = q = 3\\).",
+    "The range is 8, so \\(s = 3 + 8 = 11\\). Then \\(r\\) is between 5 and 11, and \\(r\\) cannot be 5 or 11, or that value would also appear twice and 3 would not be the only mode.",
+    "So \\(r\\) is 6, 7, 8, 9 or 10, and the mean \\(\\frac{22 + r}{5}\\) is 5.6, 5.8, 6, 6.2 or 6.4. Only 6.2 (with \\(r = 9\\)) is a choice."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses a greatest value of \\(5 + 8 = 13\\), measuring the range from the median instead of from the least value, 3.",
+    "B": "Correct. The data set 3, 3, 5, 9, 11 has only mode 3, median 5, range 8 and mean 6.2.",
+    "C": "Incorrect. A mean of 5.4 needs \\(r = 5\\), but then 5 would appear twice, as often as 3, and 3 would not be the only mode.",
+    "D": "Incorrect. A mean of 6.6 needs \\(r = 11\\), but then 11 would appear twice, as often as 3, and 3 would not be the only mode."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nfrom itertools import combinations_with_replacement as cwr\nfrom collections import Counter\nmeans = set()\nfor v in cwr(range(1, 25), 5):\n    c = Counter(v); top = max(c.values())\n    if [k for k in c if c[k] == top] == [3] and v[2] == 5 and v[4] - v[0] == 8:\n        means.add(Rational(sum(v), 5))\nok = [k for k in choices if value(choices[k]) in means]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-arv-0529",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A right circular cylinder has a volume of \\(200\\pi\\) and a height of \\(8\\). The lateral surface area (the area of the curved side) of a cylinder with radius \\(r\\) and height \\(h\\) is \\(2\\pi rh\\). What is the lateral surface area of this cylinder?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(25\\pi\\)",
+    "B": "\\(40\\pi\\)",
+    "C": "\\(130\\pi\\)",
+    "D": "\\(80\\pi\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From \\(\\pi r^{2}(8) = 200\\pi\\): \\(r^{2} = 25\\), so \\(r = 5\\).",
+    "Lateral surface area \\(= 2\\pi (5)(8) = 80\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\pi r^{2}\\), the area of one base; the radius must be used in the lateral area formula.",
+    "B": "Incorrect. This is \\(\\pi (5)(8)\\); the lateral area formula is \\(2\\pi rh\\), not \\(\\pi rh\\).",
+    "C": "Incorrect. This is \\(80\\pi + 2(25\\pi)\\), the total surface area including both bases, not the lateral surface area.",
+    "D": "Correct. \\(r = 5\\), so the lateral area is \\(2\\pi (5)(8) = 80\\pi\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_formula",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nr=symbols('r',positive=True)\nrs=solve(Eq(pi*r**2*8,200*pi),r)\nassert rs==[5]\nans=2*pi*rs[0]*8\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

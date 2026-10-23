@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0129",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A tailor in Karachi charges a fixed price to stitch a shirt and a different fixed price to stitch a pair of trousers. An order of 4 shirts and 3 pairs of trousers cost 5,900 rupees, and an order of 2 shirts and 5 pairs of trousers cost 6,100 rupees. How many more rupees does it cost to stitch a pair of trousers than a shirt?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(900\\)",
+    "B": "\\(100\\)",
+    "C": "\\(800\\)",
+    "D": "\\(1{,}700\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(s\\) and \\(t\\) be the prices: \\(4s + 3t = 5{,}900\\) and \\(2s + 5t = 6{,}100\\).",
+    "Double the second equation: \\(4s + 10t = 12{,}200\\). Subtract the first: \\(7t = 6{,}300\\), so \\(t = 900\\).",
+    "Then \\(4s = 5{,}900 - 2{,}700 = 3{,}200\\), so \\(s = 800\\). The difference is \\(900 - 800 = 100\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the price of stitching a pair of trousers, not the difference in price.",
+    "B": "Correct. Trousers cost 900 rupees and a shirt costs 800 rupees, a difference of 100 rupees.",
+    "C": "Incorrect. This is the price of stitching a shirt, not the difference in price.",
+    "D": "Incorrect. This is the combined price of one shirt and one pair of trousers, not the difference."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\ns, t = symbols('s t')\nsol = solve([4*s + 3*t - 5900, 2*s + 5*t - 6100], [s, t])\nassert sol == {s: 800, t: 900}\nd = sol[t] - sol[s]\nassert value(choices[answer]) == d == 100\nassert all(value(choices[k]) != d for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

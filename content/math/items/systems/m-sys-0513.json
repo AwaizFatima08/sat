@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0513",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Candle P is 30 centimeters tall and burns down at a constant rate of 2 centimeters per hour. Candle Q is 20 centimeters tall and burns down at a constant rate of 0.75 centimeter per hour. The two candles are lit at the same time. After how many hours will the two candles have the same height?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(14\\)",
+    "B": "\\(5\\)",
+    "C": "\\(\\frac{40}{11}\\)",
+    "D": "\\(8\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "After \\(t\\) hours, candle P is \\(30 - 2t\\) centimeters tall and candle Q is \\(20 - 0.75t\\) centimeters tall.",
+    "Set the heights equal: \\(30 - 2t = 20 - 0.75t\\), so \\(10 = 1.25t\\).",
+    "So \\(t = 8\\). (Both candles are then 14 centimeters tall.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. 14 centimeters is the common height of the candles, not the number of hours.",
+    "B": "Incorrect. This finds when candle P loses the 10-centimeter difference (\\(10 \\div 2\\)) but ignores that candle Q is also burning down.",
+    "C": "Incorrect. This uses \\(20 + 0.75t\\) for candle Q, a sign error that makes it grow instead of burn down.",
+    "D": "Correct. \\(30 - 2t = 20 - 0.75t\\) gives \\(1.25t = 10\\), so \\(t = 8\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nt = symbols('t')\nsol = solve(Eq(30 - 2*t, 20 - Rational('0.75')*t), t)\nassert sol == [8] and 30 - 2*8 == 14\nassert value(choices[answer]) == sol[0]\nassert all(value(choices[k]) != sol[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

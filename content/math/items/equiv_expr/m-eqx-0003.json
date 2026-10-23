@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0003",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "For \\(x > 0\\), which of the following is equivalent to \\(\\frac{x\\sqrt{x}}{\\sqrt[4]{x}}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x^{\\frac{3}{8}}\\)",
+    "B": "\\(x^{\\frac{5}{4}}\\)",
+    "C": "\\(x^{\\frac{7}{4}}\\)",
+    "D": "\\(x^{6}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Write each factor as a power of \\(x\\): \\(x\\sqrt{x} = x^{1} \\cdot x^{\\frac{1}{2}} = x^{\\frac{3}{2}}\\) and \\(\\sqrt[4]{x} = x^{\\frac{1}{4}}\\).",
+    "Dividing powers with the same base subtracts the exponents: \\(\\frac{3}{2} - \\frac{1}{4} = \\frac{5}{4}\\).",
+    "So the expression equals \\(x^{\\frac{5}{4}}\\). Check with a calculator: for \\(x = 16\\), both give \\(32\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of multiplying the exponents, \\(\\frac{3}{2} \\cdot \\frac{1}{4} = \\frac{3}{8}\\), instead of subtracting them.",
+    "B": "Correct. \\(x^{\\frac{3}{2}} \\div x^{\\frac{1}{4}} = x^{\\frac{3}{2} - \\frac{1}{4}} = x^{\\frac{5}{4}}\\).",
+    "C": "Incorrect. This is the result of adding the exponents, \\(\\frac{3}{2} + \\frac{1}{4}\\), as if the fourth root were in the numerator.",
+    "D": "Incorrect. This is the result of dividing the exponents, \\(\\frac{3}{2} \\div \\frac{1}{4} = 6\\), instead of subtracting them."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "X = Symbol('x')\nx = symbols('x', positive=True)\ntarget = x*sqrt(x)/root(x, 4)\nf = lambda k: value(choices[k]).subs(X, x)\nassert simplify(f(answer) - target) == 0\nassert all(simplify(f(k) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

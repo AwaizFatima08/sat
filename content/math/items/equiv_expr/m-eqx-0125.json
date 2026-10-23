@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0125",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A parking garage has 3 levels with \\((4n + 10)\\) parking spaces each and 2 levels with \\((5n - 4)\\) parking spaces each. Which expression represents the total number of parking spaces in the garage?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(22n + 6\\)",
+    "B": "\\(22n + 38\\)",
+    "C": "\\(9n + 6\\)",
+    "D": "\\(22n + 22\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Total \\(= 3(4n + 10) + 2(5n - 4)\\).",
+    "Distribute: \\(12n + 30 + 10n - 8\\).",
+    "Combine like terms: \\(22n + 22\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of multiplying only the \\(n\\)-terms by the number of levels and adding the constants \\(10 - 4\\) once.",
+    "B": "Incorrect. This is the result of adding 8 instead of subtracting it; \\(2(-4) = -8\\).",
+    "C": "Incorrect. This is the number of spaces on one level of each type, not on all 5 levels.",
+    "D": "Correct. \\(12n + 30 + 10n - 8 = 22n + 22\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nn = symbols('n')\nt = 3*(4*n + 10) + 2*(5*n - 4)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

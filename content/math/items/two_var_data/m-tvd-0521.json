@@ -1,0 +1,102 @@
+{
+  "id": "m-tvd-0521",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The scatterplot shows the average outdoor temperature \\(x\\), in degrees Celsius, and the daily heating cost \\(y\\), in dollars, for a building on 9 days. The line of best fit has the equation \\(y = -4x + 120\\). For which of the following data points is the actual heating cost farthest from the cost predicted by the line of best fit?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Outdoor temperature (degrees Celsius)",
+    "y_label": "Heating cost (dollars)",
+    "points": [
+      [
+        2,
+        110
+      ],
+      [
+        5,
+        106
+      ],
+      [
+        8,
+        85
+      ],
+      [
+        10,
+        82
+      ],
+      [
+        13,
+        73
+      ],
+      [
+        15,
+        52
+      ],
+      [
+        18,
+        50
+      ],
+      [
+        20,
+        39
+      ],
+      [
+        24,
+        27
+      ]
+    ],
+    "line": "-4*x + 120"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((13, 73)\\)",
+    "B": "\\((5, 106)\\)",
+    "C": "\\((2, 110)\\)",
+    "D": "\\((15, 52)\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "For each choice, find the predicted cost and subtract it from the actual cost (the residual).",
+    "\\((15, 52)\\): predicted \\(-4(15) + 120 = 60\\), residual \\(52 - 60 = -8\\). \\((5, 106)\\): predicted 100, residual 6. \\((13, 73)\\): predicted 68, residual 5. \\((2, 110)\\): predicted 112, residual \\(-2\\).",
+    "The largest distance from the line is 8 dollars, for \\((15, 52)\\). The point lies below the line, but distance does not depend on the sign."
+  ],
+  "explanation": {
+    "A": "Incorrect. The line predicts 68 dollars at \\(x = 13\\), so this point is only 5 dollars away from the line.",
+    "B": "Incorrect. This point is 6 dollars above the line, the largest positive residual. The point \\((15, 52)\\) is 8 dollars below the line, which is farther.",
+    "C": "Incorrect. This point has the greatest heating cost, but the line predicts 112 dollars at \\(x = 2\\), only 2 dollars away.",
+    "D": "Correct. The line predicts 60 dollars at \\(x = 15\\), and the actual cost is 52, a difference of 8 dollars, the largest of the choices."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = sympify(figure['line'])\nres = lambda a, b: abs(b - f.subs(x, a))\npt = lambda k: [Integer(s) for s in choices[k].strip('\\\\()').split(',')]\nassert all(p in figure['points'] for p in [[int(v) for v in pt(k)] for k in choices])\nbest = max(res(a, b) for a, b in figure['points'])\nassert res(*pt(answer)) == best == 8\nassert all(res(*pt(k)) < best for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

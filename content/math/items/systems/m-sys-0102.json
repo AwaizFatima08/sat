@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0102",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "At a hardware store, one box of nails and one box of screws cost a total of \\$13. One box of screws costs \\$3 more than one box of nails. What is the price, in dollars, of one box of screws?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(16\\)",
+    "B": "\\(8\\)",
+    "C": "\\(10\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(n\\) and \\(s\\) be the prices of a box of nails and a box of screws: \\(n + s = 13\\) and \\(s = n + 3\\).",
+    "Substitute: \\(n + (n + 3) = 13\\), so \\(2n = 10\\) and \\(n = 5\\).",
+    "Then \\(s = 5 + 3 = 8\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds the \\$3 difference to the total instead of using it to compare the two prices.",
+    "B": "Correct. The boxes cost \\$5 and \\$8; they add to \\$13 and differ by \\$3.",
+    "C": "Incorrect. This is \\(13 - 3\\), which equals twice the price of a box of nails; the work stopped before dividing by 2 and adding 3.",
+    "D": "Incorrect. This is the price of a box of nails, not a box of screws."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nn, s = symbols('n s')\nsol = solve([n + s - 13, s - (n + 3)], [n, s])\nassert sol[s] == 8\nassert value(choices[answer]) == 8\nassert all(value(choices[k]) != 8 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0136",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For the linear function \\(f\\), \\(f(2) = 7\\) and \\(f(10) = -5\\). For what value of \\(x\\) is \\(f(x) = 2x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "20/7"
+  ],
+  "solution": [
+    "Slope: \\(\\frac{-5 - 7}{10 - 2} = -\\frac{3}{2}\\), so \\(f(x) = 7 - \\frac{3}{2}(x - 2) = -\\frac{3}{2}x + 10\\).",
+    "Set \\(-\\frac{3}{2}x + 10 = 2x\\): \\(\\frac{7}{2}x = 10\\), so \\(x = \\frac{20}{7}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nm = Rational(-5 - 7, 10 - 2)\nf = 7 + m*(x - 2)\nsol = solve(Eq(f, 2*x), x)\nassert sol == [Rational(20, 7)]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "20/7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

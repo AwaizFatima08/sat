@@ -1,0 +1,88 @@
+{
+  "id": "m-nle-0006",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "The graphs of \\(y = x^{2} - 6x + 5\\) and \\(y = x - 5\\) are shown. One solution to the system of these two equations is \\((5, 0)\\). What is the \\(y\\)-coordinate of the other solution?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      8
+    ],
+    "y": [
+      -6,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "x**2 - 6*x + 5",
+        "label": "y = x^2 - 6x + 5"
+      },
+      {
+        "expr": "x - 5",
+        "label": "y = x - 5"
+      }
+    ],
+    "points": [
+      {
+        "x": 5,
+        "y": 0,
+        "label": "(5, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-4\\)",
+    "B": "\\(-3\\)",
+    "C": "\\(1\\)",
+    "D": "\\(2\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "At an intersection the \\(y\\)-values are equal: \\(x^{2} - 6x + 5 = x - 5\\).",
+    "Rearrange: \\(x^{2} - 7x + 10 = 0\\), so \\((x - 2)(x - 5) = 0\\) and \\(x = 2\\) or \\(x = 5\\).",
+    "The other solution has \\(x = 2\\). Substitute into the linear equation: \\(y = 2 - 5 = -3\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the \\(y\\)-coordinate of the vertex of the parabola, \\((3, -4)\\), which is not on the line.",
+    "B": "Correct. The graphs also meet at \\(x = 2\\), where \\(y = 2 - 5 = -3\\).",
+    "C": "Incorrect. This is the other \\(x\\)-intercept of the parabola; the line does not pass through \\((1, 0)\\).",
+    "D": "Incorrect. This is the \\(x\\)-coordinate of the other solution, not its \\(y\\)-coordinate."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "x, y = symbols('x y')\nsols = solve([Eq(y, x**2 - 6*x + 5), Eq(y, x - 5)], [x, y])\nassert sorted(sols) == [(2, -3), (5, 0)]\nassert value(choices[answer]) == -3\nassert all(value(choices[k]) != -3 for k in choices if k != answer)\nassert [c['expr'] for c in figure['curves']] == ['x**2 - 6*x + 5', 'x - 5']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

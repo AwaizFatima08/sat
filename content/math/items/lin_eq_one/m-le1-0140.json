@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0140",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(4(x + c) = 3x + 17\\), \\(c\\) is a constant. If the solution to the equation is \\(x = 2c - 1\\), what is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3"
+  ],
+  "solution": [
+    "Distribute and solve for \\(x\\): \\(4x + 4c = 3x + 17\\), so \\(x = 17 - 4c\\).",
+    "The solution is also \\(2c - 1\\), so \\(17 - 4c = 2c - 1\\).",
+    "Then \\(18 = 6c\\) and \\(c = 3\\). (Check: \\(x = 5\\), and \\(4(5 + 3) = 32 = 3(5) + 17\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, c = symbols('x c')\nxs = solve(Eq(4*(x + c), 3*x + 17), x)[0]\nsol = solve(Eq(xs, 2*c - 1), c)\nassert sol == [3]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

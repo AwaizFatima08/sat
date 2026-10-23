@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0528",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A school is taking 230 students on a field trip. It has booked 3 buses that each seat 48 students, and it will also rent vans that each seat 11 students. What is the least number of vans the school must rent so that every student has a seat?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "With \\(v\\) vans, the number of seats is \\(3(48) + 11v = 144 + 11v\\), and it must be at least 230: \\(144 + 11v \\ge 230\\).",
+    "Subtract 144: \\(11v \\ge 86\\), so \\(v \\ge 7.81...\\).",
+    "7 vans give only \\(144 + 77 = 221\\) seats, so the school needs at least 8 vans."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "v = symbols('v')\nS = solve_univariate_inequality(3*48 + 11*v >= 230, v, relational=False)\nassert S == Interval(Rational(86, 11), oo)\nassert [Rational(a) for a in spr_answers] == [ceiling(S.inf)] == [8]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

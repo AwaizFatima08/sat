@@ -1,0 +1,44 @@
+{
+  "id": "m-le2-0140",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A recycling center in Dhaka pays 25 taka per kilogram of paper and 60 taka per kilogram of plastic. Ruma earns exactly 3,000 taka for \\(x\\) kilograms of paper and \\(y\\) kilograms of plastic. The graph of the relationship between \\(x\\) and \\(y\\) in the \\(xy\\)-plane has an \\(x\\)-intercept of \\((a, 0)\\) and a \\(y\\)-intercept of \\((0, b)\\). What is the value of \\(a - b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "70"
+  ],
+  "solution": [
+    "The relationship is \\(25x + 60y = 3{,}000\\).",
+    "\\(a = \\frac{3{,}000}{25} = 120\\) and \\(b = \\frac{3{,}000}{60} = 50\\).",
+    "\\(a - b = 70\\)."
+  ],
+  "verify": "x, y = symbols('x y')\na = solve(Eq(25*x, 3000), x)[0]\nb = solve(Eq(60*y, 3000), y)[0]\nassert (a, b) == (120, 50)\nassert [Rational(s) for s in spr_answers] == [a - b]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "70",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

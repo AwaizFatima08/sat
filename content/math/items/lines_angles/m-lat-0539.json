@@ -1,0 +1,104 @@
+{
+  "id": "m-lat-0539",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(ABC\\), angle \\(C\\) is the right angle, and \\(\\overline{CD}\\) is the altitude from \\(C\\) to hypotenuse \\(\\overline{AB}\\). If \\(AD = 4\\) and \\(AB = 25\\), what is the length of \\(\\overline{AC}\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        25,
+        0
+      ],
+      "C": [
+        4,
+        9.165
+      ],
+      "D": [
+        4,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "circles": [],
+    "labels": [],
+    "right_angles": [
+      "C",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(100\\)",
+    "B": "\\(14.5\\)",
+    "C": "\\(21\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Triangles \\(ACD\\) and \\(ABC\\) are similar: both have a right angle and they share angle \\(A\\).",
+    "Corresponding sides: \\(\\frac{AD}{AC} = \\frac{AC}{AB}\\), so \\(AC^{2} = AD \\cdot AB = 4 \\cdot 25 = 100\\).",
+    "\\(AC = 10\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(AC^{2}\\); take the square root to find \\(AC\\).",
+    "B": "Incorrect. This is \\(\\frac{4 + 25}{2}\\), the average of the two lengths; similar triangles give a product, \\(AC^{2} = AD \\cdot AB\\).",
+    "C": "Incorrect. This is \\(DB = 25 - 4\\), not the length of leg \\(\\overline{AC}\\).",
+    "D": "Correct. \\(AC^{2} = AD \\cdot AB = 4 \\cdot 25 = 100\\), so \\(AC = 10\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_formula",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(ang('A','C','B')-90)<0.1 and abs(ang('C','D','B')-90)<0.1 and d('A','D')==4 and d('A','B')==25\nans=sqrt(4*25)\nassert abs(d('A','C')-ans)<0.01 and ans==10\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

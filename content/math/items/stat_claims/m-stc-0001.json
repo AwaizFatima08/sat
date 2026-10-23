@@ -1,0 +1,57 @@
+{
+  "id": "m-stc-0001",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A city council in Riverton selected 500 of the city's residents at random and asked whether they support building a new public swimming pool. Of those surveyed, 62% said they support it. What is the largest group to which the results of the survey can appropriately be generalized?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "All residents of the state that Riverton is in",
+    "B": "Only the 500 residents who were surveyed",
+    "C": "Only the residents of Riverton who swim regularly",
+    "D": "All residents of Riverton"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The 500 residents were selected at random from all residents of Riverton.",
+    "A random sample allows its results to be generalized to the population it was drawn from: all residents of Riverton, but no larger group."
+  ],
+  "explanation": {
+    "A": "Incorrect. The sample came only from Riverton, so it says nothing reliable about the rest of the state.",
+    "B": "Incorrect. Because the residents were selected at random, the results can be generalized beyond the 500 people surveyed.",
+    "C": "Incorrect. The sample was drawn from all residents, not just swimmers, so it represents all residents.",
+    "D": "Correct. A random sample of Riverton residents represents all residents of Riverton."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "design = {'random_sample': True, 'sampled_from': 'all residents of Riverton'}\nassert design['random_sample']\nassert answer == 'D' and choices['D'].lower() == design['sampled_from'].lower()",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

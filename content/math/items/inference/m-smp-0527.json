@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0527",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A researcher selected 200 students at random from a list of all students at the high schools in District A and asked each one how long they spent on homework on a school night. The sample mean was 1.6 hours, with a margin of error of 0.2 hour. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Most high school students in District A spend between 1.4 and 1.8 hours on homework on a school night.",
+    "B": "It is plausible that the mean homework time of all high school students in the country is between 1.4 and 1.8 hours.",
+    "C": "It is plausible that the mean homework time of all high school students in District A is between 1.4 and 1.8 hours.",
+    "D": "It is plausible that the mean homework time of all high school students in District A is between 1.6 and 1.8 hours."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Plausible values for the population mean: \\(1.6 - 0.2 = 1.4\\) to \\(1.6 + 0.2 = 1.8\\) hours.",
+    "The sample was drawn from the high school students in District A, so the conclusion is about the MEAN of that population only."
+  ],
+  "explanation": {
+    "A": "Incorrect. The margin of error describes the uncertainty in the MEAN, not the range of individual students' homework times.",
+    "B": "Incorrect. The sample came only from District A, so the results cannot be generalized to students in the whole country.",
+    "C": "Correct. The plausible values for the mean of the sampled population run from \\(1.6 - 0.2\\) to \\(1.6 + 0.2\\) hours.",
+    "D": "Incorrect. This only adds the margin of error; the plausible values extend 0.2 hour below 1.6 as well."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nlo, hi = Rational('1.6') - Rational('0.2'), Rational('1.6') + Rational('0.2')\nassert (lo, hi) == (Rational('1.4'), Rational('1.8'))\nkey = choices[answer]\nassert answer == 'C' and 'mean' in key and 'District A' in key and '1.4' in key and '1.8' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-arv-0528",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A contractor in Pune is tiling a rectangular floor that is 4.5 meters long and 3.6 meters wide. He uses square tiles with sides of 30 centimeters. The tiles cover the floor exactly, with no gaps, overlaps, or cut tiles. How many tiles does he use?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "180"
+  ],
+  "solution": [
+    "In centimeters, the floor is 450 by 360.",
+    "Along the length: \\(450 \\div 30 = 15\\) tiles. Along the width: \\(360 \\div 30 = 12\\) tiles.",
+    "Total: \\(15 \\cdot 12 = 180\\) tiles."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "L=Rational('4.5')*100\nW=Rational('3.6')*100\nans=(L/30)*(W/30)\nassert ans==180 and (L*W)/(30*30)==ans\nassert Rational(spr_answers[0])==ans and len(spr_answers)==1\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "180",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

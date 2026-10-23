@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0506",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A school club sells sandwiches for \\$4 each and drinks for \\$2 each. The club's goal is to raise at least \\$300. Which of the following combinations of sales meets the goal?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "45 sandwiches and 62 drinks",
+    "B": "30 sandwiches and 70 drinks",
+    "C": "50 sandwiches and 45 drinks",
+    "D": "20 sandwiches and 100 drinks"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "With \\(s\\) sandwiches and \\(d\\) drinks, the goal is \\(4s + 2d \\ge 300\\).",
+    "Check each choice: \\(120 + 140 = 260\\); \\(200 + 90 = 290\\); \\(180 + 124 = 304\\); \\(80 + 200 = 280\\).",
+    "Only 45 sandwiches and 62 drinks raise at least \\$300."
+  ],
+  "explanation": {
+    "A": "Correct. These sales bring in \\(4(45) + 2(62) = 304\\) dollars, which is at least \\$300.",
+    "B": "Incorrect. This uses the prices the wrong way round. At \\$4 per sandwich and \\$2 per drink, the sales are \\(4(30) + 2(70) = 260\\) dollars.",
+    "C": "Incorrect. These sales bring in \\(4(50) + 2(45) = 290\\) dollars, which is \\$10 short of the goal.",
+    "D": "Incorrect. This combination has the most items (120), but drinks bring in less money: \\(4(20) + 2(100) = 280\\) dollars."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nopts = {k: [int(w) for w in choices[k].split() if w.isdigit()] for k in choices}\nok = [k for k, (s, d) in opts.items() if 4*s + 2*d >= 300]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

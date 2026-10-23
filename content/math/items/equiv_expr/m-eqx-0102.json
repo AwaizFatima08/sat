@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0102",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Sunita is making 3 identical gift boxes for her cousins in Kathmandu. Each box holds \\(x\\) sweets that cost 45 rupees each and one card that costs 20 rupees. The total cost, in rupees, of the 3 boxes is \\(3(45x + 20)\\). Which of the following is equivalent to this expression?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(195x\\)",
+    "B": "\\(135x + 60\\)",
+    "C": "\\(135x + 20\\)",
+    "D": "\\(48x + 23\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Multiply each term inside the parentheses by 3: \\(3(45x) + 3(20)\\).",
+    "This gives \\(135x + 60\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of combining \\(135x\\) and \\(60\\), which are not like terms.",
+    "B": "Correct. Multiplying both terms by 3 gives \\(135x + 60\\).",
+    "C": "Incorrect. This is the result of multiplying only \\(45x\\) by 3; the 20 must also be multiplied by 3.",
+    "D": "Incorrect. This is the result of adding 3 to each term instead of multiplying each term by 3."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = 3*(45*x + 20)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

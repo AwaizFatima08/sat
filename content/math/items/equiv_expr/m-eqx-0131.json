@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0131",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Pump A alone can fill a tank in \\(x\\) hours, and pump B alone can fill the same tank in \\((x + 4)\\) hours. Working together, the two pumps fill the tank in \\(\\frac{1}{\\frac{1}{x} + \\frac{1}{x + 4}}\\) hours. Which of the following is equivalent to this expression?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2x + 4\\)",
+    "B": "\\(\\frac{x^{2} + 4x}{2x + 4}\\)",
+    "C": "\\(\\frac{2x + 4}{x^{2} + 4x}\\)",
+    "D": "\\(x + 2\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Add the rates: \\(\\frac{1}{x} + \\frac{1}{x + 4} = \\frac{(x + 4) + x}{x(x + 4)} = \\frac{2x + 4}{x^{2} + 4x}\\).",
+    "Take the reciprocal: \\(\\frac{x^{2} + 4x}{2x + 4}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding the two times, \\(x + (x + 4)\\); working together takes less time than either pump alone.",
+    "B": "Correct. The combined rate is \\(\\frac{2x + 4}{x^{2} + 4x}\\), and its reciprocal is \\(\\frac{x^{2} + 4x}{2x + 4}\\).",
+    "C": "Incorrect. This is the combined rate in tanks per hour; it still must be inverted to give the time.",
+    "D": "Incorrect. This is the result of averaging the two times instead of combining the rates."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = 1/(1/x + 1/(x + 4))\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

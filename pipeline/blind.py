@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Blind-solve check.
 
+  Add --math to work on content/math (typed answers are compared as numbers).
   python3 pipeline/blind.py export NAME ID_GLOB...   -> pipeline/out/blind-NAME.json (no keys, no explanations)
   python3 pipeline/blind.py record NAME SOLVER ANSWERS.json
         ANSWERS.json = {"rw-wic-0001": {"answer": "A", "second_defensible": null | "C", "note": "..."}, ...}
@@ -14,9 +15,26 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ITEMS = ROOT / "content" / "rw" / "items"
+SECTION = "math" if "--math" in sys.argv else "rw"
+if "--math" in sys.argv:
+    sys.argv.remove("--math")
+ITEMS = ROOT / "content" / SECTION / "items"
 OUT = ROOT / "pipeline" / "out"
-HIDE = {"answer", "explanation", "traps", "provenance", "b", "pool", "source"}
+HIDE = {"answer", "explanation", "traps", "provenance", "b", "pool", "source", "spr_answers", "solution", "verify"}
+
+
+def same_number(a, b):
+    from fractions import Fraction
+    try:
+        return Fraction(str(a).strip()) == Fraction(str(b).strip())
+    except (ValueError, ZeroDivisionError):
+        return str(a).strip() == str(b).strip()
+
+
+def is_correct(it, given):
+    if it.get("answer_type") == "spr":
+        return any(same_number(given, v) for v in it.get("spr_answers") or [])
+    return given == it["answer"]
 
 
 def load(globs):
@@ -43,7 +61,7 @@ def main():
         agree = disagree = 0
         for p, it in load(list(answers)):
             a = answers[it["id"]]
-            ok = a.get("answer") == it["answer"] and not a.get("second_defensible")
+            ok = is_correct(it, a.get("answer")) and not a.get("second_defensible")
             agree += ok
             disagree += not ok
             checks = [c for c in it["provenance"].get("checks", []) if c.get("by") != solver]

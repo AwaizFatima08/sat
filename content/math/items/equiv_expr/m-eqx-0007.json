@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0007",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "Which of the following is equivalent to \\(2(x - 3)^{2} + 5(x - 3) - 12\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((2x - 3)(x + 4)\\)",
+    "B": "\\((2x + 9)(x - 1)\\)",
+    "C": "\\((2x - 6)(x + 1)\\)",
+    "D": "\\((2x - 9)(x + 1)\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Notice the repeated expression: let \\(u = x - 3\\). The expression becomes \\(2u^{2} + 5u - 12\\).",
+    "Factor: \\(2u^{2} + 5u - 12 = (2u - 3)(u + 4)\\).",
+    "Substitute back: \\(2u - 3 = 2(x - 3) - 3 = 2x - 9\\) and \\(u + 4 = x - 3 + 4 = x + 1\\).",
+    "So the expression equals \\((2x - 9)(x + 1)\\). (Expanding both gives \\(2x^{2} - 7x - 9\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\((2u - 3)(u + 4)\\) with \\(x\\) written in place of \\(u\\); the result was never converted back using \\(u = x - 3\\).",
+    "B": "Incorrect. This is the result of a sign slip when substituting back; \\((2x + 9)(x - 1) = 2x^{2} + 7x - 9\\), whose middle term has the wrong sign.",
+    "C": "Incorrect. This is the result of computing \\(2(x - 3) - 3\\) as \\(2x - 3 - 3\\) instead of \\(2x - 6 - 3 = 2x - 9\\).",
+    "D": "Correct. With \\(u = x - 3\\), the expression is \\((2u - 3)(u + 4) = (2x - 9)(x + 1)\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "sign_error",
+    "C": "arithmetic"
+  },
+  "verify": "x = symbols('x')\ntarget = expand(2*(x - 3)**2 + 5*(x - 3) - 12)\nassert target == 2*x**2 - 7*x - 9\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

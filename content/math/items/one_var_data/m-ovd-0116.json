@@ -1,0 +1,47 @@
+{
+  "id": "m-ovd-0116",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A data set consists of 10 numbers, including the numbers \\(a\\) and \\(b\\), and has a mean of 20. When \\(a\\) and \\(b\\) are both removed, the mean of the remaining 8 numbers is 18. When only \\(a\\) is removed, the mean of the remaining 9 numbers is 21. What is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "45"
+  ],
+  "solution": [
+    "The sum of all 10 numbers is \\(10 \\cdot 20 = 200\\).",
+    "Without \\(a\\) and \\(b\\), the sum is \\(8 \\cdot 18 = 144\\), so \\(a + b = 200 - 144 = 56\\).",
+    "Without only \\(a\\), the sum is \\(9 \\cdot 21 = 189\\), so \\(a = 200 - 189 = 11\\).",
+    "Then \\(b = 56 - 11 = 45\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "a, b = symbols('a b')\nsol = solve([Eq(200 - a - b, 8*18), Eq(200 - a, 9*21)], [a, b])\nassert sol[a] == 11 and sol[b] == 45\nassert [Rational(s) for s in spr_answers] == [45]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "45",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

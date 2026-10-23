@@ -1,0 +1,83 @@
+{
+  "id": "m-tvd-0110",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The table shows four values of \\(x\\) and the corresponding values of \\(y\\). The relationship between \\(x\\) and \\(y\\) is exponential. Which equation represents this relationship?",
+  "figure": {
+    "kind": "table",
+    "columns": [
+      "x",
+      "y"
+    ],
+    "rows": [
+      [
+        "0",
+        "64"
+      ],
+      [
+        "2",
+        "144"
+      ],
+      [
+        "4",
+        "324"
+      ],
+      [
+        "6",
+        "729"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = 64(1.625)^{x}\\)",
+    "B": "\\(y = 64(2.25)^{x}\\)",
+    "C": "\\(y = 64 + 40x\\)",
+    "D": "\\(y = 64(1.5)^{x}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "When \\(x\\) increases by 2, \\(y\\) is multiplied by \\(\\frac{144}{64} = \\frac{324}{144} = \\frac{729}{324} = 2.25\\).",
+    "If \\(y = 64(b)^{x}\\), then \\(b^{2} = 2.25\\), so \\(b = 1.5\\).",
+    "Check: \\(64(1.5)^{4} = 64(5.0625) = 324\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This halves the \\(125\\%\\) increase over 2 units of \\(x\\) to get \\(62.5\\%\\) per unit. Percent growth compounds, so the factor per unit is \\(\\sqrt{2.25} = 1.5\\).",
+    "B": "Incorrect. 2.25 is the factor for each increase of 2 in \\(x\\), not of 1. This equation gives \\(64(2.25)^{2} = 324\\) at \\(x = 2\\).",
+    "C": "Incorrect. This linear equation uses the first increase, \\(144 - 64 = 80\\), spread over 2 units of \\(x\\). It gives 224 at \\(x = 4\\), not 324.",
+    "D": "Correct. A factor of 1.5 for each increase of 1 in \\(x\\) gives a factor of \\(1.5^{2} = 2.25\\) for each increase of 2."
+  },
+  "traps": {
+    "A": "percent_add",
+    "B": "misread_graph",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nrows = [(Integer(a), Integer(b)) for a, b in figure['rows']]\nfits = lambda k: all(value(choices[k].replace('y = ', '')).subs(x, a) == b for a, b in rows)\nassert fits(answer)\nassert not any(fits(k) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

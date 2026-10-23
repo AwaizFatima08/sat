@@ -1,0 +1,57 @@
+{
+  "id": "m-cir-0003",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "A circle has a radius of 6 centimeters. A central angle of the circle measures \\(\\frac{2\\pi}{3}\\) radians. What is the length, in centimeters, of the arc intercepted by this central angle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{\\pi^{2}}{45}\\)",
+    "B": "\\(2\\pi\\)",
+    "C": "\\(4\\pi\\)",
+    "D": "\\(12\\pi\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "When the angle is in radians, arc length is \\(s = r\\theta\\).",
+    "\\(s = 6 \\cdot \\frac{2\\pi}{3} = 4\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This puts \\(\\frac{2\\pi}{3}\\) into the degree formula \\(\\frac{\\theta}{360} \\cdot 2\\pi r\\), treating a radian measure as if it were degrees.",
+    "B": "Incorrect. This is \\(3 \\cdot \\frac{2\\pi}{3}\\); it treats 6 as the diameter and uses a radius of 3.",
+    "C": "Correct. \\(s = r\\theta = 6 \\cdot \\frac{2\\pi}{3} = 4\\pi\\).",
+    "D": "Incorrect. This is \\(\\frac{1}{2}r^{2}\\theta\\), the area of the sector, not the arc length."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "radius_diameter",
+    "D": "wrong_formula"
+  },
+  "verify": "r,th=6,2*pi/3\nans=r*th\nassert simplify(value(choices[answer])-ans)==0 and simplify(ans-4*pi)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\nassert simplify(value(choices['A'])-2*pi*r*th/360)==0 and simplify(value(choices['D'])-r**2*th/2)==0\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0126",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What are all the solutions to the equation \\(\\sqrt{x + 12} = x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\) and \\(-4\\)",
+    "B": "\\(4\\) only",
+    "C": "\\(-3\\) and \\(4\\)",
+    "D": "\\(-3\\) only"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Square both sides: \\(x + 12 = x^{2}\\), so \\(x^{2} - x - 12 = 0\\).",
+    "Factor: \\((x - 4)(x + 3) = 0\\), so \\(x = 4\\) or \\(x = -3\\).",
+    "Check in the original equation: \\(\\sqrt{16} = 4\\) works, but \\(\\sqrt{9} = 3 \\ne -3\\). Only \\(4\\) is a solution."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of reversing the signs when solving \\((x - 4)(x + 3) = 0\\).",
+    "B": "Correct. \\(\\sqrt{4 + 12} = \\sqrt{16} = 4\\).",
+    "C": "Incorrect. This keeps both roots of the squared equation without checking them; \\(-3\\) is extraneous.",
+    "D": "Incorrect. \\(-3\\) is the extraneous value: \\(\\sqrt{-3 + 12} = 3\\), not \\(-3\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\ndef vals(s):\n    s = s.replace(' only', '').replace(', and ', ' and ').replace(', ', ' and ')\n    return {value(p) for p in s.split(' and ')}\nx = symbols('x', real=True)\nsol = set(solve(Eq(sqrt(x + 12), x), x))\nassert sol == {4}\nassert vals(choices[answer]) == sol\nassert all(vals(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

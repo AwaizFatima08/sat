@@ -1,0 +1,79 @@
+{
+  "id": "m-le2-0130",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A tailor in Lahore has exactly 60 hours of sewing time this month for shirts and kurtas. Every shirt takes the same amount of time, and every kurta takes the same amount of time. The table shows three combinations of \\(x\\) shirts and \\(y\\) kurtas that use exactly 60 hours. If the tailor sews 7 kurtas this month and uses all 60 hours, how many shirts does she sew?",
+  "figure": {
+    "kind": "table",
+    "title": "",
+    "columns": [
+      "Shirts, x",
+      "Kurtas, y"
+    ],
+    "rows": [
+      [
+        "0",
+        "15"
+      ],
+      [
+        "10",
+        "10"
+      ],
+      [
+        "20",
+        "5"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(24\\)",
+    "B": "\\(32\\)",
+    "C": "\\(16\\)",
+    "D": "\\(8\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "From \\((0, 15)\\), each kurta takes \\(\\frac{60}{15} = 4\\) hours. From \\((10, 10)\\), \\(10s + 40 = 60\\), so each shirt takes 2 hours.",
+    "The relationship is \\(2x + 4y = 60\\). With \\(y = 7\\): \\(2x = 32\\), so \\(x = 16\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Going from 5 kurtas to 7 kurtas means fewer shirts, not more; this moves the wrong way from \\((20, 5)\\).",
+    "B": "Incorrect. 32 is the number of hours left for shirts, not the number of shirts.",
+    "C": "Correct. Each shirt takes 2 hours and each kurta 4 hours, so \\(2x + 28 = 60\\) and \\(x = 16\\).",
+    "D": "Incorrect. This divides the remaining 32 hours by 4, the time for a kurta, instead of by 2, the time for a shirt."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "stopped_early",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\ns, k, x = symbols('s k x')\nrows = [(int(a), int(b)) for a, b in figure['rows']]\nsol = solve([Eq(a*s + b*k, 60) for a, b in rows], [s, k])\nassert sol == {s: 2, k: 4}\nn = solve(Eq(2*x + 4*7, 60), x)[0]\nassert n == 16\nassert value(choices[answer]) == n\nassert all(value(choices[c]) != n for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

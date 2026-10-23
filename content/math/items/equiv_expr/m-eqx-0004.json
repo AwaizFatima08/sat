@@ -1,0 +1,46 @@
+{
+  "id": "m-eqx-0004",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "The expression \\((7x - 2)(x + 6) - 3x(x + 4)\\) is equivalent to \\(ax^{2} + bx + c\\), where \\(a\\), \\(b\\), and \\(c\\) are constants. What is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "28"
+  ],
+  "solution": [
+    "Expand the product: \\((7x - 2)(x + 6) = 7x^{2} + 42x - 2x - 12 = 7x^{2} + 40x - 12\\).",
+    "Expand the second term: \\(3x(x + 4) = 3x^{2} + 12x\\).",
+    "Subtract: \\(7x^{2} + 40x - 12 - 3x^{2} - 12x = 4x^{2} + 28x - 12\\), so \\(b = 28\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\np = Poly(expand((7*x - 2)*(x + 6) - 3*x*(x + 4)), x)\nassert p.coeff_monomial(x) == 28\nassert [Rational(s) for s in spr_answers] == [28]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "28",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "type": "lin_functions",
+  "title": "Linear functions",
+  "what_is_tested": "You work with a linear function \\(f(x) = mx + b\\) given as an equation, a graph, a table or a description in words. You find the slope and the starting value, move between the different forms, and explain what the numbers mean in a real situation.",
+  "how_to_spot": "Look for \\(f(x)\\) notation, a straight-line graph, a table whose outputs change by the same amount for equal steps in the input, or words such as \\\"per\\\", \\\"each\\\" or \\\"constant rate\\\".",
+  "method": [
+    "Find the slope from two points, two table rows or two given values: \\(m = \\frac{\\text{change in output}}{\\text{change in input}}\\).",
+    "Find the starting value \\(b = f(0)\\): read it from the graph or table, or substitute a known point into \\(f(x) = mx + b\\).",
+    "Write the rule \\(f(x) = mx + b\\) and test it on a second point.",
+    "In a context, the slope is the change per one unit of input, and the \\(y\\)-intercept is the value when the input is 0.",
+    "Answer the exact question: an output, an input, the slope or what a number means."
+  ],
+  "pitfalls": [
+    "Dividing run by rise, which gives the reciprocal of the slope (reciprocal).",
+    "Subtracting the coordinates in different orders, which flips the sign of the slope (sign_error).",
+    "Using a listed value such as \\(f(2)\\) as the \\(y\\)-intercept when the input is not 0 (concept).",
+    "Swapping the meanings: calling the starting value the rate, or the rate the starting value (concept).",
+    "Treating a table step of 4 in \\(x\\) as a step of 1 (misread_graph)."
+  ],
+  "calculator": "On the Graph tab you can graph an answer choice and check that it passes through the points in a table or on a graph, or graph two functions to see where they meet. Finding a slope from two points is quicker by hand or on the Scientific tab.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: slope and starting value",
+      "steps": [
+        "Pick two points you can read exactly.",
+        "Slope = rise ÷ run: the change in \\(y\\) divided by the change in \\(x\\).",
+        "The \\(y\\)-intercept is where the line crosses the \\(y\\)-axis, the value at \\(x = 0\\).",
+        "In a story, the slope is the amount per unit and the intercept is the fixed or starting amount."
+      ],
+      "worked_example": {
+        "stem": "A bike rental shop charges a fixed fee plus an hourly rate. The graph shows the total cost \\(y\\), in dollars, of renting a bike for \\(x\\) hours. What is the best interpretation of the slope of the graph?",
+        "figure": {
+          "kind": "xy",
+          "x": [
+            0,
+            6
+          ],
+          "y": [
+            0,
+            16
+          ],
+          "curves": [
+            {
+              "expr": "2*x + 3",
+              "label": "cost"
+            }
+          ],
+          "points": [
+            {
+              "x": 0,
+              "y": 3,
+              "label": "(0, 3)"
+            },
+            {
+              "x": 4,
+              "y": 11,
+              "label": "(4, 11)"
+            }
+          ],
+          "segments": [],
+          "x_label": "Time (hours)",
+          "y_label": "Total cost (dollars)"
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "The fixed fee is 3 dollars.",
+          "B": "The cost increases by 50 cents for each additional hour.",
+          "C": "The cost increases by 2 dollars for each additional hour.",
+          "D": "The cost increases by 11 dollars for each additional hour."
+        },
+        "answer": "C",
+        "walkthrough": [
+          "Read two exact points from the graph: \\((0, 3)\\) and \\((4, 11)\\).",
+          "Slope \\(= \\frac{11 - 3}{4 - 0} = \\frac{8}{4} = 2\\).",
+          "The slope is the change in cost, in dollars, for each hour, so the cost goes up by 2 dollars for each additional hour: choice C.",
+          "Choice A is true, but it describes the \\(y\\)-intercept, not the slope. Choice B divides run by rise (\\(\\frac{4}{8}\\)), and choice D reads one point instead of a change."
+        ],
+        "verify": "p = figure['points']\nm = Rational(p[1]['y'] - p[0]['y'], p[1]['x'] - p[0]['x'])\nx = symbols('x')\nassert m == 2 == diff(sympify(figure['curves'][0]['expr']), x)\nkey = 'increases by 2 dollars for each'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1"
+      },
+      "tryit": [
+        "m-lfn-0001",
+        "m-lfn-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: build the rule from two values",
+      "steps": [
+        "Find the slope from the two (input, output) pairs.",
+        "Substitute one pair into \\(f(x) = mx + b\\) and solve for \\(b\\).",
+        "Write the full rule and check it with the other pair.",
+        "Use the rule to answer the question: an output, an input, or the value at 0."
+      ],
+      "worked_example": {
+        "stem": "A tailor in Lahore charges a fixed amount for stitching a kurta plus a fixed amount for each meter of embroidered trim. The total charge, in rupees, is a linear function of the number of meters of trim. A kurta with 3 meters of trim costs 1,950 rupees, and a kurta with 7 meters of trim costs 3,550 rupees. What is the charge, in rupees, for stitching a kurta with no trim?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "750"
+        ],
+        "walkthrough": [
+          "Slope: \\(\\frac{3{,}550 - 1{,}950}{7 - 3} = \\frac{1{,}600}{4} = 400\\) rupees per meter of trim.",
+          "Substitute the pair \\((3, 1{,}950)\\) into \\(C = 400t + b\\): \\(1{,}950 = 1{,}200 + b\\), so \\(b = 750\\).",
+          "Check with the other pair: \\(400(7) + 750 = 2{,}800 + 750 = 3{,}550\\).",
+          "The charge with no trim is the value at \\(t = 0\\), which is 750. Entering 400, the charge per meter, is the most common slip."
+        ],
+        "verify": "m, b = symbols('m b')\ns = solve([Eq(3*m + b, 1950), Eq(7*m + b, 3550)], [m, b])\nassert s == {m: 400, b: 750}\nassert [Rational(v) for v in spr_answers] == [s[b]]"
+      },
+      "tryit": [
+        "m-lfn-0003",
+        "m-lfn-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: from a table to an equation",
+      "steps": [
+        "Check that the table is linear: equal steps in \\(x\\) give equal steps in the output.",
+        "Slope = change in output ÷ change in \\(x\\); watch for steps in \\(x\\) that are not 1.",
+        "Find \\(b\\) by substituting a row into \\(f(x) = mx + b\\).",
+        "Test your rule on two more rows, or graph the choice on the Graph tab and check the points."
+      ],
+      "worked_example": {
+        "stem": "For the linear function \\(g\\), the table gives the value of \\(g(x)\\) for four values of \\(x\\). Which of the following defines \\(g\\)?",
+        "figure": {
+          "kind": "table",
+          "title": "Values of g",
+          "columns": [
+            "x",
+            "g(x)"
+          ],
+          "rows": [
+            [
+              "-2",
+              "-4"
+            ],
+            [
+              "2",
+              "2"
+            ],
+            [
+              "4",
+              "5"
+            ],
+            [
+              "8",
+              "11"
+            ]
+          ]
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(g(x) = \\frac{3}{2}x - 1\\)",
+          "B": "\\(g(x) = \\frac{3}{2}x + 1\\)",
+          "C": "\\(g(x) = \\frac{2}{3}x + \\frac{2}{3}\\)",
+          "D": "\\(g(x) = 6x - 10\\)"
+        },
+        "answer": "A",
+        "walkthrough": [
+          "From \\(x = -2\\) to \\(x = 2\\), the output goes from \\(-4\\) to \\(2\\): slope \\(= \\frac{2 - (-4)}{2 - (-2)} = \\frac{6}{4} = \\frac{3}{2}\\).",
+          "Substitute the row \\((2, 2)\\): \\(2 = \\frac{3}{2}(2) + b = 3 + b\\), so \\(b = -1\\). The rule is \\(g(x) = \\frac{3}{2}x - 1\\).",
+          "Check two more rows: \\(g(4) = 6 - 1 = 5\\) and \\(g(8) = 12 - 1 = 11\\). Both match, so the answer is A.",
+          "Calculator route (Graph tab): graph each choice and check whether it passes through \\((-2, -4)\\) and \\((8, 11)\\); only choice A does. Choice D uses the change of 6 without dividing by the \\(x\\)-step of 4, and choice C divides run by rise."
+        ],
+        "verify": "rows = [(Rational(r[0]), Rational(r[1])) for r in figure['rows']]\nm = (rows[1][1] - rows[0][1]) / (rows[1][0] - rows[0][0])\nb = rows[1][1] - m*rows[1][0]\nx = symbols('x')\ng = m*x + b\nassert m == Rational(3, 2) and b == -1 and all(g.subs(x, u) == v for u, v in rows)\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if all(rhs(choices[k]).subs(x, u) == v for u, v in rows)]\nassert ok == [answer]"
+      },
+      "tryit": [
+        "m-lfn-0005",
+        "m-lfn-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: rules from structure",
+      "steps": [
+        "Translate each fact: \\(f(x + h) = f(x) + d\\) means the slope is \\(\\frac{d}{h}\\); crossing the \\(x\\)-axis at \\(c\\) means \\(f(c) = 0\\).",
+        "Find the slope first.",
+        "Use a known point to find the \\(y\\)-intercept.",
+        "Check the finished rule against every condition in the question."
+      ],
+      "worked_example": {
+        "stem": "The function \\(h\\) is linear, and \\(h(x + 3) = h(x) - 12\\) for all values of \\(x\\). The graph of \\(y = h(x)\\) in the \\(xy\\)-plane crosses the \\(x\\)-axis at \\(x = 5\\). Which equation defines \\(h\\)?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(h(x) = -12x + 60\\)",
+          "B": "\\(h(x) = -\\frac{1}{4}x + \\frac{5}{4}\\)",
+          "C": "\\(h(x) = -4x + 5\\)",
+          "D": "\\(h(x) = -4x + 20\\)"
+        },
+        "answer": "D",
+        "walkthrough": [
+          "Each time \\(x\\) increases by 3, \\(h(x)\\) decreases by 12, so the slope is \\(\\frac{-12}{3} = -4\\).",
+          "Crossing the \\(x\\)-axis at \\(x = 5\\) means \\(h(5) = 0\\).",
+          "Substitute into \\(h(x) = -4x + b\\): \\(0 = -4(5) + b\\), so \\(b = 20\\). The answer is D, \\(h(x) = -4x + 20\\).",
+          "Check: \\(h(x + 3) = -4x - 12 + 20 = h(x) - 12\\). Choice A uses \\(-12\\) as the slope without dividing by 3, and choice C treats the \\(x\\)-intercept 5 as the \\(y\\)-intercept."
+        ],
+        "verify": "x, m, b = symbols('x m b')\nh = m*x + b\ns = solve([expand(h.subs(x, x + 3) - (h - 12)), h.subs(x, 5)], [m, b])\nassert s == {m: -4, b: 20}\nf = s[m]*x + s[b]\nrhs = lambda c: value(c.split('=')[1])\nok = [k for k in choices if simplify(rhs(choices[k]) - f) == 0]\nassert ok == [answer]"
+      },
+      "tryit": [
+        "m-lfn-0007",
+        "m-lfn-0008"
+      ]
+    }
+  ]
+}

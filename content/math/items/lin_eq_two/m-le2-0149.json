@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0149",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(\\ell\\) has an \\(x\\)-intercept of \\((r, 0)\\) and a \\(y\\)-intercept of \\((0, s)\\), where \\(r\\) and \\(s\\) are positive constants and \\(r \\ne s\\). Which equation represents the line that is parallel to line \\(\\ell\\) and passes through the point \\((r, s)\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(rx + sy = 2rs\\)",
+    "B": "\\(sx + ry = rs\\)",
+    "C": "\\(sx - ry = 0\\)",
+    "D": "\\(sx + ry = 2rs\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Line \\(\\ell\\) has slope \\(\\frac{s - 0}{0 - r} = -\\frac{s}{r}\\), so it can be written \\(sx + ry = rs\\).",
+    "A parallel line has the form \\(sx + ry = c\\). Substitute \\((r, s)\\): \\(c = sr + rs = 2rs\\).",
+    "The line is \\(sx + ry = 2rs\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This line has slope \\(-\\frac{r}{s}\\), the reciprocal of the slope of \\(\\ell\\); since \\(r \\ne s\\), it is not parallel to \\(\\ell\\).",
+    "B": "Incorrect. This is line \\(\\ell\\) itself, which does not pass through \\((r, s)\\): \\(s(r) + r(s) = 2rs \\ne rs\\).",
+    "C": "Incorrect. This line passes through \\((r, s)\\) but has slope \\(\\frac{s}{r}\\); the sign of the slope is wrong.",
+    "D": "Correct. It has slope \\(-\\frac{s}{r}\\), the slope of \\(\\ell\\), and \\(s(r) + r(s) = 2rs\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "concept",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nr, s = symbols('r s', positive=True)\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\ne = lambda t: eq(t).subs({symbols('r'): r, symbols('s'): s})\nsl = lambda t: simplify(diff(solve(e(t), y)[0], x))\nok = [k for k in choices if simplify(sl(choices[k]) + s/r) == 0 and simplify(e(choices[k]).subs({x: r, y: s})) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-tvd-0506",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A gardener measures the height \\(y\\), in centimeters, of a bean plant \\(x\\) days after it was moved to a larger pot. The line of best fit for the data has the equation \\(y = 0.6x + 4\\). Which of the following is the best interpretation of the number 0.6 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The predicted height of the plant when it was moved is 0.6 centimeter.",
+    "B": "The predicted height increases by 0.6 centimeter each day.",
+    "C": "The plant takes 0.6 day to grow each centimeter.",
+    "D": "The predicted height increases by 4 centimeters each day."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "In \\(y = 0.6x + 4\\), the number 0.6 is the slope: the change in predicted \\(y\\) for each increase of 1 in \\(x\\).",
+    "So the predicted height increases by 0.6 centimeter each day."
+  ],
+  "explanation": {
+    "A": "Incorrect. The predicted height when the plant was moved (\\(x = 0\\)) is the constant term, 4 centimeters, not 0.6.",
+    "B": "Correct. 0.6 is the slope, so the predicted height increases by 0.6 centimeter for each additional day.",
+    "C": "Incorrect. This inverts the rate. The slope is centimeters per day, not days per centimeter.",
+    "D": "Incorrect. 4 is the predicted height at \\(x = 0\\), not a daily increase."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nline = Rational(6, 10)*x + 4\nassert diff(line, x) == Rational(6, 10) and line.subs(x, 0) == 4\nassert 'increases by 0.6 centimeter each day' in choices[answer]\nassert all('increases by 0.6 centimeter each day' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

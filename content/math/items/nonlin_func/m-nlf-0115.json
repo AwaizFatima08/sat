@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0115",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = (x - 6)(x + 2)\\). At which points does the graph of \\(y = f(x)\\) cross the \\(x\\)-axis in the \\(xy\\)-plane?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((6, 0)\\) and \\((-2, 0)\\)",
+    "B": "\\((6, 0)\\) and \\((2, 0)\\)",
+    "C": "\\((-6, 0)\\) and \\((2, 0)\\)",
+    "D": "\\((0, 6)\\) and \\((0, -2)\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The graph crosses the \\(x\\)-axis where \\(f(x) = 0\\).",
+    "\\((x - 6)(x + 2) = 0\\) when \\(x = 6\\) or \\(x = -2\\).",
+    "The points are \\((6, 0)\\) and \\((-2, 0)\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(f(x) = 0\\) when \\(x = 6\\) or \\(x = -2\\), giving \\((6, 0)\\) and \\((-2, 0)\\).",
+    "B": "Incorrect. \\(x + 2 = 0\\) gives \\(x = -2\\), not \\(2\\); the sign of one zero slipped.",
+    "C": "Incorrect. These are the result of using the signs shown in the factors: \\(x - 6 = 0\\) gives \\(x = 6\\), not \\(-6\\).",
+    "D": "Incorrect. Points where a graph crosses the \\(x\\)-axis have \\(y\\)-coordinate \\(0\\), so they have the form \\((a, 0)\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nroots = sorted(solve((x - 6)*(x + 2), x))\nassert roots == [-2, 6]\nassert '(6, 0)' in choices[answer] and '(-2, 0)' in choices[answer]\nassert all(not ('(6, 0)' in choices[k] and '(-2, 0)' in choices[k]) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

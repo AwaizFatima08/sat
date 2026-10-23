@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0534",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(3(2x + 5) - 4 = 7(2x + 5) - 20\\), what is the value of \\(2x + 5\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(16\\)",
+    "B": "\\(-\\frac{1}{2}\\)",
+    "C": "\\(4\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(u = 2x + 5\\). The equation is \\(3u - 4 = 7u - 20\\).",
+    "Subtract \\(3u\\) and add 20: \\(16 = 4u\\).",
+    "So \\(u = 2x + 5 = 4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(4(2x + 5)\\); it must still be divided by 4.",
+    "B": "Incorrect. This is the value of \\(x\\), not of \\(2x + 5\\).",
+    "C": "Correct. With \\(u = 2x + 5\\), \\(3u - 4 = 7u - 20\\) gives \\(4u = 16\\), so \\(u = 4\\).",
+    "D": "Incorrect. This is the result of adding 4 and 20 instead of finding their difference: \\(4u = 24\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_quantity",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx, u = symbols('x u')\nus = solve(Eq(3*u - 4, 7*u - 20), u)[0]\nxs = solve(Eq(3*(2*x + 5) - 4, 7*(2*x + 5) - 20), x)[0]\ns = 2*xs + 5\nassert s == us == 4\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

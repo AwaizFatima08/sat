@@ -1,0 +1,123 @@
+{
+  "id": "m-le1-0129",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, points \\(A\\), \\(C\\), and \\(D\\) lie on a line. What is the measure, in degrees, of angle \\(ACB\\)? Note: Figure not drawn to scale.",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        3,
+        4
+      ],
+      "C": [
+        7,
+        0
+      ],
+      "D": [
+        10,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "A",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.0,
+          0.4
+        ],
+        "text": "(4x + 6)°"
+      },
+      {
+        "at": [
+          3.0,
+          3.1
+        ],
+        "text": "(3x - 4)°"
+      },
+      {
+        "at": [
+          8.4,
+          0.5
+        ],
+        "text": "(9x - 18)°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": true
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(72\\)",
+    "B": "\\(10\\)",
+    "C": "\\(108\\)",
+    "D": "\\(46\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Angle \\(BCD\\) is an exterior angle of triangle \\(ABC\\), so it equals the sum of the two remote interior angles: \\(9x - 18 = (4x + 6) + (3x - 4)\\).",
+    "Then \\(9x - 18 = 7x + 2\\), so \\(2x = 20\\) and \\(x = 10\\).",
+    "Angle \\(BCD\\) measures \\(9(10) - 18 = 72^{\\circ}\\), so angle \\(ACB\\) measures \\(180 - 72 = 108^{\\circ}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the measure of exterior angle \\(BCD\\); angle \\(ACB\\) is its supplement.",
+    "B": "Incorrect. This is the value of \\(x\\), not the measure of an angle.",
+    "C": "Correct. \\(x = 10\\), so angle \\(BCD = 72^{\\circ}\\) and angle \\(ACB = 180^{\\circ} - 72^{\\circ} = 108^{\\circ}\\).",
+    "D": "Incorrect. This is the measure of angle \\(BAC\\), \\(4(10) + 6\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nlab = [l['text'] for l in figure['labels']]\nassert set(lab) == {'(4x + 6)°', '(3x - 4)°', '(9x - 18)°'}\nxv = solve(Eq(9*x - 18, (4*x + 6) + (3*x - 4)), x)[0]\nassert xv == 10\ns = 180 - (9*xv - 18)\nassert s + (4*xv + 6) + (3*xv - 4) == 180\nassert s == 108\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,22 @@
+# Math review flags (writer notes to settle at review)
+
+- m-lfn-0005 (tryit): wrong choice C is a true statement about the intercept (intended trap).
+- m-nle-0007 (tryit): Challenge hinges on one insight (double root at x = 2); confirm level 4.
+- m-arv-0007 (tryit): stem gives lateral area 2πrh (not on reference sheet).
+- m-rat-0526: inverse proportion — in scope; m-rat-0537 B distractor weaker.
+- m-lfn-0527 A ("2008") weaker trap.
+- m-nle-0537 borders on quadratic inequality.
+- m-nlf-0538 may be level 3 rather than 4.
+- m-eqx-0515/0538 lean to percentages, 0527 to geometry, 0536 to nonlinear functions; 0525 easy for level 3.
+- m-le2-0532/0536 (triangle area, Pythagorean distance) and 0538 (counting) at the edge of lin_eq_two — consider retiring or re-leveling.
+- m-le2-0519 weak distractor rationales (B, D).
+- m-pct-0534 may be easy for level 4.
+- m-le1-0537/0538/0539 may be level 3 rather than 4; m-le1-0518 table mixes "s" into a numeric column.
+- m-sys-0510 weak "Exactly two" distractor; m-sys-0511 stem has a guiding sentence (drill only, acceptable).
+- m-ineq-0533 mixes two pricing rules (25% off above 500 pages); confirm it reads as a linear-inequality item.
+- m-sys-0146 (2/x, 3/y substitution) and 0147 (perpendicular line through an intersection) stretch the skill as level-4 items.
+- m-tvd-0535 relies on scaling a least-squares line (may be beyond the test).
+- m-prb-0522 (two packs without replacement) and 0530 (geometric probability) are less typical of the SAT.
+- m-smp-0537 RETIRED (23 Oct): adds district margins of error to get a city-wide maximum (margins of error do not add that way).
+- m-lat-0532 (exterior angle bisectors) and 0540 (triangle inequality count) a little outside usual SAT topics.
+- m-lat-0106/0122 angle-label placement: confirm not visually ambiguous; m-lat-0117 easy for level 3.

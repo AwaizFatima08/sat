@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0539",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Data sets P, Q and R each contain 6 values. P: \\(10, 10, 10, 20, 20, 20\\); Q: \\(10, 15, 15, 15, 15, 20\\); R: \\(10, 10, 15, 15, 20, 20\\). Which list orders the data sets from least to greatest standard deviation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "P, R, Q",
+    "B": "R, Q, P",
+    "C": "The three standard deviations are equal.",
+    "D": "Q, R, P"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "All three data sets have a mean of 15 and a range of 10, so compare the distances from 15.",
+    "Q has four values at the mean (distance 0) and two at distance 5. R has two values at the mean and four at distance 5. P has all six values at distance 5.",
+    "So the spread increases from Q to R to P."
+  ],
+  "explanation": {
+    "A": "Incorrect. This reverses the order. The values of P are all 5 away from the mean, which is the most spread out, not the least.",
+    "B": "Incorrect. Q has more values at the mean than R, so Q is less spread out than R.",
+    "C": "Incorrect. The data sets have the same mean and the same range, but their values are at different distances from the mean, so the standard deviations differ.",
+    "D": "Correct. Q has the most values at the mean, R has fewer, and P has none, so the standard deviations increase in the order Q, R, P."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nsd = lambda d: sqrt(sum((x - Rational(sum(d), len(d)))**2 for x in d) / len(d))\nssd = lambda d: sqrt(sum((x - Rational(sum(d), len(d)))**2 for x in d) / (len(d) - 1))\nP = [10, 10, 10, 20, 20, 20]\nQ = [10, 15, 15, 15, 15, 20]\nR = [10, 10, 15, 15, 20, 20]\nassert sum(P) == sum(Q) == sum(R) and max(P) - min(P) == max(Q) - min(Q) == max(R) - min(R)\nfor f in (sd, ssd):\n    assert f(Q) < f(R) < f(P)\nassert choices[answer] == 'Q, R, P'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (SD order Q < R < P); solver's letters were swapped with m-ovd-0538",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

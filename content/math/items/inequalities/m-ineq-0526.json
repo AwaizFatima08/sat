@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0526",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Rosa wants to run at least 21 kilometers this week. She will run \\(x\\) laps around a 400-meter track and \\(y\\) kilometers on trails. Which inequality represents this situation? (1 kilometer = 1,000 meters)",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(400x + y \\ge 21\\)",
+    "B": "\\(x + 0.4y \\ge 21\\)",
+    "C": "\\(0.4x + y \\ge 21\\)",
+    "D": "\\(0.4x + y \\le 21\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Each lap is 400 meters, which is \\(\\frac{400}{1{,}000} = 0.4\\) kilometer, so \\(x\\) laps are \\(0.4x\\) kilometers.",
+    "Her total distance is \\(0.4x + y\\) kilometers, and it must be at least 21: \\(0.4x + y \\ge 21\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds meters to kilometers: the 400 meters per lap must be converted to 0.4 kilometer.",
+    "B": "Incorrect. This attaches 0.4 to the trail kilometers instead of to the laps, which are the quantity measured in 400-meter units.",
+    "C": "Correct. The laps give \\(0.4x\\) kilometers and the trails \\(y\\) kilometers, for a total of at least 21 kilometers.",
+    "D": "Incorrect. This uses the wrong inequality sign; \"at least 21\" means greater than or equal to 21."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nR = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nx, y = symbols('x y')\ntrue = lambda a, b: Rational(2, 5)*a + b >= 21\npts = [(10, 17), (0, 10), (50, 0), (60, 0), (0, 25)]\nok = [k for k in choices if all(bool(R(choices[k]).subs({x: a, y: b})) == true(a, b) for a, b in pts)]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0123",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Priya had 3 times as many rupees as her brother Arjun. After Priya gave Arjun 200 rupees, they each had the same number of rupees. How many rupees did Priya have at first?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(800\\)",
+    "B": "\\(400\\)",
+    "C": "\\(600\\)",
+    "D": "\\(200\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(p\\) and \\(a\\) be the amounts at first: \\(p = 3a\\) and \\(p - 200 = a + 200\\).",
+    "Substitute: \\(3a - 200 = a + 200\\), so \\(2a = 400\\) and \\(a = 200\\).",
+    "Then \\(p = 3(200) = 600\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the total amount the two of them had, not Priya's amount.",
+    "B": "Incorrect. This is \\(2a\\), the difference between their amounts at first; the work stopped before finding \\(a\\) and then \\(p\\).",
+    "C": "Correct. Arjun had 200 rupees and Priya had 600; afterward each had 400.",
+    "D": "Incorrect. This is the amount Arjun had at first, not Priya."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\np, a = symbols('p a')\nsol = solve([p - 3*a, (p - 200) - (a + 200)], [p, a])\nassert sol == {p: 600, a: 200}\nassert value(choices[answer]) == 600\nassert all(value(choices[k]) != 600 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

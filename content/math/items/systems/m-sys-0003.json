@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0003",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "At a tea stall in Karachi, 2 cups of chai and 1 paratha cost 190 rupees, and 1 cup of chai and 2 parathas cost 230 rupees. What is the cost, in rupees, of 1 cup of chai?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(50\\)",
+    "B": "\\(70\\)",
+    "C": "\\(90\\)",
+    "D": "\\(140\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(c\\) be the cost of a chai and \\(p\\) the cost of a paratha: \\(2c + p = 190\\) and \\(c + 2p = 230\\).",
+    "Multiply the first equation by 2: \\(4c + 2p = 380\\). Subtract the second equation: \\(3c = 150\\).",
+    "So \\(c = 50\\). (Then \\(p = 190 - 100 = 90\\).)"
+  ],
+  "explanation": {
+    "A": "Correct. Solving \\(2c + p = 190\\) and \\(c + 2p = 230\\) gives \\(c = 50\\) and \\(p = 90\\).",
+    "B": "Incorrect. This is half of \\(c + p = 140\\), as if a chai and a paratha cost the same amount.",
+    "C": "Incorrect. This is the cost of 1 paratha, not 1 cup of chai.",
+    "D": "Incorrect. Adding the equations gives \\(3c + 3p = 420\\), so \\(c + p = 140\\); this is the cost of one chai and one paratha together, one step short of the answer."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "stopped_early"
+  },
+  "verify": "c, p = symbols('c p')\nsol = solve([2*c + p - 190, c + 2*p - 230], [c, p])\nassert sol == {c: 50, p: 90}\nassert value(choices[answer]) == sol[c]\nassert all(value(choices[k]) != sol[c] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

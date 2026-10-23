@@ -1,0 +1,67 @@
+{
+  "id": "m-tvd-0504",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the table, \\(y\\) is a linear function of \\(x\\). What is the value of \\(y\\) when \\(x = 5\\)?",
+  "figure": {
+    "kind": "table",
+    "columns": [
+      "x",
+      "y"
+    ],
+    "rows": [
+      [
+        "0",
+        "7"
+      ],
+      [
+        "1",
+        "10"
+      ],
+      [
+        "2",
+        "13"
+      ],
+      [
+        "3",
+        "16"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "22"
+  ],
+  "solution": [
+    "Each time \\(x\\) increases by 1, \\(y\\) increases by 3, and \\(y = 7\\) when \\(x = 0\\). So \\(y = 3x + 7\\).",
+    "When \\(x = 5\\): \\(y = 3(5) + 7 = 22\\)."
+  ],
+  "verify": "x = symbols('x')\nrows = [(Integer(a), Integer(b)) for a, b in figure['rows']]\nm = rows[1][1] - rows[0][1]; f = m*x + rows[0][1]\nassert all(f.subs(x, a) == b for a, b in rows)\nassert f.subs(x, 5) == 22\nassert [Rational(s) for s in spr_answers] == [22]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "22",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

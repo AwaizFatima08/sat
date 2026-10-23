@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0514",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Over the same five days, the daily high temperatures, in degrees Celsius, were 20, 21, 22, 23 and 24 in Town P and 12, 22, 22, 22 and 32 in Town Q. Which statement about the standard deviations of the two data sets is true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The standard deviations are equal, because the two data sets have the same mean.",
+    "B": "Town Q's temperatures have the greater standard deviation.",
+    "C": "The standard deviations are equal, because the two data sets have the same median.",
+    "D": "Town P's temperatures have the greater standard deviation."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Both data sets have a mean of 22, so compare how far the values are from 22.",
+    "In Town P every value is within 2 degrees of 22. In Town Q two values are 10 degrees away from 22.",
+    "The values for Town Q are more spread out from the mean, so Town Q has the greater standard deviation."
+  ],
+  "explanation": {
+    "A": "Incorrect. The means are equal (22), but data sets with the same mean can be spread out differently. Town Q's values are farther from 22.",
+    "B": "Correct. Both means are 22, and Town Q has two values 10 degrees from the mean, while every Town P value is within 2 degrees of it.",
+    "C": "Incorrect. The medians are equal (22), but the median says nothing about spread. Town Q's values are farther from the center.",
+    "D": "Incorrect. Town P has more different values, but they are all close to the mean of 22. Standard deviation measures distance from the mean, not how many different values there are."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nsd = lambda d: sqrt(sum((x - Rational(sum(d), len(d)))**2 for x in d) / len(d))\nssd = lambda d: sqrt(sum((x - Rational(sum(d), len(d)))**2 for x in d) / (len(d) - 1))\nP = [20, 21, 22, 23, 24]\nQ = [12, 22, 22, 22, 32]\nassert sum(P) == sum(Q) and sorted(P)[2] == sorted(Q)[2]\nassert sd(Q) > sd(P) and ssd(Q) > ssd(P)\nassert choices[answer].startswith(\"Town Q\")",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

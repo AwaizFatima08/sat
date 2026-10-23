@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0005",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A city's parks department surveyed a random sample of 250 residents to estimate the proportion of residents who visited a city park in the past month. The margin of error for the estimate was 6 percentage points. Suppose the department instead surveys a random sample of 1,000 residents and the sample proportion is about the same. Which of the following is most likely true about the margin of error of the new estimate?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "It would be greater than 6 percentage points, because more people give more varied answers.",
+    "B": "It would be less than 6 percentage points.",
+    "C": "It would be equal to 6 percentage points, because both samples come from the same population.",
+    "D": "It would be about 1.5 percentage points, because the sample is 4 times as large."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "A larger random sample gives a more precise estimate, so the margin of error gets smaller.",
+    "The margin of error shrinks with the square root of the sample size: 4 times the sample size gives about \\(\\frac{1}{\\sqrt{4}} = \\frac{1}{2}\\) the margin of error, about 3 percentage points, not \\(\\frac{1}{4}\\) of it.",
+    "So the new margin of error would be less than 6 percentage points."
+  ],
+  "explanation": {
+    "A": "Incorrect. A larger random sample makes the estimate MORE precise, so the margin of error decreases.",
+    "B": "Correct. Increasing the size of a random sample decreases the margin of error.",
+    "C": "Incorrect. The margin of error depends on the sample size, not only on the population.",
+    "D": "Incorrect. The margin of error does not shrink in proportion to the sample size; 4 times the sample size roughly halves it (to about 3 points)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "p = Rational(1, 2)\nratio = sqrt(p*(1-p)/1000) / sqrt(p*(1-p)/250)\nassert ratio == Rational(1, 2)\nnew = 6 * ratio\nassert new < 6 and new != Rational(3, 2)\nassert answer == 'B' and 'less than 6' in choices['B']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

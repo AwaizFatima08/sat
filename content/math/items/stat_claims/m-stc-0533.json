@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0533",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A city compared the drivers who learned at two driving schools. Of School X's graduates, 4% had an accident in their first year of driving; of School Y's graduates, 9% did. School X accepts only students who are 25 years of age or older, while School Y accepts students of any age, and most of its students are younger than 25. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "School X's training causes its graduates to have fewer accidents, because its accident rate is lower.",
+    "B": "School Y's training causes more accidents among drivers who are 25 years of age or older.",
+    "C": "Age may be a confounding variable: older new drivers may have fewer accidents regardless of the school, so the data do not show that School X's training causes fewer accidents.",
+    "D": "The accident rates cannot be compared, because the two schools have different numbers of graduates."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The students were not randomly assigned to the schools; the schools' admission rules make School X's graduates older.",
+    "If older new drivers tend to have fewer accidents, age alone could explain the lower rate, so age is confounded with the school, and no causal claim about training is supported."
+  ],
+  "explanation": {
+    "A": "Incorrect. Without random assignment, a lower rate does not show the training caused it; the graduates also differ in age.",
+    "B": "Incorrect. Most of School Y's graduates are younger than 25, so the data say little about its older graduates, and no causal claim is supported.",
+    "C": "Correct. The schools' graduates differ in age, which may explain the difference in accident rates.",
+    "D": "Incorrect. The rates are percents, which already account for the different numbers of graduates."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nrate_x, rate_y = Rational(4, 100), Rational(9, 100)\nassert rate_x < rate_y\ndesign = {'random_assignment': False, 'age_differs': True}\nassert design['age_differs'] and not design['random_assignment']\nok = [k for k, v in choices.items() if 'confounding' in v]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

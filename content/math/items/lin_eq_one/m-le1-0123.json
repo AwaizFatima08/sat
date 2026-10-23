@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0123",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A bookstore had 310 books in stock before it received a shipment of \\(b\\) boxes, each containing 24 books. After the shipment arrived, the store had 1,030 books in stock. The equation \\(310 + 24b = 1{,}030\\) represents this situation. What does \\(24b\\) represent in this equation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The number of books in each box",
+    "B": "The number of books in the shipment",
+    "C": "The total number of books in stock after the shipment",
+    "D": "The number of boxes in the shipment"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Each of the \\(b\\) boxes holds 24 books, so \\(24b\\) is the number of books that arrived in the shipment.",
+    "(Solving: \\(24b = 720\\), so \\(b = 30\\) boxes containing 720 books.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. The number of books in each box is the coefficient 24, not the product \\(24b\\).",
+    "B": "Correct. 24 books in each of \\(b\\) boxes is \\(24b\\) books, the size of the shipment (720 books here).",
+    "C": "Incorrect. The total after the shipment is the whole left side, \\(310 + 24b\\), which equals 1,030.",
+    "D": "Incorrect. The number of boxes is \\(b\\) alone, which is 30 here, not \\(24b\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nb = symbols('b')\nbv = solve(Eq(310 + 24*b, 1030), b)[0]\nassert bv == 30 and 24*bv == 720\nassert 'books in the shipment' in choices[answer]\nassert sum('in the shipment' in v and 'books' in v for v in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

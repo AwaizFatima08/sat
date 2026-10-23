@@ -1,0 +1,48 @@
+{
+  "id": "m-eqx-0008",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "In the equation \\((ax + 3)(bx + 7) = 15x^{2} + cx + 21\\), \\(a\\), \\(b\\), and \\(c\\) are constants, and the equation is true for all values of \\(x\\). If \\(a + b = 8\\), what is one possible value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "36",
+    "44"
+  ],
+  "solution": [
+    "Expanding the left side gives \\(abx^{2} + (7a + 3b)x + 21\\), so \\(ab = 15\\) and \\(c = 7a + 3b\\).",
+    "Two numbers with sum \\(8\\) and product \\(15\\) are \\(3\\) and \\(5\\), so either \\(a = 3,\\ b = 5\\) or \\(a = 5,\\ b = 3\\).",
+    "If \\(a = 3\\) and \\(b = 5\\): \\(c = 7(3) + 3(5) = 36\\).",
+    "If \\(a = 5\\) and \\(b = 3\\): \\(c = 7(5) + 3(3) = 44\\). Either \\(36\\) or \\(44\\) is correct."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, a, b = symbols('x a b')\nsols = solve([a*b - 15, a + b - 8], [a, b], dict=True)\ncs = {7*s[a] + 3*s[b] for s in sols}\nfor s in sols:\n    assert expand((s[a]*x + 3)*(s[b]*x + 7)) == 15*x**2 + (7*s[a] + 3*s[b])*x + 21\nassert cs == {36, 44}\nassert {Rational(v) for v in spr_answers} == cs",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "36",
+        "second": null,
+        "note": "Two values are correct: c = 36 (a=3, b=5) or c = 44 (a=5, b=3); stem says \"one possible value\" so both must be accepted.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

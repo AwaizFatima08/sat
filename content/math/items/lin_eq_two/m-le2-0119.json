@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0119",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Rahel plans to study for exactly 30 hours each week. She will study the same number of hours, \\(x\\), on each of the 5 weekdays and the same number of hours, \\(y\\), on each of the 2 weekend days. If she studies 4 hours on each weekday, how many hours will she study on each weekend day?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(13\\)",
+    "B": "\\(2\\)",
+    "C": "\\(10\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The plan is \\(5x + 2y = 30\\).",
+    "With \\(x = 4\\): \\(20 + 2y = 30\\), so \\(2y = 10\\) and \\(y = 5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This subtracts 4 hours instead of the \\(5 \\cdot 4 = 20\\) weekday hours: \\(\\frac{30 - 4}{2} = 13\\).",
+    "B": "Incorrect. This divides the 10 remaining hours by 5 instead of by the 2 weekend days.",
+    "C": "Incorrect. 10 is the total for both weekend days; each day is half of that.",
+    "D": "Correct. \\(5(4) + 2y = 30\\) gives \\(y = 5\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "arithmetic",
+    "C": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\ny = symbols('y')\nsol = solve(Eq(5*4 + 2*y, 30), y)\nassert sol == [5]\nassert value(choices[answer]) == 5\nassert all(value(choices[k]) != 5 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

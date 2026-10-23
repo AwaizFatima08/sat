@@ -1,0 +1,45 @@
+{
+  "id": "m-ovd-0536",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A data set consists of 6 positive integers. Its only mode is \\(4\\), its median is \\(5\\) and its mean is \\(6\\). What is the greatest possible value in the data set?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "14"
+  ],
+  "solution": [
+    "The sum of the 6 integers is \\(6 \\cdot 6 = 36\\). In order, call them \\(a \\le b \\le c \\le d \\le e \\le f\\); the median gives \\(c + d = 10\\).",
+    "4 must appear at least twice, so it must be among \\(a, b, c\\), which forces \\(c = 4\\) and \\(d = 6\\), with \\(b = 4\\).",
+    "To make \\(f\\) as large as possible, make the others small: \\(a = 1\\). If \\(e = 6\\), then 6 would appear as often as 4, so \\(e = 7\\).",
+    "Then \\(f = 36 - (1 + 4 + 4 + 6 + 7) = 14\\). Check: 1, 4, 4, 6, 7, 14."
+  ],
+  "verify": "def parts(n, k, lo):\n    if k == 1:\n        return [[n]] if n >= lo else []\n    return [[a] + r for a in range(lo, n // k + 1) for r in parts(n - a, k - 1, a)]\nbest = 0\nfor p in parts(36, 6, 1):\n    if p[2] + p[3] == 10 and all(p.count(v) < p.count(4) for v in set(p) if v != 4):\n        best = max(best, p[-1])\nassert best == 14\nassert Rational(spr_answers[0]) == best and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "14",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

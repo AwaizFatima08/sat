@@ -1,0 +1,44 @@
+{
+  "id": "m-ovd-0008",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The mean age of the \\(n\\) members of a chess club is 16 years. When a 46-year-old coach and a 40-year-old assistant coach join the club, the mean age of the group increases to 19 years. What is the value of \\(n\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "16"
+  ],
+  "solution": [
+    "The total age of the members is \\(16n\\). After the coaches join, the total is \\(16n + 46 + 40 = 16n + 86\\) for \\(n + 2\\) people.",
+    "Set up the new mean: \\(16n + 86 = 19(n + 2) = 19n + 38\\).",
+    "So \\(3n = 48\\) and \\(n = 16\\)."
+  ],
+  "verify": "n = symbols('n')\nsol = solve(Eq(16*n + 46 + 40, 19*(n + 2)), n)\nassert sol == [16]\nassert Rational(spr_answers[0]) == sol[0] and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "16",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

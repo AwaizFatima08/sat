@@ -1,0 +1,123 @@
+{
+  "id": "m-rtt-0526",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In rectangle \\(ABCD\\), diagonal \\(\\overline{AC}\\) has length 20 and the measure of angle \\(CAB\\) is \\(30^{\\circ}\\). What is the perimeter of the rectangle?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        17.321,
+        0
+      ],
+      "C": [
+        17.321,
+        10
+      ],
+      "D": [
+        0,
+        10
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "A",
+        "C"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          7.6,
+          5.9
+        ],
+        "text": "20"
+      },
+      {
+        "at": [
+          3.6,
+          0.8
+        ],
+        "text": "30°"
+      }
+    ],
+    "right_angles": [
+      "B",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20 + 20\\sqrt{2}\\)",
+    "B": "\\(10 + 10\\sqrt{3}\\)",
+    "C": "\\(20 + 20\\sqrt{3}\\)",
+    "D": "\\(100\\sqrt{3}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Triangle \\(ABC\\) is a 30°-60°-90° triangle with hypotenuse 20.",
+    "\\(BC = 20\\sin 30^{\\circ} = 10\\) and \\(AB = 20\\cos 30^{\\circ} = 10\\sqrt{3}\\).",
+    "Perimeter \\(= 2(10\\sqrt{3} + 10) = 20 + 20\\sqrt{3}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the 45°-45°-90° ratio, as if the rectangle were a square.",
+    "B": "Incorrect. This is the sum of one length and one width; the perimeter counts each side twice.",
+    "C": "Correct. The sides are \\(10\\) and \\(10\\sqrt{3}\\), so the perimeter is \\(2(10 + 10\\sqrt{3}) = 20 + 20\\sqrt{3}\\).",
+    "D": "Incorrect. This is the area, \\(10 \\cdot 10\\sqrt{3}\\), not the perimeter."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('A','C')-20)<0.01 and abs(ang('C','A','B')-30)<0.1 and abs(ang('A','B','C')-90)<0.1\nans=2*(20*cos(pi/6)+20*sin(pi/6))\nassert simplify(ans-(20+20*sqrt(3)))==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0151",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, a line passes through the point \\((-1, 4)\\). The line has an \\(x\\)-intercept of \\((2a, 0)\\) and a \\(y\\)-intercept of \\((0, a)\\), where \\(a\\) is a nonzero constant. Which equation represents the line?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x + 2y = 9\\)",
+    "B": "\\(2x + y = 2\\)",
+    "C": "\\(x + 2y = 7\\)",
+    "D": "\\(4x + y = 0\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "A line with intercepts \\((2a, 0)\\) and \\((0, a)\\) is \\(\\frac{x}{2a} + \\frac{y}{a} = 1\\), or \\(x + 2y = 2a\\).",
+    "Substitute \\((-1, 4)\\): \\(-1 + 8 = 2a\\), so \\(2a = 7\\).",
+    "The line is \\(x + 2y = 7\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\((-1, 4)\\) gives \\(-1 + 8 = 7\\), not 9; the sign of \\(-1\\) was dropped.",
+    "B": "Incorrect. This line has intercepts \\((1, 0)\\) and \\((0, 2)\\): its \\(y\\)-intercept is twice its \\(x\\)-intercept, the reverse of what is given.",
+    "C": "Correct. Its intercepts are \\((7, 0)\\) and \\(\\left(0, \\frac{7}{2}\\right)\\), and \\(-1 + 2(4) = 7\\).",
+    "D": "Incorrect. This line passes through \\((-1, 4)\\) and the origin, so both intercepts are 0, but \\(a\\) must be nonzero."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\nxi = lambda s: solve(eq(s).subs(y, 0), x)\nyi = lambda s: solve(eq(s).subs(x, 0), y)\ngood = lambda s: eq(s).subs({x: -1, y: 4}) == 0 and yi(s)[0] != 0 and xi(s)[0] == 2*yi(s)[0]\nok = [k for k in choices if good(choices[k])]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

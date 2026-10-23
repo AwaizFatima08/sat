@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0509",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = -3(x - 2)^{2} + 5\\). What is the maximum value of \\(f(x)\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(-2\\)",
+    "C": "\\(-3\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "In vertex form \\(a(x - h)^{2} + k\\) with \\(a < 0\\), the parabola opens downward and its maximum value is \\(k\\).",
+    "Here \\(a = -3\\), \\(h = 2\\) and \\(k = 5\\), so the maximum value is \\(5\\), reached at \\(x = 2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(2\\) is the value of \\(x\\) at which the maximum occurs, not the maximum value of \\(f(x)\\).",
+    "B": "Incorrect. This is the result of reading the \\(-2\\) inside \\((x - 2)\\) with its sign and as the output; the vertex is \\((2, 5)\\).",
+    "C": "Incorrect. \\(-3\\) is the leading coefficient; its sign shows the graph opens downward, but it is not the maximum value.",
+    "D": "Correct. The vertex is \\((2, 5)\\) and the parabola opens downward, so the maximum value is \\(5\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = -3*(x - 2)**2 + 5\ncrit = solve(diff(f, x), x)\nassert crit == [2] and diff(f, x, 2) < 0\nm = f.subs(x, 2)\nassert m == 5\nassert value(choices[answer]) == m\nassert all(value(choices[k]) != m for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

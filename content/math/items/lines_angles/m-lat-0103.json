@@ -1,0 +1,96 @@
+{
+  "id": "m-lat-0103",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, triangle \\(ABC\\) is equilateral, and point \\(D\\) lies on the extension of \\(\\overline{BC}\\). What is the measure, in degrees, of angle \\(ACD\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "B": [
+        0,
+        0
+      ],
+      "C": [
+        6,
+        0
+      ],
+      "A": [
+        3,
+        5.196
+      ],
+      "D": [
+        10,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "D"
+      ],
+      [
+        "C",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(120\\)",
+    "B": "\\(180\\)",
+    "C": "\\(60\\)",
+    "D": "\\(300\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Each angle of an equilateral triangle measures \\(60^{\\circ}\\).",
+    "Angles \\(ACB\\) and \\(ACD\\) form a straight line, so angle \\(ACD\\) measures \\(180 - 60 = 120\\) degrees."
+  ],
+  "explanation": {
+    "A": "Correct. Angle \\(ACD\\) is supplementary to the \\(60^{\\circ}\\) angle \\(ACB\\): \\(180 - 60 = 120\\).",
+    "B": "Incorrect. This is the sum of all three interior angles; an exterior angle equals the sum of only the two remote interior angles.",
+    "C": "Incorrect. This is the interior angle \\(ACB\\), not the exterior angle \\(ACD\\).",
+    "D": "Incorrect. This is \\(360 - 60\\); angles that form a straight line add up to \\(180^{\\circ}\\), not \\(360^{\\circ}\\)."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('A','B')-d('B','C'))<0.01 and abs(d('A','C')-d('B','C'))<0.01\nans=180-60\nassert abs(ang('A','C','D')-ans)<0.1\nassert value(choices[answer])==ans==120\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

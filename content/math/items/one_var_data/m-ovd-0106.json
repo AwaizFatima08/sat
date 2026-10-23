@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0106",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The mean of the data set \\(2, 5, 5, k, 9, 11\\) is \\(6\\). What is the median of the data set?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4.5\\)",
+    "B": "\\(4\\)",
+    "C": "\\(5\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The sum of the 6 values is \\(6 \\cdot 6 = 36\\), so \\(2 + 5 + 5 + k + 9 + 11 = 36\\) and \\(k = 4\\).",
+    "In order the values are 2, 4, 5, 5, 9, 11.",
+    "The median is the mean of the 3rd and 4th values: \\(\\frac{5 + 5}{2} = 5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This averages the 3rd and 4th values as listed, 5 and \\(k = 4\\), without first putting the values in order.",
+    "B": "Incorrect. This is the value of \\(k\\), not the median of the data set.",
+    "C": "Correct. With k = 4, the ordered values are 2, 4, 5, 5, 9, 11, and the median is 5.",
+    "D": "Incorrect. This is the mean of the data set, which is given, not the median."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nk = symbols('k')\nks = solve(Eq((2 + 5 + 5 + k + 9 + 11) / Integer(6), 6), k)\nassert ks == [4]\nv = sorted([2, 5, 5, 4, 9, 11])\nmed = Rational(v[2] + v[3], 2)\nassert med == 5\nassert value(choices[answer]) == med\nassert all(value(choices[k2]) != med for k2 in choices if k2 != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

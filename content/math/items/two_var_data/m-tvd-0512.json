@@ -1,0 +1,86 @@
+{
+  "id": "m-tvd-0512",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The scatterplot shows a set of data and its line of best fit. The line of best fit passes through the points \\((0, 12)\\) and \\((10, 52)\\). What is the value of \\(y\\) predicted by the line of best fit when \\(x = 7\\)?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        21
+      ],
+      [
+        3,
+        23
+      ],
+      [
+        4,
+        29
+      ],
+      [
+        5,
+        31
+      ],
+      [
+        6,
+        37
+      ],
+      [
+        8,
+        43
+      ],
+      [
+        9,
+        49
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "line": "4*x + 12"
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "40"
+  ],
+  "solution": [
+    "Slope: \\(\\frac{52 - 12}{10 - 0} = 4\\). The \\(y\\)-intercept is 12, so the line is \\(y = 4x + 12\\).",
+    "When \\(x = 7\\): \\(y = 4(7) + 12 = 40\\)."
+  ],
+  "verify": "x = symbols('x')\nm = Rational(52 - 12, 10 - 0); f = m*x + 12\nassert simplify(f - sympify(figure['line'])) == 0\nassert [Rational(s) for s in spr_answers] == [f.subs(x, 7)] == [40]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "40",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

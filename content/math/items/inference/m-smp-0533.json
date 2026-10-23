@@ -1,0 +1,59 @@
+{
+  "id": "m-smp-0533",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Based on a random sample, the plausible values for the proportion of a population with a certain trait range from 0.38 to 0.52. A new random sample 4 times as large is taken from the same population, and it gives the same sample proportion. If the margin of error is approximately proportional to \\(\\frac{1}{\\sqrt{n}}\\), where \\(n\\) is the sample size, which of the following best gives the plausible values based on the new sample?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.415\\) to \\(0.485\\)",
+    "B": "\\(0.4325\\) to \\(0.4675\\)",
+    "C": "\\(0.38\\) to \\(0.52\\)",
+    "D": "\\(0.31\\) to \\(0.59\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Original estimate: \\(\\frac{0.38 + 0.52}{2} = 0.45\\); margin of error: \\(0.52 - 0.45 = 0.07\\).",
+    "4 times the sample size multiplies the margin of error by \\(\\frac{1}{\\sqrt{4}} = \\frac{1}{2}\\): new margin \\(0.035\\).",
+    "New plausible values: \\(0.45 - 0.035 = 0.415\\) to \\(0.45 + 0.035 = 0.485\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The margin of error halves from 0.07 to 0.035, so the plausible values are \\(0.45 \\pm 0.035\\).",
+    "B": "Incorrect. This divides the margin of error by 4; it should be divided by the square root of 4, which is 2.",
+    "C": "Incorrect. A larger random sample gives a smaller margin of error, so the range of plausible values must be narrower.",
+    "D": "Incorrect. This doubles the margin of error; a larger sample makes the margin of error smaller, not larger."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nlo, hi = Rational('0.38'), Rational('0.52')\nmid, moe = (lo + hi) / 2, (hi - lo) / 2 / sqrt(4)\nwant = [mid - moe, mid + moe]\nok = [k for k in choices if [value(s) for s in choices[k].split(' to ')] == want]\nassert ok == [answer] == ['A']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

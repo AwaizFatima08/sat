@@ -1,0 +1,114 @@
+{
+  "id": "m-lat-0116",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "To find the distance \\(AB\\) across a pond, a surveyor stands at point \\(C\\), away from the pond, and sights both \\(A\\) and \\(B\\). She marks point \\(D\\) on \\(\\overline{CA}\\) and point \\(E\\) on \\(\\overline{CB}\\) so that \\(\\overline{DE}\\) is parallel to \\(\\overline{AB}\\), as shown. She measures \\(CD = 32\\) meters, \\(DA = 48\\) meters, and \\(DE = 26\\) meters. What is the distance \\(AB\\), in meters? Note: Figure not drawn to scale.",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "C": [
+        5,
+        0
+      ],
+      "A": [
+        0,
+        10
+      ],
+      "B": [
+        10,
+        10
+      ],
+      "D": [
+        3,
+        4
+      ],
+      "E": [
+        7,
+        4
+      ]
+    },
+    "segments": [
+      [
+        "C",
+        "A"
+      ],
+      [
+        "C",
+        "B"
+      ],
+      [
+        "D",
+        "E"
+      ],
+      [
+        "A",
+        "B"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          3.2,
+          1.8
+        ],
+        "text": "32 m"
+      },
+      {
+        "at": [
+          0.6,
+          7.4
+        ],
+        "text": "48 m"
+      },
+      {
+        "at": [
+          5,
+          4.5
+        ],
+        "text": "26 m"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": true
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "65"
+  ],
+  "solution": [
+    "Because \\(\\overline{DE}\\) is parallel to \\(\\overline{AB}\\), triangle \\(CDE\\) is similar to triangle \\(CAB\\).",
+    "\\(CA = 32 + 48 = 80\\), so \\(\\frac{AB}{26} = \\frac{80}{32}\\).",
+    "\\(AB = 26 \\cdot 2.5 = 65\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['D'][1]==P['E'][1] and P['A'][1]==P['B'][1] and figure['not_to_scale']\nx=symbols('x')\nans=solve(Eq(x/26,Rational(32+48,32)),x)[0]\nassert Rational(spr_answers[0])==ans==65\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "65",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

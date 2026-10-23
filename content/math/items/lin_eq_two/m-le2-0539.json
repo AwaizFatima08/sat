@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0539",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The graph of \\(6x - 4y = 12\\) in the \\(xy\\)-plane is reflected across the \\(y\\)-axis. Which equation represents the reflected graph?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3x + 2y = -6\\)",
+    "B": "\\(3x - 2y = -6\\)",
+    "C": "\\(2x - 3y = -6\\)",
+    "D": "\\(3x + 2y = 6\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Reflecting across the \\(y\\)-axis sends each point \\((x, y)\\) to \\((-x, y)\\), so replace \\(x\\) with \\(-x\\): \\(-6x - 4y = 12\\).",
+    "Divide by \\(-2\\): \\(3x + 2y = -6\\).",
+    "Check: \\((2, 0)\\) is on the original line, and its image \\((-2, 0)\\) satisfies \\(3(-2) + 2(0) = -6\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Replacing \\(x\\) with \\(-x\\) gives \\(-6x - 4y = 12\\), which is equivalent to \\(3x + 2y = -6\\).",
+    "B": "Incorrect. This replaces both \\(x\\) and \\(y\\) with their opposites, which reflects the line through the origin.",
+    "C": "Incorrect. This swaps \\(x\\) and \\(y\\), which reflects the line across the line \\(y = x\\).",
+    "D": "Incorrect. This replaces \\(y\\) with \\(-y\\), which reflects the line across the \\(x\\)-axis instead."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\n\nyl = lambda e: solve(e, y)[0]\ntarget = yl((6*x - 4*y - 12).subs(x, -x))\nok = [k for k in choices if simplify(yl(eq(choices[k])) - target) == 0]\nassert ok == [answer]\nassert target.subs(x, -2) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

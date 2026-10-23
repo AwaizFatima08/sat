@@ -11,7 +11,7 @@ Design master: Claude Doc "SAT Simulator — English Design" https://claude.ai/a
   (published before 1930), with author, work, year and source in the item's `source`.
 - "SAT" is used descriptively only. The About screen and store listing carry the College Board trademark notice.
 - Only items with `provenance.status` = `approved` (or `checked` during development) are built into the app.
-  Run `python3 pipeline/validate.py` before committing content.
+  Run `python3 pipeline/validate.py` and `python3 pipeline/validate_math.py` before committing content.
 - American English conventions in all test content.
 - Ads: AdMob ids are in config/admob.json. No ads on test, drill or review screens. Debug builds use Google sample ids;
   `scripts/check-release-ad-ids.sh` must pass before a release build.
@@ -27,7 +27,11 @@ Design master: Claude Doc "SAT Simulator — English Design" https://claude.ai/a
 | content/rw/lessons/ | lesson notes + strategy cards per skill |
 | content/rw/reference/ | grammar handbook, word bank, trap guide, test-day guide |
 | content/rw/guides/ | writing guides per question type (for authors, not shipped) |
-| pipeline/ | validate.py, build_packs.py (content → app/assets/data), review_sheet.py |
+| content/math/items/<type>/ | Math pool (19 types), one JSON per item with a SymPy `verify` script |
+| content/math/forms/ | the 10 adaptive Math papers (math-01..10), built by pipeline/assemble_math_forms.py |
+| content/math/lessons/, guides/ | Math lessons (19) and the writing / lesson format guides |
+| content/math/review_flags.md | writer and solver notes for Homi's review |
+| pipeline/ | validate.py, validate_math.py, build_packs.py (content → app/assets/data), review_sheet(_math).py, blind.py (--math), shuffle_choices.py (--math), resolve_blind.py |
 | app/ | Flutter app `com.homilabs.moduleup` |
 | firebase/ | Firestore rules + emulator tests |
 | config/admob.json | AdMob app + ad unit ids |

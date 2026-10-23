@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0518",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Data from 50 cities show that cities with more public libraries per 100,000 residents tend to have higher average household incomes. A council member claims that building more public libraries in a city will raise household incomes there. Which of the following best explains why the data do not support this claim?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Data from only 50 cities cannot show any relationship between two variables.",
+    "B": "The data show that libraries lower household incomes.",
+    "C": "The relationship between libraries and incomes is positive, so the claim is supported.",
+    "D": "The data are observational, so other factors, such as how much money a city has to spend, could explain both more libraries and higher incomes."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "No one assigned numbers of libraries to cities; the data were only observed.",
+    "A wealthier city can afford more libraries, so wealth could explain both variables; an association alone does not show that libraries raise incomes."
+  ],
+  "explanation": {
+    "A": "Incorrect. Data from 50 cities can show an association; what they cannot show is cause and effect.",
+    "B": "Incorrect. The data show a positive association, not that libraries lower incomes.",
+    "C": "Incorrect. A positive association does not show that one variable causes the other.",
+    "D": "Correct. In observational data a third factor can explain the association, so the causal claim is not supported."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\ndesign = {'random_assignment': False, 'association': 'positive'}\nassert not design['random_assignment']\nok = [k for k, v in choices.items() if 'observational' in v]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

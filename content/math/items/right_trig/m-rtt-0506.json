@@ -1,0 +1,109 @@
+{
+  "id": "m-rtt-0506",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "At a wedding in Lahore, a straight guy rope runs from the top of a vertical tent pole to a stake in the level ground 2.5 meters from the base of the pole, as shown. The rope makes an angle of \\(x^{\\circ}\\) with the ground, where \\(\\tan x^{\\circ} = 0.8\\). How tall, in meters, is the tent pole?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "B": [
+        0,
+        0
+      ],
+      "T": [
+        0,
+        2
+      ],
+      "S": [
+        2.5,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "B",
+        "T"
+      ],
+      [
+        "B",
+        "S"
+      ],
+      [
+        "T",
+        "S"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.25,
+          -0.25
+        ],
+        "text": "2.5 m"
+      },
+      {
+        "at": [
+          2.05,
+          0.13
+        ],
+        "text": "x°"
+      }
+    ],
+    "right_angles": [
+      "B"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(0.32\\)",
+    "C": "\\(3.125\\)",
+    "D": "\\(\\sqrt{10.25}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "\\(\\tan x^{\\circ} = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{h}{2.5}\\).",
+    "\\(h = 2.5 \\cdot 0.8 = 2\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The height is opposite \\(x^{\\circ}\\) and 2.5 is adjacent, so \\(h = 2.5(0.8) = 2\\).",
+    "B": "Incorrect. This is \\(\\frac{0.8}{2.5}\\); since \\(\\tan x^{\\circ} = \\frac{h}{2.5}\\), multiply 2.5 by 0.8 instead.",
+    "C": "Incorrect. This is \\(\\frac{2.5}{0.8}\\), which treats tangent as adjacent over opposite.",
+    "D": "Incorrect. This is the length of the rope, \\(\\sqrt{2.5^{2} + 2^{2}}\\), not the height of the pole."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "reciprocal",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('B','S')-Rational(5,2))<1e-9 and abs(ang('T','B','S')-90)<0.1\nans=Rational(5,2)*Rational('0.8')\nassert ans==2 and abs(d('B','T')-ans)<1e-9\nassert abs(N(tan(ang('T','S','B')*pi/180))-Rational('0.8'))<1e-3\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (h = 2.5 x 0.8 = 2)",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

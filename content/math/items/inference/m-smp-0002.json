@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0002",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A transportation office selected 600 adults at random from a city and asked each one about their usual one-way commute time. The mean commute time for the sample was 34 minutes, with an associated margin of error of 3 minutes. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The mean commute time of all adults in the city is plausibly between 31 and 37 minutes.",
+    "B": "Every adult in the city has a commute time between 31 and 37 minutes.",
+    "C": "The mean commute time of all adults in the city is exactly 34 minutes.",
+    "D": "The mean commute time of all adults in the city is plausibly between 34 and 37 minutes."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The margin of error gives a range of plausible values for the mean of the whole population: \\(34 - 3 = 31\\) to \\(34 + 3 = 37\\).",
+    "So the mean commute time of all adults in the city is plausibly between 31 and 37 minutes.",
+    "The interval is about the population mean, not about individual adults, and it does not make 34 certain."
+  ],
+  "explanation": {
+    "A": "Correct. The plausible values for the population mean run from \\(34 - 3\\) to \\(34 + 3\\) minutes.",
+    "B": "Incorrect. The margin of error describes the uncertainty in the estimate of the MEAN, not the range of individual commute times.",
+    "C": "Incorrect. A sample mean is an estimate; the margin of error shows that the population mean is not known exactly.",
+    "D": "Incorrect. This only adds the margin of error; the plausible range extends 3 minutes on BOTH sides of 34."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "lo, hi = 34 - 3, 34 + 3\nassert (lo, hi) == (31, 37)\nkey = choices[answer]\nassert answer == 'A' and 'mean' in key and str(lo) in key and str(hi) in key and 'all adults' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

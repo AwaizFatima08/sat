@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0521",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A hot-air balloon rises at a constant rate. Its altitude, in meters, \\(t\\) minutes after a timer is started is given by \\(h(t) = 750 + 40t\\). Which of the following is the best interpretation of the statement \\(h(5) = 950\\) in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The balloon rises 950 meters during the first 5 minutes after the timer is started.",
+    "B": "5 minutes after the timer is started, the balloon's altitude is 950 meters.",
+    "C": "950 minutes after the timer is started, the balloon's altitude is 5 meters.",
+    "D": "The balloon's altitude increases by 950 meters every 5 minutes."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "In \\(h(5) = 950\\), the input 5 is a time in minutes and the output 950 is an altitude in meters.",
+    "So 5 minutes after the timer is started, the balloon's altitude is 950 meters. (It rose only \\(40 \\cdot 5 = 200\\) meters in that time.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. The balloon starts at 750 meters, so in the first 5 minutes it rises only \\(950 - 750 = 200\\) meters.",
+    "B": "Correct. The input of \\(h\\) is time in minutes and the output is altitude in meters, so \\(h(5) = 950\\) means the altitude is 950 meters at \\(t = 5\\).",
+    "C": "Incorrect. This switches the input and the output of the function.",
+    "D": "Incorrect. The altitude increases by 40 meters per minute, or 200 meters every 5 minutes; 950 is an altitude, not a change."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nt = symbols('t')\nh = 750 + 40*t\nassert h.subs(t, 5) == 950 and h.subs(t, 5) - h.subs(t, 0) == 200\nkey = '5 minutes after the timer is started, the balloon'\nassert key in choices[answer] and '950 meters' in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

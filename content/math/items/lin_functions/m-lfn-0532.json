@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0532",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The function \\(f\\) is linear, its graph has a positive slope, and \\(f(f(x)) = 9x - 8\\) for all values of \\(x\\). What is the value of \\(f(0)\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-2"
+  ],
+  "solution": [
+    "Write \\(f(x) = ax + b\\). Then \\(f(f(x)) = a(ax + b) + b = a^{2}x + ab + b\\).",
+    "Matching coefficients: \\(a^{2} = 9\\), so \\(a = 3\\) (the slope is positive), and \\(ab + b = 4b = -8\\), so \\(b = -2\\).",
+    "So \\(f(x) = 3x - 2\\) and \\(f(0) = -2\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, a, b = symbols('x a b')\nf = lambda v: a*v + b\ns = solve(Poly(expand(f(f(x)) - (9*x - 8)), x).coeffs(), [a, b], dict=True)\npos = [d for d in s if d[a] > 0]\nassert len(pos) == 1\nassert [Rational(v) for v in spr_answers] == [pos[0][b]] == [-2]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "-2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

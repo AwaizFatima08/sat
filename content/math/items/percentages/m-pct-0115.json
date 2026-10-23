@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0115",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The population of a town has decreased by \\(2\\%\\) each year. The town's population is now \\(P\\). Which expression represents the town's population 5 years ago?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(P(1.02)^{5}\\)",
+    "B": "\\(1.1P\\)",
+    "C": "\\(\\frac{P}{(0.98)^{5}}\\)",
+    "D": "\\(P(0.98)^{5}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "If the population 5 years ago was \\(Q\\), then \\(Q(0.98)^{5} = P\\).",
+    "So \\(Q = \\frac{P}{(0.98)^{5}}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of undoing each \\(2\\%\\) decrease with a \\(2\\%\\) increase. A \\(2\\%\\) increase of the smaller value does not return to the larger value, so this is not exact.",
+    "B": "Incorrect. This is the result of adding the five yearly decreases, \\(5 \\cdot 2\\% = 10\\%\\), and then adding \\(10\\%\\) to \\(P\\).",
+    "C": "Correct. The population 5 years ago, multiplied by \\(0.98\\) five times, equals \\(P\\), so it was \\(\\frac{P}{(0.98)^{5}}\\).",
+    "D": "Incorrect. This expression gives the population 5 years from now if the decrease continues, not 5 years ago."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "percent_add",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nP, Q = symbols('P Q', positive=True)\nans = solve(Eq(Q * Rational(98, 100)**5, P), Q)[0]\nassert simplify(value(choices[answer]).subs(symbols('P'), P) - ans) == 0\nassert all(simplify(value(choices[k]).subs(symbols('P'), P) - ans) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "m-pct-0113",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The table shows the regular price and the sale price of four items at a store. Which item's price was reduced by the greatest percent?",
+  "figure": {
+    "kind": "table",
+    "title": "Regular and sale prices",
+    "columns": [
+      "Item",
+      "Regular price ($)",
+      "Sale price ($)"
+    ],
+    "rows": [
+      [
+        "Kettle",
+        "40",
+        "30"
+      ],
+      [
+        "Blender",
+        "64",
+        "50"
+      ],
+      [
+        "Toaster",
+        "25",
+        "19"
+      ],
+      [
+        "Fan",
+        "90",
+        "72"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Toaster",
+    "B": "Blender",
+    "C": "Fan",
+    "D": "Kettle"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Percent reductions: kettle \\(\\frac{10}{40} = 25\\%\\); blender \\(\\frac{14}{64} \\approx 21.9\\%\\); toaster \\(\\frac{6}{25} = 24\\%\\); fan \\(\\frac{18}{90} = 20\\%\\).",
+    "The kettle has the greatest percent reduction."
+  ],
+  "explanation": {
+    "A": "Incorrect. The toaster's price fell by \\(\\frac{6}{25} = 24\\%\\), slightly less than the kettle's \\(25\\%\\).",
+    "B": "Incorrect. The blender's price fell by \\$14, but that is only \\(\\frac{14}{64} \\approx 21.9\\%\\) of its regular price.",
+    "C": "Incorrect. The fan has the greatest reduction in dollars, \\$18, but that is only \\(\\frac{18}{90} = 20\\%\\) of its regular price.",
+    "D": "Correct. The kettle's price fell by \\(\\frac{10}{40} = 25\\%\\), more than any other item."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\ndef d(r):\n    return (Rational(r[1]) - Rational(r[2])) / Rational(r[1])\npct = {r[0]: d(r) for r in figure['rows']}\nbest = max(pct, key=pct.get)\nassert best == 'Kettle' and pct['Kettle'] == Rational(1, 4)\nassert choices[answer] == best\nassert sorted(pct.values())[-2] < pct[best]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

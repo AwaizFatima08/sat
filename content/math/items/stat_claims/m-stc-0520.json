@@ -1,0 +1,65 @@
+{
+  "id": "m-stc-0520",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A gardener had 200 seeds of the same kind. She randomly assigned 100 of the seeds to be soaked in water overnight before planting and the other 100 to be planted dry. The table shows how many seeds in each group sprouted. By how many percentage points was the sprouting rate of the soaked seeds greater than that of the dry seeds?",
+  "figure": {
+    "kind": "table",
+    "title": "Seeds that sprouted",
+    "columns": [
+      "Group",
+      "Seeds planted",
+      "Seeds that sprouted"
+    ],
+    "rows": [
+      [
+        "Soaked",
+        "100",
+        "88"
+      ],
+      [
+        "Dry",
+        "100",
+        "71"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "17"
+  ],
+  "solution": [
+    "Soaked seeds: \\(\\frac{88}{100} = 88\\%\\). Dry seeds: \\(\\frac{71}{100} = 71\\%\\).",
+    "The difference is \\(88 - 71 = 17\\) percentage points. Because the seeds were randomly assigned, soaking likely caused this difference for seeds like these."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r = figure['rows']\nsoak = Rational(int(r[0][2]), int(r[0][1])) * 100\ndry = Rational(int(r[1][2]), int(r[1][1])) * 100\nassert soak - dry == 17\nassert [Rational(a) for a in spr_answers] == [soak - dry]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "17",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

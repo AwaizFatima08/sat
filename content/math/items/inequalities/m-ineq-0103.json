@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0103",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which inequality is equivalent to \\(-3x + 5 \\ge 17\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x \\ge -4\\)",
+    "B": "\\(x \\le -\\frac{22}{3}\\)",
+    "C": "\\(x \\le -4\\)",
+    "D": "\\(x \\le 4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Subtract 5 from both sides: \\(-3x \\ge 12\\).",
+    "Divide both sides by \\(-3\\) and reverse the inequality sign: \\(x \\le -4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dividing by \\(-3\\) without reversing the inequality sign.",
+    "B": "Incorrect. This is the result of adding 5 to both sides instead of subtracting it: \\(-3x \\ge 22\\).",
+    "C": "Correct. Subtracting 5 gives \\(-3x \\ge 12\\); dividing by \\(-3\\) reverses the sign: \\(x \\le -4\\).",
+    "D": "Incorrect. This is the result of dividing by 3 instead of \\(-3\\) (dropping the negative sign) while still reversing the inequality."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nsol = solve_univariate_inequality(-3*x + 5 >= 17, x, relational=False)\nassert sol == Interval(-oo, -4)\nP = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nS = lambda s: solve_univariate_inequality(P(s), x, relational=False)\nassert S(choices[answer]) == sol\nassert all(S(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

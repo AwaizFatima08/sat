@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0509",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which equation is equivalent to \\(2x + 3y = 12\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = \\frac{2}{3}x + 4\\)",
+    "B": "\\(y = -\\frac{2}{3}x + 12\\)",
+    "C": "\\(y = -\\frac{2}{3}x + 4\\)",
+    "D": "\\(y = -\\frac{3}{2}x + 4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Subtract \\(2x\\) from both sides: \\(3y = -2x + 12\\).",
+    "Divide every term by 3: \\(y = -\\frac{2}{3}x + 4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Moving \\(2x\\) to the other side makes it \\(-2x\\), so the slope is negative.",
+    "B": "Incorrect. This divides only the \\(x\\)-term by 3 and leaves the 12 undivided.",
+    "C": "Correct. \\(3y = -2x + 12\\), and dividing by 3 gives \\(y = -\\frac{2}{3}x + 4\\).",
+    "D": "Incorrect. This divides the coefficient of \\(y\\) by the coefficient of \\(x\\), giving the reciprocal of the correct fraction."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "stopped_early",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nline = solve(Eq(2*x + 3*y, 12), y)[0]\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if simplify(rhs(choices[k]) - line) == 0]\nassert ok == [answer]\nassert line == -Rational(2, 3)*x + 4",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0136",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A concert hall has floor seats, balcony seats, and mezzanine seats. The number of balcony seats is 120 less than the number of floor seats, and the number of mezzanine seats is half the number of floor seats. The hall has 1,630 seats in all. How many balcony seats does the hall have?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "580"
+  ],
+  "solution": [
+    "Let \\(f\\) be the number of floor seats: \\(f + (f - 120) + \\frac{1}{2}f = 1{,}630\\).",
+    "Combine: \\(2.5f - 120 = 1{,}630\\), so \\(2.5f = 1{,}750\\) and \\(f = 700\\).",
+    "The number of balcony seats is \\(700 - 120 = 580\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "f = symbols('f')\nfv = solve(Eq(f + (f - 120) + f/2, 1630), f)[0]\nassert fv == 700\nassert [Rational(a) for a in spr_answers] == [fv - 120]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "580",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

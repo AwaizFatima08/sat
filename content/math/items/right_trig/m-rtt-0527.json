@@ -1,0 +1,137 @@
+{
+  "id": "m-rtt-0527",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "On a construction site in Karachi, the straight boom of a crane is 25 meters long. Its lower end is attached at a pivot 2.5 meters above the level ground, and the boom makes an angle of \\(x^{\\circ}\\) with the horizontal, where \\(\\cos x^{\\circ} = 0.28\\), as shown. How high above the ground, in meters, is the upper end of the boom?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "G": [
+        0,
+        0
+      ],
+      "V": [
+        0,
+        2.5
+      ],
+      "K": [
+        7,
+        26.5
+      ],
+      "Q": [
+        7,
+        2.5
+      ],
+      "F": [
+        7,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "G",
+        "F"
+      ],
+      [
+        "G",
+        "V"
+      ],
+      [
+        "V",
+        "Q"
+      ],
+      [
+        "Q",
+        "K"
+      ],
+      [
+        "V",
+        "K"
+      ],
+      [
+        "F",
+        "Q"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          2.2,
+          15.5
+        ],
+        "text": "25 m"
+      },
+      {
+        "at": [
+          -2.4,
+          1.25
+        ],
+        "text": "2.5 m"
+      },
+      {
+        "at": [
+          1.6,
+          3.6
+        ],
+        "text": "x°"
+      }
+    ],
+    "right_angles": [
+      "Q"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(26.5\\)",
+    "B": "\\(24\\)",
+    "C": "\\(9.5\\)",
+    "D": "\\(27.5\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "\\(\\sin x^{\\circ} = \\sqrt{1 - 0.28^{2}} = \\sqrt{0.9216} = 0.96\\).",
+    "Rise above the pivot \\(= 25 \\cdot 0.96 = 24\\) meters.",
+    "Height above the ground \\(= 24 + 2.5 = 26.5\\) meters."
+  ],
+  "explanation": {
+    "A": "Correct. The vertical rise is \\(25\\sin x^{\\circ} = 25(0.96) = 24\\); adding the 2.5-meter pivot height gives 26.5.",
+    "B": "Incorrect. This is the rise above the pivot; the 2.5-meter pivot height still must be added.",
+    "C": "Incorrect. This uses \\(25\\cos x^{\\circ} = 7\\) as the rise; \\(25\\cos x^{\\circ}\\) is the horizontal distance.",
+    "D": "Incorrect. This adds the full boom length to the pivot height, as if the boom were vertical."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nc0=Rational('0.28')\nassert abs(d('V','K')-25)<1e-9 and abs(ang('V','Q','K')-90)<0.1\nassert abs(N(cos(ang('K','V','Q')*pi/180))-c0)<1e-6\nans=Rational(5,2)+25*sqrt(1-c0**2)\nassert ans==Rational(53,2) and abs(P['K'][1]-ans)<1e-9\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (25 x 0.96 + 2.5 = 26.5)",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

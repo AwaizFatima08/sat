@@ -1,0 +1,45 @@
+{
+  "id": "m-eqx-0108",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "When the expression \\(4x^{2} - 3(2x - 7) + x\\) is simplified, what is the coefficient of \\(x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-5"
+  ],
+  "solution": [
+    "Distribute \\(-3\\): \\(4x^{2} - 6x + 21 + x\\).",
+    "Combine the \\(x\\)-terms: \\(-6x + x = -5x\\). The expression is \\(4x^{2} - 5x + 21\\), so the coefficient of \\(x\\) is \\(-5\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nc = Poly(expand(4*x**2 - 3*(2*x - 7) + x), x).coeff_monomial(x)\nassert c == -5\nassert [Rational(v) for v in spr_answers] == [c]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "-5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

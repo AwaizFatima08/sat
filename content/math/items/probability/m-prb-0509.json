@@ -1,0 +1,58 @@
+{
+  "id": "m-prb-0509",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The probability that event \\(E\\) occurs is 0.35. What is the probability that event \\(E\\) does NOT occur?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1.35\\)",
+    "B": "\\(0.65\\)",
+    "C": "\\(0.50\\)",
+    "D": "\\(0.35\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The probabilities that \\(E\\) occurs and that \\(E\\) does not occur add to 1.",
+    "So the probability that \\(E\\) does not occur is \\(1 - 0.35 = 0.65\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds 0.35 to 1 instead of subtracting it; a probability can never be greater than 1.",
+    "B": "Correct. An event either occurs or does not, so the two probabilities add to 1: \\(1 - 0.35 = 0.65\\).",
+    "C": "Incorrect. This assumes that occurring and not occurring are equally likely, but the probability of \\(E\\) is given as 0.35.",
+    "D": "Incorrect. This is the probability that \\(E\\) DOES occur."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\np = 1 - Rational('0.35')\nassert p == Rational(13, 20)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

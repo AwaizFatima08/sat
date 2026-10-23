@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0527",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The minute hand of a wall clock is 15 centimeters long. How far, in centimeters, does the tip of the minute hand travel from 3:00 to 3:40?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(150\\pi\\)",
+    "B": "\\(10\\pi\\)",
+    "C": "\\(20\\pi\\)",
+    "D": "\\(40\\pi\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "In 40 minutes the minute hand turns \\(\\frac{40}{60} = \\frac{2}{3}\\) of a full circle.",
+    "The tip travels \\(\\frac{2}{3} \\cdot 2\\pi(15) = \\frac{2}{3} \\cdot 30\\pi = 20\\pi\\) centimeters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{2}{3} \\cdot \\pi(15)^{2}\\), the area swept by the hand, not the distance the tip travels.",
+    "B": "Incorrect. This is \\(\\frac{2}{3} \\cdot \\pi(15)\\); the circumference is \\(2\\pi r\\), not \\(\\pi r\\).",
+    "C": "Correct. \\(\\frac{2}{3} \\cdot 30\\pi = 20\\pi\\).",
+    "D": "Incorrect. This uses 30, the diameter, as the radius: \\(\\frac{2}{3} \\cdot 2\\pi(30) = 40\\pi\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_formula",
+    "D": "radius_diameter"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nfrac=Rational(40,60)\nans=frac*2*pi*15\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0503",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following is equivalent to \\((2x^{3})(5x^{4})\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10x^{12}\\)",
+    "B": "\\(10x^{7}\\)",
+    "C": "\\(7x^{12}\\)",
+    "D": "\\(7x^{7}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Multiply the coefficients: \\(2 \\cdot 5 = 10\\).",
+    "Multiply the powers of \\(x\\) by adding the exponents: \\(x^{3} \\cdot x^{4} = x^{3 + 4} = x^{7}\\).",
+    "The product is \\(10x^{7}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of multiplying the exponents \\(3 \\cdot 4\\) instead of adding them.",
+    "B": "Correct. Multiply the coefficients and add the exponents: \\(10x^{7}\\).",
+    "C": "Incorrect. This is the result of adding the coefficients and multiplying the exponents, the reverse of the correct rules.",
+    "D": "Incorrect. This is the result of adding the coefficients \\(2 + 5\\) instead of multiplying them."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "wrong_formula",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\ntarget = (2*x**3)*(5*x**4)\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

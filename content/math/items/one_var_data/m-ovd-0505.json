@@ -1,0 +1,58 @@
+{
+  "id": "m-ovd-0505",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A cyclist recorded her times, in seconds, for four laps of a track: 72, 75, 69 and 76. What is her mean lap time, in seconds?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(292\\)",
+    "B": "\\(72.5\\)",
+    "C": "\\(73.5\\)",
+    "D": "\\(73\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Add the times: \\(72 + 75 + 69 + 76 = 292\\).",
+    "Divide by the 4 laps: \\(\\frac{292}{4} = 73\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the total time for the 4 laps. It still has to be divided by 4.",
+    "B": "Incorrect. This is the mean of only the fastest and slowest times, \\(\\frac{69 + 76}{2} = 72.5\\). All four times must be used.",
+    "C": "Incorrect. This is the median: in order the times are 69, 72, 75, 76, and \\(\\frac{72 + 75}{2} = 73.5\\).",
+    "D": "Correct. The total time is 292 seconds for 4 laps, and \\(\\frac{292}{4} = 73\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_formula",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nd = [72, 75, 69, 76]\nr = Rational(sum(d), 4)\nassert r == 73\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

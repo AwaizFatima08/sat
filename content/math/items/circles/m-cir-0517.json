@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0517",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "On a map in the \\(xy\\)-plane where each unit represents 1 kilometer, a radio tower is located at the point \\((3, -2)\\). The tower's signal reaches every point within 6 kilometers of the tower. Which equation represents the boundary of the region the signal reaches?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((x - 3)^{2} + (y + 2)^{2} = 6\\)",
+    "B": "\\((x - 3)^{2} + (y + 2)^{2} = 12\\)",
+    "C": "\\((x + 3)^{2} + (y - 2)^{2} = 36\\)",
+    "D": "\\((x - 3)^{2} + (y + 2)^{2} = 36\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The boundary is a circle with center \\((3, -2)\\) and radius 6.",
+    "\\((x - 3)^{2} + (y - (-2))^{2} = 6^{2}\\), which is \\((x - 3)^{2} + (y + 2)^{2} = 36\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The right side must be \\(r^{2} = 36\\), not \\(r = 6\\).",
+    "B": "Incorrect. This puts the diameter, 12, on the right side instead of \\(r^{2} = 36\\).",
+    "C": "Incorrect. This circle has center \\((-3, 2)\\); the signs inside the parentheses are reversed.",
+    "D": "Correct. Center \\((3, -2)\\) and \\(r^{2} = 36\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "radius_diameter",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nx,y=symbols('x y')\neq=lambda s: expand(value(s.strip()[2:-2].split('=')[0])-value(s.strip()[2:-2].split('=')[1]))\nt=(x-3)**2+(y+2)**2-6**2\nassert expand(eq(choices[answer])-t)==0\nassert all(expand(eq(choices[k])-t)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

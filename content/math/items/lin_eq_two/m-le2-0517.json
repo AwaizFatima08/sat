@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0517",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A fruit seller in Dhaka sells \\(x\\) kilograms of mangoes at 120 taka per kilogram and \\(y\\) kilograms of lychees at 300 taka per kilogram. The equation \\(120x + 300y = 6{,}000\\) represents the seller's sales on one day. If the seller had sold 5 more kilograms of mangoes and the total sales were still 6,000 taka, how would \\(y\\) change?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "It would decrease by 12.5.",
+    "B": "It would increase by 2.",
+    "C": "It would decrease by 2.",
+    "D": "It would decrease by 5."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "5 more kilograms of mangoes add \\(120 \\cdot 5 = 600\\) taka.",
+    "To keep the total at 6,000 taka, the lychee sales must drop by 600 taka: \\(\\frac{600}{300} = 2\\) kilograms.",
+    "So \\(y\\) decreases by 2. (The slope of the line is \\(-\\frac{120}{300} = -\\frac{2}{5}\\), and \\(5 \\cdot \\left(-\\frac{2}{5}\\right) = -2\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This divides \\(5 \\cdot 300\\) by 120, which swaps the roles of the two prices.",
+    "B": "Incorrect. The total is fixed, so selling more mangoes means selling fewer lychees, not more.",
+    "C": "Correct. The extra mangoes bring in 600 taka, which equals the price of 2 kilograms of lychees.",
+    "D": "Incorrect. This assumes one kilogram of lychees trades for one kilogram of mangoes, but the prices are different."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nline = solve(Eq(120*x + 300*y, 6000), y)[0]\ndy = line.subs(x, 10) - line.subs(x, 5)\nassert dy == -2\nassert 'decrease by 2.' in choices[answer]\nassert sum('decrease by 2.' in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

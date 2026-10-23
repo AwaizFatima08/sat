@@ -1,0 +1,120 @@
+{
+  "id": "m-cir-0107",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, \\(\\overline{AB}\\) is a diameter of the circle with center \\(O\\), and point \\(C\\) lies on the circle. If \\(AC = 10\\) and \\(BC = 24\\), what is the radius of the circle?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "A": [
+        -13,
+        0
+      ],
+      "B": [
+        13,
+        0
+      ],
+      "C": [
+        -9.154,
+        9.231
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "A",
+        "C"
+      ],
+      [
+        "C",
+        "B"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 13
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          -12.4,
+          5.2
+        ],
+        "text": "10"
+      },
+      {
+        "at": [
+          3.0,
+          6.0
+        ],
+        "text": "24"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(169\\)",
+    "B": "\\(26\\)",
+    "C": "\\(13\\)",
+    "D": "\\(17\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "An angle inscribed in a semicircle is a right angle, so angle \\(ACB = 90^{\\circ}\\).",
+    "\\(AB = \\sqrt{10^{2} + 24^{2}} = \\sqrt{676} = 26\\).",
+    "The radius is half the diameter: \\(\\frac{26}{2} = 13\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the square of the radius, \\(13^{2}\\), not the radius.",
+    "B": "Incorrect. This is the diameter \\(\\overline{AB}\\); the radius is half of it.",
+    "C": "Correct. The diameter is 26, so the radius is 13.",
+    "D": "Incorrect. This is \\(\\frac{10 + 24}{2}\\); the diameter is found with the Pythagorean theorem, not by adding the chords."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "radius_diameter",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('A','C')-10)<0.01 and abs(d('B','C')-24)<0.01 and abs(d('O','C')-13)<0.01 and d('O','A')==d('O','B')==13\nans=sqrt(10**2+24**2)/2\nassert ans==13\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0151",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "In a cricket league in Pakistan, each of \\(n\\) teams plays every other team exactly once, so the league has \\(\\frac{n(n - 1)}{2}\\) matches. If 3 new teams join the league and the same format is used, which expression represents the number of additional matches the league will have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6n + 6\\)",
+    "B": "\\(\\frac{n^{2} + 5n + 6}{2}\\)",
+    "C": "\\(3n + 3\\)",
+    "D": "\\(2n + 3\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "With \\(n + 3\\) teams, the number of matches is \\(\\frac{(n + 3)(n + 2)}{2} = \\frac{n^{2} + 5n + 6}{2}\\).",
+    "Subtract the original number: \\(\\frac{n^{2} + 5n + 6 - (n^{2} - n)}{2} = \\frac{6n + 6}{2}\\).",
+    "This simplifies to \\(3n + 3\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of forgetting to divide the difference of the products by 2.",
+    "B": "Incorrect. This is the total number of matches after the new teams join, not the number of additional matches.",
+    "C": "Correct. The difference is \\(\\frac{6n + 6}{2} = 3n + 3\\).",
+    "D": "Incorrect. This is the result of subtracting \\(n^{2} - n\\) as \\(n^{2} + n\\): \\(\\frac{4n + 6}{2}\\)."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "wrong_quantity",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nn = symbols('n')\nt = (n + 3)*(n + 2)/2 - n*(n - 1)/2\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

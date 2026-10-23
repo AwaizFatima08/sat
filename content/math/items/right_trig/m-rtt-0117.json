@@ -1,0 +1,59 @@
+{
+  "id": "m-rtt-0117",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A metal nut has the shape of a regular hexagon. The distance between two opposite parallel sides of the hexagon is 12 millimeters. What is the distance, in millimeters, between two opposite vertices of the hexagon?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12\\sqrt{2}\\)",
+    "B": "\\(24\\)",
+    "C": "\\(8\\sqrt{3}\\)",
+    "D": "\\(4\\sqrt{3}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "A regular hexagon with side length \\(s\\) is made of 6 equilateral triangles with side \\(s\\). The distance between opposite sides is twice the height of one triangle: \\(2 \\cdot \\frac{\\sqrt{3}}{2}s = s\\sqrt{3}\\).",
+    "\\(s\\sqrt{3} = 12\\), so \\(s = \\frac{12}{\\sqrt{3}} = 4\\sqrt{3}\\).",
+    "The distance between opposite vertices is \\(2s = 8\\sqrt{3}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This treats the nut as a square, whose diagonal is \\(\\sqrt{2}\\) times its side.",
+    "B": "Incorrect. This doubles the distance between opposite sides; that distance is \\(s\\sqrt{3}\\), not \\(s\\).",
+    "C": "Correct. The side length is \\(4\\sqrt{3}\\), so opposite vertices are \\(8\\sqrt{3}\\) millimeters apart.",
+    "D": "Incorrect. This is the side length of the hexagon; the distance between opposite vertices is twice the side length."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\ns=symbols('s',positive=True)\nss=solve(Eq(2*s*sin(pi/3),12),s)[0]\nans=2*ss\nassert simplify(ans-8*sqrt(3))==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

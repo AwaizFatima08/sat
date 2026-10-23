@@ -1,0 +1,44 @@
+{
+  "id": "m-pct-0536",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A shop in Kolkata sold 300 saris in 2023, and \\(40\\%\\) of them were silk saris; the rest were cotton saris. In 2024, the number of silk saris sold was \\(25\\%\\) greater than in 2023, and the number of cotton saris sold was \\(10\\%\\) less than in 2023. By what percent did the total number of saris sold increase from 2023 to 2024?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4"
+  ],
+  "solution": [
+    "2023: silk \\(0.4 \\cdot 300 = 120\\), cotton \\(300 - 120 = 180\\).",
+    "2024: silk \\(1.25 \\cdot 120 = 150\\), cotton \\(0.9 \\cdot 180 = 162\\); total \\(150 + 162 = 312\\).",
+    "Percent increase: \\(\\frac{312 - 300}{300} = 0.04\\), which is \\(4\\%\\)."
+  ],
+  "verify": "s = Rational(40, 100) * 300\nn = Rational(125, 100) * s + Rational(90, 100) * (300 - s)\nassert n == 312\nv = (n - 300) / 300 * 100\nassert v == 4\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == v",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

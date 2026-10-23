@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0510",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A candle is lit and burns at a constant rate. Its height, in centimeters, \\(t\\) hours after it is lit is given by \\(h(t) = 24 - 1.5t\\). How many hours after it is lit will the candle have burned down completely (height 0)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1.5\\)",
+    "B": "\\(36\\)",
+    "C": "\\(16\\)",
+    "D": "\\(22.5\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Set \\(h(t) = 0\\): \\(24 - 1.5t = 0\\).",
+    "So \\(1.5t = 24\\) and \\(t = \\frac{24}{1.5} = 16\\) hours."
+  ],
+  "explanation": {
+    "A": "Incorrect. 1.5 is the number of centimeters the candle loses each hour, not a number of hours.",
+    "B": "Incorrect. This multiplies \\(24 \\cdot 1.5\\) instead of dividing 24 by 1.5.",
+    "C": "Correct. The height is 0 when \\(24 - 1.5t = 0\\), which gives \\(t = 16\\).",
+    "D": "Incorrect. This is \\(h(1)\\), the height in centimeters after 1 hour."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_formula",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nt = symbols('t')\nsol = solve(Eq(24 - Rational(3, 2)*t, 0), t)\nassert sol == [16]\nans = sol[0]\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

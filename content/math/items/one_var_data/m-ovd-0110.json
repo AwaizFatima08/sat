@@ -1,0 +1,85 @@
+{
+  "id": "m-ovd-0110",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The histogram shows the lengths, in minutes, of the 24 songs on a playlist. Each interval includes its left endpoint but not its right endpoint. Which of the following could be the range of the song lengths, in minutes?",
+  "figure": {
+    "kind": "histogram",
+    "x_label": "Song length (minutes)",
+    "y_label": "Number of songs",
+    "bins": [
+      [
+        2,
+        3,
+        4
+      ],
+      [
+        3,
+        4,
+        9
+      ],
+      [
+        4,
+        5,
+        7
+      ],
+      [
+        5,
+        6,
+        4
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(1\\)",
+    "C": "\\(3.2\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The shortest song is in the interval from 2 to 3 minutes, so it is at least 2 and less than 3 minutes long.",
+    "The longest song is in the interval from 5 to 6 minutes, so it is at least 5 and less than 6 minutes long.",
+    "So the range is greater than \\(5 - 3 = 2\\) and less than \\(6 - 2 = 4\\). Of the choices, only 3.2 is in this interval."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the difference between the tallest and shortest bars, \\(9 - 4 = 5\\), which compares numbers of songs, not song lengths.",
+    "B": "Incorrect. This is the width of each interval. The range is the longest length minus the shortest length, which must be greater than 2 minutes.",
+    "C": "Correct. The range must be greater than 2 and less than 4 minutes, and 3.2 is in that interval (for example, songs of 2.5 and 5.7 minutes).",
+    "D": "Incorrect. A range of 4 would need a song of 6 minutes and a song of 2 minutes, but no song is 6 minutes or longer, so the range is less than \\(6 - 2 = 4\\)."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "misread_graph",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nbins = figure['bins']\nlo, hi = bins[-1][0] - bins[0][1], bins[-1][1] - bins[0][0]\nassert (lo, hi) == (2, 4)\npossible = [k for k in choices if lo < value(choices[k]) < hi]\nassert possible == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

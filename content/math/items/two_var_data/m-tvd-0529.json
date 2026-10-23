@@ -1,0 +1,59 @@
+{
+  "id": "m-tvd-0529",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "An online club has 3,000 members. A model predicts that the number of members will increase by \\(12\\%\\) every 2 months. Which equation represents this model, where \\(N\\) is the predicted number of members \\(t\\) months from now?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(N = 3{,}000(1.12)^{2t}\\)",
+    "B": "\\(N = 3{,}000(1.06)^{t}\\)",
+    "C": "\\(N = 3{,}000(0.12)^{\\frac{t}{2}}\\)",
+    "D": "\\(N = 3{,}000(1.12)^{\\frac{t}{2}}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Every 2 months the number of members is multiplied by 1.12.",
+    "After \\(t\\) months there have been \\(\\frac{t}{2}\\) two-month periods, so \\(N = 3{,}000(1.12)^{\\frac{t}{2}}\\).",
+    "Check: at \\(t = 2\\), \\(N = 3{,}000(1.12) = 3{,}360\\), a \\(12\\%\\) increase."
+  ],
+  "explanation": {
+    "A": "Incorrect. This applies the \\(12\\%\\) increase twice every month. After 2 months it predicts \\(3{,}000(1.12)^{4}\\), about 4,721 members, not 3,360.",
+    "B": "Incorrect. This splits the \\(12\\%\\) evenly into \\(6\\%\\) per month. Percent increases compound: \\(1.06^{2} = 1.1236\\), which is more than a \\(12\\%\\) increase every 2 months.",
+    "C": "Incorrect. This uses the rate 0.12 as the factor, which would shrink the membership. A \\(12\\%\\) increase is a factor of 1.12.",
+    "D": "Correct. There are \\(\\frac{t}{2}\\) two-month periods in \\(t\\) months, and each one multiplies the membership by 1.12."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "percent_add",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nt = symbols('t')\nN = lambda k: value(choices[k].split('=')[1].strip(' \\\\)'))\nok = lambda k: N(k).subs(t, 0) == 3000 and N(k).subs(t, 2) == 3360 and N(k).subs(t, 4) == Rational(37632, 10)\nassert ok(answer)\nassert not any(ok(k) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

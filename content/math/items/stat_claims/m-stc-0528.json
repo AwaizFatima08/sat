@@ -1,0 +1,70 @@
+{
+  "id": "m-stc-0528",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A university has 4,800 undergraduate students. The table shows how many students are in each year of study. A researcher plans to select a sample of 240 students so that each year of study makes up the same fraction of the sample as it does of all undergraduates, and then to select the students within each year at random. How many third-year students should be in the sample?",
+  "figure": {
+    "kind": "table",
+    "title": "Undergraduate students by year",
+    "columns": [
+      "Year",
+      "Number of students"
+    ],
+    "rows": [
+      [
+        "First",
+        "1,800"
+      ],
+      [
+        "Second",
+        "1,200"
+      ],
+      [
+        "Third",
+        "1,000"
+      ],
+      [
+        "Fourth",
+        "800"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "50"
+  ],
+  "solution": [
+    "Third-year students make up \\(\\frac{1{,}000}{4{,}800} = \\frac{5}{24}\\) of all undergraduates.",
+    "The same fraction of the sample is \\(\\frac{5}{24} \\cdot 240 = 50\\) students."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "counts = {r[0]: int(r[1].replace(',', '')) for r in figure['rows']}\ntotal = sum(counts.values())\nassert total == 4800\nn3 = Rational(counts['Third'], total) * 240\nassert n3 == 50 and sum(Rational(c, total) * 240 for c in counts.values()) == 240\nassert [Rational(a) for a in spr_answers] == [n3]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "50",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0531",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "For \\(x \\neq -2\\), \\(\\frac{3x^{2} + kx + 10}{x + 2} = 3x + m\\), where \\(k\\) and \\(m\\) are constants. What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(11\\)",
+    "B": "\\(15\\)",
+    "C": "\\(5\\)",
+    "D": "\\(16\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Multiply both sides by \\(x + 2\\): \\(3x^{2} + kx + 10 = (x + 2)(3x + m) = 3x^{2} + (m + 6)x + 2m\\).",
+    "Match the constant terms: \\(2m = 10\\), so \\(m = 5\\).",
+    "Match the \\(x\\)-terms: \\(k = m + 6 = 11\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(m = 5\\) from the constant terms, and then \\(k = m + 6 = 11\\).",
+    "B": "Incorrect. This is the result of multiplying \\(3 \\cdot m = 15\\) instead of adding the two \\(x\\)-products, \\(mx + 2 \\cdot 3x\\).",
+    "C": "Incorrect. This is the value of \\(m\\), not \\(k\\).",
+    "D": "Incorrect. This is the result of taking \\(m = 10\\) from the constant term without dividing by 2, since the constant term is \\(2m\\)."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "wrong_quantity",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx, k, m = symbols('x k m')\neqs = Poly(expand(3*x**2 + k*x + 10 - (x + 2)*(3*x + m)), x).all_coeffs()\nsol = solve(eqs, [k, m], dict=True)\nassert sol == [{k: 11, m: 5}]\nassert value(choices[answer]) == 11\nassert all(value(choices[c]) != 11 for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

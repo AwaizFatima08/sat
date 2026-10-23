@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0532",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the equation \\(p(x + 3) - 2x = 4x + q\\), \\(p\\) and \\(q\\) are constants. If the equation has infinitely many solutions, what is the value of \\(p + q\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "24"
+  ],
+  "solution": [
+    "Expand the left side: \\((p - 2)x + 3p = 4x + q\\).",
+    "Infinitely many solutions means both sides are identical: \\(p - 2 = 4\\) and \\(3p = q\\).",
+    "So \\(p = 6\\), \\(q = 18\\), and \\(p + q = 24\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, p, q = symbols('x p q')\nd = expand(p*(x + 3) - 2*x - (4*x + q))\nsol = solve([d.coeff(x, 1), d.coeff(x, 0)], [p, q], dict=True)\nassert len(sol) == 1\ns = sol[0][p] + sol[0][q]\nassert s == 24\nassert Rational(spr_answers[0]) == s and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "24",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

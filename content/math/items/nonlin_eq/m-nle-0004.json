@@ -1,0 +1,108 @@
+{
+  "id": "m-nle-0004",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A rectangular rug has an area of 40 square feet. Its length is 3 feet greater than its width, \\(w\\), as shown. What is the width of the rug, in feet?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        8,
+        0
+      ],
+      "C": [
+        8,
+        5
+      ],
+      "D": [
+        0,
+        5
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          4.0,
+          -0.6
+        ],
+        "text": "w + 3"
+      },
+      {
+        "at": [
+          9.0,
+          2.5
+        ],
+        "text": "w"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "5"
+  ],
+  "solution": [
+    "Area = length \\(\\times\\) width: \\(w(w + 3) = 40\\), so \\(w^{2} + 3w - 40 = 0\\).",
+    "Factor: \\((w + 8)(w - 5) = 0\\), so \\(w = -8\\) or \\(w = 5\\).",
+    "A width cannot be negative, so \\(w = 5\\). Check: \\(5 \\cdot 8 = 40\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "w = symbols('w')\nsols = solve(Eq(w*(w + 3), 40), w)\npos = [s for s in sols if s > 0]\nassert sorted(sols) == [-8, 5] and pos == [5]\nassert [Rational(s) for s in spr_answers] == pos",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

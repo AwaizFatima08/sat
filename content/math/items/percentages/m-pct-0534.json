@@ -1,0 +1,59 @@
+{
+  "id": "m-pct-0534",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(x\\) is \\(40\\%\\) of \\(y\\), and \\(y\\) is \\(250\\%\\) of \\(z\\), where \\(z > 0\\), then \\(x\\) is what percent of \\(z\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(16\\%\\)",
+    "B": "\\(100\\%\\)",
+    "C": "\\(290\\%\\)",
+    "D": "\\(210\\%\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Write the relationships as equations: \\(x = 0.4y\\) and \\(y = 2.5z\\).",
+    "Substitute: \\(x = 0.4(2.5z) = z\\).",
+    "So \\(x\\) is \\(100\\%\\) of \\(z\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This divides the factors, \\(\\frac{0.4}{2.5} = 0.16\\), instead of multiplying them.",
+    "B": "Correct. \\(x = 0.4 \\cdot 2.5z = 1 \\cdot z\\), so \\(x\\) is \\(100\\%\\) of \\(z\\).",
+    "C": "Incorrect. This adds the percents, \\(250\\% + 40\\% = 290\\%\\). Percents of different bases are combined by multiplying.",
+    "D": "Incorrect. This subtracts the percents, \\(250\\% - 40\\% = 210\\%\\). Percents of different bases are combined by multiplying."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "C": "percent_add",
+    "D": "percent_add"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nz = symbols('z', positive=True)\nx = Rational(40, 100) * (Rational(250, 100) * z)\nv = simplify(x / z)\nassert v == 1\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

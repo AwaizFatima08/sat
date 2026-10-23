@@ -1,0 +1,45 @@
+{
+  "id": "m-le2-0508",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The point \\((a, 5)\\) lies on the graph of \\(3x - 2y = 11\\) in the \\(xy\\)-plane. What is the value of \\(a\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7"
+  ],
+  "solution": [
+    "Substitute \\(x = a\\) and \\(y = 5\\): \\(3a - 10 = 11\\).",
+    "Add 10: \\(3a = 21\\), so \\(a = 7\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "a = symbols('a')\nsol = solve(Eq(3*a - 2*5, 11), a)\nassert sol == [7]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

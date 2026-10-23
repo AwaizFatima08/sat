@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0198",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = ax^{2} + bx + c\\), where \\(a\\), \\(b\\), and \\(c\\) are constants with \\(a < 0\\) and \\(c > 0\\). How many \\(x\\)-intercepts does the graph of \\(y = f(x)\\) have in the \\(xy\\)-plane?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Exactly two",
+    "B": "Zero",
+    "C": "It depends on the value of \\(b\\)",
+    "D": "Exactly one"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "\\(f(0) = c > 0\\), so the graph passes through a point above the \\(x\\)-axis.",
+    "Since \\(a < 0\\), the parabola opens downward, so it crosses the \\(x\\)-axis on both sides of its vertex.",
+    "Algebraically, \\(b^{2} - 4ac > 0\\) because \\(b^{2} \\ge 0\\) and \\(-4ac > 0\\). So there are exactly two \\(x\\)-intercepts."
+  ],
+  "explanation": {
+    "A": "Correct. The graph opens downward and passes through \\((0, c)\\), which is above the \\(x\\)-axis, so it must cross the \\(x\\)-axis once on each side of the \\(y\\)-axis.",
+    "B": "Incorrect. A downward-opening parabola with a point above the \\(x\\)-axis cannot stay above it; it eventually falls below the \\(x\\)-axis.",
+    "C": "Incorrect. The discriminant \\(b^{2} - 4ac\\) is positive for every \\(b\\), because \\(-4ac > 0\\) when \\(a < 0\\) and \\(c > 0\\).",
+    "D": "Incorrect. Exactly one intercept requires the vertex on the \\(x\\)-axis, so the maximum would be 0. But \\(f(0) = c > 0\\), so the maximum is positive."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nb = symbols('b', real=True)\np, q = symbols('p q', positive=True)\ndisc = b**2 - 4*(-p)*q\nassert disc.is_positive\nx = symbols('x')\nassert all(len(solve(-pv*x**2 + bv*x + qv, x)) == 2 for pv, bv, qv in [(1, 0, 1), (2, -5, 3), (1, 7, 1)])\nassert choices[answer] == 'Exactly two'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

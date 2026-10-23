@@ -28,6 +28,7 @@ class ScoreReportScreen extends ConsumerWidget {
     }
     final b = breakdown(result.all, bank.items);
     final form = bank.form(result.formId);
+    final bp = bank.bpOf(form?.section ?? 'rw');
     return Scaffold(
       appBar: AppBar(
         title: Text(form?.title ?? 'Score report'),
@@ -49,7 +50,7 @@ class ScoreReportScreen extends ConsumerWidget {
             title: 'By content domain',
             child: Column(
               children: [
-                for (final d in bank.blueprint.domains.entries)
+                for (final d in bp.domains.entries)
                   if (b.byDomain[d.key] case final t?)
                     RatioBar(label: d.value, tally: t),
               ],
@@ -60,10 +61,10 @@ class ScoreReportScreen extends ConsumerWidget {
             title: 'By question type',
             child: Column(
               children: [
-                for (final t in bank.blueprint.typeOrder)
+                for (final t in bp.typeOrder)
                   if (b.byType[t] case final tally?)
                     RatioBar(
-                      label: bank.blueprint.types[t]!.name,
+                      label: bp.types[t]!.name,
                       tally: tally,
                       trailing: _pace(b.secondsByType[t]),
                     ),
@@ -71,7 +72,7 @@ class ScoreReportScreen extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: AppSpace.m),
-          TrapProfileCard(counts: b.trapCounts, blueprint: bank.blueprint),
+          TrapProfileCard(counts: b.trapCounts, blueprint: bp),
           const SizedBox(height: AppSpace.l),
           FilledButton.icon(
             onPressed: () => context.push('/review/${result.formId}'),

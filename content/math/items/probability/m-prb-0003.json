@@ -1,0 +1,91 @@
+{
+  "id": "m-prb-0003",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The table shows the 100 players registered at a cricket academy in Karachi, by age group and main playing role. If a player who is not a batter is selected at random, what is the probability that the player is in the 16 and over age group?",
+  "figure": {
+    "kind": "table",
+    "title": "Players by age group and role",
+    "columns": [
+      "Age group",
+      "Batter",
+      "Bowler",
+      "All-rounder",
+      "Total"
+    ],
+    "rows": [
+      [
+        "Under 16",
+        "18",
+        "14",
+        "8",
+        "40"
+      ],
+      [
+        "16 and over",
+        "22",
+        "26",
+        "12",
+        "60"
+      ],
+      [
+        "Total",
+        "40",
+        "40",
+        "20",
+        "100"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{38}{60}\\)",
+    "B": "\\(\\frac{38}{100}\\)",
+    "C": "\\(\\frac{26}{60}\\)",
+    "D": "\\(\\frac{22}{40}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Players who are not batters are the bowlers and all-rounders: \\(40 + 20 = 60\\) players.",
+    "Of these, the 16 and over players number \\(26 + 12 = 38\\).",
+    "The probability is \\(\\frac{38}{60}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Of the 60 players who are not batters, \\(26 + 12 = 38\\) are 16 and over.",
+    "B": "Incorrect. This divides by all 100 players instead of only the 60 players who are not batters.",
+    "C": "Incorrect. This counts only the bowlers who are 16 and over and leaves out the 12 all-rounders.",
+    "D": "Incorrect. This is the probability that a batter is 16 and over: the wrong group of players."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "r = {row[0]: [int(v) for v in row[1:]] for row in figure['rows']}\nnot_bat = r['Total'][1] + r['Total'][2]\nold = r['16 and over'][1] + r['16 and over'][2]\np = Rational(old, not_bat)\nassert p == Rational(19, 30)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

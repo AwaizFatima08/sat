@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0518",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "To estimate the percent of a town's adult residents who exercise regularly, a researcher surveyed 200 adults at the town's largest gym. Of those surveyed, 85% said they exercise regularly. Which of the following best describes the estimate?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The estimate is likely too low, because only 200 of the town's adults were surveyed.",
+    "B": "The estimate is likely accurate, because everyone surveyed lives in or near the town.",
+    "C": "The estimate is likely too high, because adults at a gym are more likely to exercise regularly than adults in the town in general.",
+    "D": "The estimate is likely accurate, because 200 adults is a large sample."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The people surveyed were all at a gym, so they are more likely to exercise regularly than adults in the town as a whole.",
+    "The sample is not representative of the town, so the estimate is likely too high."
+  ],
+  "explanation": {
+    "A": "Incorrect. A small sample would make the estimate less precise, but it would not make it systematically too low.",
+    "B": "Incorrect. Living near the town does not make gym visitors representative of all the town's adults.",
+    "C": "Correct. The sample was chosen in a way that favors people who exercise, so it likely overestimates the percent for the whole town.",
+    "D": "Incorrect. A large sample does not fix a sample that is not representative; the gym visitors are not like the town's adults in general."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nkey = choices[answer]\nassert answer == 'C' and 'too high' in key and 'gym' in key\nassert all('too high' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

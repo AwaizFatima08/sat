@@ -7,7 +7,7 @@ import 'package:moduleup/engine/content.dart';
 import 'package:moduleup/engine/results.dart';
 import 'package:moduleup/features/paper/paper_session.dart';
 import 'package:moduleup/widgets/common.dart';
-import 'package:moduleup/widgets/question_view.dart';
+import 'package:moduleup/widgets/math_question_view.dart';
 
 enum ReviewFilter { all, wrong, marked }
 
@@ -92,7 +92,7 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
 
   bool _keep(ItemResponse r, Item item) => switch (_filter) {
     ReviewFilter.all => true,
-    ReviewFilter.wrong => r.answer != item.answer,
+    ReviewFilter.wrong => !item.isCorrect(r.answer),
     ReviewFilter.marked => r.marked,
   };
 }
@@ -108,18 +108,13 @@ class _ReviewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final item = entry.item;
     final r = entry.response;
-    final ok = r.answer == item.answer;
+    final ok = item.isCorrect(r.answer);
     final trap = r.answer == null ? null : item.traps[r.answer];
-    return QuestionView(
+    return ItemQuestionView(
       key: ValueKey(item.id),
-      content: contentOfItem(item),
+      item: item,
       selected: r.answer,
-      reveal: Reveal(
-        answer: item.answer,
-        why: item.why,
-        explanations: item.choiceExplanations,
-        source: item.source,
-      ),
+      revealed: true,
       header: Padding(
         padding: const EdgeInsets.only(bottom: AppSpace.s),
         child: Wrap(
@@ -138,11 +133,13 @@ class _ReviewItem extends StatelessWidget {
                     : (ok ? 'Correct' : 'You chose ${r.answer}'),
               ),
             ),
-            Chip(label: Text(bank.blueprint.types[item.type]!.name)),
-            Chip(label: Text(bank.blueprint.levelNames[item.level]!)),
+            Chip(label: Text(bank.bpForItem(item).types[item.type]!.name)),
+            Chip(label: Text(bank.bpForItem(item).levelNames[item.level]!)),
             Chip(label: Text('${r.seconds} s')),
             if (!ok && trap != null)
-              Chip(label: Text('Trap: ${bank.blueprint.trapLabel(trap)}')),
+              Chip(
+                label: Text('Trap: ${bank.bpForItem(item).trapLabel(trap)}'),
+              ),
           ],
         ),
       ),

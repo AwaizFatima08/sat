@@ -1,0 +1,110 @@
+{
+  "id": "m-rtt-0518",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A tree 15 meters tall stands on level ground. When the angle of elevation of the sun is \\(\\theta\\), where \\(\\sin \\theta = 0.6\\), how long, in meters, is the tree's shadow?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "B": [
+        0,
+        0
+      ],
+      "T": [
+        0,
+        15
+      ],
+      "S": [
+        20,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "B",
+        "T"
+      ],
+      [
+        "B",
+        "S"
+      ],
+      [
+        "T",
+        "S"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          -2,
+          7.5
+        ],
+        "text": "15 m"
+      },
+      {
+        "at": [
+          17.3,
+          0.8
+        ],
+        "text": "θ"
+      }
+    ],
+    "right_angles": [
+      "B"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(25\\)",
+    "B": "\\(9\\)",
+    "C": "\\(20\\)",
+    "D": "\\(11.25\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The tree (15, opposite \\(\\theta\\)), the shadow (adjacent), and the sun's ray (hypotenuse) form a right triangle.",
+    "\\(\\sin \\theta = 0.6\\) gives hypotenuse \\(\\frac{15}{0.6} = 25\\).",
+    "Shadow \\(= \\sqrt{25^{2} - 15^{2}} = 20\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{15}{0.6}\\), the distance from the top of the tree to the tip of the shadow, not the shadow length.",
+    "B": "Incorrect. This is \\(15 \\cdot 0.6\\); the height is opposite \\(\\theta\\), so it should not be multiplied by \\(\\sin \\theta\\).",
+    "C": "Correct. \\(\\tan \\theta = \\frac{0.6}{0.8} = \\frac{3}{4}\\), so the shadow is \\(\\frac{15}{\\frac{3}{4}} = 20\\).",
+    "D": "Incorrect. This is \\(15 \\tan \\theta\\); the shadow is \\(\\frac{15}{\\tan \\theta}\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_formula",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\ns0=Rational(3,5)\nans=15*sqrt(1-s0**2)/s0\nassert ans==20 and d('B','S')==ans and d('B','T')==15\nassert abs(N(sin(ang('T','S','B')*pi/180))-s0)<1e-6\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

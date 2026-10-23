@@ -1,0 +1,110 @@
+{
+  "id": "m-rtt-0525",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A garden bed is shaped like a right triangle with a \\(30^{\\circ}\\) angle, as shown. The leg adjacent to the \\(30^{\\circ}\\) angle is 6 meters long. How many meters of edging are needed to go around the entire bed?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        6,
+        0
+      ],
+      "C": [
+        6,
+        3.464
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          3,
+          -0.45
+        ],
+        "text": "6 m"
+      },
+      {
+        "at": [
+          1.0,
+          0.25
+        ],
+        "text": "30°"
+      }
+    ],
+    "right_angles": [
+      "B"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9 + 3\\sqrt{3}\\)",
+    "B": "\\(6 + 6\\sqrt{3}\\)",
+    "C": "\\(18 + 6\\sqrt{3}\\)",
+    "D": "\\(6 + 4\\sqrt{3}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The 6-meter side is the longer leg of a 30°-60°-90° triangle, so the shorter leg is \\(\\frac{6}{\\sqrt{3}} = 2\\sqrt{3}\\).",
+    "The hypotenuse is twice the shorter leg: \\(4\\sqrt{3}\\).",
+    "Perimeter \\(= 6 + 2\\sqrt{3} + 4\\sqrt{3} = 6 + 6\\sqrt{3}\\) (about 16.4 meters)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This treats the 6-meter side as the hypotenuse (sides 3, \\(3\\sqrt{3}\\), 6); it is the longer leg.",
+    "B": "Correct. The sides are \\(6\\), \\(2\\sqrt{3}\\), and \\(4\\sqrt{3}\\), which sum to \\(6 + 6\\sqrt{3}\\).",
+    "C": "Incorrect. This treats 6 as the shorter leg (sides 6, \\(6\\sqrt{3}\\), 12); the 6-meter leg is adjacent to the \\(30^{\\circ}\\) angle, so it is the longer leg.",
+    "D": "Incorrect. This adds only the 6-meter leg and the hypotenuse \\(4\\sqrt{3}\\); the shorter leg \\(2\\sqrt{3}\\) is left out."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "C": "wrong_quantity",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('A','B')==6 and abs(ang('C','A','B')-30)<0.1 and abs(ang('A','B','C')-90)<0.1\nans=6+6*tan(pi/6)+6/cos(pi/6)\nassert simplify(ans-(6+6*sqrt(3)))==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

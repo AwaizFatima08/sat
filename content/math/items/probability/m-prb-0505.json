@@ -1,0 +1,58 @@
+{
+  "id": "m-prb-0505",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Each of the 10 letters of the word CALCULATOR is written on its own card, and the cards are placed in a bag. If one card is selected at random, what is the probability that it shows the letter L?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{1}{10}\\)",
+    "B": "\\(\\frac{1}{7}\\)",
+    "C": "\\(\\frac{1}{5}\\)",
+    "D": "\\(\\frac{4}{5}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The letters are C, A, L, C, U, L, A, T, O, R: 10 cards, and 2 of them show L.",
+    "The probability is \\(\\frac{2}{10} = \\frac{1}{5}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This counts only one L card, but the word CALCULATOR contains the letter L twice.",
+    "B": "Incorrect. This uses the 7 different letters as if they were equally likely, but there are 10 cards and some letters appear twice.",
+    "C": "Correct. 2 of the 10 cards show L, and \\(\\frac{2}{10} = \\frac{1}{5}\\).",
+    "D": "Incorrect. This is the probability that the card does NOT show L."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nw = 'CALCULATOR'\np = Rational(w.count('L'), len(w))\nassert p == Rational(1, 5)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

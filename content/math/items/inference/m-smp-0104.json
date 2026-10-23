@@ -1,0 +1,45 @@
+{
+  "id": "m-smp-0104",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A poultry farm near Rawalpindi, Pakistan, has 1,200 hens. For a random sample of 60 of the hens, the mean number of eggs laid in one week was 5.6, with a margin of error of 0.4 egg. Based on these results, what is the least plausible value for the total number of eggs laid in one week by all 1,200 hens?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6240"
+  ],
+  "solution": [
+    "The least plausible value for the mean number of eggs per hen is \\(5.6 - 0.4 = 5.2\\).",
+    "For all 1,200 hens, the least plausible total is \\(5.2(1{,}200) = 6{,}240\\) eggs."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "lo = Rational('5.6') - Rational('0.4')\ntot = lo * 1200\nassert tot == 6240\nassert [Rational(a) for a in spr_answers] == [tot]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "6240",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

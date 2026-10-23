@@ -1,0 +1,57 @@
+{
+  "id": "m-sys-0002",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A school club sold 120 tickets to a concert. Student tickets cost \\$5 each, and adult tickets cost \\$8 each. The club collected a total of \\$750. Which system of equations can be used to find the number of student tickets, \\(x\\), and the number of adult tickets, \\(y\\), that were sold?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x + y = 750\\) and \\(5x + 8y = 120\\)",
+    "B": "\\(x + y = 120\\) and \\(8x + 5y = 750\\)",
+    "C": "\\(x + y = 120\\) and \\(5x + 8y = 750\\)",
+    "D": "\\(x - y = 120\\) and \\(5x + 8y = 750\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The number of tickets adds up to 120: \\(x + y = 120\\).",
+    "The money adds up to 750: student tickets bring in \\(5x\\) dollars and adult tickets \\(8y\\) dollars, so \\(5x + 8y = 750\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This swaps the two totals: the number of tickets is 120 and the amount of money is \\$750.",
+    "B": "Incorrect. This attaches the adult price to \\(x\\), the student tickets, and the student price to \\(y\\).",
+    "C": "Correct. The tickets total 120, and \\(5x\\) dollars from students plus \\(8y\\) dollars from adults total \\$750.",
+    "D": "Incorrect. The total number of tickets is the sum \\(x + y\\), not the difference."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "sign_error"
+  },
+  "verify": "eqs = lambda s: [value(e.split('=')[0]) - value(e.split('=')[1]) for e in s.split(' and ')]\n\nx, y = symbols('x y')\ntrue = solve([x + y - 120, 5*x + 8*y - 750], [x, y])\nassert true == {x: 70, y: 50}\nfits = [k for k in choices if solve(eqs(choices[k]), [x, y]) == true]\nassert fits == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

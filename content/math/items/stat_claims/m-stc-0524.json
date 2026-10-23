@@ -1,0 +1,70 @@
+{
+  "id": "m-stc-0524",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A university has 1,800 first-year students and 4,200 students in later years. To study gym use, a researcher selected 100 first-year students at random from all first-year students and 150 later-year students at random from all later-year students. The table shows the results. Based on the survey, about how many of the university's later-year students use the campus gym?",
+  "figure": {
+    "kind": "table",
+    "title": "Students in the survey",
+    "columns": [
+      "Group",
+      "Students surveyed",
+      "Students who use the gym"
+    ],
+    "rows": [
+      [
+        "First-year",
+        "100",
+        "40"
+      ],
+      [
+        "Later-year",
+        "150",
+        "45"
+      ],
+      [
+        "Total",
+        "250",
+        "85"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1260"
+  ],
+  "solution": [
+    "The later-year students in the sample were selected at random from all later-year students, so use that group's rate: \\(\\frac{45}{150} = 0.30\\).",
+    "Apply it to the 4,200 later-year students: \\(0.30 \\cdot 4{,}200 = 1{,}260\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r = figure['rows']\nrate = Rational(int(r[1][2]), int(r[1][1]))\nest = rate * 4200\nassert est == 1260\nassert Rational(int(r[2][2]), int(r[2][1])) * 4200 != est\nassert [Rational(a) for a in spr_answers] == [est]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "1260",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

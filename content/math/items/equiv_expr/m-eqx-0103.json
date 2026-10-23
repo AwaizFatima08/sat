@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0103",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x \\neq 0\\), which of the following is equivalent to \\(\\frac{12x^{8}}{4x^{2}}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(8x^{6}\\)",
+    "B": "\\(3x^{10}\\)",
+    "C": "\\(3x^{4}\\)",
+    "D": "\\(3x^{6}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Divide the coefficients: \\(12 \\div 4 = 3\\).",
+    "Subtract the exponents: \\(x^{8 - 2} = x^{6}\\), so the expression is \\(3x^{6}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of subtracting the coefficients, \\(12 - 4\\), instead of dividing them.",
+    "B": "Incorrect. This is the result of adding the exponents, which is the rule for multiplying powers, not dividing them.",
+    "C": "Incorrect. This is the result of dividing the exponents, \\(8 \\div 2\\), instead of subtracting them.",
+    "D": "Correct. Dividing the coefficients and subtracting the exponents gives \\(3x^{6}\\)."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = 12*x**8/(4*x**2)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

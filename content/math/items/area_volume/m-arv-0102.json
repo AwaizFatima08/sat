@@ -1,0 +1,58 @@
+{
+  "id": "m-arv-0102",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A planter shaped like a rectangular prism has a base with an area of 450 square centimeters and a height of 24 centimeters. What is the volume of the planter, in cubic centimeters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3{,}600\\)",
+    "B": "\\(474\\)",
+    "C": "\\(5{,}400\\)",
+    "D": "\\(10{,}800\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The volume of a prism is the area of its base times its height.",
+    "\\(450 \\cdot 24 = 10{,}800\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{1}{3}(450)(24)\\), the formula for the volume of a pyramid, not a prism.",
+    "B": "Incorrect. This is \\(450 + 24\\); the base area and height must be multiplied, not added.",
+    "C": "Incorrect. This is \\(\\frac{1}{2}(450)(24)\\); a prism's volume has no factor of \\(\\frac{1}{2}\\).",
+    "D": "Correct. Volume \\(=\\) base area \\(\\times\\) height \\(= 450 \\cdot 24 = 10{,}800\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nans=450*24\nassert value(choices[answer])==ans==10800\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\nassert value(choices['B'])==Rational(1,3)*ans and value(choices['C'])==Rational(1,2)*ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

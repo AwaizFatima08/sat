@@ -1,0 +1,44 @@
+{
+  "id": "m-tvd-0536",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A town's transport office uses an exponential model for the number of electric scooters registered in the town. The model predicts that the number increases by \\(44\\%\\) every 2 years. According to the model, the number increases by \\(p\\%\\) each year. What is the value of \\(p\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "20"
+  ],
+  "solution": [
+    "A \\(44\\%\\) increase every 2 years is a factor of 1.44 every 2 years.",
+    "If the yearly factor is \\(r\\), then \\(r^{2} = 1.44\\), so \\(r = 1.2\\).",
+    "A factor of 1.2 is a \\(20\\%\\) increase each year, so \\(p = 20\\). (Not 22: half of \\(44\\%\\) ignores compounding.)"
+  ],
+  "verify": "r = symbols('r', positive=True)\nsol = solve(Eq(r**2, Rational(144, 100)), r)\nassert sol == [Rational(6, 5)]\np = (sol[0] - 1) * 100\nassert [Rational(s) for s in spr_answers] == [p] == [20]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "20",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

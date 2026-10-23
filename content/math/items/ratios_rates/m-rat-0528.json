@@ -1,0 +1,44 @@
+{
+  "id": "m-rat-0528",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A farmer in Nepal uses a pump that moves water at a constant rate of 1,800 liters every 15 minutes. At this rate, how many hours does the pump take to move 54,000 liters of water?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7.5"
+  ],
+  "solution": [
+    "Number of 15-minute periods: \\(\\frac{54000}{1800} = 30\\).",
+    "Time: \\(30 \\cdot 15 = 450\\) minutes.",
+    "In hours: \\(\\frac{450}{60} = 7.5\\)."
+  ],
+  "verify": "ans = Rational(54000, 1800) * 15 / 60\nassert ans == Rational(15, 2)\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "7.5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "m-tvd-0102",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The scatterplot shows 9 data points. Which choice best describes the relationship between \\(x\\) and \\(y\\)?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1.4
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2.7
+      ],
+      [
+        4,
+        3.8
+      ],
+      [
+        5,
+        5.4
+      ],
+      [
+        6,
+        7.5
+      ],
+      [
+        7,
+        10.5
+      ],
+      [
+        8,
+        14.8
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A positive nonlinear association",
+    "B": "No association",
+    "C": "A positive linear association",
+    "D": "A negative linear association"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "As \\(x\\) increases, \\(y\\) increases, so the association is positive.",
+    "The increases in \\(y\\) get larger as \\(x\\) increases (from 0.4 at first to 4.3 at the end), so the points follow a curve, not a line. The association is positive and nonlinear."
+  ],
+  "explanation": {
+    "A": "Correct. \\(y\\) increases as \\(x\\) increases, and the points curve upward, increasing faster and faster.",
+    "B": "Incorrect. There is a clear pattern: \\(y\\) increases as \\(x\\) increases.",
+    "C": "Incorrect. The association is positive, but the points curve upward: \\(y\\) increases by about 0.4 from \\(x = 0\\) to \\(x = 1\\) and by about 4.3 from \\(x = 7\\) to \\(x = 8\\), so a line does not fit them well.",
+    "D": "Incorrect. In a negative association, \\(y\\) decreases as \\(x\\) increases. Here \\(y\\) increases."
+  },
+  "traps": {
+    "B": "misread_graph",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\np = figure['points']\nd = [p[i + 1][1] - p[i][1] for i in range(len(p) - 1)]\nassert all(t > 0 for t in d)\nassert d[-1] > 5 * d[0]\nassert answer == 'B' and choices[answer] == 'A positive nonlinear association'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0139",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "At noon, Phone P has an 80% battery charge and Phone Q has a 64% battery charge. Phone P's charge decreases by 8 percentage points per hour, and Phone Q's charge decreases by 4 percentage points per hour. How many hours after noon will Phone P's charge be half of Phone Q's charge?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4\\)",
+    "B": "\\(10\\)",
+    "C": "\\(8\\)",
+    "D": "\\(12\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "After \\(t\\) hours, Phone P's charge is \\(80 - 8t\\) and Phone Q's charge is \\(64 - 4t\\), in percent.",
+    "Half of Q's charge: \\(80 - 8t = \\frac{1}{2}(64 - 4t) = 32 - 2t\\).",
+    "Then \\(48 = 6t\\), so \\(t = 8\\). Check: P is at 16% and Q is at 32%."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the time when the two charges are equal: \\(80 - 8t = 64 - 4t\\).",
+    "B": "Incorrect. This is the time when Phone P's charge reaches 0%, not half of Q's charge.",
+    "C": "Correct. \\(80 - 8t = 32 - 2t\\) gives \\(t = 8\\); then P is at 16% and Q is at 32%.",
+    "D": "Incorrect. This is the result of halving only the 64 and not the \\(4t\\): \\(80 - 8t = 32 - 4t\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nt = symbols('t')\ns = solve(Eq(80 - 8*t, (64 - 4*t)/2), t)[0]\nassert s == 8\nassert 80 - 8*s == 16 and 64 - 4*s == 32\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

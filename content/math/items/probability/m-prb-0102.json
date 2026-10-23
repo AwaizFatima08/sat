@@ -1,0 +1,87 @@
+{
+  "id": "m-prb-0102",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The table shows the 90 tickets sold for a concert, by seating section and ticket type. If one of the student tickets is selected at random, what is the probability that it is for the balcony?",
+  "figure": {
+    "kind": "table",
+    "title": "Concert tickets sold",
+    "columns": [
+      "Section",
+      "Adult",
+      "Student",
+      "Total"
+    ],
+    "rows": [
+      [
+        "Floor",
+        "32",
+        "18",
+        "50"
+      ],
+      [
+        "Balcony",
+        "16",
+        "24",
+        "40"
+      ],
+      [
+        "Total",
+        "48",
+        "42",
+        "90"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{4}{15}\\)",
+    "B": "\\(\\frac{3}{5}\\)",
+    "C": "\\(\\frac{4}{7}\\)",
+    "D": "\\(\\frac{3}{7}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "There are 42 student tickets, and 24 of them are for the balcony.",
+    "The probability is \\(\\frac{24}{42} = \\frac{4}{7}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This divides the 24 balcony student tickets by all 90 tickets instead of by the 42 student tickets.",
+    "B": "Incorrect. This is the probability that a balcony ticket is a student ticket, \\(\\frac{24}{40}\\); the condition is reversed.",
+    "C": "Correct. Of the 42 student tickets, 24 are for the balcony, and \\(\\frac{24}{42} = \\frac{4}{7}\\).",
+    "D": "Incorrect. This is the probability that a student ticket is for the floor, \\(\\frac{18}{42}\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nr = figure['rows']\np = Rational(int(r[1][2]), int(r[2][2]))\nassert p == Rational(4, 7)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

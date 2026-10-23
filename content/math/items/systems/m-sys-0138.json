@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0138",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graphs of \\(2x + y = 8\\) and \\(x - y = 1\\) intersect at point \\(P\\). Which of the following lines also passes through point \\(P\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x + y = 3\\)",
+    "B": "\\(y = 2x - 5\\)",
+    "C": "\\(x + 2y = 8\\)",
+    "D": "\\(y = 4x - 10\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Add the equations: \\(3x = 9\\), so \\(x = 3\\). Then \\(y = 3 - 1 = 2\\), so \\(P = (3, 2)\\).",
+    "Test each line at \\((3, 2)\\): \\(4(3) - 10 = 2\\), so \\(y = 4x - 10\\) passes through \\(P\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This line passes through \\((5, -2)\\), a point on \\(2x + y = 8\\) only; at \\(P\\), \\(3 + 2 = 5\\), not 3.",
+    "B": "Incorrect. This line passes through \\((4, 3)\\), a point on \\(x - y = 1\\) only; at \\(x = 3\\) it gives \\(y = 1\\), not 2.",
+    "C": "Incorrect. This line passes through \\((2, 3)\\), which reverses the coordinates of \\(P = (3, 2)\\).",
+    "D": "Correct. \\(P = (3, 2)\\), and \\(4(3) - 10 = 2\\), so the line \\(y = 4x - 10\\) passes through \\(P\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\neqs = lambda s: [value(p.split('=')[0]) - value(p.split('=')[1]) for p in s.split(' and ')]\n\nx, y = symbols('x y')\nsol = solve([2*x + y - 8, x - y - 1], [x, y])\nassert sol == {x: 3, y: 2}\non = [k for k in choices if all(e.subs(sol) == 0 for e in eqs(choices[k]))]\nassert on == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

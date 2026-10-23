@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0119",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Two cyclists start at the same time from towns that are 63 kilometers apart and ride toward each other on the same road. One cyclist rides at a constant speed of 12 kilometers per hour, and the other rides at a constant speed of 9 kilometers per hour. After how many hours will the cyclists meet?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(21\\)",
+    "B": "\\(5.25\\)",
+    "C": "\\(3\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "After \\(t\\) hours the cyclists have covered \\(12t\\) and \\(9t\\) kilometers, which together equal 63 when they meet.",
+    "\\(12t + 9t = 63\\), so \\(21t = 63\\) and \\(t = 3\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of using the difference of the speeds, \\(12 - 9 = 3\\), instead of their sum: \\(\\frac{63}{3} = 21\\).",
+    "B": "Incorrect. This is the time for the faster cyclist alone to ride all 63 kilometers.",
+    "C": "Correct. Together they close the gap at \\(21\\) kilometers per hour, so \\(21t = 63\\) and \\(t = 3\\).",
+    "D": "Incorrect. This is the time for the slower cyclist alone to ride all 63 kilometers."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_formula",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nt = symbols('t')\ns = solve(Eq(12*t + 9*t, 63), t)[0]\nassert s == 3\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

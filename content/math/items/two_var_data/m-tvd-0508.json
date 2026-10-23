@@ -1,0 +1,68 @@
+{
+  "id": "m-tvd-0508",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A lab records the number of bacteria, in thousands, in a sample at the start of each hour. The table shows the first four measurements. If the pattern in the table continues, how many thousand bacteria will be in the sample at hour 4?",
+  "figure": {
+    "kind": "table",
+    "title": "Bacteria in a sample",
+    "columns": [
+      "Hour",
+      "Bacteria (thousands)"
+    ],
+    "rows": [
+      [
+        "0",
+        "5"
+      ],
+      [
+        "1",
+        "10"
+      ],
+      [
+        "2",
+        "20"
+      ],
+      [
+        "3",
+        "40"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "80"
+  ],
+  "solution": [
+    "Each hour the number of bacteria doubles: \\(5, 10, 20, 40\\).",
+    "At hour 4 there will be \\(2 \\cdot 40 = 80\\) thousand bacteria."
+  ],
+  "verify": "v = [Integer(r[1]) for r in figure['rows']]\nratios = {v[i+1] / v[i] for i in range(3)}\nassert ratios == {2}\nassert [Rational(s) for s in spr_answers] == [v[-1] * 2] == [80]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "80",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

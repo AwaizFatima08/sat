@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0115",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A mobile accessories shop in Lahore sells phone cases for 600 rupees each and chargers for 1,500 rupees each. Last week, the shop's sales of these two items totaled 90,000 rupees from \\(x\\) phone cases and \\(y\\) chargers. Which equation expresses \\(y\\) in terms of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = 60 + \\frac{2}{5}x\\)",
+    "B": "\\(y = 150 - \\frac{2}{5}x\\)",
+    "C": "\\(y = 60 - \\frac{5}{2}x\\)",
+    "D": "\\(y = 60 - \\frac{2}{5}x\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The situation is \\(600x + 1{,}500y = 90{,}000\\).",
+    "Subtract \\(600x\\) and divide by 1,500: \\(y = 60 - \\frac{600}{1{,}500}x = 60 - \\frac{2}{5}x\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Moving \\(600x\\) to the other side makes it negative; more phone cases means fewer chargers for the same total.",
+    "B": "Incorrect. 150 is \\(\\frac{90{,}000}{600}\\); the constant term must be divided by 1,500, the price of a charger.",
+    "C": "Incorrect. The coefficient should be \\(\\frac{600}{1{,}500} = \\frac{2}{5}\\); this inverts it.",
+    "D": "Correct. \\(1{,}500y = 90{,}000 - 600x\\), so \\(y = 60 - \\frac{2}{5}x\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "wrong_formula",
+    "C": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nrhs = lambda s: value(s.split('=')[1])\ntarget = solve(Eq(600*x + 1500*y, 90000), y)[0]\nok = [k for k in choices if simplify(rhs(choices[k]) - target) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

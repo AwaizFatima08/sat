@@ -1,0 +1,57 @@
+{
+  "id": "m-pct-0003",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The number of members in a hiking club increased from 48 to 60. By what percent did the number of members increase?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12\\%\\)",
+    "B": "\\(20\\%\\)",
+    "C": "\\(25\\%\\)",
+    "D": "\\(125\\%\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The increase is \\(60 - 48 = 12\\) members.",
+    "Divide by the original number: \\(\\frac{12}{48} = 0.25\\), which is \\(25\\%\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the number of new members, 12, written as a percent. The increase must be compared with the original 48 members.",
+    "B": "Incorrect. This is the result of dividing the increase by the new number instead of the original: \\(\\frac{12}{60} = 20\\%\\).",
+    "C": "Correct. The increase of 12 members is \\(\\frac{12}{48} = 25\\%\\) of the original 48 members.",
+    "D": "Incorrect. This is the new number as a percent of the original, \\(\\frac{60}{48} = 125\\%\\), not the percent increase."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "percent_add",
+    "D": "wrong_quantity"
+  },
+  "verify": "pct = Rational(60 - 48, 48) * 100\nassert pct == 25\nassert value(choices[answer]) == pct / 100\nassert all(value(choices[k]) != pct / 100 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

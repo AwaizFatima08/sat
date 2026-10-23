@@ -1,0 +1,122 @@
+{
+  "id": "m-rtt-0521",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(ABC\\), \\(\\overline{CD}\\) is the altitude to hypotenuse \\(\\overline{AB}\\), with \\(AD = 9\\) and \\(DB = 16\\). What is the value of \\(\\tan A\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        25,
+        0
+      ],
+      "C": [
+        9,
+        12
+      ],
+      "D": [
+        9,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "A",
+        "D"
+      ],
+      [
+        "D",
+        "C"
+      ],
+      [
+        "D",
+        "B"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          4.5,
+          -1.3
+        ],
+        "text": "9"
+      },
+      {
+        "at": [
+          17,
+          -1.3
+        ],
+        "text": "16"
+      }
+    ],
+    "right_angles": [
+      "C",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{3}{5}\\)",
+    "B": "\\(\\frac{4}{3}\\)",
+    "C": "\\(\\frac{3}{4}\\)",
+    "D": "\\(\\frac{9}{16}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Triangles \\(ADC\\) and \\(CDB\\) are similar, so \\(\\frac{AD}{CD} = \\frac{CD}{DB}\\) and \\(CD^{2} = 9 \\cdot 16 = 144\\); \\(CD = 12\\).",
+    "In right triangle \\(ADC\\), \\(\\tan A = \\frac{CD}{AD} = \\frac{12}{9} = \\frac{4}{3}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{AC}{AB} = \\frac{15}{25}\\), which is \\(\\cos A\\).",
+    "B": "Correct. \\(CD = 12\\), so in triangle \\(ADC\\), \\(\\tan A = \\frac{CD}{AD} = \\frac{12}{9} = \\frac{4}{3}\\).",
+    "C": "Incorrect. This is \\(\\frac{AD}{CD}\\), adjacent over opposite.",
+    "D": "Incorrect. This is the ratio of the two pieces of the hypotenuse, which is not a trigonometric ratio of angle \\(A\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('A','D')==9 and d('D','B')==16 and abs(ang('A','C','B')-90)<0.1 and abs(ang('A','D','C')-90)<0.1\nCD=sqrt(9*16)\nans=CD/9\nassert ans==Rational(4,3) and d('C','D')==CD\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

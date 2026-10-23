@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0004",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "\\[5x + 2y = 31\\] \\[3x - 2y = 1\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(y\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "11/2"
+  ],
+  "solution": [
+    "Add the equations to eliminate \\(y\\): \\(8x = 32\\), so \\(x = 4\\).",
+    "Substitute into the first equation: \\(20 + 2y = 31\\), so \\(2y = 11\\).",
+    "So \\(y = \\frac{11}{2}\\), or 5.5."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, y = symbols('x y')\nsol = solve([5*x + 2*y - 31, 3*x - 2*y - 1], [x, y])\nassert sol == {x: 4, y: Rational(11, 2)}\nassert [Rational(s) for s in spr_answers] == [sol[y]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "11/2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

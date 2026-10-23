@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0506",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A researcher in Colombo, Sri Lanka, selected 1,000 adults at random from the city's adult residents. Adults who owned a bicycle reported more hours of outdoor activity per week, on average, than adults who did not. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Among adults in Colombo, owning a bicycle is associated with more hours of outdoor activity per week.",
+    "B": "The result applies only to the 1,000 adults in the sample.",
+    "C": "Owning a bicycle causes adults in Colombo to spend more hours on outdoor activity per week.",
+    "D": "Spending more hours outdoors causes adults in Colombo to buy bicycles."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The adults were selected at random from the city, so the result can be generalized to adults in Colombo.",
+    "No one was assigned to own a bicycle, so the study shows an association, not cause and effect."
+  ],
+  "explanation": {
+    "A": "Correct. A random sample supports generalizing the association to all adults in Colombo.",
+    "B": "Incorrect. Because the sample was random, the result can be generalized beyond the 1,000 adults.",
+    "C": "Incorrect. Without random assignment, other factors could explain the difference, so a causal claim is not supported.",
+    "D": "Incorrect. This is also a cause-and-effect claim, just in the opposite direction; an observational study supports neither."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\ndesign = {'random_sample': True, 'random_assignment': False}\nclaims = {'A': ('assoc', 'city'), 'B': ('cause', 'city'), 'C': ('cause', 'city'), 'D': ('assoc', 'sample')}\nok = [k for k, (c, s) in claims.items() if c == ('cause' if design['random_assignment'] else 'assoc') and s == ('city' if design['random_sample'] else 'sample')]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

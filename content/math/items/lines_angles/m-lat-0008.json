@@ -1,0 +1,100 @@
+{
+  "id": "m-lat-0008",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "In triangle \\(ABC\\), \\(\\overline{BI}\\) bisects angle \\(ABC\\), and \\(\\overline{CI}\\) bisects angle \\(ACB\\). The measure of angle \\(BAC\\) is \\(52^{\\circ}\\). What is the measure, in degrees, of angle \\(BIC\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        3.681,
+        10.113
+      ],
+      "B": [
+        0,
+        0
+      ],
+      "C": [
+        10,
+        0
+      ],
+      "I": [
+        4.419,
+        3.094
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "B",
+        "I"
+      ],
+      [
+        "I",
+        "C"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          3.848,
+          8.522
+        ],
+        "text": "52°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "116"
+  ],
+  "solution": [
+    "The other two angles of triangle \\(ABC\\) add up to \\(180 - 52 = 128^{\\circ}\\). Neither one is needed separately.",
+    "The bisectors take half of each: angle \\(IBC\\) + angle \\(ICB = \\frac{128}{2} = 64^{\\circ}\\).",
+    "In triangle \\(BIC\\): angle \\(BIC = 180 - 64 = 116^{\\circ}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(ang('B','A','C')-52)<0.1\nassert abs(ang('A','B','I')-ang('I','B','C'))<0.1 and abs(ang('A','C','I')-ang('I','C','B'))<0.1\nans=180-Rational(180-52,2)\nassert abs(ang('B','I','C')-ans)<0.1\nassert Rational(spr_answers[0])==ans==116\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "116",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

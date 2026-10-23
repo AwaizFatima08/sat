@@ -1,0 +1,58 @@
+{
+  "id": "m-rat-0114",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The value of \\(y\\) is directly proportional to the value of \\(x\\). When \\(x\\) increases by 6, \\(y\\) increases by 15. What is the value of \\(y\\) when \\(x = 10\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2.5\\)",
+    "B": "\\(19\\)",
+    "C": "\\(4\\)",
+    "D": "\\(25\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Since \\(y = kx\\), an increase of 6 in \\(x\\) increases \\(y\\) by \\(6k\\). So \\(6k = 15\\) and \\(k = 2.5\\).",
+    "When \\(x = 10\\), \\(y = 2.5 \\cdot 10 = 25\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the constant of proportionality \\(k\\), not the value of \\(y\\) when \\(x = 10\\).",
+    "B": "Incorrect. This is the result of assuming \\(y = x + 9\\) because 15 is 9 more than 6. In a proportional relationship, \\(y\\) is a constant multiple of \\(x\\).",
+    "C": "Incorrect. This is the result of dividing 10 by 2.5 instead of multiplying.",
+    "D": "Correct. \\(k = \\frac{15}{6} = 2.5\\), so \\(y = 2.5 \\cdot 10 = 25\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "concept",
+    "C": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nk = symbols('k')\nkv = solve(Eq(6*k, 15), k)[0]\nans = kv * 10\nassert ans == 25\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

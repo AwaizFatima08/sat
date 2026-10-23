@@ -1,0 +1,156 @@
+{
+  "type": "equiv_expr",
+  "title": "Equivalent expressions",
+  "what_is_tested": "You rewrite an expression in a different but equal form: expanding, factoring, combining like terms, using exponent rules, and simplifying rational expressions. Two expressions are equivalent when they give the same value for every allowed \\(x\\). This skill sits underneath almost every Advanced Math question, so speed and accuracy here pay off everywhere.",
+  "how_to_spot": "The stem asks \"Which of the following is equivalent to …?\", gives an identity that is \"true for all values of \\(x\\)\", or asks for a coefficient such as \\(a\\), \\(b\\) or \\(c\\) after rewriting.",
+  "method": [
+    "Decide what kind of rewriting is needed: expand, factor, use exponent rules, or combine fractions.",
+    "Distribute carefully, especially a minus sign or a number in front of parentheses.",
+    "Combine like terms: only terms with the same variable and the same power add together.",
+    "For fractions, factor first, then use a common denominator or cancel common factors (never single terms).",
+    "For \"true for all \\(x\\)\" questions, match the coefficients of \\(x^{2}\\), \\(x\\) and the constant on both sides.",
+    "Check your choice by substituting an easy value such as \\(x = 2\\) into the original and the answer."
+  ],
+  "pitfalls": [
+    "Subtracting a polynomial but changing the sign of only its first term (sign_error).",
+    "Multiplying a number into only part of the parentheses, e.g. \\(2(x^{2} + 5x - 1) = 2x^{2} + 5x - 1\\) (arithmetic).",
+    "Multiplying exponents when you should add them: \\(x^{2} \\cdot x^{3} = x^{5}\\), not \\(x^{6}\\) (wrong_formula).",
+    "Cancelling terms instead of factors, e.g. crossing out \\(x^{2}\\) in \\(\\frac{x^{2} - 4x - 12}{x^{2} - 36}\\) (concept).",
+    "Finding the constants and then reporting the wrong one, e.g. \\(p + q\\) when the question asks for \\(pq\\) (wrong_quantity)."
+  ],
+  "calculator": "The Graph tab is a strong check: graph the original expression and an answer choice; if the two curves lie exactly on top of each other, they are equivalent. Expanding by hand is usually faster than typing long expressions.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: add, subtract and multiply polynomials",
+      "steps": [
+        "Write out the parentheses step by step: a minus sign or a number in front applies to every term inside.",
+        "Multiply two binomials term by term (first, outer, inner, last).",
+        "Group like terms (\\(x^{2}\\) with \\(x^{2}\\), \\(x\\) with \\(x\\), numbers with numbers) and combine them.",
+        "Check with \\(x = 1\\): the original and your answer must give the same number."
+      ],
+      "worked_example": {
+        "stem": "Which of the following is equivalent to \\((4x^{2} - 3x + 7) + 2(x^{2} + 5x - 1)\\)?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(6x^{2} + 7x + 5\\)",
+          "B": "\\(6x^{2} + 2x + 6\\)",
+          "C": "\\(5x^{2} + 7x + 5\\)",
+          "D": "\\(6x^{2} + 7x + 9\\)"
+        },
+        "answer": "A",
+        "walkthrough": [
+          "Distribute the 2 to every term: \\(2(x^{2} + 5x - 1) = 2x^{2} + 10x - 2\\).",
+          "Add the first polynomial: \\(4x^{2} - 3x + 7 + 2x^{2} + 10x - 2\\).",
+          "Combine like terms: \\(4x^{2} + 2x^{2} = 6x^{2}\\), \\(-3x + 10x = 7x\\), \\(7 - 2 = 5\\). The result is \\(6x^{2} + 7x + 5\\).",
+          "Check with \\(x = 1\\): the original gives \\(8 + 2(5) = 18\\) and \\(6 + 7 + 5 = 18\\). Choice A is correct.",
+          "Choice B, the strongest trap, comes from adding \\(x^{2} + 5x - 1\\) without multiplying it by 2 first."
+        ],
+        "verify": "x = symbols('x')\ne = (4*x**2 - 3*x + 7) + 2*(x**2 + 5*x - 1)\nassert expand(value(choices[answer]) - e) == 0\nassert all(expand(value(choices[k]) - e) != 0 for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-eqx-0001",
+        "m-eqx-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: exponent rules and reading a coefficient",
+      "steps": [
+        "Rewrite every root as a power: \\(\\sqrt{x} = x^{\\frac{1}{2}}\\) and \\(\\sqrt[3]{x} = x^{\\frac{1}{3}}\\).",
+        "Multiplying powers of \\(x\\): add the exponents. Dividing: subtract the exponent of the denominator.",
+        "When a product must be expanded, expand each part fully before combining.",
+        "Answer exactly what is asked: one exponent or one coefficient, as a fraction if needed."
+      ],
+      "worked_example": {
+        "stem": "For \\(x > 0\\), the expression \\(\\frac{x^{2}\\sqrt[3]{x}}{\\sqrt{x}}\\) is equivalent to \\(x^{k}\\), where \\(k\\) is a constant. What is the value of \\(k\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "11/6"
+        ],
+        "walkthrough": [
+          "Rewrite the roots as powers: \\(\\frac{x^{2} \\cdot x^{\\frac{1}{3}}}{x^{\\frac{1}{2}}}\\).",
+          "Multiply in the numerator by adding exponents: \\(2 + \\frac{1}{3} = \\frac{7}{3}\\), so the numerator is \\(x^{\\frac{7}{3}}\\).",
+          "Divide by subtracting exponents: \\(\\frac{7}{3} - \\frac{1}{2} = \\frac{14}{6} - \\frac{3}{6} = \\frac{11}{6}\\).",
+          "So \\(k = \\frac{11}{6}\\); type 11/6 (or the decimal 1.833).",
+          "A common slip is multiplying the exponents, \\(2 \\cdot \\frac{1}{3}\\), which gives a much smaller power."
+        ],
+        "verify": "x = symbols('x', positive=True)\nk = 2 + Rational(1, 3) - Rational(1, 2)\nassert simplify(x**2 * cbrt(x) / sqrt(x) - x**k) == 0\nassert Rational(spr_answers[0]) == k == Rational(11, 6)"
+      },
+      "tryit": [
+        "m-eqx-0003",
+        "m-eqx-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: rational expressions and factoring",
+      "steps": [
+        "Factor every numerator and denominator completely (look for a common factor, a difference of squares, or a trinomial).",
+        "To add or subtract fractions, use the product of the different denominator factors and rewrite each numerator.",
+        "Cancel only whole factors that appear in both the numerator and the denominator.",
+        "Confirm by testing one value (not an excluded one) or by graphing the original and your choice in the Graph tab."
+      ],
+      "worked_example": {
+        "stem": "Which of the following is equivalent to \\(\\frac{x^{2} - 4x - 12}{x^{2} - 36}\\) for \\(x \\neq 6\\) and \\(x \\neq -6\\)?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(\\frac{x - 2}{x - 6}\\)",
+          "B": "\\(\\frac{x + 3}{9}\\)",
+          "C": "\\(\\frac{x + 2}{x + 6}\\)",
+          "D": "\\(\\frac{x + 2}{x - 6}\\)"
+        },
+        "answer": "C",
+        "walkthrough": [
+          "Factor the numerator: you need two numbers with product \\(-12\\) and sum \\(-4\\), which are \\(-6\\) and \\(2\\). So \\(x^{2} - 4x - 12 = (x - 6)(x + 2)\\).",
+          "Factor the denominator as a difference of squares: \\(x^{2} - 36 = (x - 6)(x + 6)\\).",
+          "Cancel the common factor \\((x - 6)\\): the result is \\(\\frac{x + 2}{x + 6}\\), choice C.",
+          "Calculator check (Graph tab): graph \\(y = \\frac{x^{2} - 4x - 12}{x^{2} - 36}\\) and \\(y = \\frac{x + 2}{x + 6}\\); the curves match.",
+          "Choice B is the trap of crossing out the \\(x^{2}\\) terms, which are terms, not factors."
+        ],
+        "verify": "x = symbols('x')\ne = (x**2 - 4*x - 12) / (x**2 - 36)\nassert simplify(value(choices[answer]) - e) == 0\nassert all(simplify(value(choices[k]) - e) != 0 for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-eqx-0005",
+        "m-eqx-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: structure and matching coefficients",
+      "steps": [
+        "Look for structure first: a repeated chunk such as \\((x - 3)\\) can be treated as one variable \\(u\\).",
+        "For an identity \"true for all \\(x\\)\", expand the side with unknown constants and keep the constants as letters.",
+        "Set the coefficients of \\(x^{2}\\), \\(x\\) and the constant term equal on both sides, giving small equations.",
+        "Solve only for what is asked; sometimes one coefficient equation gives it directly."
+      ],
+      "worked_example": {
+        "stem": "In the equation \\((px - 4)(2x + q) = 6x^{2} + 7x - 20\\), \\(p\\) and \\(q\\) are constants, and the equation is true for all values of \\(x\\). What is the value of \\(pq\\)?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(-1\\)",
+          "B": "\\(7\\)",
+          "C": "\\(8\\)",
+          "D": "\\(15\\)"
+        },
+        "answer": "D",
+        "walkthrough": [
+          "Expand the left side, keeping \\(p\\) and \\(q\\) as letters: \\(2px^{2} + pqx - 8x - 4q = 2px^{2} + (pq - 8)x - 4q\\).",
+          "Match the \\(x\\) terms: \\(pq - 8 = 7\\), so \\(pq = 15\\). That already answers the question.",
+          "Check with the other terms: \\(2p = 6\\) gives \\(p = 3\\), and \\(-4q = -20\\) gives \\(q = 5\\); indeed \\(3 \\cdot 5 = 15\\).",
+          "So the answer is D, \\(15\\).",
+          "Choice C, \\(8\\), is \\(p + q\\), the wrong quantity; choice B, \\(7\\), is the \\(x\\) coefficient itself."
+        ],
+        "verify": "p, q, x = symbols('p q x')\nsol = solve(Poly(expand((p*x - 4)*(2*x + q)) - (6*x**2 + 7*x - 20), x).coeffs(), [p, q], dict=True)\nassert len(sol) == 1\nassert value(choices[answer]) == sol[0][p] * sol[0][q] == 15\nassert all(value(choices[k]) != 15 for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-eqx-0007",
+        "m-eqx-0008"
+      ]
+    }
+  ]
+}

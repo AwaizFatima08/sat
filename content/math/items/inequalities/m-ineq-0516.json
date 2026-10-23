@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0516",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A hiker starts at an elevation of 2,150 meters and descends at a steady rate of 12 meters per minute. What is the least whole number of minutes after which her elevation will be below 1,500 meters?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "55"
+  ],
+  "solution": [
+    "After \\(m\\) minutes her elevation is \\(2{,}150 - 12m\\) meters. It must be below \\(1{,}500\\): \\(2{,}150 - 12m < 1{,}500\\).",
+    "Subtract \\(2{,}150\\): \\(-12m < -650\\). Divide by \\(-12\\) and reverse the sign: \\(m > 54.16...\\).",
+    "After 54 minutes she is at \\(1{,}502\\) meters, still not below \\(1{,}500\\); after 55 minutes she is at \\(1{,}490\\) meters. The answer is 55."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "m = symbols('m')\nS = solve_univariate_inequality(2150 - 12*m < 1500, m, relational=False)\nassert S == Interval.open(Rational(325, 6), oo)\nleast = min(n for n in range(0, 200) if n in S)\nassert [Rational(a) for a in spr_answers] == [least] == [55]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "55",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

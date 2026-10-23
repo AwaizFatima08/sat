@@ -1,0 +1,58 @@
+{
+  "id": "m-rtt-0103",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(\\cos x^{\\circ} = \\sin 27^{\\circ}\\) and \\(0 < x < 90\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(27\\)",
+    "B": "\\(63\\)",
+    "C": "\\(153\\)",
+    "D": "\\(117\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "For acute angles, \\(\\sin a^{\\circ} = \\cos b^{\\circ}\\) when \\(a + b = 90\\).",
+    "So \\(x = 90 - 27 = 63\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This assumes the sine and cosine of the same angle are equal; that is true only for \\(45^{\\circ}\\).",
+    "B": "Correct. Complementary angles: \\(\\cos(90^{\\circ} - 27^{\\circ}) = \\sin 27^{\\circ}\\), so \\(x = 63\\).",
+    "C": "Incorrect. This is \\(180 - 27\\), the supplement; sine and cosine are related through complementary angles, which add to \\(90^{\\circ}\\).",
+    "D": "Incorrect. This is \\(90 + 27\\); the 27 was added instead of subtracted."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx=symbols('x')\nans=solve(Eq(x+27,90),x)[0]\nassert ans==63 and abs(N(cos(ans*pi/180)-sin(27*pi/180)))<1e-12\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

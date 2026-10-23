@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0006",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A company tested whether a new keyboard layout increases typing speed. Fifty employees volunteered for the study. The researchers randomly assigned 25 of them to use the new layout and the other 25 to use the standard layout. On average, the employees who used the new layout typed faster. Which change to the study's design would best allow the researchers to generalize a cause-and-effect conclusion to all of the company's employees?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Recruit 200 volunteers instead of 50, and randomly assign them to the two layouts.",
+    "B": "Select 50 employees at random from all of the company's employees, and randomly assign them to the two layouts.",
+    "C": "Let each of the 50 volunteers choose which layout to use.",
+    "D": "Assign the new layout to the 25 volunteers who type fastest."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Random assignment already supports cause and effect for the participants.",
+    "To generalize to all employees, the participants must be a random sample of all employees, not volunteers.",
+    "So the researchers should select the participants at random from all employees and keep the random assignment."
+  ],
+  "explanation": {
+    "A": "Incorrect. A larger group of volunteers is still not a random sample; volunteers may differ from other employees.",
+    "B": "Correct. A random sample of all employees plus random assignment supports a cause-and-effect conclusion for all employees.",
+    "C": "Incorrect. Letting participants choose removes random assignment, so even a cause-and-effect conclusion about the volunteers would be lost.",
+    "D": "Incorrect. Giving the new layout to the fastest typists builds in a difference between the groups, so the comparison would be biased."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "now = {'random_sample': False, 'random_assignment': True}\nneed = {'random_sample': True, 'random_assignment': True}\nassert now['random_assignment'] and not now['random_sample']\nassert answer == 'B' and 'at random from all' in choices['B'] and 'randomly assign' in choices['B']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

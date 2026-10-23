@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0511",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Mateo's scores on his first four tests were 82, 76, 91 and 85. What score does he need on the fifth test so that the mean of all five scores is 84?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(86\\)",
+    "B": "\\(420\\)",
+    "C": "\\(83.5\\)",
+    "D": "\\(84\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "For a mean of 84 over 5 tests, the total must be \\(5 \\cdot 84 = 420\\).",
+    "His first four scores add to \\(82 + 76 + 91 + 85 = 334\\).",
+    "He needs \\(420 - 334 = 86\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The five scores must total \\(5 \\cdot 84 = 420\\), and \\(420 - 334 = 86\\).",
+    "B": "Incorrect. This is the total of all five scores needed. The first four scores, which add to 334, must be subtracted.",
+    "C": "Incorrect. This is the mean of the first four scores, \\(\\frac{334}{4} = 83.5\\), not the score needed on the fifth test.",
+    "D": "Incorrect. This is the target mean, not the score needed. A fifth score of 84 gives a total of 418 and a mean of 83.6, because the first four scores average less than 84."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nr = solve(Eq((82 + 76 + 91 + 85 + x) / 5, 84), x)[0]\nassert r == 86\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

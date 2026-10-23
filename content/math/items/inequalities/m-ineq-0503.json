@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0503",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A phone plan costs \\$15 per month plus \\$0.10 for each text message sent. Maya wants her monthly bill to be at most \\$28. Which inequality represents the numbers of text messages, \\(t\\), that Maya can send in a month?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.10 + 15t \\le 28\\)",
+    "B": "\\(0.10t - 15 \\le 28\\)",
+    "C": "\\(15 + 0.10t \\ge 28\\)",
+    "D": "\\(15 + 0.10t \\le 28\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The messages cost \\(0.10t\\) dollars, so the monthly bill is \\(15 + 0.10t\\) dollars.",
+    "\"At most \\$28\" means the bill is less than or equal to 28: \\(15 + 0.10t \\le 28\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This swaps the two amounts: the \\$0.10 is multiplied by the number of messages, and the \\$15 is a fixed monthly charge.",
+    "B": "Incorrect. This subtracts the \\$15 monthly charge instead of adding it to the cost of the messages.",
+    "C": "Incorrect. \"At most\" means the bill can be equal to or less than \\$28, so the sign must be \\(\\le\\), not \\(\\ge\\).",
+    "D": "Correct. The bill is the \\$15 charge plus \\(0.10t\\) dollars for the messages, and it must be at most \\$28."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nR = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nt = symbols('t')\nS = solve_univariate_inequality(15 + Rational(1, 10)*t <= 28, t, relational=False)\nassert S == Interval(-oo, 130)\nok = [k for k in choices if R(choices[k]).as_set() == S]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

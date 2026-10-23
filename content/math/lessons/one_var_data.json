@@ -1,0 +1,200 @@
+{
+  "type": "one_var_data",
+  "title": "One-variable data",
+  "what_is_tested": "You read a set of numbers from a list, table, dot plot, histogram or box plot and find or compare its center (mean, median, mode) and its spread (range, interquartile range, standard deviation). Harder questions ask how these measures change when a value is added, removed or changed.",
+  "how_to_spot": "The question names the mean, average, median, mode, range, interquartile range or standard deviation, or asks which data set has the greater center or spread.",
+  "method": [
+    "Read the display carefully: how many values are there, and what does each dot, bar or row stand for?",
+    "Mean: add the values and divide by how many there are. With a frequency table, multiply each value by its frequency first.",
+    "Median: the middle value of the ordered list; for \\(n\\) values it is at position \\(\\frac{n + 1}{2}\\).",
+    "Spread: range = maximum − minimum; interquartile range (IQR) = Q3 − Q1; the standard deviation measures the typical distance of the values from the mean.",
+    "When the data change, decide which measures use every value (mean, range, standard deviation) and which depend only on position (median, IQR)."
+  ],
+  "pitfalls": [
+    "Mixing up the mean and the median, or the mode and the median.",
+    "In a frequency table, averaging the listed values without multiplying by their frequencies.",
+    "Taking the median of a list in the order given instead of in increasing order.",
+    "Reading the line in a box plot as the mean, or the length of the box as the range.",
+    "Thinking that an extreme value moves the median as much as it moves the mean."
+  ],
+  "calculator": "On the Scientific tab, type the values as a comma list: mean(3, 5, 8), median(3, 5, 8) or stdev(3, 5, 8). For a frequency table, compute the total with value × frequency first, then divide by the number of values.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: mean, median and mode from a dot plot",
+      "steps": [
+        "Count the dots to get \\(n\\); a dot plot already shows the values in order.",
+        "Median: find the value at position \\(\\frac{n + 1}{2}\\).",
+        "Mean: add all the values (every dot counts) and divide by \\(n\\).",
+        "Mode: the value with the most dots. Make sure you give the measure the question asks for."
+      ],
+      "worked_example": {
+        "stem": "The dot plot shows the number of hours each of 9 volunteers worked at a community event. What is the mean number of hours worked?",
+        "figure": {
+          "kind": "dotplot",
+          "x_label": "Hours worked",
+          "values": [
+            1,
+            2,
+            2,
+            2,
+            3,
+            4,
+            4,
+            5,
+            13
+          ]
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(2\\)",
+          "B": "\\(3\\)",
+          "C": "\\(4\\)",
+          "D": "\\(12\\)"
+        },
+        "answer": "C",
+        "walkthrough": [
+          "There are 9 dots. Add the values: \\(1 + 2 + 2 + 2 + 3 + 4 + 4 + 5 + 13 = 36\\).",
+          "Mean: \\(36 \\div 9 = 4\\) hours.",
+          "Choice C is correct. Choice B, 3, is the median (the 5th of the 9 values), not the mean. Choice A is the mode, and choice D is the range, \\(13 - 1\\)."
+        ],
+        "verify": "v = figure['values']\nassert len(v) == 9 and sum(v) == 36\nmean = Rational(sum(v), len(v))\nassert value(choices[answer]) == mean == 4\nassert all(value(choices[k]) != mean for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-ovd-0001",
+        "m-ovd-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: frequency tables, histograms and box plots",
+      "steps": [
+        "In a frequency table, each row tells how many times a value appears; value × frequency is that row's total.",
+        "Add the row totals, and add the frequencies to get \\(n\\); the mean is the total divided by \\(n\\).",
+        "For a median, count through the frequencies (or histogram bars) until you reach position \\(\\frac{n + 1}{2}\\).",
+        "From a box plot, read the minimum, Q1, median, Q3 and maximum; IQR = Q3 − Q1 and range = maximum − minimum."
+      ],
+      "worked_example": {
+        "stem": "The table shows the number of siblings of each of the 20 students in a class. What is the mean number of siblings per student?",
+        "figure": {
+          "kind": "table",
+          "title": "Siblings of 20 students",
+          "columns": [
+            "Number of siblings",
+            "Number of students"
+          ],
+          "rows": [
+            [
+              "0",
+              "4"
+            ],
+            [
+              "1",
+              "7"
+            ],
+            [
+              "2",
+              "6"
+            ],
+            [
+              "3",
+              "3"
+            ]
+          ]
+        },
+        "answer_type": "spr",
+        "spr_answers": [
+          "7/5",
+          "1.4"
+        ],
+        "walkthrough": [
+          "Multiply each value by its frequency: \\(0 \\cdot 4 + 1 \\cdot 7 + 2 \\cdot 6 + 3 \\cdot 3 = 0 + 7 + 12 + 9 = 28\\) siblings in all.",
+          "Number of students: \\(4 + 7 + 6 + 3 = 20\\).",
+          "Mean: \\(28 \\div 20 = 1.4\\). Enter 1.4 (or 7/5).",
+          "Trap: averaging the four values 0, 1, 2 and 3 gives 1.5, which ignores how many students have each value."
+        ],
+        "verify": "rows = [(int(a), int(b)) for a, b in figure['rows']]\nn = sum(f for _, f in rows)\ntotal = sum(v*f for v, f in rows)\nassert n == 20 and total == 28\nassert all(Rational(s) == Rational(total, n) for s in spr_answers)"
+      },
+      "tryit": [
+        "m-ovd-0003",
+        "m-ovd-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: how an extreme value changes center and spread",
+      "steps": [
+        "Find the measures before the change (mean, median, or the spread that is asked about).",
+        "Make the change (add or remove the value) and recount \\(n\\); the median's position moves.",
+        "Recompute, or reason: an extreme value pulls the mean a lot but moves the median by at most one position.",
+        "Compare the sizes of the changes and match them to the choices word by word."
+      ],
+      "worked_example": {
+        "stem": "The dot plot shows the delay, in minutes, of each of 9 bus arrivals at a stop in Dhaka on one morning. If the delay of 29 minutes is removed from the data, which statement best describes how the mean and the median of the data change?",
+        "figure": {
+          "kind": "dotplot",
+          "x_label": "Delay (minutes)",
+          "values": [
+            2,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            7,
+            29
+          ]
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "The mean decreases, and the median does not change.",
+          "B": "Both decrease, and the mean decreases by more than the median.",
+          "C": "Both decrease, and the median decreases by more than the mean.",
+          "D": "The mean decreases, and the median increases."
+        },
+        "answer": "B",
+        "walkthrough": [
+          "Before: the sum is 64, so the mean is \\(\\frac{64}{9} \\approx 7.1\\); the median is the 5th value, 5.",
+          "After removing 29: there are 8 values with sum 35, so the mean is \\(\\frac{35}{8} \\approx 4.4\\); the median is the average of the 4th and 5th values, \\(\\frac{4 + 5}{2} = 4.5\\).",
+          "On the Scientific tab you can check with mean(2, 3, 3, 4, 5, 5, 6, 7) and median(2, 3, 3, 4, 5, 5, 6, 7).",
+          "The mean drops by about 2.7 and the median by only 0.5, so choice B is correct. Choice A is the strongest trap: the median does change, because with an even number of values it becomes the average of the two middle values."
+        ],
+        "verify": "v = figure['values']\nw = [x for x in v if x != 29]\nm1, m2 = Rational(sum(v), len(v)), Rational(sum(w), len(w))\nd1, d2 = sorted(v)[4], Rational(sorted(w)[3] + sorted(w)[4], 2)\nassert m2 < m1 and d2 < d1 and (m1 - m2) > (d1 - d2)\nassert answer == 'B' and 'mean decreases by more' in choices[answer]"
+      },
+      "tryit": [
+        "m-ovd-0005",
+        "m-ovd-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: working backward from means",
+      "steps": [
+        "Turn each mean into a total: total = mean × number of values.",
+        "Write an equation for the combined total: total of group 1 + total of group 2 = combined mean × combined count.",
+        "Solve for the unknown count or value, and check by recomputing the combined mean.",
+        "If every value is changed the same way (add \\(c\\) or multiply by \\(k\\)), the mean changes the same way; the standard deviation ignores adding \\(c\\) and is multiplied by \\(k\\) (for positive \\(k\\))."
+      ],
+      "worked_example": {
+        "stem": "In one class, 20 students took a test, and their mean score was 72. In another class, \\(n\\) students took the same test, and their mean score was 84. The mean score of all the students in the two classes combined was 79. What is the value of \\(n\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "28"
+        ],
+        "walkthrough": [
+          "Totals: the first class scored \\(20 \\times 72 = 1{,}440\\) points in all, and the second class scored \\(84n\\) points.",
+          "Combined: \\(1{,}440 + 84n = 79(20 + n)\\), so \\(1{,}440 + 84n = 1{,}580 + 79n\\).",
+          "Solve: \\(5n = 140\\), so \\(n = 28\\).",
+          "Check: \\((1{,}440 + 84 \\cdot 28) \\div 48 = 3{,}792 \\div 48 = 79\\). Trap: averaging 72 and 84 gives 78, not 79; the combined mean is closer to 84 because the second class is larger."
+        ],
+        "verify": "n = symbols('n')\nsol = solve(Eq(20*72 + 84*n, 79*(20 + n)), n)\nassert sol == [28]\nassert [Rational(s) for s in spr_answers] == sol"
+      },
+      "tryit": [
+        "m-ovd-0007",
+        "m-ovd-0008"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "m-rtt-0114",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The cross section of a drainage channel is a trapezoid, as shown. The bottom of the channel is 3 meters wide. Each sloped side is 2 meters long and makes a \\(60^{\\circ}\\) angle with the level top edge. What is the area, in square meters, of the cross section?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "P": [
+        0,
+        1.732
+      ],
+      "Q": [
+        5,
+        1.732
+      ],
+      "R": [
+        4,
+        0
+      ],
+      "S": [
+        1,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "P",
+        "Q"
+      ],
+      [
+        "Q",
+        "R"
+      ],
+      [
+        "R",
+        "S"
+      ],
+      [
+        "S",
+        "P"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          2.5,
+          -0.35
+        ],
+        "text": "3 m"
+      },
+      {
+        "at": [
+          0.05,
+          0.75
+        ],
+        "text": "2 m"
+      },
+      {
+        "at": [
+          0.75,
+          1.5
+        ],
+        "text": "60°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\sqrt{3}\\)",
+    "B": "\\(4\\sqrt{3}\\)",
+    "C": "\\(8\\sqrt{3}\\)",
+    "D": "\\(8\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Each sloped side is the hypotenuse of a \\(30^{\\circ}\\)-\\(60^{\\circ}\\)-\\(90^{\\circ}\\) triangle: the depth is \\(2 \\sin 60^{\\circ} = \\sqrt{3}\\) and the horizontal run is \\(2 \\cos 60^{\\circ} = 1\\).",
+    "The top edge is \\(3 + 1 + 1 = 5\\) meters.",
+    "Area \\(= \\frac{1}{2}(3 + 5)\\sqrt{3} = 4\\sqrt{3}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the top width times the depth, the area of a rectangle, not of the trapezoid.",
+    "B": "Correct. The depth is \\(\\sqrt{3}\\) and the parallel sides are 3 and 5, so the area is \\(\\frac{1}{2}(3 + 5)\\sqrt{3} = 4\\sqrt{3}\\).",
+    "C": "Incorrect. This is \\((3 + 5)\\sqrt{3}\\); the factor \\(\\frac{1}{2}\\) in the trapezoid area formula is missing.",
+    "D": "Incorrect. This uses the 2-meter sloped side as the depth; the depth is the vertical distance \\(\\sqrt{3}\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('S','R')-3)<0.01 and abs(d('P','S')-2)<0.01 and abs(d('Q','R')-2)<0.01 and abs(ang('S','P','Q')-60)<0.1\ndep=2*sin(pi/3)\ntop=3+2*2*cos(pi/3)\nans=(3+top)*dep/2\nassert abs(d('P','Q')-top)<0.01\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

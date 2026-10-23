@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0165",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The time \\(t\\), in minutes, that an office printer takes to complete a job of \\(n\\) pages is modeled by \\(t = \\frac{n + 18}{24}\\). Which of the following is the best interpretation of the number 18 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The first 18 pages of every job take a total of 1 minute to print.",
+    "B": "The printer prints 18 pages per minute.",
+    "C": "The time the printer needs before it starts printing equals the time it takes to print 18 pages.",
+    "D": "The printer needs 18 minutes to warm up before it starts printing."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Rewrite the model: \\(t = \\frac{n}{24} + \\frac{18}{24}\\). The printer prints 24 pages per minute, and every job has an extra \\(\\frac{18}{24} = 0.75\\) minute.",
+    "At 24 pages per minute, 18 pages take \\(\\frac{18}{24}\\) minute, so the extra time equals the time to print 18 pages."
+  ],
+  "explanation": {
+    "A": "Incorrect. A job of 18 pages takes \\(\\frac{18 + 18}{24} = 1.5\\) minutes, not 1 minute.",
+    "B": "Incorrect. The printing rate is 24 pages per minute; each page adds \\(\\frac{1}{24}\\) minute.",
+    "C": "Correct. \\(t = \\frac{n}{24} + \\frac{18}{24}\\): the fixed part, 0.75 minute, is exactly the time needed to print 18 pages at 24 pages per minute.",
+    "D": "Incorrect. The extra time is \\(\\frac{18}{24} = 0.75\\) minute, not 18 minutes."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nn = symbols('n')\nt = (n + 18)/24\nassert diff(t, n) == Rational(1, 24)\nassert t.subs(n, 0) == Rational(18, 24) == Rational(18, 1)*diff(t, n)\nassert t.subs(n, 18) == Rational(3, 2)\nassert answer == 'D' and 'time it takes to print 18 pages' in choices['D']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

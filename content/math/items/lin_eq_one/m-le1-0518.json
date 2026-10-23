@@ -1,0 +1,96 @@
+{
+  "id": "m-le1-0518",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows the program for a 90-minute concert. The three sets are all the same length, \\(s\\) minutes. What is the value of \\(s\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "Concert program",
+    "columns": [
+      "Part",
+      "Length (minutes)"
+    ],
+    "rows": [
+      [
+        "Introduction",
+        "12"
+      ],
+      [
+        "Set 1",
+        "s"
+      ],
+      [
+        "Break",
+        "9"
+      ],
+      [
+        "Set 2",
+        "s"
+      ],
+      [
+        "Break",
+        "9"
+      ],
+      [
+        "Set 3",
+        "s"
+      ],
+      [
+        "Total",
+        "90"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(23\\)",
+    "B": "\\(26\\)",
+    "C": "\\(20\\)",
+    "D": "\\(60\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Add all parts of the program: \\(12 + 3s + 9 + 9 = 90\\).",
+    "So \\(3s + 30 = 90\\), which gives \\(3s = 60\\).",
+    "Divide by 3: \\(s = 20\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of counting only one of the two 9-minute breaks in the table: \\(3s + 21 = 90\\).",
+    "B": "Incorrect. This is the result of ignoring the breaks: \\(3s + 12 = 90\\).",
+    "C": "Correct. \\(12 + 3s + 18 = 90\\), so \\(3s = 60\\) and \\(s = 20\\).",
+    "D": "Incorrect. This is the total time of all three sets; it must still be divided by 3."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\ns = symbols('s')\nrows = figure['rows']\nfixed = sum(int(r[1]) for r in rows if r[1] != 's' and r[0] != 'Total')\ntotal = int([r[1] for r in rows if r[0] == 'Total'][0])\nn = sum(1 for r in rows if r[1] == 's')\nsv = solve(Eq(fixed + n*s, total), s)[0]\nassert sv == 20\nassert value(choices[answer]) == sv\nassert all(value(choices[k]) != sv for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

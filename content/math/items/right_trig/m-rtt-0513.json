@@ -1,0 +1,136 @@
+{
+  "id": "m-rtt-0513",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Bilal stands on level ground 40 meters from the base of a minaret in Lahore. His eyes are 1.6 meters above the ground, and the angle of elevation from his eyes to the top of the minaret is \\(45^{\\circ}\\), as shown. How tall, in meters, is the minaret?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "G": [
+        0,
+        0
+      ],
+      "E": [
+        0,
+        1.6
+      ],
+      "Q": [
+        40,
+        1.6
+      ],
+      "T": [
+        40,
+        41.6
+      ],
+      "F": [
+        40,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "G",
+        "F"
+      ],
+      [
+        "G",
+        "E"
+      ],
+      [
+        "E",
+        "Q"
+      ],
+      [
+        "Q",
+        "T"
+      ],
+      [
+        "Q",
+        "F"
+      ],
+      [
+        "E",
+        "T"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          5.5,
+          3.6
+        ],
+        "text": "45°"
+      },
+      {
+        "at": [
+          20,
+          -2
+        ],
+        "text": "40 m"
+      },
+      {
+        "at": [
+          -4,
+          0.8
+        ],
+        "text": "1.6 m"
+      }
+    ],
+    "right_angles": [
+      "Q"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(40\\)",
+    "B": "\\(38.4\\)",
+    "C": "\\(41.6\\)",
+    "D": "\\(1.6 + 40\\sqrt{2}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "From eye level, the horizontal distance 40 and the vertical rise form a 45°-45°-90° triangle, so the rise is \\(40\\tan 45^{\\circ} = 40\\).",
+    "Height of the minaret \\(= 40 + 1.6 = 41.6\\) meters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the height of the top above Bilal's eyes; the 1.6 meters below eye level still must be added.",
+    "B": "Incorrect. This subtracts the eye height instead of adding it.",
+    "C": "Correct. The rise above eye level is \\(40\\tan 45^{\\circ} = 40\\); add 1.6 to get 41.6.",
+    "D": "Incorrect. This uses \\(40\\sqrt{2}\\), the length of the line of sight (the hypotenuse), as the vertical rise."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('G','F')==40 and abs(ang('T','E','Q')-45)<0.1 and abs(ang('E','Q','T')-90)<0.1\nans=Rational('1.6')+40*tan(pi/4)\nassert abs(P['T'][1]-ans)<1e-9\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

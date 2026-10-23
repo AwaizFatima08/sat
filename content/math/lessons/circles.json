@@ -1,0 +1,201 @@
+{
+  "type": "circles",
+  "title": "Circles",
+  "what_is_tested": "These questions cover the circumference and area of a circle, arc length and sector area as fractions of the whole circle, central and inscribed angles, radian measure, and equations of circles in the \\(xy\\)-plane. Harder ones ask you to complete the square to find the center and radius, or to use a condition such as a point on the circle or tangency to an axis.",
+  "how_to_spot": "A circle in a figure or a context, an equation in which \\(x^{2}\\) and \\(y^{2}\\) have the same coefficient, or the words **arc**, **sector**, **radians**, **central angle**, **inscribed** or **tangent**.",
+  "method": [
+    "Find the radius first; if you are given the diameter, halve it.",
+    "For an arc or a sector, find the fraction of the circle: the central angle divided by \\(360^{\\circ}\\) (or by \\(2\\pi\\) if the angle is in radians).",
+    "Multiply that fraction by the circumference \\(2\\pi r\\) for an arc length, or by the area \\(\\pi r^{2}\\) for a sector area; both formulas and the fact \\(360^{\\circ} = 2\\pi\\) radians are on the reference sheet.",
+    "An inscribed angle is half the central angle that cuts off the same arc.",
+    "For an equation, rewrite it as \\((x - h)^{2} + (y - k)^{2} = r^{2}\\): the center is \\((h, k)\\) and the radius is the square root of the right side."
+  ],
+  "pitfalls": [
+    "Using the diameter as the radius, which makes an area four times too big (radius_diameter).",
+    "Mixing up arc length (a part of \\(2\\pi r\\)) and sector area (a part of \\(\\pi r^{2}\\)) (wrong_formula).",
+    "Treating an inscribed angle as if it were the central angle (concept).",
+    "Reading the center of \\((x + 3)^{2} + (y - 5)^{2} = 25\\) as \\((3, -5)\\) instead of \\((-3, 5)\\) (sign_error).",
+    "Giving \\(r^{2}\\) as the radius after completing the square (stopped_early)."
+  ],
+  "calculator": "The Scientific tab helps with the arithmetic when a question wants a decimal, for example with the \\(\\pi\\) key, or with a square root for the radius. The Graph tab cannot draw circle equations such as \\((x - 2)^{2} + (y + 1)^{2} = 9\\), so complete the square by hand.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: area, circumference and arcs",
+      "steps": [
+        "Find the radius (halve a diameter).",
+        "Find the fraction of the circle: the central angle over \\(360^{\\circ}\\).",
+        "Multiply the fraction by \\(\\pi r^{2}\\) for an area or by \\(2\\pi r\\) for a length.",
+        "Keep \\(\\pi\\) in the answer if the choices have it, and check the units."
+      ],
+      "worked_example": {
+        "stem": "A circular pizza has a radius of 9 inches. A slice is cut along two radii that form a \\(40^{\\circ}\\) angle at the center, as shown. What is the area of the slice, in square inches?",
+        "figure": {
+          "kind": "geometry",
+          "points": {
+            "O": [
+              0,
+              0
+            ],
+            "A": [
+              9,
+              0
+            ],
+            "B": [
+              6.894,
+              5.785
+            ]
+          },
+          "segments": [
+            [
+              "O",
+              "A"
+            ],
+            [
+              "O",
+              "B"
+            ]
+          ],
+          "circles": [
+            {
+              "center": [
+                0,
+                0
+              ],
+              "radius": 9
+            }
+          ],
+          "labels": [
+            {
+              "at": [
+                2.4,
+                0.8
+              ],
+              "text": "40°"
+            },
+            {
+              "at": [
+                4.5,
+                -0.9
+              ],
+              "text": "9 in"
+            }
+          ],
+          "right_angles": [],
+          "not_to_scale": false
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(2\\pi\\)",
+          "B": "\\(9\\pi\\)",
+          "C": "\\(36\\pi\\)",
+          "D": "\\(81\\pi\\)"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "The radius is 9 inches, so the whole pizza has area \\(\\pi r^{2} = 81\\pi\\) square inches (reference sheet).",
+          "The slice is \\(\\frac{40}{360} = \\frac{1}{9}\\) of the circle.",
+          "Sector area \\(= \\frac{1}{9} \\cdot 81\\pi = 9\\pi\\) square inches, choice B.",
+          "Choice A, \\(2\\pi\\), is the length of the slice's curved edge, \\(\\frac{1}{9} \\cdot 2\\pi(9)\\), not an area. Choice C uses the diameter 18 as the radius, and choice D is the whole pizza."
+        ],
+        "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nr=figure['circles'][0]['radius']\nassert r==9 and abs(ang('A','O','B')-40)<0.1 and abs(d('O','B')-9)<0.01\nans=Rational(40,360)*pi*r**2\nassert ans==9*pi and simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\nassert simplify(value(choices['A'])-Rational(40,360)*2*pi*r)==0 and simplify(value(choices['C'])-Rational(40,360)*pi*(2*r)**2)==0"
+      },
+      "tryit": [
+        "m-cir-0001",
+        "m-cir-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: radians and circle equations",
+      "steps": [
+        "Convert between degrees and radians with \\(360^{\\circ} = 2\\pi\\) radians, so \\(180^{\\circ} = \\pi\\) radians.",
+        "For an arc with central angle \\(\\theta\\) in radians, the arc length is \\(s = r\\theta\\).",
+        "For a circle in the \\(xy\\)-plane, \\(r^{2}\\) is the squared distance from the center to any point on the circle.",
+        "Write the result in the form asked, such as \\(k\\) in \\(k\\pi\\) or the constant in an equation."
+      ],
+      "worked_example": {
+        "stem": "The minute hand of a large wall clock is 36 centimeters long. In 20 minutes, the minute hand turns through an angle of \\(\\theta\\) radians, and its tip travels along an arc of length \\(k\\pi\\) centimeters. What is the value of \\(k\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "24"
+        ],
+        "walkthrough": [
+          "The minute hand makes one full turn, \\(2\\pi\\) radians, every 60 minutes. In 20 minutes it turns \\(\\frac{20}{60} = \\frac{1}{3}\\) of that: \\(\\theta = \\frac{1}{3} \\cdot 2\\pi = \\frac{2\\pi}{3}\\).",
+          "The tip moves on a circle with radius 36 centimeters, so the arc length is \\(s = r\\theta = 36 \\cdot \\frac{2\\pi}{3} = 24\\pi\\).",
+          "So \\(k = 24\\). Enter 24.",
+          "Putting the angle in degrees (\\(120\\)) into \\(s = r\\theta\\) gives \\(36 \\cdot 120\\), far too long for a hand 36 centimeters long; \\(s = r\\theta\\) needs radians."
+        ],
+        "verify": "th=2*pi*Rational(20,60)\ns=36*th\nassert th==2*pi/3 and simplify(s/pi)==24\nassert simplify(s-Rational(120,360)*2*pi*36)==0\nassert Rational(spr_answers[0])==24"
+      },
+      "tryit": [
+        "m-cir-0003",
+        "m-cir-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: completing the square",
+      "steps": [
+        "Group the \\(x\\) terms and the \\(y\\) terms, and move the constant to the right side.",
+        "Complete each square: for each linear coefficient \\(b\\), add \\(\\left(\\frac{b}{2}\\right)^{2}\\) to both sides.",
+        "Read the center \\((h, k)\\) with the signs flipped from inside the parentheses, and take the square root of the right side for the radius.",
+        "For angle questions, remember that an inscribed angle is half its central angle, then use the arc fraction as usual."
+      ],
+      "worked_example": {
+        "stem": "The equation \\(x^{2} + y^{2} + 6x - 10y + 9 = 0\\) represents a circle in the \\(xy\\)-plane. Which of the following gives the center and the radius of the circle?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "Center \\((3, -5)\\), radius \\(5\\)",
+          "B": "Center \\((-3, 5)\\), radius \\(3\\)",
+          "C": "Center \\((-3, 5)\\), radius \\(5\\)",
+          "D": "Center \\((-3, 5)\\), radius \\(25\\)"
+        },
+        "answer": "C",
+        "walkthrough": [
+          "Group and move the constant: \\((x^{2} + 6x) + (y^{2} - 10y) = -9\\).",
+          "Complete the squares by adding \\(\\left(\\frac{6}{2}\\right)^{2} = 9\\) and \\(\\left(\\frac{-10}{2}\\right)^{2} = 25\\) to both sides: \\((x + 3)^{2} + (y - 5)^{2} = -9 + 9 + 25 = 25\\).",
+          "The center is \\((-3, 5)\\) and the radius is \\(\\sqrt{25} = 5\\), choice C.",
+          "Choice A flips the signs of the center, choice D gives \\(r^{2}\\) instead of \\(r\\), and choice B uses the original constant 9 as \\(r^{2}\\) instead of completing the square."
+        ],
+        "verify": "x,y=symbols('x y')\ne=x**2+y**2+6*x-10*y+9\nh,k,r2=-3,5,25\nassert expand((x-h)**2+(y-k)**2-r2-e)==0\nok=lambda t: '(-3, 5)' in t and t.endswith('radius \\\\(5\\\\)')\nassert sqrt(r2)==5 and ok(choices[answer])\nassert all(not ok(choices[c]) for c in choices if c!=answer)"
+      },
+      "tryit": [
+        "m-cir-0005",
+        "m-cir-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: conditions on a circle",
+      "steps": [
+        "Turn each condition into an equation: a point on the circle satisfies the circle's equation; tangent to an axis means the radius equals the center's distance to that axis.",
+        "Use what you know about the center (on an axis, on a given line) to cut down the unknowns.",
+        "Solve for the center, then find \\(r^{2}\\) from any point on the circle.",
+        "Check both given points in your equation, then answer the exact quantity asked."
+      ],
+      "worked_example": {
+        "stem": "A circle in the \\(xy\\)-plane passes through the points \\((0, 0)\\) and \\((8, 4)\\), and its center lies on the \\(x\\)-axis. An equation of the circle is \\((x - h)^{2} + y^{2} = k\\), where \\(h\\) and \\(k\\) are constants. What is the value of \\(h + k\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "30"
+        ],
+        "walkthrough": [
+          "Both points are on the circle, so each one satisfies the equation: \\((0 - h)^{2} + 0^{2} = k\\) and \\((8 - h)^{2} + 4^{2} = k\\).",
+          "Set the two expressions for \\(k\\) equal: \\(h^{2} = (8 - h)^{2} + 16 = h^{2} - 16h + 80\\).",
+          "So \\(16h = 80\\) and \\(h = 5\\); then \\(k = h^{2} = 25\\), and the radius is 5.",
+          "\\(h + k = 5 + 25 = 30\\). Enter 30. Check: \\((8 - 5)^{2} + 4^{2} = 9 + 16 = 25\\).",
+          "Using the radius 5 in place of \\(k = r^{2} = 25\\) would give 10."
+        ],
+        "verify": "h,k=symbols('h k')\nsol=solve([Eq(h**2,k),Eq((8-h)**2+16,k)],[h,k],dict=True)\nassert sol==[{h:5,k:25}]\nassert Rational(spr_answers[0])==sol[0][h]+sol[0][k]==30"
+      },
+      "tryit": [
+        "m-cir-0007",
+        "m-cir-0008"
+      ]
+    }
+  ]
+}

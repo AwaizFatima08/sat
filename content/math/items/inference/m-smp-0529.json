@@ -1,0 +1,88 @@
+{
+  "id": "m-smp-0529",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Four polling groups each surveyed a separate random sample of voters in the same state to estimate the percent of the state's voters who support a ballot measure. The table shows each group's estimate and margin of error. Which group most likely surveyed the greatest number of voters?",
+  "figure": {
+    "kind": "table",
+    "title": "Support for the ballot measure",
+    "columns": [
+      "Polling group",
+      "Estimate (%)",
+      "Margin of error (percentage points)"
+    ],
+    "rows": [
+      [
+        "Group 1",
+        "47",
+        "6.1"
+      ],
+      [
+        "Group 2",
+        "44",
+        "3.1"
+      ],
+      [
+        "Group 3",
+        "39",
+        "4.4"
+      ],
+      [
+        "Group 4",
+        "42",
+        "8.7"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Group 1",
+    "B": "Group 2",
+    "C": "Group 3",
+    "D": "Group 4"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "For random samples from the same population with similar estimates, a larger sample gives a smaller margin of error.",
+    "Group 2 has the smallest margin of error, 3.1 percentage points, so it most likely had the largest sample."
+  ],
+  "explanation": {
+    "A": "Incorrect. Group 1 has the greatest ESTIMATE, but the size of the estimate does not show the size of the sample.",
+    "B": "Correct. Group 2 has the smallest margin of error, and larger random samples give smaller margins of error.",
+    "C": "Incorrect. Group 3 has the smallest estimate, but the estimate does not show the sample size.",
+    "D": "Incorrect. Group 4 has the LARGEST margin of error, so it most likely surveyed the fewest voters."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nrows = figure['rows']\nmoes = [Rational(r[2]) for r in rows]\nbest = rows[moes.index(min(moes))][0]\nassert best == 'Group 2'\nassert choices[answer] == best",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

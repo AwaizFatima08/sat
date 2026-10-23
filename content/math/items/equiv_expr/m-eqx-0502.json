@@ -1,0 +1,115 @@
+{
+  "id": "m-eqx-0502",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The side lengths of a triangular flower bed, in feet, are \\((2x + 1)\\), \\((3x - 4)\\), and \\((x + 6)\\), as shown. Which expression represents the perimeter of the flower bed, in feet?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "P": [
+        0,
+        0
+      ],
+      "Q": [
+        7,
+        0
+      ],
+      "R": [
+        2,
+        4
+      ]
+    },
+    "segments": [
+      [
+        "P",
+        "Q"
+      ],
+      [
+        "Q",
+        "R"
+      ],
+      [
+        "R",
+        "P"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          3.5,
+          -0.6
+        ],
+        "text": "2x + 1"
+      },
+      {
+        "at": [
+          5.4,
+          2.4
+        ],
+        "text": "3x - 4"
+      },
+      {
+        "at": [
+          0.2,
+          2.4
+        ],
+        "text": "x + 6"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6x^{3} + 3\\)",
+    "B": "\\(6x + 11\\)",
+    "C": "\\(6x + 3\\)",
+    "D": "\\(12x + 6\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The perimeter is the sum of the three side lengths: \\((2x + 1) + (3x - 4) + (x + 6)\\).",
+    "Combine the \\(x\\)-terms: \\(2x + 3x + x = 6x\\). Combine the constants: \\(1 - 4 + 6 = 3\\).",
+    "The perimeter is \\(6x + 3\\) feet."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of multiplying the \\(x\\)'s together instead of adding like terms: \\(2x + 3x + x\\) is \\(6x\\), not \\(6x^{3}\\).",
+    "B": "Incorrect. This is the result of treating \\(-4\\) as \\(+4\\) when adding the constants.",
+    "C": "Correct. Adding the three sides gives \\(6x + 3\\).",
+    "D": "Incorrect. This is the result of doubling the sum of the sides, as if using the perimeter rule for a rectangle."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\ntarget = (2*x + 1) + (3*x - 4) + (x + 6)\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

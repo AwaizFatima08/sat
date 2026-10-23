@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0006",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A random sample of 500 registered voters in a town was asked whether they support a proposed tax to fund a new library. Based on the sample, 46% of the town's registered voters are estimated to support the tax, with a margin of error of 5 percentage points. A council member claims that fewer than half of the town's registered voters support the tax. Which of the following is the best evaluation of the claim?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The data do not support the claim, because the plausible values, 41% to 51%, include values greater than 50%.",
+    "B": "The data support the claim, because 46% is less than 50%.",
+    "C": "The data support the claim, because the margin of error is less than the difference between 46% and 50%.",
+    "D": "The claim cannot be evaluated at all, because only a sample of the voters was surveyed."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The plausible values for the percent of all registered voters who support the tax run from \\(46 - 5 = 41\\%\\) to \\(46 + 5 = 51\\%\\).",
+    "This range includes values above 50%, so it is plausible that more than half support the tax.",
+    "So the data do not support the claim that fewer than half of the voters support the tax."
+  ],
+  "explanation": {
+    "A": "Correct. Because 51% is a plausible value, the sample does not show that fewer than half of all voters support the tax.",
+    "B": "Incorrect. This treats the estimate 46% as exact and ignores the margin of error.",
+    "C": "Incorrect. The margin of error (5 points) is GREATER than the 4-point difference between 46% and 50%.",
+    "D": "Incorrect. A random sample does allow conclusions about the population, within the margin of error."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "lo, hi = 46 - 5, 46 + 5\nassert (lo, hi) == (41, 51) and hi > 50\nassert 5 > 50 - 46\nkey = choices[answer]\nassert answer == 'A' and 'do not support' in key and '41%' in key and '51%' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

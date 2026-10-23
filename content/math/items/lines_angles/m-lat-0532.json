@@ -1,0 +1,108 @@
+{
+  "id": "m-lat-0532",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In triangle \\(ABC\\), the measure of angle \\(A\\) is \\(48^{\\circ}\\). Sides \\(\\overline{AB}\\) and \\(\\overline{AC}\\) are extended past \\(B\\) and \\(C\\) to points \\(D\\) and \\(E\\). Ray \\(BP\\) bisects angle \\(CBD\\), and ray \\(CP\\) bisects angle \\(BCE\\), as shown. What is the measure, in degrees, of angle \\(BPC\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        4.064,
+        11.165
+      ],
+      "B": [
+        0,
+        0
+      ],
+      "C": [
+        10,
+        0
+      ],
+      "D": [
+        -1.368,
+        -3.759
+      ],
+      "E": [
+        11.878,
+        -3.532
+      ],
+      "P": [
+        5.382,
+        -7.686
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "D"
+      ],
+      [
+        "A",
+        "E"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "B",
+        "P"
+      ],
+      [
+        "C",
+        "P"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          4.175,
+          9.569
+        ],
+        "text": "48°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "66"
+  ],
+  "solution": [
+    "Let the angles of the triangle at \\(B\\) and \\(C\\) be \\(b\\) and \\(c\\), with \\(b + c = 180 - 48 = 132\\).",
+    "The exterior angle at \\(B\\) is \\(180 - b\\), so angle \\(PBC = 90 - \\frac{b}{2}\\). Likewise, angle \\(PCB = 90 - \\frac{c}{2}\\).",
+    "In triangle \\(BPC\\): angle \\(BPC = 180 - \\left(90 - \\frac{b}{2}\\right) - \\left(90 - \\frac{c}{2}\\right) = \\frac{b + c}{2} = \\frac{132}{2} = 66\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(ang('B','A','C')-48)<0.1\nassert abs(ang('C','B','P')-ang('P','B','D'))<0.1 and abs(ang('B','C','P')-ang('P','C','E'))<0.1\nans=Rational(180-48,2)\nassert abs(ang('B','P','C')-ans)<0.1\nassert Rational(spr_answers[0])==ans==66\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "66",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

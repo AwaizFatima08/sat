@@ -1,0 +1,46 @@
+{
+  "id": "m-nlf-0160",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Water is drained from a tank through a valve at its base. The depth of the water in the tank, in centimeters, \\(t\\) minutes after the valve is opened is modeled by \\(d(t) = 0.25(t - 20)^{2}\\) for \\(0 \\le t \\le 20\\). According to the model, how many minutes after the valve is opened is the depth of the water 25 centimeters?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "10"
+  ],
+  "solution": [
+    "Set \\(d(t) = 25\\): \\(0.25(t - 20)^{2} = 25\\), so \\((t - 20)^{2} = 100\\).",
+    "Then \\(t - 20 = 10\\) or \\(t - 20 = -10\\), so \\(t = 30\\) or \\(t = 10\\).",
+    "Only \\(t = 10\\) is in the interval \\(0 \\le t \\le 20\\), so the answer is 10."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t')\ns = [r for r in solve(Eq(Rational(1, 4)*(t - 20)**2, 25), t) if 0 <= r <= 20]\nassert s == [10]\nassert [Rational(a) for a in spr_answers] == s",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "10",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

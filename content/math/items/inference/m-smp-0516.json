@@ -1,0 +1,45 @@
+{
+  "id": "m-smp-0516",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A factory produced a batch of 5,000 light bulbs. Inspectors tested a random sample of 80 bulbs from the batch. Based on the sample, they estimated that 250 bulbs in the batch are defective. How many of the sampled bulbs were defective?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4"
+  ],
+  "solution": [
+    "The estimate uses the sample proportion: \\(\\frac{250}{5{,}000} = 0.05\\).",
+    "So 5% of the 80 sampled bulbs were defective: \\(0.05(80) = 4\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "d = symbols('d')\nsol = solve(Eq(d / 80 * 5000, 250), d)\nassert sol == [4]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

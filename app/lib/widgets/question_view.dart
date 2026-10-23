@@ -3,6 +3,7 @@ import 'package:moduleup/core/theme.dart';
 import 'package:moduleup/data/content_bank.dart';
 import 'package:moduleup/engine/content.dart';
 import 'package:moduleup/widgets/data_view.dart';
+import 'package:moduleup/widgets/math_text.dart';
 import 'package:moduleup/widgets/rich_passage.dart';
 
 /// What a question shows, shared by items and worked examples.
@@ -323,9 +324,7 @@ class ChoiceTile extends StatelessWidget {
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.only(top: 3),
-                          child: Text.rich(
-                            TextSpan(children: styledSpans(text, textStyle!)),
-                          ),
+                          child: MathText(text, style: textStyle),
                         ),
                       ),
                       if (onEliminate != null)
@@ -346,7 +345,7 @@ class ChoiceTile extends StatelessWidget {
                   if (explanation != null)
                     Padding(
                       padding: const EdgeInsets.fromLTRB(40, 6, 8, 0),
-                      child: RichLine(
+                      child: MathText(
                         explanation!,
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppColors.muted,

@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0522",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "For random samples from a certain population, the margin of error for an estimated percent is approximately proportional to \\(\\frac{1}{\\sqrt{n}}\\), where \\(n\\) is the sample size. A random sample of 400 gives a margin of error of 5 percentage points. Assuming the sample percent stays about the same, approximately what sample size would give a margin of error of 2.5 percentage points?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(200\\)",
+    "B": "\\(1{,}600\\)",
+    "C": "\\(6{,}400\\)",
+    "D": "\\(800\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Halving the margin of error means \\(\\frac{1}{\\sqrt{n}}\\) must be halved, so \\(\\sqrt{n}\\) must double.",
+    "\\(\\sqrt{400} = 20\\), so the new \\(\\sqrt{n} = 40\\) and \\(n = 40^{2} = 1{,}600\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. A smaller sample makes the margin of error LARGER, not smaller.",
+    "B": "Correct. To halve the margin of error, \\(\\sqrt{n}\\) must double from 20 to 40, so \\(n = 1{,}600\\).",
+    "C": "Incorrect. Multiplying the sample size by 16 would cut the margin of error to one-fourth, about 1.25 points, not 2.5.",
+    "D": "Incorrect. Doubling the sample size does not halve the margin of error; it divides it by only about 1.41."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "C": "wrong_formula",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nn = symbols('n', positive=True)\nsol = solve(Eq(5 * sqrt(400) / sqrt(n), Rational(5, 2)), n)\nassert sol == [1600]\nassert value(choices[answer]) == 1600\nassert all(value(choices[k]) != 1600 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

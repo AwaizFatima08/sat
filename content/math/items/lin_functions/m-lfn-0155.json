@@ -1,0 +1,59 @@
+{
+  "id": "m-lfn-0155",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = 3x + c\\), where \\(c\\) is a constant. In the \\(xy\\)-plane, the points \\((2, k)\\) and \\((k, 14)\\) lie on the graph of \\(y = f(x)\\), where \\(k\\) is a constant. What is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(-1\\)",
+    "C": "\\(-\\frac{4}{3}\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "From \\((2, k)\\): \\(k = 3(2) + c = 6 + c\\).",
+    "From \\((k, 14)\\): \\(14 = 3k + c = 3(6 + c) + c = 18 + 4c\\).",
+    "So \\(4c = -4\\) and \\(c = -1\\) (and \\(k = 5\\))."
+  ],
+  "explanation": {
+    "A": "Incorrect. This comes from \\(k = 6 - c\\), a sign error in the first equation.",
+    "B": "Correct. \\(k = 6 + c\\) and \\(14 = 3k + c\\) give \\(14 = 18 + 4c\\), so \\(c = -1\\).",
+    "C": "Incorrect. This comes from writing \\(14 = 18 + 3c\\), dropping the \\(c\\) term when substituting.",
+    "D": "Incorrect. This is the value of \\(k\\), not \\(c\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "arithmetic",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nk, c = symbols('k c')\nsol = solve([Eq(k, 6 + c), Eq(14, 3*k + c)], [k, c], dict=True)\nassert sol == [{k: 5, c: -1}]\nans = sol[0][c]\n\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

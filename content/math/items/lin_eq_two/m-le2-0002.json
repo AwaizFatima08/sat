@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0002",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "Nadia spends exactly \\$30 on rice and lentils. Rice costs \\$3 per kilogram, and lentils cost \\$6 per kilogram. If Nadia buys 4 kilograms of rice, how many kilograms of lentils does she buy?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(3\\)",
+    "C": "\\(5\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(x\\) be kilograms of rice and \\(y\\) kilograms of lentils: \\(3x + 6y = 30\\).",
+    "Substitute \\(x = 4\\): \\(12 + 6y = 30\\).",
+    "So \\(6y = 18\\) and \\(y = 3\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This swaps the two prices: \\(6(4) + 3y = 30\\) gives \\(y = 2\\).",
+    "B": "Correct. \\(3(4) + 6y = 30\\) gives \\(6y = 18\\), so \\(y = 3\\).",
+    "C": "Incorrect. This is \\(\\frac{30}{6}\\), the amount of lentils she could buy if she bought no rice.",
+    "D": "Incorrect. This adds the cost of the rice instead of subtracting it: \\(6y = 30 + 12\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "y = symbols('y')\nsol = solve(Eq(3*4 + 6*y, 30), y)\nassert sol == [3]\nassert value(choices[answer]) == 3\nassert all(value(choices[k]) != 3 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

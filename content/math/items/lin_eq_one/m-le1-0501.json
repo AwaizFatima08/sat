@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0501",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(7x + 5 = 61\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{66}{7}\\)",
+    "B": "\\(392\\)",
+    "C": "\\(8\\)",
+    "D": "\\(56\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Subtract 5 from both sides: \\(7x = 56\\).",
+    "Divide both sides by 7: \\(x = 8\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding 5 to 61 instead of subtracting it: \\(7x = 66\\).",
+    "B": "Incorrect. This is the result of multiplying 56 by 7 instead of dividing by 7.",
+    "C": "Correct. Subtracting 5 gives \\(7x = 56\\), and dividing by 7 gives \\(x = 8\\).",
+    "D": "Incorrect. This is the value of \\(7x\\), not \\(x\\); the last step, dividing by 7, is missing."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "arithmetic",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\ns = solve(Eq(7*x + 5, 61), x)[0]\nassert s == 8\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

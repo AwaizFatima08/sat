@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0141",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[2x + 3y = 12\\] \\[4x - y = 10\\] Which of the following systems of equations has the same solution as the system above?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x + y = 5\\) and \\(x - y = 1\\)",
+    "B": "\\(x + 2y = 9\\) and \\(2x - y = 3\\)",
+    "C": "\\(x - y = 5\\) and \\(x + y = 1\\)",
+    "D": "\\(x + y = 5\\) and \\(y - x = 1\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "From the second equation, \\(y = 4x - 10\\). Substitute: \\(2x + 12x - 30 = 12\\), so \\(x = 3\\) and \\(y = 2\\).",
+    "Check each choice at \\((3, 2)\\): \\(3 + 2 = 5\\) and \\(3 - 2 = 1\\), so choice C works.",
+    "Its lines have different slopes, so \\((3, 2)\\) is its only solution."
+  ],
+  "explanation": {
+    "A": "Correct. Both systems have the single solution \\((3, 2)\\).",
+    "B": "Incorrect. This system's solution is \\((3, 3)\\), which does not satisfy \\(4x - y = 10\\).",
+    "C": "Incorrect. This system's solution is \\((3, -2)\\); the sign of \\(y\\) is wrong.",
+    "D": "Incorrect. This system's solution is \\((2, 3)\\), which reverses the coordinates of \\((3, 2)\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "sign_error",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\neqs = lambda s: [value(p.split('=')[0]) - value(p.split('=')[1]) for p in s.split(' and ')]\n\nx, y = symbols('x y')\ns0 = linsolve([2*x + 3*y - 12, 4*x - y - 10], [x, y])\nassert s0 == FiniteSet((3, 2))\nfits = [k for k in choices if linsolve(eqs(choices[k]), [x, y]) == s0]\nassert fits == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

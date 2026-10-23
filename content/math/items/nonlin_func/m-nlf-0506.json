@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0506",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What is the \\(y\\)-intercept of the graph of \\(y = 7(0.6)^{x} + 2\\) in the \\(xy\\)-plane?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((0, 6.2)\\)",
+    "B": "\\((0, 2)\\)",
+    "C": "\\((0, 9)\\)",
+    "D": "\\((0, 7)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The \\(y\\)-intercept is where \\(x = 0\\).",
+    "\\((0.6)^{0} = 1\\), so \\(y = 7(1) + 2 = 9\\). The \\(y\\)-intercept is \\((0, 9)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of substituting \\(x = 1\\) instead of \\(x = 0\\): \\(7(0.6) + 2 = 6.2\\).",
+    "B": "Incorrect. This is the result of taking the added constant as the \\(y\\)-intercept, as for a line \\(y = mx + b\\); here \\(7(0.6)^{0}\\) is \\(7\\), not \\(0\\).",
+    "C": "Correct. At \\(x = 0\\), \\(y = 7(1) + 2 = 9\\).",
+    "D": "Incorrect. This is the result of stopping after \\(7(0.6)^{0} = 7\\) and forgetting to add \\(2\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = 7*Rational('0.6')**x + 2\ny0 = f.subs(x, 0)\nassert y0 == 9\nassert value(choices[answer]) == (0, y0)\nassert all(value(choices[k]) != (0, y0) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

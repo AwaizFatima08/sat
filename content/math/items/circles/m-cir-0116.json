@@ -1,0 +1,46 @@
+{
+  "id": "m-cir-0116",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A circular window has two straight, parallel metal bars, each with both ends on the edge of the window. One bar is 16 inches long and the other is 30 inches long. The bars are on opposite sides of the center of the window and are 23 inches apart. What is the radius, in inches, of the window?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "17"
+  ],
+  "solution": [
+    "Let the bars be \\(a\\) and \\(23 - a\\) inches from the center. The perpendicular from the center bisects each bar, so \\(r^{2} = 8^{2} + a^{2} = 15^{2} + (23 - a)^{2}\\).",
+    "\\(64 + a^{2} = 225 + 529 - 46a + a^{2}\\), so \\(46a = 690\\) and \\(a = 15\\).",
+    "\\(r^{2} = 8^{2} + 15^{2} = 289\\), so \\(r = 17\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "a=symbols('a')\naa=solve(Eq(8**2+a**2,15**2+(23-a)**2),a)[0]\nans=sqrt(8**2+aa**2)\nassert aa==15 and 0<aa<23 and ans==17\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "17",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

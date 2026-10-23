@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0505",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Ayesha buys 5 packets of biscuits at a shop in Karachi. Each packet costs \\((p + 30)\\) rupees. Which expression represents the total cost, in rupees, of the 5 packets?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(35p\\)",
+    "B": "\\(5p + 150\\)",
+    "C": "\\(5p + 6\\)",
+    "D": "\\(5p + 30\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The total cost is 5 times the cost of one packet: \\(5(p + 30)\\).",
+    "Distribute the 5 to both terms: \\(5p + 150\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of combining \\(5p\\) and 30 into one term; they are not like terms.",
+    "B": "Correct. Five packets cost \\(5(p + 30) = 5p + 150\\) rupees.",
+    "C": "Incorrect. This is the result of dividing 30 by 5 instead of multiplying.",
+    "D": "Incorrect. This is the result of multiplying only \\(p\\) by 5 and not the 30 rupees."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\np = symbols('p')\ntarget = 5*(p + 30)\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

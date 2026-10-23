@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0526",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Kofi starts a road trip with 48 liters of fuel in his car's tank. The car uses 6.5 liters of fuel per 100 kilometers driven. Which equation can be used to find the distance \\(d\\), in kilometers, Kofi has driven when 22 liters of fuel remain in the tank?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.065d = 22\\)",
+    "B": "\\(48 - 6.5d = 22\\)",
+    "C": "\\(48 - 0.065d = 22\\)",
+    "D": "\\(48 + 0.065d = 22\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The car uses \\(6.5 \\div 100 = 0.065\\) liters per kilometer.",
+    "After \\(d\\) kilometers, \\(0.065d\\) liters have been used, so \\(48 - 0.065d\\) liters remain.",
+    "Set this equal to 22: \\(48 - 0.065d = 22\\). (The solution is \\(d = 400\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This sets the fuel used equal to 22, but 22 liters is the amount remaining; 26 liters have been used.",
+    "B": "Incorrect. This is the result of using 6.5 liters per kilometer instead of 6.5 liters per 100 kilometers.",
+    "C": "Correct. The car uses 0.065 liter per kilometer, so \\(48 - 0.065d\\) liters remain after \\(d\\) kilometers.",
+    "D": "Incorrect. This is the result of adding the fuel used instead of subtracting it."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nd = symbols('d')\ndef sol(k):\n    l, r = choices[k][2:-2].split('=')\n    return solve(Eq(value(l), value(r)), d)\ns = solve(Eq(48 - Rational(65, 10)/100*d, 22), d)\nassert s == [400]\nassert sol(answer) == s\nassert all(sol(k) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

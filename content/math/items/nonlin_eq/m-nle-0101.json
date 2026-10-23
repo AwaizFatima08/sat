@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0101",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What are the solutions to the equation \\((2x - 5)(x + 4) = 0\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-4\\) and \\(\\frac{5}{2}\\)",
+    "B": "\\(\\frac{5}{2}\\) only",
+    "C": "\\(-4\\) and \\(5\\)",
+    "D": "\\(-\\frac{5}{2}\\) and \\(4\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "A product is \\(0\\) when one of its factors is \\(0\\).",
+    "\\(2x - 5 = 0\\) gives \\(x = \\frac{5}{2}\\); \\(x + 4 = 0\\) gives \\(x = -4\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Each factor equals \\(0\\) at one of these values.",
+    "B": "Incorrect. This misses the solution from the factor \\(x + 4\\); \\(x = -4\\) also makes the product \\(0\\).",
+    "C": "Incorrect. This is the result of solving \\(2x - 5 = 0\\) as \\(x = 5\\), without dividing by \\(2\\).",
+    "D": "Incorrect. This is the result of reversing the signs when setting each factor equal to \\(0\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "arithmetic",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\ndef vals(s):\n    s = s.replace(' only', '').replace(', and ', ' and ').replace(', ', ' and ')\n    return {value(p) for p in s.split(' and ')}\nx = symbols('x')\nsol = set(solve(Eq((2*x - 5)*(x + 4), 0), x))\nassert sol == {Rational(5, 2), -4}\nassert vals(choices[answer]) == sol\nassert all(vals(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

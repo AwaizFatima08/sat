@@ -1,0 +1,84 @@
+{
+  "id": "m-le1-0003",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The table shows the balances, in dollars, of Maria's and Jon's savings accounts at the end of week 0, week 1, and week 2 after the accounts were opened. Maria's balance increases by the same amount each week, and Jon's balance decreases by the same amount each week. At the end of how many weeks will the two balances be equal?",
+  "figure": {
+    "kind": "table",
+    "title": "Account balances (dollars)",
+    "columns": [
+      "Week",
+      "Maria",
+      "Jon"
+    ],
+    "rows": [
+      [
+        "0",
+        "350",
+        "590"
+      ],
+      [
+        "1",
+        "390",
+        "570"
+      ],
+      [
+        "2",
+        "430",
+        "550"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4\\)",
+    "B": "\\(6\\)",
+    "C": "\\(12\\)",
+    "D": "\\(510\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "From the table, Maria's balance grows by \\(390 - 350 = 40\\) dollars per week, and Jon's falls by \\(590 - 570 = 20\\) dollars per week.",
+    "After \\(w\\) weeks: Maria has \\(350 + 40w\\) and Jon has \\(590 - 20w\\).",
+    "Set them equal: \\(350 + 40w = 590 - 20w\\), so \\(60w = 240\\) and \\(w = 4\\).",
+    "Check: both balances are \\$510 after 4 weeks."
+  ],
+  "explanation": {
+    "A": "Correct. Solving \\(350 + 40w = 590 - 20w\\) gives \\(60w = 240\\), so \\(w = 4\\).",
+    "B": "Incorrect. This is the result of ignoring Jon's weekly decrease: \\(350 + 40w = 590\\) gives \\(w = 6\\).",
+    "C": "Incorrect. This is the result of treating Jon's change as an increase: \\(350 + 40w = 590 + 20w\\) gives \\(w = 12\\).",
+    "D": "Incorrect. This is the common balance, in dollars, when the accounts are equal, not the number of weeks."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "sign_error",
+    "D": "wrong_quantity"
+  },
+  "verify": "w = symbols('w')\nr = [[int(c) for c in row] for row in figure['rows']]\nm0, m1, j0, j1 = r[0][1], r[1][1], r[0][2], r[1][2]\nsol = solve(Eq(m0 + (m1 - m0)*w, j0 + (j1 - j0)*w), w)\nassert sol == [4]\nassert value(choices[answer]) == sol[0]\nassert all(value(choices[k]) != sol[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

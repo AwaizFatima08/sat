@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0511",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The price of a bag of coffee beans increased from \\$15.00 to \\$18.60. By what percent did the price increase?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(24\\%\\)",
+    "B": "\\(19.4\\%\\)",
+    "C": "\\(124\\%\\)",
+    "D": "\\(3.6\\%\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Find the increase: \\(18.60 - 15.00 = 3.60\\) dollars.",
+    "Divide by the original price: \\(\\frac{3.60}{15.00} = 0.24\\), which is \\(24\\%\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The increase of 3.60 dollars is \\(\\frac{3.60}{15.00} = 24\\%\\) of the original price.",
+    "B": "Incorrect. This is the result of dividing the increase by the new price instead of the original price: \\(\\frac{3.60}{18.60} \\approx 19.4\\%\\).",
+    "C": "Incorrect. This is the new price as a percent of the original price, \\(\\frac{18.60}{15.00} = 124\\%\\), not the percent increase.",
+    "D": "Incorrect. This is the increase in dollars, 3.60, written as a percent. It must be compared with the original price."
+  },
+  "traps": {
+    "B": "percent_add",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nv = (Rational('18.60') - 15) / 15\nassert v == Rational(24, 100)\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0518",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Line \\(\\ell\\) in the \\(xy\\)-plane is the graph of a linear function with slope 4, and it passes through the point \\((2, 3)\\). What is the \\(y\\)-intercept of line \\(\\ell\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((0, 11)\\)",
+    "B": "\\((0, -5)\\)",
+    "C": "\\((\\frac{5}{4}, 0)\\)",
+    "D": "\\((0, 3)\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Write \\(y = 4x + b\\) and substitute \\((2, 3)\\): \\(3 = 8 + b\\).",
+    "So \\(b = -5\\), and the \\(y\\)-intercept is \\((0, -5)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds 8 instead of subtracting it: \\(b = 3 + 8\\).",
+    "B": "Correct. From \\(3 = 4(2) + b\\), \\(b = -5\\), so the line crosses the \\(y\\)-axis at \\((0, -5)\\).",
+    "C": "Incorrect. \\((\\frac{5}{4}, 0)\\) is where the line crosses the \\(x\\)-axis, the \\(x\\)-intercept.",
+    "D": "Incorrect. 3 is the \\(y\\)-coordinate of the given point \\((2, 3)\\), which is not on the \\(y\\)-axis."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx, b = symbols('x b')\nbb = solve(Eq(3, 4*2 + b), b)[0]\nassert bb == -5\nassert choices[answer] == '\\\\((0, %d)\\\\)' % bb\nassert solve(4*x + bb, x) == [Rational(5, 4)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

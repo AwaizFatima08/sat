@@ -1,0 +1,114 @@
+{
+  "id": "m-lat-0112",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A pinhole camera is a closed box with a tiny hole in its front. Light from the top and bottom of a tree passes through the hole \\(H\\) and forms an upside-down image on the back of the box, as shown. The tree is 6 meters tall and is 15 meters from the hole. The image is 4 centimeters tall. The tree and the back of the box are both vertical. What is the distance, in centimeters, from the hole to the back of the box? Note: Figure not drawn to scale.",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "T": [
+        -10,
+        6
+      ],
+      "U": [
+        -10,
+        0
+      ],
+      "H": [
+        0,
+        3
+      ],
+      "T'": [
+        4,
+        1.8
+      ],
+      "U'": [
+        4,
+        4.2
+      ]
+    },
+    "segments": [
+      [
+        "T",
+        "U"
+      ],
+      [
+        "T",
+        "T'"
+      ],
+      [
+        "U",
+        "U'"
+      ],
+      [
+        "T'",
+        "U'"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          -11.2,
+          3
+        ],
+        "text": "6 m"
+      },
+      {
+        "at": [
+          -5,
+          -0.7
+        ],
+        "text": "15 m"
+      },
+      {
+        "at": [
+          4.9,
+          3
+        ],
+        "text": "4 cm"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": true
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "10"
+  ],
+  "solution": [
+    "The tree and the image are parallel, and the light rays cross at \\(H\\), so the two triangles formed are similar (vertical angles and alternate interior angles).",
+    "Work in centimeters: the tree is 600 cm tall and 1,500 cm from the hole. \\(\\frac{d}{1{,}500} = \\frac{4}{600}\\).",
+    "\\(d = 1{,}500 \\cdot \\frac{4}{600} = 10\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert figure['not_to_scale'] and P['T'][0]==P['U'][0] and P[\"T'\"][0]==P[\"U'\"][0]\nassert abs((P['T'][1]-P['H'][1])*(P[\"T'\"][0]-P['H'][0])-(P[\"T'\"][1]-P['H'][1])*(P['T'][0]-P['H'][0]))<0.01\nd=symbols('d')\nans=solve(Eq(d/1500,Rational(4,600)),d)[0]\nassert Rational(spr_answers[0])==ans==10\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "10",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

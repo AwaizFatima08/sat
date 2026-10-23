@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0510",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "\\[y = 2x + 3\\] \\[y = 2x - 1\\] How many solutions does the system of equations above have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Zero",
+    "B": "Infinitely many",
+    "C": "Exactly one",
+    "D": "Exactly two"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Both lines have slope 2, so they are parallel or the same line.",
+    "Their \\(y\\)-intercepts, 3 and \\(-1\\), are different, so the lines are parallel and never meet.",
+    "(Setting \\(2x + 3 = 2x - 1\\) gives \\(3 = -1\\), which is never true.) The system has zero solutions."
+  ],
+  "explanation": {
+    "A": "Correct. The lines have the same slope and different \\(y\\)-intercepts, so they are parallel and the system has no solution.",
+    "B": "Incorrect. Equal slopes give infinitely many solutions only when the \\(y\\)-intercepts are also equal; here they are 3 and \\(-1\\).",
+    "C": "Incorrect. Two lines meet in exactly one point only when their slopes differ; here both slopes are 2.",
+    "D": "Incorrect. Two different lines can cross at most once, so a system of two linear equations never has exactly two solutions."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nassert solve([y - (2*x + 3), y - (2*x - 1)], [x, y]) == []\nassert choices[answer] == 'Zero'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

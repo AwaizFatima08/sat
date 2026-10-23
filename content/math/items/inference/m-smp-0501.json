@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0501",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "An orchard has 1,200 apple trees. A random sample of 40 of the trees was selected, and the mean apple harvest for the sampled trees was 85 kilograms per tree. Based on the sample, which of the following is the best estimate of the total apple harvest, in kilograms, of all the trees in the orchard?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3{,}400\\)",
+    "B": "\\(85\\)",
+    "C": "\\(102{,}000\\)",
+    "D": "\\(30\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The sample mean, 85 kilograms per tree, estimates the mean harvest of all the trees.",
+    "Multiply by the number of trees: \\(85(1{,}200) = 102{,}000\\) kilograms."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the total harvest of the 40 sampled trees, \\(85(40)\\), not of all 1,200 trees.",
+    "B": "Incorrect. 85 kilograms is the estimated mean harvest per tree, not the total harvest of the orchard.",
+    "C": "Correct. Each tree is estimated to yield 85 kilograms, so 1,200 trees yield about \\(85(1{,}200) = 102{,}000\\) kilograms.",
+    "D": "Incorrect. This divides the number of trees by the sample size, \\(\\frac{1{,}200}{40}\\), which does not use the harvest data at all."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nest = 85 * 1200\nassert est == 102000\nassert value(choices[answer]) == est\nassert all(value(choices[k]) != est for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0511",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = a(b)^{x}\\), where \\(a\\) and \\(b\\) are positive constants. If \\(f(0) = 6\\) and \\(f(2) = 54\\), which of the following defines \\(f\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6(9)^{x}\\)",
+    "B": "\\(6(3)^{x}\\)",
+    "C": "\\(3(6)^{x}\\)",
+    "D": "\\(6 + 24x\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(f(0) = a(b)^{0} = a\\), so \\(a = 6\\).",
+    "\\(f(2) = 6b^{2} = 54\\), so \\(b^{2} = 9\\) and, since \\(b > 0\\), \\(b = 3\\).",
+    "So \\(f(x) = 6(3)^{x}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of taking \\(\\frac{54}{6} = 9\\) as the base; that is the growth over 2 steps of \\(x\\), so \\(b^{2} = 9\\).",
+    "B": "Correct. \\(a = f(0) = 6\\) and \\(b^{2} = 9\\) with \\(b > 0\\) gives \\(b = 3\\).",
+    "C": "Incorrect. This is the result of swapping the roles of \\(a\\) and \\(b\\); this function gives \\(f(0) = 3\\).",
+    "D": "Incorrect. This linear function also passes through \\((0, 6)\\) and \\((2, 54)\\), but \\(f\\) must have the exponential form \\(a(b)^{x}\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nbs = [s for s in solve(6*symbols('b')**2 - 54) if s > 0]\nassert bs == [3]\ntarget = 6*3**x\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0513",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Line \\(p\\) has equation \\(3x - 4y = 8\\). Which equation represents a line that is parallel to line \\(p\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3x + 4y = 8\\)",
+    "B": "\\(4x - 3y = 8\\)",
+    "C": "\\(4x + 3y = 8\\)",
+    "D": "\\(6x - 8y = 5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Solve \\(3x - 4y = 8\\) for \\(y\\): \\(y = \\frac{3}{4}x - 2\\), so the slope of \\(p\\) is \\(\\frac{3}{4}\\).",
+    "Parallel lines have equal slopes. For \\(6x - 8y = 5\\): \\(y = \\frac{3}{4}x - \\frac{5}{8}\\), slope \\(\\frac{3}{4}\\).",
+    "It has a different \\(y\\)-intercept, so it is a different, parallel line."
+  ],
+  "explanation": {
+    "A": "Incorrect. This line has slope \\(-\\frac{3}{4}\\); changing the sign of the \\(y\\)-term changes the sign of the slope.",
+    "B": "Incorrect. This line has slope \\(\\frac{4}{3}\\), the reciprocal of the slope of \\(p\\).",
+    "C": "Incorrect. This line has slope \\(-\\frac{4}{3}\\), the negative reciprocal of \\(\\frac{3}{4}\\), so it is perpendicular to \\(p\\), not parallel.",
+    "D": "Correct. Its slope is \\(\\frac{6}{8} = \\frac{3}{4}\\), the same as line \\(p\\), and it is not the same line."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "reciprocal",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\nsl = lambda e: -diff(e, x)/diff(e, y)\nmp = sl(3*x - 4*y - 8)\nok = [k for k in choices if sl(eq(choices[k])) == mp and eq(choices[k]).subs(x, 0) != (3*x - 4*y - 8).subs(x, 0)]\nassert ok == [answer]\nassert mp == Rational(3, 4)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

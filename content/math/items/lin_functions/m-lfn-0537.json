@@ -1,0 +1,59 @@
+{
+  "id": "m-lfn-0537",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(y = ax + b\\), where \\(a\\) and \\(b\\) are constants with \\(a < 0\\) and \\(b > 0\\), is a line. Which of the following points could NOT lie on this line?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((3, -5)\\)",
+    "B": "\\((1, 4)\\)",
+    "C": "\\((-2, -1)\\)",
+    "D": "\\((-1, 7)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "For \\(x < 0\\), \\(ax\\) is positive (negative times negative), so \\(y = ax + b > b > 0\\).",
+    "So the line has no points with a negative \\(x\\)-coordinate and a negative \\(y\\)-coordinate: \\((-2, -1)\\) cannot lie on it.",
+    "The other points can: for example \\(y = -3x + 4\\) passes through \\((3, -5)\\), \\(y = -x + 5\\) through \\((1, 4)\\), and \\(y = -2x + 5\\) through \\((-1, 7)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. A positive \\(b\\) does not keep \\(y\\) positive for \\(x > 0\\); for example, \\(y = -3x + 4\\) passes through \\((3, -5)\\).",
+    "B": "Incorrect. This point is possible; for example, \\(y = -x + 5\\) passes through \\((1, 4)\\).",
+    "C": "Correct. When \\(x = -2\\), \\(y = -2a + b\\), and both \\(-2a\\) and \\(b\\) are positive, so \\(y\\) cannot be \\(-1\\).",
+    "D": "Incorrect. For \\(x < 0\\), \\(y\\) is greater than \\(b\\), which is possible here; for example, \\(y = -2x + 5\\) passes through \\((-1, 7)\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\ndef possible(p, q):\n    return p > 0 or q > 0\npts = {'A': (3, -5), 'B': (1, 4), 'C': (-2, -1), 'D': (-1, 7)}\nfor kk, (p, q) in pts.items():\n    assert choices[kk] == '\\\\((%d, %d)\\\\)' % (p, q)\nassert [k for k in pts if not possible(*pts[k])] == [answer]\nassert -3*3 + 4 == -5 and -1 + 5 == 4 and 2 + 5 == 7\nassert all(Rational(-2)*a + b > 0 for a, b in [(-Rational(1, 100), Rational(1, 100)), (-5, 1)])",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

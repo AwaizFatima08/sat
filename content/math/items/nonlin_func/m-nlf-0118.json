@@ -1,0 +1,83 @@
+{
+  "id": "m-nlf-0118",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The table shows the number of people who received an invitation message in each of the first four rounds of a message chain. The number of people in each round is a constant multiple of the number in the round before. If the pattern continues, how many people will receive the message in round 5?",
+  "figure": {
+    "kind": "table",
+    "title": "Message chain",
+    "columns": [
+      "Round",
+      "Number of people"
+    ],
+    "rows": [
+      [
+        "1",
+        "4"
+      ],
+      [
+        "2",
+        "12"
+      ],
+      [
+        "3",
+        "36"
+      ],
+      [
+        "4",
+        "108"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(324\\)",
+    "B": "\\(432\\)",
+    "C": "\\(180\\)",
+    "D": "\\(144\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Each round is \\(3\\) times the round before: \\(12 = 3(4)\\), \\(36 = 3(12)\\), \\(108 = 3(36)\\).",
+    "Round 5: \\(3(108) = 324\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Each round is 3 times the round before, so round 5 has \\(3(108) = 324\\) people.",
+    "B": "Incorrect. This is the result of multiplying by 4, the round 1 value, instead of by the common factor 3.",
+    "C": "Incorrect. This is the result of treating the pattern as linear and adding the last increase, 72, again: \\(108 + 72 = 180\\).",
+    "D": "Incorrect. This is the result of adding the round 3 value to the round 4 value, \\(108 + 36\\), instead of multiplying by the common factor."
+  },
+  "traps": {
+    "B": "misread_graph",
+    "C": "wrong_formula",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nrows = [(int(r[0]), int(r[1])) for r in figure['rows']]\nk = Rational(rows[1][1], rows[0][1])\nassert all(Rational(rows[i + 1][1], rows[i][1]) == k for i in range(3)) and k == 3\nassert value(choices[answer]) == rows[-1][1]*k == 324\nassert all(value(choices[c]) != 324 for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

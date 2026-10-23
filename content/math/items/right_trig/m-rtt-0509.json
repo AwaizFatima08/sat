@@ -1,0 +1,109 @@
+{
+  "id": "m-rtt-0509",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(ABC\\), \\(AC = 10\\) and the measure of angle \\(A\\) is \\(30^{\\circ}\\). What is the length of \\(\\overline{AB}\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        8.66,
+        0
+      ],
+      "C": [
+        8.66,
+        5
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          3.8,
+          3.2
+        ],
+        "text": "10"
+      },
+      {
+        "at": [
+          1.7,
+          0.4
+        ],
+        "text": "30°"
+      }
+    ],
+    "right_angles": [
+      "B"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\sqrt{2}\\)",
+    "B": "\\(5\\)",
+    "C": "\\(10\\sqrt{3}\\)",
+    "D": "\\(5\\sqrt{3}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "In a 30°-60°-90° triangle, the side opposite \\(30^{\\circ}\\) is half the hypotenuse: \\(BC = 5\\).",
+    "The side opposite \\(60^{\\circ}\\) is \\(\\sqrt{3}\\) times that: \\(AB = 5\\sqrt{3}\\) (or \\(AB = 10\\cos 30^{\\circ}\\))."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the 45°-45°-90° ratio; the triangle has a \\(30^{\\circ}\\) angle.",
+    "B": "Incorrect. This is \\(BC\\), the side opposite the \\(30^{\\circ}\\) angle, not \\(AB\\).",
+    "C": "Incorrect. This multiplies the hypotenuse by \\(\\sqrt{3}\\); the longer leg is \\(\\sqrt{3}\\) times the shorter leg, not the hypotenuse.",
+    "D": "Correct. \\(\\overline{AB}\\) is opposite the \\(60^{\\circ}\\) angle, so it is \\(\\sqrt{3}\\) times the short leg: \\(5\\sqrt{3}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('A','C')-10)<0.01 and abs(ang('C','A','B')-30)<0.1 and abs(ang('A','B','C')-90)<0.1\nans=10*cos(pi/6)\nassert abs(d('A','B')-ans)<0.01\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

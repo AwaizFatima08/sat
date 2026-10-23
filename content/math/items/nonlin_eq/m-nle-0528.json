@@ -1,0 +1,47 @@
+{
+  "id": "m-nle-0528",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A shop in Chattogram sells handwoven scarves. When the price of a scarf is \\(p\\) taka, the shop sells \\(300 - 2p\\) scarves per day. The shop's daily revenue from scarves is the price times the number sold. If the price is more than 50 taka and the daily revenue is 10,000 taka, what is the price of a scarf, in taka?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "100"
+  ],
+  "solution": [
+    "Revenue = price \\(\\times\\) number sold: \\(p(300 - 2p) = 10{,}000\\).",
+    "Expand and rearrange: \\(2p^{2} - 300p + 10{,}000 = 0\\), or \\(p^{2} - 150p + 5{,}000 = 0\\).",
+    "Factor: \\((p - 50)(p - 100) = 0\\), so \\(p = 50\\) or \\(p = 100\\).",
+    "The price is more than 50 taka, so \\(p = 100\\). (The shop sells 100 scarves, and \\(100 \\cdot 100 = 10{,}000\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "p = symbols('p')\nsols = solve(Eq(p*(300 - 2*p), 10000), p)\nassert sorted(sols) == [50, 100]\nans = [s for s in sols if s > 50]\nassert [Rational(a) for a in spr_answers] == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "100",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0121",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A worker earns \\$18 per hour on weekdays and \\$27 per hour on weekends. Last week, the worker worked a total of 32 hours and earned \\$657. Which system of equations can be used to find the number of weekday hours, \\(w\\), and the number of weekend hours, \\(k\\), the worker worked last week?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(w - k = 32\\) and \\(18w + 27k = 657\\)",
+    "B": "\\(w + k = 32\\) and \\(18w + 27k = 657\\)",
+    "C": "\\(w + k = 32\\) and \\(27w + 18k = 657\\)",
+    "D": "\\(w + k = 657\\) and \\(18w + 27k = 32\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The hours add up to 32: \\(w + k = 32\\).",
+    "Weekday pay is \\(18w\\) dollars and weekend pay is \\(27k\\) dollars, so \\(18w + 27k = 657\\).",
+    "(The system gives \\(w = 23\\) and \\(k = 9\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. The total number of hours is \\(w + k\\), not \\(w - k\\).",
+    "B": "Correct. The hours give \\(w + k = 32\\), and the pay gives \\(18w + 27k = 657\\).",
+    "C": "Incorrect. This pays the weekday hours, \\(w\\), at the weekend rate of \\$27.",
+    "D": "Incorrect. This swaps the two totals: 32 is the number of hours and 657 is the pay in dollars."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\neqs = lambda s: [value(p.split('=')[0]) - value(p.split('=')[1]) for p in s.split(' and ')]\n\nw, k = symbols('w k')\ntrue = {w: 23, k: 9}\nassert [ex.subs(true) for ex in (w + k - 32, 18*w + 27*k - 657)] == [0, 0]\nassert solve(eqs(choices[answer]), [w, k]) == true\nassert all(any(ex.subs(true) != 0 for ex in eqs(choices[c])) for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

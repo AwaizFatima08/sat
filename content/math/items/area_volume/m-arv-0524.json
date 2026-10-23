@@ -1,0 +1,46 @@
+{
+  "id": "m-arv-0524",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A solid is made of a right circular cylinder with a hemisphere (half of a sphere) attached to one of its bases. The cylinder and the hemisphere both have radius \\(3\\), and the total height of the solid is \\(10\\). The volume of the solid is \\(k\\pi\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "81"
+  ],
+  "solution": [
+    "The hemisphere is 3 units tall (its radius), so the cylinder's height is \\(10 - 3 = 7\\).",
+    "Cylinder: \\(\\pi (3)^{2}(7) = 63\\pi\\). Hemisphere: \\(\\frac{1}{2} \\cdot \\frac{4}{3}\\pi (3)^{3} = 18\\pi\\).",
+    "Total: \\(63\\pi + 18\\pi = 81\\pi\\), so \\(k = 81\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r=3\nhc=10-r\nk=r**2*hc+Rational(1,2)*Rational(4,3)*r**3\nassert k==81\nassert Rational(spr_answers[0])==k and len(spr_answers)==1\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "81",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

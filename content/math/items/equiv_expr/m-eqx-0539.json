@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0539",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A basketball player has made 9 of her first 15 free throws. If she then makes each of her next \\(n\\) free throws, the fraction of all her free throws that she has made is \\(\\frac{9 + n}{15 + n}\\). Which of the following is equivalent to this expression?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1 - \\frac{6}{n + 15}\\)",
+    "B": "\\(1 - \\frac{6}{n}\\)",
+    "C": "\\(\\frac{9}{15} + 1\\)",
+    "D": "\\(1 + \\frac{6}{n + 15}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Write the numerator in terms of the denominator: \\(9 + n = (15 + n) - 6\\).",
+    "Then \\(\\frac{9 + n}{15 + n} = \\frac{(15 + n) - 6}{15 + n} = 1 - \\frac{6}{n + 15}\\).",
+    "This form shows that the fraction gets closer to 1 as \\(n\\) grows but always stays below 1."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\frac{(15 + n) - 6}{15 + n} = 1 - \\frac{6}{n + 15}\\).",
+    "B": "Incorrect. This is the result of dividing the 6 by \\(n\\) only instead of by the whole denominator \\(n + 15\\).",
+    "C": "Incorrect. This is the result of splitting the fraction as \\(\\frac{9}{15} + \\frac{n}{n}\\); a fraction cannot be split over a sum in the denominator.",
+    "D": "Incorrect. This is the result of a sign slip: \\(9 + n\\) is 6 less than \\(15 + n\\), not 6 more."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nn = symbols('n')\ntarget = (9 + n)/(15 + n)\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

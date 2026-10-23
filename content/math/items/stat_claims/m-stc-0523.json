@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0523",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A polling firm selected 1,200 telephone numbers at random from a list of all landline numbers in a country and surveyed one adult at each number. Of those surveyed, 58% said they use online banking. Which of the following is the most likely reason this result may not be a good estimate for all adults in the country?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A sample of 1,200 adults is too small to estimate a percent for a whole country.",
+    "B": "Selecting the numbers at random introduced bias into the sample.",
+    "C": "Adults who have no landline could not be selected, and their rate of online banking may be different.",
+    "D": "A result close to 50% cannot be used to describe a population."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The list used to choose the sample (landline numbers) leaves out every adult without a landline.",
+    "Those adults, for example many younger adults who use only mobile phones, may bank online at a different rate, so the sample under-represents part of the population."
+  ],
+  "explanation": {
+    "A": "Incorrect. A random sample of 1,200 can estimate a national percent well; the problem is who could be selected.",
+    "B": "Incorrect. Random selection reduces bias; the bias comes from the list the numbers were chosen from.",
+    "C": "Correct. Leaving out adults without a landline (undercoverage) can bias the estimate.",
+    "D": "Incorrect. Any percent from a representative sample can describe a population."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nframe = {'covers_all_adults': False, 'random_from_frame': True}\nassert frame['random_from_frame'] and not frame['covers_all_adults']\nok = [k for k, v in choices.items() if 'no landline' in v]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

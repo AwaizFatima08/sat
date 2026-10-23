@@ -1,0 +1,86 @@
+{
+  "id": "m-pct-0515",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The bar graph shows the number of books borrowed from a school library on each of four days. What percent of the books borrowed over the four days were borrowed on Tuesday?",
+  "figure": {
+    "kind": "bar",
+    "title": "Books borrowed from a school library",
+    "x_label": "Day",
+    "y_label": "Number of books",
+    "series": [
+      {
+        "name": "Books borrowed",
+        "points": [
+          [
+            "Monday",
+            36
+          ],
+          [
+            "Tuesday",
+            54
+          ],
+          [
+            "Wednesday",
+            42
+          ],
+          [
+            "Thursday",
+            48
+          ]
+        ]
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(30\\%\\)",
+    "B": "\\(54\\%\\)",
+    "C": "\\(150\\%\\)",
+    "D": "\\(42.9\\%\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Read the graph and add: \\(36 + 54 + 42 + 48 = 180\\) books.",
+    "Tuesday: \\(\\frac{54}{180} = 0.3\\), which is \\(30\\%\\)."
+  ],
+  "explanation": {
+    "A": "Correct. 54 of the 180 books were borrowed on Tuesday, and \\(\\frac{54}{180} = 30\\%\\).",
+    "B": "Incorrect. This treats the 54 books borrowed on Tuesday as a percent instead of comparing them with the total.",
+    "C": "Incorrect. This is Tuesday's number as a percent of Monday's number, \\(\\frac{54}{36} = 150\\%\\).",
+    "D": "Incorrect. This compares Tuesday with the other three days only, \\(\\frac{54}{126} \\approx 42.9\\%\\), instead of with all 180 books."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "percent_add"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\npts = dict(figure['series'][0]['points'])\nv = Rational(pts['Tuesday'], sum(pts.values()))\nassert v == Rational(3, 10)\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "m-ovd-0111",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The dot plot shows the number of customers who arrived at a bank during each of nine 10-minute intervals. The value 7 is removed from the data. Which statement best describes how the mean and the standard deviation of the data change?",
+  "figure": {
+    "kind": "dotplot",
+    "x_label": "Number of customers",
+    "values": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The mean does not change, and the standard deviation does not change.",
+    "B": "The mean decreases, and the standard deviation increases.",
+    "C": "The mean does not change, and the standard deviation decreases.",
+    "D": "The mean does not change, and the standard deviation increases."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The sum of the 9 values is 63, so the mean is \\(\\frac{63}{9} = 7\\). The removed value is equal to the mean.",
+    "After the removal, the sum is 56 for 8 values, and the mean is still \\(\\frac{56}{8} = 7\\).",
+    "The removed value was at distance 0 from the mean. Every remaining value is farther from the mean on average, so the standard deviation increases."
+  ],
+  "explanation": {
+    "A": "Incorrect. The mean stays the same, but removing a value with zero distance from the mean leaves only values that are farther from it, so the spread about the mean increases.",
+    "B": "Incorrect. The removed value, 7, equals the mean, so the mean stays \\(\\frac{56}{8} = 7\\).",
+    "C": "Incorrect. Removing a value makes the data set smaller, but the value removed was the one closest to the mean. That increases, not decreases, the typical distance from the mean.",
+    "D": "Correct. The mean stays 7 because the removed value equals the mean, and the standard deviation increases because the value removed was the one closest to the mean."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nv = figure['values']\nw = list(v)\nw.remove(7)\nm0, m1 = Rational(sum(v), len(v)), Rational(sum(w), len(w))\nsd = lambda d, m: sqrt(Rational(sum((a - m)**2 for a in d), len(d)))\nss = lambda d, m: sqrt(Rational(sum((a - m)**2 for a in d), len(d) - 1))\nassert m0 == m1 == 7 and sd(w, m1) > sd(v, m0) and ss(w, m1) > ss(v, m0)\nassert answer == 'D' and choices[answer].endswith('deviation increases.') and 'does not change' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

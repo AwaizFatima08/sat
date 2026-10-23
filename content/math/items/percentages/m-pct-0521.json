@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0521",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The number of visitors to a museum increased by \\(30\\%\\) from 2021 to 2022 and then decreased by \\(10\\%\\) from 2022 to 2023. The number of visitors in 2023 was what percent greater than the number in 2021?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20\\%\\)",
+    "B": "\\(117\\%\\)",
+    "C": "\\(17\\%\\)",
+    "D": "\\(30\\%\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Multiply the growth factors: \\(1.30 \\cdot 0.90 = 1.17\\).",
+    "The 2023 number is \\(117\\%\\) of the 2021 number, so it is \\(17\\%\\) greater."
+  ],
+  "explanation": {
+    "A": "Incorrect. This subtracts the percents, \\(30\\% - 10\\% = 20\\%\\). The \\(10\\%\\) decrease is taken of the larger 2022 number, so it removes more than \\(10\\%\\) of the 2021 number.",
+    "B": "Incorrect. This is the 2023 number as a percent of the 2021 number, not the percent by which it is greater.",
+    "C": "Correct. \\(1.30 \\cdot 0.90 = 1.17\\), so the 2023 number is \\(17\\%\\) greater than the 2021 number.",
+    "D": "Incorrect. This is the change from 2021 to 2022 only. It leaves out the decrease from 2022 to 2023."
+  },
+  "traps": {
+    "A": "percent_add",
+    "B": "wrong_quantity",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nv = Rational(130, 100) * Rational(90, 100) - 1\nassert v == Rational(17, 100)\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

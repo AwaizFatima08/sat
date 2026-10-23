@@ -1,0 +1,46 @@
+{
+  "id": "m-rtt-0524",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A 2.5-meter ladder leans against a vertical wall with its top 2.4 meters above the level ground. The foot of the ladder slips away from the wall until it is 1.5 meters from the wall, while the top slides straight down the wall. How many meters did the top of the ladder slide down?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "0.4",
+    "2/5"
+  ],
+  "solution": [
+    "At the end, the height of the top is \\(\\sqrt{2.5^{2} - 1.5^{2}} = \\sqrt{4} = 2\\) meters.",
+    "The top slid \\(2.4 - 2 = 0.4\\) meter."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "h1=Rational('2.4')\nh2=sqrt(Rational('2.5')**2-Rational('1.5')**2)\nassert sqrt(Rational('2.5')**2-h1**2)==Rational('0.7')\nans=h1-h2\nassert ans==Rational(2,5)\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "0.4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

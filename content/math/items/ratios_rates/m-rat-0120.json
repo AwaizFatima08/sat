@@ -1,0 +1,46 @@
+{
+  "id": "m-rat-0120",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A delivery truck uses 0.04 gallon of fuel per mile on highways and 0.06 gallon of fuel per mile in cities. On one trip, the truck traveled a total of 300 miles, partly on highways and partly in cities, and used 14 gallons of fuel. How many miles of the trip were in cities?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "100"
+  ],
+  "solution": [
+    "Let \\(c\\) be the city miles; then \\(300 - c\\) miles were on highways.",
+    "\\(0.04(300 - c) + 0.06c = 14\\), so \\(12 + 0.02c = 14\\).",
+    "\\(c = 100\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "c = symbols('c')\nans = solve(Eq(Rational(4, 100)*(300 - c) + Rational(6, 100)*c, 14), c)[0]\nassert ans == 100\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "100",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

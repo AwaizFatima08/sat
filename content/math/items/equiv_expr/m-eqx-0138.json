@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0138",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A recipe calls for \\(\\frac{x}{3}\\) cups of flour for the dough and \\(\\frac{x + 4}{6}\\) cups of flour for the topping. Which expression represents the total amount of flour, in cups, the recipe calls for?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{2x + 4}{6}\\)",
+    "B": "\\(\\frac{3x + 4}{6}\\)",
+    "C": "\\(\\frac{2x + 4}{9}\\)",
+    "D": "\\(\\frac{x^{2} + 4x}{18}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Use the common denominator 6: \\(\\frac{x}{3} = \\frac{2x}{6}\\).",
+    "Add: \\(\\frac{2x}{6} + \\frac{x + 4}{6} = \\frac{3x + 4}{6}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of changing the denominator of \\(\\frac{x}{3}\\) to 6 without multiplying its numerator by 2.",
+    "B": "Correct. \\(\\frac{2x}{6} + \\frac{x + 4}{6} = \\frac{3x + 4}{6}\\).",
+    "C": "Incorrect. This is the result of adding the numerators and adding the denominators.",
+    "D": "Incorrect. This is the result of multiplying the two amounts instead of adding them."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = x/3 + (x + 4)/6\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

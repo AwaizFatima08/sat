@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0111",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A hiker starts walking down a mountain trail. The hiker's elevation, in meters, \\(t\\) minutes after starting down the trail is given by \\(E(t) = 2{,}850 - 12t\\). What is the best interpretation of the number 2,850 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The hiker's elevation, in meters, 12 minutes after starting down the trail",
+    "B": "The number of meters the hiker descends each minute",
+    "C": "The number of minutes it takes the hiker to reach an elevation of 0 meters",
+    "D": "The hiker's elevation, in meters, when the hiker starts down the trail"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "When \\(t = 0\\), \\(E(0) = 2{,}850\\).",
+    "So 2,850 is the hiker's elevation, in meters, at the moment the hiker starts down the trail."
+  ],
+  "explanation": {
+    "A": "Incorrect. After 12 minutes the elevation is \\(E(12) = 2{,}850 - 144 = 2{,}706\\) meters.",
+    "B": "Incorrect. The hiker descends 12 meters each minute; that is the coefficient of \\(t\\).",
+    "C": "Incorrect. 2,850 is measured in meters, not minutes; it is the starting elevation.",
+    "D": "Correct. At \\(t = 0\\) the elevation is \\(E(0) = 2{,}850\\) meters."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nt = symbols('t')\nE = 2850 - 12*t\nassert E.subs(t, 0) == 2850 and E.subs(t, 12) == 2706 and diff(E, t) == -12\nkey = 'when the hiker starts'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "m-cir-0526",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Quadrilateral \\(ABCD\\) is inscribed in the circle shown. The measure of angle \\(ABC\\) is \\((2x + 14)^{\\circ}\\), and the measure of angle \\(ADC\\) is \\((3x + 6)^{\\circ}\\). What is the measure, in degrees, of angle \\(ADC\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "A": [
+        -4.924,
+        -0.868
+      ],
+      "B": [
+        0,
+        5
+      ],
+      "C": [
+        4.851,
+        -1.21
+      ],
+      "D": [
+        0,
+        -5
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 5
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          0,
+          3.7
+        ],
+        "text": "(2x + 14)°"
+      },
+      {
+        "at": [
+          0,
+          -3.7
+        ],
+        "text": "(3x + 6)°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(32\\)",
+    "B": "\\(78\\)",
+    "C": "\\(30\\)",
+    "D": "\\(102\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Opposite angles of a quadrilateral inscribed in a circle are supplementary: \\((2x + 14) + (3x + 6) = 180\\).",
+    "\\(5x + 20 = 180\\), so \\(x = 32\\).",
+    "Angle \\(ADC\\) measures \\(3(32) + 6 = 102^{\\circ}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(x\\), not the measure of the angle.",
+    "B": "Incorrect. This is angle \\(ABC\\), \\(2(32) + 14\\), not angle \\(ADC\\).",
+    "C": "Incorrect. This sets the two angles equal; opposite angles of an inscribed quadrilateral add to \\(180^{\\circ}\\), they are not equal.",
+    "D": "Correct. \\(x = 32\\), so angle \\(ADC\\) is \\(102^{\\circ}\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert all(abs(d('O',p)-5)<0.01 for p in 'ABCD')\nx=symbols('x')\nxv=solve(Eq(2*x+14+3*x+6,180),x)[0]\nans=3*xv+6\nassert abs(ang('A','D','C')-ans)<0.2 and abs(ang('A','B','C')-(2*xv+14))<0.2\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

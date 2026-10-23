@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0151",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A community theater sells 400 tickets per show at a price of 12 dollars per ticket. The theater's manager estimates that for each 1-dollar increase in the ticket price, 20 fewer tickets will be sold per show. According to this estimate, at what ticket price, in dollars, would the theater's revenue per show be 5,120 dollars?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(14\\)",
+    "B": "\\(16\\)",
+    "C": "\\(4\\)",
+    "D": "\\(320\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(x\\) be the number of 1-dollar increases. The price is \\(12 + x\\) dollars and \\(400 - 20x\\) tickets are sold, so \\((12 + x)(400 - 20x) = 5{,}120\\).",
+    "Expand: \\(4{,}800 + 160x - 20x^{2} = 5{,}120\\), so \\(20x^{2} - 160x + 320 = 0\\), or \\(x^{2} - 8x + 16 = 0\\).",
+    "Then \\((x - 4)^{2} = 0\\), so \\(x = 4\\), and the price is \\(12 + 4 = 16\\) dollars."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dropping the \\(-20x^{2}\\) term, which gives \\(160x = 320\\), \\(x = 2\\), and a price of 14 dollars. At 14 dollars, the revenue is \\(14 \\cdot 360 = 5{,}040\\) dollars.",
+    "B": "Correct. At 16 dollars, \\(400 - 80 = 320\\) tickets are sold, and \\(16 \\cdot 320 = 5{,}120\\).",
+    "C": "Incorrect. This is the number of 1-dollar increases, \\(x\\), not the ticket price.",
+    "D": "Incorrect. This is the number of tickets sold per show at the new price, not the price."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nsol = solve(Eq((12 + x)*(400 - 20*x), 5120), x)\nassert sol == [4]\np = 12 + sol[0]\nassert value(choices[answer]) == p == 16\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

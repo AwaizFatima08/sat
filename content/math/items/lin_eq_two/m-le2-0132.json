@@ -1,0 +1,44 @@
+{
+  "id": "m-le2-0132",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Amira has money in two savings accounts. One account earns 4% simple interest per year, and the other earns 7% simple interest per year. The equation \\(0.04x + 0.07y = 910\\) shows that the accounts earned a total of \\$910 in interest last year, where \\(x\\) and \\(y\\) are the amounts, in dollars, in the 4% account and the 7% account, respectively. This year, Amira moves \\$1,500 from the 4% account to the 7% account and makes no other changes. If the interest rates stay the same, by how many dollars will the total interest for this year be greater than last year's total?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "45"
+  ],
+  "solution": [
+    "This year's interest is \\(0.04(x - 1{,}500) + 0.07(y + 1{,}500)\\).",
+    "That equals \\(0.04x + 0.07y + 1{,}500(0.07 - 0.04) = 910 + 45\\).",
+    "The total interest is greater by \\$45."
+  ],
+  "verify": "x, y = symbols('x y')\nnew = Rational(4, 100)*(x - 1500) + Rational(7, 100)*(y + 1500)\nold = Rational(4, 100)*x + Rational(7, 100)*y\nd = simplify(new - old)\nassert d == 45\nassert [Rational(s) for s in spr_answers] == [d]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "45",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

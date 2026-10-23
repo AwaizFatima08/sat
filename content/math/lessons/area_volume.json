@@ -1,0 +1,268 @@
+{
+  "type": "area_volume",
+  "title": "Area and volume",
+  "what_is_tested": "These questions ask for the area or perimeter of flat shapes and the volume or surface area of solids such as boxes, cylinders, cones and spheres. Harder ones combine shapes, work backward from a given area or volume to a missing length, or ask how area and volume change when every length is scaled by the same factor.",
+  "how_to_spot": "The question names a shape or solid (often with a figure) and asks for an area, perimeter, volume or surface area, or gives one of these and asks for a length. Words like **similar**, **scaled** or **times as long** signal a scale-factor question.",
+  "method": [
+    "Name the shape and write its formula; most are on the in-app reference sheet (rectangle, triangle, circle, rectangular prism, cylinder, sphere, cone, pyramid).",
+    "Collect exactly what the formula needs: the radius, not the diameter; the perpendicular height, not a slanted side.",
+    "For a composite figure, split it into simple pieces and add, or take a big shape and subtract the missing piece.",
+    "Substitute and compute; if the area or volume is given, set the formula equal to it and solve for the missing length.",
+    "For similar figures with length scale factor \\(k\\), lengths multiply by \\(k\\), areas by \\(k^{2}\\) and volumes by \\(k^{3}\\).",
+    "Check the units and the form asked for: square or cubic units, an exact answer with \\(\\pi\\), or the \\(k\\) in \\(k\\pi\\)."
+  ],
+  "pitfalls": [
+    "Using the diameter as the radius in \\(\\pi r^{2}\\) or \\(\\pi r^{2}h\\), which makes the answer four times too big (radius_diameter).",
+    "Forgetting the \\(\\frac{1}{2}\\) in the triangle formula or the \\(\\frac{1}{3}\\) in the cone and pyramid formulas (wrong_formula).",
+    "Mixing up surface area (the total area of the faces) and volume (the space inside) (wrong_formula).",
+    "Scaling an area by \\(k\\) instead of \\(k^{2}\\), or a volume by \\(k^{2}\\) instead of \\(k^{3}\\) (concept).",
+    "Finding a missing dimension and stopping there instead of computing the area or volume that was asked for (stopped_early)."
+  ],
+  "calculator": "The Scientific tab is handy for multiplying decimal measurements and for square or cube roots in scale-factor questions. Keep \\(\\pi\\) as a symbol when the choices are written with \\(\\pi\\); the Graph tab rarely helps here.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: one shape, one formula",
+      "steps": [
+        "Identify the shape or solid and find its formula on the reference sheet.",
+        "Match each given number to a letter in the formula (base, height, length, width, radius).",
+        "Substitute and compute.",
+        "Check the units: area in square units, volume in cubic units."
+      ],
+      "worked_example": {
+        "stem": "A garden bed is shaped like triangle \\(ABC\\), shown. Side \\(\\overline{AB}\\) is 12 meters long, and the height from \\(C\\) to \\(\\overline{AB}\\) is 7 meters. What is the area of the garden bed, in square meters?",
+        "figure": {
+          "kind": "geometry",
+          "points": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              12,
+              0
+            ],
+            "C": [
+              4,
+              7
+            ],
+            "D": [
+              4,
+              0
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "A"
+            ],
+            [
+              "C",
+              "D"
+            ]
+          ],
+          "circles": [],
+          "labels": [
+            {
+              "at": [
+                6,
+                -0.8
+              ],
+              "text": "12 m"
+            },
+            {
+              "at": [
+                4.9,
+                3.5
+              ],
+              "text": "7 m"
+            }
+          ],
+          "right_angles": [
+            "D"
+          ],
+          "not_to_scale": false
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(19\\)",
+          "B": "\\(38\\)",
+          "C": "\\(42\\)",
+          "D": "\\(84\\)"
+        },
+        "answer": "C",
+        "walkthrough": [
+          "The bed is a triangle, so use \\(A = \\frac{1}{2}bh\\) from the reference sheet.",
+          "The base is \\(b = 12\\). The height is the segment from \\(C\\) that meets \\(\\overline{AB}\\) at a right angle, so \\(h = 7\\).",
+          "\\(A = \\frac{1}{2}(12)(7) = 42\\) square meters, choice C.",
+          "Choice D, 84, forgets the \\(\\frac{1}{2}\\): it is the area of a whole 12-by-7 rectangle. Choice A adds the two lengths, and choice B is the perimeter of that rectangle; neither is an area of the triangle."
+        ],
+        "verify": "P=figure['points']\nassert P['A'][1]==P['B'][1]==P['D'][1] and P['C'][0]==P['D'][0]\nassert P['B'][0]-P['A'][0]==12 and P['C'][1]-P['D'][1]==7\nans=Rational(1,2)*abs((P['B'][0]-P['A'][0])*(P['C'][1]-P['A'][1])-(P['C'][0]-P['A'][0])*(P['B'][1]-P['A'][1]))\nassert ans==Rational(1,2)*12*7==42\nassert value(choices[answer])==ans\nassert all(value(choices[c])!=ans for c in choices if c!=answer)\nassert value(choices['D'])==12*7 and value(choices['B'])==2*(12+7)"
+      },
+      "tryit": [
+        "m-arv-0001",
+        "m-arv-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: composite shapes and cylinders",
+      "steps": [
+        "Mark the figure: split a composite shape into rectangles or triangles, or note the radius of a circle or cylinder.",
+        "Find any missing length from the ones given (a side of an L-shape from the full width, a radius from the diameter).",
+        "Apply the formula to each piece and add, or subtract a cut-out piece.",
+        "Give the answer in the form asked, such as the value of \\(k\\) when the volume is \\(k\\pi\\)."
+      ],
+      "worked_example": {
+        "stem": "A water tank on the roof of a house in Karachi is shaped like a right circular cylinder. The tank has a diameter of 1.2 meters and a height of 1.5 meters. The volume of the tank is \\(k\\pi\\) cubic meters. What is the value of \\(k\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "0.54",
+          "27/50"
+        ],
+        "walkthrough": [
+          "Use the cylinder formula \\(V = \\pi r^{2}h\\) from the reference sheet.",
+          "The radius is half the diameter: \\(r = 1.2 \\div 2 = 0.6\\) meters.",
+          "\\(V = \\pi(0.6)^{2}(1.5) = \\pi(0.36)(1.5) = 0.54\\pi\\), so \\(k = 0.54\\). The Scientific tab gives \\(0.6^{2} \\times 1.5 = 0.54\\) quickly.",
+          "Enter 0.54 (or 27/50). Using the diameter as the radius gives \\(1.2^{2}(1.5) = 2.16\\), which is four times too big."
+        ],
+        "verify": "r=Rational('1.2')/2\nk=r**2*Rational('1.5')\nassert k==Rational(27,50)\nassert all(Rational(s)==k for s in spr_answers)\nassert Rational(spr_answers[0])==Rational('0.54')\nassert Rational('1.2')**2*Rational('1.5')==4*k"
+      },
+      "tryit": [
+        "m-arv-0003",
+        "m-arv-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: scale factors and working backward",
+      "steps": [
+        "Decide what is given (a length, an area or a volume) and what is asked.",
+        "For similar figures, find the length scale factor \\(k\\): directly from matching lengths, or as the square root of the area ratio, or the cube root of the volume ratio.",
+        "Multiply areas by \\(k^{2}\\) and volumes by \\(k^{3}\\); for a missing dimension, set the formula equal to the given value and solve.",
+        "Finish the last step: compute the quantity the question asks for, not the length you found on the way."
+      ],
+      "worked_example": {
+        "stem": "Two storage crates are similar rectangular prisms. The surface area of the smaller crate is 88 square feet, and the surface area of the larger crate is 198 square feet. The volume of the smaller crate is 48 cubic feet. What is the volume, in cubic feet, of the larger crate?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(32\\)",
+          "B": "\\(72\\)",
+          "C": "\\(108\\)",
+          "D": "\\(162\\)"
+        },
+        "answer": "D",
+        "walkthrough": [
+          "Surface areas are areas, so their ratio is \\(k^{2}\\): \\(k^{2} = \\frac{198}{88} = \\frac{9}{4}\\).",
+          "Take the square root to get the length scale factor: \\(k = \\frac{3}{2}\\).",
+          "Volumes scale by \\(k^{3} = \\frac{27}{8}\\), so the larger volume is \\(48 \\cdot \\frac{27}{8} = 162\\) cubic feet, choice D.",
+          "Choice C, 108, multiplies by the area ratio \\(\\frac{9}{4}\\), which is \\(k^{2}\\), not \\(k^{3}\\). Choice B uses \\(k\\) alone, and choice A divides by \\(k\\) instead of multiplying."
+        ],
+        "verify": "assert 2*(2*4+2*6+4*6)==88 and 2*4*6==48\nk2=Rational(198,88)\nk=sqrt(k2)\nans=48*k**3\nassert k==Rational(3,2) and ans==162\nassert value(choices[answer])==ans\nassert all(value(choices[c])!=ans for c in choices if c!=answer)\nassert value(choices['C'])==48*k2 and value(choices['B'])==48*k and value(choices['A'])==48/k"
+      },
+      "tryit": [
+        "m-arv-0005",
+        "m-arv-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: structure and combined figures",
+      "steps": [
+        "Name every shape involved and how they fit together (inscribed, sharing a side, one cut out of another).",
+        "Write every measurement in terms of one unknown length, using the shared parts (a circle inscribed in a square has a diameter equal to the side).",
+        "Build one equation from the given area or volume and use its structure to find the unknown.",
+        "Use that length to compute what is asked, and check the units and the size of the answer."
+      ],
+      "worked_example": {
+        "stem": "In the figure, a circle is inscribed in square \\(PQRS\\), so the circle touches all four sides of the square. The area of the region inside the square but outside the circle is \\(64 - 16\\pi\\) square units. What is the circumference of the circle?",
+        "figure": {
+          "kind": "geometry",
+          "points": {
+            "P": [
+              0,
+              0
+            ],
+            "Q": [
+              8,
+              0
+            ],
+            "R": [
+              8,
+              8
+            ],
+            "S": [
+              0,
+              8
+            ]
+          },
+          "segments": [
+            [
+              "P",
+              "Q"
+            ],
+            [
+              "Q",
+              "R"
+            ],
+            [
+              "R",
+              "S"
+            ],
+            [
+              "S",
+              "P"
+            ]
+          ],
+          "circles": [
+            {
+              "center": [
+                4,
+                4
+              ],
+              "radius": 4
+            }
+          ],
+          "labels": [],
+          "right_angles": [
+            "P",
+            "Q",
+            "R",
+            "S"
+          ],
+          "not_to_scale": false
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(8\\pi\\)",
+          "B": "\\(16\\pi\\)",
+          "C": "\\(32\\pi\\)",
+          "D": "\\(64\\pi\\)"
+        },
+        "answer": "A",
+        "walkthrough": [
+          "Let the side of the square be \\(s\\). The circle touches all four sides, so its diameter is \\(s\\) and its radius is \\(\\frac{s}{2}\\).",
+          "Region area \\(=\\) square \\(-\\) circle \\(= s^{2} - \\pi\\left(\\frac{s}{2}\\right)^{2} = s^{2} - \\frac{s^{2}}{4}\\pi\\).",
+          "Match this with \\(64 - 16\\pi\\): \\(s^{2} = 64\\), and \\(\\frac{s^{2}}{4} = 16\\) agrees. So \\(s = 8\\) and \\(r = 4\\).",
+          "Circumference \\(= 2\\pi r = 2\\pi(4) = 8\\pi\\), choice A.",
+          "Choice B, \\(16\\pi\\), is the area of the circle (or a circumference that uses the side 8 as the radius), and choice D, \\(64\\pi\\), squares the side as if it were the radius."
+        ],
+        "verify": "s=symbols('s',positive=True)\nss=solve(Eq(s**2-pi*(s/2)**2,64-16*pi),s)\nassert ss==[8]\nP=figure['points']; c=figure['circles'][0]\nassert P['Q'][0]-P['P'][0]==8 and 2*c['radius']==8 and c['center']==[4,4]\nans=2*pi*ss[0]/2\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)"
+      },
+      "tryit": [
+        "m-arv-0007",
+        "m-arv-0008"
+      ]
+    }
+  ]
+}

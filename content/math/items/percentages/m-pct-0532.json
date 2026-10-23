@@ -1,0 +1,44 @@
+{
+  "id": "m-pct-0532",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The positive number \\(a\\) is \\(20\\%\\) greater than the positive number \\(b\\). If \\(a\\) is decreased by \\(10\\%\\) and \\(b\\) is increased by \\(8\\%\\), the new value of \\(a\\) is what percent of the new value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "100"
+  ],
+  "solution": [
+    "Since \\(a\\) is \\(20\\%\\) greater than \\(b\\), \\(a = 1.2b\\).",
+    "New \\(a\\): \\(0.9 \\cdot 1.2b = 1.08b\\). New \\(b\\): \\(1.08b\\).",
+    "The new values are equal, so the new value of \\(a\\) is \\(100\\%\\) of the new value of \\(b\\)."
+  ],
+  "verify": "b = symbols('b', positive=True)\nv = simplify(Rational(90, 100) * Rational(120, 100) * b / (Rational(108, 100) * b) * 100)\nassert v == 100\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == v",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "100",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

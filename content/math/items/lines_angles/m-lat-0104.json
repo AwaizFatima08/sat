@@ -1,0 +1,87 @@
+{
+  "id": "m-lat-0104",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In triangle \\(XYZ\\), \\(XY = XZ\\) and the measure of angle \\(Y\\) is \\(52^{\\circ}\\). What is the measure, in degrees, of angle \\(X\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "Y": [
+        0,
+        0
+      ],
+      "Z": [
+        8,
+        0
+      ],
+      "X": [
+        4,
+        5.12
+      ]
+    },
+    "segments": [
+      [
+        "X",
+        "Y"
+      ],
+      [
+        "Y",
+        "Z"
+      ],
+      [
+        "Z",
+        "X"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.25,
+          0.55
+        ],
+        "text": "52°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "76"
+  ],
+  "solution": [
+    "Because \\(XY = XZ\\), the angles opposite these sides, \\(Z\\) and \\(Y\\), are equal, so angle \\(Z\\) also measures \\(52^{\\circ}\\).",
+    "The angles of a triangle add up to \\(180^{\\circ}\\): \\(180 - 52 - 52 = 76\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('X','Y')-d('X','Z'))<0.01 and abs(ang('X','Y','Z')-52)<0.1\nans=180-2*52\nassert abs(ang('Y','X','Z')-ans)<0.1\nassert Rational(spr_answers[0])==ans==76\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "76",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

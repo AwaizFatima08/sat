@@ -1,0 +1,59 @@
+{
+  "id": "m-prb-0533",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "In a survey of the households in a town, 40% of the households have a dog, and 25% of the households that have a dog also have a cat. If a household that has a cat is selected at random, the probability that it also has a dog is 0.5. What proportion of the households in the town have a cat?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.10\\)",
+    "B": "\\(0.25\\)",
+    "C": "\\(0.50\\)",
+    "D": "\\(0.20\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Households with a dog and a cat: \\(0.40 \\cdot 0.25 = 0.10\\).",
+    "Let \\(c\\) be the proportion with a cat. Then \\(\\frac{0.10}{c} = 0.5\\).",
+    "So \\(c = 0.20\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the proportion of households that have BOTH a dog and a cat; it must still be divided by 0.5.",
+    "B": "Incorrect. This is the probability that a dog household has a cat, which is a different conditional probability from the proportion of all households with a cat.",
+    "C": "Incorrect. This is the given probability that a cat household has a dog, not the proportion of households with a cat.",
+    "D": "Correct. Dog and cat: \\(0.40(0.25) = 0.10\\) of households. Since half of the cat households have a dog, cat households are \\(\\frac{0.10}{0.5} = 0.20\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nc = symbols('c')\nboth = Rational(40, 100) * Rational(25, 100)\np = solve(Eq(both / c, Rational(1, 2)), c)[0]\nassert p == Rational(1, 5)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

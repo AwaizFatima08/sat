@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0511",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What are the solutions to the equation \\(x^{2} - 4x - 1 = 0\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4 \\pm \\sqrt{5}\\)",
+    "B": "\\(2 \\pm \\sqrt{3}\\)",
+    "C": "\\(-2 \\pm \\sqrt{5}\\)",
+    "D": "\\(2 \\pm \\sqrt{5}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The equation does not factor over the integers, so use the quadratic formula with \\(a = 1\\), \\(b = -4\\), \\(c = -1\\).",
+    "\\(x = \\frac{4 \\pm \\sqrt{16 + 4}}{2} = \\frac{4 \\pm \\sqrt{20}}{2}\\).",
+    "\\(\\sqrt{20} = 2\\sqrt{5}\\), so \\(x = 2 \\pm \\sqrt{5}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dividing only the square root part by \\(2\\) and leaving \\(4\\) undivided.",
+    "B": "Incorrect. This is the result of a sign slip in the discriminant: \\(16 - 4 = 12\\) instead of \\(16 - 4(1)(-1) = 20\\).",
+    "C": "Incorrect. This is the result of using \\(b\\) instead of \\(-b\\) in the quadratic formula.",
+    "D": "Correct. The quadratic formula gives \\(\\frac{4 \\pm 2\\sqrt{5}}{2} = 2 \\pm \\sqrt{5}\\)."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "sign_error",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nsols = set(solve(Eq(x**2 - 4*x - 1, 0), x))\npm = lambda s: {value(s.replace('\\\\pm', '+')), value(s.replace('\\\\pm', '-'))}\nassert pm(choices[answer]) == sols\nassert all(pm(choices[k]) != sols for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

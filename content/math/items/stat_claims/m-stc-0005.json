@@ -1,0 +1,57 @@
+{
+  "id": "m-stc-0005",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "An agricultural researcher in Punjab, Pakistan, wants to determine whether a new fertilizer increases wheat yield compared with the fertilizer that farmers usually use. Which of the following study designs would best allow the researcher to conclude that the new fertilizer causes a change in yield?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Select 40 similar plots of farmland, randomly assign 20 plots to receive the new fertilizer and 20 to receive the usual fertilizer, and compare the average yields.",
+    "B": "Ask farmers who already use the new fertilizer and farmers who do not to report their yields, and compare the average yields.",
+    "C": "Use the new fertilizer on every farm in one district this year, and compare the district's average yield with its average yield last year.",
+    "D": "Randomly select 40 farmers from across Punjab, let each farmer decide which fertilizer to use, and compare the average yields."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "A cause-and-effect conclusion needs a comparison group and random assignment of the treatments.",
+    "Only the first design randomly assigns plots to the new or the usual fertilizer and compares them in the same season, so other factors (soil, rainfall, farming skill) balance out between the groups."
+  ],
+  "explanation": {
+    "A": "Correct. Random assignment of plots to the two fertilizers is what allows a cause-and-effect conclusion.",
+    "B": "Incorrect. Farmers chose their own fertilizer, so differences in soil, money or skill could explain any difference in yield.",
+    "C": "Incorrect. Comparing different years mixes the fertilizer's effect with changes in weather, such as a stronger or weaker monsoon.",
+    "D": "Incorrect. Random SELECTION helps with generalizing, but the farmers still chose the fertilizer themselves, so there is no random assignment."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "designs = {'A': (True, True), 'B': (False, True), 'C': (False, False), 'D': (False, True)}\nok = [k for k, (rand_assign, control) in designs.items() if rand_assign and control]\nassert ok == [answer] == ['A']\nassert 'randomly assign' in choices['A']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0006",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "If \\(\\frac{3x - 4}{5} = \\frac{x + 8}{3}\\), what is the value of \\(4x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(13\\)",
+    "B": "\\(28\\)",
+    "C": "\\(44\\)",
+    "D": "\\(52\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Multiply both sides by 15: \\(3(3x - 4) = 5(x + 8)\\).",
+    "Expand: \\(9x - 12 = 5x + 40\\).",
+    "Subtract \\(5x\\) and add 12: \\(4x = 52\\). (There is no need to find \\(x\\) itself.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(x\\), not \\(4x\\).",
+    "B": "Incorrect. This is the result of moving 12 to the right side with the wrong sign: \\(4x = 40 - 12\\).",
+    "C": "Incorrect. This is the result of multiplying only \\(3x\\) by 3, giving \\(9x - 4 = 5x + 40\\).",
+    "D": "Correct. Cross-multiplying gives \\(9x - 12 = 5x + 40\\), so \\(4x = 52\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "sign_error",
+    "C": "arithmetic"
+  },
+  "verify": "x = symbols('x')\nsol = solve(Eq((3*x - 4)/5, (x + 8)/3), x)\nassert sol == [13]\nassert value(choices[answer]) == 4*sol[0]\nassert all(value(choices[k]) != 4*sol[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

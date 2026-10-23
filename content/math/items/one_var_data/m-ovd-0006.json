@@ -1,0 +1,79 @@
+{
+  "id": "m-ovd-0006",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The box plots summarize the delivery times, in minutes, of all orders delivered by two food-delivery riders, Ali and Bilal, in Karachi during one week. Which statement is true?",
+  "figure": {
+    "kind": "boxplot",
+    "x_label": "Delivery time (minutes)",
+    "plots": [
+      {
+        "name": "Ali",
+        "min": 12,
+        "q1": 18,
+        "median": 24,
+        "q3": 30,
+        "max": 44
+      },
+      {
+        "name": "Bilal",
+        "min": 15,
+        "q1": 20,
+        "median": 26,
+        "q3": 28,
+        "max": 40
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Ali's delivery times have the greater median and the greater interquartile range.",
+    "B": "Bilal's delivery times have the greater range and the greater interquartile range.",
+    "C": "Ali's delivery times have the greater range, and Bilal's have the greater median.",
+    "D": "The two riders' delivery times have the same interquartile range."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Ali: median 24, range \\(44 - 12 = 32\\), interquartile range \\(30 - 18 = 12\\).",
+    "Bilal: median 26, range \\(40 - 15 = 25\\), interquartile range \\(28 - 20 = 8\\).",
+    "So Ali's times have the greater range and the greater interquartile range, and Bilal's times have the greater median."
+  ],
+  "explanation": {
+    "A": "Incorrect. Ali's interquartile range (12) is greater, but Ali's median is 24, which is less than Bilal's median of 26.",
+    "B": "Incorrect. This reverses the spreads. Bilal's range is \\(40 - 15 = 25\\) and interquartile range is \\(28 - 20 = 8\\); both are smaller than Ali's 32 and 12.",
+    "C": "Correct. Ali's range is 32 and Bilal's is 25, while Bilal's median of 26 is greater than Ali's median of 24.",
+    "D": "Incorrect. The boxes have different lengths: Ali's interquartile range is \\(30 - 18 = 12\\), and Bilal's is \\(28 - 20 = 8\\)."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "P = {p['name']: p for p in figure['plots']}\na, b = P['Ali'], P['Bilal']\nrng = lambda p: p['max'] - p['min']\niqr = lambda p: p['q3'] - p['q1']\nassert rng(a) > rng(b) and iqr(a) > iqr(b) and b['median'] > a['median'] and iqr(a) != iqr(b)\nassert choices[answer] == \"Ali's delivery times have the greater range, and Bilal's have the greater median.\"",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

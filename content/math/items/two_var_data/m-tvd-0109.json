@@ -1,0 +1,105 @@
+{
+  "id": "m-tvd-0109",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The scatterplot shows the price \\(x\\), in rupees, of a cup of tea and the number of cups \\(y\\) sold per day at 10 tea stalls in Karachi. The line of best fit passes through the points \\((40, 230)\\) and \\((80, 130)\\). Which of the following is the best interpretation of the slope of the line of best fit?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Price of a cup of tea (rupees)",
+    "y_label": "Cups sold per day",
+    "points": [
+      [
+        40,
+        236
+      ],
+      [
+        45,
+        214
+      ],
+      [
+        50,
+        200
+      ],
+      [
+        50,
+        211
+      ],
+      [
+        55,
+        196
+      ],
+      [
+        60,
+        177
+      ],
+      [
+        65,
+        168
+      ],
+      [
+        70,
+        151
+      ],
+      [
+        75,
+        145
+      ],
+      [
+        80,
+        133
+      ]
+    ],
+    "line": "-2.5*x + 330"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "For each increase of 10 rupees in the price, the predicted number of cups sold per day decreases by 2.5.",
+    "B": "For each increase of 10 rupees in the price, the predicted number of cups sold per day decreases by 25.",
+    "C": "For each increase of 10 rupees in the price, the predicted number of cups sold per day increases by 25.",
+    "D": "For each increase of 25 rupees in the price, the predicted number of cups sold per day decreases by 10."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Slope \\(= \\frac{130 - 230}{80 - 40} = \\frac{-100}{40} = -2.5\\) cups per rupee.",
+    "So each increase of 1 rupee lowers the predicted sales by 2.5 cups, and each increase of 10 rupees lowers them by \\(10 \\cdot 2.5 = 25\\) cups."
+  ],
+  "explanation": {
+    "A": "Incorrect. A decrease of 2.5 cups goes with an increase of 1 rupee, not 10 rupees. For 10 rupees the decrease is \\(10 \\cdot 2.5 = 25\\) cups.",
+    "B": "Correct. The slope is \\(-2.5\\) cups per rupee, so a 10-rupee increase predicts \\(10(-2.5) = -25\\), a decrease of 25 cups per day.",
+    "C": "Incorrect. The slope is negative: as the price rises, the predicted number of cups sold falls.",
+    "D": "Incorrect. This inverts the rate. The slope means 2.5 fewer cups per 1 rupee, which is 25 fewer cups per 10 rupees, not 10 fewer cups per 25 rupees."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "sign_error",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nm = Rational(130 - 230, 80 - 40)\nassert m == Rational(-5, 2)\nx = symbols('x')\nassert sympify(figure['line']) - (m*x + 230 - m*40) == 0\nassert 10*m == -25\nassert answer == 'D' and 'decreases by 25' in choices[answer] and '10 rupees' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

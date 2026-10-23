@@ -1,0 +1,102 @@
+{
+  "id": "m-tvd-0514",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The scatterplot shows a set of data and its line of best fit. The line of best fit passes through the points \\((0, 20)\\) and \\((8, 8)\\). Which equation represents the line of best fit?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        1,
+        18
+      ],
+      [
+        2,
+        18
+      ],
+      [
+        3,
+        16
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        5,
+        13
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        10,
+        5.5
+      ]
+    ],
+    "line": "-1.5*x + 20"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = -1.5x + 20\\)",
+    "B": "\\(y = 1.5x + 20\\)",
+    "C": "\\(y = -1.5x + 8\\)",
+    "D": "\\(y = -\\frac{2}{3}x + 20\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Slope: \\(\\frac{8 - 20}{8 - 0} = \\frac{-12}{8} = -1.5\\).",
+    "The line crosses the \\(y\\)-axis at \\((0, 20)\\), so the \\(y\\)-intercept is 20.",
+    "The equation is \\(y = -1.5x + 20\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The slope is \\(\\frac{8 - 20}{8 - 0} = -1.5\\) and the \\(y\\)-intercept is 20.",
+    "B": "Incorrect. The line falls from left to right, so its slope is negative: \\(-1.5\\), not 1.5.",
+    "C": "Incorrect. This uses the \\(y\\)-value of the point \\((8, 8)\\) as the intercept. The line crosses the \\(y\\)-axis at 20.",
+    "D": "Incorrect. This slope is the change in \\(x\\) divided by the change in \\(y\\), \\(\\frac{8}{-12}\\). Slope is the change in \\(y\\) over the change in \\(x\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "misread_graph",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = lambda k: value(choices[k].split('=')[1].strip(' \\\\)'))\nok = lambda k: f(k).subs(x, 0) == 20 and f(k).subs(x, 8) == 8\nassert ok(answer) and simplify(f(answer) - sympify(figure['line'])) == 0\nassert not any(ok(k) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

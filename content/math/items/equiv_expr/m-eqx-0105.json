@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0105",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Theo had \\((5x - 3)\\) dollars and spent \\((2x - 7)\\) dollars of it. Which expression represents the amount of money, in dollars, Theo has left?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(7x - 10\\)",
+    "B": "\\(3x - 4\\)",
+    "C": "\\(3x + 4\\)",
+    "D": "\\(3x - 10\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Subtract the amount spent: \\((5x - 3) - (2x - 7)\\).",
+    "Distribute the negative sign: \\(5x - 3 - 2x + 7\\).",
+    "Combine like terms: \\(3x + 4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding the two expressions instead of subtracting the amount spent.",
+    "B": "Incorrect. This is the result of computing \\(-3 + 7\\) as \\(-4\\) instead of \\(4\\).",
+    "C": "Correct. Subtracting \\((2x - 7)\\) from \\((5x - 3)\\) gives \\(3x + 4\\).",
+    "D": "Incorrect. This is the result of subtracting only \\(2x\\) and not distributing the negative sign to \\(-7\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = (5*x - 3) - (2*x - 7)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

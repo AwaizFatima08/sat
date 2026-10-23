@@ -1,0 +1,58 @@
+{
+  "id": "m-smp-0510",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A health agency selected 400 adults at random from all the adults living in the town of Riverton and asked each one how many hours they sleep on a typical night. To which group can the results of the survey be most appropriately generalized?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "All adults living in Riverton",
+    "B": "All people living in Riverton, including children",
+    "C": "All adults in the country",
+    "D": "Only the 400 adults who were surveyed"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Results from a random sample can be generalized to the population the sample was chosen from.",
+    "The sample was chosen at random from all adults living in Riverton, so that is the group."
+  ],
+  "explanation": {
+    "A": "Correct. The sample was selected at random from all adults living in Riverton, so the results apply to that population.",
+    "B": "Incorrect. Only adults were sampled, so the results cannot be extended to children.",
+    "C": "Incorrect. Only Riverton adults could be selected, so the results cannot be extended to adults in other places.",
+    "D": "Incorrect. Because the sample was chosen at random, the results can be generalized beyond the 400 adults to the population they were drawn from."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nkey = choices[answer]\nassert answer == 'D' and key.startswith('All adults living in Riverton')\nassert all('country' in choices[k] or 'children' in choices[k] or 'Only' in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

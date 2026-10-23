@@ -1,0 +1,94 @@
+{
+  "id": "m-nlf-0003",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "The graph of \\(y = f(x)\\) is shown, where \\(f\\) is a quadratic function. Which of the following defines \\(f(x)\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -4,
+      8
+    ],
+    "y": [
+      -4,
+      10
+    ],
+    "curves": [
+      {
+        "expr": "-(x - 2)**2 + 9",
+        "label": "y = f(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 2,
+        "y": 9,
+        "label": "(2, 9)"
+      },
+      {
+        "x": -1,
+        "y": 0,
+        "label": "(-1, 0)"
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "label": "(5, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-(x + 2)^{2} + 9\\)",
+    "B": "\\((x - 2)^{2} + 9\\)",
+    "C": "\\(-(x - 9)^{2} + 2\\)",
+    "D": "\\(-(x - 2)^{2} + 9\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The vertex is at \\((2, 9)\\) and the parabola opens downward, so \\(f(x) = a(x - 2)^{2} + 9\\) with \\(a < 0\\).",
+    "Use the \\(x\\)-intercept \\((5, 0)\\): \\(0 = a(5 - 2)^{2} + 9 = 9a + 9\\), so \\(a = -1\\).",
+    "So \\(f(x) = -(x - 2)^{2} + 9\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of a sign slip in vertex form: \\((x + 2)^{2}\\) places the vertex at \\(x = -2\\), not \\(x = 2\\).",
+    "B": "Incorrect. This parabola has vertex \\((2, 9)\\) but opens upward; the graph shown opens downward.",
+    "C": "Incorrect. This is the result of swapping the coordinates of the vertex when reading the graph.",
+    "D": "Correct. The vertex is \\((2, 9)\\), the graph opens downward, and \\(f(5) = -(3)^{2} + 9 = 0\\) matches the \\(x\\)-intercept."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "C": "misread_graph"
+  },
+  "verify": "x, a = symbols('x a')\ng = a*(x - 2)**2 + 9\nav = solve(g.subs(x, 5), a)\nassert av == [-1]\ntarget = g.subs(a, av[0])\nassert simplify(target - sympify(figure['curves'][0]['expr'])) == 0\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

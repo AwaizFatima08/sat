@@ -1,0 +1,44 @@
+{
+  "id": "m-rat-0540",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A cleaning solution is made of concentrate and water in the ratio 1 to 9 by volume. A bottle holds 500 milliliters of this solution. How many milliliters of water must be added to the bottle's solution so that the ratio of concentrate to water becomes 1 to 24?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "750"
+  ],
+  "solution": [
+    "Concentrate: \\(\\frac{1}{10} \\cdot 500 = 50\\) milliliters; water: 450 milliliters.",
+    "The concentrate does not change. For a 1 to 24 ratio, water must be \\(24 \\cdot 50 = 1200\\) milliliters.",
+    "Water to add: \\(1200 - 450 = 750\\) milliliters."
+  ],
+  "verify": "w = symbols('w', positive=True)\nc = Rational(500, 10)\nans = solve(Eq((450 + w)/c, 24), w)[0]\nassert ans == 750\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "750",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

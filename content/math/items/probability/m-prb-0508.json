@@ -1,0 +1,45 @@
+{
+  "id": "m-prb-0508",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A number is selected at random from the list 3, 7, 8, 12, 15, 20, 21, 24. What is the probability that the number is even?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1/2"
+  ],
+  "solution": [
+    "The even numbers in the list are 8, 12, 20 and 24: 4 of the 8 numbers.",
+    "The probability is \\(\\frac{4}{8} = \\frac{1}{2}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "L = [3, 7, 8, 12, 15, 20, 21, 24]\np = Rational(len([v for v in L if v % 2 == 0]), len(L))\nassert [Rational(a) for a in spr_answers] == [p] == [Rational(1, 2)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "1/2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

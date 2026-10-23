@@ -1,0 +1,44 @@
+{
+  "id": "m-ovd-0532",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "In a class, the mean score of the boys on a test was 70 and the mean score of the girls was 80. The mean score of the whole class was 74. What fraction of the students in the class are girls?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "2/5"
+  ],
+  "solution": [
+    "Let \\(p\\) be the fraction of students who are girls. Then \\(1 - p\\) are boys.",
+    "The class mean is a weighted mean: \\(70(1 - p) + 80p = 74\\).",
+    "So \\(70 + 10p = 74\\), \\(10p = 4\\) and \\(p = \\frac{2}{5}\\)."
+  ],
+  "verify": "p = symbols('p')\nr = solve(Eq(70*(1 - p) + 80*p, 74), p)[0]\nassert r == Rational(2, 5)\nassert Rational(spr_answers[0]) == r and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "2/5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

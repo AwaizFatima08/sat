@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0114",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The data set \\(7, 8, 9, 13, 24, x\\) has a median of \\(10\\). What is the mean of the data set?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12.2\\)",
+    "B": "\\(14.4\\)",
+    "C": "\\(12\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "With 6 values, the median is the mean of the 3rd and 4th values in order.",
+    "If \\(x \\le 9\\), the median is at most \\(\\frac{8 + 9}{2} = 8.5\\); if \\(x \\ge 13\\), the median is \\(\\frac{9 + 13}{2} = 11\\). So \\(9 < x < 13\\), and \\(\\frac{9 + x}{2} = 10\\) gives \\(x = 11\\).",
+    "The mean is \\(\\frac{7 + 8 + 9 + 13 + 24 + 11}{6} = \\frac{72}{6} = 12\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the mean of only the 5 known values, \\(\\frac{61}{5} = 12.2\\); it leaves out \\(x\\).",
+    "B": "Incorrect. This divides the correct sum, 72, by 5 instead of by 6, the number of values.",
+    "C": "Correct. The median condition gives \\(x = 11\\), and the mean is \\(\\frac{72}{6} = 12\\).",
+    "D": "Incorrect. This is the median, which is given. The large value 24 makes the mean greater than the median."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nbase = [7, 8, 9, 13, 24]\nxs = [x for x in range(-50, 100) if (lambda v: Rational(v[2] + v[3], 2))(sorted(base + [x])) == 10]\nassert xs == [11]\nm = Rational(sum(base) + 11, 6)\nassert m == 12\nassert value(choices[answer]) == m\nassert all(value(choices[k]) != m for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

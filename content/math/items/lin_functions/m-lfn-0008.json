@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0008",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "Two temperature scales, P and Q, are related linearly. A temperature that reads 20 degrees on scale P reads 50 degrees on scale Q, and a temperature that reads 70 degrees on scale P reads 150 degrees on scale Q. At what temperature reading do the two scales show the same number?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-10"
+  ],
+  "solution": [
+    "Slope: \\(\\frac{150 - 50}{70 - 20} = 2\\), so \\(Q = 2P + b\\). Using \\((20, 50)\\): \\(b = 10\\), so \\(Q = 2P + 10\\).",
+    "The scales agree when \\(Q = P\\): \\(P = 2P + 10\\).",
+    "So \\(P = -10\\). Check: \\(Q = 2(-10) + 10 = -10\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "p, q = symbols('p q')\nm = Rational(150 - 50, 70 - 20)\nb = 50 - m*20\nsol = solve(Eq(p, m*p + b), p)\nassert sol == [-10]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "-10",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

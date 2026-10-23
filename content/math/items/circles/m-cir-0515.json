@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0515",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A sector of a circle with radius 6 has a central angle of \\(\\frac{5\\pi}{6}\\) radians. What is the area of the sector?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\pi\\)",
+    "B": "\\(\\frac{\\pi^{2}}{12}\\)",
+    "C": "\\(15\\pi\\)",
+    "D": "\\(30\\pi\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "With the angle in radians, the sector area is \\(\\frac{1}{2}r^{2}\\theta\\).",
+    "\\(\\frac{1}{2}(6)^{2} \\cdot \\frac{5\\pi}{6} = 18 \\cdot \\frac{5\\pi}{6} = 15\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(r\\theta\\), the arc length, not the area.",
+    "B": "Incorrect. This puts \\(\\frac{5\\pi}{6}\\) into the degree formula \\(\\frac{\\theta}{360} \\cdot \\pi r^{2}\\), treating radians as degrees.",
+    "C": "Correct. \\(\\frac{1}{2} \\cdot 36 \\cdot \\frac{5\\pi}{6} = 15\\pi\\).",
+    "D": "Incorrect. This is \\(r^{2}\\theta\\); the sector area formula has a factor of \\(\\frac{1}{2}\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nr,th=6,5*pi/6\nans=r**2*th/2\nassert simplify(ans-pi*r**2*th/(2*pi))==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0119",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of the linear function \\(f\\) has a slope of \\(\\frac{2}{3}\\) and passes through the point \\((6, 1)\\). Which of the following points also lies on the graph of \\(f\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((9, 3)\\)",
+    "B": "\\((0, 1)\\)",
+    "C": "\\((8, 4)\\)",
+    "D": "\\((3, 3)\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "A slope of \\(\\frac{2}{3}\\) means that when \\(x\\) increases by 3, \\(y\\) increases by 2.",
+    "Starting at \\((6, 1)\\): \\((6 + 3, 1 + 2) = (9, 3)\\)."
+  ],
+  "explanation": {
+    "A": "Correct. From \\((6, 1)\\), moving 3 to the right and 2 up gives \\((9, 3)\\).",
+    "B": "Incorrect. This treats the \\(y\\)-coordinate 1 of the given point as the \\(y\\)-intercept. The \\(y\\)-intercept is \\((0, -3)\\).",
+    "C": "Incorrect. This moves 2 to the right and 3 up, which is a slope of \\(\\frac{3}{2}\\).",
+    "D": "Incorrect. This moves 3 to the left and 2 up, which is a slope of \\(-\\frac{2}{3}\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "reciprocal",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = 1 + Rational(2, 3)*(x - 6)\npt = lambda s: sympify(s[2:-2])\nok = [k for k in choices if f.subs(x, pt(choices[k])[0]) == pt(choices[k])[1]]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

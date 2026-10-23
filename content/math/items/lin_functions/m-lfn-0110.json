@@ -1,0 +1,89 @@
+{
+  "id": "m-lfn-0110",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of the linear function \\(f\\) is shown in the \\(xy\\)-plane. What is the value of \\(f(2)\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      6
+    ],
+    "y": [
+      -2,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "-3*x/2 + 6",
+        "label": "y = f(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 6,
+        "label": "(0, 6)"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "label": "(4, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(4\\)",
+    "C": "\\(-\\frac{3}{2}\\)",
+    "D": "\\(3\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "\\(f(2)\\) is the \\(y\\)-coordinate of the point on the graph where \\(x = 2\\).",
+    "The graph passes through \\((2, 3)\\), so \\(f(2) = 3\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. 2 is the input \\(x\\); the question asks for the output \\(f(2)\\).",
+    "B": "Incorrect. 4 is the \\(x\\)-intercept of the graph, where \\(f(x) = 0\\).",
+    "C": "Incorrect. \\(-\\frac{3}{2}\\) is the slope of the graph, not the value of the function at \\(x = 2\\).",
+    "D": "Correct. The point on the graph with \\(x = 2\\) is \\((2, 3)\\), so \\(f(2) = 3\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "misread_graph",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = sympify(figure['curves'][0]['expr'])\nans = f.subs(x, 2)\nassert ans == 3\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

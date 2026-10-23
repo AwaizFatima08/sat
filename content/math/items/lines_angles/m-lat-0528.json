@@ -1,0 +1,136 @@
+{
+  "id": "m-lat-0528",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the figure, line \\(\\ell\\) is parallel to line \\(m\\). What is the value of \\(y\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "C": [
+        -2,
+        5
+      ],
+      "D": [
+        9,
+        5
+      ],
+      "E": [
+        -2,
+        0
+      ],
+      "F": [
+        9,
+        0
+      ],
+      "P": [
+        3.919,
+        5
+      ],
+      "Q": [
+        2,
+        0
+      ],
+      "S": [
+        4.636,
+        6.867
+      ],
+      "T": [
+        1.283,
+        -1.867
+      ]
+    },
+    "segments": [
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "S",
+        "T"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          2.9,
+          6.483
+        ],
+        "text": "(7x − 22)°"
+      },
+      {
+        "at": [
+          3.02,
+          -1.483
+        ],
+        "text": "(4x + 35)°"
+      },
+      {
+        "at": [
+          2.907,
+          0.623
+        ],
+        "text": "y°"
+      },
+      {
+        "at": [
+          8.6,
+          5.5
+        ],
+        "text": "ℓ"
+      },
+      {
+        "at": [
+          8.6,
+          0.5
+        ],
+        "text": "m"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "69"
+  ],
+  "solution": [
+    "The angles labeled \\((7x - 22)^{\\circ}\\) and \\((4x + 35)^{\\circ}\\) lie outside the parallel lines on opposite sides of the transversal, so they are alternate exterior angles and are equal.",
+    "\\(7x - 22 = 4x + 35\\), so \\(3x = 57\\) and \\(x = 19\\). Each of these angles measures \\(4(19) + 35 = 111^{\\circ}\\).",
+    "The angle labeled \\(y^{\\circ}\\) forms a straight line with the \\(111^{\\circ}\\) angle at \\(Q\\), so \\(y = 180 - 111 = 69\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['C'][1]==P['D'][1] and P['E'][1]==P['F'][1]\nx=symbols('x')\nxs=solve(Eq(7*x-22,4*x+35),x)[0]\nassert abs(ang('C','P','S')-(7*xs-22))<0.1 and abs(ang('F','Q','T')-(4*xs+35))<0.1\nans=180-(4*xs+35)\nassert abs(ang('F','Q','P')-ans)<0.1\nassert Rational(spr_answers[0])==ans==69\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "69",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

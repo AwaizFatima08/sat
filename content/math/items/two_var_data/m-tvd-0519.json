@@ -1,0 +1,95 @@
+{
+  "id": "m-tvd-0519",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The graph of an exponential function is shown. The graph passes through the points \\((0, 3)\\), \\((1, 6)\\) and \\((2, 12)\\). Which equation defines the function?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      4
+    ],
+    "y": [
+      -2,
+      26
+    ],
+    "curves": [
+      {
+        "expr": "3*2**x",
+        "label": "y = f(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 3,
+        "label": "(0, 3)"
+      },
+      {
+        "x": 1,
+        "y": 6,
+        "label": "(1, 6)"
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "label": "(2, 12)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = 2(3)^{x}\\)",
+    "B": "\\(y = 6(2)^{x}\\)",
+    "C": "\\(y = 3(2)^{x}\\)",
+    "D": "\\(y = 3x + 3\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The \\(y\\)-value at \\(x = 0\\) is 3, so the initial value is 3.",
+    "Each increase of 1 in \\(x\\) doubles \\(y\\): \\(3 \\to 6 \\to 12\\). The growth factor is 2.",
+    "So \\(y = 3(2)^{x}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This swaps the initial value and the growth factor. At \\(x = 0\\) it gives 2, not 3.",
+    "B": "Incorrect. This uses the \\(y\\)-value at \\(x = 1\\), 6, as the initial value. At \\(x = 0\\) it gives 6, not 3.",
+    "C": "Correct. The initial value is 3 and \\(y\\) doubles each time \\(x\\) increases by 1.",
+    "D": "Incorrect. This linear equation fits \\((0, 3)\\) and \\((1, 6)\\) but gives 9, not 12, at \\(x = 2\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "misread_graph",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\npts = [(p['x'], p['y']) for p in figure['points']]\nfits = lambda k: all(value(choices[k].split('=')[1].strip(' \\\\)')).subs(x, a) == b for a, b in pts)\nassert fits(answer)\nassert not any(fits(k) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

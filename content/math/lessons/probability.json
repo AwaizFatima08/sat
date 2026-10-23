@@ -1,0 +1,179 @@
+{
+  "type": "probability",
+  "title": "Probability and conditional probability",
+  "what_is_tested": "You find the chance of an outcome as the number of favorable outcomes divided by the number of possible outcomes, often from a two-way table. The key skill is choosing the right total: for a conditional probability (\"given that\", \"of those who\", \"if a … is selected\"), the total is only the group that is named.",
+  "how_to_spot": "Words such as \"probability\", \"selected at random\", \"given that\" or \"of the students who\", or a table of counts with rows, columns and totals.",
+  "method": [
+    "Find the group you are choosing from: the whole table, or only one row or column. Its size is the denominator.",
+    "Count the outcomes in that group that have the feature asked about: this is the numerator.",
+    "Probability = numerator ÷ denominator; simplify if the choices are simplified.",
+    "When a probability is given and a count is missing, write an equation: favorable ÷ total = the given fraction.",
+    "With percents of groups, pick a convenient total such as 1,000 and turn every percent into a count."
+  ],
+  "pitfalls": [
+    "Using the grand total when the question limits the group (\"if an 11th grader is selected\").",
+    "Reversing the condition: the probability of A given B uses B's total, not A's.",
+    "Forgetting to add new items to the total when items are added to a bag.",
+    "Multiplying two percents when the question asks for a probability within one group."
+  ],
+  "calculator": "Probability needs little calculator work. The Scientific tab helps you turn a fraction into a decimal so you can match it with the choices.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: simple probability",
+      "steps": [
+        "Count all the possible outcomes: this is the denominator.",
+        "Count the outcomes you want: this is the numerator.",
+        "For \"not\", count everything except the named outcome (or use 1 minus its probability).",
+        "Write the fraction and simplify it to match the choices."
+      ],
+      "worked_example": {
+        "stem": "A basket contains 8 apples, 5 oranges and 7 mangoes. If one piece of fruit is selected at random from the basket, what is the probability that it is not an orange?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(\\frac{1}{4}\\)",
+          "B": "\\(\\frac{1}{3}\\)",
+          "C": "\\(\\frac{7}{20}\\)",
+          "D": "\\(\\frac{3}{4}\\)"
+        },
+        "answer": "D",
+        "walkthrough": [
+          "Total pieces of fruit: \\(8 + 5 + 7 = 20\\).",
+          "Not an orange: \\(8 + 7 = 15\\) pieces.",
+          "Probability: \\(\\frac{15}{20} = \\frac{3}{4}\\). Check: \\(1 - \\frac{5}{20} = \\frac{3}{4}\\).",
+          "Choice D is correct. Choice A is the probability that it is an orange. Choice B compares the oranges with the other fruit (5 to 15) instead of with the total, and choice C counts only the mangoes."
+        ],
+        "verify": "total = 8 + 5 + 7\np = Rational(total - 5, total)\nassert p == Rational(3, 4)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-prb-0001",
+        "m-prb-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: conditional probability from a two-way table",
+      "steps": [
+        "Find the condition: the words after \"if\" or \"given\", or \"of those who …\".",
+        "Find that row or column total: it is the denominator.",
+        "Inside that row or column, find the cell with the feature asked about: it is the numerator.",
+        "Check that you used neither the grand total nor the reversed condition."
+      ],
+      "worked_example": {
+        "stem": "The table shows how 120 shoppers at a market in Lahore paid for their purchases, by age group. If one of the shoppers who paid with cash is selected at random, what is the probability that the shopper is under 30 years old?",
+        "figure": {
+          "kind": "table",
+          "title": "Payment method by age group",
+          "columns": [
+            "Age group",
+            "Cash",
+            "Card",
+            "Total"
+          ],
+          "rows": [
+            [
+              "Under 30",
+              "18",
+              "42",
+              "60"
+            ],
+            [
+              "30 and older",
+              "33",
+              "27",
+              "60"
+            ],
+            [
+              "Total",
+              "51",
+              "69",
+              "120"
+            ]
+          ]
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(\\frac{3}{20}\\)",
+          "B": "\\(\\frac{3}{10}\\)",
+          "C": "\\(\\frac{6}{17}\\)",
+          "D": "\\(\\frac{17}{40}\\)"
+        },
+        "answer": "C",
+        "walkthrough": [
+          "The condition is \"paid with cash\", so the group is the Cash column: 51 shoppers.",
+          "Of those 51 shoppers, 18 are under 30.",
+          "Probability: \\(\\frac{18}{51} = \\frac{6}{17}\\).",
+          "Choice C is correct. Choice B, \\(\\frac{18}{60}\\), reverses the condition: it is the probability that a shopper under 30 paid with cash. Choice A divides by the grand total, 120, and choice D is the probability that any shopper paid with cash."
+        ],
+        "verify": "rows = {r[0]: [int(c) for c in r[1:]] for r in figure['rows']}\nassert rows['Total'] == [51, 69, 120]\np = Rational(rows['Under 30'][0], rows['Total'][0])\nassert p == Rational(6, 17) and value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-prb-0003",
+        "m-prb-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: working backward from a probability",
+      "steps": [
+        "Use the given probability to find any unknown count: favorable = probability × total.",
+        "Describe the change in words: what is added or removed, and does the total change too?",
+        "Write an equation: new favorable ÷ new total = new probability.",
+        "Solve, then check by putting your number back into the fraction."
+      ],
+      "worked_example": {
+        "stem": "A bag contains 45 tokens, and each token is either green or white. If one token is selected at random from the bag, the probability that it is green is \\(\\frac{2}{5}\\). How many white tokens must be added to the bag so that the probability of selecting a green token becomes \\(\\frac{1}{4}\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "27"
+        ],
+        "walkthrough": [
+          "Green tokens: \\(\\frac{2}{5} \\times 45 = 18\\).",
+          "Add \\(w\\) white tokens. The number of green tokens stays 18, but the total becomes \\(45 + w\\): \\(\\frac{18}{45 + w} = \\frac{1}{4}\\).",
+          "Cross-multiply: \\(72 = 45 + w\\), so \\(w = 27\\). Check: \\(\\frac{18}{72} = \\frac{1}{4}\\). Enter 27.",
+          "Trap: \\(18 \\times 4 = 72\\) is the new total number of tokens, not the number of tokens to add."
+        ],
+        "verify": "w = symbols('w')\ngreen = Rational(2, 5)*45\nsol = solve(Eq(green/(45 + w), Rational(1, 4)), w)\nassert green == 18 and sol == [27]\nassert [Rational(s) for s in spr_answers] == sol"
+      },
+      "tryit": [
+        "m-prb-0005",
+        "m-prb-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: conditional probability with percents",
+      "steps": [
+        "Choose a convenient total, such as 1,000, for the whole population.",
+        "Split it by the first percent, then split each part by its own percent, to get four counts.",
+        "The condition names a group: add the counts that belong to it to get the denominator.",
+        "Divide the count that also has the asked feature by that denominator, and simplify."
+      ],
+      "worked_example": {
+        "stem": "In a town, \\(30\\%\\) of the households have solar panels. Of the households with solar panels, \\(80\\%\\) have an electric water heater. Of the households without solar panels, \\(20\\%\\) have an electric water heater. If a household in the town that has an electric water heater is selected at random, what is the probability that it has solar panels?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(\\frac{6}{25}\\)",
+          "B": "\\(\\frac{7}{19}\\)",
+          "C": "\\(\\frac{12}{19}\\)",
+          "D": "\\(\\frac{4}{5}\\)"
+        },
+        "answer": "C",
+        "walkthrough": [
+          "Imagine 1,000 households: 300 with solar panels and 700 without.",
+          "With an electric water heater: \\(0.8 \\times 300 = 240\\) with panels and \\(0.2 \\times 700 = 140\\) without, so 380 in all.",
+          "The condition is \\\"has an electric water heater\\\", so divide by 380: \\(\\frac{240}{380} = \\frac{12}{19}\\). On the Scientific tab, 240/380 and 12/19 both give about 0.632.",
+          "Choice C is correct. Choice D, \\(\\frac{4}{5}\\), is the probability of an electric water heater given solar panels, the reversed condition. Choice A, \\(\\frac{240}{1{,}000}\\), uses the whole town as the total, and choice B is the probability of no solar panels."
+        ],
+        "verify": "N = 1000\nboth = Rational(80, 100)*Rational(30, 100)*N\nheater = both + Rational(20, 100)*Rational(70, 100)*N\np = both/heater\nassert p == Rational(12, 19) and value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-prb-0007",
+        "m-prb-0008"
+      ]
+    }
+  ]
+}

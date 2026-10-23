@@ -1,0 +1,43 @@
+{
+  "id": "m-rat-0520",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A tailor in Karachi uses 2.5 meters of cloth to make one kurta. What is the greatest number of complete kurtas the tailor can make from 42 meters of cloth?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "16"
+  ],
+  "solution": [
+    "\\(\\frac{42}{2.5} = 16.8\\).",
+    "Only complete kurtas count, so round down: 16 kurtas (16 kurtas use 40 meters; 17 would need 42.5 meters)."
+  ],
+  "verify": "n = floor(Rational(42) / Rational('2.5'))\nassert n == 16 and n * Rational('2.5') <= 42 < (n + 1) * Rational('2.5')\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "16",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

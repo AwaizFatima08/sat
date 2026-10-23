@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0154",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A port manager estimates that the number of hours \\(H\\) needed to load a cargo ship with \\(c\\) containers is \\(H = 2.5 + 0.04c\\). Which equation gives the number of containers \\(c\\) in terms of the number of hours \\(H\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(c = 0.04H - 0.1\\)",
+    "B": "\\(c = 25H - 62.5\\)",
+    "C": "\\(c = 25H + 62.5\\)",
+    "D": "\\(c = 25H - 2.5\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Subtract 2.5 from both sides: \\(H - 2.5 = 0.04c\\).",
+    "Divide by 0.04 (multiply by 25): \\(c = 25(H - 2.5) = 25H - 62.5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This multiplies \\(H - 2.5\\) by 0.04 instead of dividing by 0.04.",
+    "B": "Correct. \\(c = \\frac{H - 2.5}{0.04} = 25H - 62.5\\).",
+    "C": "Incorrect. This adds 62.5 instead of subtracting it; the 2.5 must be subtracted from \\(H\\) before dividing.",
+    "D": "Incorrect. This multiplies only \\(H\\) by 25 and not the 2.5 that is subtracted from it."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nH, c = symbols('H c')\nsol = solve(Eq(H, Rational('2.5') + Rational('0.04')*c), c)[0]\nrhs = lambda s: value(s.split('=')[1])\nassert [k for k in choices if simplify(rhs(choices[k]) - sol) == 0] == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

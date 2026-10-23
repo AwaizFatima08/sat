@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0101",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which ordered pair \\((x, y)\\) is a solution to the inequality \\(3x - 2y > 10\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((-4, -1)\\)",
+    "B": "\\((4, 1)\\)",
+    "C": "\\((2, -3)\\)",
+    "D": "\\((-3, 2)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Substitute each pair into \\(3x - 2y\\) and check whether the result is greater than 10.",
+    "For \\((2, -3)\\): \\(3(2) - 2(-3) = 6 + 6 = 12\\), and \\(12 > 10\\).",
+    "The other pairs give 10, \\(-10\\) and \\(-13\\), none of which is greater than 10."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(3(-4) - 2(-1) = -12 + 2 = -10\\). Choosing this pair comes from dropping the negative sign of \\(x\\) and getting \\(12 + 2 = 14\\).",
+    "B": "Incorrect. \\(3(4) - 2(1) = 10\\), which is equal to 10, not greater than 10. The inequality is strict.",
+    "C": "Correct. \\(3(2) - 2(-3) = 12\\), and \\(12 > 10\\).",
+    "D": "Incorrect. \\(3(-3) - 2(2) = -13\\). This pair gives 12 only if the coordinates are read in the wrong order, as \\((y, x)\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nok = [k for k, c in choices.items() if 3*value(c)[0] - 2*value(c)[1] > 10]\nassert ok == [answer]\nassert 3*value(choices['A'])[0] - 2*value(choices['A'])[1] == 10",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

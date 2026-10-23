@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0527",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The point \\((k, 2k)\\) lies in the solution region of the system of inequalities below. \\[ 3x + y < 25 \\] \\[ y > x + 1 \\] Which of the following could be the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(1\\)",
+    "C": "\\(5\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = k\\) and \\(y = 2k\\) in the first inequality: \\(3k + 2k < 25\\), so \\(k < 5\\).",
+    "Substitute in the second: \\(2k > k + 1\\), so \\(k > 1\\).",
+    "So \\(1 < k < 5\\). Of the choices, only 3 works."
+  ],
+  "explanation": {
+    "A": "Correct. The point \\((3, 6)\\) gives \\(9 + 6 = 15 < 25\\) and \\(6 > 4\\), so both inequalities hold.",
+    "B": "Incorrect. With \\(k = 1\\), the point is \\((1, 2)\\), and \\(2 > 1 + 1\\) is false: the point lies on the line \\(y = x + 1\\), not above it.",
+    "C": "Incorrect. With \\(k = 5\\), the point is \\((5, 10)\\), and \\(15 + 10 = 25\\) is not less than 25.",
+    "D": "Incorrect. This checks only the second inequality. The point \\((6, 12)\\) gives \\(18 + 12 = 30\\), which is not less than 25."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nk = symbols('k')\nS = solve_univariate_inequality(3*k + 2*k < 25, k, relational=False) & solve_univariate_inequality(2*k > k + 1, k, relational=False)\nassert S == Interval.open(1, 5)\nok = [c for c in choices if value(choices[c]) in S]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

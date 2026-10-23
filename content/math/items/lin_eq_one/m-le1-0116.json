@@ -1,0 +1,66 @@
+{
+  "id": "m-le1-0116",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The table shows the costs of two online courses. Each course charges a one-time enrollment fee plus a cost for each module a student takes. For how many modules is the total cost of the two courses the same?",
+  "figure": {
+    "kind": "table",
+    "title": "Course costs",
+    "columns": [
+      "Course",
+      "Enrollment fee (dollars)",
+      "Cost per module (dollars)"
+    ],
+    "rows": [
+      [
+        "Course R",
+        "40",
+        "25"
+      ],
+      [
+        "Course S",
+        "160",
+        "10"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "For \\(m\\) modules, Course R costs \\(40 + 25m\\) dollars and Course S costs \\(160 + 10m\\) dollars.",
+    "Set them equal: \\(40 + 25m = 160 + 10m\\).",
+    "Then \\(15m = 120\\), so \\(m = 8\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "m = symbols('m')\nr = figure['rows']\nf1, p1, f2, p2 = [int(v) for v in (r[0][1], r[0][2], r[1][1], r[1][2])]\nsol = solve(Eq(f1 + p1*m, f2 + p2*m), m)\nassert sol == [8]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

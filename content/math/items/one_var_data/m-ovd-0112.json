@@ -1,0 +1,72 @@
+{
+  "id": "m-ovd-0112",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A survey asked a group of households in Lahore how many motorcycles they own. The table shows the percent of the surveyed households that own each number of motorcycles. What is the mean number of motorcycles per household for the surveyed households?",
+  "figure": {
+    "kind": "table",
+    "title": "Motorcycles per household",
+    "columns": [
+      "Number of motorcycles",
+      "Percent of households"
+    ],
+    "rows": [
+      [
+        "0",
+        "15%"
+      ],
+      [
+        "1",
+        "45%"
+      ],
+      [
+        "2",
+        "30%"
+      ],
+      [
+        "3",
+        "10%"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1.35",
+    "27/20"
+  ],
+  "solution": [
+    "Each percent tells what fraction of the households has that number of motorcycles.",
+    "Mean \\(= 0(0.15) + 1(0.45) + 2(0.30) + 3(0.10) = 0 + 0.45 + 0.60 + 0.30 = 1.35\\).",
+    "(Using 100 households gives the same result: 135 motorcycles for 100 households.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "rows = [(Integer(r[0]), Rational(r[1].rstrip('%'), 100)) for r in figure['rows']]\nassert sum(p for _, p in rows) == 1\nm = sum(n * p for n, p in rows)\nassert m == Rational(27, 20)\nassert all(Rational(s) == m for s in spr_answers)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "1.35",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

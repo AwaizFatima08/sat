@@ -1,0 +1,136 @@
+{
+  "id": "m-arv-0501",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In parallelogram \\(ABCD\\) shown, \\(\\overline{DE}\\) is perpendicular to \\(\\overline{AB}\\). What is the area of parallelogram \\(ABCD\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        9,
+        0
+      ],
+      "C": [
+        12,
+        4
+      ],
+      "D": [
+        3,
+        4
+      ],
+      "E": [
+        3,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "D",
+        "E"
+      ],
+      [
+        "E",
+        "B"
+      ],
+      [
+        "A",
+        "E"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          4.5,
+          -0.7
+        ],
+        "text": "9"
+      },
+      {
+        "at": [
+          0.8,
+          2.5
+        ],
+        "text": "5"
+      },
+      {
+        "at": [
+          3.5,
+          2
+        ],
+        "text": "4"
+      }
+    ],
+    "right_angles": [
+      "E"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(45\\)",
+    "B": "\\(36\\)",
+    "C": "\\(28\\)",
+    "D": "\\(18\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The area of a parallelogram is base \\(\\times\\) height, where the height is perpendicular to the base.",
+    "The base is \\(AB = 9\\) and the height is \\(DE = 4\\), so the area is \\(9 \\cdot 4 = 36\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(9 \\cdot 5\\); it uses the slanted side \\(AD = 5\\) as the height, but the height must be perpendicular to the base.",
+    "B": "Correct. Base \\(\\times\\) height \\(= 9 \\cdot 4 = 36\\).",
+    "C": "Incorrect. This is \\(2(9 + 5)\\), the perimeter of the parallelogram, not its area.",
+    "D": "Incorrect. This is \\(\\frac{1}{2}(9)(4)\\), the triangle area formula; a parallelogram has no factor of \\(\\frac{1}{2}\\)."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "C": "wrong_quantity",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nbase=P['B'][0]-P['A'][0]\nh=P['D'][1]-P['E'][1]\nassert base==9 and h==4 and P['D'][0]==P['E'][0]\nassert (P['D'][0]-P['A'][0])**2+h**2==5**2\nans=base*h\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

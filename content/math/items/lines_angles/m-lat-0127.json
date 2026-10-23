@@ -1,0 +1,105 @@
+{
+  "id": "m-lat-0127",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In triangle \\(ABC\\), point \\(D\\) lies on \\(\\overline{AB}\\) and point \\(E\\) lies on \\(\\overline{AC}\\) so that \\(\\overline{DE}\\) is parallel to \\(\\overline{BC}\\). The ratio of the area of triangle \\(ADE\\) to the area of quadrilateral \\(DBCE\\) is \\(9 : 16\\). What is the ratio \\(AD : DB\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        3,
+        7
+      ],
+      "B": [
+        0,
+        0
+      ],
+      "C": [
+        10,
+        0
+      ],
+      "D": [
+        1.2,
+        2.8
+      ],
+      "E": [
+        7.2,
+        2.8
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "circles": [],
+    "labels": [],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3 : 2\\)",
+    "B": "\\(3 : 5\\)",
+    "C": "\\(3 : 4\\)",
+    "D": "\\(9 : 16\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Triangle \\(ADE\\) is similar to triangle \\(ABC\\). If the area of \\(ADE\\) is \\(9u\\), the quadrilateral is \\(16u\\), so triangle \\(ABC\\) has area \\(25u\\).",
+    "The area ratio \\(ADE : ABC = 9 : 25\\), so the length ratio is \\(AD : AB = 3 : 5\\).",
+    "\\(DB = AB - AD\\), so \\(AD : DB = 3 : (5 - 3) = 3 : 2\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(ADE : ABC = 9 : 25\\), so \\(AD : AB = 3 : 5\\) and \\(AD : DB = 3 : 2\\).",
+    "B": "Incorrect. This is \\(AD : AB\\). Since \\(DB = AB - AD\\), the ratio \\(AD : DB\\) is \\(3 : 2\\).",
+    "C": "Incorrect. This takes the square root of \\(9 : 16\\), but the quadrilateral is not similar to triangle \\(ADE\\); the square root must be applied to the ratio of the two similar triangles, \\(9 : 25\\).",
+    "D": "Incorrect. This uses the area ratio as a length ratio; lengths scale by the square root of the area ratio."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nr=lambda s: Rational(*[int(t) for t in s.strip('\\\\()').split(':')])\nk=sqrt(Rational(9,9+16))\nans=k/(1-k)\nassert ans==Rational(3,2)\nassert r(choices[answer])==ans\nassert all(r(choices[c])!=ans for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

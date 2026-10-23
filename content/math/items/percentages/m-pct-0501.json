@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0501",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What is \\(15\\%\\) of 260?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(221\\)",
+    "B": "\\(3.9\\)",
+    "C": "\\(39\\)",
+    "D": "\\(275\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Write \\(15\\%\\) as the decimal \\(0.15\\).",
+    "Multiply: \\(0.15 \\cdot 260 = 39\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(85\\%\\) of 260, the part that is left after \\(15\\%\\) is taken away.",
+    "B": "Incorrect. This is the result of writing \\(15\\%\\) as 0.015 instead of 0.15.",
+    "C": "Correct. \\(15\\%\\) of 260 is \\(0.15 \\cdot 260 = 39\\).",
+    "D": "Incorrect. This is the result of adding 15 to 260 instead of finding \\(15\\%\\) of 260."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nv = Rational(15, 100) * 260\nassert v == 39\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "type": "inequalities",
+  "title": "Linear inequalities",
+  "what_is_tested": "You solve inequalities such as \\(3x - 5 > 10\\), turn phrases like \\\"at least\\\" and \\\"no more than\\\" into symbols, and decide which values, points or plans meet one or two conditions. In the \\(xy\\)-plane, an inequality in \\(x\\) and \\(y\\) describes all the points on one side of a line.",
+  "how_to_spot": "Look for \\(<\\), \\(>\\), \\(\\le\\), \\(\\ge\\) or words such as \\\"at least\\\", \\\"at most\\\", \\\"no more than\\\", \\\"minimum\\\", \\\"maximum\\\", \\\"greatest number\\\" or \\\"least number\\\".",
+  "method": [
+    "Translate the words: \\\"at least\\\" is \\(\\ge\\); \\\"at most\\\" and \\\"no more than\\\" are \\(\\le\\).",
+    "Solve like an equation, doing the same thing to both sides.",
+    "When you multiply or divide both sides by a negative number, reverse the inequality sign.",
+    "For a whole-number answer, round in the direction the inequality allows: down for a greatest value, up for a least value.",
+    "To test a point or plan, substitute it into every inequality; it must make all of them true."
+  ],
+  "pitfalls": [
+    "Forgetting to reverse the sign after dividing by a negative number (sign_error).",
+    "Rounding the wrong way, such as rounding 9.4 up to 10 when the limit is \\\"at most\\\" (concept).",
+    "Treating \\\"at least\\\" as \\(>\\) and rejecting a value that lands exactly on the limit (concept).",
+    "Checking a point against only one of two conditions (stopped_early).",
+    "Leaving out a fixed amount, such as money that must be kept or the weight of a driver (wrong_formula)."
+  ],
+  "calculator": "On the Graph tab, graph each side of a one-variable inequality as its own line; the solution is where one line is above (or below) the other, and the crossing point is the boundary. For a short inequality, solving by hand is faster.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: solve and round sensibly",
+      "steps": [
+        "Write the inequality: what is fixed, what changes, and the limit.",
+        "Undo addition or subtraction, then divide by the coefficient.",
+        "If you divide by a negative number, reverse the sign.",
+        "Pick the whole number the question wants (greatest or least) and check it."
+      ],
+      "worked_example": {
+        "stem": "Maya has \\$95. She wants to buy notebooks that cost \\$8 each and still have at least \\$20 left for a bus pass. What is the greatest number of notebooks she can buy?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(9\\)",
+          "B": "\\(10\\)",
+          "C": "\\(11\\)",
+          "D": "\\(14\\)"
+        },
+        "answer": "A",
+        "walkthrough": [
+          "Let \\(n\\) be the number of notebooks. The money left is \\(95 - 8n\\), and it must be at least 20: \\(95 - 8n \\ge 20\\).",
+          "Subtract 95 from both sides: \\(-8n \\ge -75\\). Divide by \\(-8\\) and reverse the sign: \\(n \\le 9.375\\).",
+          "The greatest whole number of notebooks is 9, choice A. Check: \\(95 - 8(9) = 23\\), which is at least 20.",
+          "Choice B rounds up, but 10 notebooks leave only \\(95 - 80 = 15\\) dollars, less than 20. Choice C ignores the \\$20 for the bus pass (\\(95 \\div 8 \\approx 11.9\\))."
+        ],
+        "verify": "n = symbols('n')\ns = solve_univariate_inequality(95 - 8*n >= 20, n, relational=False)\nassert s == Interval(-oo, Rational(75, 8))\nbest = floor(s.sup)\nassert best == 9 and value(choices[answer]) == best\nassert all(value(choices[k]) != best for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-ineq-0001",
+        "m-ineq-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: negatives and the reversed sign",
+      "steps": [
+        "Distribute and combine like terms on each side.",
+        "Move the variable terms to one side and the numbers to the other.",
+        "Divide by the coefficient, and reverse the sign if the coefficient is negative.",
+        "Read the solution set and pick the integer the question asks for."
+      ],
+      "worked_example": {
+        "stem": "What is the greatest integer value of \\(x\\) that satisfies the inequality \\(7 - 3(x + 2) \\ge x - 13\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "3"
+        ],
+        "walkthrough": [
+          "Distribute: \\(7 - 3x - 6 \\ge x - 13\\), so \\(1 - 3x \\ge x - 13\\).",
+          "Subtract \\(x\\) and 1 from both sides: \\(-4x \\ge -14\\).",
+          "Divide by \\(-4\\) and reverse the sign: \\(x \\le 3.5\\). The greatest integer that works is 3.",
+          "Calculator route (Graph tab): graph \\(y = 7 - 3(x + 2)\\) and \\(y = x - 13\\); they cross at \\(x = 3.5\\), and the first line is on or above the second to the left of that point, so \\(x \\le 3.5\\). Forgetting to reverse the sign gives \\(x \\ge 3.5\\), which has no greatest value."
+        ],
+        "verify": "x = symbols('x')\ns = solve_univariate_inequality(7 - 3*(x + 2) >= x - 13, x, relational=False)\nassert s == Interval(-oo, Rational(7, 2))\nassert [Rational(v) for v in spr_answers] == [floor(s.sup)] == [3]"
+      },
+      "tryit": [
+        "m-ineq-0003",
+        "m-ineq-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: two conditions at once",
+      "steps": [
+        "Name the variables and write one inequality for each condition.",
+        "Note whether each limit includes the boundary (\\(\\le\\), \\(\\ge\\)) or not (\\(<\\), \\(>\\)).",
+        "Substitute each option into every inequality.",
+        "Choose the option that passes all of them; a single failure rules an option out."
+      ],
+      "worked_example": {
+        "stem": "A home bakery makes \\(x\\) small cakes and \\(y\\) large cakes for a school fair. Each small cake uses 2 cups of flour, and each large cake uses 3 cups of flour. The baker has at most 30 cups of flour and wants to make at least 12 cakes in all. Which of the following pairs \\((x, y)\\) meets both conditions?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\((4, 8)\\)",
+          "B": "\\((12, 2)\\)",
+          "C": "\\((9, 2)\\)",
+          "D": "\\((5, 7)\\)"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "Flour: \\(2x + 3y \\le 30\\). Number of cakes: \\(x + y \\ge 12\\).",
+          "\\((4, 8)\\): flour \\(8 + 24 = 32\\), more than 30, so it fails. \\((9, 2)\\): only 11 cakes, so it fails.",
+          "\\((5, 7)\\): flour \\(10 + 21 = 31\\), so it fails. \\((12, 2)\\): flour \\(24 + 6 = 30\\) and \\(12 + 2 = 14\\) cakes, so it passes both.",
+          "The answer is B. It uses exactly 30 cups, which is allowed because \\\"at most 30\\\" includes 30. Choice C passes the flour test but not the cake count, so checking only one condition picks it by mistake."
+        ],
+        "verify": "pt = lambda s: [value(t) for t in s.strip('\\\\()').split(',')]\nfits = lambda p: bool(2*p[0] + 3*p[1] <= 30) and bool(p[0] + p[1] >= 12)\nok = [k for k in choices if fits(pt(choices[k]))]\nassert ok == [answer] and pt(choices[answer]) == [12, 2]"
+      },
+      "tryit": [
+        "m-ineq-0005",
+        "m-ineq-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: structure and constants",
+      "steps": [
+        "Look for a link between the expression you have and the one you want, such as \\(4x - 10 = 2(2x - 5)\\).",
+        "Apply the same operation to every part of the inequality, reversing the signs if you multiply by a negative number.",
+        "If a constant is unknown, keep it as a letter and use the given solution set to write an equation for it.",
+        "Check the boundary value and the direction of the final sign."
+      ],
+      "worked_example": {
+        "stem": "If \\(3 \\le 2x - 5 \\le 11\\), what is the greatest possible value of \\(4x - 10\\)?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(8\\)",
+          "B": "\\(11\\)",
+          "C": "\\(22\\)",
+          "D": "\\(34\\)"
+        },
+        "answer": "C",
+        "walkthrough": [
+          "Notice that \\(4x - 10 = 2(2x - 5)\\).",
+          "Multiply every part of the inequality by 2 (a positive number, so the signs stay): \\(6 \\le 4x - 10 \\le 22\\).",
+          "The greatest possible value of \\(4x - 10\\) is 22, choice C. It happens when \\(2x - 5 = 11\\), that is, when \\(x = 8\\).",
+          "Choice A is the greatest value of \\(x\\), not of \\(4x - 10\\). Choice B forgets to multiply by 2, and choice D substitutes 11 for \\(x\\) instead of for \\(2x - 5\\)."
+        ],
+        "verify": "x = symbols('x')\ns = reduce_inequalities([2*x - 5 >= 3, 2*x - 5 <= 11], x).as_set()\nassert s == Interval(4, 8)\nbest = (4*x - 10).subs(x, s.sup)\nassert diff(4*x - 10, x) > 0 and best == 22\nassert value(choices[answer]) == best\nassert all(value(choices[k]) != best for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-ineq-0007",
+        "m-ineq-0008"
+      ]
+    }
+  ]
+}

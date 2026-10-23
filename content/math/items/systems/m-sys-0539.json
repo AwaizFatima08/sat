@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0539",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "During a 150-minute workout, Rosa ran at a constant speed of 8 kilometers per hour for part of the time and walked at a constant speed of 5 kilometers per hour for the rest of the time. She covered a total distance of 16 kilometers. For how many minutes did Rosa run?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(70\\)",
+    "B": "\\(75\\)",
+    "C": "\\(\\frac{7}{6}\\)",
+    "D": "\\(80\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Work in hours: 150 minutes is 2.5 hours. Let \\(r\\) and \\(w\\) be the hours spent running and walking: \\(r + w = 2.5\\) and \\(8r + 5w = 16\\).",
+    "Substitute \\(w = 2.5 - r\\): \\(8r + 12.5 - 5r = 16\\), so \\(3r = 3.5\\) and \\(r = \\frac{7}{6}\\) hours.",
+    "Convert to minutes: \\(\\frac{7}{6} \\cdot 60 = 70\\) minutes."
+  ],
+  "explanation": {
+    "A": "Correct. Rosa ran for \\(\\frac{7}{6}\\) hours, which is 70 minutes (and walked for 80 minutes).",
+    "B": "Incorrect. This splits the 150 minutes evenly, which would give \\(8(1.25) + 5(1.25) = 16.25\\) kilometers, not 16.",
+    "C": "Incorrect. \\(\\frac{7}{6}\\) is the running time in hours; the question asks for minutes.",
+    "D": "Incorrect. 80 minutes is the time Rosa spent walking, not running."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nr, w = symbols('r w')\nsol = solve([r + w - Rational(150, 60), 8*r + 5*w - 16], [r, w])\nassert sol == {r: Rational(7, 6), w: Rational(4, 3)}\nassert value(choices[answer]) == 60*sol[r]\nassert all(value(choices[k]) != 60*sol[r] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

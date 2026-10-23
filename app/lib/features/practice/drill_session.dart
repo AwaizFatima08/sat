@@ -53,7 +53,7 @@ class DrillState {
       kind == DrillKind.tryIt ||
       kind == DrillKind.mistakes;
   Item get current => items[index];
-  int get correct => items.where((i) => answers[i.id] == i.answer).length;
+  int get correct => items.where((i) => i.isCorrect(answers[i.id])).length;
 
   DrillState copyWith({
     int? index,
@@ -102,13 +102,13 @@ class DrillNotifier extends Notifier<DrillState?> {
       seed: _seed,
     );
     final name =
-        '${_bank.blueprint.types[type]!.name} · ${_bank.blueprint.levelNames[level]}';
+        '${_bank.bpOfType(type).types[type]!.name} · ${_bank.bpOfType(type).levelNames[level]}';
     return _begin(DrillKind.skill, name, type, level, items);
   }
 
   bool startTryIt(String type, int level, List<String> ids) => _begin(
     DrillKind.tryIt,
-    'Try it · ${_bank.blueprint.types[type]!.name}',
+    'Try it · ${_bank.bpOfType(type).types[type]!.name}',
     type,
     level,
     _bank.itemsOf(ids),
@@ -125,11 +125,12 @@ class DrillNotifier extends Notifier<DrillState?> {
     );
   }
 
-  /// 15 mixed questions from one domain, 18 minutes.
+  /// 15 mixed questions from one domain, timed at the section's pace.
   bool startDomainQuiz(String domain) {
+    final bp = _bank.bpOfDomain(domain);
     final types = [
-      for (final t in _bank.blueprint.typeOrder)
-        if (_bank.blueprint.types[t]!.domain == domain) t,
+      for (final t in bp.typeOrder)
+        if (bp.types[t]!.domain == domain) t,
     ];
     final per = <String, int>{};
     for (var i = 0; i < 15; i++) {
@@ -138,36 +139,39 @@ class DrillNotifier extends Notifier<DrillState?> {
     final items = pickMixed(
       items: _bank.items.values,
       perType: per,
-      typeOrder: _bank.blueprint.typeOrder,
+      typeOrder: bp.typeOrder,
       lastSeen: _progress.lastSeen,
       seed: _seed,
     );
     return _begin(
       DrillKind.domainQuiz,
-      '${_bank.blueprint.domains[domain]} quiz',
+      '${bp.domains[domain]} quiz',
       'mixed',
       0,
       items,
-      seconds: 18 * 60,
+      // The section's own pace: about 18 min for R&W, 24 min for Math.
+      seconds: (15 * bp.moduleMinutes * 60 / bp.moduleItems).round(),
     );
   }
 
-  /// A full timed module (27 questions, 32 minutes) from the drill pool.
-  bool startModulePractice() {
+  /// A full timed module of [section] (R&W 27 questions in 32 minutes,
+  /// Math 22 in 35) from the drill pool.
+  bool startModulePractice({String section = 'rw'}) {
+    final bp = _bank.bpOf(section);
     final items = pickMixed(
       items: _bank.items.values,
-      perType: _bank.moduleTypeCounts,
-      typeOrder: _bank.blueprint.typeOrder,
+      perType: _bank.moduleTypeCountsOf(section),
+      typeOrder: bp.typeOrder,
       lastSeen: _progress.lastSeen,
       seed: _seed,
     );
     return _begin(
       DrillKind.module,
-      'Timed module practice',
+      section == 'math' ? 'Timed Math module' : 'Timed module practice',
       'mixed',
       0,
       items,
-      seconds: _bank.blueprint.moduleMinutes * 60,
+      seconds: bp.moduleMinutes * 60,
     );
   }
 
@@ -213,7 +217,9 @@ class DrillNotifier extends Notifier<DrillState?> {
   void select(String letter) {
     final s = state!;
     if (s.revealed) return;
-    state = s.copyWith(answers: {...s.answers, s.current.id: letter});
+    final answers = {...s.answers, s.current.id: letter};
+    if (letter.isEmpty) answers.remove(s.current.id);
+    state = s.copyWith(answers: answers);
   }
 
   /// Instant-feedback sets: check the answer. Others: move on.
@@ -254,7 +260,7 @@ class DrillNotifier extends Notifier<DrillState?> {
       notebook = updateNotebook(
         notebook,
         itemId: i.id,
-        correct: s.answers[i.id] == i.answer,
+        correct: i.isCorrect(s.answers[i.id]),
         now: now,
       );
       seen[i.id] = now;

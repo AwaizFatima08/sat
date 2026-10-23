@@ -1,0 +1,109 @@
+{
+  "id": "m-rtt-0505",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(ABC\\), \\(AB = 7\\) and the measure of angle \\(A\\) is \\(45^{\\circ}\\). What is the length of hypotenuse \\(\\overline{AC}\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        7,
+        0
+      ],
+      "C": [
+        7,
+        7
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          3.5,
+          -0.6
+        ],
+        "text": "7"
+      },
+      {
+        "at": [
+          1.3,
+          0.45
+        ],
+        "text": "45°"
+      }
+    ],
+    "right_angles": [
+      "B"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(7\\sqrt{3}\\)",
+    "B": "\\(14\\)",
+    "C": "\\(\\frac{7\\sqrt{2}}{2}\\)",
+    "D": "\\(7\\sqrt{2}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Angle \\(C\\) is also \\(45^{\\circ}\\), so \\(BC = AB = 7\\).",
+    "\\(AC = \\sqrt{7^{2} + 7^{2}} = \\sqrt{98} = 7\\sqrt{2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the \\(\\sqrt{3}\\) factor from a 30°-60°-90° triangle.",
+    "B": "Incorrect. This doubles the leg, which is the 30°-60°-90° rule for the side opposite the 30° angle, not the 45°-45°-90° rule.",
+    "C": "Incorrect. This divides the leg by \\(\\sqrt{2}\\) instead of multiplying; the hypotenuse is the longest side.",
+    "D": "Correct. In a 45°-45°-90° triangle the hypotenuse is \\(\\sqrt{2}\\) times a leg: \\(7\\sqrt{2}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('A','B')==7 and abs(ang('A','B','C')-90)<0.1 and abs(ang('C','A','B')-45)<0.1\nans=7/cos(pi/4)\nassert simplify(d('A','C')-ans)==0 and simplify(ans-7*sqrt(2))==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

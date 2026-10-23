@@ -1,0 +1,59 @@
+{
+  "id": "m-smp-0517",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Independent random samples were selected from population P and population Q. The sample mean for population P is 15, with a margin of error of 2, and the sample mean for population Q is 20, with a margin of error of 2. Which of the following conclusions is best supported by the data?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The means of the two populations could plausibly be equal.",
+    "B": "The mean of population P is greater than the mean of population Q.",
+    "C": "The mean of population Q is exactly 5 greater than the mean of population P.",
+    "D": "The mean of population Q is greater than the mean of population P."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Plausible values for P's mean: \\(15 - 2 = 13\\) to \\(15 + 2 = 17\\). For Q's mean: \\(20 - 2 = 18\\) to \\(20 + 2 = 22\\).",
+    "Every plausible value for Q's mean is greater than every plausible value for P's mean (18 > 17).",
+    "So the data support the conclusion that Q's mean is greater than P's mean."
+  ],
+  "explanation": {
+    "A": "Incorrect. The plausible ranges, 13 to 17 and 18 to 22, do not overlap, so the means are not plausibly equal.",
+    "B": "Incorrect. Every plausible value for P's mean is LESS than every plausible value for Q's mean.",
+    "C": "Incorrect. The difference of the sample means is 5, but the population means are known only within their margins of error.",
+    "D": "Correct. The plausible values for Q, 18 to 22, are all greater than the plausible values for P, 13 to 17."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\np = (15 - 2, 15 + 2)\nq = (20 - 2, 20 + 2)\nassert q[0] > p[1]\nassert answer == 'A' and 'Q is greater' in choices['A']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

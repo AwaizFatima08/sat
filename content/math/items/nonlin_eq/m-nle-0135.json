@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0135",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(y = \\frac{2x + 3}{x - 1}\\), where \\(x \\ne 1\\) and \\(y \\ne 2\\), which of the following expresses \\(x\\) in terms of \\(y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x = \\frac{2y + 3}{y - 1}\\)",
+    "B": "\\(x = \\frac{y + 3}{y - 2}\\)",
+    "C": "\\(x = \\frac{y - 3}{y - 2}\\)",
+    "D": "\\(x = \\frac{y + 3}{y + 2}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Multiply by \\(x - 1\\): \\(y(x - 1) = 2x + 3\\), so \\(xy - y = 2x + 3\\).",
+    "Collect the \\(x\\)-terms: \\(xy - 2x = y + 3\\), so \\(x(y - 2) = y + 3\\).",
+    "Divide: \\(x = \\frac{y + 3}{y - 2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the original equation with \\(x\\) and \\(y\\) swapped, not the equation solved for \\(x\\).",
+    "B": "Correct. \\(x(y - 2) = y + 3\\) gives \\(x = \\frac{y + 3}{y - 2}\\).",
+    "C": "Incorrect. This is the result of a sign slip when moving \\(-y\\) to the other side.",
+    "D": "Incorrect. This is the result of a sign slip when moving \\(2x\\) to the other side."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nsol = solve(Eq(y, (2*x + 3)/(x - 1)), x)\nassert len(sol) == 1\nf = lambda k: value(choices[k].replace('x = ', ''))\nassert simplify(f(answer) - sol[0]) == 0\nassert all(simplify(f(k) - sol[0]) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-prb-0528",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "An integer is selected at random from the integers 1 through 60, inclusive. Given that the integer is a multiple of 4, what is the probability that it is also a multiple of 6?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1/3"
+  ],
+  "solution": [
+    "Multiples of 4 from 1 to 60: 4, 8, …, 60, which is 15 integers.",
+    "A multiple of 4 is also a multiple of 6 exactly when it is a multiple of 12: 12, 24, 36, 48, 60, which is 5 integers.",
+    "The probability is \\(\\frac{5}{15} = \\frac{1}{3}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "m4 = [k for k in range(1, 61) if k % 4 == 0]\np = Rational(len([k for k in m4 if k % 6 == 0]), len(m4))\nassert [Rational(a) for a in spr_answers] == [p] == [Rational(1, 3)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "1/3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

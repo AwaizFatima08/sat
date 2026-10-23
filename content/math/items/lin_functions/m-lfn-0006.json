@@ -1,0 +1,83 @@
+{
+  "id": "m-lfn-0006",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "The table shows four values of \\(x\\) and their corresponding values of \\(f(x)\\) for the linear function \\(f\\). Which equation defines \\(f\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "Values of f",
+    "columns": [
+      "x",
+      "f(x)"
+    ],
+    "rows": [
+      [
+        "-2",
+        "13"
+      ],
+      [
+        "1",
+        "7"
+      ],
+      [
+        "4",
+        "1"
+      ],
+      [
+        "7",
+        "-5"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(f(x) = 2x + 5\\)",
+    "B": "\\(f(x) = -\\frac{1}{2}x + \\frac{15}{2}\\)",
+    "C": "\\(f(x) = -2x + 9\\)",
+    "D": "\\(f(x) = -2x + 13\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Each time \\(x\\) increases by 3, \\(f(x)\\) decreases by 6, so the slope is \\(\\frac{-6}{3} = -2\\).",
+    "Write \\(f(x) = -2x + b\\) and use \\((1, 7)\\): \\(-2 + b = 7\\), so \\(b = 9\\).",
+    "Check another row: \\(f(4) = -8 + 9 = 1\\). So \\(f(x) = -2x + 9\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses a slope of 2 instead of \\(-2\\); \\(f(x)\\) decreases as \\(x\\) increases. It fits only the row \\((1, 7)\\).",
+    "B": "Incorrect. This uses \\(\\frac{3}{-6}\\), the change in \\(x\\) over the change in \\(f(x)\\), as the slope; that is the reciprocal of the slope.",
+    "C": "Correct. The slope is \\(-2\\) and the line passes through \\((1, 7)\\), so \\(b = 9\\); every row of the table fits.",
+    "D": "Incorrect. This takes 13, the first output in the table, as the \\(y\\)-intercept, but 13 is \\(f(-2)\\), not \\(f(0)\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "reciprocal",
+    "D": "misread_graph"
+  },
+  "verify": "x = symbols('x')\nr = [[int(c) for c in row] for row in figure['rows']]\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if all(rhs(choices[k]).subs(x, a) == fa for a, fa in r)]\nassert ok == [answer]\nassert simplify(rhs(choices[answer]) - (-2*x + 9)) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

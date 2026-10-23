@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0503",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The equation \\(4x - y = 10\\) relates \\(x\\) and \\(y\\). If \\(x = 3\\), what is the value of \\(y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(22\\)",
+    "C": "\\(-2\\)",
+    "D": "\\(\\frac{13}{4}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = 3\\): \\(12 - y = 10\\).",
+    "Subtract 12 from both sides: \\(-y = -2\\), so \\(y = 2\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(4(3) - y = 10\\) gives \\(-y = -2\\), so \\(y = 2\\).",
+    "B": "Incorrect. This adds 12 and 10 instead of subtracting: it treats \\(4x - y = 10\\) as \\(y = 4x + 10\\).",
+    "C": "Incorrect. This stops at \\(-y = -2\\) and drops the negative sign on \\(y\\) instead of dividing by \\(-1\\).",
+    "D": "Incorrect. This substitutes 3 for \\(y\\) instead of \\(x\\) and solves \\(4x - 3 = 10\\) for \\(x\\)."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "sign_error",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\ny = symbols('y')\nsol = solve(Eq(4*3 - y, 10), y)\nassert sol == [2]\nassert value(choices[answer]) == 2\nassert all(value(choices[k]) != 2 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

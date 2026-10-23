@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0142",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[2x - 3y = 7\\] \\[4x + ky = c\\] In the system of equations above, \\(k\\) and \\(c\\) are constants. If the system has no solution, which of the following must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(k = -6\\) and \\(c = 14\\)",
+    "B": "\\(k = -6\\) and \\(c \\ne 14\\)",
+    "C": "\\(k = 6\\) and \\(c \\ne 14\\)",
+    "D": "\\(k \\ne -6\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "No solution means the lines are parallel but different.",
+    "Parallel: \\(4x + ky\\) must be 2 times \\(2x - 3y\\), so \\(k = -6\\).",
+    "Different: the constant must not be 2 times 7, so \\(c \\ne 14\\). (If \\(c = 14\\), the lines are the same.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. With \\(k = -6\\) and \\(c = 14\\), the second equation is 2 times the first, so the system has infinitely many solutions.",
+    "B": "Correct. The lines are parallel only if \\(k = -6\\), and they are different lines only if \\(c \\ne 14\\).",
+    "C": "Incorrect. With \\(k = 6\\), the slopes are \\(\\frac{2}{3}\\) and \\(-\\frac{2}{3}\\), so the lines intersect; the sign of \\(-3\\) was dropped when doubling.",
+    "D": "Incorrect. If \\(k \\ne -6\\), the slopes differ and the system has exactly one solution."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nassert linsolve([2*x - 3*y - 7, 4*x - 6*y - 13], [x, y]) == EmptySet\nassert linsolve([2*x - 3*y - 7, 4*x - 6*y - 14], [x, y]).free_symbols\nassert linsolve([2*x - 3*y - 7, 4*x + 6*y - 13], [x, y]) != EmptySet\nassert choices[answer] == r'\\(k = -6\\) and \\(c \\ne 14\\)'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

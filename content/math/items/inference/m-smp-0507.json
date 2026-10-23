@@ -1,0 +1,83 @@
+{
+  "id": "m-smp-0507",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows the results of a survey of a random sample of 200 visitors to a science museum. Each visitor named a favorite exhibit. The museum expects 12,000 visitors next month. Based on the survey, which of the following is the best estimate of the number of next month's visitors whose favorite exhibit is Space?",
+  "figure": {
+    "kind": "table",
+    "title": "Favorite exhibit",
+    "columns": [
+      "Exhibit",
+      "Number of visitors"
+    ],
+    "rows": [
+      [
+        "Dinosaurs",
+        70
+      ],
+      [
+        "Space",
+        50
+      ],
+      [
+        "Oceans",
+        46
+      ],
+      [
+        "Robots",
+        34
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3{,}000\\)",
+    "B": "\\(6{,}000\\)",
+    "C": "\\(50\\)",
+    "D": "\\(9{,}000\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "In the sample, \\(\\frac{50}{200} = 0.25\\) of the visitors chose Space.",
+    "Apply this to next month's visitors: \\(0.25(12{,}000) = 3{,}000\\)."
+  ],
+  "explanation": {
+    "A": "Correct. 25% of the sample chose Space, and 25% of 12,000 is 3,000.",
+    "B": "Incorrect. This treats 50 as a percent (50% of 12,000), but 50 visitors out of 200 is 25%.",
+    "C": "Incorrect. 50 is the number of sampled visitors who chose Space; it has not been scaled up to 12,000 visitors.",
+    "D": "Incorrect. This is the estimated number of visitors whose favorite is NOT Space: \\(0.75(12{,}000)\\)."
+  },
+  "traps": {
+    "B": "percent_add",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nrows = dict((r[0], r[1]) for r in figure['rows'])\nn = sum(rows.values())\nassert n == 200\nest = Rational(rows['Space'], n) * 12000\nassert est == 3000 and value(choices[answer]) == est\nassert all(value(choices[k]) != est for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

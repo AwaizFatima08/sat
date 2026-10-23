@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0156",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A ball is thrown straight up from ground level. At the same moment, a drone 36 meters above the ground begins descending at a constant speed. The heights, in meters, of the ball and the drone \\(t\\) seconds later are modeled by \\(b = -5t^{2} + 25t\\) and \\(d = 36 - 3t\\), respectively. According to the models, at what height, in meters, are the ball and the drone first at the same height?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "30"
+  ],
+  "solution": [
+    "Set the heights equal: \\(-5t^{2} + 25t = 36 - 3t\\), so \\(5t^{2} - 28t + 36 = 0\\).",
+    "Factor: \\((5t - 18)(t - 2) = 0\\), so \\(t = 2\\) or \\(t = 3.6\\).",
+    "The first time is \\(t = 2\\), when the drone's height is \\(36 - 3(2) = 30\\) meters (and the ball's is \\(-20 + 50 = 30\\) meters)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t', positive=True)\nts = sorted(solve(Eq(-5*t**2 + 25*t, 36 - 3*t), t))\nassert ts == [2, Rational(18, 5)]\nh = 36 - 3*ts[0]\nassert h == 30 and [Rational(a) for a in spr_answers] == [h]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "30",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

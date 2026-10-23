@@ -1,0 +1,135 @@
+{
+  "id": "m-lat-0512",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Near Multan, two straight railway tracks run parallel to each other. A straight road crosses both tracks, as shown, making a \\(48^{\\circ}\\) angle with the first track. What is the value of \\(x\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        11,
+        0
+      ],
+      "C": [
+        0,
+        4
+      ],
+      "D": [
+        11,
+        4
+      ],
+      "E": [
+        3,
+        0
+      ],
+      "F": [
+        6.602,
+        4
+      ],
+      "G": [
+        2.063,
+        -1.04
+      ],
+      "H": [
+        7.538,
+        5.04
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "G",
+        "H"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          4.096,
+          0.488
+        ],
+        "text": "48°"
+      },
+      {
+        "at": [
+          7.008,
+          3.086
+        ],
+        "text": "x°"
+      },
+      {
+        "at": [
+          9.5,
+          -0.6
+        ],
+        "text": "track 1"
+      },
+      {
+        "at": [
+          9.5,
+          4.6
+        ],
+        "text": "track 2"
+      },
+      {
+        "at": [
+          8.43839902609376,
+          5.040402755668352
+        ],
+        "text": "road"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "132"
+  ],
+  "solution": [
+    "Because the tracks are parallel, angle \\(BEF\\) (48°) and angle \\(CFE\\) are alternate interior angles, so angle \\(CFE = 48^{\\circ}\\).",
+    "Angle \\(DFE\\) forms a straight line with angle \\(CFE\\), so \\(x = 180 - 48 = 132\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['A'][1]==P['B'][1] and P['C'][1]==P['D'][1]\nassert abs(ang('B','E','F')-48)<0.1\nans=180-48\nassert abs(ang('D','F','E')-ans)<0.1\nassert Rational(spr_answers[0])==ans==132\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "132",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

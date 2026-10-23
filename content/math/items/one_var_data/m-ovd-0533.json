@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0533",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A data set has a mean of \\(m\\) and a standard deviation of \\(s\\), where \\(s > 0\\). Two new values, each equal to \\(m\\), are added to the data set. Which statement about the new data set is true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The mean is \\(m\\), and the standard deviation is \\(s\\).",
+    "B": "The mean is greater than \\(m\\), and the standard deviation is less than \\(s\\).",
+    "C": "The mean is \\(m\\), and the standard deviation is less than \\(s\\).",
+    "D": "The mean is \\(m\\), and the standard deviation is greater than \\(s\\)."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The two new values add \\(2m\\) to the total and 2 to the count, so the mean stays \\(m\\).",
+    "Each new value is 0 away from the mean. The total of the squared distances from the mean stays the same, but it is now shared among more values.",
+    "So the values are, on average, closer to the mean, and the standard deviation is less than \\(s\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The mean does not change, but the standard deviation does: the new values add no distance from the mean while increasing the number of values, so the typical distance shrinks.",
+    "B": "Incorrect. Adding values equal to the mean does not change the mean. The total increases by \\(2m\\) and the count by 2.",
+    "C": "Correct. The mean stays \\(m\\), and values equal to the mean make the data, on average, closer to the mean, so the standard deviation decreases.",
+    "D": "Incorrect. Adding values makes the data set larger, but values equal to the mean make it less spread out, not more."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nsd = lambda d: sqrt(sum((x - Rational(sum(d), len(d)))**2 for x in d) / len(d))\nssd = lambda d: sqrt(sum((x - Rational(sum(d), len(d)))**2 for x in d) / (len(d) - 1))\nd = [Integer(1), Integer(3), Integer(5), Integer(7)]\nm = Rational(sum(d), 4)\ne = d + [m, m]\nassert Rational(sum(e), 6) == m\nassert sd(e) < sd(d) and ssd(e) < ssd(d)\nassert choices[answer].startswith('The mean is \\\\(m\\\\)') and 'less than' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "m-stc-0527",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Two studies estimated the percent of adults in Chattogram, Bangladesh, who exercise every day. The table describes the two studies. Which study gives the better estimate for all adults in Chattogram, and why?",
+  "figure": {
+    "kind": "table",
+    "title": "Two studies of daily exercise",
+    "columns": [
+      "Study",
+      "How participants were chosen",
+      "Number of adults",
+      "Percent who exercise daily"
+    ],
+    "rows": [
+      [
+        "1",
+        "Selected at random from all adults in the city",
+        "500",
+        "34%"
+      ],
+      [
+        "2",
+        "Answered an online poll on a fitness website",
+        "2,000",
+        "61%"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Neither study, because a sample can never be used to estimate a percent for a whole city",
+    "B": "Study 2, because its sample is four times as large as the sample in Study 1",
+    "C": "Study 2, because people who answer online polls are more honest than people in a random sample",
+    "D": "Study 1, because its participants were selected at random, so its sample is likely to represent the city's adults"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Study 2 is a voluntary response sample from a fitness website, so it likely over-represents people who exercise; its 61% is probably too high.",
+    "Study 1 is a random sample, so even though it is smaller, it is likely to represent all adults in the city."
+  ],
+  "explanation": {
+    "A": "Incorrect. A random sample can be used to estimate a percent for the population it was drawn from.",
+    "B": "Incorrect. A larger sample does not fix bias; a biased sample of 2,000 is worse than a random sample of 500.",
+    "C": "Incorrect. There is no reason to think poll respondents are more honest, and their sample is still biased.",
+    "D": "Correct. Random selection makes Study 1's sample representative, which matters more than size."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nrows = figure['rows']\nrandom_studies = [r[0] for r in rows if 'at random' in r[1]]\nassert random_studies == ['1']\nok = [k for k, v in choices.items() if v.startswith('Study ' + random_studies[0])]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

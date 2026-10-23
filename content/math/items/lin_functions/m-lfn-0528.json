@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0528",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A courier company's charge to ship a parcel is a linear function of the parcel's mass. Shipping a 3-kilogram parcel costs 11.50 dollars, and shipping an 8-kilogram parcel costs 24.00 dollars. What is the mass, in kilograms, of a parcel that costs 19.00 dollars to ship?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "The charge per kilogram is \\(\\frac{24.00 - 11.50}{8 - 3} = \\frac{12.50}{5} = 2.50\\) dollars.",
+    "The fixed part is \\(11.50 - 3(2.50) = 4\\) dollars, so \\(C(m) = 2.5m + 4\\).",
+    "\\(2.5m + 4 = 19\\) gives \\(2.5m = 15\\), so \\(m = 6\\) kilograms."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "m = symbols('m')\nr = (Rational('24.00') - Rational('11.50')) / (8 - 3)\nC = Rational('11.50') + r*(m - 3)\nsol = solve(Eq(C, 19), m)\nassert r == Rational(5, 2) and sol == [6]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

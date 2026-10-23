@@ -1,0 +1,59 @@
+{
+  "id": "m-cir-0538",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(x^{2} + y^{2} - 4x + 6y + c = 0\\), where \\(c\\) is a constant, is a circle for which of the following values of \\(c\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20\\)",
+    "B": "\\(14\\)",
+    "C": "\\(13\\)",
+    "D": "\\(12\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Complete the square: \\((x - 2)^{2} + (y + 3)^{2} = 13 - c\\).",
+    "The graph is a circle only when the right side is positive: \\(13 - c > 0\\), so \\(c < 13\\).",
+    "Of the choices, only \\(c = 12\\) works (radius \\(\\sqrt{1} = 1\\))."
+  ],
+  "explanation": {
+    "A": "Incorrect. This reverses the condition: \\(c = 20\\) gives \\(r^{2} = -7\\), and no points satisfy the equation.",
+    "B": "Incorrect. This reverses the condition: \\(c = 14\\) gives \\(r^{2} = -1\\), and no points satisfy the equation.",
+    "C": "Incorrect. With \\(c = 13\\) the right side is 0, so the graph is the single point \\((2, -3)\\), not a circle.",
+    "D": "Correct. \\(13 - 12 = 1 > 0\\), so the graph is a circle of radius 1."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx,y,c=symbols('x y c')\nassert expand((x-2)**2+(y+3)**2-(13-c))==x**2+y**2-4*x+6*y+c\nr2=lambda v: 13-v\nassert r2(value(choices[answer]))>0\nassert all(r2(value(choices[k]))<=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

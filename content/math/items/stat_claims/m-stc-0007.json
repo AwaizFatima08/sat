@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0007",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A school district selected 500 of its students at random. Of these, 300 already used a free tutoring app, and 200 did not. In the first part of the study, the students who used the app had a higher average math score than those who did not. In the second part, the researchers randomly assigned 100 of the 200 students who did not use the app to use it for one semester; the other 100 continued without it. At the end of the semester, the group assigned to use the app showed a greater average increase in math score. Which of the following conclusions is best supported by the study?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "For the students in the district who already used the app, using the app caused their higher math scores.",
+    "B": "Using the app caused a greater increase in math score only for the 100 students who were assigned to use it.",
+    "C": "No cause-and-effect conclusion can be drawn, because the students who already used the app chose to use it.",
+    "D": "For students in the district who were not already using the app, using the app likely causes a greater increase in math score."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Part 1 is observational (students chose whether to use the app), so it shows only an association.",
+    "Part 2 used random assignment, so it supports cause and effect, but only for the kind of students in it: students who were not using the app.",
+    "Those 200 students are a random sample of the district's non-users (they come from a random sample of the district), so the causal conclusion extends to all students in the district who were not using the app."
+  ],
+  "explanation": {
+    "A": "Incorrect. The students who already used the app chose to use it (Part 1), so their higher scores show only an association.",
+    "B": "Incorrect. The 200 non-users came from a random sample of the district, so the result can be generalized beyond the 100 assigned students.",
+    "C": "Incorrect. Part 1 is observational, but Part 2 used random assignment, which does support a cause-and-effect conclusion.",
+    "D": "Correct. Random assignment within a random sample of the district's non-users supports a causal conclusion for all non-users in the district."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "part1 = {'random_assignment': False}\npart2 = {'random_assignment': True, 'drawn_from': 'non-users in a random sample of the district'}\nassert not part1['random_assignment'] and part2['random_assignment']\nkey = choices[answer]\nassert answer == 'D' and 'not already using' in key and 'likely causes' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

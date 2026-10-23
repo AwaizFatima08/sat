@@ -1,0 +1,87 @@
+{
+  "id": "m-smp-0515",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A school has 3,600 students. The bar graph shows the results when a random sample of 120 of the students were each asked to name their favorite lunch choice. Based on the sample, which of the following is the best estimate of the number of students at the school whose favorite lunch choice is rice or salad?",
+  "figure": {
+    "kind": "bar",
+    "title": "Favorite lunch choice",
+    "x_label": "Lunch choice",
+    "y_label": "Number of students",
+    "series": [
+      {
+        "name": "Students",
+        "points": [
+          [
+            "Rice",
+            42
+          ],
+          [
+            "Pasta",
+            30
+          ],
+          [
+            "Salad",
+            24
+          ],
+          [
+            "Sandwich",
+            24
+          ]
+        ]
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1{,}620\\)",
+    "B": "\\(66\\)",
+    "C": "\\(1{,}980\\)",
+    "D": "\\(1{,}260\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "In the sample, \\(42 + 24 = 66\\) of the 120 students chose rice or salad.",
+    "Proportion: \\(\\frac{66}{120} = 0.55\\).",
+    "Estimate for the school: \\(0.55(3{,}600) = 1{,}980\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the estimate for students whose favorite is NOT rice or salad: \\(\\frac{54}{120}(3{,}600)\\).",
+    "B": "Incorrect. 66 is the number of SAMPLED students who chose rice or salad; it has not been scaled up to 3,600 students.",
+    "C": "Correct. \\(\\frac{66}{120} = 0.55\\) of the sample chose rice or salad, and \\(0.55(3{,}600) = 1{,}980\\).",
+    "D": "Incorrect. This counts only the students who chose rice: \\(\\frac{42}{120}(3{,}600) = 1{,}260\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\npts = dict(figure['series'][0]['points'])\nn = sum(pts.values())\nassert n == 120\nest = Rational(pts['Rice'] + pts['Salad'], n) * 3600\nassert est == 1980 and value(choices[answer]) == est\nassert all(value(choices[k]) != est for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

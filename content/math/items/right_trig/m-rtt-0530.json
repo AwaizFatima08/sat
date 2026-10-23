@@ -1,0 +1,115 @@
+{
+  "id": "m-rtt-0530",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A road sign is shaped like an equilateral triangle with sides 90 centimeters long. What is the area of the sign, in square centimeters?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        90,
+        0
+      ],
+      "C": [
+        45,
+        77.942
+      ],
+      "M": [
+        45,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "C",
+        "M"
+      ],
+      [
+        "A",
+        "M"
+      ],
+      [
+        "M",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          45,
+          -6
+        ],
+        "text": "90 cm"
+      }
+    ],
+    "right_angles": [
+      "M"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2{,}025\\)",
+    "B": "\\(4{,}050\\)",
+    "C": "\\(4{,}050\\sqrt{3}\\)",
+    "D": "\\(2{,}025\\sqrt{3}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The altitude splits the triangle into two 30°-60°-90° triangles with hypotenuse 90 and short leg 45.",
+    "Height \\(= 45\\sqrt{3}\\).",
+    "Area \\(= \\frac{1}{2}(90)(45\\sqrt{3}) = 2{,}025\\sqrt{3}\\) (about \\(3{,}507\\) square centimeters)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses 45, half the side, as the height; the height of an equilateral triangle is \\(\\frac{\\sqrt{3}}{2}\\) times the side.",
+    "B": "Incorrect. This uses the 90-centimeter side as the height; the height is shorter than a side.",
+    "C": "Incorrect. This is base times height without the factor \\(\\frac{1}{2}\\).",
+    "D": "Correct. The height is \\(45\\sqrt{3}\\), so the area is \\(\\frac{1}{2}(90)(45\\sqrt{3}) = 2{,}025\\sqrt{3}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('A','B')==90 and abs(d('B','C')-90)<0.01 and abs(d('A','C')-90)<0.01\ns=90\nh=sqrt(s**2-Rational(s,2)**2)\nans=Rational(1,2)*s*h\nassert simplify(ans-2025*sqrt(3))==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

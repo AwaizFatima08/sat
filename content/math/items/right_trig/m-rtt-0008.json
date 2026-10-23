@@ -1,0 +1,46 @@
+{
+  "id": "m-rtt-0008",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "In triangle \\(ABC\\), angle \\(C\\) is a right angle and \\(\\cos(90^{\\circ} - A) = 0.28\\). What is the value of \\(\\tan B\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "24/7"
+  ],
+  "solution": [
+    "\\(\\cos(90^{\\circ} - A) = \\sin A\\), so \\(\\sin A = 0.28 = \\frac{7}{25}\\). Take \\(BC = 7\\) (opposite \\(A\\)) and \\(AB = 25\\).",
+    "\\(AC = \\sqrt{25^{2} - 7^{2}} = 24\\).",
+    "For angle \\(B\\), the opposite leg is \\(AC\\) and the adjacent leg is \\(BC\\): \\(\\tan B = \\frac{24}{7}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "sA=Rational('0.28')\nBC,AB=7,25\nassert Rational(BC,AB)==sA\nAC=sqrt(AB**2-BC**2)\nans=Rational(AC,BC)\nassert AC==24 and ans==sqrt(1-sA**2)/sA\nassert Rational(spr_answers[0])==ans==Rational(24,7)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "24/7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

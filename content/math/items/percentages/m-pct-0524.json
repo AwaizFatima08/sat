@@ -1,0 +1,44 @@
+{
+  "id": "m-pct-0524",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A store reduces the price of a backpack by \\(15\\%\\). A customer then uses a coupon that takes \\$10 off the reduced price and pays \\$58. What was the original price of the backpack, in dollars?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "80"
+  ],
+  "solution": [
+    "Before the coupon, the reduced price was \\(58 + 10 = 68\\) dollars.",
+    "The reduced price is \\(85\\%\\) of the original price \\(p\\): \\(0.85p = 68\\).",
+    "Divide: \\(p = \\frac{68}{0.85} = 80\\) dollars."
+  ],
+  "verify": "p = symbols('p')\nsol = solve(Eq(Rational(85, 100) * p - 10, 58), p)\nassert sol == [80]\nv = sol[0]\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == v",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "80",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "m-ovd-0508",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The mean of six numbers is \\(15\\). What is the sum of the six numbers?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "90"
+  ],
+  "solution": [
+    "The mean is the sum divided by the number of values, so the sum is the mean times the number of values.",
+    "Sum \\(= 6 \\cdot 15 = 90\\)."
+  ],
+  "verify": "s = symbols('s')\nr = solve(Eq(s / 6, 15), s)[0]\nassert r == 90\nassert Rational(spr_answers[0]) == r and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "90",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

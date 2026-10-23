@@ -1,0 +1,59 @@
+{
+  "id": "m-tvd-0105",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "For a sample of households, the line of best fit \\(y = 140x + 210\\) models the weekly water use \\(y\\), in liters, of a household with \\(x\\) people. According to the model, how many more liters of water per week does a household of 6 people use than a household of 2 people?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(490\\)",
+    "B": "\\(140\\)",
+    "C": "\\(1{,}050\\)",
+    "D": "\\(560\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The slope, 140, is the predicted increase in weekly water use for each additional person.",
+    "A household of 6 people has 4 more people than a household of 2, so the difference is \\(4 \\cdot 140 = 560\\) liters.",
+    "(Check: \\(140(6) + 210 = 1{,}050\\) and \\(140(2) + 210 = 490\\); \\(1{,}050 - 490 = 560\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the predicted weekly water use of the household of 2 people, not the difference.",
+    "B": "Incorrect. This is the predicted increase for 1 additional person. The households differ by 4 people.",
+    "C": "Incorrect. This is the predicted weekly water use of the household of 6 people, not the difference.",
+    "D": "Correct. The difference is \\(140 \\cdot (6 - 2) = 560\\) liters."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nf = lambda n: 140*n + 210\nd = f(6) - f(2)\nassert d == 560\nassert value(choices[answer]) == d\nassert all(value(choices[k]) != d for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

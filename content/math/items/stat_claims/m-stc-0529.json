@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0529",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A company tested whether a new office chair reduces back discomfort. It selected 120 office workers at random from its employees and randomly assigned 60 of them to use the new chair and 60 to keep their current chair. Workers knew which chair they had. After six weeks, the workers with the new chair reported less back discomfort, on average. Which of the following describes a weakness in this study?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A cause-and-effect conclusion would require the workers to be selected at random, which they were not.",
+    "B": "Back discomfort can only be measured for workers who use the new chair.",
+    "C": "Because the workers knew whether they had the new chair, their expectations could have affected the discomfort they reported.",
+    "D": "Random assignment made the two groups too different from each other to compare."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The outcome is self-reported, and every worker knew which group they were in.",
+    "Workers who expect a new chair to help may report less discomfort even if the chair has no real effect, so expectations are mixed up with the chair's effect."
+  ],
+  "explanation": {
+    "A": "Incorrect. The workers were selected at random, and random selection is not what supports cause and effect anyway.",
+    "B": "Incorrect. Discomfort was measured in both groups; that is how the groups were compared.",
+    "C": "Correct. Knowing their group could change what workers report, which could explain the difference.",
+    "D": "Incorrect. Random assignment makes the groups alike, apart from chance; that is its purpose."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\ndesign = {'random_sample': True, 'random_assignment': True, 'blind': False, 'self_report': True}\nassert design['random_assignment'] and not design['blind'] and design['self_report']\nok = [k for k, v in choices.items() if 'knew whether' in v]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

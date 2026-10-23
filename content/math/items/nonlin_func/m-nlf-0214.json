@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0214",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = x^{2} - 6x + 13\\). The function \\(g\\) is defined by \\(g(x) = f(x + h)\\), where \\(h\\) is a constant. In the \\(xy\\)-plane, the graph of \\(y = g(x)\\) is symmetric about the \\(y\\)-axis. What is the value of \\(h\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(6\\)",
+    "C": "\\(-3\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "\\(f(x) = (x - 3)^{2} + 4\\), so the graph of \\(f\\) is symmetric about \\(x = 3\\).",
+    "\\(g(x) = f(x + h) = (x + h - 3)^{2} + 4\\), which is symmetric about \\(x = 3 - h\\).",
+    "For symmetry about the \\(y\\)-axis, \\(3 - h = 0\\), so \\(h = 3\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The graph of \\(f\\) has its axis of symmetry at \\(x = 3\\). \\(g(x) = f(x + 3)\\) shifts it 3 units left, onto the \\(y\\)-axis.",
+    "B": "Incorrect. This uses the coefficient 6 directly. The axis of symmetry is at \\(x = \\frac{6}{2} = 3\\), so the shift is 3.",
+    "C": "Incorrect. \\(g(x) = f(x - 3)\\) shifts the graph 3 units right, moving the axis of symmetry to \\(x = 6\\).",
+    "D": "Incorrect. This is the minimum value of \\(f\\), \\(f(3) = 4\\), not the needed shift."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "sign_error",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx, h = symbols('x h')\nf = Lambda(x, x**2 - 6*x + 13)\ng = expand(f(x + h))\nhs = solve(Poly(g, x).coeff_monomial(x), h)\nassert hs == [3]\nassert value(choices[answer]) == 3\nassert all(expand(g.subs(h, value(c)) - g.subs(h, value(c)).subs(x, -x)) != 0 for k, c in choices.items() if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "type": "systems",
+  "title": "Systems of two linear equations",
+  "what_is_tested": "You find the pair \\((x, y)\\) that makes two linear equations true at the same time, set up a system from a word problem, and decide when a system has no solution or infinitely many. On a graph, the solution is the point where the two lines cross.",
+  "how_to_spot": "Two equations are stacked together, or a story gives two facts about two unknown amounts (a total count and a total cost, or two different purchases). The question asks for \\(x\\), \\(y\\), a combination such as \\(x + y\\), or the number of solutions.",
+  "method": [
+    "Name the two unknowns and write one equation for each fact.",
+    "If one equation is already solved for a variable, substitute that expression into the other equation.",
+    "Otherwise, multiply one or both equations so a variable has the same coefficient, then subtract (or add opposites) to eliminate it.",
+    "Solve for the remaining variable, then substitute back to find the other one.",
+    "Give exactly what is asked; sometimes adding or subtracting the equations gives it directly."
+  ],
+  "pitfalls": [
+    "Choosing a pair that makes only one of the two equations true (concept).",
+    "Reporting \\(y\\) when the question asks for \\(x\\), or reversing the order of the pair (wrong_quantity).",
+    "Multiplying only one side or one term of an equation before eliminating (arithmetic).",
+    "Subtracting equations without subtracting every term, especially negative ones (sign_error).",
+    "Mixing up the special cases: parallel lines (same slope, different intercepts) mean no solution; the same line means infinitely many (concept)."
+  ],
+  "calculator": "On the Graph tab, type both equations exactly as given and tap the intersection point; this is often the fastest route when the numbers are decimals or fractions. Systems with small whole numbers are usually just as fast by elimination.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: substitution",
+      "steps": [
+        "Find the equation that is already solved for one variable, such as \\(y = x + 4\\).",
+        "Substitute that expression into the other equation.",
+        "Solve for the variable that is left, then substitute back to find the other.",
+        "Check the pair in both equations before you choose."
+      ],
+      "worked_example": {
+        "stem": "\\[y = x + 4\\] \\[2x + y = 19\\] What is the solution \\((x, y)\\) to the system of equations above?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\((5, 1)\\)",
+          "B": "\\((6, 7)\\)",
+          "C": "\\((9, 5)\\)",
+          "D": "\\((5, 9)\\)"
+        },
+        "answer": "D",
+        "walkthrough": [
+          "The first equation gives \\(y\\) directly: \\(y = x + 4\\).",
+          "Substitute into the second: \\(2x + (x + 4) = 19\\), so \\(3x + 4 = 19\\) and \\(3x = 15\\).",
+          "So \\(x = 5\\) and \\(y = 5 + 4 = 9\\). The solution is \\((5, 9)\\), choice D.",
+          "Check both: \\(9 = 5 + 4\\) and \\(2(5) + 9 = 19\\). Choice B makes the second equation true but not the first (\\(7 \\ne 6 + 4\\)), and choice C reverses the coordinates."
+        ],
+        "verify": "x, y = symbols('x y')\nsol = solve([Eq(y, x + 4), Eq(2*x + y, 19)], [x, y])\nassert sol == {x: 5, y: 9}\npt = lambda s: [value(t) for t in s.strip('\\\\()').split(',')]\nassert pt(choices[answer]) == [5, 9]\nassert all(pt(choices[k]) != [5, 9] for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-sys-0001",
+        "m-sys-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: elimination in a word problem",
+      "steps": [
+        "Write one equation for each purchase or fact, using the same letters in both.",
+        "Multiply one equation so that one variable has the same coefficient in both.",
+        "Subtract to eliminate that variable, then solve for the one that is left.",
+        "Make sure the value you give is the one the question asks about."
+      ],
+      "worked_example": {
+        "stem": "A sports shop in Islamabad sells cricket balls and rolls of bat grip tape, each at a fixed price. Hira pays 1,240 rupees for 3 cricket balls and 2 rolls of grip tape. Bilal pays 1,080 rupees for 1 cricket ball and 4 rolls of grip tape. What is the price, in rupees, of 1 roll of grip tape?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "200"
+        ],
+        "walkthrough": [
+          "Let \\(b\\) be the price of a ball and \\(g\\) the price of a roll of tape: \\(3b + 2g = 1{,}240\\) and \\(b + 4g = 1{,}080\\).",
+          "Multiply the second equation by 3: \\(3b + 12g = 3{,}240\\).",
+          "Subtract the first equation from this one: \\(10g = 2{,}000\\), so \\(g = 200\\).",
+          "The question asks for the tape, so enter 200. The ball costs \\(1{,}080 - 4(200) = 280\\) rupees; entering 280 answers the wrong question."
+        ],
+        "verify": "b, g = symbols('b g')\ns = solve([Eq(3*b + 2*g, 1240), Eq(b + 4*g, 1080)], [b, g])\nassert s == {b: 280, g: 200}\nassert [Rational(v) for v in spr_answers] == [s[g]]"
+      },
+      "tryit": [
+        "m-sys-0003",
+        "m-sys-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: decimals, graphs and combinations",
+      "steps": [
+        "Turn a graph or table into equations (slope and intercept), or use the equations given.",
+        "Solve by substitution or elimination, or graph both equations on the Graph tab and read the intersection.",
+        "Check the coordinates in both equations.",
+        "Compute the combination the question asks for, such as \\(x + y\\)."
+      ],
+      "worked_example": {
+        "stem": "\\[3x + 2y = 7\\] \\[y = 0.5x - 4.5\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(x + y\\)?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(-2.5\\)",
+          "B": "\\(1.5\\)",
+          "C": "\\(4\\)",
+          "D": "\\(6.5\\)"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "Calculator route (Graph tab): type \\(3x + 2y = 7\\) and \\(y = 0.5x - 4.5\\); the lines meet at \\((4, -2.5)\\).",
+          "By hand: substitute into the first equation: \\(3x + 2(0.5x - 4.5) = 7\\), so \\(3x + x - 9 = 7\\), \\(4x = 16\\) and \\(x = 4\\).",
+          "Then \\(y = 0.5(4) - 4.5 = -2.5\\).",
+          "So \\(x + y = 4 + (-2.5) = 1.5\\), choice B. Choice C is \\(x\\) alone, choice A is \\(y\\) alone, and choice D is \\(x - y\\)."
+        ],
+        "verify": "x, y = symbols('x y')\ns = solve([Eq(3*x + 2*y, 7), Eq(y, Rational(1, 2)*x - Rational(9, 2))], [x, y])\nassert s == {x: 4, y: Rational(-5, 2)}\nt = s[x] + s[y]\nassert value(choices[answer]) == t == Rational(3, 2)\nassert all(value(choices[k]) != t for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-sys-0005",
+        "m-sys-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: no solution or infinitely many",
+      "steps": [
+        "Write both equations in the form \\(Ax + By = C\\).",
+        "Find the number that turns one equation's known coefficient into the other's (for example, \\(3y\\) into \\(6y\\) means times 2).",
+        "Infinitely many solutions: that same multiple also matches the other coefficient and the constant. No solution: the left sides match but the constants do not.",
+        "Solve the small equations for the constants, then answer the question."
+      ],
+      "worked_example": {
+        "stem": "\\[ax + 3y = 12\\] \\[4x + 6y = b\\] In the system of equations above, \\(a\\) and \\(b\\) are constants. If the system has infinitely many solutions, what is the value of \\(a + b\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "26"
+        ],
+        "walkthrough": [
+          "Infinitely many solutions means the two equations describe the same line, so one equation is a multiple of the other.",
+          "Compare the \\(y\\)-terms: \\(6y = 2 \\cdot 3y\\), so the second equation must be 2 times the first: \\(2ax + 6y = 24\\).",
+          "Match it with \\(4x + 6y = b\\): \\(2a = 4\\), so \\(a = 2\\), and \\(b = 24\\).",
+          "So \\(a + b = 26\\). If \\(a = 2\\) but \\(b\\) were not 24, the lines would be parallel and the system would have no solution; a student who stops at \\(b = 12\\) (forgetting to double the constant) gets 14."
+        ],
+        "verify": "a, b, k = symbols('a b k')\ns = solve([Eq(k*a, 4), Eq(k*3, 6), Eq(k*12, b)], [a, b, k], dict=True)\nassert s == [{a: 2, b: 24, k: 2}]\nassert [Rational(v) for v in spr_answers] == [s[0][a] + s[0][b]]"
+      },
+      "tryit": [
+        "m-sys-0007",
+        "m-sys-0008"
+      ]
+    }
+  ]
+}

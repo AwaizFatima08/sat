@@ -1,0 +1,45 @@
+{
+  "id": "m-arv-0508",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A sphere has a radius of \\(3\\). The volume of the sphere is \\(k\\pi\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "36"
+  ],
+  "solution": [
+    "The volume of a sphere is \\(V = \\frac{4}{3}\\pi r^{3}\\).",
+    "\\(V = \\frac{4}{3}\\pi (27) = 36\\pi\\), so \\(k = 36\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "k=Rational(4,3)*3**3\nassert k==36\nassert Rational(spr_answers[0])==k and len(spr_answers)==1\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "36",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

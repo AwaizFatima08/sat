@@ -1,0 +1,59 @@
+{
+  "id": "m-pct-0523",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The number \\(a\\) is \\(60\\%\\) of \\(b\\), and the number \\(c\\) is \\(48\\%\\) of \\(b\\), where \\(b > 0\\). The number \\(a\\) is what percent greater than \\(c\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(25\\%\\)",
+    "B": "\\(125\\%\\)",
+    "C": "\\(20\\%\\)",
+    "D": "\\(12\\%\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Write both numbers in terms of \\(b\\): \\(a = 0.6b\\) and \\(c = 0.48b\\).",
+    "Compare: \\(\\frac{a}{c} = \\frac{0.6b}{0.48b} = 1.25\\).",
+    "So \\(a\\) is \\(125\\%\\) of \\(c\\), which is \\(25\\%\\) greater than \\(c\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\frac{a}{c} = \\frac{0.6}{0.48} = 1.25\\), so \\(a\\) is \\(25\\%\\) greater than \\(c\\).",
+    "B": "Incorrect. This is \\(a\\) as a percent of \\(c\\), not the percent by which \\(a\\) is greater than \\(c\\).",
+    "C": "Incorrect. This compares the difference \\(0.12b\\) with \\(a\\) instead of with \\(c\\): \\(\\frac{0.12b}{0.6b} = 20\\%\\). That is the percent by which \\(c\\) is less than \\(a\\).",
+    "D": "Incorrect. This subtracts the percents, \\(60\\% - 48\\% = 12\\%\\). That difference is a percent of \\(b\\), not a percent of \\(c\\)."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "percent_add",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nb = symbols('b', positive=True)\nv = simplify(Rational(60, 100) * b / (Rational(48, 100) * b) - 1)\nassert v == Rational(1, 4)\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

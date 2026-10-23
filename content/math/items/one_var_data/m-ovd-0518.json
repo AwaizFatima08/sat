@@ -1,0 +1,84 @@
+{
+  "id": "m-ovd-0518",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The histogram summarizes the monthly electricity bills, in taka, of 40 households in Chattogram. Each interval includes its left endpoint but not its right endpoint. What percent of the households had a bill of at least 2,000 taka?",
+  "figure": {
+    "kind": "histogram",
+    "x_label": "Monthly bill (taka)",
+    "y_label": "Number of households",
+    "bins": [
+      [
+        1000,
+        1500,
+        6
+      ],
+      [
+        1500,
+        2000,
+        14
+      ],
+      [
+        2000,
+        2500,
+        12
+      ],
+      [
+        2500,
+        3000,
+        8
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(30\\%\\)",
+    "B": "\\(65\\%\\)",
+    "C": "\\(50\\%\\)",
+    "D": "\\(20\\%\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Bills of at least 2,000 taka are in the intervals 2,000 to 2,500 and 2,500 to 3,000: \\(12 + 8 = 20\\) households.",
+    "As a percent of 40 households: \\(\\frac{20}{40} = 0.5\\), or \\(50\\%\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses only the bar for 2,000 to 2,500 taka: \\(\\frac{12}{40} = 30\\%\\).",
+    "B": "Incorrect. This adds the bars for 1,500 to 2,000 and 2,000 to 2,500 taka, \\(\\frac{14 + 12}{40} = 65\\%\\). Bills in the 1,500 to 2,000 interval are less than 2,000 taka.",
+    "C": "Correct. \\(12 + 8 = 20\\) of the 40 households had bills of at least 2,000 taka, and \\(\\frac{20}{40} = 50\\%\\).",
+    "D": "Incorrect. This uses only the bar for 2,500 to 3,000 taka: \\(\\frac{8}{40} = 20\\%\\)."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "misread_graph",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nn = sum(f for lo, hi, f in figure['bins'])\nassert n == 40\nr = Rational(sum(f for lo, hi, f in figure['bins'] if lo >= 2000), n)\nassert r == Rational(1, 2)\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

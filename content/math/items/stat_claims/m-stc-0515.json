@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0515",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In a study, the participants were selected at random from population P, but the participants were not assigned to treatments at random; each participant's group was recorded as it already was. Which statement best describes what the study can support?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A cause-and-effect conclusion about the participants only",
+    "B": "A cause-and-effect conclusion that can be generalized to population P",
+    "C": "A conclusion about association that can be generalized to population P",
+    "D": "No conclusion of any kind about population P"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Random selection from P allows the results to be generalized to P.",
+    "Without random assignment, the study is observational, so it can show an association but not cause and effect."
+  ],
+  "explanation": {
+    "A": "Incorrect. Without random assignment, cause and effect is not supported even for the participants.",
+    "B": "Incorrect. Cause and effect needs random assignment, which the study did not use.",
+    "C": "Correct. Random selection without random assignment supports an association that applies to P.",
+    "D": "Incorrect. The random sample does allow a conclusion about association in population P."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nrs, ra = True, False\nclaims = {'A': ('cause', 'P'), 'B': ('cause', 'sample'), 'C': ('none', 'P'), 'D': ('assoc', 'P')}\nok = [k for k, (c, s) in claims.items() if c == ('cause' if ra else 'assoc') and s == ('P' if rs else 'sample')]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0102",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Mariam is reading a novel. The number of pages she has left to read \\(d\\) days after she starts the novel is given by \\(P(d) = 420 - 35d\\). What is the best interpretation of the number 35 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The number of pages Mariam has left to read increases by 35 each day.",
+    "B": "Mariam has 35 pages left to read after 1 day.",
+    "C": "Mariam reads 35 pages each day.",
+    "D": "Mariam needs 35 days to finish the novel."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "In \\(P(d) = 420 - 35d\\), each increase of 1 in \\(d\\) lowers \\(P(d)\\) by 35.",
+    "So the number of pages left drops by 35 each day: Mariam reads 35 pages each day."
+  ],
+  "explanation": {
+    "A": "Incorrect. The term \\(-35d\\) is subtracted, so the number of pages left decreases, not increases.",
+    "B": "Incorrect. After 1 day she has \\(P(1) = 420 - 35 = 385\\) pages left, not 35.",
+    "C": "Correct. 35 is the coefficient of \\(d\\) with a negative sign in front, so the pages left decrease by 35 per day; that is, she reads 35 pages each day.",
+    "D": "Incorrect. She finishes when \\(P(d) = 0\\), which is at \\(d = 12\\) days. 35 is a number of pages per day, not a number of days."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nd = symbols('d')\nP = 420 - 35*d\nassert diff(P, d) == -35 and P.subs(d, 1) == 385 and solve(P, d) == [12]\nkey = 'reads 35 pages each day'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

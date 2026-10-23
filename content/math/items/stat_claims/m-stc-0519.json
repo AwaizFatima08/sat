@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0519",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A cricket academy in Karachi has 40 players, and all of them took part in a study. The coach randomly assigned 20 of the players to practice a new batting drill and the other 20 to practice the usual drill. After two months, the players who practiced the new drill had a greater average increase in batting average. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The new drill likely causes a greater increase in batting average for all cricket players in Pakistan.",
+    "B": "No cause-and-effect conclusion can be drawn, because the players were not selected at random from all players in Pakistan.",
+    "C": "The new drill likely caused a greater increase in batting average for the players at this academy.",
+    "D": "The study shows only an association, because the coach decided which players were in the study."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The players were randomly assigned to the two drills, so a cause-and-effect conclusion is supported.",
+    "Every player at the academy took part, so the conclusion applies to the academy's players, but not to players elsewhere."
+  ],
+  "explanation": {
+    "A": "Incorrect. The players all came from one academy, so the result cannot be generalized to all players in Pakistan.",
+    "B": "Incorrect. Random selection is needed to generalize, not to conclude cause and effect; random assignment supports cause and effect here.",
+    "C": "Correct. Random assignment supports cause and effect for the academy's players, who were all in the study.",
+    "D": "Incorrect. The coach decided who was in the study, but the drills were assigned at random, which supports cause and effect."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\ndesign = {'random_assignment': True, 'participants': 'whole academy'}\nclaims = {'A': ('cause', 'country'), 'B': ('none', 'none'), 'C': ('cause', 'academy'), 'D': ('assoc', 'academy')}\nok = [k for k, (c, s) in claims.items() if c == 'cause' and s == 'academy']\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

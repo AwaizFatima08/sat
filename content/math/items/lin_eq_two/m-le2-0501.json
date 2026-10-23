@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0501",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What is the \\(y\\)-intercept of the graph of \\(2x + 5y = 20\\) in the \\(xy\\)-plane?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((0, 4)\\)",
+    "B": "\\((10, 0)\\)",
+    "C": "\\((0, 20)\\)",
+    "D": "\\((0, 10)\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The \\(y\\)-intercept is where \\(x = 0\\).",
+    "Substitute \\(x = 0\\): \\(5y = 20\\), so \\(y = 4\\). The \\(y\\)-intercept is \\((0, 4)\\)."
+  ],
+  "explanation": {
+    "A": "Correct. With \\(x = 0\\), \\(5y = 20\\) gives \\(y = 4\\).",
+    "B": "Incorrect. \\((10, 0)\\) is the \\(x\\)-intercept, where \\(y = 0\\), not the \\(y\\)-intercept.",
+    "C": "Incorrect. This sets \\(x = 0\\) but stops at \\(5y = 20\\) without dividing by 5.",
+    "D": "Incorrect. This divides 20 by 2, the coefficient of \\(x\\), instead of by 5, the coefficient of \\(y\\)."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nyi = solve(Eq(2*0 + 5*y, 20), y)\nassert yi == [4]\nassert tuple(value(choices[answer])) == (0, 4)\nassert [k for k in choices if tuple(value(choices[k])) == (0, 4)] == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

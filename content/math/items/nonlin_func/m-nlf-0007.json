@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0007",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = x^{2} - 8x + 7\\). The function \\(g\\) is defined by \\(g(x) = f(x - h)\\), where \\(h\\) is a constant. If \\(g(1) = g(5)\\), what is the value of \\(h\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-1\\)",
+    "B": "\\(1\\)",
+    "C": "\\(3\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The vertex of \\(f\\) is at \\(x = -\\frac{-8}{2} = 4\\), so \\(f\\) is symmetric about the line \\(x = 4\\).",
+    "\\(g(x) = f(x - h)\\) is the graph of \\(f\\) shifted \\(h\\) units to the right, so \\(g\\) is symmetric about \\(x = 4 + h\\).",
+    "\\(g(1) = g(5)\\) means \\(1\\) and \\(5\\) are symmetric about the axis of \\(g\\), which is \\(x = \\frac{1 + 5}{2} = 3\\).",
+    "So \\(4 + h = 3\\) and \\(h = -1\\): the graph of \\(f\\) is shifted 1 unit to the left."
+  ],
+  "explanation": {
+    "A": "Correct. \\(g\\) must be symmetric about \\(x = 3\\), and its axis is \\(x = 4 + h\\), so \\(h = -1\\).",
+    "B": "Incorrect. This is the result of shifting in the wrong direction: \\(f(x - h)\\) moves the graph \\(h\\) units to the right, so the axis is \\(x = 4 + h\\), not \\(x = 4 - h\\).",
+    "C": "Incorrect. This is the axis of symmetry of \\(g\\), \\(x = 3\\), not the value of \\(h\\).",
+    "D": "Incorrect. This is the axis of symmetry of \\(f\\), \\(x = 4\\), not the value of \\(h\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "x, h = symbols('x h')\nf = Lambda(x, x**2 - 8*x + 7)\ng = Lambda(x, f(x - h))\nhs = solve(Eq(g(1), g(5)), h)\nassert hs == [-1]\nassert value(choices[answer]) == hs[0]\nassert all(value(choices[k]) != hs[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

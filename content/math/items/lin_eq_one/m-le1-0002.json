@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0002",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A taxi charges a fixed fee of \\$4 plus \\$2.50 for each mile driven. Which equation can be used to find the number of miles, \\(x\\), for a ride that costs a total of \\$29?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2.5x - 4 = 29\\)",
+    "B": "\\(4x + 2.5 = 29\\)",
+    "C": "\\(2.5(x + 4) = 29\\)",
+    "D": "\\(2.5x + 4 = 29\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The mileage charge is \\(2.5\\) dollars times the number of miles: \\(2.5x\\).",
+    "The fixed fee is added once: total cost \\(= 2.5x + 4\\).",
+    "Set the total equal to 29: \\(2.5x + 4 = 29\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This subtracts the fixed fee instead of adding it to the mileage charge.",
+    "B": "Incorrect. This mixes up the two numbers: it charges \\$4 per mile and treats \\$2.50 as the fixed fee.",
+    "C": "Incorrect. This charges \\$2.50 on the fixed fee as well, as if 4 extra miles were driven; the \\$4 fee is added once, not multiplied by 2.5.",
+    "D": "Correct. The cost per mile times the miles, \\(2.5x\\), plus the one-time \\$4 fee equals the total, \\$29."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "C": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\nside = lambda s, i: value(s.split('=')[i])\ncost = Rational(5, 2)*x + 4\ngood = [k for k in choices if simplify(side(choices[k], 0) - side(choices[k], 1) - (cost - 29)) == 0]\nassert good == [answer]\nassert solve(side(choices[answer], 0) - side(choices[answer], 1), x) == [10]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

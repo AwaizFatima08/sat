@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0168",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rectangular patio has an area of 128 square meters. If its length were decreased by 4 meters and its width were increased by 4 meters, the patio would be a square. What would be the area, in square meters, of the square patio?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "144"
+  ],
+  "solution": [
+    "Let the width be \\(w\\) meters and the length \\(l\\) meters. A square has equal sides, so \\(l - 4 = w + 4\\), which gives \\(l = w + 8\\).",
+    "Then \\(w(w + 8) = 128\\), so \\(w^{2} + 8w - 128 = 0\\) and \\((w + 16)(w - 8) = 0\\). Since \\(w > 0\\), \\(w = 8\\) and \\(l = 16\\).",
+    "The square has side length \\(8 + 4 = 12\\) meters, so its area is \\(12^{2} = 144\\) square meters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "w = symbols('w', positive=True)\nws = solve(Eq(w*(w + 8), 128), w)\nassert ws == [8]\ns = ws[0] + 4\nassert (ws[0] + 8) - 4 == s\nassert s**2 == 144 and [Rational(a) for a in spr_answers] == [s**2]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "144",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

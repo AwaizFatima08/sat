@@ -1,0 +1,100 @@
+{
+  "id": "m-tvd-0502",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following best describes the association between \\(x\\) and \\(y\\) shown in the scatterplot?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        1,
+        18
+      ],
+      [
+        2,
+        17
+      ],
+      [
+        3,
+        15
+      ],
+      [
+        4,
+        14
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        6
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A positive linear association",
+    "B": "No association",
+    "C": "A negative linear association",
+    "D": "A positive nonlinear association"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "As \\(x\\) increases, the values of \\(y\\) decrease, so the association is negative.",
+    "The points lie close to a straight line, so the association is linear."
+  ],
+  "explanation": {
+    "A": "Incorrect. In a positive association, \\(y\\) tends to increase as \\(x\\) increases. Here \\(y\\) decreases as \\(x\\) increases.",
+    "B": "Incorrect. The points follow a clear pattern: \\(y\\) falls steadily as \\(x\\) rises.",
+    "C": "Correct. The values of \\(y\\) decrease as \\(x\\) increases, and the points lie close to a line.",
+    "D": "Incorrect. The values of \\(y\\) decrease, not increase, and the points lie close to a straight line rather than a curve."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "misread_graph",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\npts = [(Integer(a), Integer(b)) for a, b in figure['points']]\nn = len(pts); mx = sum(a for a, b in pts) / n; my = sum(b for a, b in pts) / n\nsxy = sum((a - mx) * (b - my) for a, b in pts); sxx = sum((a - mx)**2 for a, b in pts); syy = sum((b - my)**2 for a, b in pts)\nr = sxy / sqrt(sxx * syy)\nassert r < -Rational(99, 100)\nassert 'negative linear' in choices[answer]\nassert all('negative linear' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

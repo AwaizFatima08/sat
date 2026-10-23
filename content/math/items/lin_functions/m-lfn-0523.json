@@ -1,0 +1,80 @@
+{
+  "id": "m-lfn-0523",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Kavya uses a prepaid metro card in Mumbai. Each trip costs the same amount, and no money is added to the card. The table shows the balance \\(B\\), in rupees, on the card after \\(n\\) trips. Which function gives \\(B(n)\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "Metro card balance",
+    "columns": [
+      "Trips, n",
+      "Balance (rupees)"
+    ],
+    "rows": [
+      [
+        "3",
+        "412"
+      ],
+      [
+        "7",
+        "324"
+      ],
+      [
+        "12",
+        "214"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(B(n) = 346 + 22n\\)",
+    "B": "\\(B(n) = 478 - 22n\\)",
+    "C": "\\(B(n) = 478 - \\frac{1}{22}n\\)",
+    "D": "\\(B(n) = 412 - 22n\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Between 3 and 7 trips the balance falls \\(412 - 324 = 88\\) rupees over 4 trips, or 22 rupees per trip.",
+    "Before any trips the balance was \\(412 + 3(22) = 478\\) rupees.",
+    "So \\(B(n) = 478 - 22n\\). Check: \\(B(12) = 478 - 264 = 214\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This treats the balance as increasing by 22 rupees per trip; it fits only the first row.",
+    "B": "Correct. The balance drops 22 rupees per trip and was 478 rupees before any trips; every row of the table fits.",
+    "C": "Incorrect. This uses \\(\\frac{4}{88} = \\frac{1}{22}\\), trips per rupee, as the rate; that is the reciprocal of the cost per trip.",
+    "D": "Incorrect. This uses 412, the balance after 3 trips, as the starting balance."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "reciprocal",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nn = symbols('n')\nr = [[int(c) for c in row] for row in figure['rows']]\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if all(rhs(choices[k]).subs(n, a) == b for a, b in r)]\nassert ok == [answer]\nassert simplify(rhs(choices[answer]) - (478 - 22*n)) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

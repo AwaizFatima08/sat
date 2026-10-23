@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0002",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "Dev has saved \\$46 and earns \\$12 per hour at a part-time job. What is the least number of whole hours he must work so that his total savings are at least \\$315?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(22\\)",
+    "B": "\\(23\\)",
+    "C": "\\(27\\)",
+    "D": "\\(31\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(h\\) be the number of hours: \\(46 + 12h \\ge 315\\).",
+    "Subtract 46: \\(12h \\ge 269\\), so \\(h \\ge 22.41...\\).",
+    "22 hours is not quite enough (\\(46 + 264 = 310\\)), so he needs 23 whole hours."
+  ],
+  "explanation": {
+    "A": "Incorrect. This rounds \\(22.41...\\) down; after 22 hours Dev has only \\(46 + 12(22) = 310\\) dollars, less than \\$315.",
+    "B": "Correct. \\(46 + 12h \\ge 315\\) gives \\(h \\ge 22.41...\\), so 23 is the least whole number of hours.",
+    "C": "Incorrect. This ignores the \\$46 already saved: \\(12h \\ge 315\\) gives \\(h \\ge 26.25\\), so 27.",
+    "D": "Incorrect. This adds the \\$46 to the goal instead of subtracting it: \\(12h \\ge 361\\) gives 31."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "h = symbols('h')\ns = solve_univariate_inequality(46 + 12*h >= 315, h, relational=False)\nassert s == Interval(Rational(269, 12), oo)\nleast = ceiling(Rational(269, 12))\nassert least == 23 and value(choices[answer]) == least\nassert all(value(choices[k]) != least for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

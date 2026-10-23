@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0171",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The solutions to the equation \\(x^{2} - kx + 24 = 0\\), where \\(k\\) is a positive constant, are \\(r\\) and \\(s\\). If \\(r - s = 2\\), what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\sqrt{23}\\)",
+    "B": "\\(2\\sqrt{7}\\)",
+    "C": "\\(2\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The sum of the solutions is \\(r + s = k\\), and the product is \\(rs = 24\\).",
+    "Use \\((r + s)^{2} = (r - s)^{2} + 4rs\\): \\(k^{2} = 2^{2} + 4(24) = 100\\).",
+    "Since \\(k > 0\\), \\(k = 10\\). (The solutions are 6 and 4.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of a sign error: \\(k^{2} = 4(24) - 4 = 92\\).",
+    "B": "Incorrect. This is the result of using \\(rs\\) instead of \\(4rs\\): \\(k^{2} = 4 + 24 = 28\\).",
+    "C": "Incorrect. This is \\(r - s\\), the difference of the solutions, not \\(k\\).",
+    "D": "Correct. With \\(k = 10\\), the equation \\(x^{2} - 10x + 24 = 0\\) has solutions 6 and 4, which differ by 2."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "wrong_formula",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nK = symbols('K', positive=True)\nassert solve(Eq(K**2, 2**2 + 4*24), K) == [10]\ndef ok(kv):\n    rs = solve(x**2 - kv*x + 24, x)\n    return len(rs) == 2 and all(q.is_real for q in rs) and simplify(Abs(rs[0] - rs[1]) - 2) == 0\nassert value(choices[answer]) == 10 and ok(10)\nassert all(not ok(value(choices[c])) for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

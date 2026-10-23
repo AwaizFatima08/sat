@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0116",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Anika has \\$420 in a savings account and withdraws \\$35 at the end of each week. Ben has \\$90 in a savings account and deposits \\$25 at the end of each week. Neither makes any other deposits or withdrawals. After what least whole number of weeks will Ben have more money in his account than Anika has in hers?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "After \\(w\\) weeks, Anika has \\(420 - 35w\\) dollars and Ben has \\(90 + 25w\\) dollars.",
+    "Solve \\(90 + 25w > 420 - 35w\\): \\(60w > 330\\), so \\(w > 5.5\\).",
+    "The least whole number of weeks is 6. (After 6 weeks, Ben has \\$240 and Anika has \\$210.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "w = symbols('w')\ns = solve_univariate_inequality(90 + 25*w > 420 - 35*w, w, relational=False)\nassert s == Interval.open(Rational(11, 2), oo)\nbest = min(k for k in range(0, 20) if 90 + 25*k > 420 - 35*k)\nassert best == 6 and 420 - 35*best > 0\nassert [Rational(a) for a in spr_answers] == [best]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

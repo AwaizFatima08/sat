@@ -1,0 +1,46 @@
+{
+  "id": "m-le2-0532",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(kx + 3y = 12\\), where \\(k\\) is a positive constant, forms a triangle with the \\(x\\)-axis and the \\(y\\)-axis. The area of the triangle is 8. What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3"
+  ],
+  "solution": [
+    "The \\(y\\)-intercept is \\((0, 4)\\) and the \\(x\\)-intercept is \\(\\left(\\frac{12}{k}, 0\\right)\\).",
+    "The triangle is a right triangle with legs 4 and \\(\\frac{12}{k}\\), so its area is \\(\\frac{1}{2} \\cdot 4 \\cdot \\frac{12}{k} = \\frac{24}{k}\\).",
+    "Set \\(\\frac{24}{k} = 8\\): \\(k = 3\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "k = symbols('k', positive=True)\narea = Rational(1, 2)*Rational(12, 3)*(12/k)\nsol = solve(Eq(area, 8), k)\nassert sol == [3]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0138",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "How many distinct real solutions does the equation \\(x^{3} = 9x\\) have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Two",
+    "B": "Infinitely many",
+    "C": "One",
+    "D": "Three"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Move all terms to one side: \\(x^{3} - 9x = 0\\).",
+    "Factor: \\(x(x^{2} - 9) = x(x - 3)(x + 3) = 0\\).",
+    "The solutions are \\(0\\), \\(3\\) and \\(-3\\): three distinct real solutions."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dividing both sides by \\(x\\), which loses the solution \\(x = 0\\).",
+    "B": "Incorrect. A cubic equation that is not an identity has at most three solutions.",
+    "C": "Incorrect. This counts only \\(x = 3\\); \\(x = -3\\) and \\(x = 0\\) also work.",
+    "D": "Correct. \\(x = -3\\), \\(x = 0\\) and \\(x = 3\\) all satisfy the equation."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x', real=True)\nsols = solve(Eq(x**3, 9*x), x)\nassert sorted(sols) == [-3, 0, 3]\nassert choices[answer] == 'Three'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "m-tvd-0001",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The scatterplot shows the daily high temperature \\(x\\), in degrees Celsius, and the number of cold drinks \\(y\\) sold at a kiosk on 9 days. The line of best fit is shown and has the equation \\(y = 8x + 30\\). Based on the line of best fit, how many cold drinks are predicted to be sold on a day with a high temperature of 30 degrees Celsius?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "High temperature (degrees Celsius)",
+    "y_label": "Cold drinks sold",
+    "points": [
+      [
+        20,
+        185
+      ],
+      [
+        22,
+        210
+      ],
+      [
+        24,
+        228
+      ],
+      [
+        25,
+        225
+      ],
+      [
+        27,
+        250
+      ],
+      [
+        28,
+        258
+      ],
+      [
+        31,
+        275
+      ],
+      [
+        33,
+        300
+      ],
+      [
+        35,
+        305
+      ]
+    ],
+    "line": "8*x + 30"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(8\\)",
+    "B": "\\(210\\)",
+    "C": "\\(240\\)",
+    "D": "\\(270\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = 30\\) into the equation of the line of best fit.",
+    "\\(y = 8(30) + 30 = 240 + 30 = 270\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the slope of the line, the predicted increase in drinks for each 1-degree increase in temperature, not the predicted number of drinks.",
+    "B": "Incorrect. This is the result of subtracting 30 instead of adding it: \\(8(30) - 30 = 210\\).",
+    "C": "Incorrect. This is \\(8(30) = 240\\) without the constant 30 of the equation.",
+    "D": "Correct. \\(y = 8(30) + 30 = 270\\) cold drinks."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "sign_error",
+    "C": "stopped_early"
+  },
+  "verify": "x = symbols('x')\npred = sympify(figure['line']).subs(x, 30)\nassert pred == 270\nassert value(choices[answer]) == pred\nassert all(value(choices[k]) != pred for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

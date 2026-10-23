@@ -1,0 +1,59 @@
+{
+  "id": "m-rtt-0539",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(ABC\\), angle \\(C\\) is a right angle. The length of leg \\(\\overline{AC}\\) is increased by 50% and the length of leg \\(\\overline{BC}\\) is decreased by 25%, and angle \\(C\\) remains a right angle. How does the value of \\(\\tan A\\) change?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "It increases by 25%.",
+    "B": "It decreases by 50%.",
+    "C": "It increases by 100%.",
+    "D": "It decreases by 75%."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "For angle \\(A\\), \\(BC\\) is opposite and \\(AC\\) is adjacent, so \\(\\tan A = \\frac{BC}{AC}\\).",
+    "The new value is \\(\\frac{0.75\\,BC}{1.5\\,AC} = 0.5 \\cdot \\frac{BC}{AC}\\).",
+    "The value of \\(\\tan A\\) is halved: it decreases by 50%."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds the percent changes (\\(50 - 25\\)); the changes multiply, and \\(AC\\) is in the denominator.",
+    "B": "Correct. \\(\\tan A = \\frac{BC}{AC}\\) is multiplied by \\(\\frac{0.75}{1.5} = 0.5\\), a decrease of 50%.",
+    "C": "Incorrect. This uses \\(\\tan A = \\frac{AC}{BC}\\), which is multiplied by \\(\\frac{1.5}{0.75} = 2\\); that ratio is \\(\\tan B\\).",
+    "D": "Incorrect. This adds the two percents as decreases (\\(25 + 50\\)); the factors \\(0.75\\) and \\(1.5\\) must be divided."
+  },
+  "traps": {
+    "A": "percent_add",
+    "C": "reciprocal",
+    "D": "percent_add"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nf=Rational(3,4)/Rational(3,2)\npct=(f-1)*100\nassert pct==-50\nassert 'decreases by 50%' in choices[answer]\nassert all('decreases by 50%' not in choices[c] for c in choices if c!=answer)\nassert (1/f-1)*100==100\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

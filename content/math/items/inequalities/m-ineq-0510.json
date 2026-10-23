@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0510",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "In a video game, Lena has 148 points. She needs a total of more than 230 points to unlock the next level. Which inequality describes the numbers of additional points, \\(p\\), that Lena needs to score?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(p \\ge 82\\)",
+    "B": "\\(p > 82\\)",
+    "C": "\\(p > 378\\)",
+    "D": "\\(p < 82\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Her total will be \\(148 + p\\), and it must be more than 230: \\(148 + p > 230\\).",
+    "Subtract 148 from both sides: \\(p > 82\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \"More than 230\" is strict: with exactly 82 more points Lena has 230 points, which is not enough.",
+    "B": "Correct. \\(148 + p > 230\\) gives \\(p > 82\\).",
+    "C": "Incorrect. This adds 148 to 230 instead of subtracting it.",
+    "D": "Incorrect. This reverses the direction; Lena needs more points, not fewer."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nR = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\np = symbols('p')\nS = solve_univariate_inequality(148 + p > 230, p, relational=False)\nassert S == Interval.open(82, oo)\nok = [k for k in choices if R(choices[k]).as_set() == S]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

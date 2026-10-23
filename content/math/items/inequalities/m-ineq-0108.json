@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0108",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A photographer charges a flat fee of \\$600 plus \\$45 per hour to photograph an event. An 8% sales tax is added to the total charge. A couple wants the total cost, including tax, to be at most \\$1,000. What is the greatest whole number of hours of photography the couple can book?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7"
+  ],
+  "solution": [
+    "The cost with tax for \\(h\\) hours is \\(1.08(600 + 45h)\\).",
+    "Solve \\(1.08(600 + 45h) \\le 1{,}000\\): \\(600 + 45h \\le 925.92...\\), so \\(45h \\le 325.92...\\) and \\(h \\le 7.24...\\).",
+    "The greatest whole number of hours is 7. (Check: 8 hours costs \\(1.08(960) = 1{,}036.80\\) dollars, which is too much.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "h = symbols('h')\ns = solve_univariate_inequality(Rational('1.08')*(600 + 45*h) <= 1000, h, relational=False)\nbest = floor(s.sup)\nassert best == 7 and Rational('1.08')*(600 + 45*8) > 1000\nassert [Rational(a) for a in spr_answers] == [best]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

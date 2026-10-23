@@ -1,0 +1,148 @@
+{
+  "type": "ratios_rates",
+  "title": "Ratios, rates, proportions and units",
+  "what_is_tested": "These questions ask you to work with quantities that change together at a constant rate: unit rates, proportions, ratios, scale drawings, and changing from one unit to another. On the Digital SAT they are mostly short word problems, sometimes with a table, and they are the base for many percent and data questions.",
+  "how_to_spot": "Look for \"per\", \"for every\", \"at this rate\", \"the ratio of … to …\", a map or model scale, or a request for the answer in different units from the ones given.",
+  "method": [
+    "Write down what is given and what is asked, with units (for example, miles and gallons give miles per gallon).",
+    "Find the unit rate (the amount for 1), or set up a proportion with the same units in the same places: \\(\\frac{a}{b} = \\frac{c}{d}\\).",
+    "For unit changes, multiply by conversion fractions equal to 1, arranged so that the unwanted units cancel.",
+    "Compute, then reread the question: does it ask for a total, one part, or a different unit?",
+    "Check the size: more time should mean more distance, and a bigger unit should mean a smaller number."
+  ],
+  "pitfalls": [
+    "Flipping a rate (gallons per mile instead of miles per gallon) gives an answer that is far too small or too large.",
+    "Stopping at the unit rate when the question asks for a total.",
+    "With a part-to-part ratio such as 3 to 5, forgetting that the total is 8 parts.",
+    "Converting only one unit of a rate, such as meters to kilometers but not seconds to hours.",
+    "Scaling an area by the length scale factor instead of by its square."
+  ],
+  "calculator": "Use the Scientific tab for chains of conversion factors, and type the whole chain as one expression so nothing is rounded halfway. Decide which way up each fraction goes from the units first; the calculator cannot do that for you.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: unit rates and simple proportions",
+      "steps": [
+        "Find what one unit is worth: for a rate, divide the amount by the number of units; for a ratio such as 3 to 5, divide the total by the number of parts, \\(3 + 5 = 8\\).",
+        "Multiply that one-unit value by the number of units you need.",
+        "Keep the units next to every number so you can see what each number means.",
+        "Check direction and size: more minutes should give more pages, a larger share should give more people."
+      ],
+      "worked_example": {
+        "stem": "A printer prints 132 pages in 4 minutes. At this rate, how many pages does the printer print in 7 minutes?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(33\\)",
+          "B": "\\(139\\)",
+          "C": "\\(231\\)",
+          "D": "\\(528\\)"
+        },
+        "answer": "C",
+        "walkthrough": [
+          "Unit rate: \\(132 \\div 4 = 33\\) pages per minute.",
+          "Multiply by the new time: \\(33 \\times 7 = 231\\) pages.",
+          "Check: 7 minutes is a bit less than twice 4 minutes, and 231 is a bit less than twice 132, so the answer is reasonable.",
+          "Choice C is correct. Choice A, 33, is the number of pages in one minute: it stops one step early. Choice D multiplies 132 by 4 instead of dividing, and choice B adds 7 to 132 instead of scaling."
+        ],
+        "verify": "rate = Rational(132, 4)\nassert rate == 33\nassert value(choices[answer]) == rate*7 == 231\nassert all(value(choices[k]) != 231 for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-rat-0001",
+        "m-rat-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: rates with time and unit changes",
+      "steps": [
+        "Decide what the question wants: a time, an amount or a rate, and in which unit.",
+        "Divide the amount by the rate to get a time, or multiply the rate by the time to get an amount.",
+        "Change units with one conversion: 60 minutes = 1 hour, 1,000 meters = 1 kilometer.",
+        "Reread the question and give the answer in the unit it asks for."
+      ],
+      "worked_example": {
+        "stem": "A water tanker in Karachi delivers water into a storage tank at a constant rate of 40 liters per minute. How many hours does it take the tanker to deliver 6,000 liters of water?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "5/2",
+          "2.5"
+        ],
+        "walkthrough": [
+          "Time in minutes: \\(6{,}000 \\div 40 = 150\\) minutes.",
+          "The question asks for hours: \\(150 \\div 60 = 2.5\\) hours.",
+          "Enter 2.5 (or 5/2). Entering 150 gives the time in minutes, the wrong unit."
+        ],
+        "verify": "minutes = Rational(6000, 40)\nassert minutes == 150\nhours = minutes/60\nassert all(Rational(s) == hours == Rational(5, 2) for s in spr_answers)"
+      },
+      "tryit": [
+        "m-rat-0003",
+        "m-rat-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: converting rates with two units",
+      "steps": [
+        "Write the starting rate as a fraction with both units, such as 6 meters over 1 second.",
+        "Multiply by conversion fractions equal to 1, arranged so each unwanted unit cancels (put seconds on top to cancel seconds on the bottom).",
+        "After the units cancel, multiply the numbers on top and divide by the numbers on the bottom.",
+        "Check the size: an hour is much longer than a second, and a kilometer is much longer than a meter."
+      ],
+      "worked_example": {
+        "stem": "A cyclist rides at a constant speed of 6 meters per second. What is the cyclist's speed, in kilometers per hour? (1 kilometer = 1,000 meters)",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(0.36\\)",
+          "B": "\\(21.6\\)",
+          "C": "\\(216\\)",
+          "D": "\\(360\\)"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "Seconds to hours: there are \\(60 \\times 60 = 3{,}600\\) seconds in an hour, so \\(6 \\times 3{,}600 = 21{,}600\\) meters per hour.",
+          "Meters to kilometers: \\(21{,}600 \\div 1{,}000 = 21.6\\) kilometers per hour.",
+          "On the Scientific tab, type the whole chain at once: \\(6 \\times 3600 \\div 1000\\).",
+          "Choice B is correct. Choice A multiplies by 60 instead of 3,600, so it changes seconds only to minutes. Choice D, \\(6 \\times 60\\), also uses minutes and never changes meters to kilometers, and choice C divides by 100 instead of 1,000."
+        ],
+        "verify": "kmh = Rational(6)*3600/1000\nassert kmh == Rational(108, 5)\nassert value(choices[answer]) == kmh\nassert all(value(choices[k]) != kmh for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-rat-0005",
+        "m-rat-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: scales for area and chained ratios",
+      "steps": [
+        "Turn a scale into a length rule in useful units, for example 4 centimeters on the map represent 1 kilometer.",
+        "Change the lengths first, then compute the area or volume from the real lengths: an area scales by the square of the length scale, a volume by its cube.",
+        "For chained ratios (a to b and b to c), rewrite both so the shared quantity has the same number, then read a to c.",
+        "Check the units of the final answer, such as square kilometers rather than kilometers."
+      ],
+      "worked_example": {
+        "stem": "A map has a scale of 1 : 25,000, so 1 centimeter on the map represents 25,000 centimeters on the ground. A rectangular park is 4 centimeters long and 6 centimeters wide on the map. What is the actual area of the park, in square kilometers? (1 kilometer = 100,000 centimeters)",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "3/2",
+          "1.5"
+        ],
+        "walkthrough": [
+          "Actual length: \\(4 \\times 25{,}000 = 100{,}000\\) centimeters, which is 1 kilometer.",
+          "Actual width: \\(6 \\times 25{,}000 = 150{,}000\\) centimeters, which is 1.5 kilometers.",
+          "Area: \\(1 \\times 1.5 = 1.5\\) square kilometers. Enter 1.5 (or 3/2).",
+          "Trap: multiplying the map area, 24 square centimeters, by 25,000 treats an area like a length. Area scales by \\(25{,}000^{2}\\), so change the lengths before you multiply."
+        ],
+        "verify": "length = Rational(4*25000, 100000)\nwidth = Rational(6*25000, 100000)\narea = length*width\nassert area == Rational(24)*25000**2/100000**2\nassert all(Rational(s) == area == Rational(3, 2) for s in spr_answers)"
+      },
+      "tryit": [
+        "m-rat-0007",
+        "m-rat-0008"
+      ]
+    }
+  ]
+}

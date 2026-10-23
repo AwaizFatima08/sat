@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0505",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A volleyball is hit upward. Its height above the ground, in meters, \\(t\\) seconds after it is hit is given by \\(h(t) = -5t^{2} + 15t + 1\\). What is the height, in meters, of the ball 2 seconds after it is hit?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(51\\)",
+    "B": "\\(11\\)",
+    "C": "\\(21\\)",
+    "D": "\\(1\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(2\\) for \\(t\\): \\(h(2) = -5(2)^{2} + 15(2) + 1\\).",
+    "\\(-5(4) + 30 + 1 = -20 + 30 + 1 = 11\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dropping the negative sign on \\(-5t^{2}\\): \\(20 + 30 + 1 = 51\\).",
+    "B": "Correct. \\(h(2) = -20 + 30 + 1 = 11\\).",
+    "C": "Incorrect. This is the result of multiplying \\(-5\\) by \\(2\\) instead of by \\(2^{2}\\): \\(-10 + 30 + 1 = 21\\).",
+    "D": "Incorrect. \\(1\\) is \\(h(0)\\), the height at the moment the ball is hit, not 2 seconds later."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "wrong_formula",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nt = symbols('t')\nh = Lambda(t, -5*t**2 + 15*t + 1)\nassert h(2) == 11\nassert value(choices[answer]) == h(2)\nassert all(value(choices[k]) != h(2) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

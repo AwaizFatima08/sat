@@ -1,0 +1,58 @@
+{
+  "id": "m-rtt-0115",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In right triangle \\(ABC\\), angle \\(C\\) is a right angle and \\(AC = 2 \\cdot BC\\). What is the value of \\(\\cos A\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{2\\sqrt{5}}{5}\\)",
+    "B": "\\(\\frac{1}{2}\\)",
+    "C": "\\(\\frac{\\sqrt{5}}{2}\\)",
+    "D": "\\(\\frac{\\sqrt{5}}{5}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(BC = t\\), so \\(AC = 2t\\) and \\(AB = \\sqrt{t^{2} + (2t)^{2}} = t\\sqrt{5}\\).",
+    "\\(\\cos A = \\frac{AC}{AB} = \\frac{2t}{t\\sqrt{5}} = \\frac{2}{\\sqrt{5}} = \\frac{2\\sqrt{5}}{5}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\cos A = \\frac{2t}{t\\sqrt{5}} = \\frac{2\\sqrt{5}}{5}\\).",
+    "B": "Incorrect. This is \\(\\tan A = \\frac{BC}{AC}\\), which does not use the hypotenuse.",
+    "C": "Incorrect. This is \\(\\frac{AB}{AC}\\), the reciprocal of \\(\\cos A\\).",
+    "D": "Incorrect. This is \\(\\sin A = \\frac{BC}{AB}\\), the opposite side over the hypotenuse."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nt=symbols('t',positive=True)\nans=simplify(2*t/sqrt(t**2+(2*t)**2))\nassert simplify(ans-2*sqrt(5)/5)==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

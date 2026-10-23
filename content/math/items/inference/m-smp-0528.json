@@ -1,0 +1,46 @@
+{
+  "id": "m-smp-0528",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Based on a random sample, the plausible values for the mean of a population range from 37.2 to 46.0. A second random sample from the same population has the same sample mean, but its margin of error is half the margin of error of the first sample. Based on the second sample, what is the greatest plausible value for the population mean?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "43.8"
+  ],
+  "solution": [
+    "First sample: mean \\(\\frac{37.2 + 46.0}{2} = 41.6\\), margin of error \\(46.0 - 41.6 = 4.4\\).",
+    "Second sample: margin of error \\(\\frac{4.4}{2} = 2.2\\).",
+    "Greatest plausible value: \\(41.6 + 2.2 = 43.8\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "lo, hi = Rational('37.2'), Rational('46.0')\nmid, moe = (lo + hi) / 2, (hi - lo) / 2\nans = mid + moe / 2\nassert ans == Rational('43.8')\nassert [Rational(a) for a in spr_answers] == [ans]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "43.8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

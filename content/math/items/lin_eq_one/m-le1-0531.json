@@ -1,0 +1,60 @@
+{
+  "id": "m-le1-0531",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the equation \\(ax + 3 = 5x - b\\), \\(a\\) and \\(b\\) are constants. If the equation has exactly one solution, which of the following must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(a \\ne 5\\)",
+    "B": "\\(a = 5 \\text{ and } b \\ne -3\\)",
+    "C": "\\(a \\ne -5\\)",
+    "D": "\\(a = 5 \\text{ and } b = -3\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Collect terms: \\((a - 5)x = -b - 3\\).",
+    "If \\(a - 5 \\ne 0\\), dividing gives exactly one solution, whatever \\(b\\) is.",
+    "If \\(a = 5\\), the equation becomes \\(0 = -b - 3\\): no solution when \\(b \\ne -3\\), infinitely many when \\(b = -3\\).",
+    "So exactly one solution requires \\(a \\ne 5\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The equation is \\((a - 5)x = -b - 3\\); it has exactly one solution exactly when \\(a - 5 \\ne 0\\).",
+    "B": "Incorrect. With \\(a = 5\\) and \\(b \\ne -3\\) the equation reduces to a false statement, so it has no solution.",
+    "C": "Incorrect. This is the result of a sign slip when collecting the \\(x\\)-terms, writing \\(a + 5\\) instead of \\(a - 5\\). With \\(a = -5\\) the equation still has exactly one solution.",
+    "D": "Incorrect. With \\(a = 5\\) and \\(b = -3\\) both sides are identical, so the equation has infinitely many solutions."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx, a, b = symbols('x a b')\nd = expand(a*x + 3 - (5*x - b))\nassert solve(d.coeff(x, 1), a) == [5]\nassert solve(d.coeff(x, 0), b) == [-3]\nassert choices[answer] == '\\\\(a \\\\ne 5\\\\)'\nassert len(solve(d.subs(a, -5), x)) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

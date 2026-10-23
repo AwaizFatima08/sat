@@ -1,0 +1,77 @@
+{
+  "id": "m-ovd-0523",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The dot plot shows the number of times each of the 13 members of a climbing club visited the climbing gym last month. Which statement about the data is true?",
+  "figure": {
+    "kind": "dotplot",
+    "x_label": "Number of visits",
+    "values": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      4,
+      6,
+      9,
+      13
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The mean and the median are equal.",
+    "B": "The median is greater than the mean.",
+    "C": "The mean is greater than the median.",
+    "D": "The mode is greater than the median."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The total is 48 visits, so the mean is \\(\\frac{48}{13} \\approx 3.7\\).",
+    "With 13 values, the median is the 7th value in order, which is 2. The mode is 1.",
+    "The few large values (9 and 13) pull the mean above the median."
+  ],
+  "explanation": {
+    "A": "Incorrect. The mean is about 3.7 and the median is 2. They would be equal only for data that are balanced around the center.",
+    "B": "Incorrect. The median is 2, but the large values 9 and 13 pull the mean up to about 3.7.",
+    "C": "Correct. The mean is \\(\\frac{48}{13} \\approx 3.7\\) and the median is 2. The data are skewed to the right, so the mean is greater.",
+    "D": "Incorrect. The mode is 1, which is less than the median of 2."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nv = sorted(figure['values'])\nm = Rational(sum(v), len(v))\nmed = v[6]\nmode = max(set(v), key=v.count)\nassert len(v) == 13 and m > med and mode < med\nassert choices[answer] == 'The mean is greater than the median.'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0503",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A radio station in Dhaka asked its listeners to send a text message saying whether they support or oppose a plan to build a new flyover in the city. Of the 3,200 listeners who sent a message, 85% said they oppose the plan. Which of the following best explains why this result should NOT be used to estimate the percent of all Dhaka residents who oppose the plan?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A result as high as 85% cannot be accurate for any survey.",
+    "B": "A sample of 3,200 people is too small to represent a large city.",
+    "C": "The results of a survey can never be applied to people who were not surveyed.",
+    "D": "The listeners chose whether to respond, so the people who sent messages may not represent all residents."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Only listeners who felt like texting were counted: a voluntary response sample.",
+    "People with strong opinions, and people who listen to this station, are more likely to respond, so the sample may not represent all residents."
+  ],
+  "explanation": {
+    "A": "Incorrect. A high percent is not a sign of error; it is how the sample was chosen that matters.",
+    "B": "Incorrect. Size is not the problem; even a very large voluntary response sample can be biased.",
+    "C": "Incorrect. Results from a random sample can be applied to the population it was drawn from.",
+    "D": "Correct. A voluntary response sample is not random, so it may over-represent people with strong opinions."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\ndesign = {'random_sample': False, 'self_selected': True, 'n': 3200}\nassert design['self_selected'] and not design['random_sample']\nok = [k for k, v in choices.items() if 'chose whether to respond' in v]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

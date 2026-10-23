@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0525",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following inequalities is equivalent to \\(4x - 3y \\le 12\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y \\ge \\frac{4}{3}x - 4\\)",
+    "B": "\\(y \\ge x - 3\\)",
+    "C": "\\(y \\le \\frac{4}{3}x - 4\\)",
+    "D": "\\(y \\ge -\\frac{4}{3}x + 4\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Subtract \\(4x\\) from both sides: \\(-3y \\le -4x + 12\\).",
+    "Divide by \\(-3\\) and reverse the sign: \\(y \\ge \\frac{4}{3}x - 4\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(-3y \\le -4x + 12\\); dividing by \\(-3\\) reverses the sign, giving \\(y \\ge \\frac{4}{3}x - 4\\).",
+    "B": "Incorrect. This divides \\(4x - 12\\) by 4 instead of by 3.",
+    "C": "Incorrect. This divides both sides by \\(-3\\) without reversing the inequality sign.",
+    "D": "Incorrect. This divides \\(-4x + 12\\) by 3 instead of by \\(-3\\), so both terms have the wrong sign."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nR = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nx, y = symbols('x y')\npts = [(a, b) for a in range(-6, 7, 3) for b in range(-9, 10, 2)]\nsame = lambda r: all(bool(r.subs({x: a, y: b})) == (4*a - 3*b <= 12) for a, b in pts)\nok = [k for k in choices if same(R(choices[k]))]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

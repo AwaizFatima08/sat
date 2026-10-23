@@ -1,0 +1,45 @@
+{
+  "id": "m-pct-0112",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A biologist counts 2,500 bacteria in a culture. The number of bacteria increases by \\(20\\%\\) every hour. How many bacteria will be in the culture 3 hours after the count?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4320"
+  ],
+  "solution": [
+    "Each hour the number is multiplied by 1.2.",
+    "After 3 hours: \\(2{,}500(1.2)^{3} = 2{,}500 \\cdot 1.728 = 4{,}320\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "ans = 2500 * Rational(12, 10)**3\nassert ans == 4320\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "4320",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

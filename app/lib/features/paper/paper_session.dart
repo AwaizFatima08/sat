@@ -30,12 +30,13 @@ class QuestionState {
 
   QuestionState copyWith({
     String? answer,
+    bool clearAnswer = false,
     int? seconds,
     bool? marked,
     Set<String>? eliminated,
     Set<int>? highlights,
   }) => QuestionState(
-    answer: answer ?? this.answer,
+    answer: clearAnswer ? null : answer ?? this.answer,
     seconds: seconds ?? this.seconds,
     marked: marked ?? this.marked,
     eliminated: eliminated ?? this.eliminated,
@@ -133,7 +134,7 @@ class PaperSessionNotifier extends Notifier<PaperSessionState?> {
   }
 
   ContentBank get _bank => ref.read(contentBankProvider).requireValue;
-  int get _moduleSeconds => _bank.blueprint.moduleMinutes * 60;
+  int _moduleSeconds(PaperForm f) => _bank.bpOf(f.section).moduleMinutes * 60;
 
   /// Starts a paper, or resumes the saved one for the same form.
   void start(PaperForm form, {SavedPaperSession? resume}) {
@@ -168,7 +169,7 @@ class PaperSessionNotifier extends Notifier<PaperSessionState?> {
         items: _bank.itemsOf(form.module1),
         questions: const {},
         index: 0,
-        secondsLeft: _moduleSeconds,
+        secondsLeft: _moduleSeconds(form),
         phase: PaperPhase.answering,
         untimed: false,
       );
@@ -209,10 +210,12 @@ class PaperSessionNotifier extends Notifier<PaperSessionState?> {
     );
   }
 
+  /// A choice letter, or a typed Math answer ('' clears it).
   void select(String letter) {
     _update(
       (q) => q.copyWith(
         answer: letter,
+        clearAnswer: letter.isEmpty,
         eliminated: {...q.eliminated}..remove(letter),
       ),
     );
@@ -287,7 +290,7 @@ class PaperSessionNotifier extends Notifier<PaperSessionState?> {
     if (s.module == 1) {
       final m1 = s.responses();
       final correct = m1
-          .where((r) => _bank.items[r.itemId]?.answer == r.answer)
+          .where((r) => _bank.items[r.itemId]?.isCorrect(r.answer) ?? false)
           .length;
       final route = routeAfterModule1(correct, s.form.routeThreshold);
       state = s.copyWith(
@@ -297,7 +300,7 @@ class PaperSessionNotifier extends Notifier<PaperSessionState?> {
         items: _bank.itemsOf(s.form.module2(route)),
         questions: const {},
         index: 0,
-        secondsLeft: _moduleSeconds,
+        secondsLeft: _moduleSeconds(s.form),
         phase: PaperPhase.betweenModules,
       );
       _save();
@@ -333,7 +336,7 @@ class PaperSessionNotifier extends Notifier<PaperSessionState?> {
       notebook = updateNotebook(
         notebook,
         itemId: r.itemId,
-        correct: r.answer == item.answer,
+        correct: item.isCorrect(r.answer),
         now: now,
       );
       seen[r.itemId] = now;

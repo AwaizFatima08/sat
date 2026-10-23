@@ -1,0 +1,45 @@
+{
+  "id": "m-pct-0104",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(30\\%\\) of \\(x\\) is equal to \\(45\\%\\) of 80, what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "120"
+  ],
+  "solution": [
+    "\\(45\\%\\) of 80 is \\(0.45 \\cdot 80 = 36\\).",
+    "\\(0.3x = 36\\), so \\(x = 120\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nans = solve(Eq(Rational(30, 100)*x, Rational(45, 100)*80), x)[0]\nassert ans == 120\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "120",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

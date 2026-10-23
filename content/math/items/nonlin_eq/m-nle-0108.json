@@ -1,0 +1,45 @@
+{
+  "id": "m-nle-0108",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "On a certain dry road, the braking distance \\(d\\), in meters, of a car traveling at \\(v\\) kilometers per hour is modeled by \\(d = \\frac{v^{2}}{160}\\). According to the model, at what speed, in kilometers per hour, does a car have a braking distance of 40 meters?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "80"
+  ],
+  "solution": [
+    "Substitute \\(d = 40\\): \\(40 = \\frac{v^{2}}{160}\\).",
+    "Multiply by \\(160\\): \\(v^{2} = 6{,}400\\). Speed is positive, so \\(v = 80\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "v = symbols('v', positive=True)\nsol = solve(Eq(40, v**2/160), v)\nassert sol == [80]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "80",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

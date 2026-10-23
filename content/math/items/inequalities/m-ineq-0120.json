@@ -1,0 +1,47 @@
+{
+  "id": "m-ineq-0120",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A garment exporter in Karachi must ship at least 2,600 shirts. The shirts are shipped in cartons that hold 40 shirts each and in bags that hold 15 shirts each. Shipping costs 120 rupees per carton and 50 rupees per bag, and the shipping budget is at most 8,000 rupees. What is the least number of cartons the exporter can use?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "50"
+  ],
+  "solution": [
+    "With \\(c\\) cartons and \\(b\\) bags: \\(40c + 15b \\ge 2{,}600\\) and \\(120c + 50b \\le 8{,}000\\).",
+    "Bags cost more per shirt, so using fewer cartons means using more bags. From the first inequality, \\(b \\ge \\frac{2{,}600 - 40c}{15}\\).",
+    "Put this into the budget: \\(120c + \\frac{50(2{,}600 - 40c)}{15} \\le 8{,}000\\), which simplifies to \\(c \\ge 50\\).",
+    "Check: 50 cartons and 40 bags hold \\(2{,}000 + 600 = 2{,}600\\) shirts and cost \\(6{,}000 + 2{,}000 = 8{,}000\\) rupees. With 49 cartons, at least 43 bags are needed, costing \\(8{,}030\\) rupees."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "ok = [c for c in range(0, 70) if any(40*c + 15*b >= 2600 and 120*c + 50*b <= 8000 for b in range(0, 200))]\nassert min(ok) == 50\nassert [Rational(t) for t in spr_answers] == [min(ok)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "50",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

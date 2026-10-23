@@ -1,0 +1,104 @@
+{
+  "id": "m-sys-0522",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The graph shows the monthly cost, in dollars, of two phone plans, P and Q, as a function of the number of minutes of calls. The labeled points lie on the lines. For how many minutes of calls do the two plans have the same monthly cost?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      0,
+      300
+    ],
+    "y": [
+      0,
+      70
+    ],
+    "curves": [
+      {
+        "expr": "25 + x/10",
+        "label": "Plan P"
+      },
+      {
+        "expr": "10 + 4*x/25",
+        "label": "Plan Q"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 25,
+        "label": "(0, 25)"
+      },
+      {
+        "x": 100,
+        "y": 35,
+        "label": "(100, 35)"
+      },
+      {
+        "x": 0,
+        "y": 10,
+        "label": "(0, 10)"
+      },
+      {
+        "x": 100,
+        "y": 26,
+        "label": "(100, 26)"
+      }
+    ],
+    "segments": [],
+    "x_label": "Minutes",
+    "y_label": "Cost (dollars)"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(50\\)",
+    "B": "\\(150\\)",
+    "C": "\\(250\\)",
+    "D": "\\(25\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Plan P passes through \\((0, 25)\\) and \\((100, 35)\\): it costs \\(25 + 0.10m\\) dollars for \\(m\\) minutes.",
+    "Plan Q passes through \\((0, 10)\\) and \\((100, 26)\\): it costs \\(10 + 0.16m\\) dollars.",
+    "Set the costs equal: \\(25 + 0.10m = 10 + 0.16m\\), so \\(15 = 0.06m\\) and \\(m = 250\\). (Each plan then costs \\$50.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. \\$50 is the cost at which the plans are equal, not the number of minutes.",
+    "B": "Incorrect. This divides the \\$15 difference in fees by plan P's rate of \\$0.10 per minute instead of by the difference in rates, \\$0.06.",
+    "C": "Correct. The plans cost \\(25 + 0.10m\\) and \\(10 + 0.16m\\) dollars; these are equal when \\(m = 250\\).",
+    "D": "Incorrect. 25 is plan P's monthly fee, where its line meets the vertical axis, not the point where the lines cross."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nP = [(q['x'], q['y']) for q in figure['points']]\nline = lambda a, b: (b[1] - a[1])*(x - a[0])/(b[0] - a[0]) + a[1]\nl1, l2 = line(P[0], P[1]), line(P[2], P[3])\nassert all(simplify(sympify(c['expr']) - l) == 0 for c, l in zip(figure['curves'], (l1, l2)))\nsol = solve(Eq(l1, l2), x)\nassert sol == [250] and l1.subs(x, 250) == 50\nassert value(choices[answer]) == sol[0]\nassert all(value(choices[k]) != sol[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

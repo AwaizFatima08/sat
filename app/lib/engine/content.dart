@@ -2,6 +2,8 @@
 /// `pipeline/build_packs.py` writes into `assets/data/`.
 library;
 
+import 'package:moduleup/engine/spr.dart';
+
 /// The four answer letters, in display order.
 const answerLetters = ['A', 'B', 'C', 'D'];
 
@@ -64,7 +66,7 @@ class Blueprint {
           int.parse(e.key): ((e.value! as Map)['b'] as num).toDouble(),
       },
       traps: Map<String, String>.from(json['traps']! as Map),
-      grammar: Map<String, String>.from(json['grammar']! as Map),
+      grammar: Map<String, String>.from(json['grammar'] as Map? ?? const {}),
     );
   }
 
@@ -154,7 +156,7 @@ class GraphData extends ItemData {
   final List<GraphSeries> series;
 }
 
-/// One multiple-choice question.
+/// One question: four-option multiple choice, or (Math) a typed answer.
 class Item {
   const Item({
     required this.id,
@@ -176,18 +178,31 @@ class Item {
     this.data,
     this.grammar,
     this.source,
+    this.section = 'rw',
+    this.isTyped = false,
+    this.typedAnswers = const [],
+    this.solution = const [],
+    this.figure,
   });
 
   factory Item.fromJson(Map<String, Object?> json) {
-    final explanation = json['explanation']! as Map<String, Object?>;
+    final explanation =
+        (json['explanation'] as Map<String, Object?>?) ?? const {};
     final source = json['source'] as Map<String, Object?>?;
+    final solution = (json['solution'] as List?)?.cast<String>() ?? const [];
+    final typed = json['answer_type'] == 'spr';
     return Item(
+      section: json['section'] as String? ?? 'rw',
+      isTyped: typed,
+      typedAnswers: (json['spr_answers'] as List?)?.cast<String>() ?? const [],
+      solution: solution,
+      figure: json['figure'] as Map<String, Object?>?,
       id: json['id']! as String,
       type: json['type']! as String,
       domain: json['domain']! as String,
       level: json['level']! as int,
       difficulty: (json['b']! as num).toDouble(),
-      subject: json['subject']! as String,
+      subject: json['subject'] as String? ?? 'math',
       pool: json['pool']! as String,
       passage: json['passage'] as String?,
       passageB: json['passage_b'] as String?,
@@ -196,13 +211,14 @@ class Item {
           ? null
           : ItemData.fromJson(json['data']! as Map<String, Object?>),
       stem: json['stem']! as String,
-      choices: Map<String, String>.from(json['choices']! as Map),
-      answer: json['answer']! as String,
-      why: explanation['why']! as String,
+      choices: Map<String, String>.from(json['choices'] as Map? ?? const {}),
+      answer: json['answer'] as String? ?? '',
+      why: explanation['why'] as String? ?? solution.join('\n\n'),
       choiceExplanations: {
-        for (final l in answerLetters) l: explanation[l]! as String,
+        for (final l in answerLetters)
+          if (explanation[l] case final String e) l: e,
       },
-      traps: Map<String, String>.from(json['traps']! as Map),
+      traps: Map<String, String>.from(json['traps'] as Map? ?? const {}),
       grammar: json['grammar'] as String?,
       source: source == null || source['kind'] == 'original'
           ? null
@@ -237,6 +253,29 @@ class Item {
 
   /// Attribution line for public-domain excerpts; null for original text.
   final String? source;
+
+  /// `rw` or `math`.
+  final String section;
+
+  /// Math typed (student-produced) answer instead of four choices.
+  final bool isTyped;
+
+  /// Every exact accepted value of a typed answer ("2/3", "-4").
+  final List<String> typedAnswers;
+
+  /// Worked solution steps (Math).
+  final List<String> solution;
+
+  /// Figure spec (Math), drawn by the app.
+  final Map<String, Object?>? figure;
+
+  /// The key as shown to students: a letter, or the first accepted value.
+  String get keyLabel => isTyped ? typedAnswers.first : answer;
+
+  /// Whether [response] (a letter, or a typed entry) earns credit.
+  bool isCorrect(String? response) =>
+      response != null &&
+      (isTyped ? gradeSpr(response, typedAnswers) : response == answer);
 }
 
 /// The two possible second modules.
@@ -252,9 +291,13 @@ class PaperForm {
     required this.module2Easier,
     required this.module2Harder,
     required this.routeThreshold,
+    this.section = 'rw',
   });
 
-  factory PaperForm.fromJson(Map<String, Object?> json) {
+  factory PaperForm.fromJson(
+    Map<String, Object?> json, {
+    String section = 'rw',
+  }) {
     final modules = json['modules']! as Map<String, Object?>;
     List<String> ids(String k) => List<String>.from(modules[k]! as List);
     return PaperForm(
@@ -265,12 +308,16 @@ class PaperForm {
       module2Easier: ids('m2_easy'),
       module2Harder: ids('m2_hard'),
       routeThreshold: json['route_threshold']! as int,
+      section: json['section'] as String? ?? section,
     );
   }
 
   final String id;
   final int number;
   final String title;
+
+  /// `rw` or `math`.
+  final String section;
   final List<String> module1;
   final List<String> module2Easier;
   final List<String> module2Harder;

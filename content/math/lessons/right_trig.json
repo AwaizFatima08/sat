@@ -1,0 +1,340 @@
+{
+  "type": "right_trig",
+  "title": "Right triangles and trigonometry",
+  "what_is_tested": "These questions use the Pythagorean theorem, the special right triangles (\\(45^{\\circ}\\)-\\(45^{\\circ}\\)-\\(90^{\\circ}\\) and \\(30^{\\circ}\\)-\\(60^{\\circ}\\)-\\(90^{\\circ}\\)) and the ratios sine, cosine and tangent to find missing sides or angles. Harder ones use the fact that \\(\\sin x^{\\circ} = \\cos(90 - x)^{\\circ}\\), model a context such as an angle of elevation, or find a ratio from partial information.",
+  "how_to_spot": "A right triangle (marked with a small square or described in words) with two sides, or a side and an angle, given; or any \\(\\sin\\), \\(\\cos\\) or \\(\\tan\\) in the question; or a context with a slope, ramp, ladder or angle of elevation.",
+  "method": [
+    "Find the right angle; the side across from it is the hypotenuse, the longest side.",
+    "Label the other two sides opposite and adjacent, relative to the angle in the question.",
+    "Choose the tool: the Pythagorean theorem for three sides; a special right triangle for \\(30^{\\circ}\\), \\(45^{\\circ}\\) or \\(60^{\\circ}\\) (both are on the reference sheet); SOH-CAH-TOA otherwise.",
+    "Set up the equation and solve; if only a ratio is known, write the sides as multiples of \\(k\\).",
+    "Check: the hypotenuse is the longest side, and every sine or cosine of an acute angle is between 0 and 1."
+  ],
+  "pitfalls": [
+    "Labeling opposite and adjacent from the wrong angle, which turns \\(\\cos B\\) into \\(\\cos A\\) (wrong_quantity).",
+    "Inverting a ratio, for example taking \\(\\tan A\\) as adjacent over opposite (reciprocal).",
+    "Adding the legs instead of their squares in \\(a^{2} + b^{2} = c^{2}\\), or forgetting the final square root (wrong_formula).",
+    "Putting \\(x\\sqrt{3}\\) across from the \\(30^{\\circ}\\) angle; the shortest side is across from \\(30^{\\circ}\\) (concept).",
+    "Leaving the calculator in Rad mode when the angles are in degrees (arithmetic)."
+  ],
+  "calculator": "Use the Scientific tab for angles that are not special, such as \\(40^{\\circ}\\): check that it is set to Deg, then evaluate \\(\\sin\\), \\(\\cos\\) or \\(\\tan\\) directly. For \\(30^{\\circ}\\), \\(45^{\\circ}\\) and \\(60^{\\circ}\\), the exact side patterns are faster and match answer choices written with radicals.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: Pythagoras and SOH-CAH-TOA",
+      "steps": [
+        "Mark the right angle and the hypotenuse across from it.",
+        "From the angle in the question, label the opposite side and the adjacent side.",
+        "Write the ratio (sine = opposite over hypotenuse, cosine = adjacent over hypotenuse, tangent = opposite over adjacent) or \\(a^{2} + b^{2} = c^{2}\\).",
+        "Substitute the side lengths and simplify."
+      ],
+      "worked_example": {
+        "stem": "In right triangle \\(PQR\\), what is the value of \\(\\tan P\\)?",
+        "figure": {
+          "kind": "geometry",
+          "points": {
+            "P": [
+              20,
+              0
+            ],
+            "Q": [
+              0,
+              0
+            ],
+            "R": [
+              0,
+              21
+            ]
+          },
+          "segments": [
+            [
+              "P",
+              "Q"
+            ],
+            [
+              "Q",
+              "R"
+            ],
+            [
+              "R",
+              "P"
+            ]
+          ],
+          "circles": [],
+          "labels": [
+            {
+              "at": [
+                10,
+                -1.2
+              ],
+              "text": "20"
+            },
+            {
+              "at": [
+                -1.4,
+                10.5
+              ],
+              "text": "21"
+            },
+            {
+              "at": [
+                11,
+                11.6
+              ],
+              "text": "29"
+            }
+          ],
+          "right_angles": [
+            "Q"
+          ],
+          "not_to_scale": false
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(\\frac{20}{29}\\)",
+          "B": "\\(\\frac{21}{29}\\)",
+          "C": "\\(\\frac{20}{21}\\)",
+          "D": "\\(\\frac{21}{20}\\)"
+        },
+        "answer": "D",
+        "walkthrough": [
+          "The right angle is at \\(Q\\), so the hypotenuse is \\(\\overline{PR} = 29\\).",
+          "From angle \\(P\\), the opposite side is \\(\\overline{QR} = 21\\) and the adjacent side is \\(\\overline{PQ} = 20\\).",
+          "Tangent is opposite over adjacent: \\(\\tan P = \\frac{21}{20}\\), choice D.",
+          "Choice C, \\(\\frac{20}{21}\\), is the reciprocal (adjacent over opposite), and choice B, \\(\\frac{21}{29}\\), is \\(\\sin P\\). Quick check of the labels: \\(20^{2} + 21^{2} = 841 = 29^{2}\\)."
+        ],
+        "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['Q'][0]==P['R'][0] and P['Q'][1]==P['P'][1]\nopp=d('Q','R'); adj=d('P','Q'); hyp=d('P','R')\nassert opp==21 and adj==20 and hyp==29\nans=opp/adj\nassert value(choices[answer])==ans\nassert all(value(choices[c])!=ans for c in choices if c!=answer)\nassert value(choices['C'])==1/ans and value(choices['B'])==opp/hyp"
+      },
+      "tryit": [
+        "m-rtt-0001",
+        "m-rtt-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: special right triangles and complements",
+      "steps": [
+        "Spot a \\(30^{\\circ}\\), \\(45^{\\circ}\\) or \\(60^{\\circ}\\) angle, or a square or equilateral triangle that splits into one.",
+        "Write the side pattern from the reference sheet: \\(s, s, s\\sqrt{2}\\) or \\(x, x\\sqrt{3}, 2x\\).",
+        "Find the multiplier from the side you know, then the side you need; for complementary angles use \\(\\sin x^{\\circ} = \\cos(90 - x)^{\\circ}\\).",
+        "Answer the question asked (a perimeter, a height) and check that the hypotenuse is the longest side."
+      ],
+      "worked_example": {
+        "stem": "The playing surface of a carrom board is a square. The diagonal of the playing surface is \\(74\\sqrt{2}\\) centimeters long. What is the perimeter, in centimeters, of the playing surface?",
+        "figure": {
+          "kind": "geometry",
+          "points": {
+            "A": [
+              0,
+              0
+            ],
+            "B": [
+              74,
+              0
+            ],
+            "C": [
+              74,
+              74
+            ],
+            "D": [
+              0,
+              74
+            ]
+          },
+          "segments": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ],
+            [
+              "C",
+              "D"
+            ],
+            [
+              "D",
+              "A"
+            ],
+            [
+              "A",
+              "C"
+            ]
+          ],
+          "circles": [],
+          "labels": [
+            {
+              "at": [
+                30,
+                42
+              ],
+              "text": "74√2 cm"
+            }
+          ],
+          "right_angles": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "not_to_scale": false
+        },
+        "answer_type": "spr",
+        "spr_answers": [
+          "296"
+        ],
+        "walkthrough": [
+          "The diagonal cuts the square into two \\(45^{\\circ}\\)-\\(45^{\\circ}\\)-\\(90^{\\circ}\\) triangles, and the diagonal is their hypotenuse.",
+          "The reference sheet gives the sides of that triangle as \\(s, s, s\\sqrt{2}\\). So \\(s\\sqrt{2} = 74\\sqrt{2}\\), and \\(s = 74\\).",
+          "The perimeter is \\(4s = 4(74) = 296\\) centimeters. Enter 296.",
+          "Stopping at \\(s = 74\\) answers a different question, and \\(4 \\cdot 74\\sqrt{2}\\) wrongly uses the diagonal as a side."
+        ],
+        "verify": "s=symbols('s',positive=True)\nss=solve(Eq(s*sqrt(2),74*sqrt(2)),s)[0]\nP=figure['points']\nassert P['B'][0]-P['A'][0]==ss and P['C'][1]-P['B'][1]==ss and P['D'][1]-P['A'][1]==ss\nassert Rational(spr_answers[0])==4*ss==296"
+      },
+      "tryit": [
+        "m-rtt-0003",
+        "m-rtt-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: trigonometry in context, with the calculator",
+      "steps": [
+        "Draw the right triangle the context describes and mark the known angle and side.",
+        "Pick the ratio that links the side you know and the side you want, relative to that angle.",
+        "Solve for the unknown (for example, height \\(= 30\\tan 40^{\\circ}\\)); evaluate in the Scientific tab set to Deg, or use exact values for special angles.",
+        "Add any extra pieces the context includes (an eye or instrument height), then round as the question says."
+      ],
+      "worked_example": {
+        "stem": "A surveyor sets up an instrument on level ground 30 meters from the base of a vertical tower. The instrument's lens is 1.4 meters above the ground, and the angle of elevation from the lens to the top of the tower is \\(40^{\\circ}\\), as shown. To the nearest tenth of a meter, what is the height of the tower?",
+        "figure": {
+          "kind": "geometry",
+          "points": {
+            "G": [
+              0,
+              0
+            ],
+            "L": [
+              0,
+              1.4
+            ],
+            "F": [
+              30,
+              0
+            ],
+            "Q": [
+              30,
+              1.4
+            ],
+            "T": [
+              30,
+              26.573
+            ]
+          },
+          "segments": [
+            [
+              "G",
+              "F"
+            ],
+            [
+              "G",
+              "L"
+            ],
+            [
+              "L",
+              "T"
+            ],
+            [
+              "L",
+              "Q"
+            ],
+            [
+              "F",
+              "T"
+            ]
+          ],
+          "circles": [],
+          "labels": [
+            {
+              "at": [
+                4.2,
+                2.8
+              ],
+              "text": "40°"
+            },
+            {
+              "at": [
+                15,
+                -1.4
+              ],
+              "text": "30 m"
+            },
+            {
+              "at": [
+                -2.6,
+                0.7
+              ],
+              "text": "1.4 m"
+            }
+          ],
+          "right_angles": [
+            "Q"
+          ],
+          "not_to_scale": false
+        },
+        "answer_type": "spr",
+        "spr_answers": [
+          "26.6"
+        ],
+        "walkthrough": [
+          "The right triangle has vertices at the lens \\(L\\), the point \\(Q\\) on the tower at lens height, and the top \\(T\\). Its horizontal leg is \\(LQ = 30\\) meters, and the angle at \\(L\\) is \\(40^{\\circ}\\).",
+          "\\(QT\\) is opposite the \\(40^{\\circ}\\) angle and \\(LQ\\) is adjacent, so use tangent: \\(\\tan 40^{\\circ} = \\frac{QT}{30}\\), which gives \\(QT = 30\\tan 40^{\\circ}\\).",
+          "In the Scientific tab, set to Deg, \\(30\\tan 40^{\\circ} \\approx 25.17\\) meters.",
+          "Add the lens height: \\(25.17 + 1.4 = 26.57\\), which rounds to 26.6. Enter 26.6.",
+          "Forgetting the 1.4 meters gives 25.2. A negative result means the calculator was in Rad mode."
+        ],
+        "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nh=Rational('1.4')+30*tan(40*pi/180)\nassert abs(N(h)-Rational(spr_answers[0]))<0.05 and Rational(spr_answers[0])==Rational('26.6')\nassert P['Q'][0]-P['L'][0]==30 and P['L'][0]==P['G'][0] and P['Q'][0]==P['F'][0]==P['T'][0]\nassert abs(P['L'][1]-1.4)<1e-9 and abs(P['T'][1]-N(h))<0.01 and abs(ang('Q','L','T')-40)<0.1\nassert abs(N(h-Rational('1.4'))-Rational('25.2'))<0.05"
+      },
+      "tryit": [
+        "m-rtt-0005",
+        "m-rtt-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: ratios with a multiplier",
+      "steps": [
+        "Turn the given ratio (or a cofunction fact) into side lengths with a multiplier: \\(\\tan A = \\frac{12}{5}\\) means sides \\(12k\\) and \\(5k\\).",
+        "Use the Pythagorean theorem to write the third side in terms of \\(k\\); in a triangle without a right angle, draw an altitude first.",
+        "Use the extra fact (a perimeter, an area, one actual side) to find \\(k\\).",
+        "Compute the requested side or ratio and check it against the original ratio."
+      ],
+      "worked_example": {
+        "stem": "In right triangle \\(ABC\\), angle \\(C\\) is a right angle, \\(\\tan A = 2.4\\), and the perimeter of the triangle is 60. What is the length of \\(\\overline{AC}\\)?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(10\\)",
+          "B": "\\(12\\)",
+          "C": "\\(13\\)",
+          "D": "\\(24\\)"
+        },
+        "answer": "A",
+        "walkthrough": [
+          "\\(\\tan A = 2.4 = \\frac{12}{5}\\), so the leg opposite angle \\(A\\) is \\(BC = 12k\\) and the adjacent leg is \\(AC = 5k\\) for some \\(k > 0\\).",
+          "Pythagorean theorem: \\(AB = \\sqrt{(12k)^{2} + (5k)^{2}} = \\sqrt{169k^{2}} = 13k\\).",
+          "Perimeter: \\(12k + 5k + 13k = 30k = 60\\), so \\(k = 2\\).",
+          "\\(AC = 5k = 5(2) = 10\\), choice A. Check: \\(\\frac{BC}{AC} = \\frac{24}{10} = 2.4\\).",
+          "Choice D, 24, is \\(BC\\), the leg opposite angle \\(A\\), not the adjacent leg; choices B and C use the ratio numbers 12 and 13 without finding \\(k\\)."
+        ],
+        "verify": "k=symbols('k',positive=True)\nks=solve(Eq(12*k+5*k+sqrt((12*k)**2+(5*k)**2),60),k)\nassert ks==[2] and Rational('2.4')==Rational(12,5)\nans=5*ks[0]\nassert Rational(12*ks[0],ans)==Rational('2.4')\nassert value(choices[answer])==ans==10\nassert all(value(choices[c])!=ans for c in choices if c!=answer)\nassert value(choices['D'])==12*ks[0]"
+      },
+      "tryit": [
+        "m-rtt-0007",
+        "m-rtt-0008"
+      ]
+    }
+  ]
+}

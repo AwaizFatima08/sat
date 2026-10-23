@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0515",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The ages of the 7 people in a study group are 10, 12, 13, 15, 15, 19 and 56 years. The 56-year-old is the group's tutor. If the tutor's age is removed from the data, by how many years does the mean age decrease?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6\\)",
+    "B": "\\(14\\)",
+    "C": "\\(42\\)",
+    "D": "\\(8\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "With the tutor: the total is 140 years, so the mean is \\(\\frac{140}{7} = 20\\).",
+    "Without the tutor: the total is \\(140 - 56 = 84\\) years, so the mean is \\(\\frac{84}{6} = 14\\).",
+    "The mean decreases by \\(20 - 14 = 6\\) years."
+  ],
+  "explanation": {
+    "A": "Correct. The mean drops from \\(\\frac{140}{7} = 20\\) to \\(\\frac{84}{6} = 14\\), a decrease of 6 years.",
+    "B": "Incorrect. This is the new mean age, not the amount by which the mean decreases.",
+    "C": "Incorrect. This is the difference between the tutor's age and the new mean, \\(56 - 14 = 42\\), not the change in the mean.",
+    "D": "Incorrect. This is \\(\\frac{56}{7} = 8\\), the tutor's share of the old total. Removing a value also changes the number of values from 7 to 6, so both means must be computed."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "wrong_quantity",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\na = [10, 12, 13, 15, 15, 19, 56]\nb = a[:-1]\nr = Rational(sum(a), 7) - Rational(sum(b), 6)\nassert r == 6\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

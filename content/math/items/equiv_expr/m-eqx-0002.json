@@ -1,0 +1,119 @@
+{
+  "id": "m-eqx-0002",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A rectangular vegetable garden in Multan has a length of \\((x + 5)\\) meters and a width of \\((x - 2)\\) meters, as shown. Which expression represents the area of the garden, in square meters?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        7,
+        0
+      ],
+      "C": [
+        7,
+        4
+      ],
+      "D": [
+        0,
+        4
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          3.5,
+          -0.6
+        ],
+        "text": "x + 5"
+      },
+      {
+        "at": [
+          8.0,
+          2.0
+        ],
+        "text": "x - 2"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x^{2} + 3x - 10\\)",
+    "B": "\\(x^{2} - 10\\)",
+    "C": "\\(x^{2} + 3x + 10\\)",
+    "D": "\\(4x + 6\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Area of a rectangle = length \\(\\times\\) width: \\((x + 5)(x - 2)\\).",
+    "Expand: \\(x^{2} - 2x + 5x - 10 = x^{2} + 3x - 10\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\((x + 5)(x - 2) = x^{2} - 2x + 5x - 10 = x^{2} + 3x - 10\\).",
+    "B": "Incorrect. This is the result of multiplying only the first terms and the last terms, leaving out the middle terms \\(-2x\\) and \\(5x\\).",
+    "C": "Incorrect. This is the result of a sign slip on the constant term: \\(5 \\cdot (-2) = -10\\), not \\(10\\).",
+    "D": "Incorrect. This is the perimeter, \\(2(x + 5) + 2(x - 2)\\), not the area."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\ntarget = expand((x + 5)*(x - 2))\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)\nassert simplify(value(choices['D']) - 2*((x + 5) + (x - 2))) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

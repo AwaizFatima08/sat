@@ -1,0 +1,58 @@
+{
+  "id": "m-rat-0527",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "On a map, 1 centimeter represents 2.5 kilometers. A lake on the map has an area of 6 square centimeters. What is the actual area of the lake, in square kilometers?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(37.5\\)",
+    "B": "\\(2.4\\)",
+    "C": "\\(93.75\\)",
+    "D": "\\(15\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "1 centimeter represents 2.5 kilometers, so 1 square centimeter represents \\(2.5^{2} = 6.25\\) square kilometers.",
+    "Actual area: \\(6 \\cdot 6.25 = 37.5\\) square kilometers."
+  ],
+  "explanation": {
+    "A": "Correct. Areas scale by the square of the length scale: \\(6 \\cdot 2.5^{2} = 37.5\\) square kilometers.",
+    "B": "Incorrect. This is the result of dividing by the scale instead of multiplying: \\(\\frac{6}{2.5}\\).",
+    "C": "Incorrect. This is the result of multiplying by \\(2.5^{3}\\). Cubing the scale is for volumes; areas use the square.",
+    "D": "Incorrect. This is the result of multiplying by the length scale 2.5 instead of the area scale \\(2.5^{2}\\)."
+  },
+  "traps": {
+    "B": "reciprocal",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nans = 6 * Rational(5, 2)**2\nassert ans == Rational(75, 2)\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

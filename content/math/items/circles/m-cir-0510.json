@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0510",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A bicycle wheel has a diameter of 26 inches. How far, in inches, does the bicycle move forward when the wheel makes one full turn without slipping?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(52\\pi\\)",
+    "B": "\\(169\\pi\\)",
+    "C": "\\(13\\pi\\)",
+    "D": "\\(26\\pi\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "In one full turn the bicycle moves one circumference of the wheel.",
+    "\\(C = \\pi d = \\pi(26) = 26\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(2\\pi(26)\\); it uses the diameter in the formula \\(2\\pi r\\).",
+    "B": "Incorrect. This is \\(\\pi(13)^{2}\\), the area of the wheel, not the distance around it.",
+    "C": "Incorrect. This is \\(\\pi r\\) with \\(r = 13\\); the circumference is \\(\\pi d\\), or \\(2\\pi r\\).",
+    "D": "Correct. One turn covers \\(\\pi d = 26\\pi\\) inches."
+  },
+  "traps": {
+    "A": "radius_diameter",
+    "B": "wrong_formula",
+    "C": "radius_diameter"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\ndd=26\nans=pi*dd\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0111",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A theater sells adult tickets for \\$14 each and child tickets for \\$9 each. For one show, the theater sold 40 more adult tickets than child tickets, and ticket sales totaled \\$1,480. How many adult tickets did the theater sell for this show?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(120\\)",
+    "B": "\\(80\\)",
+    "C": "\\(920\\)",
+    "D": "\\(40\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(c\\) be the number of child tickets, so \\(c + 40\\) adult tickets were sold.",
+    "\\(14(c + 40) + 9c = 1{,}480\\), so \\(23c + 560 = 1{,}480\\) and \\(23c = 920\\).",
+    "Then \\(c = 40\\), and the number of adult tickets is \\(40 + 40 = 80\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the total number of tickets sold, \\(40 + 80\\).",
+    "B": "Correct. Solving \\(14(c + 40) + 9c = 1{,}480\\) gives \\(c = 40\\) child tickets, so \\(80\\) adult tickets were sold.",
+    "C": "Incorrect. This is the value of \\(23c\\); the step of dividing by 23 was skipped.",
+    "D": "Incorrect. This is the number of child tickets, not adult tickets."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nc = symbols('c')\ncs = solve(Eq(14*(c + 40) + 9*c, 1480), c)[0]\nassert cs == 40\ns = cs + 40\nassert s == 80\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

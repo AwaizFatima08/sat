@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0540",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "On a 50-question test, each correct answer earns 4 points, each incorrect answer loses 1 point, and each unanswered question earns 0 points. Elena answered 40 of the questions and received a score of 110 points. How many more questions did she answer correctly than incorrectly?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "20"
+  ],
+  "solution": [
+    "Only answered questions count: let \\(c\\) be the correct answers and \\(w\\) the incorrect ones, so \\(c + w = 40\\) and \\(4c - w = 110\\).",
+    "Add the equations: \\(5c = 150\\), so \\(c = 30\\) and \\(w = 10\\).",
+    "She answered \\(30 - 10 = 20\\) more questions correctly than incorrectly."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "c, w = symbols('c w')\nsol = solve([c + w - 40, 4*c - w - 110], [c, w])\nassert sol == {c: 30, w: 10}\nassert [Rational(a) for a in spr_answers] == [sol[c] - sol[w]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "20",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

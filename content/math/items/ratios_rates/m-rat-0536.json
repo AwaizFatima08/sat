@@ -1,0 +1,44 @@
+{
+  "id": "m-rat-0536",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(\\frac{a}{b} = \\frac{3}{5}\\) and \\(\\frac{b}{c} = \\frac{10}{7}\\), what is the value of \\(\\frac{a + c}{b}\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "13/10"
+  ],
+  "solution": [
+    "\\(\\frac{a}{b} = \\frac{3}{5}\\).",
+    "\\(\\frac{c}{b} = \\frac{7}{10}\\), the reciprocal of \\(\\frac{b}{c}\\).",
+    "\\(\\frac{a + c}{b} = \\frac{a}{b} + \\frac{c}{b} = \\frac{6}{10} + \\frac{7}{10} = \\frac{13}{10}\\)."
+  ],
+  "verify": "b = symbols('b', positive=True)\na = Rational(3, 5)*b\nc = b*Rational(7, 10)\nassert simplify(b/c) == Rational(10, 7)\nans = simplify((a + c)/b)\nassert ans == Rational(13, 10)\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "13/10",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

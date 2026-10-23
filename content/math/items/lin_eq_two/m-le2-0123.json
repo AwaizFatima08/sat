@@ -1,0 +1,80 @@
+{
+  "id": "m-le2-0123",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The table shows three points that lie on line \\(\\ell\\) in the \\(xy\\)-plane. At which point does line \\(\\ell\\) cross the \\(x\\)-axis?",
+  "figure": {
+    "kind": "table",
+    "title": "",
+    "columns": [
+      "x",
+      "y"
+    ],
+    "rows": [
+      [
+        "-2",
+        "9"
+      ],
+      [
+        "1",
+        "5"
+      ],
+      [
+        "4",
+        "1"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((-\\frac{19}{4}, 0)\\)",
+    "B": "\\((\\frac{19}{4}, 0)\\)",
+    "C": "\\((\\frac{16}{3}, 0)\\)",
+    "D": "\\((0, \\frac{19}{3})\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Slope \\(= \\frac{5 - 9}{1 - (-2)} = -\\frac{4}{3}\\).",
+    "From \\((4, 1)\\), \\(y\\) must decrease by 1 more. That takes an increase in \\(x\\) of \\(\\frac{3}{4}\\).",
+    "So the line crosses the \\(x\\)-axis at \\(x = 4 + \\frac{3}{4} = \\frac{19}{4}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The sign is wrong: \\(4\\left(-\\frac{19}{4}\\right) + 3(0) = -19\\), not 19.",
+    "B": "Correct. The line is \\(4x + 3y = 19\\); with \\(y = 0\\), \\(x = \\frac{19}{4}\\).",
+    "C": "Incorrect. This moves \\(\\frac{4}{3}\\) in \\(x\\) for each unit drop in \\(y\\), which uses the reciprocal of the slope.",
+    "D": "Incorrect. This is where line \\(\\ell\\) crosses the \\(y\\)-axis."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\npt = lambda s: [value(t) for t in s.replace('\\\\(', '').replace('\\\\)', '').strip()[1:-1].split(',')]\npts = [(int(a), int(b)) for a, b in figure['rows']]\nm = Rational(pts[1][1] - pts[0][1], pts[1][0] - pts[0][0])\nline = m*(x - pts[0][0]) + pts[0][1]\nassert line.subs(x, pts[2][0]) == pts[2][1]\nxi = solve(line, x)[0]\nok = [k for k in choices if pt(choices[k]) == [xi, 0]]\nassert ok == [answer] and xi == Rational(19, 4)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

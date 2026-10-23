@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0102",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A youth chess tournament is open to players who are at least 9 years old and younger than 15 years old. Which inequality describes the ages \\(a\\), in years, of players who can enter the tournament?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9 \\le a < 15\\)",
+    "B": "\\(a < 9\\) or \\(a \\ge 15\\)",
+    "C": "\\(9 < a \\le 15\\)",
+    "D": "\\(9 \\le a \\le 15\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "\"At least 9\" means \\(a \\ge 9\\), so 9 is included.",
+    "\"Younger than 15\" means \\(a < 15\\), so 15 is not included.",
+    "Together: \\(9 \\le a < 15\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \"At least 9\" gives \\(a \\ge 9\\) and \"younger than 15\" gives \\(a < 15\\).",
+    "B": "Incorrect. This describes the ages of players who cannot enter the tournament.",
+    "C": "Incorrect. This switches which endpoint is included: it leaves out 9-year-olds and lets 15-year-olds enter.",
+    "D": "Incorrect. This includes age 15, but players must be younger than 15."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nlo, hi = 9, 15\nallowed = [a for a in range(0, 30) if a >= lo and a < hi]\nassert allowed == list(range(9, 15))\nassert choices[answer] == '\\\\(%d \\\\le a < %d\\\\)' % (lo, hi)\nassert len(set(choices.values())) == 4",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

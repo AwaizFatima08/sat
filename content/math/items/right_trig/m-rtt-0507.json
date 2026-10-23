@@ -1,0 +1,58 @@
+{
+  "id": "m-rtt-0507",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(\\sin 32^{\\circ} = k\\), which of the following is also equal to \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\sin 58^{\\circ}\\)",
+    "B": "\\(\\cos 32^{\\circ}\\)",
+    "C": "\\(\\cos 58^{\\circ}\\)",
+    "D": "\\(\\tan 58^{\\circ}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The sine of an acute angle equals the cosine of its complement: \\(\\sin x^{\\circ} = \\cos(90 - x)^{\\circ}\\).",
+    "\\(\\sin 32^{\\circ} = \\cos 58^{\\circ}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(\\sin 58^{\\circ} = \\cos 32^{\\circ}\\), not \\(\\sin 32^{\\circ}\\); the complement switches sine to cosine.",
+    "B": "Incorrect. Sine and cosine of the same acute angle are equal only for \\(45^{\\circ}\\).",
+    "C": "Correct. \\(\\sin x^{\\circ} = \\cos(90 - x)^{\\circ}\\), and \\(90 - 32 = 58\\).",
+    "D": "Incorrect. Tangent is not the cofunction of sine; \\(\\tan 58^{\\circ}\\) is greater than 1, while \\(\\sin 32^{\\circ}\\) is less than 1."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\ndg=lambda e: e.replace(lambda f: f.func in (sin,cos,tan), lambda f: f.func(f.args[0]*pi/180))\nk0=sin(32*pi/180)\nassert abs(N(dg(value(choices[answer]))-k0))<1e-12\nassert all(abs(N(dg(value(choices[c]))-k0))>1e-3 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (sin 32 = cos 58)",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

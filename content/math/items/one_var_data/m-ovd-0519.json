@@ -1,0 +1,58 @@
+{
+  "id": "m-ovd-0519",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The mean of \\(x\\), \\(2x\\), \\(9\\) and \\(13\\) is \\(10\\). What is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12\\)",
+    "B": "\\(9\\)",
+    "C": "\\(6\\)",
+    "D": "\\(18\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The four values must add to \\(4 \\cdot 10 = 40\\): \\(x + 2x + 9 + 13 = 40\\).",
+    "So \\(3x + 22 = 40\\), \\(3x = 18\\) and \\(x = 6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(2x\\), not \\(x\\).",
+    "B": "Incorrect. This comes from leaving the 9 out of the sum: \\(3x + 13 = 40\\) gives \\(x = 9\\).",
+    "C": "Correct. \\(3x + 22 = 40\\), so \\(3x = 18\\) and \\(x = 6\\).",
+    "D": "Incorrect. This is the value of \\(3x\\). It still has to be divided by 3."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "arithmetic",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nsol = solve(Eq((x + 2*x + 9 + 13) / 4, 10), x)\nassert sol == [6]\nr = sol[0]\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

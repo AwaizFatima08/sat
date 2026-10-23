@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0507",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "To estimate the fraction of households in a town that have a vegetable garden, a researcher selected 150 households at random from a list of all households in the town. What is the population in this study?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "All households in the town that have a vegetable garden",
+    "B": "All households in the town",
+    "C": "The 150 households that were selected",
+    "D": "All towns in the region"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The population is the whole group the researcher wants to learn about.",
+    "The researcher wants the fraction of all households in the town; the 150 selected households are the sample."
+  ],
+  "explanation": {
+    "A": "Incorrect. Households with a garden are only part of the group being studied; the fraction is out of all households.",
+    "B": "Correct. The researcher wants to learn about all households in the town.",
+    "C": "Incorrect. The 150 selected households are the sample, not the population.",
+    "D": "Incorrect. The households were selected from one town only."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nstudy = {'population': 'All households in the town', 'sample_size': 150}\nok = [k for k, v in choices.items() if v == study['population']]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

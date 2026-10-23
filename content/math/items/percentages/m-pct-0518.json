@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0518",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A phone plan costs \\(c\\) dollars per month before tax. A \\(6\\%\\) tax is applied to the plan cost, and then a fee of \\$5 per month, which is not taxed, is added. Which expression gives the total monthly cost, in dollars?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1.6c + 5\\)",
+    "B": "\\(1.06c + 5\\)",
+    "C": "\\(0.06c + 5\\)",
+    "D": "\\(1.06(c + 5)\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The plan cost plus the tax is \\(c + 0.06c = 1.06c\\).",
+    "Add the untaxed fee: \\(1.06c + 5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of writing \\(6\\%\\) as 0.6 instead of 0.06.",
+    "B": "Correct. The taxed plan cost is \\(1.06c\\), and the fee adds 5, so the total is \\(1.06c + 5\\).",
+    "C": "Incorrect. This adds only the tax, \\(0.06c\\), and the fee. It leaves out the plan cost \\(c\\) itself.",
+    "D": "Incorrect. This applies the tax to the \\$5 fee as well, but the fee is not taxed."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nc = symbols('c')\nt = c * (1 + Rational(6, 100)) + 5\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

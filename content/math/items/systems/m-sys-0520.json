@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0520",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A quiz has 25 questions. Each question is worth either 2 points or 5 points, and the whole quiz is worth 74 points. How many 5-point questions are on the quiz?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "Let \\(t\\) be the number of 2-point questions and \\(f\\) the number of 5-point questions: \\(t + f = 25\\) and \\(2t + 5f = 74\\).",
+    "Substitute \\(t = 25 - f\\): \\(2(25 - f) + 5f = 74\\), so \\(50 + 3f = 74\\).",
+    "Then \\(3f = 24\\) and \\(f = 8\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t, f = symbols('t f')\nsol = solve([t + f - 25, 2*t + 5*f - 74], [t, f])\nassert sol == {t: 17, f: 8}\nassert [Rational(a) for a in spr_answers] == [sol[f]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

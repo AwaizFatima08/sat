@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0527",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "\\[2x + y = 5\\] The equation above and which of the following equations form a system of linear equations whose only solution is \\((3, -1)\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x + y = 4\\)",
+    "B": "\\(x - 4y = 7\\)",
+    "C": "\\(x + 2y = 5\\)",
+    "D": "\\(4x + 2y = 10\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "First, \\((3, -1)\\) satisfies \\(2x + y = 5\\): \\(6 - 1 = 5\\).",
+    "The second equation must also be satisfied by \\((3, -1)\\) and must not describe the same line. Test each choice.",
+    "\\(x - 4y = 7\\): \\(3 + 4 = 7\\). Its slope, \\(\\frac{1}{4}\\), differs from \\(-2\\), so the lines cross only at \\((3, -1)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This equation fits \\((3, 1)\\), not \\((3, -1)\\): \\(3 + (-1) = 2\\), not 4.",
+    "B": "Correct. \\((3, -1)\\) satisfies \\(x - 4y = 7\\), and because its slope differs from that of \\(2x + y = 5\\), the lines meet at only that point.",
+    "C": "Incorrect. This equation fits \\((-1, 3)\\), the coordinates in the wrong order: \\(3 + 2(-1) = 1\\), not 5.",
+    "D": "Incorrect. \\((3, -1)\\) satisfies this equation, but it is \\(2x + y = 5\\) multiplied by 2, so the system has infinitely many solutions, not only \\((3, -1)\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nf = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\nonly = [k for k in choices if solve([2*x + y - 5, f(choices[k])], [x, y]) == {x: 3, y: -1}]\nassert only == [answer]\nassert f(choices['C']).subs({x: 3, y: -1}) == 0 and simplify(f(choices['C']) - 2*(2*x + y - 5)) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

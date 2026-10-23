@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0115",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A museum lowers its ticket price from 18 dollars by \\(d\\) dollars. The museum's daily ticket revenue, in dollars, is then \\((18 - d)(150 + 10d)\\). Which of the following is equivalent to this expression?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-10d^{2} + 2{,}700\\)",
+    "B": "\\(-10d^{2} + 330d + 2{,}700\\)",
+    "C": "\\(-10d^{2} + 30d + 2{,}700\\)",
+    "D": "\\(10d^{2} + 30d + 2{,}700\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Multiply each term: \\(18(150) + 18(10d) - d(150) - d(10d)\\).",
+    "This is \\(2{,}700 + 180d - 150d - 10d^{2}\\).",
+    "Combine like terms: \\(-10d^{2} + 30d + 2{,}700\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of multiplying only the first terms and the last terms and leaving out \\(180d\\) and \\(-150d\\).",
+    "B": "Incorrect. This is the result of treating \\(-d \\cdot 150\\) as \\(+150d\\).",
+    "C": "Correct. Expanding and combining \\(180d - 150d\\) gives \\(-10d^{2} + 30d + 2{,}700\\).",
+    "D": "Incorrect. This is the result of treating \\(-d \\cdot 10d\\) as \\(+10d^{2}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nd = symbols('d')\nt = (18 - d)*(150 + 10*d)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

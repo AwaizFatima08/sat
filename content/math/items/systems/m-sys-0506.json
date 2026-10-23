@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0506",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "At a school store, 2 pencils and 1 eraser cost a total of \\$1.70, and 1 pencil and 1 eraser cost a total of \\$1.10. All pencils have the same price, and all erasers have the same price. What is the price, in dollars, of 1 pencil?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.55\\)",
+    "B": "\\(0.50\\)",
+    "C": "\\(0.85\\)",
+    "D": "\\(0.60\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(p\\) be the price of a pencil and \\(e\\) the price of an eraser: \\(2p + e = 1.70\\) and \\(p + e = 1.10\\).",
+    "Subtract the second equation from the first: \\(p = 0.60\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This divides \\$1.10 by 2, assuming a pencil and an eraser cost the same.",
+    "B": "Incorrect. This is the price of 1 eraser, not 1 pencil.",
+    "C": "Incorrect. This divides \\$1.70 by 2 as if the first purchase were only 2 pencils, ignoring the eraser.",
+    "D": "Correct. The first purchase has exactly one more pencil than the second, so a pencil costs \\(1.70 - 1.10 = 0.60\\) dollars."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\np, e = symbols('p e')\nsol = solve([2*p + e - Rational('1.70'), p + e - Rational('1.10')], [p, e])\nassert sol == {p: Rational('0.60'), e: Rational('0.50')}\nassert value(choices[answer]) == sol[p]\nassert all(value(choices[k]) != sol[p] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

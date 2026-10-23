@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0525",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, a circle has its center at \\((4, -3)\\) and is tangent to the \\(x\\)-axis. Which equation represents the circle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((x + 4)^{2} + (y - 3)^{2} = 9\\)",
+    "B": "\\((x - 4)^{2} + (y + 3)^{2} = 3\\)",
+    "C": "\\((x - 4)^{2} + (y + 3)^{2} = 16\\)",
+    "D": "\\((x - 4)^{2} + (y + 3)^{2} = 9\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "A circle tangent to the \\(x\\)-axis has a radius equal to the distance from its center to that axis, the absolute value of the \\(y\\)-coordinate: \\(r = 3\\).",
+    "\\((x - 4)^{2} + (y + 3)^{2} = 3^{2} = 9\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This circle has center \\((-4, 3)\\); the signs inside the parentheses are reversed.",
+    "B": "Incorrect. The right side must be \\(r^{2} = 9\\), not \\(r = 3\\).",
+    "C": "Incorrect. This uses the distance to the \\(y\\)-axis, 4, as the radius; that circle is tangent to the \\(y\\)-axis instead.",
+    "D": "Correct. Center \\((4, -3)\\), radius 3, so \\(r^{2} = 9\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "wrong_formula",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx,y=symbols('x y')\neq=lambda s: expand(value(s.strip()[2:-2].split('=')[0])-value(s.strip()[2:-2].split('=')[1]))\nt=(x-4)**2+(y+3)**2-abs(-3)**2\nassert discriminant(Poly(t.subs(y,0),x))==0\nassert expand(eq(choices[answer])-t)==0\nassert all(expand(eq(choices[k])-t)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

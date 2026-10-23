@@ -1,0 +1,59 @@
+{
+  "id": "m-cir-0111",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A windshield wiper arm pivots about a fixed point and sweeps through an angle of \\(120^{\\circ}\\). The rubber blade on the arm runs from 15 centimeters to 45 centimeters from the pivot. What is the area, in square centimeters, of the region of the windshield that the blade wipes?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(75\\pi\\)",
+    "B": "\\(30\\pi\\)",
+    "C": "\\(600\\pi\\)",
+    "D": "\\(300\\pi\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The wiped region is the part of a \\(120^{\\circ}\\) sector of radius 45 that lies outside the \\(120^{\\circ}\\) sector of radius 15.",
+    "Area \\(= \\frac{120}{360}\\left(\\pi(45)^{2} - \\pi(15)^{2}\\right) = \\frac{1}{3}(2{,}025\\pi - 225\\pi)\\).",
+    "\\(= \\frac{1}{3}(1{,}800\\pi) = 600\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{1}{3}\\pi(15)^{2}\\), the area of the small inner sector that the blade does not wipe.",
+    "B": "Incorrect. This is \\(\\frac{120}{360} \\cdot 2\\pi(45)\\), the length of the outer arc, not an area.",
+    "C": "Correct. \\(\\frac{1}{3}\\pi(45^{2} - 15^{2}) = 600\\pi\\).",
+    "D": "Incorrect. This is \\(\\frac{1}{3}\\pi(45 - 15)^{2}\\); the difference of the radii was squared instead of taking the difference of the squares."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_formula",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nans=Rational(120,360)*(pi*45**2-pi*15**2)\nassert ans==600*pi\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

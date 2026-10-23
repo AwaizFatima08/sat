@@ -1,0 +1,57 @@
+{
+  "id": "m-nle-0002",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "If \\(\\sqrt{x - 2} = 6\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(8\\)",
+    "B": "\\(14\\)",
+    "C": "\\(34\\)",
+    "D": "\\(38\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Square both sides to remove the square root: \\(x - 2 = 36\\).",
+    "Add \\(2\\): \\(x = 38\\). Check: \\(\\sqrt{38 - 2} = \\sqrt{36} = 6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of ignoring the square root and solving \\(x - 2 = 6\\).",
+    "B": "Incorrect. This is the result of doubling \\(6\\) instead of squaring it: \\(x - 2 = 12\\).",
+    "C": "Incorrect. This is the result of subtracting \\(2\\) from \\(36\\) instead of adding it.",
+    "D": "Correct. Squaring gives \\(x - 2 = 36\\), so \\(x = 38\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_formula",
+    "C": "sign_error"
+  },
+  "verify": "x = symbols('x')\nsols = solve(Eq(sqrt(x - 2), 6), x)\nassert sols == [38]\nassert value(choices[answer]) == 38\nassert all(value(choices[k]) != 38 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

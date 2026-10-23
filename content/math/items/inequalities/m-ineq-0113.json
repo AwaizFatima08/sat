@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0113",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A doctor has 450 minutes available for appointments on Monday. Short appointments last 20 minutes, and long appointments last 50 minutes. If 6 long appointments are already scheduled for Monday, what is the greatest number of short appointments that can also be scheduled?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(7\\)",
+    "B": "\\(22\\)",
+    "C": "\\(9\\)",
+    "D": "\\(8\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The 6 long appointments use \\(6(50) = 300\\) minutes.",
+    "For \\(s\\) short appointments: \\(300 + 20s \\le 450\\), so \\(20s \\le 150\\) and \\(s \\le 7.5\\).",
+    "The number of appointments is a whole number, so the greatest value is 7."
+  ],
+  "explanation": {
+    "A": "Correct. \\(300 + 20s \\le 450\\) gives \\(s \\le 7.5\\), so at most 7 short appointments fit.",
+    "B": "Incorrect. This is \\(450 \\div 20 = 22.5\\) rounded down, which ignores the 300 minutes already used by the long appointments.",
+    "C": "Incorrect. This is \\(450 \\div 50 = 9\\), the number of long appointments that would fit in the whole day, not the number of short appointments.",
+    "D": "Incorrect. This rounds 7.5 up, but 8 short appointments would need \\(300 + 160 = 460\\) minutes, more than 450."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nbest = max(s for s in range(0, 100) if 6*50 + 20*s <= 450)\nassert best == 7 and value(choices[answer]) == best\nassert all(value(choices[k]) != best for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

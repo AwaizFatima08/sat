@@ -1,0 +1,59 @@
+{
+  "id": "m-lfn-0162",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A gym offers two membership plans. Plan A has a one-time joining fee of 40 dollars plus 25 dollars per month. Plan B has no joining fee and costs \\(k\\) dollars per month. For a membership of 7 or fewer whole months, Plan B costs less than Plan A, and for a membership of 8 or more whole months, Plan B costs more than Plan A. Which of the following could be the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(31\\)",
+    "B": "\\(30.5\\)",
+    "C": "\\(30\\)",
+    "D": "\\(29\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "For \\(m\\) months, Plan B costs more than Plan A when \\(km > 25m + 40\\), that is, when \\((k - 25)m > 40\\).",
+    "This must be false for \\(m = 7\\) and true for \\(m = 8\\): \\(7(k - 25) < 40 < 8(k - 25)\\), so \\(5 < k - 25 < \\frac{40}{7}\\).",
+    "So \\(30 < k < 30\\frac{5}{7}\\). Of the choices, only 30.5 works (check: \\(7(30.5) = 213.5 < 215\\) and \\(8(30.5) = 244 > 240\\))."
+  ],
+  "explanation": {
+    "A": "Incorrect. With \\(k = 31\\), a 7-month membership costs 217 dollars on Plan B and 215 dollars on Plan A, so Plan B already costs more at 7 months.",
+    "B": "Correct. \\(7(30.5) = 213.5 < 215\\) and \\(8(30.5) = 244 > 240\\), and the gap only widens after that.",
+    "C": "Incorrect. With \\(k = 30\\), both plans cost 240 dollars for 8 months, so Plan B does not cost more at 8 months.",
+    "D": "Incorrect. With \\(k = 29\\), an 8-month membership costs 232 dollars on Plan B and 240 dollars on Plan A, so Plan B still costs less at 8 months."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\ndef works(k):\n    return all((k*m < 25*m + 40) if m <= 7 else (k*m > 25*m + 40) for m in range(1, 61))\nassert [key for key in choices if works(value(choices[key]))] == [answer]\nassert value(choices[answer]) == Rational(61, 2)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

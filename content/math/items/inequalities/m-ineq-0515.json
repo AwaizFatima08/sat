@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0515",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A tailor in Dhaka earns 450 taka for each shirt he stitches. He pays 4,200 taka a month in rent for his shop. What is the least number of shirts he must stitch in a month so that his earnings minus his rent are at least 10,000 taka?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10\\)",
+    "B": "\\(31\\)",
+    "C": "\\(32\\)",
+    "D": "\\(23\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "With \\(s\\) shirts: \\(450s - 4{,}200 \\ge 10{,}000\\).",
+    "Add \\(4{,}200\\): \\(450s \\ge 14{,}200\\), so \\(s \\ge 31.55...\\).",
+    "31 shirts are not enough (\\(13{,}950 - 4{,}200 = 9{,}750\\) taka), so he needs at least 32 shirts."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the number of shirts that covers the rent alone: \\(\\frac{4{,}200}{450} = 9.33...\\), rounded up to 10.",
+    "B": "Incorrect. This rounds \\(31.55...\\) down. With 31 shirts, the earnings minus rent are \\(13{,}950 - 4{,}200 = 9{,}750\\) taka, less than \\(10{,}000\\).",
+    "C": "Correct. \\(450s - 4{,}200 \\ge 10{,}000\\) gives \\(s \\ge 31.55...\\), so the least whole number of shirts is 32.",
+    "D": "Incorrect. This ignores the rent: \\(450s \\ge 10{,}000\\) gives \\(s \\ge 22.2...\\), so 23."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\ns = symbols('s')\nS = solve_univariate_inequality(450*s - 4200 >= 10000, s, relational=False)\nleast = ceiling(S.inf)\nassert least == 32 and value(choices[answer]) == least\nassert all(value(choices[k]) != least for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

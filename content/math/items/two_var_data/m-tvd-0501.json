@@ -1,0 +1,97 @@
+{
+  "id": "m-tvd-0501",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The scatterplot shows the length \\(x\\), in centimeters, and the mass \\(y\\), in grams, of 8 fish caught in a river. The line of best fit is shown and has the equation \\(y = 12x - 90\\). Based on the line of best fit, what is the predicted mass, in grams, of a fish that is 25 centimeters long?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Length (centimeters)",
+    "y_label": "Mass (grams)",
+    "points": [
+      [
+        15,
+        95
+      ],
+      [
+        18,
+        120
+      ],
+      [
+        20,
+        158
+      ],
+      [
+        22,
+        170
+      ],
+      [
+        24,
+        205
+      ],
+      [
+        26,
+        216
+      ],
+      [
+        28,
+        254
+      ],
+      [
+        30,
+        265
+      ]
+    ],
+    "line": "12*x - 90"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(300\\)",
+    "B": "\\(12\\)",
+    "C": "\\(390\\)",
+    "D": "\\(210\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = 25\\) into the equation of the line of best fit.",
+    "\\(y = 12(25) - 90 = 300 - 90 = 210\\) grams."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(12(25) = 300\\) without subtracting the 90 in the equation.",
+    "B": "Incorrect. This is the slope of the line, the predicted increase in mass for each additional centimeter of length, not a predicted mass.",
+    "C": "Incorrect. This is the result of adding 90 instead of subtracting it: \\(12(25) + 90 = 390\\).",
+    "D": "Correct. \\(y = 12(25) - 90 = 210\\) grams."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_quantity",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\npred = sympify(figure['line']).subs(x, 25)\nassert pred == 210\nassert value(choices[answer]) == pred\nassert all(value(choices[k]) != pred for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

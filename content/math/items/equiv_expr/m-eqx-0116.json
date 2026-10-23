@@ -1,0 +1,46 @@
+{
+  "id": "m-eqx-0116",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The expression \\((x^{2} + 3x - 2)(x - 4)\\) is equivalent to \\(x^{3} + ax^{2} + bx + 8\\), where \\(a\\) and \\(b\\) are constants. What is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-14"
+  ],
+  "solution": [
+    "The \\(x\\)-terms come from \\(3x \\cdot (-4)\\) and \\(-2 \\cdot x\\).",
+    "\\(-12x - 2x = -14x\\), so \\(b = -14\\).",
+    "(The full product is \\(x^{3} - x^{2} - 14x + 8\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\np = Poly(expand((x**2 + 3*x - 2)*(x - 4)), x)\nassert p.coeff_monomial(1) == 8 and p.coeff_monomial(x**3) == 1\nassert p.coeff_monomial(x) == -14\nassert [Rational(v) for v in spr_answers] == [-14]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "-14",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

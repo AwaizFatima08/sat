@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0506",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A tomato plant is 14 centimeters tall when it is planted, and it grows 2.5 centimeters each week. After how many weeks will the plant be 39 centimeters tall?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(21.2\\)",
+    "B": "\\(25\\)",
+    "C": "\\(15.6\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "After \\(w\\) weeks the height is \\(14 + 2.5w\\) centimeters.",
+    "Solve \\(14 + 2.5w = 39\\): \\(2.5w = 25\\), so \\(w = 10\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding the starting height instead of subtracting it: \\(2.5w = 53\\).",
+    "B": "Incorrect. This is the number of centimeters the plant must grow, not the number of weeks.",
+    "C": "Incorrect. This is the result of ignoring the starting height: \\(39 \\div 2.5 = 15.6\\).",
+    "D": "Correct. Solving \\(14 + 2.5w = 39\\) gives \\(2.5w = 25\\), so \\(w = 10\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "stopped_early",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nw = symbols('w')\ns = solve(Eq(14 + Rational(5, 2)*w, 39), w)[0]\nassert s == 10\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

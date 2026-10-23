@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0134",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "An auditorium has \\((2x^{2} + 19x + 35)\\) seats arranged in \\((x + 7)\\) rows, with the same number of seats in each row. Which expression represents the number of seats in each row?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2x + 5\\)",
+    "B": "\\(x + 5\\)",
+    "C": "\\(2x - 5\\)",
+    "D": "\\(2x^{2} + 18x + 28\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Seats per row \\(= \\frac{2x^{2} + 19x + 35}{x + 7}\\).",
+    "Factor the numerator: \\(2x^{2} + 19x + 35 = (x + 7)(2x + 5)\\).",
+    "Cancel \\(x + 7\\): each row has \\(2x + 5\\) seats."
+  ],
+  "explanation": {
+    "A": "Correct. \\((x + 7)(2x + 5) = 2x^{2} + 19x + 35\\), so each row has \\(2x + 5\\) seats.",
+    "B": "Incorrect. This is the result of ignoring the leading coefficient 2; \\((x + 7)(x + 5) = x^{2} + 12x + 35\\).",
+    "C": "Incorrect. This expression times \\(x + 7\\) gives \\(2x^{2} + 9x - 35\\); the sign of 5 is wrong.",
+    "D": "Incorrect. This is the result of subtracting the number of rows from the number of seats instead of dividing."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = (2*x**2 + 19*x + 35)/(x + 7)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

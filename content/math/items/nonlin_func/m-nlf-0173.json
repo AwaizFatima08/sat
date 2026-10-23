@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0173",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = x^{2} - 6x + k\\), where \\(k\\) is a constant. The graph of \\(y = f(x)\\) in the \\(xy\\)-plane does not intersect the \\(x\\)-axis. Which of the following could be the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0\\)",
+    "B": "\\(9\\)",
+    "C": "\\(10\\)",
+    "D": "\\(-10\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Complete the square: \\(f(x) = (x - 3)^{2} + (k - 9)\\).",
+    "The graph opens upward with minimum value \\(k - 9\\). It misses the \\(x\\)-axis exactly when \\(k - 9 > 0\\), that is, \\(k > 9\\).",
+    "Of the choices, only \\(10\\) is greater than 9."
+  ],
+  "explanation": {
+    "A": "Incorrect. With \\(k = 0\\), \\(f(x) = x(x - 6)\\), which has \\(x\\)-intercepts at 0 and 6.",
+    "B": "Incorrect. With \\(k = 9\\), \\(f(x) = (x - 3)^{2}\\), whose graph touches the \\(x\\)-axis at \\((3, 0)\\).",
+    "C": "Correct. \\(f(x) = (x - 3)^{2} + k - 9\\), so the minimum value is \\(k - 9 = 1 > 0\\). The graph stays above the \\(x\\)-axis.",
+    "D": "Incorrect. With \\(k = -10\\), the minimum value is \\(-19\\), so the graph crosses the \\(x\\)-axis twice. The condition is \\(k > 9\\), not \\(k < -9\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nx, k = symbols('x k')\ndef misses(kv):\n    return len([r for r in solve(x**2 - 6*x + kv, x) if r.is_real]) == 0\nassert misses(value(choices[answer])) and value(choices[answer]) == 10\nassert all(not misses(value(choices[c])) for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

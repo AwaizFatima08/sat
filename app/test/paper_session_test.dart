@@ -30,17 +30,24 @@ class FakeProgressRepository implements ProgressRepository {
   @override
   Future<void> saveProfile(StudentProfile profile) async {}
   @override
-  Future<void> saveSession(SavedPaperSession session) async => sessions.add(session);
+  Future<void> saveSession(SavedPaperSession session) async =>
+      sessions.add(session);
   @override
-  Future<void> recordPaper(PaperResult result,
-      {required Map<String, MistakeEntry> notebook, required Map<String, DateTime> seen}) async {
+  Future<void> recordPaper(
+    PaperResult result, {
+    required Map<String, MistakeEntry> notebook,
+    required Map<String, DateTime> seen,
+  }) async {
     papers.add(result);
     this.notebook = notebook;
   }
 
   @override
-  Future<void> recordDrill(DrillResult result,
-      {required Map<String, MistakeEntry> notebook, required Map<String, DateTime> seen}) async {
+  Future<void> recordDrill(
+    DrillResult result, {
+    required Map<String, MistakeEntry> notebook,
+    required Map<String, DateTime> seen,
+  }) async {
     drills.add(result);
     this.notebook = notebook;
   }
@@ -51,7 +58,9 @@ class FakeProgressRepository implements ProgressRepository {
 
 /// The real content pack, with a synthetic paper built from whatever items it has.
 ContentBank _bank() {
-  final raw = jsonDecode(File('assets/data/rw_bank.json').readAsStringSync()) as Map<String, Object?>;
+  final raw =
+      jsonDecode(File('assets/data/rw_bank.json').readAsStringSync())
+          as Map<String, Object?>;
   final bank = ContentBank.fromJson(raw);
   final ids = bank.items.keys.toList();
   final form = PaperForm(
@@ -86,7 +95,9 @@ void main() {
       overrides: [
         contentBankProvider.overrideWith((ref) async => bank),
         progressRepositoryProvider.overrideWithValue(repo),
-        progressProvider.overrideWith((ref) => Stream.value(ProgressSnapshot.empty)),
+        progressProvider.overrideWith(
+          (ref) => Stream.value(ProgressSnapshot.empty),
+        ),
         clockProvider.overrideWithValue(_FixedClock()),
       ],
     );
@@ -95,45 +106,51 @@ void main() {
     await c.read(progressProvider.future);
   });
 
-  test('a perfect module 1 routes to the harder module and scores high', () async {
-    final n = c.read(paperSessionProvider.notifier)..start(bank.forms.single);
-    for (var i = 0; i < 27; i++) {
-      n.select(c.read(paperSessionProvider)!.current.answer);
-      n.next();
-    }
-    expect(c.read(paperSessionProvider)!.phase, PaperPhase.checkWork);
-    await n.endModule();
-    final s = c.read(paperSessionProvider)!;
-    expect(s.route, ModuleRoute.harder);
-    expect(s.phase, PaperPhase.betweenModules);
-    expect(s.items.map((i) => i.id), bank.forms.single.module2Harder);
-    n.beginModule2();
-    for (var i = 0; i < 27; i++) {
-      n.select(c.read(paperSessionProvider)!.current.answer);
-      n.next();
-    }
-    await n.endModule();
-    final done = c.read(paperSessionProvider)!;
-    expect(done.phase, PaperPhase.finished);
-    expect(repo.papers.single.estimate.score, greaterThanOrEqualTo(700));
-    expect(repo.papers.single.all, hasLength(54));
-    expect(repo.notebook, isEmpty);
-    n.close();
-  });
+  test(
+    'a perfect module 1 routes to the harder module and scores high',
+    () async {
+      final n = c.read(paperSessionProvider.notifier)..start(bank.forms.single);
+      for (var i = 0; i < 27; i++) {
+        n.select(c.read(paperSessionProvider)!.current.answer);
+        n.next();
+      }
+      expect(c.read(paperSessionProvider)!.phase, PaperPhase.checkWork);
+      await n.endModule();
+      final s = c.read(paperSessionProvider)!;
+      expect(s.route, ModuleRoute.harder);
+      expect(s.phase, PaperPhase.betweenModules);
+      expect(s.items.map((i) => i.id), bank.forms.single.module2Harder);
+      n.beginModule2();
+      for (var i = 0; i < 27; i++) {
+        n.select(c.read(paperSessionProvider)!.current.answer);
+        n.next();
+      }
+      await n.endModule();
+      final done = c.read(paperSessionProvider)!;
+      expect(done.phase, PaperPhase.finished);
+      expect(repo.papers.single.estimate.score, greaterThanOrEqualTo(700));
+      expect(repo.papers.single.all, hasLength(54));
+      expect(repo.notebook, isEmpty);
+      n.close();
+    },
+  );
 
-  test('a blank module 1 routes to the easier module; wrong answers enter the notebook', () async {
-    final n = c.read(paperSessionProvider.notifier)..start(bank.forms.single);
-    await n.endModule();
-    expect(c.read(paperSessionProvider)!.route, ModuleRoute.easier);
-    n.beginModule2();
-    final first = c.read(paperSessionProvider)!.current;
-    n.select(answerLetters.firstWhere((l) => l != first.answer));
-    await n.endModule();
-    expect(repo.papers.single.route, ModuleRoute.easier);
-    expect(repo.papers.single.estimate.score, lessThanOrEqualTo(610));
-    expect(repo.notebook, hasLength(54));
-    n.close();
-  });
+  test(
+    'a blank module 1 routes to the easier module; wrong answers enter the notebook',
+    () async {
+      final n = c.read(paperSessionProvider.notifier)..start(bank.forms.single);
+      await n.endModule();
+      expect(c.read(paperSessionProvider)!.route, ModuleRoute.easier);
+      n.beginModule2();
+      final first = c.read(paperSessionProvider)!.current;
+      n.select(answerLetters.firstWhere((l) => l != first.answer));
+      await n.endModule();
+      expect(repo.papers.single.route, ModuleRoute.easier);
+      expect(repo.papers.single.estimate.score, lessThanOrEqualTo(610));
+      expect(repo.notebook, hasLength(54));
+      n.close();
+    },
+  );
 
   test('leaving mid-paper saves a resumable, untimed session', () {
     final n = c.read(paperSessionProvider.notifier)..start(bank.forms.single);

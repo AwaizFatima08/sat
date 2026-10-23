@@ -1,0 +1,60 @@
+{
+  "id": "m-smp-0537",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A city has 20,000 households in its north district and 30,000 households in its south district. Based on a random sample from each district, 30% of north-district households are estimated to have solar panels, with a margin of error of 4 percentage points, and 50% of south-district households are estimated to have solar panels, with a margin of error of 5 percentage points. Using the greatest plausible percent for each district, what is the greatest plausible number of households in the whole city that have solar panels?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(21{,}200\\)",
+    "B": "\\(22{,}250\\)",
+    "C": "\\(21{,}000\\)",
+    "D": "\\(23{,}300\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "North: greatest plausible percent \\(30 + 4 = 34\\%\\), so \\(0.34(20{,}000) = 6{,}800\\) households.",
+    "South: greatest plausible percent \\(50 + 5 = 55\\%\\), so \\(0.55(30{,}000) = 16{,}500\\) households.",
+    "Total: \\(6{,}800 + 16{,}500 = 23{,}300\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This applies the north district's percent to the south district's households and the reverse.",
+    "B": "Incorrect. This averages the two percents and the two margins of error (44.5%) as if the districts were the same size; the south district has more households.",
+    "C": "Incorrect. This is the point estimate, \\(0.30(20{,}000) + 0.50(30{,}000)\\); the margins of error were not added.",
+    "D": "Correct. \\(0.34(20{,}000) + 0.55(30{,}000) = 6{,}800 + 16{,}500 = 23{,}300\\)."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "wrong_formula",
+    "C": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nhi = Rational(34, 100) * 20000 + Rational(55, 100) * 30000\nassert hi == 23300 and value(choices[answer]) == hi\nassert all(value(choices[k]) != hi for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "retired",
+    "retired_reason": "adds margins of error across districts; statistically wrong for the SAT",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0131",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(kx + 6 = 5x + 2k\\), \\(k\\) is a constant. If \\(x = 4\\) is a solution to the equation, what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(13\\)",
+    "B": "\\(14\\)",
+    "C": "\\(\\frac{7}{3}\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = 4\\): \\(4k + 6 = 20 + 2k\\).",
+    "Subtract \\(2k\\) and 6 from both sides: \\(2k = 14\\).",
+    "So \\(k = 7\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding 6 to 20 instead of subtracting it: \\(2k = 26\\).",
+    "B": "Incorrect. This is the value of \\(2k\\), not \\(k\\).",
+    "C": "Incorrect. This is the result of adding \\(2k\\) to the left side instead of subtracting it: \\(6k = 14\\).",
+    "D": "Correct. \\(4k + 6 = 20 + 2k\\) gives \\(2k = 14\\), so \\(k = 7\\). Check: \\(7x + 6 = 5x + 14\\) has solution \\(x = 4\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "stopped_early",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx, k = symbols('x k')\ns = solve(Eq(k*4 + 6, 5*4 + 2*k), k)[0]\nassert s == 7\nassert solve(Eq(s*x + 6, 5*x + 2*s), x) == [4]\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

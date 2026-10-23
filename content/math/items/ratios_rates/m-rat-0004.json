@@ -1,0 +1,43 @@
+{
+  "id": "m-rat-0004",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "On a hiking map, 2 centimeters represent 15 kilometers. Two campsites are 9.2 centimeters apart on the map. What is the actual distance, in kilometers, between the two campsites?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "69"
+  ],
+  "solution": [
+    "Find the scale: \\(\\frac{15}{2} = 7.5\\) kilometers per centimeter.",
+    "Multiply by the map distance: \\(9.2 \\cdot 7.5 = 69\\) kilometers."
+  ],
+  "verify": "km = Rational('9.2') * Rational(15, 2)\nassert km == 69\nassert Rational(spr_answers[0]) == km and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "69",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

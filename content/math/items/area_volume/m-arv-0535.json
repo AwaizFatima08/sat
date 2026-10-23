@@ -1,0 +1,125 @@
+{
+  "id": "m-arv-0535",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the figure shown, square \\(ABCD\\) is inscribed in a circle with center \\(O\\) and radius \\(5\\). What is the area of the region inside the circle but outside the square?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        5,
+        0
+      ],
+      "B": [
+        0,
+        5
+      ],
+      "C": [
+        -5,
+        0
+      ],
+      "D": [
+        0,
+        -5
+      ],
+      "O": [
+        0,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "O",
+        "A"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 5
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          2.5,
+          -0.6
+        ],
+        "text": "5"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(25\\pi - 25\\)",
+    "B": "\\(25\\pi - 50\\)",
+    "C": "\\(50\\)",
+    "D": "\\(100\\pi - 50\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The diagonals of the square are diameters of the circle, so each diagonal is 10.",
+    "A square with diagonal 10 has side \\(\\frac{10}{\\sqrt{2}} = 5\\sqrt{2}\\), so its area is \\(\\left(5\\sqrt{2}\\right)^{2} = 50\\).",
+    "Circle: \\(25\\pi\\). Region: \\(25\\pi - 50\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This takes the side of the square to be 5, the radius; the side is \\(5\\sqrt{2}\\), since the diagonal is a diameter.",
+    "B": "Correct. The square has diagonal 10 and area 50, so the region has area \\(25\\pi - 50\\).",
+    "C": "Incorrect. This is the area of the square, not the region outside it.",
+    "D": "Incorrect. This uses 10, the diameter, as the radius of the circle."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_quantity",
+    "D": "radius_diameter"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nr=figure['circles'][0]['radius']\nside2=(P['A'][0]-P['B'][0])**2+(P['A'][1]-P['B'][1])**2\nassert r==5 and side2==50\nans=pi*r**2-side2\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

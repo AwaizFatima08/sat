@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0508",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The power \\(P\\), in watts, used by an electric heater is given by \\(P = I^{2}R\\), where \\(I\\) is the current, in amperes, and \\(R\\) is the resistance, in ohms. A heater has a resistance of 20 ohms and uses 500 watts. What is the current, in amperes?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "5"
+  ],
+  "solution": [
+    "Substitute the known values: \\(500 = I^{2}(20)\\).",
+    "Divide by \\(20\\): \\(I^{2} = 25\\).",
+    "Current here is positive, so \\(I = 5\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "c = symbols('c', positive=True)\nsol = solve(Eq(500, c**2*20), c)\nassert sol == [5]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

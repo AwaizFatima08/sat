@@ -1,0 +1,46 @@
+{
+  "id": "m-le2-0536",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(3x + 4y = c\\), where \\(c\\) is a positive constant, crosses the \\(x\\)-axis at point \\(P\\) and the \\(y\\)-axis at point \\(Q\\). The distance between \\(P\\) and \\(Q\\) is 25. What is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "60"
+  ],
+  "solution": [
+    "\\(P = \\left(\\frac{c}{3}, 0\\right)\\) and \\(Q = \\left(0, \\frac{c}{4}\\right)\\).",
+    "By the Pythagorean theorem, \\(PQ^{2} = \\left(\\frac{c}{3}\\right)^{2} + \\left(\\frac{c}{4}\\right)^{2} = \\frac{25c^{2}}{144}\\), so \\(PQ = \\frac{5c}{12}\\).",
+    "Set \\(\\frac{5c}{12} = 25\\): \\(c = 60\\). Check: \\(P = (20, 0)\\), \\(Q = (0, 15)\\), and \\(\\sqrt{20^{2} + 15^{2}} = 25\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "c = symbols('c', positive=True)\nd = sqrt((c/3)**2 + (c/4)**2)\nsol = solve(Eq(d, 25), c)\nassert sol == [60]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "60",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

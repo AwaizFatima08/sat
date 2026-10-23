@@ -1,0 +1,58 @@
+{
+  "id": "m-stc-0530",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A farmers' cooperative in Maharashtra, India, has 2,500 members. A researcher selected 300 members at random and found that the members who use drip irrigation earned more from their crops last year, on average, than the members who do not. Which of the following conclusions is best supported?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Among the cooperative's members, using drip irrigation is associated with higher crop earnings.",
+    "B": "Among all farmers in Maharashtra, using drip irrigation is associated with higher crop earnings.",
+    "C": "Using drip irrigation causes higher crop earnings for the cooperative's members.",
+    "D": "Using drip irrigation caused higher crop earnings for the 300 members in the sample only."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The 300 members were a random sample of the cooperative, so the result can be generalized to its 2,500 members, but not to all farmers in the state.",
+    "The members chose their own irrigation method, so the study is observational and shows an association, not cause and effect."
+  ],
+  "explanation": {
+    "A": "Correct. A random sample of members supports an association that applies to all members of the cooperative.",
+    "B": "Incorrect. The sample came only from the cooperative, so the result cannot be generalized to all farmers in the state.",
+    "C": "Incorrect. The members chose whether to use drip irrigation, so other factors (such as land size or wealth) could explain the difference.",
+    "D": "Incorrect. Without random assignment there is no causal conclusion even for the sample, and the random sample allows generalizing to all members."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\ndesign = {'random_sample_of': 'cooperative', 'random_assignment': False}\nclaims = {'A': ('cause', 'cooperative'), 'B': ('assoc', 'state'), 'C': ('cause', 'sample'), 'D': ('assoc', 'cooperative')}\nok = [k for k, (c, s) in claims.items() if c == 'assoc' and s == design['random_sample_of']]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

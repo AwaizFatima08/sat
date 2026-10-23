@@ -1,0 +1,109 @@
+{
+  "id": "m-rtt-0510",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A zip line at an adventure park is a straight cable 50 meters long. It makes an angle of \\(x^{\\circ}\\) with the horizontal, where \\(\\cos x^{\\circ} = 0.96\\), as shown. What is the horizontal distance, in meters, covered by the zip line?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "F": [
+        0,
+        0
+      ],
+      "S": [
+        0,
+        14
+      ],
+      "E": [
+        48,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "F",
+        "S"
+      ],
+      [
+        "F",
+        "E"
+      ],
+      [
+        "S",
+        "E"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          25,
+          8.6
+        ],
+        "text": "50 m"
+      },
+      {
+        "at": [
+          43.2,
+          0.9
+        ],
+        "text": "x°"
+      }
+    ],
+    "right_angles": [
+      "F"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(52.08\\)",
+    "B": "\\(48\\)",
+    "C": "\\(14\\)",
+    "D": "\\(0.0192\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The cable is the hypotenuse and the horizontal distance is the leg adjacent to \\(x^{\\circ}\\).",
+    "\\(\\cos x^{\\circ} = \\frac{\\text{adjacent}}{50}\\), so the distance is \\(50 \\cdot 0.96 = 48\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{50}{0.96}\\), which treats the 50-meter cable as the horizontal leg; the cable is the hypotenuse.",
+    "B": "Correct. Horizontal distance \\(= 50\\cos x^{\\circ} = 50(0.96) = 48\\).",
+    "C": "Incorrect. This is the vertical drop, \\(\\sqrt{50^{2} - 48^{2}}\\), not the horizontal distance.",
+    "D": "Incorrect. This is \\(\\frac{0.96}{50}\\); cosine is adjacent over hypotenuse, so multiply the hypotenuse by 0.96."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "wrong_quantity",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('S','E')==50 and abs(ang('S','F','E')-90)<0.1\nans=50*Rational('0.96')\nassert ans==48 and d('F','E')==ans\nassert abs(N(cos(ang('S','E','F')*pi/180))-Rational('0.96'))<1e-3\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

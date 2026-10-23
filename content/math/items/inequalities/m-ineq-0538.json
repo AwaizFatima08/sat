@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0538",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Tank A holds 300 liters of water and is drained at a constant rate of 6 liters per minute. At the same time, Tank B, which holds 40 liters of water, is filled at a constant rate of 7 liters per minute. Which of the following describes all times \\(t\\), in minutes, during which Tank A holds more water than Tank B and Tank B holds at least 100 liters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{60}{7} \\le t \\le 20\\)",
+    "B": "\\(t < 20\\)",
+    "C": "\\(\\frac{60}{7} \\le t < \\frac{340}{13}\\)",
+    "D": "\\(\\frac{60}{7} \\le t < 20\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Tank A holds more: \\(300 - 6t > 40 + 7t\\), so \\(260 > 13t\\) and \\(t < 20\\).",
+    "Tank B holds at least 100 liters: \\(40 + 7t \\ge 100\\), so \\(t \\ge \\frac{60}{7}\\).",
+    "Both must hold: \\(\\frac{60}{7} \\le t < 20\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. At \\(t = 20\\), both tanks hold 180 liters, so Tank A does not hold more water than Tank B.",
+    "B": "Incorrect. This uses only the first condition and ignores the requirement that Tank B hold at least 100 liters.",
+    "C": "Incorrect. This adds 40 to 300 instead of subtracting it, which gives \\(340 > 13t\\).",
+    "D": "Correct. Tank A holds more water while \\(t < 20\\), and Tank B holds at least 100 liters once \\(t \\ge \\frac{60}{7}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "stopped_early",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\ndef iv(s, v):\n    u = s.strip()[2:-2].replace('\\\\le', '<=').replace('\\\\ge', '>=')\n    if u.startswith(v + ' '):\n        return value(u).as_set()\n    L, Rt = u.split(' ' + v + ' ')\n    return value(L + ' ' + v).as_set() & value(v + ' ' + Rt).as_set()\nt = symbols('t')\nS = solve_univariate_inequality(300 - 6*t > 40 + 7*t, t, relational=False) & solve_univariate_inequality(40 + 7*t >= 100, t, relational=False)\nassert S == Interval.Ropen(Rational(60, 7), 20)\nok = [k for k in choices if iv(choices[k], 't') == S]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

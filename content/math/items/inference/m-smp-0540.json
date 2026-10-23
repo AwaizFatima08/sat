@@ -1,0 +1,46 @@
+{
+  "id": "m-smp-0540",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A town has 7,500 residents. Based on a random sample, the plausible values for the percent of residents who volunteer regularly are from 18% to 26%. The survey is repeated with a new random sample 4 times as large, and the sample percent is the same as before. If the margin of error is approximately proportional to \\(\\frac{1}{\\sqrt{n}}\\), where \\(n\\) is the sample size, what is the greatest plausible number of the town's residents who volunteer regularly, based on the new sample?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1800"
+  ],
+  "solution": [
+    "First survey: estimate \\(\\frac{18 + 26}{2} = 22\\%\\), margin of error \\(26 - 22 = 4\\) percentage points.",
+    "4 times the sample size gives \\(\\frac{1}{\\sqrt{4}} = \\frac{1}{2}\\) the margin of error: 2 percentage points.",
+    "Greatest plausible percent: \\(22 + 2 = 24\\%\\), and \\(0.24(7{,}500) = 1{,}800\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "mid, moe = Rational(18 + 26, 2), Rational(26 - 18, 2)\nnew = moe / sqrt(4)\nhi = (mid + new) / 100 * 7500\nassert hi == 1800\nassert [Rational(a) for a in spr_answers] == [hi]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "1800",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

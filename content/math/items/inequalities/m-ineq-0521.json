@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0521",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A caterer can spend at most \\$900 on food for an event. Trays of chicken cost \\$18 each, and trays of vegetables cost \\$12 each. The inequality \\(18x + 12y \\le 900\\) represents this situation, where \\(x\\) is the number of trays of chicken and \\(y\\) is the number of trays of vegetables. If the caterer buys 20 trays of chicken, what is the greatest number of trays of vegetables the caterer can buy?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(50\\)",
+    "B": "\\(105\\)",
+    "C": "\\(45\\)",
+    "D": "\\(75\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = 20\\): \\(18(20) + 12y \\le 900\\), so \\(360 + 12y \\le 900\\).",
+    "Subtract 360: \\(12y \\le 540\\). Divide by 12: \\(y \\le 45\\).",
+    "The greatest number of trays of vegetables is 45."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{900}{18}\\), the greatest number of trays of chicken the caterer could buy with no vegetables.",
+    "B": "Incorrect. This adds the \\$360 for chicken to \\$900 instead of subtracting it: \\(\\frac{1{,}260}{12} = 105\\).",
+    "C": "Correct. With 20 trays of chicken, \\(12y \\le 540\\), so \\(y \\le 45\\).",
+    "D": "Incorrect. This is \\(\\frac{900}{12}\\), which ignores the \\$360 already spent on chicken."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\ny = symbols('y')\nS = solve_univariate_inequality(18*20 + 12*y <= 900, y, relational=False)\nbest = floor(S.sup)\nassert best == 45 and value(choices[answer]) == best\nassert all(value(choices[k]) != best for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

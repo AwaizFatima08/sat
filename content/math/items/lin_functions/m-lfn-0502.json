@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0502",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A taxi company calculates the fare, in dollars, for a ride of \\(d\\) miles using the function \\(F(d) = 2.5d + 4\\). What is the best interpretation of the number 2.5 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A typical ride is 2.5 miles long.",
+    "B": "Every ride has a fixed starting charge of 2.50 dollars.",
+    "C": "The fare increases by 2.50 dollars for each mile driven.",
+    "D": "The fare for a 1-mile ride is 2.50 dollars."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "In \\(F(d) = 2.5d + 4\\), the term \\(2.5d\\) grows by 2.5 each time \\(d\\) increases by 1.",
+    "So 2.5 is the number of dollars the fare increases for each additional mile."
+  ],
+  "explanation": {
+    "A": "Incorrect. 2.5 multiplies the number of miles; it is a cost per mile, not a length of a ride.",
+    "B": "Incorrect. The fixed starting charge is the constant term, 4 dollars, which is paid even when \\(d = 0\\).",
+    "C": "Correct. 2.5 is the coefficient of \\(d\\), so the fare goes up by 2.50 dollars for every additional mile.",
+    "D": "Incorrect. The fare for a 1-mile ride is \\(F(1) = 2.5 + 4 = 6.5\\), or 6.50 dollars."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nd = symbols('d')\nF = Rational(5, 2)*d + 4\nassert diff(F, d) == Rational(5, 2) and F.subs(d, 1) == Rational(13, 2) and F.subs(d, 0) == 4\nkey = 'increases by 2.50 dollars for each mile'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

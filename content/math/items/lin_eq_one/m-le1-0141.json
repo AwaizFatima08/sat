@@ -1,0 +1,60 @@
+{
+  "id": "m-le1-0141",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(k^{2}x - 9 = 9x + 3k\\), \\(k\\) is a constant. For which value or values of \\(k\\) does the equation have no solution?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-3\\) and \\(3\\)",
+    "B": "\\(-3\\) only",
+    "C": "\\(3\\) only",
+    "D": "There is no such value of \\(k\\)."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Collect the \\(x\\)-terms: \\((k^{2} - 9)x = 3k + 9\\).",
+    "If \\(k^{2} \\ne 9\\), there is exactly one solution, so \\(k\\) must be \\(3\\) or \\(-3\\).",
+    "If \\(k = -3\\): \\(0 = 0\\), which is true for every \\(x\\) (infinitely many solutions).",
+    "If \\(k = 3\\): \\(0 = 18\\), which is never true, so there is no solution. Only \\(k = 3\\) works."
+  ],
+  "explanation": {
+    "A": "Incorrect. Both values make the \\(x\\)-terms cancel, but the constants must also be checked; \\(k = -3\\) gives infinitely many solutions.",
+    "B": "Incorrect. When \\(k = -3\\) the equation becomes \\(9x - 9 = 9x - 9\\), which has infinitely many solutions, not none.",
+    "C": "Correct. When \\(k = 3\\) the equation becomes \\(9x - 9 = 9x + 9\\), which is never true.",
+    "D": "Incorrect. \\(k = 3\\) makes the \\(x\\)-terms match while the constants differ, so a value does exist."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx, k = symbols('x k')\nnosol = []\nfor kv in [-3, 3, 0, 1, -1, 2, Rational(-4, 3)]:\n    d = expand(kv**2*x - 9 - 9*x - 3*kv)\n    if d.coeff(x, 1) == 0 and d != 0:\n        nosol.append(kv)\nassert nosol == [3]\nassert solve(k**2 - 9, k) == [-3, 3]\nassert choices[answer] == r'\\(3\\) only'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

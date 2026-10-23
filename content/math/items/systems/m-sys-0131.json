@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0131",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[2(x + 3y) = 10 - y\\] \\[4x = 20 - 14y\\] How many solutions does the system of equations above have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Exactly one",
+    "B": "Exactly two",
+    "C": "Zero",
+    "D": "Infinitely many"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "First equation: \\(2x + 6y = 10 - y\\), so \\(2x + 7y = 10\\).",
+    "Second equation: \\(4x + 14y = 20\\), which is 2 times \\(2x + 7y = 10\\).",
+    "Both equations describe the same line, so the system has infinitely many solutions."
+  ],
+  "explanation": {
+    "A": "Incorrect. Exactly one solution requires different slopes; both equations simplify to \\(2x + 7y = 10\\), the same line.",
+    "B": "Incorrect. Two different lines cross at most once, so a system of two linear equations never has exactly two solutions.",
+    "C": "Incorrect. Zero solutions requires parallel lines with different constants; after simplifying, the two equations are identical up to a factor of 2.",
+    "D": "Correct. Both equations are equivalent to \\(2x + 7y = 10\\), so every point on that line is a solution."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nsol = linsolve([2*(x + 3*y) - (10 - y), 4*x - (20 - 14*y)], [x, y])\nassert sol == linsolve([2*x + 7*y - 10], [x, y]) and sol.free_symbols\nassert choices[answer] == 'Infinitely many'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

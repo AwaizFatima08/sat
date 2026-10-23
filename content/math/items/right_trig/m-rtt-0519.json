@@ -1,0 +1,109 @@
+{
+  "id": "m-rtt-0519",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(ABC\\), \\(AB = 20\\) and the measure of angle \\(A\\) is \\(35^{\\circ}\\). Which expression gives the length of \\(\\overline{BC}\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "C": [
+        16.383,
+        0
+      ],
+      "B": [
+        16.383,
+        11.472
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "C"
+      ],
+      [
+        "C",
+        "B"
+      ],
+      [
+        "B",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          7.2,
+          6.8
+        ],
+        "text": "20"
+      },
+      {
+        "at": [
+          2.8,
+          0.75
+        ],
+        "text": "35°"
+      }
+    ],
+    "right_angles": [
+      "C"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20\\cos 35^{\\circ}\\)",
+    "B": "\\(\\frac{20}{\\sin 35^{\\circ}}\\)",
+    "C": "\\(20\\sin 35^{\\circ}\\)",
+    "D": "\\(20\\tan 35^{\\circ}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "\\(\\overline{AB}\\) is the hypotenuse and \\(\\overline{BC}\\) is opposite the \\(35^{\\circ}\\) angle.",
+    "\\(\\sin 35^{\\circ} = \\frac{BC}{20}\\), so \\(BC = 20\\sin 35^{\\circ}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(AC\\), the side adjacent to angle \\(A\\).",
+    "B": "Incorrect. This comes from inverting \\(\\sin 35^{\\circ} = \\frac{BC}{20}\\); the result is longer than the hypotenuse, which is impossible.",
+    "C": "Correct. \\(\\overline{BC}\\) is opposite angle \\(A\\), so \\(BC = 20\\sin 35^{\\circ}\\).",
+    "D": "Incorrect. This treats \\(AB\\) as the adjacent leg; \\(AB\\) is the hypotenuse."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "reciprocal",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\ndg=lambda e: e.replace(lambda f: f.func in (sin,cos,tan), lambda f: f.func(f.args[0]*pi/180))\nassert abs(d('A','B')-20)<0.01 and abs(ang('B','A','C')-35)<0.1 and abs(ang('A','C','B')-90)<0.1\nans=20*sin(35*pi/180)\nassert abs(d('B','C')-ans)<0.01\nassert abs(N(dg(value(choices[answer]))-ans))<1e-9\nassert all(abs(N(dg(value(choices[c]))-ans))>0.1 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-arv-0525",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A park lawn is made of a rectangle that is 40 meters long and 20 meters wide, with a semicircle attached to each of its two 20-meter sides. Each semicircle has a diameter of 20 meters and lies outside the rectangle. What is the area of the lawn, in square meters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(800 + 100\\pi\\)",
+    "B": "\\(800 + 400\\pi\\)",
+    "C": "\\(800 + 50\\pi\\)",
+    "D": "\\(800 + 200\\pi\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Rectangle: \\(40 \\cdot 20 = 800\\).",
+    "The two semicircles of radius 10 together make one full circle: \\(\\pi (10)^{2} = 100\\pi\\).",
+    "Total area \\(= 800 + 100\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The two semicircles form one circle of radius 10, so the area is \\(800 + 100\\pi\\).",
+    "B": "Incorrect. This uses the diameter, 20, as the radius of the two semicircles.",
+    "C": "Incorrect. This adds only one semicircle; the lawn has a semicircle on each end.",
+    "D": "Incorrect. This counts each semicircle as a full circle of radius 10."
+  },
+  "traps": {
+    "B": "radius_diameter",
+    "C": "stopped_early",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nans=40*20+2*Rational(1,2)*pi*10**2\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

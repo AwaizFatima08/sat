@@ -1,0 +1,95 @@
+{
+  "id": "m-nlf-0113",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of the exponential function \\(y = f(x)\\) is shown. Which of the following could define \\(f\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -3,
+      3
+    ],
+    "y": [
+      -1,
+      14
+    ],
+    "curves": [
+      {
+        "expr": "3*2**x",
+        "label": "y = f(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 3,
+        "label": "(0, 3)"
+      },
+      {
+        "x": 1,
+        "y": 6,
+        "label": "(1, 6)"
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "label": "(2, 12)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(f(x) = 3(2)^{x}\\)",
+    "B": "\\(f(x) = 3x + 3\\)",
+    "C": "\\(f(x) = 2(3)^{x}\\)",
+    "D": "\\(f(x) = 6(2)^{x}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The graph passes through \\((0, 3)\\), so the initial value is \\(3\\).",
+    "From \\((0, 3)\\) to \\((1, 6)\\) to \\((2, 12)\\), each output is \\(2\\) times the one before, so the base is \\(2\\).",
+    "So \\(f(x) = 3(2)^{x}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(f(0) = 3\\), \\(f(1) = 6\\) and \\(f(2) = 12\\), matching the graph.",
+    "B": "Incorrect. This linear function fits \\((0, 3)\\) and \\((1, 6)\\) but gives \\(f(2) = 9\\), not \\(12\\).",
+    "C": "Incorrect. This switches the initial value and the base. This graph would pass through \\((0, 2)\\), not \\((0, 3)\\).",
+    "D": "Incorrect. This uses the point \\((1, 6)\\) as the initial value. The initial value is \\(f(0) = 3\\)."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\npts = [(p['x'], p['y']) for p in figure['points']]\nok = [k for k in choices if all(value(choices[k].split('=')[1]).subs(x, a) == b for a, b in pts)]\nassert ok == [answer]\nassert simplify(value(choices[answer].split('=')[1]) - 3*2**x) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

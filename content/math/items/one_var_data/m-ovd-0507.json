@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0507",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the data set \\(5, 5, 8, 9, 13\\), the value \\(13\\) is replaced with \\(23\\). Which of the following does NOT change?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The mean",
+    "B": "The range",
+    "C": "The median",
+    "D": "The largest value"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Before: mean \\(\\frac{40}{5} = 8\\), median 8, range \\(13 - 5 = 8\\), largest value 13.",
+    "After: mean \\(\\frac{50}{5} = 10\\), median 8, range \\(23 - 5 = 18\\), largest value 23.",
+    "Only the median stays the same: the middle value is still 8."
+  ],
+  "explanation": {
+    "A": "Incorrect. The sum increases by 10, so the mean increases from \\(\\frac{40}{5} = 8\\) to \\(\\frac{50}{5} = 10\\).",
+    "B": "Incorrect. The range changes from \\(13 - 5 = 8\\) to \\(23 - 5 = 18\\).",
+    "C": "Correct. The values stay in the same order and the middle (3rd) value is still 8, so the median does not change.",
+    "D": "Incorrect. The largest value changes from 13 to 23."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\na = [5, 5, 8, 9, 13]\nb = [5, 5, 8, 9, 23]\nst = lambda d: (Rational(sum(d), 5), sorted(d)[2], max(d) - min(d), max(d))\nsa, sb = st(a), st(b)\nassert sa[1] == sb[1] and sa[0] != sb[0] and sa[2] != sb[2] and sa[3] != sb[3]\nassert choices[answer] == 'The median'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0502",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A climbing gym charges a one-time membership fee of \\$30 plus \\$15 for each month of membership. Lena has paid a total of \\$240 for her membership so far. For how many months has Lena been a member?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(16\\)",
+    "B": "\\(18\\)",
+    "C": "\\(\\frac{16}{3}\\)",
+    "D": "\\(14\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(m\\) be the number of months. The total paid is \\(30 + 15m = 240\\).",
+    "Subtract 30: \\(15m = 210\\).",
+    "Divide by 15: \\(m = 14\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of ignoring the one-time fee: \\(240 \\div 15 = 16\\).",
+    "B": "Incorrect. This is the result of adding the fee to the total instead of subtracting it: \\(15m = 270\\).",
+    "C": "Incorrect. This is the result of adding the one-time fee to the monthly charge, as if Lena paid \\(30 + 15 = 45\\) dollars every month: \\(240 \\div 45 = \\frac{16}{3}\\).",
+    "D": "Correct. Solving \\(30 + 15m = 240\\) gives \\(15m = 210\\), so \\(m = 14\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nm = symbols('m')\ns = solve(Eq(30 + 15*m, 240), m)[0]\nassert s == 14\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

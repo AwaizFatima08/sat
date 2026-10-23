@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0007",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "In the system of equations below, \\(c\\) is a constant. \\[y = 2x^{2} - 5x + c\\] \\[y = 3x + 1\\] If the system has exactly one real solution \\((a, b)\\), what is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-2\\)",
+    "B": "\\(\\frac{5}{4}\\)",
+    "C": "\\(2\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Set the expressions equal: \\(2x^{2} - 5x + c = 3x + 1\\), so \\(2x^{2} - 8x + (c - 1) = 0\\).",
+    "Exactly one solution means this quadratic has a double root. A double root of \\(Ax^{2} + Bx + C = 0\\) is \\(x = -\\frac{B}{2A}\\), so \\(a = \\frac{8}{4} = 2\\), whatever \\(c\\) is.",
+    "The point lies on the line, so \\(b = 3(2) + 1 = 7\\).",
+    "(Check: the discriminant \\(64 - 8(c - 1) = 0\\) gives \\(c = 9\\), and \\(2(2)^{2} - 5(2) + 9 = 7\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of evaluating \\(2x^{2} - 5x\\) at \\(x = 2\\) and leaving out \\(c\\), which must be \\(9\\) for the system to have one solution.",
+    "B": "Incorrect. This is the \\(x\\)-coordinate of the vertex of the parabola alone, \\(\\frac{5}{4}\\); the tangent point comes from \\(2x^{2} - 8x + (c - 1) = 0\\), not from the parabola by itself.",
+    "C": "Incorrect. This is \\(a\\), the \\(x\\)-coordinate of the solution, not \\(b\\).",
+    "D": "Correct. The double root is \\(x = 2\\), and on the line \\(y = 3(2) + 1 = 7\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "x, c = symbols('x c')\nq = 2*x**2 - 5*x + c - (3*x + 1)\ncv = solve(discriminant(q, x), c)\nassert cv == [9]\nxs = solve(q.subs(c, 9), x)\nassert xs == [2]\nb = 3*xs[0] + 1\nassert value(choices[answer]) == b == 7\nassert all(value(choices[k]) != b for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

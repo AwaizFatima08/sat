@@ -1,0 +1,95 @@
+{
+  "id": "m-nlf-0191",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of the quadratic function \\(y = f(x)\\) is shown. What is the maximum value of \\(f(x)\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      6
+    ],
+    "y": [
+      -3,
+      6
+    ],
+    "curves": [
+      {
+        "expr": "-0.5*(x + 1)*(x - 5)",
+        "label": "y = f(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": -1,
+        "y": 0,
+        "label": "(-1, 0)"
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "label": "(5, 0)"
+      },
+      {
+        "x": 0,
+        "y": 2.5,
+        "label": "(0, 2.5)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2.5\\)",
+    "B": "\\(4.5\\)",
+    "C": "\\(9\\)",
+    "D": "\\(2\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The zeros are \\(-1\\) and \\(5\\), so \\(f(x) = a(x + 1)(x - 5)\\), and the vertex is at \\(x = \\frac{-1 + 5}{2} = 2\\).",
+    "Use \\((0, 2.5)\\): \\(a(1)(-5) = 2.5\\), so \\(a = -0.5\\).",
+    "\\(f(2) = -0.5(3)(-3) = 4.5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the \\(y\\)-intercept. The graph keeps rising to the right of \\(x = 0\\) until \\(x = 2\\).",
+    "B": "Correct. \\(f(x) = a(x + 1)(x - 5)\\) with \\(f(0) = -5a = 2.5\\), so \\(a = -0.5\\). The maximum is \\(f(2) = -0.5(3)(-3) = 4.5\\).",
+    "C": "Incorrect. This is \\(-(3)(-3)\\), which leaves out the leading coefficient \\(-0.5\\) found from the \\(y\\)-intercept.",
+    "D": "Incorrect. This is the \\(x\\)-coordinate of the vertex, where the maximum occurs, not the maximum value."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "C": "wrong_formula",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx, a, b, c = symbols('x a b c')\npts = [(Rational(str(p['x'])), Rational(str(p['y']))) for p in figure['points']]\ns = solve([a*u**2 + b*u + c - w for u, w in pts], [a, b, c])\nf = s[a]*x**2 + s[b]*x + s[c]\nmx = f.subs(x, solve(diff(f, x), x)[0])\nassert s[a] < 0 and mx == Rational(9, 2)\nassert value(choices[answer]) == mx\nassert all(value(choices[k]) != mx for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

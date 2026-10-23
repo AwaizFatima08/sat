@@ -1,0 +1,59 @@
+{
+  "id": "m-lfn-0513",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A trekking company in Kathmandu charges a total cost that is a linear function of the number of days of a trek. A 4-day trek costs 26,000 rupees and a 7-day trek costs 41,000 rupees. Which function gives the total cost \\(C(n)\\), in rupees, of an \\(n\\)-day trek?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(C(n) = 15{,}000n - 34{,}000\\)",
+    "B": "\\(C(n) = 6{,}500n\\)",
+    "C": "\\(C(n) = 5{,}000n + 26{,}000\\)",
+    "D": "\\(C(n) = 5{,}000n + 6{,}000\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The cost per day is \\(\\frac{41{,}000 - 26{,}000}{7 - 4} = \\frac{15{,}000}{3} = 5{,}000\\) rupees.",
+    "Write \\(C(n) = 5{,}000n + b\\) and use \\(C(4) = 26{,}000\\): \\(20{,}000 + b = 26{,}000\\), so \\(b = 6{,}000\\).",
+    "So \\(C(n) = 5{,}000n + 6{,}000\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses 15,000, the change in cost over 3 days, as the cost per day without dividing by 3.",
+    "B": "Incorrect. This is \\(26{,}000 \\div 4\\); it treats the cost as proportional to the number of days, but then a 7-day trek would cost 45,500 rupees.",
+    "C": "Incorrect. This uses 26,000, the cost of a 4-day trek, as the constant term, which is the cost for 0 days.",
+    "D": "Correct. The cost rises 5,000 rupees per day, and \\(C(4) = 20{,}000 + 6{,}000 = 26{,}000\\) and \\(C(7) = 35{,}000 + 6{,}000 = 41{,}000\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_formula",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nn = symbols('n')\nrhs = lambda s: value(s.split('=')[1].replace('n', '*n'))\nok = [k for k in choices if rhs(choices[k]).subs(n, 4) == 26000 and rhs(choices[k]).subs(n, 7) == 41000]\nassert ok == [answer]\nassert simplify(rhs(choices[answer]) - (5000*n + 6000)) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0106",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Three more than twice a number \\(n\\) is at most 25. Which inequality represents this statement?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2n + 3 \\le 25\\)",
+    "B": "\\(3n + 2 \\le 25\\)",
+    "C": "\\(2(n + 3) \\le 25\\)",
+    "D": "\\(2n + 3 \\ge 25\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Twice the number is \\(2n\\), and three more than that is \\(2n + 3\\).",
+    "\"At most 25\" means less than or equal to 25: \\(2n + 3 \\le 25\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \"Three more than twice \\(n\\)\" is \\(2n + 3\\), and \"at most\" means \\(\\le\\).",
+    "B": "Incorrect. This switches the roles of 2 and 3: it is three times the number plus two.",
+    "C": "Incorrect. This is twice the quantity \\(n + 3\\); the 3 is added after doubling, not before.",
+    "D": "Incorrect. \"At most 25\" means the value cannot exceed 25, so the sign must be \\(\\le\\), not \\(\\ge\\)."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nn = symbols('n')\nsol = solve_univariate_inequality(2*n + 3 <= 25, n, relational=False)\nassert sol == Interval(-oo, 11)\nP = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nS = lambda s: solve_univariate_inequality(P(s), n, relational=False)\nassert S(choices[answer]) == sol\nassert all(S(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "m-sys-0538",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The graph of line \\(k\\) is shown in the \\(xy\\)-plane. The labeled points lie on the line. The system formed by line \\(k\\) and the line \\(y = mx + 1\\), where \\(m\\) is a constant, has exactly one solution, and that solution lies in Quadrant II. Which of the following could be the value of \\(m\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -4,
+      6
+    ],
+    "y": [
+      -4,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "-2*x + 4",
+        "label": "k"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 4,
+        "label": "(0, 4)"
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "label": "(2, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-3\\)",
+    "B": "\\(1\\)",
+    "C": "\\(-1\\)",
+    "D": "\\(-2\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Line \\(k\\) passes through \\((0, 4)\\) and \\((2, 0)\\), so \\(y = -2x + 4\\).",
+    "Set \\(-2x + 4 = mx + 1\\): \\((m + 2)x = 3\\), so \\(x = \\frac{3}{m + 2}\\) (no solution when \\(m = -2\\)).",
+    "Quadrant II needs \\(x < 0\\), so \\(m + 2 < 0\\), or \\(m < -2\\). Then \\(y = -2x + 4 > 4\\), which is positive.",
+    "Of the choices, only \\(m = -3\\) works: the solution is \\((-3, 10)\\)."
+  ],
+  "explanation": {
+    "A": "Correct. With \\(m = -3\\), the lines meet at \\((-3, 10)\\): \\(x < 0\\) and \\(y > 0\\), so the point is in Quadrant II.",
+    "B": "Incorrect. With \\(m = 1\\), the lines meet at \\((1, 2)\\), which is in Quadrant I.",
+    "C": "Incorrect. With \\(m = -1\\), the lines meet at \\((3, -2)\\), which is in Quadrant IV.",
+    "D": "Incorrect. With \\(m = -2\\), the lines are parallel (both have slope \\(-2\\)) with different \\(y\\)-intercepts, so there is no solution."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nP = [(q['x'], q['y']) for q in figure['points']]\nk = (P[1][1] - P[0][1])*(x - P[0][0])/(P[1][0] - P[0][0]) + P[0][1]\nassert simplify(sympify(figure['curves'][0]['expr']) - k) == 0\nS = {c: solve([y - k, y - (value(choices[c])*x + 1)], [x, y]) for c in choices}\nq2 = [c for c in choices if S[c] and S[c][x] < 0 and S[c][y] > 0]\nassert q2 == [answer]\nassert S['C'] == [] and S['D'][x] > 0 > S['D'][y]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

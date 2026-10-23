@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0517",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(p = 25\\) and \\(q = 40\\), the value of \\(q\\) is what percent greater than the value of \\(p\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(60\\%\\)",
+    "B": "\\(37.5\\%\\)",
+    "C": "\\(160\\%\\)",
+    "D": "\\(15\\%\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Find the difference: \\(40 - 25 = 15\\).",
+    "Compare it with \\(p\\): \\(\\frac{15}{25} = 0.6\\), which is \\(60\\%\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(q\\) is 15 more than \\(p\\), and \\(\\frac{15}{25} = 60\\%\\).",
+    "B": "Incorrect. This divides the difference by \\(q\\) instead of \\(p\\): \\(\\frac{15}{40} = 37.5\\%\\). That is the percent by which \\(p\\) is less than \\(q\\).",
+    "C": "Incorrect. This is \\(q\\) as a percent of \\(p\\), \\(\\frac{40}{25} = 160\\%\\), not the percent by which \\(q\\) is greater.",
+    "D": "Incorrect. This is the difference, 15, written as a percent. It must be compared with \\(p\\)."
+  },
+  "traps": {
+    "B": "percent_add",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nv = Rational(40 - 25, 25)\nassert v == Rational(60, 100)\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

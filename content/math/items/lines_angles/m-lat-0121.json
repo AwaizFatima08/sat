@@ -1,0 +1,127 @@
+{
+  "id": "m-lat-0121",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, the sides of triangle \\(ABC\\) are extended to points \\(D\\), \\(E\\), and \\(F\\). What is the measure, in degrees, of the largest interior angle of triangle \\(ABC\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        10,
+        0
+      ],
+      "C": [
+        3.538,
+        4.87
+      ],
+      "D": [
+        -1.469,
+        -2.023
+      ],
+      "E": [
+        12.5,
+        0.0
+      ],
+      "F": [
+        1.541,
+        6.374
+      ]
+    },
+    "segments": [
+      [
+        "D",
+        "C"
+      ],
+      [
+        "A",
+        "E"
+      ],
+      [
+        "B",
+        "F"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          0.772,
+          -1.515
+        ],
+        "text": "(3x + 12)°"
+      },
+      {
+        "at": [
+          10.539,
+          1.612
+        ],
+        "text": "(4x − 9)°"
+      },
+      {
+        "at": [
+          1.857,
+          4.618
+        ],
+        "text": "(2x + 15)°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(143\\)",
+    "B": "\\(38\\)",
+    "C": "\\(89\\)",
+    "D": "\\(129\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The three exterior angles of a triangle, one at each vertex, add up to \\(360^{\\circ}\\): \\((3x + 12) + (4x - 9) + (2x + 15) = 360\\).",
+    "\\(9x + 18 = 360\\), so \\(x = 38\\). The exterior angles are \\(126^{\\circ}\\), \\(143^{\\circ}\\), and \\(91^{\\circ}\\).",
+    "The interior angles are \\(54^{\\circ}\\), \\(37^{\\circ}\\), and \\(89^{\\circ}\\). The largest is \\(89^{\\circ}\\), at \\(C\\) (the vertex with the smallest exterior angle)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the largest exterior angle, \\(4(38) - 9 = 143\\), not an interior angle.",
+    "B": "Incorrect. This is the value of \\(x\\), not an angle measure.",
+    "C": "Correct. \\(x = 38\\), the smallest exterior angle is \\(2(38) + 15 = 91\\), and its interior angle is \\(180 - 91 = 89\\).",
+    "D": "Incorrect. This sets the sum of the exterior angles equal to \\(180^{\\circ}\\): \\(9x + 18 = 180\\) gives \\(x = 18\\) and a largest interior angle of \\(180 - 51 = 129\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nx=symbols('x')\nxs=solve(Eq((3*x+12)+(4*x-9)+(2*x+15),360),x)[0]\nex=[3*xs+12,4*xs-9,2*xs+15]\nassert abs(ang('B','A','D')-ex[0])<0.1 and abs(ang('C','B','E')-ex[1])<0.1 and abs(ang('A','C','F')-ex[2])<0.1\nans=max(180-e for e in ex)\nassert value(choices[answer])==ans==89\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0527",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The positive number \\(n\\) is increased by \\(50\\%\\), and the result is then decreased by \\(20\\%\\). Which expression is equal to the final result?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.3n\\)",
+    "B": "\\(1.3n\\)",
+    "C": "\\(1.2n\\)",
+    "D": "\\(1.5n - 20\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Increasing \\(n\\) by \\(50\\%\\) gives \\(1.5n\\).",
+    "Decreasing \\(1.5n\\) by \\(20\\%\\) gives \\(0.8 \\cdot 1.5n = 1.2n\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the amount of the decrease, \\(0.2 \\cdot 1.5n = 0.3n\\), not the final result.",
+    "B": "Incorrect. This combines the percents as \\(50\\% - 20\\% = 30\\%\\). The \\(20\\%\\) decrease is taken of \\(1.5n\\), not of \\(n\\).",
+    "C": "Correct. \\(0.8 \\cdot 1.5n = 1.2n\\).",
+    "D": "Incorrect. This subtracts 20 instead of \\(20\\%\\) of \\(1.5n\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "percent_add",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nn = symbols('n')\nt = Rational(80, 100) * Rational(150, 100) * n\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

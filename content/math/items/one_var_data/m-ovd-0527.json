@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0527",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A data set has a median of \\(12\\) and a range of \\(20\\). Each value in the data set is multiplied by \\(3\\), and then \\(5\\) is subtracted from the result. What are the median and the range of the new data set?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Median \\(31\\), range \\(20\\)",
+    "B": "Median \\(31\\), range \\(60\\)",
+    "C": "Median \\(31\\), range \\(55\\)",
+    "D": "Median \\(36\\), range \\(60\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The middle value is changed like every other value: new median \\(= 3 \\cdot 12 - 5 = 31\\).",
+    "Multiplying by 3 triples every distance between values, so the range becomes \\(3 \\cdot 20 = 60\\).",
+    "Subtracting 5 shifts every value by the same amount, so it does not change the range."
+  ],
+  "explanation": {
+    "A": "Incorrect. Multiplying every value by 3 spreads the values out, so the range is tripled, not unchanged.",
+    "B": "Correct. The median becomes \\(3 \\cdot 12 - 5 = 31\\), and the range becomes \\(3 \\cdot 20 = 60\\).",
+    "C": "Incorrect. This applies the whole rule to the range, \\(3 \\cdot 20 - 5 = 55\\). Subtracting 5 from every value does not change the distance between the greatest and least values.",
+    "D": "Incorrect. This multiplies the median by 3 but forgets to subtract 5: \\(3 \\cdot 12 - 5 = 31\\), not 36."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nd = [Integer(2), Integer(12), Integer(22)]\nt = [3*x - 5 for x in d]\nr = (sorted(t)[1], max(t) - min(t))\nassert (sorted(d)[1], max(d) - min(d)) == (12, 20) and r == (31, 60)\nassert choices[answer] == f'Median \\\\({r[0]}\\\\), range \\\\({r[1]}\\\\)'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "m-ovd-0521",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The table shows the annual salaries, in thousands of dollars, of the 10 employees of a small company. Which statement about the mean and the median of the salaries is true?",
+  "figure": {
+    "kind": "table",
+    "title": "Annual salaries",
+    "columns": [
+      "Salary (thousands of dollars)",
+      "Number of employees"
+    ],
+    "rows": [
+      [
+        "40",
+        "4"
+      ],
+      [
+        "45",
+        "3"
+      ],
+      [
+        "50",
+        "2"
+      ],
+      [
+        "160",
+        "1"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The median is greater than the mean by 10.5 thousand dollars.",
+    "B": "The mean is greater than the median by 8 thousand dollars.",
+    "C": "The mean is greater than the median by 10.5 thousand dollars.",
+    "D": "The mean is greater than the median by 28.75 thousand dollars."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Total: \\(40 \\cdot 4 + 45 \\cdot 3 + 50 \\cdot 2 + 160 \\cdot 1 = 555\\), so the mean is \\(\\frac{555}{10} = 55.5\\) thousand dollars.",
+    "With 10 values, the median is the mean of the 5th and 6th values. The first 4 salaries are 40 and the next 3 are 45, so both are 45, and the median is 45 thousand dollars.",
+    "The mean is greater than the median by \\(55.5 - 45 = 10.5\\) thousand dollars."
+  ],
+  "explanation": {
+    "A": "Incorrect. The difference is 10.5 thousand dollars, but the direction is reversed. The one large salary of 160 thousand dollars pulls the mean (55.5) above the median (45).",
+    "B": "Incorrect. This uses a median of \\(\\frac{45 + 50}{2} = 47.5\\), the middle of the listed salaries. The median must be found from all 10 values: the 5th and 6th values are both 45.",
+    "C": "Correct. The mean is 55.5 thousand dollars and the median is 45 thousand dollars, a difference of 10.5 thousand dollars.",
+    "D": "Incorrect. This uses the mean of the four listed salaries, \\(\\frac{40 + 45 + 50 + 160}{4} = 73.75\\), which ignores how many employees earn each salary. \\(73.75 - 45 = 28.75\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nv = []\nfor a, b in figure['rows']:\n    v += [Integer(a)] * int(b)\nv.sort()\nm = Rational(sum(v), len(v))\nmed = (v[4] + v[5]) / Integer(2)\nassert len(v) == 10 and m - med == Rational(21, 2)\nassert choices[answer].startswith('The mean is greater') and '10.5' in choices[answer]\nassert sum('10.5' in c and c.startswith('The mean is greater') for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

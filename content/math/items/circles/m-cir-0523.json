@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0523",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A circle with center \\(O\\) has a radius of 12. Sector \\(AOB\\) of the circle has an area of \\(24\\pi\\). What is the measure, in radians, of central angle \\(AOB\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{\\pi}{3}\\)",
+    "B": "\\(60\\)",
+    "C": "\\(\\frac{\\pi}{6}\\)",
+    "D": "\\(2\\pi\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "With \\(\\theta\\) in radians, sector area \\(= \\frac{1}{2}r^{2}\\theta\\).",
+    "\\(\\frac{1}{2}(144)\\theta = 24\\pi\\), so \\(72\\theta = 24\\pi\\) and \\(\\theta = \\frac{\\pi}{3}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\theta = \\frac{2(24\\pi)}{144} = \\frac{\\pi}{3}\\).",
+    "B": "Incorrect. The angle measures \\(60^{\\circ}\\), but the question asks for radians; 60 radians is a different angle.",
+    "C": "Incorrect. This drops the \\(\\frac{1}{2}\\): \\(144\\theta = 24\\pi\\) gives \\(\\frac{\\pi}{6}\\).",
+    "D": "Incorrect. This treats \\(24\\pi\\) as the arc length: \\(\\frac{24\\pi}{12} = 2\\pi\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_formula",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nt=symbols('t',positive=True)\ns=solve(Eq(Rational(1,2)*12**2*t,24*pi),t)\nassert len(s)==1\nans=s[0]\nassert simplify(ans/(2*pi)*pi*144-24*pi)==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

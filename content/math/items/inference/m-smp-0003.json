@@ -1,0 +1,57 @@
+{
+  "id": "m-smp-0003",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "Researchers surveyed a random sample of 400 households in Faisalabad, Pakistan, and found that 62% of the sampled households own at least one motorbike. The margin of error for this estimate is 4.5 percentage points. Which of the following is a plausible value for the percent of all households in Faisalabad that own at least one motorbike?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(53\\%\\)",
+    "B": "\\(67\\%\\)",
+    "C": "\\(4.5\\%\\)",
+    "D": "\\(65\\%\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Plausible values lie within the margin of error of the estimate: from \\(62 - 4.5 = 57.5\\%\\) to \\(62 + 4.5 = 66.5\\%\\).",
+    "Only 65% lies in this interval."
+  ],
+  "explanation": {
+    "A": "Incorrect. 53% is \\(62 - 2(4.5)\\); it subtracts the margin of error twice, so it falls below the plausible range of 57.5% to 66.5%.",
+    "B": "Incorrect. The upper end of the plausible range is \\(62 + 4.5 = 66.5\\%\\); 67% is just outside it.",
+    "C": "Incorrect. 4.5 is the margin of error, not an estimate of the percent of households.",
+    "D": "Correct. 65% is between \\(62 - 4.5 = 57.5\\%\\) and \\(62 + 4.5 = 66.5\\%\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "arithmetic",
+    "C": "concept"
+  },
+  "verify": "lo, hi = Rational('62') - Rational('4.5'), Rational('62') + Rational('4.5')\nok = [k for k in choices if lo/100 <= value(choices[k]) <= hi/100]\nassert ok == [answer] and value(choices[answer]) == Rational(65, 100)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

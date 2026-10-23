@@ -1,0 +1,125 @@
+{
+  "id": "m-arv-0539",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The regular hexagon shown has sides of length \\(4\\). What is the area of the hexagon?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        4,
+        0
+      ],
+      "B": [
+        2,
+        3.464
+      ],
+      "C": [
+        -2,
+        3.464
+      ],
+      "D": [
+        -4,
+        0
+      ],
+      "E": [
+        -2,
+        -3.464
+      ],
+      "F": [
+        2,
+        -3.464
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "E"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "F",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          3.6,
+          2.0
+        ],
+        "text": "4"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4\\sqrt{3}\\)",
+    "B": "\\(96\\)",
+    "C": "\\(48\\sqrt{3}\\)",
+    "D": "\\(24\\sqrt{3}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The segments from the center to the vertices split the hexagon into 6 equilateral triangles with side 4.",
+    "Each triangle has height \\(2\\sqrt{3}\\) (a 30°-60°-90° triangle), so its area is \\(\\frac{1}{2}(4)\\left(2\\sqrt{3}\\right) = 4\\sqrt{3}\\).",
+    "Hexagon: \\(6 \\cdot 4\\sqrt{3} = 24\\sqrt{3}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the area of one of the six equilateral triangles that make up the hexagon.",
+    "B": "Incorrect. This is \\(6 \\cdot 4^{2}\\), as if each of the six pieces were a 4-by-4 square.",
+    "C": "Incorrect. This uses \\(4 \\cdot 2\\sqrt{3}\\) for each triangle; it leaves out the \\(\\frac{1}{2}\\) in the triangle area formula.",
+    "D": "Correct. Six equilateral triangles of area \\(4\\sqrt{3}\\) give \\(24\\sqrt{3}\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_formula",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\ns=4\ntri=Rational(1,2)*s*sqrt(s**2-Rational(s,2)**2)\nans=6*tri\nassert ans==24*sqrt(3)\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\nassert figure['points']['A']==[4,0]\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-pct-0537",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A positive number \\(k\\) is decreased by \\(20\\%\\), and the result is then increased by \\(20\\%\\). The final value is 12 less than \\(k\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "There is no such value of \\(k\\).",
+    "B": "\\(288\\)",
+    "C": "\\(300\\)",
+    "D": "\\(60\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The final value is \\(1.2 \\cdot 0.8k = 0.96k\\).",
+    "It is 12 less than \\(k\\): \\(0.96k = k - 12\\), so \\(0.04k = 12\\).",
+    "Divide: \\(k = \\frac{12}{0.04} = 300\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This assumes a \\(20\\%\\) decrease and a \\(20\\%\\) increase cancel, leaving \\(k\\) unchanged. In fact the final value is \\(0.96k\\).",
+    "B": "Incorrect. This is the final value, \\(0.96 \\cdot 300 = 288\\), not \\(k\\).",
+    "C": "Correct. \\(0.96 \\cdot 300 = 288\\), which is 12 less than 300.",
+    "D": "Incorrect. This treats 12 as \\(20\\%\\) of \\(k\\). The net change is only \\(4\\%\\) of \\(k\\), because the increase is taken of the smaller, reduced value."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "D": "percent_add"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nk = symbols('k')\nsol = solve(Eq(Rational(120, 100) * Rational(80, 100) * k, k - 12), k)\nassert sol == [300]\nv = sol[0]\nassert value(choices[answer]) == v\nassert all(value(choices[q]) != v for q in 'AB')\nassert 'no such' in choices['D']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

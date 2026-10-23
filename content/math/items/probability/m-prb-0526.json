@@ -1,0 +1,59 @@
+{
+  "id": "m-prb-0526",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A cyclist's route passes two traffic lights that operate independently of each other. When the cyclist reaches each light, the probability that the light is red is 0.3. What is the probability that at least one of the two lights is red when the cyclist reaches it? (For independent events, the probability that both occur is the product of their probabilities.)",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.60\\)",
+    "B": "\\(0.09\\)",
+    "C": "\\(0.42\\)",
+    "D": "\\(0.51\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "“At least one red” is the opposite of “neither red.”",
+    "Neither red: \\(0.7 \\cdot 0.7 = 0.49\\).",
+    "At least one red: \\(1 - 0.49 = 0.51\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds 0.3 and 0.3, which counts the case where both lights are red twice.",
+    "B": "Incorrect. This is \\(0.3(0.3)\\), the probability that BOTH lights are red.",
+    "C": "Incorrect. This is \\(2(0.3)(0.7)\\), the probability that EXACTLY one light is red; it leaves out the case where both are red.",
+    "D": "Correct. The probability that neither light is red is \\(0.7(0.7) = 0.49\\), so the probability that at least one is red is \\(1 - 0.49 = 0.51\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_quantity",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nq = 1 - Rational('0.3')\np = 1 - q**2\nassert p == Rational(51, 100)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

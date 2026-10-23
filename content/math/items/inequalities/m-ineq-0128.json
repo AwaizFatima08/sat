@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0128",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For some value of \\(t\\), the point \\((4, t)\\) is a solution to the system of inequalities below, where \\(c\\) is a constant. \\[ y > 3x + c \\] \\[ y < -x + 2 \\] What is the greatest integer value of \\(c\\) for which this is possible?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-15"
+  ],
+  "solution": [
+    "Substitute \\(x = 4\\): the system becomes \\(t > 12 + c\\) and \\(t < -2\\).",
+    "Some value of \\(t\\) satisfies both exactly when \\(12 + c < -2\\), that is, \\(c < -14\\).",
+    "The inequality is strict, so \\(c = -14\\) does not work (then \\(t > -2\\) and \\(t < -2\\)). The greatest integer value is \\(-15\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "c, t = symbols('c t')\nlo, hi = 3*4 + c, -4 + 2\ncond = solve_univariate_inequality(lo < hi, c, relational=False)\nassert cond == Interval.open(-oo, -14)\nbest = max(k for k in range(-40, 10) if k in cond)\nassert best == -15 and [Rational(a) for a in spr_answers] == [best]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "-15",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

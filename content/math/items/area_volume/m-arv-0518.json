@@ -1,0 +1,109 @@
+{
+  "id": "m-arv-0518",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A sail is shaped like the right triangle shown, with lengths in feet. What is the area of the sail, in square feet?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        15,
+        0
+      ],
+      "C": [
+        15,
+        8
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          15.8,
+          4
+        ],
+        "text": "8"
+      },
+      {
+        "at": [
+          6.8,
+          5
+        ],
+        "text": "17"
+      }
+    ],
+    "right_angles": [
+      "B"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(136\\)",
+    "B": "\\(68\\)",
+    "C": "\\(60\\)",
+    "D": "\\(120\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The missing leg is \\(\\sqrt{17^{2} - 8^{2}} = \\sqrt{225} = 15\\).",
+    "The legs are perpendicular, so the area is \\(\\frac{1}{2}(8)(15) = 60\\) square feet."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(8 \\cdot 17\\); it multiplies the leg by the hypotenuse and leaves out the \\(\\frac{1}{2}\\).",
+    "B": "Incorrect. This is \\(\\frac{1}{2}(8)(17)\\); the hypotenuse, 17, is not perpendicular to the 8-foot side, so it cannot be used as the height.",
+    "C": "Correct. The other leg is 15, so the area is \\(\\frac{1}{2}(8)(15) = 60\\).",
+    "D": "Incorrect. This is \\(8 \\cdot 15\\); it leaves out the \\(\\frac{1}{2}\\) in the triangle area formula."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "misread_graph",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nP=figure['points']\nleg=P['C'][1]-P['B'][1]\nassert leg==8 and P['B'][0]-P['A'][0]==15 and P['A'][1]==P['B'][1]\nother=sqrt(17**2-leg**2)\nassert other==15\nans=Rational(1,2)*leg*other\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

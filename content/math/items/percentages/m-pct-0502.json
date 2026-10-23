@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0502",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A school has 450 students. On Monday, 18 of the students were absent. What percent of the students were absent on Monday?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(96\\%\\)",
+    "B": "\\(18\\%\\)",
+    "C": "\\(4\\%\\)",
+    "D": "\\(25\\%\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Divide the part by the whole: \\(\\frac{18}{450} = 0.04\\).",
+    "Write the decimal as a percent: \\(0.04 = 4\\%\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the percent of students who were present, \\(\\frac{432}{450} = 96\\%\\).",
+    "B": "Incorrect. This treats the number of absent students, 18, as a percent. It must be compared with all 450 students.",
+    "C": "Correct. \\(\\frac{18}{450} = 0.04\\), which is \\(4\\%\\).",
+    "D": "Incorrect. This is the result of dividing 450 by 18 instead of 18 by 450."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nv = Rational(18, 450)\nassert v == Rational(4, 100)\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

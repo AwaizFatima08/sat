@@ -1,0 +1,59 @@
+{
+  "id": "m-le2-0147",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the points \\((0, 0)\\), \\((3, k)\\), and \\((k, 12)\\) lie on the same line, where \\(k\\) is a positive constant. What is the slope of the line?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{1}{2}\\)",
+    "B": "\\(6\\)",
+    "C": "\\(2\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The slopes from the origin must be equal: \\(\\frac{k}{3} = \\frac{12}{k}\\).",
+    "\\(k^{2} = 36\\), and \\(k > 0\\), so \\(k = 6\\).",
+    "The slope is \\(\\frac{6}{3} = 2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This divides \\(x\\) by \\(y\\): \\(\\frac{3}{6} = \\frac{1}{2}\\).",
+    "B": "Incorrect. 6 is the value of \\(k\\), not the slope.",
+    "C": "Correct. \\(k = 6\\), so the points \\((3, 6)\\) and \\((6, 12)\\) both give slope 2 from the origin.",
+    "D": "Incorrect. This divides 12 by 3, pairing the \\(y\\)-coordinate of one point with the \\(x\\)-coordinate of the other."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nk = symbols('k', positive=True)\nsol = solve(Eq(k/3, 12/k), k)\nassert sol == [6]\nm = sol[0]/3\nassert m == 2 and 12/sol[0] == m\nassert value(choices[answer]) == m\nassert all(value(choices[c]) != m for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

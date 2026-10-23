@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0106",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is equivalent to \\(x^{2} - 49\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((x - 7)^{2}\\)",
+    "B": "\\((x - 49)(x + 1)\\)",
+    "C": "\\((x - 7)(x + 7)\\)",
+    "D": "\\((x + 7)^{2}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The expression is a difference of two squares: \\(x^{2} - 7^{2}\\).",
+    "Use \\(a^{2} - b^{2} = (a - b)(a + b)\\): \\(x^{2} - 49 = (x - 7)(x + 7)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This expression expands to \\(x^{2} - 14x + 49\\), not \\(x^{2} - 49\\).",
+    "B": "Incorrect. This expression expands to \\(x^{2} - 48x - 49\\), not \\(x^{2} - 49\\).",
+    "C": "Correct. A difference of squares factors as \\((x - 7)(x + 7)\\).",
+    "D": "Incorrect. This expression expands to \\(x^{2} + 14x + 49\\); the constant term has the wrong sign and there is an extra \\(x\\)-term."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = x**2 - 49\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

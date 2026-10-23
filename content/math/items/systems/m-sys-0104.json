@@ -1,0 +1,43 @@
+{
+  "id": "m-sys-0104",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Each of the 42 students in a class in Kathmandu either walks to school or takes the bus. The number of students who walk is twice the number of students who take the bus. How many students take the bus?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "14"
+  ],
+  "solution": [
+    "Let \\(w\\) and \\(b\\) be the numbers who walk and who take the bus: \\(w + b = 42\\) and \\(w = 2b\\).",
+    "Substitute: \\(2b + b = 42\\), so \\(3b = 42\\) and \\(b = 14\\)."
+  ],
+  "verify": "w, b = symbols('w b')\nsol = solve([w + b - 42, w - 2*b], [w, b])\nassert sol == {w: 28, b: 14}\nassert [Rational(a) for a in spr_answers] == [sol[b]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "14",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

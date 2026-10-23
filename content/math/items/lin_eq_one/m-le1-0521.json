@@ -1,0 +1,112 @@
+{
+  "id": "m-le1-0521",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the figure, points \\(A\\), \\(B\\), and \\(C\\) lie on a line. What is the value of \\(x\\)? Note: Figure not drawn to scale.",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        -5,
+        0
+      ],
+      "B": [
+        0,
+        0
+      ],
+      "C": [
+        5,
+        0
+      ],
+      "D": [
+        1,
+        4
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "B",
+        "D"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          -1.9,
+          0.8
+        ],
+        "text": "(4x + 12)°"
+      },
+      {
+        "at": [
+          2.0,
+          0.8
+        ],
+        "text": "(2x + 30)°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": true
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(23\\)",
+    "B": "\\(30\\)",
+    "C": "\\(8\\)",
+    "D": "\\(37\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Angles \\(ABD\\) and \\(DBC\\) form a straight angle, so their measures add to \\(180^{\\circ}\\).",
+    "\\((4x + 12) + (2x + 30) = 180\\), so \\(6x + 42 = 180\\).",
+    "Then \\(6x = 138\\) and \\(x = 23\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The angles form a straight line: \\(6x + 42 = 180\\), so \\(x = 23\\).",
+    "B": "Incorrect. This is the result of leaving out the constants 12 and 30: \\(6x = 180\\).",
+    "C": "Incorrect. This is the result of treating the two angles as complementary: \\(6x + 42 = 90\\).",
+    "D": "Incorrect. This is the result of adding 42 to 180 instead of subtracting it: \\(6x = 222\\)."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nlab = [l['text'] for l in figure['labels']]\nassert '(4x + 12)°' in lab and '(2x + 30)°' in lab\ns = solve(Eq((4*x + 12) + (2*x + 30), 180), x)[0]\nassert s == 23\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

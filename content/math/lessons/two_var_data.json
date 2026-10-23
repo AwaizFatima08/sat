@@ -1,0 +1,261 @@
+{
+  "type": "two_var_data",
+  "title": "Two-variable data and models",
+  "what_is_tested": "You read scatterplots and tables that relate two quantities, use a line of best fit to make predictions, interpret its slope and intercept, and decide whether a linear or an exponential model fits. Harder questions build a model from two points or compare two models.",
+  "how_to_spot": "A scatterplot, a line or curve of best fit, a table of x- and y-values, or words such as \"predicted\", \"model\", \"line of best fit\" or \"by the same percent\".",
+  "method": [
+    "Identify \\(x\\) and \\(y\\) and their units from the axis labels or column headings.",
+    "To predict, substitute the x-value into the equation of the line (or curve) of best fit.",
+    "Slope: the change in predicted \\(y\\) for each increase of 1 in \\(x\\). The y-intercept is the predicted \\(y\\) when \\(x = 0\\).",
+    "Residual: actual y-value minus predicted y-value (positive when the point is above the line).",
+    "Linear data change by the same amount at each equal step; exponential data change by the same factor at each equal step."
+  ],
+  "pitfalls": [
+    "Mixing up the slope and the y-intercept when interpreting a model.",
+    "Reading a data point instead of the line when the question asks for a predicted value.",
+    "Calling data exponential or linear without checking the differences and the ratios.",
+    "Using the change for 1 unit when the question asks about a change of several units."
+  ],
+  "calculator": "On the Graph tab, enter the model's equation and the vertical line for the x-value you need (for example \\(x = 15\\)); the intersection listed below the graph gives the prediction. To compare two models, enter both and read their intersections.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: predictions from a line of best fit",
+      "steps": [
+        "Read the axis labels: what are \\(x\\) and \\(y\\), and in which units?",
+        "Find the x-value the question gives.",
+        "Substitute it into the equation of the line of best fit and compute \\(y\\).",
+        "Check that your answer is close to the plotted points with similar x-values."
+      ],
+      "worked_example": {
+        "stem": "The scatterplot shows the number of rainy days \\(x\\) in a month and the number of umbrellas \\(y\\) sold that month at a shop in Colombo, Sri Lanka, for 10 months. The line of best fit is shown and has the equation \\(y = 12x + 20\\). Based on the line of best fit, how many umbrellas are predicted to be sold in a month with 15 rainy days?",
+        "figure": {
+          "kind": "scatter",
+          "x_label": "Rainy days in the month",
+          "y_label": "Umbrellas sold",
+          "points": [
+            [
+              3,
+              58
+            ],
+            [
+              5,
+              77
+            ],
+            [
+              6,
+              95
+            ],
+            [
+              8,
+              113
+            ],
+            [
+              10,
+              142
+            ],
+            [
+              12,
+              160
+            ],
+            [
+              14,
+              186
+            ],
+            [
+              17,
+              226
+            ],
+            [
+              19,
+              244
+            ],
+            [
+              22,
+              280
+            ]
+          ],
+          "line": "12*x + 20"
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(12\\)",
+          "B": "\\(35\\)",
+          "C": "\\(180\\)",
+          "D": "\\(200\\)"
+        },
+        "answer": "D",
+        "walkthrough": [
+          "\\(x\\) is the number of rainy days and \\(y\\) is the number of umbrellas sold.",
+          "Substitute \\(x = 15\\): \\(y = 12(15) + 20 = 180 + 20 = 200\\).",
+          "Check: the months with 14 and 17 rainy days had 186 and 226 umbrellas sold, and 200 lies between them.",
+          "Choice D is correct. Choice C, 180, forgets to add the intercept, 20. Choice A is only the slope, and choice B adds 15 and 20."
+        ],
+        "verify": "x = symbols('x')\npred = sympify(figure['line']).subs(x, 15)\nassert pred == 200\nassert value(choices[answer]) == pred\nassert all(value(choices[k]) != pred for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-tvd-0001",
+        "m-tvd-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: linear or exponential? Read the table",
+      "steps": [
+        "Find the differences between consecutive y-values (for equal steps in \\(x\\)).",
+        "If the differences are equal, the model is linear: \\(y = b + mx\\).",
+        "If not, divide consecutive y-values; equal ratios mean exponential, \\(y = a(r)^{x}\\), where \\(a\\) is the value at \\(x = 0\\).",
+        "Test your equation on two rows, including one where \\(x\\) is not 0."
+      ],
+      "worked_example": {
+        "stem": "The table shows the value \\(y\\), in dollars, of a laptop \\(x\\) years after it was bought. Which equation models the data in the table?",
+        "figure": {
+          "kind": "table",
+          "title": "Value of a laptop",
+          "columns": [
+            "Years x",
+            "Value y (dollars)"
+          ],
+          "rows": [
+            [
+              "0",
+              "900"
+            ],
+            [
+              "1",
+              "720"
+            ],
+            [
+              "2",
+              "576"
+            ],
+            [
+              "3",
+              "460.80"
+            ]
+          ]
+        },
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(y = 900 - 180x\\)",
+          "B": "\\(y = 900(0.8)^{x}\\)",
+          "C": "\\(y = 900(0.2)^{x}\\)",
+          "D": "\\(y = 720(0.8)^{x}\\)"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "Differences: \\(720 - 900 = -180\\) and \\(576 - 720 = -144\\). They are not equal, so the model is not linear.",
+          "Ratios: \\(\\frac{720}{900} = \\frac{576}{720} = \\frac{460.80}{576} = 0.8\\). Equal ratios mean exponential decay with factor 0.8 (the laptop keeps \\(80\\%\\) of its value each year).",
+          "The value at \\(x = 0\\) is 900, so \\(y = 900(0.8)^{x}\\). Check \\(x = 3\\): \\(900(0.8)^{3} = 460.8\\).",
+          "Choice B is correct. Choice A fits only the first two rows (it gives 540 at \\(x = 2\\)). Choice C uses the part lost each year, 0.2, instead of the part kept, 0.8, and choice D starts from the year-1 value."
+        ],
+        "verify": "x = symbols('x')\nrows = [(Integer(a), Rational(b)) for a, b in figure['rows']]\nfits = lambda k: all(value(choices[k].replace('y = ', '')).subs(x, a) == b for a, b in rows)\nassert fits(answer)\nassert not any(fits(k) for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-tvd-0003",
+        "m-tvd-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: slope and predictions from two points on the line",
+      "steps": [
+        "Use two points that lie on the line of best fit (they are often given in the stem).",
+        "Slope = change in \\(y\\) ÷ change in \\(x\\); keep its sign.",
+        "Write the line as \\(y = y_{1} + m(x - x_{1})\\), or find its y-intercept.",
+        "Answer exactly what is asked: a prediction, a change over several units (slope × number of units), or a residual."
+      ],
+      "worked_example": {
+        "stem": "The scatterplot shows the ticket price \\(x\\), in dollars, and the number of tickets sold \\(y\\), in hundreds, for 8 concerts at a theater. The line of best fit passes through the points \\((10, 42)\\) and \\((30, 27)\\). According to the line of best fit, how many hundred tickets would be sold for a concert with a ticket price of 50 dollars?",
+        "figure": {
+          "kind": "scatter",
+          "x_label": "Ticket price (dollars)",
+          "y_label": "Tickets sold (hundreds)",
+          "points": [
+            [
+              8,
+              44
+            ],
+            [
+              12,
+              41
+            ],
+            [
+              15,
+              37
+            ],
+            [
+              18,
+              36
+            ],
+            [
+              22,
+              33
+            ],
+            [
+              25,
+              31
+            ],
+            [
+              28,
+              29
+            ],
+            [
+              34,
+              24
+            ]
+          ],
+          "line": "49.5 - 0.75*x"
+        },
+        "answer_type": "spr",
+        "spr_answers": [
+          "12"
+        ],
+        "walkthrough": [
+          "Slope: \\(\\frac{27 - 42}{30 - 10} = \\frac{-15}{20} = -0.75\\), so the predicted sales drop by 0.75 hundred tickets for each dollar.",
+          "Line: \\(y = 42 - 0.75(x - 10)\\).",
+          "At \\(x = 50\\): \\(y = 42 - 0.75(40) = 42 - 30 = 12\\). Enter 12.",
+          "To check on the Graph tab, enter \\(y = 42 - 0.75(x - 10)\\) and \\(x = 50\\); the intersection listed below the graph is \\((50, 12)\\). Trap: dropping the minus sign of the slope gives \\(42 + 30 = 72\\)."
+        ],
+        "verify": "x = symbols('x')\nm = Rational(27 - 42, 30 - 10)\nline = 42 + m*(x - 10)\nassert simplify(line - sympify(figure['line'], rational=True)) == 0\nassert [Rational(s) for s in spr_answers] == [line.subs(x, 50)] == [12]"
+      },
+      "tryit": [
+        "m-tvd-0005",
+        "m-tvd-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: building an exponential model from two points",
+      "steps": [
+        "Write the model \\(f(t) = a(b)^{t}\\) and substitute the two given points to get two equations.",
+        "Divide one equation by the other so that \\(a\\) cancels, then solve for \\(b\\).",
+        "Substitute \\(b\\) back to find \\(a\\), which is the value at \\(t = 0\\).",
+        "To compare with a linear model, evaluate both at whole-number values of \\(t\\), or enter both on the Graph tab and read their intersection."
+      ],
+      "worked_example": {
+        "stem": "A cooking channel's number of followers is modeled by \\(f(t) = a(b)^{t}\\), where \\(f(t)\\) is the number of followers, in thousands, \\(t\\) months after the chef began posting a video every day, and \\(a\\) and \\(b\\) are positive constants. The model gives 6 thousand followers when \\(t = 1\\) and 13.5 thousand followers when \\(t = 3\\). According to the model, how many thousand followers did the channel have when the chef began posting a video every day?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(2.25\\)",
+          "B": "\\(4\\)",
+          "C": "\\(6\\)",
+          "D": "\\(\\frac{8}{3}\\)"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "Substitute the two points: \\(ab = 6\\) and \\(ab^{3} = 13.5\\).",
+          "Divide the second equation by the first: \\(b^{2} = \\frac{13.5}{6} = 2.25\\), so \\(b = 1.5\\) (\\(b\\) is positive).",
+          "Then \\(a = \\frac{6}{1.5} = 4\\), and \\(f(0) = a = 4\\) thousand followers. Check: \\(4(1.5)^{3} = 13.5\\).",
+          "Choice B is correct. Choice A assumes linear growth of 3.75 thousand per month. Choice D divides 6 by \\(b^{2}\\) instead of \\(b\\), and choice C is the value at \\(t = 1\\), not at \\(t = 0\\)."
+        ],
+        "verify": "a, b = symbols('a b', positive=True)\nsol = solve([Eq(a*b, 6), Eq(a*b**3, Rational(27, 2))], [a, b], dict=True)\nassert len(sol) == 1 and sol[0][b] == Rational(3, 2)\nassert value(choices[answer]) == sol[0][a] == 4\nassert all(value(choices[k]) != 4 for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-tvd-0007",
+        "m-tvd-0008"
+      ]
+    }
+  ]
+}

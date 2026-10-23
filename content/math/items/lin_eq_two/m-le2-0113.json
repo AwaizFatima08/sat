@@ -1,0 +1,90 @@
+{
+  "id": "m-le2-0113",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A community garden has 240 square meters of space for raised beds. All vegetable beds have the same area, and all flower beds have the same area. The graph shows the combinations of \\(x\\) vegetable beds and \\(y\\) flower beds that use exactly 240 square meters. Which equation represents this relationship?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      0,
+      24
+    ],
+    "y": [
+      0,
+      35
+    ],
+    "curves": [
+      {
+        "expr": "30 - 3*x/2",
+        "label": ""
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 30,
+        "label": "(0, 30)"
+      },
+      {
+        "x": 20,
+        "y": 0,
+        "label": "(20, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "Vegetable beds",
+    "y_label": "Flower beds"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{x}{30} + \\frac{y}{20} = 1\\)",
+    "B": "\\(12x + 8y = 240\\)",
+    "C": "\\(20x + 30y = 240\\)",
+    "D": "\\(8x + 12y = 240\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The \\(x\\)-intercept \\((20, 0)\\) shows that 20 vegetable beds use 240 square meters, so each vegetable bed is \\(\\frac{240}{20} = 12\\) square meters.",
+    "The \\(y\\)-intercept \\((0, 30)\\) shows that each flower bed is \\(\\frac{240}{30} = 8\\) square meters.",
+    "The relationship is \\(12x + 8y = 240\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This pairs each variable with the other axis's intercept; the point \\((0, 30)\\) gives \\(\\frac{30}{20} \\ne 1\\).",
+    "B": "Correct. Each vegetable bed uses 12 square meters and each flower bed uses 8 square meters; both intercepts satisfy \\(12x + 8y = 240\\).",
+    "C": "Incorrect. This uses the intercepts themselves as the bed areas; the intercepts count beds, not square meters.",
+    "D": "Incorrect. This swaps the two bed sizes; \\((0, 30)\\) would give \\(12(30) = 360\\), not 240."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "C": "concept",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\npts = [(p['x'], p['y']) for p in figure['points']]\nassert pts == [(0, 30), (20, 0)]\nok = [k for k in choices if all(eq(choices[k]).subs({x: a, y: b}) == 0 for a, b in pts)]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

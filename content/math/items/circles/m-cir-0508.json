@@ -1,0 +1,103 @@
+{
+  "id": "m-cir-0508",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Points \\(A\\), \\(B\\), and \\(C\\) lie on the circle with center \\(O\\), and angle \\(AOB\\) measures \\(50^{\\circ}\\). What is the measure, in degrees, of angle \\(ACB\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "A": [
+        -2.536,
+        -5.438
+      ],
+      "B": [
+        2.536,
+        -5.438
+      ],
+      "C": [
+        0,
+        6
+      ]
+    },
+    "segments": [
+      [
+        "O",
+        "A"
+      ],
+      [
+        "O",
+        "B"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "C",
+        "B"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 6
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          0,
+          -1.4
+        ],
+        "text": "50°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "25"
+  ],
+  "solution": [
+    "Angle \\(ACB\\) is an inscribed angle that intercepts the same arc \\(AB\\) as central angle \\(AOB\\).",
+    "An inscribed angle is half the central angle: \\(\\frac{50}{2} = 25\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert all(abs(d('O',p)-6)<0.01 for p in 'ABC')\nassert abs(ang('A','O','B')-50)<0.1\nans=Rational(50,2)\nassert abs(ang('A','C','B')-ans)<0.1\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "25",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

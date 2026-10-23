@@ -1,0 +1,45 @@
+{
+  "id": "m-smp-0520",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Based on a random sample, 54% of a population is estimated to have a certain characteristic. The greatest plausible value for the percent of the population with the characteristic, based on the margin of error, is 61%. What is the least plausible value, in percent?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "47"
+  ],
+  "solution": [
+    "The margin of error is \\(61 - 54 = 7\\) percentage points.",
+    "The least plausible value is \\(54 - 7 = 47\\%\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "m = symbols('m')\nmoe = solve(Eq(54 + m, 61), m)[0]\nassert moe == 7\nassert [Rational(a) for a in spr_answers] == [54 - moe]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "47",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

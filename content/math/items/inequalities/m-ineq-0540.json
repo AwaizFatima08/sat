@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0540",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A juice stall in Lahore sells each glass of juice for 150 rupees. The fruit for each glass costs 40 rupees, and the stall's other costs are 2,400 rupees per day. The owner wants the day's profit (sales revenue minus all costs) to be at least 25% of the day's sales revenue. What is the least number of glasses the stall must sell in a day?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "34"
+  ],
+  "solution": [
+    "With \\(n\\) glasses, revenue is \\(150n\\) and profit is \\(150n - 40n - 2{,}400 = 110n - 2{,}400\\).",
+    "The condition is \\(110n - 2{,}400 \\ge 0.25(150n) = 37.5n\\), so \\(72.5n \\ge 2{,}400\\) and \\(n \\ge 33.10...\\).",
+    "33 glasses give a profit of \\(1{,}230\\) rupees, less than \\(0.25(4{,}950) = 1{,}237.5\\). 34 glasses give \\(1{,}340 \\ge 1{,}275\\), so the least number is 34."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "n = symbols('n')\nS = solve_univariate_inequality(150*n - 40*n - 2400 >= Rational(25, 100)*150*n, n, relational=False)\nleast = min(m for m in range(0, 500) if m in S)\nassert least == 34\nassert [Rational(a) for a in spr_answers] == [least]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "34",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

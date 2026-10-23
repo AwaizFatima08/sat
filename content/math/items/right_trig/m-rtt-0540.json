@@ -1,0 +1,46 @@
+{
+  "id": "m-rtt-0540",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A student stands on level ground and looks toward a vertical flagpole. From her position on the ground, the angle of elevation to the top of the pole is \\(a^{\\circ}\\), where \\(\\tan a^{\\circ} = 0.75\\). After she walks 10 meters straight toward the pole, the angle of elevation from her new position on the ground is \\(b^{\\circ}\\), where \\(\\tan b^{\\circ} = 1.5\\). How tall, in meters, is the flagpole?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "15"
+  ],
+  "solution": [
+    "If the pole is \\(h\\) meters tall, the first distance to the pole is \\(\\frac{h}{0.75}\\) and the second is \\(\\frac{h}{1.5}\\).",
+    "\\(\\frac{h}{0.75} - \\frac{h}{1.5} = 10\\), so \\(\\frac{4h}{3} - \\frac{2h}{3} = \\frac{2h}{3} = 10\\).",
+    "\\(h = 15\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "h=symbols('h')\nsol=solve(Eq(h/Rational(3,4)-h/Rational(3,2),10),h)\nassert sol==[15]\nans=sol[0]\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "15",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

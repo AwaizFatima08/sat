@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0524",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "At a fabric shop in Faisalabad, cotton costs 400 rupees per meter and silk costs 1,100 rupees per meter. A customer bought 14 meters of fabric in all, and she paid 3,400 rupees more for the silk than for the cotton. How many meters of cotton did she buy?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "Let \\(c\\) be the meters of cotton and \\(s\\) the meters of silk: \\(c + s = 14\\) and \\(1{,}100s - 400c = 3{,}400\\).",
+    "Substitute \\(s = 14 - c\\): \\(1{,}100(14 - c) - 400c = 3{,}400\\), so \\(15{,}400 - 1{,}500c = 3{,}400\\).",
+    "Then \\(1{,}500c = 12{,}000\\) and \\(c = 8\\). (Check: 6 meters of silk cost 6,600 rupees and 8 meters of cotton cost 3,200 rupees.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "c, s = symbols('c s')\nsol = solve([c + s - 14, 1100*s - 400*c - 3400], [c, s])\nassert sol == {c: 8, s: 6}\nassert [Rational(a) for a in spr_answers] == [sol[c]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

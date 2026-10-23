@@ -1,0 +1,152 @@
+{
+  "type": "lin_eq_two",
+  "title": "Linear equations in two variables",
+  "what_is_tested": "You work with equations that have two unknowns, such as \\(3x + 2y = 12\\) or \\(y = mx + b\\). You check whether a point is on a line, write the equation of a line from two points or from a parallel or perpendicular line, and explain what the numbers mean when the equation models a budget or a mix of two items.",
+  "how_to_spot": "One equation has two variables (often a total, such as spending exactly a set amount on \\(x\\) of one item and \\(y\\) of another), or the question asks for the equation of a line, its slope or its intercepts.",
+  "method": [
+    "To test a point, substitute both coordinates and see whether the equation is true.",
+    "For \\(Ax + By = C\\), the slope is \\(-\\frac{A}{B}\\), the \\(x\\)-intercept is \\(\\frac{C}{A}\\) and the \\(y\\)-intercept is \\(\\frac{C}{B}\\).",
+    "From two points, find the slope, then substitute one point into \\(y = mx + b\\) to find \\(b\\).",
+    "Parallel lines have equal slopes; perpendicular slopes multiply to \\(-1\\) (flip the fraction and change the sign).",
+    "In a context, substitute the known amount for one variable and solve for the other."
+  ],
+  "pitfalls": [
+    "Swapping \\(x\\) and \\(y\\) when testing a point (misread_graph).",
+    "Reading the slope of \\(Ax + By = C\\) as \\(\\frac{A}{B}\\) instead of \\(-\\frac{A}{B}\\) (sign_error).",
+    "Using the negative reciprocal for a parallel line, or the same slope for a perpendicular line (concept).",
+    "Keeping the original line's intercept when the new line must pass through a different point (concept).",
+    "Subtracting the known cost and forgetting to divide by the unit price (stopped_early)."
+  ],
+  "calculator": "On the Graph tab you can type an equation such as \\(3x - 4y = 8\\) exactly as written and read its slope, its intercepts or whether it passes through a point. Testing a single point is quicker by substitution.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: points and intercepts",
+      "steps": [
+        "Identify what \\(x\\) and \\(y\\) stand for and what the total is.",
+        "Substitute the known value for one variable (use 0 for \\\"only one kind\\\").",
+        "Solve the one-variable equation that is left.",
+        "Check that the pair makes the original equation true."
+      ],
+      "worked_example": {
+        "stem": "A florist spends exactly \\$40 on \\(x\\) roses, which cost \\$5 each, and \\(y\\) carnations, which cost \\$2 each, so that \\(5x + 2y = 40\\). If the florist buys only carnations, how many carnations does the florist buy?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(8\\)",
+          "B": "\\(20\\)",
+          "C": "\\(40\\)",
+          "D": "\\(80\\)"
+        },
+        "answer": "B",
+        "walkthrough": [
+          "\\\"Only carnations\\\" means no roses, so \\(x = 0\\).",
+          "Substitute: \\(5(0) + 2y = 40\\), so \\(2y = 40\\).",
+          "Divide by 2: \\(y = 20\\), choice B. This is the \\(y\\)-intercept of the graph of \\(5x + 2y = 40\\).",
+          "Check: \\(2(20) = 40\\). Choice A, 8, is the number of roses the florist could buy with no carnations (the \\(x\\)-intercept), which answers a different question."
+        ],
+        "verify": "x, y = symbols('x y')\nyv = solve(Eq(5*x + 2*y, 40).subs(x, 0), y)\nassert yv == [20]\nassert value(choices[answer]) == 20\nassert all(value(choices[k]) != 20 for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-le2-0001",
+        "m-le2-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: the line through two points",
+      "steps": [
+        "Find the slope: \\(m = \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\), subtracting in the same order on top and bottom.",
+        "Substitute one point into \\(y = mx + b\\).",
+        "Solve for \\(b\\).",
+        "Check the equation with the other point."
+      ],
+      "worked_example": {
+        "stem": "A line in the \\(xy\\)-plane passes through the points \\((-3, 8)\\) and \\((5, -4)\\). The equation of the line can be written as \\(y = mx + b\\), where \\(m\\) and \\(b\\) are constants. What is the value of \\(b\\)?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "7/2",
+          "3.5"
+        ],
+        "walkthrough": [
+          "Slope: \\(m = \\frac{-4 - 8}{5 - (-3)} = \\frac{-12}{8} = -\\frac{3}{2}\\).",
+          "Substitute \\((-3, 8)\\): \\(8 = -\\frac{3}{2}(-3) + b = \\frac{9}{2} + b\\).",
+          "So \\(b = 8 - \\frac{9}{2} = \\frac{7}{2}\\). Enter 7/2 or 3.5.",
+          "Check with \\((5, -4)\\): \\(-\\frac{3}{2}(5) + \\frac{7}{2} = -\\frac{15}{2} + \\frac{7}{2} = -4\\). A sign slip in the slope (\\(+\\frac{3}{2}\\)) gives \\(b = \\frac{25}{2}\\), which fails this check."
+        ],
+        "verify": "m, b = symbols('m b')\ns = solve([Eq(-3*m + b, 8), Eq(5*m + b, -4)], [m, b])\nassert s == {m: Rational(-3, 2), b: Rational(7, 2)}\nassert all(Rational(v) == s[b] for v in spr_answers)"
+      },
+      "tryit": [
+        "m-le2-0003",
+        "m-le2-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: parallel and perpendicular lines",
+      "steps": [
+        "Rewrite the given line as \\(y = mx + b\\) to read its slope.",
+        "Use the same slope for a parallel line, or the negative reciprocal for a perpendicular line.",
+        "Substitute the given point to find the new \\(b\\).",
+        "Check on the Graph tab: the new line should pass through the point and run parallel (or meet at a right angle)."
+      ],
+      "worked_example": {
+        "stem": "Line \\(p\\) in the \\(xy\\)-plane is parallel to the line with equation \\(3x - 4y = 8\\) and passes through the point \\((8, 1)\\). Which equation represents line \\(p\\)?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(y = -\\frac{4}{3}x + \\frac{35}{3}\\)",
+          "B": "\\(y = \\frac{3}{4}x - 2\\)",
+          "C": "\\(y = -\\frac{3}{4}x + 7\\)",
+          "D": "\\(y = \\frac{3}{4}x - 5\\)"
+        },
+        "answer": "D",
+        "walkthrough": [
+          "Solve \\(3x - 4y = 8\\) for \\(y\\): \\(-4y = -3x + 8\\), so \\(y = \\frac{3}{4}x - 2\\). The slope is \\(\\frac{3}{4}\\).",
+          "Parallel lines have the same slope, so line \\(p\\) is \\(y = \\frac{3}{4}x + b\\).",
+          "Substitute \\((8, 1)\\): \\(1 = \\frac{3}{4}(8) + b = 6 + b\\), so \\(b = -5\\). Line \\(p\\) is \\(y = \\frac{3}{4}x - 5\\), choice D.",
+          "Calculator route (Graph tab): graph \\(3x - 4y = 8\\) and each choice; only choice D runs parallel to it and passes through \\((8, 1)\\). Choice B keeps the old intercept, so it is the original line and misses \\((8, 1)\\); choice A is perpendicular, not parallel."
+        ],
+        "verify": "x, y = symbols('x y')\nm = -diff(3*x - 4*y, x) / diff(3*x - 4*y, y)\nline = m*(x - 8) + 1\nassert m == Rational(3, 4) and expand(line) == Rational(3, 4)*x - 5\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if simplify(rhs(choices[k]) - line) == 0]\nassert ok == [answer]"
+      },
+      "tryit": [
+        "m-le2-0005",
+        "m-le2-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: a constant plus a second step",
+      "steps": [
+        "Write the slope of each line, using the unknown constant where needed (\\(-\\frac{A}{B}\\) for \\(Ax + By = C\\)).",
+        "Apply the condition (equal slopes for parallel, product \\(-1\\) for perpendicular) and solve for the constant.",
+        "Put the constant back into the line's equation.",
+        "Finish the step the question asks for, such as an intercept or a point."
+      ],
+      "worked_example": {
+        "stem": "In the \\(xy\\)-plane, the graphs of \\(ax + 3y = 6\\) and \\(4x - 2y = 5\\), where \\(a\\) is a constant, are parallel lines. At what value of \\(x\\) does the graph of \\(ax + 3y = 6\\) cross the \\(x\\)-axis?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(-1\\)",
+          "B": "\\(-4\\)",
+          "C": "\\(1\\)",
+          "D": "\\(2\\)"
+        },
+        "answer": "A",
+        "walkthrough": [
+          "The slope of \\(4x - 2y = 5\\) is \\(-\\frac{4}{-2} = 2\\). The slope of \\(ax + 3y = 6\\) is \\(-\\frac{a}{3}\\).",
+          "Parallel lines have equal slopes: \\(-\\frac{a}{3} = 2\\), so \\(a = -6\\).",
+          "The line is \\(-6x + 3y = 6\\). It crosses the \\(x\\)-axis where \\(y = 0\\): \\(-6x = 6\\), so \\(x = -1\\), choice A.",
+          "Choice C comes from a sign slip (\\(a = 6\\)), choice B from using the reciprocal slope \\(\\frac{1}{2}\\), and choice D is the \\(y\\)-intercept (where \\(x = 0\\)), not the \\(x\\)-intercept."
+        ],
+        "verify": "x, a = symbols('x a')\nav = solve(Eq(-a/3, Rational(-4, -2)), a)\nassert av == [-6]\nxi = solve(Eq(av[0]*x + 3*0, 6), x)\nassert xi == [-1]\nassert value(choices[answer]) == xi[0]\nassert all(value(choices[k]) != xi[0] for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-le2-0007",
+        "m-le2-0008"
+      ]
+    }
+  ]
+}

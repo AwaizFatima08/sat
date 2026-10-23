@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0125",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A music teacher in Dhaka teaches exactly 9 hours of lessons each week, made up of \\(x\\) sitar lessons that last 45 minutes each and \\(y\\) harmonium lessons that last 30 minutes each. Which equation represents this situation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(45x + 30y = 9\\)",
+    "B": "\\(45x + 30y = 540\\)",
+    "C": "\\(0.45x + 0.3y = 9\\)",
+    "D": "\\(30x + 45y = 540\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Work in minutes: 9 hours is \\(9 \\cdot 60 = 540\\) minutes.",
+    "The lessons take \\(45x + 30y\\) minutes in all, so \\(45x + 30y = 540\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The left side is in minutes but the right side is in hours; the units must match.",
+    "B": "Correct. Both sides are in minutes: \\(45x + 30y = 540\\).",
+    "C": "Incorrect. 45 minutes is 0.75 hour, not 0.45 hour, and 30 minutes is 0.5 hour, not 0.3 hour.",
+    "D": "Incorrect. This gives each sitar lesson 30 minutes and each harmonium lesson 45 minutes, switching the lengths."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\ntarget = 45*x + 30*y - 9*60\nok = [k for k in choices if simplify(eq(choices[k])/target).is_number]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

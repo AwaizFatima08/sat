@@ -1,0 +1,134 @@
+{
+  "id": "m-arv-0124",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure shown, \\(ABCE\\) is a rectangle and \\(CD = DE\\). What is the area of pentagon \\(ABCDE\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        16,
+        0
+      ],
+      "C": [
+        16,
+        6
+      ],
+      "D": [
+        8,
+        12
+      ],
+      "E": [
+        0,
+        6
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "E"
+      ],
+      [
+        "E",
+        "A"
+      ],
+      [
+        "E",
+        "C"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          8,
+          -0.7
+        ],
+        "text": "16"
+      },
+      {
+        "at": [
+          16.7,
+          3
+        ],
+        "text": "6"
+      },
+      {
+        "at": [
+          12.8,
+          9.6
+        ],
+        "text": "10"
+      },
+      {
+        "at": [
+          3.2,
+          9.6
+        ],
+        "text": "10"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "144"
+  ],
+  "solution": [
+    "Rectangle \\(ABCE\\): \\(16 \\times 6 = 96\\).",
+    "Triangle \\(CDE\\) is isosceles with base \\(CE = 16\\), so the altitude from \\(D\\) meets \\(\\overline{CE}\\) at its midpoint, 8 from each end. Its height is \\(\\sqrt{10^{2} - 8^{2}} = 6\\).",
+    "Triangle area: \\(\\frac{1}{2}(16)(6) = 48\\). Pentagon: \\(96 + 48 = 144\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nCE=P['C'][0]-P['E'][0]\nassert CE==16 and P['C'][1]-P['B'][1]==6\nh=sqrt(10**2-(CE/2)**2)\nassert h==P['D'][1]-P['C'][1]==6\nans=CE*6+Rational(1,2)*CE*h\nassert ans==144\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "144",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

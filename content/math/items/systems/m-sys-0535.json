@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0535",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "At a cricket stadium in Colombo, every general ticket has the same price, \\(r\\) rupees, and every premium ticket has the same price, \\(p\\) rupees. One family paid 3,800 rupees for 4 general tickets and 2 premium tickets. A second family paid 5,700 rupees for 6 general tickets and 3 premium tickets. Which of the following must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2r + p = 1{,}900\\)",
+    "B": "\\(r + p = 950\\)",
+    "C": "\\(4r + 2p = 5{,}700\\)",
+    "D": "\\(r = 500\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The purchases give \\(4r + 2p = 3{,}800\\) and \\(6r + 3p = 5{,}700\\).",
+    "Dividing the first equation by 2 gives \\(2r + p = 1{,}900\\); dividing the second by 3 gives the same equation.",
+    "So the two purchases carry the same information: the system has infinitely many solutions, and the prices cannot be found separately. The only statement that must be true is \\(2r + p = 1{,}900\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Both purchases reduce to \\(2r + p = 1{,}900\\), so this must be true even though \\(r\\) and \\(p\\) cannot be found separately.",
+    "B": "Incorrect. This divides 3,800 by 4 without dividing the whole left side by 4; \\(4r + 2p = 3{,}800\\) gives \\(r + \\frac{1}{2}p = 950\\), not \\(r + p = 950\\).",
+    "C": "Incorrect. This pairs the first family's tickets with the second family's total; \\(4r + 2p\\) equals 3,800.",
+    "D": "Incorrect. \\(r = 500\\) and \\(p = 900\\) is one pair that fits, but so is \\(r = 600\\) and \\(p = 700\\); the system has infinitely many solutions, so \\(r\\) is not determined."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nr, p = symbols('r p')\nsol = solve([4*r + 2*p - 3800, 6*r + 3*p - 5700], [r, p], dict=True)\nassert len(sol) == 1 and len(sol[0]) == 1\nf = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\nmust = [k for k in choices if simplify(f(choices[k]).subs(sol[0])) == 0]\nassert must == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

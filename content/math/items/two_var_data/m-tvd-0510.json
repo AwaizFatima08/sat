@@ -1,0 +1,97 @@
+{
+  "id": "m-tvd-0510",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The scatterplot shows 8 data points and their line of best fit, which has the equation \\(y = -0.5x + 9\\). What is the value of \\(y\\) predicted by the line of best fit when \\(x = 6\\)?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        0,
+        9.4
+      ],
+      [
+        2,
+        7.6
+      ],
+      [
+        4,
+        7.3
+      ],
+      [
+        6,
+        5.8
+      ],
+      [
+        8,
+        5.2
+      ],
+      [
+        10,
+        3.7
+      ],
+      [
+        12,
+        3.3
+      ],
+      [
+        14,
+        1.8
+      ]
+    ],
+    "line": "-0.5*x + 9"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-3\\)",
+    "B": "\\(12\\)",
+    "C": "\\(3\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = 6\\) into the equation of the line of best fit.",
+    "\\(y = -0.5(6) + 9 = -3 + 9 = 6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(-0.5(6) = -3\\) without adding 9.",
+    "B": "Incorrect. This is the result of adding \\(0.5(6)\\) instead of subtracting it: \\(9 + 3 = 12\\).",
+    "C": "Incorrect. This is \\(9 - 6\\), which subtracts \\(x\\) itself instead of \\(0.5x\\).",
+    "D": "Correct. \\(y = -0.5(6) + 9 = 6\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "sign_error",
+    "C": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\npred = sympify(figure['line']).subs(x, 6)\nassert pred == 6\nassert value(choices[answer]) == pred\nassert all(value(choices[k]) != pred for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

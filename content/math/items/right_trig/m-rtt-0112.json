@@ -1,0 +1,46 @@
+{
+  "id": "m-rtt-0112",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A plot of land is shaped like right triangle \\(ABC\\), with the right angle at \\(C\\). The value of \\(\\cos A\\) is \\(\\frac{20}{29}\\), and the area of the plot is 840 square meters. What is the length, in meters, of side \\(\\overline{AB}\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "58"
+  ],
+  "solution": [
+    "\\(\\cos A = \\frac{AC}{AB} = \\frac{20}{29}\\), so let \\(AC = 20k\\) and \\(AB = 29k\\). Then \\(BC = \\sqrt{(29k)^{2} - (20k)^{2}} = 21k\\).",
+    "Area \\(= \\frac{1}{2}(20k)(21k) = 210k^{2} = 840\\), so \\(k^{2} = 4\\) and \\(k = 2\\).",
+    "\\(AB = 29 \\cdot 2 = 58\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "k=symbols('k',positive=True)\nbc=sqrt((29*k)**2-(20*k)**2)\nkk=solve(Eq(20*k*bc/2,840),k)[0]\nans=29*kk\nassert ans==58\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "58",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

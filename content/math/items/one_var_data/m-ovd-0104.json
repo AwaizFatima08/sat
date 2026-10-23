@@ -1,0 +1,46 @@
+{
+  "id": "m-ovd-0104",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "At a factory, the 12 workers on the morning shift packed a mean of 45 boxes per hour, and the 18 workers on the evening shift packed a mean of 50 boxes per hour. What is the mean number of boxes packed per hour for all 30 workers?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "48"
+  ],
+  "solution": [
+    "Morning total: \\(12 \\cdot 45 = 540\\). Evening total: \\(18 \\cdot 50 = 900\\).",
+    "The mean for all 30 workers is \\(\\frac{540 + 900}{30} = \\frac{1{,}440}{30} = 48\\).",
+    "Note that the answer is not 47.5, the average of 45 and 50, because the two shifts have different numbers of workers."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "m = Rational(12*45 + 18*50, 30)\nassert m == 48\nassert [Rational(s) for s in spr_answers] == [m]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "48",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

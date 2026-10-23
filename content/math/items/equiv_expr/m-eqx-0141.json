@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0141",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A group of \\(n\\) hikers shares the 480-dollar cost of a cabin equally. If 4 more hikers join the group and the cost is shared equally among everyone, each of the original hikers pays \\(\\frac{480}{n} - \\frac{480}{n + 4}\\) dollars less. Which of the following is equivalent to this expression?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{960n + 1{,}920}{n^{2} + 4n}\\)",
+    "B": "\\(\\frac{1{,}920}{n^{2} + 4n}\\)",
+    "C": "\\(\\frac{480}{n^{2} + 4n}\\)",
+    "D": "\\(\\frac{1{,}920}{n^{2} + 4}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Use the common denominator \\(n(n + 4) = n^{2} + 4n\\).",
+    "The numerator is \\(480(n + 4) - 480n = 1{,}920\\).",
+    "The expression is \\(\\frac{1{,}920}{n^{2} + 4n}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding the two fractions instead of subtracting them.",
+    "B": "Correct. \\(\\frac{480(n + 4) - 480n}{n(n + 4)} = \\frac{1{,}920}{n^{2} + 4n}\\).",
+    "C": "Incorrect. This is the result of computing the numerator \\(480(n + 4) - 480n\\) as 480 instead of \\(480 \\cdot 4\\).",
+    "D": "Incorrect. This is the result of expanding the denominator \\(n(n + 4)\\) as \\(n^{2} + 4\\) instead of \\(n^{2} + 4n\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nn = symbols('n')\nt = 480/n - 480/(n + 4)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "m-tvd-0524",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = a(b)^{x}\\), where \\(a\\) and \\(b\\) are positive constants. The table shows two values of \\(f(x)\\). What is the value of \\(b\\)?",
+  "figure": {
+    "kind": "table",
+    "columns": [
+      "x",
+      "f(x)"
+    ],
+    "rows": [
+      [
+        "0",
+        "125"
+      ],
+      [
+        "3",
+        "216"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6/5"
+  ],
+  "solution": [
+    "\\(f(0) = a(b)^{0} = a\\), so \\(a = 125\\).",
+    "\\(f(3) = 125b^{3} = 216\\), so \\(b^{3} = \\frac{216}{125}\\).",
+    "Since \\(b\\) is positive, \\(b = \\frac{6}{5} = 1.2\\)."
+  ],
+  "verify": "a, b = symbols('a b', positive=True)\nsol = solve([Eq(a, 125), Eq(a*b**3, 216)], [a, b], dict=True)\nassert len(sol) == 1 and sol[0][b] == Rational(6, 5)\nassert [Rational(s) for s in spr_answers] == [Rational(6, 5)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "1.2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

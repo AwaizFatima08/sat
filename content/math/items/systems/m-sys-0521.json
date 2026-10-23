@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0521",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "\\[ax + 3y = 7\\] \\[4x - 6y = 5\\] In the system of equations above, \\(a\\) is a constant. For what value of \\(a\\) does the system have no solution?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-2\\)",
+    "B": "\\(-8\\)",
+    "C": "\\(8\\)",
+    "D": "\\(2\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "A system of two linear equations has no solution when the lines are parallel: the \\(x\\)- and \\(y\\)-coefficients are in the same ratio but the constants are not.",
+    "The \\(y\\)-coefficients are 3 and \\(-6\\), a ratio of \\(-\\frac{1}{2}\\). So \\(a = -\\frac{1}{2}(4) = -2\\).",
+    "Check the constants: with \\(a = -2\\), multiplying the first equation by \\(-2\\) gives \\(4x - 6y = -14\\), and \\(-14 \\ne 5\\), so the lines are parallel and distinct."
+  ],
+  "explanation": {
+    "A": "Correct. With \\(a = -2\\), the first equation is \\(-2x + 3y = 7\\), parallel to \\(4x - 6y = 5\\) but not the same line.",
+    "B": "Incorrect. This uses the inverted ratio \\(\\frac{-6}{3} = -2\\) and multiplies by 4; with \\(a = -8\\) the system has one solution.",
+    "C": "Incorrect. This uses the inverted ratio and also drops its sign; with \\(a = 8\\) the system has one solution.",
+    "D": "Incorrect. This drops the negative sign of the ratio \\(\\frac{3}{-6}\\); with \\(a = 2\\) the slopes differ and there is one solution."
+  },
+  "traps": {
+    "B": "reciprocal",
+    "C": "reciprocal",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\na, x, y = symbols('a x y')\nnone = [k for k in choices if solve([value(choices[k])*x + 3*y - 7, 4*x - 6*y - 5], [x, y]) == []]\nassert none == [answer]\nassert value(choices[answer]) == -2",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

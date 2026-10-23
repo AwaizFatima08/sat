@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0515",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A jacket has a list price of \\(p\\) dollars. It is sold at a 15% discount, and then an 8% sales tax is added to the discounted price. The total amount paid, in dollars, is given by the expression \\(0.85p + 0.08(0.85p)\\). Which of the following is equivalent to this expression?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.77p\\)",
+    "B": "\\(0.93p\\)",
+    "C": "\\(0.068p\\)",
+    "D": "\\(0.918p\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Factor out \\(0.85p\\): \\(0.85p + 0.08(0.85p) = 0.85p(1 + 0.08) = 0.85p(1.08)\\).",
+    "Multiply: \\(0.85 \\cdot 1.08 = 0.918\\), so the expression is equivalent to \\(0.918p\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of subtracting 0.08 from 0.85 instead of adding the tax.",
+    "B": "Incorrect. This is the result of adding the factors, \\(0.85 + 0.08\\), instead of multiplying \\(0.85\\) by \\(1.08\\).",
+    "C": "Incorrect. This is only the tax, \\(0.08(0.85p)\\); the discounted price must be added to it.",
+    "D": "Correct. \\(0.85p(1.08) = 0.918p\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "percent_add",
+    "C": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\np = symbols('p')\ntarget = Rational('0.85')*p + Rational('0.08')*(Rational('0.85')*p)\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

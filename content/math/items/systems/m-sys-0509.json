@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0509",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Anjali keeps only 5-rupee coins and 10-rupee coins in her coin box. The system \\(f + t = 25\\) and \\(5f + 10t = 175\\) describes her coins, where \\(f\\) is the number of 5-rupee coins and \\(t\\) is the number of 10-rupee coins. What does the number 175 represent in this system?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The total number of coins in the box",
+    "B": "The value, in rupees, of the 5-rupee coins in the box",
+    "C": "The total value, in rupees, of the coins in the box",
+    "D": "The number of 10-rupee coins in the box"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "In \\(5f + 10t\\), the term \\(5f\\) is the value of the 5-rupee coins and \\(10t\\) is the value of the 10-rupee coins, in rupees.",
+    "So \\(5f + 10t = 175\\) says the coins are worth 175 rupees in total.",
+    "(The other equation, \\(f + t = 25\\), gives the total number of coins.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. The total number of coins is 25, from \\(f + t = 25\\).",
+    "B": "Incorrect. The value of the 5-rupee coins is \\(5f\\), only part of the left side; it equals 75 rupees.",
+    "C": "Correct. \\(5f + 10t\\) adds the values of both kinds of coins, so 175 is the total value in rupees.",
+    "D": "Incorrect. The number of 10-rupee coins is \\(t\\), which is 10, not 175."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nf, t = symbols('f t')\nsol = solve([f + t - 25, 5*f + 10*t - 175], [f, t])\nassert sol == {f: 15, t: 10}\nassert 5*sol[f] + 10*sol[t] == 175 and 5*sol[f] != 175 and sol[t] != 175 and sol[f] + sol[t] != 175\nassert 'total value' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

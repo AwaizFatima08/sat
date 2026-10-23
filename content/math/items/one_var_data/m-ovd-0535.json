@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0535",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the data set \\(3, 5, 6, 8, 9, 12, 40\\), the value \\(40\\) is changed to \\(80\\). Which of the following statistics change?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The mean, the range and the standard deviation only",
+    "B": "The mean, the median, the range and the standard deviation",
+    "C": "The mean and the range only",
+    "D": "The mean, the range, the standard deviation and the interquartile range"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The total increases by 40, so the mean changes. The greatest value changes, so the range changes (from 37 to 77).",
+    "The largest value moves farther from the mean, so the standard deviation increases.",
+    "The order of the values is the same and the middle value is still 8, so the median does not change. The first and third quartiles depend only on values in the lower and upper halves near the middle (5 and 12), so the interquartile range does not change either."
+  ],
+  "explanation": {
+    "A": "Correct. The mean, the range and the standard deviation all depend on the largest value, while the median and the interquartile range do not.",
+    "B": "Incorrect. The median does not change. The values keep the same order, and the middle (4th) value is still 8.",
+    "C": "Incorrect. The standard deviation also changes: the largest value is now much farther from the mean, so the data are more spread out.",
+    "D": "Incorrect. The interquartile range does not change. The quartiles come from values near the middle of each half (5 and 12), not from the largest value."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nsd = lambda d: sqrt(sum((x - Rational(sum(d), len(d)))**2 for x in d) / len(d))\nssd = lambda d: sqrt(sum((x - Rational(sum(d), len(d)))**2 for x in d) / (len(d) - 1))\na = [3, 5, 6, 8, 9, 12, 40]\nb = a[:-1] + [80]\nst = lambda d: {'mean': Rational(sum(d), 7), 'median': sorted(d)[3], 'range': max(d) - min(d), 'standard deviation': sd(d), 'interquartile range': sorted(d)[5] - sorted(d)[1]}\nsa, sb = st(a), st(b)\nchanged = {k for k in sa if sa[k] != sb[k]}\nassert changed == {'mean', 'range', 'standard deviation'} and ssd(a) != ssd(b)\nassert all(k in choices[answer] for k in changed) and 'median' not in choices[answer] and 'interquartile' not in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

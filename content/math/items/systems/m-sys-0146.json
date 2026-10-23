@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0146",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[\\frac{2}{x} + \\frac{3}{y} = 2\\] \\[\\frac{4}{x} - \\frac{3}{y} = 1\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(x + y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(6\\)",
+    "C": "\\(3\\)",
+    "D": "\\(\\frac{5}{6}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Treat \\(\\frac{1}{x}\\) and \\(\\frac{1}{y}\\) as the unknowns. Add the equations: \\(\\frac{6}{x} = 3\\), so \\(x = 2\\).",
+    "Then \\(\\frac{2}{2} + \\frac{3}{y} = 2\\), so \\(\\frac{3}{y} = 1\\) and \\(y = 3\\).",
+    "So \\(x + y = 5\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(x = 2\\) and \\(y = 3\\), so \\(x + y = 5\\).",
+    "B": "Incorrect. This is the product \\(xy\\), not the sum \\(x + y\\).",
+    "C": "Incorrect. This is the value of \\(y\\) alone, not \\(x + y\\).",
+    "D": "Incorrect. This is \\(\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{2} + \\frac{1}{3}\\); the reciprocals were not turned back into \\(x\\) and \\(y\\)."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "wrong_quantity",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nsol = solve([2/x + 3/y - 2, 4/x - 3/y - 1], [x, y], dict=True)\nassert sol == [{x: 2, y: 3}]\nv = sol[0][x] + sol[0][y]\nassert value(choices[answer]) == v == 5\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

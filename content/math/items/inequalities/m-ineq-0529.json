@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0529",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Rahul is comparing two monthly mobile data plans. Plan P costs 199 rupees plus 12 rupees per gigabyte (GB) of data used. Plan Q costs 499 rupees plus 4 rupees per GB of data used. What is the least whole number of gigabytes of data Rahul could use in a month for Plan Q to cost less than Plan P?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(37\\)",
+    "B": "\\(88\\)",
+    "C": "\\(38\\)",
+    "D": "\\(25\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "With \\(g\\) GB, Plan Q costs less when \\(499 + 4g < 199 + 12g\\).",
+    "Subtract \\(4g\\) and 199 from both sides: \\(300 < 8g\\), so \\(g > 37.5\\).",
+    "The least whole number greater than 37.5 is 38."
+  ],
+  "explanation": {
+    "A": "Incorrect. This rounds 37.5 down. At 37 GB, Plan P costs \\(199 + 444 = 643\\) rupees and Plan Q costs \\(499 + 148 = 647\\) rupees, so Plan P is still cheaper.",
+    "B": "Incorrect. This adds 199 to 499 instead of subtracting it: \\(698 < 8g\\) gives \\(g > 87.25\\).",
+    "C": "Correct. \\(499 + 4g < 199 + 12g\\) gives \\(g > 37.5\\), so the least whole number is 38.",
+    "D": "Incorrect. This ignores Plan Q's charge of 4 rupees per GB and solves \\(300 < 12g\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\ng = symbols('g')\nS = solve_univariate_inequality(499 + 4*g < 199 + 12*g, g, relational=False)\nassert S == Interval.open(Rational(75, 2), oo)\nleast = min(n for n in range(0, 200) if n in S)\nassert least == 38 and value(choices[answer]) == least\nassert all(value(choices[k]) != least for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

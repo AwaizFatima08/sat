@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0125",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Mateo uses a copier to make a reduced copy of a drawing that is 25 centimeters wide. Each copy is \\(80\\%\\) as wide as the drawing it is copied from. He copies the copy, then copies that copy, and so on. Which function gives the width \\(W(n)\\), in centimeters, of the \\(n\\)th copy?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(W(n) = 25 - 0.8n\\)",
+    "B": "\\(W(n) = 0.8(25)^{n}\\)",
+    "C": "\\(W(n) = 25(0.8)^{n}\\)",
+    "D": "\\(W(n) = 25(0.2)^{n}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Each copy is \\(80\\%\\) as wide as the one before, so the width is multiplied by \\(0.8\\) for each copy.",
+    "Starting from 25 centimeters, after \\(n\\) copies the width is \\(W(n) = 25(0.8)^{n}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This subtracts a fixed 0.8 centimeter for each copy, a linear change, not a \\(20\\%\\) reduction.",
+    "B": "Incorrect. This switches the initial value and the growth factor; it gives \\(W(1) = 20\\) but \\(W(2) = 500\\).",
+    "C": "Correct. The width starts at 25 and is multiplied by \\(0.8\\) for each copy.",
+    "D": "Incorrect. A factor of \\(0.2\\) would make each copy only \\(20\\%\\) as wide as the one before."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nn = symbols('n')\nW = Lambda(n, 25*Rational(8, 10)**n)\nok = [k for k in choices if all(value(choices[k].split('=')[1]).subs(n, m) == W(m) for m in (1, 2, 3))]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

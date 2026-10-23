@@ -1,0 +1,59 @@
+{
+  "id": "m-stc-0538",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A population has 10,000 members, numbered 1 to 10,000 on a list. Each of the following methods selects 100 members, and in each method every member has the same chance of being selected. Which method also gives every possible group of 100 members the same chance of being the sample?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Divide the list into 100 blocks of 100 consecutive members, and select all the members of one block chosen at random.",
+    "B": "Choose a number from 1 to 100 at random, start at that member, and then select every 100th member on the list.",
+    "C": "Use a random number generator to choose 100 different numbers from 1 to 10,000, and select those members.",
+    "D": "Divide the list into 100 blocks of 100 consecutive members, and select one member at random from each block."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Each method gives every member a 1-in-100 chance, so look at which groups can occur.",
+    "In A, C and D, many groups are impossible: in A, two members next to each other on the list can never both be selected; in C, two members of the same block can never both be selected; in D, members of different blocks can never be selected together.",
+    "Only choosing 100 different numbers at random from the whole list makes every group of 100 equally likely (a simple random sample)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Only the 100 blocks can be selected, so most groups of 100 are impossible.",
+    "B": "Incorrect. This systematic sample allows only 100 possible samples, so most groups of 100 can never be selected.",
+    "C": "Correct. Choosing 100 different numbers at random from the whole list gives every group of 100 the same chance.",
+    "D": "Incorrect. Two members from the same block can never both be selected, so many groups are impossible."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nN, n = 10000, 100\npossible = {'A': 100, 'B': binomial(N, n), 'C': 100**100, 'D': 100}\nok = [k for k, v in possible.items() if v == binomial(N, n)]\nassert ok == [answer]\nassert all(possible[k] < binomial(N, n) for k in possible if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

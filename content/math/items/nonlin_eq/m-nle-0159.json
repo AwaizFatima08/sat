@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0159",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following equations has the same solutions as the equation \\(2x^{2} - 12x + 7 = 0\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((x + 3)^{2} = \\frac{11}{2}\\)",
+    "B": "\\((x - 3)^{2} = \\frac{11}{2}\\)",
+    "C": "\\((x - 6)^{2} = 29\\)",
+    "D": "\\((x - 3)^{2} = 2\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Divide every term by 2: \\(x^{2} - 6x + \\frac{7}{2} = 0\\), so \\(x^{2} - 6x = -\\frac{7}{2}\\).",
+    "Add 9, the square of half of \\(-6\\), to both sides: \\(x^{2} - 6x + 9 = 9 - \\frac{7}{2}\\).",
+    "So \\((x - 3)^{2} = \\frac{11}{2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of a sign error: \\(x^{2} - 6x + 9\\) is \\((x - 3)^{2}\\), not \\((x + 3)^{2}\\).",
+    "B": "Correct. Both equations have the solutions \\(x = 3 \\pm \\sqrt{\\frac{11}{2}}\\).",
+    "C": "Incorrect. This is the result of completing the square on \\(x^{2} - 12x + 7\\), ignoring the leading coefficient 2.",
+    "D": "Incorrect. This is the result of dividing the \\(x^{2}\\) and \\(x\\) terms by 2 but not the constant 7, which gives \\(9 - 7 = 2\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "wrong_formula",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\ntarget = set(solve(2*x**2 - 12*x + 7, x))\ndef sols(k):\n    l, r = choices[k].split('=')\n    return set(solve(value(l) - value(r), x))\nassert sols(answer) == target\nassert all(sols(k) != target for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

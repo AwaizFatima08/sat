@@ -1,0 +1,89 @@
+{
+  "id": "m-ovd-0509",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The histogram shows the scores of the students in a class in Lahore on a mathematics test. Each interval includes its left endpoint but not its right endpoint. How many students scored at least 70?",
+  "figure": {
+    "kind": "histogram",
+    "x_label": "Test score",
+    "y_label": "Number of students",
+    "bins": [
+      [
+        50,
+        60,
+        3
+      ],
+      [
+        60,
+        70,
+        7
+      ],
+      [
+        70,
+        80,
+        9
+      ],
+      [
+        80,
+        90,
+        6
+      ],
+      [
+        90,
+        100,
+        2
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(17\\)",
+    "B": "\\(9\\)",
+    "C": "\\(8\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "A score of at least 70 is in one of the intervals 70 to 80, 80 to 90 or 90 to 100.",
+    "Add those bars: \\(9 + 6 + 2 = 17\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(9 + 6 + 2 = 17\\) students scored 70 or more.",
+    "B": "Incorrect. This is only the bar for 70 to 80. The bars for 80 to 90 and 90 to 100 must be added too.",
+    "C": "Incorrect. This counts only the students who scored 80 or more. Students who scored from 70 up to 80 also scored at least 70.",
+    "D": "Incorrect. This is the number of students who scored less than 70, \\(3 + 7 = 10\\)."
+  },
+  "traps": {
+    "B": "misread_graph",
+    "C": "misread_graph",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nr = sum(f for lo, hi, f in figure['bins'] if lo >= 70)\nassert r == 17\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

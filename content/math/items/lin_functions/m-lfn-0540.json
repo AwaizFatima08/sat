@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0540",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A taxi fare, in dollars, is a linear function of the number of miles driven. A 4-mile ride costs 13.40 dollars, and a 10-mile ride costs 29.00 dollars. What is the greatest whole number of miles a rider can travel if the fare must be no more than 20 dollars?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "The cost per mile is \\(\\frac{29.00 - 13.40}{10 - 4} = \\frac{15.60}{6} = 2.60\\) dollars.",
+    "The fixed part is \\(13.40 - 4(2.60) = 3\\) dollars, so the fare is \\(2.6m + 3\\).",
+    "\\(2.6m + 3 \\le 20\\) gives \\(m \\le \\frac{17}{2.6} \\approx 6.54\\), so the greatest whole number of miles is 6."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "m = symbols('m')\nr = (Rational('29.00') - Rational('13.40')) / 6\nF = Rational('13.40') + r*(m - 4)\nassert r == Rational(13, 5) and F.subs(m, 0) == 3\nbest = max(n for n in range(0, 50) if F.subs(m, n) <= 20)\nassert best == 6\nassert [Rational(s) for s in spr_answers] == [best]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

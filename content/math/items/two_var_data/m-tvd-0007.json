@@ -1,0 +1,58 @@
+{
+  "id": "m-tvd-0007",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A company uses two models to predict the number of customers it will have \\(t\\) months after opening. Model A predicts \\(500 + 60t\\) customers, and Model B predicts \\(500(1.1)^{t}\\) customers. What is the least positive integer value of \\(t\\) for which Model B predicts more customers than Model A?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(3\\)",
+    "C": "\\(4\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Both models predict 500 customers at \\(t = 0\\). Model A adds 60 customers each month; Model B adds \\(10\\%\\) of its current value, which starts at 50 and keeps growing.",
+    "Compare the predictions: \\(t = 4\\): A gives 740, B gives \\(500(1.1)^{4} \\approx 732.1\\). \\(t = 5\\): A gives 800, B gives \\(500(1.1)^{5} \\approx 805.3\\).",
+    "So \\(t = 5\\) is the first positive integer for which Model B is greater. (A calculator table of both expressions shows this quickly.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is when Model B's monthly increase first passes 60 (from \\(t = 2\\) to \\(t = 3\\) it grows by about 60.5). Model B is still behind in total then: about 605 compared with 620.",
+    "B": "Incorrect. At \\(t = 3\\), Model B predicts about 665.5 customers and Model A predicts 680, so Model B is not yet greater.",
+    "C": "Incorrect. At \\(t = 4\\), Model B predicts about 732.1 customers, still less than Model A's 740. One more month is needed.",
+    "D": "Correct. At \\(t = 5\\), Model B predicts about 805.3 customers and Model A predicts 800; for \\(t = 1\\) to 4, Model A is greater."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "C": "stopped_early"
+  },
+  "verify": "A = lambda t: 500 + 60*t\nBm = lambda t: 500 * Rational(11, 10)**t\nt = next(t for t in range(1, 50) if Bm(t) > A(t))\nassert t == 5\nassert value(choices[answer]) == t\nassert all(value(choices[k]) != t for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

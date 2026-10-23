@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0003",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "The kinetic energy \\(K\\), in joules, of an object with mass \\(m\\) kilograms moving at a speed of \\(v\\) meters per second is given by \\(K = \\frac{1}{2}mv^{2}\\). Which of the following gives \\(v\\) in terms of \\(K\\) and \\(m\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\sqrt{\\frac{2K}{m}}\\)",
+    "B": "\\(\\sqrt{\\frac{K}{2m}}\\)",
+    "C": "\\(\\frac{2K}{m}\\)",
+    "D": "\\(\\sqrt{2Km}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Multiply both sides by \\(2\\): \\(2K = mv^{2}\\).",
+    "Divide both sides by \\(m\\): \\(v^{2} = \\frac{2K}{m}\\).",
+    "Speed is positive, so take the positive square root: \\(v = \\sqrt{\\frac{2K}{m}}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(2K = mv^{2}\\), so \\(v^{2} = \\frac{2K}{m}\\) and \\(v = \\sqrt{\\frac{2K}{m}}\\).",
+    "B": "Incorrect. This is the result of dividing by \\(2\\) instead of multiplying by \\(2\\) to undo the factor \\(\\frac{1}{2}\\).",
+    "C": "Incorrect. This is \\(v^{2}\\), not \\(v\\); the last step, taking the square root, is missing.",
+    "D": "Incorrect. This is the result of multiplying by \\(m\\) instead of dividing by \\(m\\)."
+  },
+  "traps": {
+    "B": "reciprocal",
+    "C": "stopped_early",
+    "D": "arithmetic"
+  },
+  "verify": "K, m, v = symbols('K m v', positive=True)\nsol = solve(Eq(K, Rational(1, 2)*m*v**2), v)\nassert len(sol) == 1\nKs, ms = Symbol('K'), Symbol('m')\nf = lambda k: value(choices[k]).subs({Ks: K, ms: m})\nassert simplify(f(answer) - sol[0]) == 0\nassert all(simplify(f(k) - sol[0]) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

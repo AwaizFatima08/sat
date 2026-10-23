@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0110",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(k\\) is parallel to the graph of \\(y = \\frac{2}{5}x - 3\\). What is the slope of line \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-\\frac{5}{2}\\)",
+    "B": "\\(\\frac{2}{5}\\)",
+    "C": "\\(-3\\)",
+    "D": "\\(\\frac{5}{2}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Parallel lines have equal slopes.",
+    "The slope of \\(y = \\frac{2}{5}x - 3\\) is \\(\\frac{2}{5}\\), so line \\(k\\) has slope \\(\\frac{2}{5}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the slope of a line perpendicular to the given line, not parallel to it.",
+    "B": "Correct. Parallel lines have the same slope, \\(\\frac{2}{5}\\).",
+    "C": "Incorrect. \\(-3\\) is the \\(y\\)-coordinate of the \\(y\\)-intercept, not the slope.",
+    "D": "Incorrect. This is the reciprocal of the slope; parallel lines have the same slope."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "concept",
+    "D": "reciprocal"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nm = diff(Rational(2, 5)*x - 3, x)\nassert value(choices[answer]) == m\nassert all(value(choices[k]) != m for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

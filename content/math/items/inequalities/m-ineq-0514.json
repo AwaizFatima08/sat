@@ -1,0 +1,90 @@
+{
+  "id": "m-ineq-0514",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The graph of the line \\(y = -\\frac{1}{2}x + 3\\) is shown. Which of the following points \\((x, y)\\) is a solution to the inequality \\(y > -\\frac{1}{2}x + 3\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -4,
+      8
+    ],
+    "y": [
+      -3,
+      7
+    ],
+    "curves": [
+      {
+        "expr": "-x/2 + 3",
+        "label": "y = -(1/2)x + 3"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 3,
+        "label": "(0, 3)"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "label": "(6, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((4, 2)\\)",
+    "B": "\\((-2, 4)\\)",
+    "C": "\\((0, 0)\\)",
+    "D": "\\((4, 0)\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "A point is a solution if its \\(y\\)-coordinate is greater than the line's value at the same \\(x\\), that is, if the point lies above the line.",
+    "At \\(x = 4\\), the line has \\(y = -\\frac{1}{2}(4) + 3 = 1\\). The point \\((4, 2)\\) has \\(y = 2\\), and \\(2 > 1\\).",
+    "The other points lie below the line or on it."
+  ],
+  "explanation": {
+    "A": "Correct. At \\(x = 4\\) the line is at \\(y = 1\\), and \\(2 > 1\\), so \\((4, 2)\\) lies above the line.",
+    "B": "Incorrect. At \\(x = -2\\) the line is at \\(y = 4\\), so \\((-2, 4)\\) lies on the line. Points on the line are not solutions of a strict inequality.",
+    "C": "Incorrect. At \\(x = 0\\) the line is at \\(y = 3\\), and \\(0 < 3\\): the origin lies below the line, in the region \\(y < -\\frac{1}{2}x + 3\\).",
+    "D": "Incorrect. This reverses the coordinates and tests \\((0, 4)\\). The point \\((4, 0)\\) has \\(y = 0\\), which is less than the line's value 1 at \\(x = 4\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nline = sympify(figure['curves'][0]['expr'])\nabove = lambda p: p[1] > line.subs(x, p[0])\nok = [k for k in choices if above(value(choices[k]))]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

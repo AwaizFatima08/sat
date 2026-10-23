@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0533",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In a circle with center \\(O\\), minor arc \\(AB\\) has the same length as the diameter of the circle. The area of sector \\(AOB\\) is what fraction of the area of the circle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{1}{\\pi}\\)",
+    "B": "\\(\\frac{1}{180}\\)",
+    "C": "\\(\\frac{2}{\\pi}\\)",
+    "D": "\\(\\frac{1}{2\\pi}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Arc length \\(= r\\theta\\) with \\(\\theta\\) in radians. The arc equals \\(2r\\), so \\(r\\theta = 2r\\) and \\(\\theta = 2\\).",
+    "A full circle is \\(2\\pi\\) radians, so the sector is \\(\\frac{2}{2\\pi} = \\frac{1}{\\pi}\\) of the circle (its area is the same fraction of the circle's area)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\theta = 2\\) radians, and \\(\\frac{2}{2\\pi} = \\frac{1}{\\pi}\\).",
+    "B": "Incorrect. This treats \\(\\theta = 2\\) as degrees, \\(\\frac{2}{360}\\); the formula \\(s = r\\theta\\) gives \\(\\theta\\) in radians.",
+    "C": "Incorrect. This divides \\(\\theta = 2\\) by \\(\\pi\\) instead of \\(2\\pi\\), the radian measure of a full circle.",
+    "D": "Incorrect. This sets the arc equal to the radius, giving \\(\\theta = 1\\); the arc equals the diameter, \\(2r\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_formula",
+    "D": "radius_diameter"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nr,t=symbols('r t',positive=True)\nth=solve(Eq(r*t,2*r),t)[0]\nans=simplify((Rational(1,2)*r**2*th)/(pi*r**2))\nassert th<pi and simplify(ans-1/pi)==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

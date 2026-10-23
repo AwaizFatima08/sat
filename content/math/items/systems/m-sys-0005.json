@@ -1,0 +1,104 @@
+{
+  "id": "m-sys-0005",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "The graphs of two linear equations are shown in the \\(xy\\)-plane. The labeled points lie on the lines. What is the \\(x\\)-coordinate of the solution to the system formed by the two equations?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      6
+    ],
+    "y": [
+      -4,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "-3*x/2 + 6",
+        "label": "line 1"
+      },
+      {
+        "expr": "2*x - 2",
+        "label": "line 2"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 6,
+        "label": "(0, 6)"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "label": "(4, 0)"
+      },
+      {
+        "x": 0,
+        "y": -2,
+        "label": "(0, -2)"
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "label": "(2, 2)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{8}{7}\\)",
+    "B": "\\(2\\)",
+    "C": "\\(\\frac{16}{7}\\)",
+    "D": "\\(3\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The line through \\((0, 6)\\) and \\((4, 0)\\) has slope \\(-\\frac{6}{4} = -\\frac{3}{2}\\): \\(y = -\\frac{3}{2}x + 6\\).",
+    "The line through \\((0, -2)\\) and \\((2, 2)\\) has slope \\(\\frac{4}{2} = 2\\): \\(y = 2x - 2\\).",
+    "Set them equal: \\(2x - 2 = -\\frac{3}{2}x + 6\\), so \\(\\frac{7}{2}x = 8\\) and \\(x = \\frac{16}{7}\\).",
+    "The intersection is not at a grid point, so reading the graph is not enough; a graphing calculator gives about 2.29."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses \\(y = 2x + 2\\) for the second line, a sign error in its \\(y\\)-intercept.",
+    "B": "Incorrect. This is an estimate from the graph; the lines cross a little to the right of \\(x = 2\\).",
+    "C": "Correct. The lines are \\(y = -\\frac{3}{2}x + 6\\) and \\(y = 2x - 2\\); setting them equal gives \\(x = \\frac{16}{7}\\).",
+    "D": "Incorrect. This uses \\(-\\frac{2}{3}\\), the reciprocal of the first line's slope: \\(-\\frac{2}{3}x + 6 = 2x - 2\\) gives \\(x = 3\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "misread_graph",
+    "D": "reciprocal"
+  },
+  "verify": "x = symbols('x')\nP = [(q['x'], q['y']) for q in figure['points']]\nline = lambda a, b: (b[1] - a[1])*(x - a[0])/(b[0] - a[0]) + a[1]\nl1, l2 = line(P[0], P[1]), line(P[2], P[3])\nassert all(simplify(sympify(c['expr']) - l) == 0 for c, l in zip(figure['curves'], (l1, l2)))\nsol = solve(Eq(l1, l2), x)\nassert sol == [Rational(16, 7)]\nassert value(choices[answer]) == sol[0]\nassert all(value(choices[k]) != sol[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-arv-0128",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A closed right circular cylinder has a height that is 3 times its radius, and its volume is \\(81\\pi\\). The total surface area of a closed cylinder with radius \\(r\\) and height \\(h\\) is \\(2\\pi r^{2} + 2\\pi rh\\). The total surface area of this cylinder is \\(k\\pi\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "72"
+  ],
+  "solution": [
+    "With \\(h = 3r\\): \\(\\pi r^{2}(3r) = 81\\pi\\), so \\(r^{3} = 27\\) and \\(r = 3\\). Then \\(h = 9\\).",
+    "Surface area: \\(2\\pi(3^{2}) + 2\\pi(3)(9) = 18\\pi + 54\\pi = 72\\pi\\).",
+    "So \\(k = 72\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r=symbols('r',positive=True)\nrv=solve(Eq(pi*r**2*3*r,81*pi),r)\nassert rv==[3]\nR=rv[0]; H=3*R\nans=(2*pi*R**2+2*pi*R*H)/pi\nassert ans==72\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "72",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

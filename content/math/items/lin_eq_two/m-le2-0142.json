@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0142",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A temperature of \\(C\\) degrees Celsius is equal to a temperature of \\(F\\) degrees Fahrenheit, where \\(5F - 9C = 160\\). If a temperature increases by 15 degrees Celsius, by how many degrees Fahrenheit does it increase?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{25}{3}\\)",
+    "B": "\\(27\\)",
+    "C": "\\(59\\)",
+    "D": "\\(15\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Solve for \\(F\\): \\(F = \\frac{9}{5}C + 32\\).",
+    "Each 1-degree increase in \\(C\\) increases \\(F\\) by \\(\\frac{9}{5}\\), so 15 degrees Celsius is \\(\\frac{9}{5}(15) = 27\\) degrees Fahrenheit."
+  ],
+  "explanation": {
+    "A": "Incorrect. This multiplies 15 by \\(\\frac{5}{9}\\) instead of \\(\\frac{9}{5}\\).",
+    "B": "Correct. The slope of \\(F\\) with respect to \\(C\\) is \\(\\frac{9}{5}\\), and \\(\\frac{9}{5}(15) = 27\\).",
+    "C": "Incorrect. This adds 32, but 32 shifts every temperature equally and does not affect the size of a change; 59 is the temperature for \\(C = 15\\).",
+    "D": "Incorrect. A change of 1 degree Celsius is not the same size as a change of 1 degree Fahrenheit."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nC, F = symbols('C F')\nf = solve(Eq(5*F - 9*C, 160), F)[0]\nd = f.subs(C, 15) - f.subs(C, 0)\nassert d == 27\nassert value(choices[answer]) == d\nassert all(value(choices[k]) != d for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

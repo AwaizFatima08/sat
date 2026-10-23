@@ -1,0 +1,122 @@
+{
+  "id": "m-cir-0117",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The opening of a tunnel is the part of a circle that lies above a flat road, as shown. The road is 24 meters wide, and both edges of the road meet the circle. The highest point of the tunnel is 18 meters above the center of the road. What is the radius, in meters, of the circle?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "L": [
+        -12,
+        -5
+      ],
+      "R": [
+        12,
+        -5
+      ],
+      "M": [
+        0,
+        -5
+      ],
+      "T": [
+        0,
+        13
+      ]
+    },
+    "segments": [
+      [
+        "L",
+        "R"
+      ],
+      [
+        "M",
+        "T"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 13
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          -6,
+          -6.4
+        ],
+        "text": "24 m"
+      },
+      {
+        "at": [
+          1.5,
+          4
+        ],
+        "text": "18 m"
+      }
+    ],
+    "right_angles": [
+      "M"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(13\\)",
+    "B": "\\(9\\)",
+    "C": "\\(12\\)",
+    "D": "\\(6\\sqrt{13}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let the radius be \\(r\\). The center of the circle is \\(18 - r\\) meters above the road, directly above the center of the road.",
+    "The radius to an edge of the road is the hypotenuse of a right triangle with legs 12 and \\(18 - r\\): \\(r^{2} = 12^{2} + (18 - r)^{2}\\).",
+    "\\(r^{2} = 144 + 324 - 36r + r^{2}\\), so \\(36r = 468\\) and \\(r = 13\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(r^{2} = 12^{2} + (18 - r)^{2}\\) gives \\(r = 13\\).",
+    "B": "Incorrect. This takes half of the 18-meter height, as if the height were a diameter; the highest point is more than a radius above the road.",
+    "C": "Incorrect. This is half the width of the road, which is a half chord, not the radius.",
+    "D": "Incorrect. This is \\(\\sqrt{12^{2} + 18^{2}}\\), the distance from an edge of the road to the highest point, not the radius."
+  },
+  "traps": {
+    "B": "radius_diameter",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('L','R')==24 and d('M','T')==18 and d('O','L')==d('O','R')==d('O','T')==13\nr=symbols('r',positive=True)\nans=solve(Eq(r**2,12**2+(18-r)**2),r)[0]\nassert ans==13\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

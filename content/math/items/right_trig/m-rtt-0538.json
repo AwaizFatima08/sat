@@ -1,0 +1,137 @@
+{
+  "id": "m-rtt-0538",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Two buildings stand on level ground 30 meters apart. The shorter building is 20 meters tall. From the edge of its roof, the angle of elevation to the top of the taller building is \\(30^{\\circ}\\), as shown. How tall, in meters, is the taller building?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "S": [
+        0,
+        0
+      ],
+      "R": [
+        0,
+        20
+      ],
+      "Q": [
+        30,
+        20
+      ],
+      "T": [
+        30,
+        37.321
+      ],
+      "W": [
+        30,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "S",
+        "W"
+      ],
+      [
+        "S",
+        "R"
+      ],
+      [
+        "R",
+        "Q"
+      ],
+      [
+        "Q",
+        "T"
+      ],
+      [
+        "W",
+        "Q"
+      ],
+      [
+        "R",
+        "T"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          6,
+          21.4
+        ],
+        "text": "30°"
+      },
+      {
+        "at": [
+          15,
+          -2
+        ],
+        "text": "30 m"
+      },
+      {
+        "at": [
+          -3.5,
+          10
+        ],
+        "text": "20 m"
+      }
+    ],
+    "right_angles": [
+      "Q"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20 + 30\\sqrt{3}\\)",
+    "B": "\\(35\\)",
+    "C": "\\(20 + 10\\sqrt{3}\\)",
+    "D": "\\(10\\sqrt{3}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "From the roof edge, the horizontal distance to the taller building is 30 and the rise to its top is opposite the \\(30^{\\circ}\\) angle.",
+    "Rise \\(= 30\\tan 30^{\\circ} = \\frac{30}{\\sqrt{3}} = 10\\sqrt{3}\\).",
+    "Height \\(= 20 + 10\\sqrt{3}\\) (about 37.3 meters)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses \\(30\\tan 60^{\\circ}\\); the tangent of \\(30^{\\circ}\\) is \\(\\frac{1}{\\sqrt{3}}\\), not \\(\\sqrt{3}\\).",
+    "B": "Incorrect. This uses \\(30\\sin 30^{\\circ} = 15\\) for the rise; the 30 meters is the horizontal (adjacent) side, so tangent is needed.",
+    "C": "Correct. The rise above the roof is \\(30\\tan 30^{\\circ} = 10\\sqrt{3}\\); adding 20 gives \\(20 + 10\\sqrt{3}\\).",
+    "D": "Incorrect. This is only the height of the taller building above the shorter roof; the 20 meters below must be added."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "wrong_formula",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('S','W')==30 and d('S','R')==20 and abs(ang('T','R','Q')-30)<0.1 and abs(ang('R','Q','T')-90)<0.1\nans=20+30*tan(pi/6)\nassert simplify(ans-(20+10*sqrt(3)))==0 and abs(P['T'][1]-ans)<0.01\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0519",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A circular mosaic on a plaza floor has a circumference of \\(6\\pi\\) meters. What is the area of the mosaic, in square meters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9\\pi\\)",
+    "B": "\\(3\\)",
+    "C": "\\(36\\pi\\)",
+    "D": "\\(18\\pi\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "From \\(2\\pi r = 6\\pi\\), the radius is \\(r = 3\\).",
+    "Area \\(= \\pi r^{2} = \\pi(3)^{2} = 9\\pi\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(r = 3\\), so the area is \\(9\\pi\\).",
+    "B": "Incorrect. This is the radius; the area still has to be computed.",
+    "C": "Incorrect. This is \\(\\pi(6)^{2}\\); 6 is the diameter (from \\(\\pi d = 6\\pi\\)), not the radius.",
+    "D": "Incorrect. This is \\(\\pi \\cdot 3 \\cdot 6\\), radius times diameter; the area is \\(\\pi r^{2}\\)."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "radius_diameter",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nr=symbols('r',positive=True)\nrr=solve(Eq(2*pi*r,6*pi),r)[0]\nans=pi*rr**2\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

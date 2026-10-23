@@ -1,0 +1,104 @@
+{
+  "id": "m-cir-0507",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A round cake with a radius of 10 centimeters is cut into 8 equal slices, as shown. What is the length, in centimeters, of the curved edge of one slice?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "P": [
+        10,
+        0
+      ],
+      "Q": [
+        7.071,
+        7.071
+      ]
+    },
+    "segments": [
+      [
+        "O",
+        "P"
+      ],
+      [
+        "O",
+        "Q"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 10
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          5,
+          -0.9
+        ],
+        "text": "10 cm"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{5\\pi}{2}\\)",
+    "B": "\\(\\frac{25\\pi}{2}\\)",
+    "C": "\\(20\\pi\\)",
+    "D": "\\(\\frac{5\\pi}{4}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The curved edges of all 8 slices make up the whole circumference, \\(2\\pi(10) = 20\\pi\\).",
+    "One slice has \\(\\frac{1}{8}\\) of it: \\(\\frac{20\\pi}{8} = \\frac{5\\pi}{2}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\frac{1}{8} \\cdot 20\\pi = \\frac{5\\pi}{2}\\).",
+    "B": "Incorrect. This is \\(\\frac{1}{8} \\cdot \\pi(10)^{2}\\), the area of the top of one slice, not the length of its edge.",
+    "C": "Incorrect. This is the circumference of the whole cake; it still has to be divided by 8.",
+    "D": "Incorrect. This uses a radius of 5, treating 10 as the diameter: \\(\\frac{2\\pi(5)}{8} = \\frac{5\\pi}{4}\\)."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "stopped_early",
+    "D": "radius_diameter"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('O','P')==10 and abs(d('O','Q')-10)<0.01 and abs(ang('P','O','Q')-45)<0.1\nans=2*pi*10/8\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

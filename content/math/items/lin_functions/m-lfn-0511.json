@@ -1,0 +1,90 @@
+{
+  "id": "m-lfn-0511",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The graph of the linear function \\(g\\) is shown in the \\(xy\\)-plane. Which equation defines \\(g\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -5,
+      5
+    ],
+    "y": [
+      -7,
+      4
+    ],
+    "curves": [
+      {
+        "expr": "-3*x/2 - 2",
+        "label": "y = g(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": -2,
+        "y": 1,
+        "label": "(-2, 1)"
+      },
+      {
+        "x": 2,
+        "y": -5,
+        "label": "(2, -5)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(g(x) = -\\frac{2}{3}x - 2\\)",
+    "B": "\\(g(x) = \\frac{3}{2}x - 2\\)",
+    "C": "\\(g(x) = -\\frac{3}{2}x + 1\\)",
+    "D": "\\(g(x) = -\\frac{3}{2}x - 2\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Slope \\(= \\frac{-5 - 1}{2 - (-2)} = \\frac{-6}{4} = -\\frac{3}{2}\\).",
+    "Write \\(g(x) = -\\frac{3}{2}x + b\\) and use \\((2, -5)\\): \\(-3 + b = -5\\), so \\(b = -2\\).",
+    "So \\(g(x) = -\\frac{3}{2}x - 2\\). Check: \\(g(-2) = 3 - 2 = 1\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses \\(\\frac{4}{-6}\\), the change in \\(x\\) over the change in \\(y\\), as the slope; that is the reciprocal of the slope.",
+    "B": "Incorrect. This has slope \\(\\frac{3}{2}\\), but the graph falls from left to right, so the slope is negative.",
+    "C": "Incorrect. This uses 1, the \\(y\\)-coordinate of \\((-2, 1)\\), as the \\(y\\)-intercept, but that point is not on the \\(y\\)-axis.",
+    "D": "Correct. The slope is \\(\\frac{-6}{4} = -\\frac{3}{2}\\), and both labeled points satisfy \\(g(x) = -\\frac{3}{2}x - 2\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "sign_error",
+    "C": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\np = figure['points']\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if all(rhs(choices[k]).subs(x, q['x']) == q['y'] for q in p)]\nassert ok == [answer]\nassert simplify(rhs(choices[answer]) - sympify(figure['curves'][0]['expr'])) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

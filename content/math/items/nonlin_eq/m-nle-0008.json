@@ -1,0 +1,47 @@
+{
+  "id": "m-nle-0008",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "tryit",
+  "stem": "What is the solution to the equation \\(\\frac{x}{x - 3} + \\frac{2}{x + 3} = \\frac{18}{x^{2} - 9}\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-8"
+  ],
+  "solution": [
+    "Factor the right-hand denominator: \\(x^{2} - 9 = (x - 3)(x + 3)\\). Note that \\(x \\neq 3\\) and \\(x \\neq -3\\).",
+    "Multiply every term by \\((x - 3)(x + 3)\\): \\(x(x + 3) + 2(x - 3) = 18\\).",
+    "Simplify: \\(x^{2} + 5x - 24 = 0\\), so \\((x + 8)(x - 3) = 0\\) and \\(x = -8\\) or \\(x = 3\\).",
+    "\\(x = 3\\) makes a denominator zero, so it is extraneous. The only solution is \\(-8\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\ncands = solve(Eq(x*(x + 3) + 2*(x - 3), 18), x)\nassert sorted(cands) == [-8, 3]\nsols = solve(Eq(x/(x - 3) + 2/(x + 3), 18/(x**2 - 9)), x)\nassert sols == [-8]\nassert [Rational(s) for s in spr_answers] == sols",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "-8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

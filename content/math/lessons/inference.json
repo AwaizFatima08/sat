@@ -1,0 +1,148 @@
+{
+  "type": "inference",
+  "title": "Inference and margin of error",
+  "what_is_tested": "You use a random sample to estimate something about a whole population: a count, a percent or a mean. You also read a margin of error as a range of plausible values, use it to judge claims, and know that larger random samples give smaller margins of error.",
+  "how_to_spot": "Look for \"random sample\", \"estimate\", \"margin of error\", \"plausible\", or a question about what a survey says about the whole group.",
+  "method": [
+    "Check that the sample was selected at random from the population; only then can you generalize to that population.",
+    "Estimate a count: sample proportion × population size.",
+    "Plausible values: from estimate − margin of error to estimate + margin of error.",
+    "Judge a claim: the data support it only if every plausible value agrees with it.",
+    "Larger random samples (with similar results) give smaller margins of error. The margin of error is about the population mean or percent, not about individuals."
+  ],
+  "pitfalls": [
+    "Giving the count in the sample instead of scaling it up to the population.",
+    "Using only half of the interval (from the estimate up to estimate + margin of error).",
+    "Calling a claim supported because the estimate agrees with it, even though the interval crosses the boundary.",
+    "Reading the interval as a range for every individual instead of for the population mean or percent.",
+    "Thinking a sample 4 times as large divides the margin of error by 4; it shrinks, but by much less."
+  ],
+  "calculator": "The Scientific tab is handy for scaling, such as \\(\\frac{6}{250} \\times 8{,}000\\). Most margin-of-error questions test reasoning, not computing.",
+  "cards": [
+    {
+      "level": 1,
+      "title": "Foundations: estimating a population count",
+      "steps": [
+        "Write the sample proportion: number with the feature ÷ sample size.",
+        "Multiply the proportion by the population size.",
+        "Check that the sample was random and taken from this population.",
+        "Check the size: the estimate should be between the sample count and the population size."
+      ],
+      "worked_example": {
+        "stem": "A factory produced 8,000 light bulbs last week. Inspectors tested a random sample of 250 of these bulbs and found that 6 of them were defective. Based on the sample, which of the following is the best estimate of the number of defective bulbs the factory produced last week?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "\\(6\\)",
+          "B": "\\(32\\)",
+          "C": "\\(192\\)",
+          "D": "\\(7{,}808\\)"
+        },
+        "answer": "C",
+        "walkthrough": [
+          "Sample proportion: \\(\\frac{6}{250} = 0.024\\).",
+          "Scale up: \\(0.024 \\times 8{,}000 = 192\\) bulbs. On the Scientific tab, type 6/250*8000.",
+          "Choice C is correct. Choice A is only the number of defective bulbs in the sample. Choice B, \\(8{,}000 \\div 250\\), shows how many times larger the population is than the sample but never uses the 6 defective bulbs, and choice D subtracts 192 from 8,000."
+        ],
+        "verify": "est = Rational(6, 250)*8000\nassert est == 192\nassert value(choices[answer]) == est\nassert all(value(choices[k]) != est for k in choices if k != answer)"
+      },
+      "tryit": [
+        "m-smp-0001",
+        "m-smp-0002"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Medium: reading a margin of error",
+      "steps": [
+        "Find the estimate (a sample mean or sample percent) and the margin of error.",
+        "Subtract and add the margin of error to get the least and greatest plausible values.",
+        "Remember that the interval describes the population mean or percent, not each person.",
+        "Answer exactly what is asked: the least value, the greatest value, or whether a given value is plausible."
+      ],
+      "worked_example": {
+        "stem": "Researchers selected 500 adults at random from Chattogram, Bangladesh, and recorded each adult's one-way commute time. The mean commute time for the sample was 52 minutes, with an associated margin of error of 4 minutes. Based on these results, what is the greatest plausible value, in minutes, for the mean commute time of all adults in Chattogram?",
+        "figure": null,
+        "answer_type": "spr",
+        "spr_answers": [
+          "56"
+        ],
+        "walkthrough": [
+          "Plausible values for the mean of all adults: \\(52 - 4 = 48\\) to \\(52 + 4 = 56\\) minutes.",
+          "The greatest plausible value is 56. Enter 56.",
+          "Trap: the interval does not say that no adult commutes longer than 56 minutes; it is about the mean commute time of all the adults."
+        ],
+        "verify": "lo, hi = 52 - 4, 52 + 4\nassert (lo, hi) == (48, 56)\nassert [Rational(s) for s in spr_answers] == [hi]"
+      },
+      "tryit": [
+        "m-smp-0003",
+        "m-smp-0004"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Advanced: judging a claim with the margin of error",
+      "steps": [
+        "Build the interval of plausible values: estimate ± margin of error.",
+        "Write the claim as a condition on the population value, such as mean < 10.",
+        "If every value in the interval meets the condition, the data support the claim; if only some do, they do not.",
+        "A larger random sample would narrow the interval, but it would not change what the population value means."
+      ],
+      "worked_example": {
+        "stem": "A restaurant chain selected 400 of its customers at random and recorded the time each one waited for a table. The mean wait time for the sample was 9.2 minutes, with an associated margin of error of 0.6 minute. The manager claims that the mean wait time for all of the chain's customers is less than 10 minutes. Which of the following is the best evaluation of the claim?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "The data support the claim, because all plausible values for the mean, 8.6 to 9.8 minutes, are less than 10 minutes.",
+          "B": "The data do not support the claim, because some customers in the sample may have waited more than 10 minutes.",
+          "C": "The data show that every customer of the chain waits less than 10 minutes.",
+          "D": "The claim cannot be evaluated, because only 400 customers were surveyed."
+        },
+        "answer": "A",
+        "walkthrough": [
+          "Plausible values: \\(9.2 - 0.6 = 8.6\\) to \\(9.2 + 0.6 = 9.8\\) minutes.",
+          "The claim is \"mean < 10\". Every value from 8.6 to 9.8 is less than 10, so the data support the claim.",
+          "Choice A is correct. Choice B confuses individual customers with the mean: the mean can be under 10 minutes even if some waits are longer. Choice C makes the same mistake in the other direction, and choice D is wrong because a random sample is exactly what allows this estimate."
+        ],
+        "verify": "lo, hi = Rational('9.2') - Rational('0.6'), Rational('9.2') + Rational('0.6')\nassert (lo, hi) == (Rational('8.6'), Rational('9.8')) and hi < 10\nkey = choices[answer]\nassert answer == 'A' and key.startswith('The data support') and '8.6' in key and '9.8' in key"
+      },
+      "tryit": [
+        "m-smp-0005",
+        "m-smp-0006"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Challenge: comparing two estimates",
+      "steps": [
+        "Build the interval of plausible values for each group separately.",
+        "If the intervals do not overlap, the data show a real difference between the populations; if they overlap, the data do not show a convincing difference.",
+        "For \"at least\" or \"more than half\" claims, use the ends of the intervals, not the estimates.",
+        "Check that each conclusion is about the populations the samples came from, and nothing wider."
+      ],
+      "worked_example": {
+        "stem": "A school district surveyed a random sample of 300 students at Northfield High School and a separate random sample of 300 students at Southgate High School about whether they eat breakfast on school days. The district estimated that \\(64\\%\\) of Northfield students eat breakfast on school days, with a margin of error of 5 percentage points, and that \\(49\\%\\) of Southgate students do, with a margin of error of 6 percentage points. Which conclusion is best supported by the data?",
+        "figure": null,
+        "answer_type": "mcq",
+        "choices": {
+          "A": "The percent of all students who eat breakfast on school days is greater at Northfield than at Southgate.",
+          "B": "The data do not show convincingly that the two schools differ, because the margins of error are different.",
+          "C": "Fewer than half of all Southgate students eat breakfast on school days.",
+          "D": "The percent at Northfield is at least 15 percentage points greater than the percent at Southgate."
+        },
+        "answer": "A",
+        "walkthrough": [
+          "Northfield: \\(64 \\pm 5\\) gives \\(59\\%\\) to \\(69\\%\\). Southgate: \\(49 \\pm 6\\) gives \\(43\\%\\) to \\(55\\%\\).",
+          "The intervals do not overlap: even the least plausible Northfield value, \\(59\\%\\), is greater than the greatest plausible Southgate value, \\(55\\%\\). So the data support choice A.",
+          "Choice C is the strongest trap: \\(49\\%\\) is under half, but the Southgate interval reaches \\(55\\%\\), so \\\"fewer than half\\\" is not established.",
+          "Choice D uses the difference of the estimates, 15, but the gap could plausibly be as small as \\(59 - 55 = 4\\) percentage points. Choice B is wrong because different margins of error do not stop a comparison."
+        ],
+        "verify": "n_lo, n_hi = 64 - 5, 64 + 5\ns_lo, s_hi = 49 - 6, 49 + 6\nassert n_lo > s_hi and s_hi > 50 and n_lo - s_hi == 4\nassert answer == 'A' and 'greater at Northfield' in choices[answer]"
+      },
+      "tryit": [
+        "m-smp-0007",
+        "m-smp-0008"
+      ]
+    }
+  ]
+}

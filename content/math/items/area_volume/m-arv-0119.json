@@ -1,0 +1,59 @@
+{
+  "id": "m-arv-0119",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A right circular cylinder has radius \\(r\\) and height \\(h\\). A second right circular cylinder has radius \\(2r\\) and height \\(\\frac{h}{2}\\). The volume of the second cylinder is how many times the volume of the first cylinder?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{1}{2}\\)",
+    "B": "\\(1\\)",
+    "C": "\\(2\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "First volume: \\(\\pi r^{2}h\\).",
+    "Second volume: \\(\\pi(2r)^{2}\\left(\\frac{h}{2}\\right) = \\pi(4r^{2})\\left(\\frac{h}{2}\\right) = 2\\pi r^{2}h\\).",
+    "The second volume is 2 times the first."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the ratio of the first volume to the second, the reciprocal of what is asked.",
+    "B": "Incorrect. This assumes doubling the radius and halving the height cancel out, but the radius is squared in \\(V = \\pi r^{2}h\\).",
+    "C": "Correct. \\(\\pi(2r)^{2}\\left(\\frac{h}{2}\\right) = 2\\pi r^{2}h\\), which is 2 times \\(\\pi r^{2}h\\).",
+    "D": "Incorrect. This accounts for doubling the radius (\\(2^{2} = 4\\)) but leaves out halving the height."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nr,h=symbols('r h',positive=True)\nans=simplify(pi*(2*r)**2*(h/2)/(pi*r**2*h))\nassert ans==2\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

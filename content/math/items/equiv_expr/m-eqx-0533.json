@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0533",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "For \\(h \\neq 0\\), \\(x \\neq 0\\), and \\(x \\neq -h\\), which of the following is equivalent to \\(\\frac{\\frac{1}{x} - \\frac{1}{x + h}}{h}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{1}{x(x + h)}\\)",
+    "B": "\\(-\\frac{1}{x(x + h)}\\)",
+    "C": "\\(-\\frac{1}{h^{2}}\\)",
+    "D": "\\(\\frac{h}{x(x + h)}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Combine the fractions in the numerator over the common denominator \\(x(x + h)\\): \\(\\frac{(x + h) - x}{x(x + h)} = \\frac{h}{x(x + h)}\\).",
+    "Divide by \\(h\\): \\(\\frac{h}{x(x + h)} \\cdot \\frac{1}{h} = \\frac{1}{x(x + h)}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The numerator simplifies to \\(\\frac{h}{x(x + h)}\\), and dividing by \\(h\\) gives \\(\\frac{1}{x(x + h)}\\).",
+    "B": "Incorrect. This is the result of subtracting in the wrong order, \\(x - (x + h) = -h\\), when combining the fractions.",
+    "C": "Incorrect. This is the result of subtracting the denominators, \\(\\frac{1}{x - (x + h)} = -\\frac{1}{h}\\), which is not how fractions are subtracted.",
+    "D": "Incorrect. This is the simplified numerator only; it still has to be divided by \\(h\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx, h = symbols('x h')\ntarget = (1/x - 1/(x + h))/h\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

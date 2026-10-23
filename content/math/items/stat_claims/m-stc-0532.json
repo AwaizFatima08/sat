@@ -1,0 +1,46 @@
+{
+  "id": "m-stc-0532",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A sports club selected 800 of its members at random and asked whether they favor building a new swimming pool. Of the 800 members selected, 600 responded, and 420 of those who responded said they favor the pool. The other 200 members selected did not respond. Assume that each nonresponding member either favors or does not favor the pool. The percent of all 800 selected members who favor the pool could be as low as \\(a\\%\\) or as high as \\(b\\%\\). What is the value of \\(b - a\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "25"
+  ],
+  "solution": [
+    "Lowest case: none of the 200 nonresponders favor the pool, so \\(a = \\frac{420}{800} \\cdot 100 = 52.5\\).",
+    "Highest case: all 200 nonresponders favor the pool, so \\(b = \\frac{420 + 200}{800} \\cdot 100 = 77.5\\).",
+    "So \\(b - a = 77.5 - 52.5 = 25\\). (This is just the nonresponse rate, \\(\\frac{200}{800}\\), as a percent.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "sel, resp, fav = 800, 600, 420\nnon = sel - resp\na = Rational(fav, sel) * 100\nb = Rational(fav + non, sel) * 100\nassert (a, b) == (Rational(105, 2), Rational(155, 2))\nassert [Rational(x) for x in spr_answers] == [b - a] == [25]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "25",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

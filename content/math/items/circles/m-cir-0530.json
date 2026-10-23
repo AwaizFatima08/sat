@@ -1,0 +1,115 @@
+{
+  "id": "m-cir-0530",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the circle with center \\(O\\), the radius is 4 and central angle \\(AOB\\) measures \\(\\frac{\\pi}{3}\\) radians. What is the length of chord \\(AB\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "A": [
+        4,
+        0
+      ],
+      "B": [
+        2,
+        3.464
+      ]
+    },
+    "segments": [
+      [
+        "O",
+        "A"
+      ],
+      [
+        "O",
+        "B"
+      ],
+      [
+        "A",
+        "B"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 4
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          1.2,
+          0.55
+        ],
+        "text": "π/3"
+      },
+      {
+        "at": [
+          2,
+          -0.5
+        ],
+        "text": "4"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{4\\pi}{3}\\)",
+    "B": "\\(4\\)",
+    "C": "\\(4\\sqrt{3}\\)",
+    "D": "\\(2\\sqrt{3}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(\\frac{\\pi}{3}\\) radians is \\(60^{\\circ}\\). Triangle \\(AOB\\) has \\(OA = OB = 4\\), so its base angles are equal: \\(\\frac{180 - 60}{2} = 60^{\\circ}\\).",
+    "All three angles are \\(60^{\\circ}\\), so the triangle is equilateral and \\(AB = 4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(r\\theta\\), the length of arc \\(AB\\), not the straight chord.",
+    "B": "Correct. Triangle \\(AOB\\) is equilateral, so \\(AB = 4\\).",
+    "C": "Incorrect. \\(r\\sqrt{3}\\) is the chord for a central angle of \\(\\frac{2\\pi}{3}\\) (\\(120^{\\circ}\\)), not \\(\\frac{\\pi}{3}\\).",
+    "D": "Incorrect. This is the height of the equilateral triangle \\(AOB\\), not the length of its side \\(AB\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('O','A')==4 and abs(d('O','B')-4)<0.01 and abs(ang('A','O','B')-60)<0.1\nans=sqrt(2*4**2-2*4**2*cos(pi/3))\nassert abs(N(ans-d('A','B')))<0.01\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-lfn-0158",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A household in Dhaka installs a full cylinder of cooking gas. The total mass \\(M(d)\\), in kilograms, of the cylinder and the gas inside it \\(d\\) days after installation is modeled by \\(M(d) = 27 - 0.4d\\). The empty cylinder has a mass of 15 kilograms. According to the model, how many days after installation will the cylinder contain 25 percent of the mass of gas it contained when it was installed?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(22.5\\)",
+    "B": "\\(67.5\\)",
+    "C": "\\(7.5\\)",
+    "D": "\\(50.625\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "At installation the cylinder holds \\(27 - 15 = 12\\) kilograms of gas.",
+    "25 percent of that is \\(0.25(12) = 3\\) kilograms, so the total mass is then \\(15 + 3 = 18\\) kilograms.",
+    "\\(27 - 0.4d = 18\\) gives \\(d = \\frac{9}{0.4} = 22.5\\) days."
+  ],
+  "explanation": {
+    "A": "Correct. 25 percent of the 12 kilograms of gas is 3 kilograms, so \\(M(d) = 18\\): \\(27 - 0.4d = 18\\), \\(d = 22.5\\).",
+    "B": "Incorrect. This is when the total mass would be 0, ignoring the 15-kilogram cylinder.",
+    "C": "Incorrect. This is when 25 percent of the gas has been used (9 kilograms of gas left), not when 25 percent remains.",
+    "D": "Incorrect. This sets the total mass equal to 25 percent of 27 kilograms, which includes the mass of the cylinder itself."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "percent_add"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nd = symbols('d')\nM = 27 - Rational('0.4')*d\ngas0 = M.subs(d, 0) - 15\nans = solve(Eq(M, 15 + Rational(1, 4)*gas0), d)[0]\nassert ans == Rational(45, 2)\nassert solve(Eq(M, 15 + Rational(3, 4)*gas0), d)[0] == Rational('7.5')\n\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-lfn-0150",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The functions \\(f\\) and \\(g\\) are linear, and \\(f(x) = 2x - 5\\). If \\(f(g(x)) = 6x + 1\\) for all values of \\(x\\), which equation defines \\(g\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(g(x) = 3x + 3\\)",
+    "B": "\\(g(x) = 3x + 6\\)",
+    "C": "\\(g(x) = 3x - 2\\)",
+    "D": "\\(g(x) = 6x + 6\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(g(x) = ax + b\\). Then \\(f(g(x)) = 2(ax + b) - 5 = 2ax + 2b - 5\\).",
+    "Match with \\(6x + 1\\): \\(2a = 6\\), so \\(a = 3\\), and \\(2b - 5 = 1\\), so \\(b = 3\\).",
+    "So \\(g(x) = 3x + 3\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(f(3x + 3) = 2(3x + 3) - 5 = 6x + 1\\).",
+    "B": "Incorrect. This stops at \\(2b = 6\\) without dividing by 2.",
+    "C": "Incorrect. This comes from \\(2b + 5 = 1\\), a sign error when undoing the \\(-5\\).",
+    "D": "Incorrect. This only adds 5 to \\(6x + 1\\) and does not undo the multiplication by 2."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nf = lambda u: 2*u - 5\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if expand(f(rhs(choices[k])) - (6*x + 1)) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

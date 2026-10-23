@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0122",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What value of \\(p\\) satisfies the equation \\(4p + 3(2 - p) = 2p - 5\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(11\\)",
+    "B": "\\(1\\)",
+    "C": "\\(-11\\)",
+    "D": "\\(-\\frac{11}{5}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Distribute: \\(4p + 6 - 3p = 2p - 5\\), so \\(p + 6 = 2p - 5\\).",
+    "Subtract \\(p\\) and add 5 to both sides: \\(11 = p\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(p + 6 = 2p - 5\\) gives \\(p = 11\\). Check: \\(44 + 3(-9) = 17 = 2(11) - 5\\).",
+    "B": "Incorrect. This is the result of combining 6 and \\(-5\\) as 1 instead of adding 5 to 6: \\(p = 1\\).",
+    "C": "Incorrect. This is the result of distributing 3 only to the 2: \\(4p + 6 - p = 2p - 5\\), which gives \\(3p + 6 = 2p - 5\\) and \\(p = -11\\).",
+    "D": "Incorrect. This is the result of a sign slip when distributing: \\(3(2 - p) = 6 + 3p\\), which gives \\(7p + 6 = 2p - 5\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "arithmetic",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\np = symbols('p')\ns = solve(Eq(4*p + 3*(2 - p), 2*p - 5), p)[0]\nassert s == 11\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

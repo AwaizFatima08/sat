@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0513",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "A circle with center \\(O\\) has a radius of 8 centimeters. Minor arc \\(AB\\) of the circle has a length of \\(4\\pi\\) centimeters. What is the measure, in degrees, of central angle \\(AOB\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(180\\)",
+    "B": "\\(45\\)",
+    "C": "\\(\\frac{\\pi}{2}\\)",
+    "D": "\\(90\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The circumference is \\(2\\pi(8) = 16\\pi\\).",
+    "The arc is \\(\\frac{4\\pi}{16\\pi} = \\frac{1}{4}\\) of the circle, so the angle is \\(\\frac{1}{4} \\cdot 360 = 90^{\\circ}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses \\(\\pi r = 8\\pi\\) as the circumference; the circumference is \\(2\\pi r\\).",
+    "B": "Incorrect. This uses 16 as the radius, so the circumference becomes \\(32\\pi\\) and the fraction \\(\\frac{1}{8}\\).",
+    "C": "Incorrect. This is the angle in radians; the question asks for degrees.",
+    "D": "Correct. \\(\\frac{4\\pi}{16\\pi} \\cdot 360 = 90\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "radius_diameter",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nt=symbols('t')\ns=solve(Eq(t/360*2*pi*8,4*pi),t)\nassert s==[90]\nans=s[0]\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

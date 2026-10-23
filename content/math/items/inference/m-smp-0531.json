@@ -1,0 +1,80 @@
+{
+  "id": "m-smp-0531",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Researchers surveyed a random sample of adults in Town A and a separate random sample of adults in Town B to estimate the percent of adults in each town who own a bicycle. The table shows the estimates and their margins of error. Which of the following conclusions is best supported by the data?",
+  "figure": {
+    "kind": "table",
+    "title": "Adults who own a bicycle",
+    "columns": [
+      "Town",
+      "Estimate (%)",
+      "Margin of error (percentage points)"
+    ],
+    "rows": [
+      [
+        "Town A",
+        "46",
+        "2"
+      ],
+      [
+        "Town B",
+        "52",
+        "5"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The percent of all adults who own a bicycle is greater in Town B than in Town A.",
+    "B": "The survey in Town B used a larger sample than the survey in Town A.",
+    "C": "Less than half of all adults in Town A own a bicycle.",
+    "D": "More than half of all adults in Town B own a bicycle."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Town A: plausible values \\(46 - 2 = 44\\%\\) to \\(46 + 2 = 48\\%\\). Town B: \\(52 - 5 = 47\\%\\) to \\(52 + 5 = 57\\%\\).",
+    "Every plausible value for Town A is less than 50%, so fewer than half of Town A's adults own a bicycle.",
+    "The ranges overlap (47% to 48%), so Town B is not shown to be higher, and Town B's range includes values below 50%.",
+    "A larger margin of error points to a SMALLER sample, so Town B's sample was likely the smaller one."
+  ],
+  "explanation": {
+    "A": "Incorrect. The plausible ranges, 44% to 48% and 47% to 57%, overlap, so the data do not show that Town B's percent is greater.",
+    "B": "Incorrect. Town B has the LARGER margin of error, which suggests it used the SMALLER sample.",
+    "C": "Correct. All of Town A's plausible values, 44% to 48%, are less than 50%.",
+    "D": "Incorrect. Town B's plausible values, 47% to 57%, include values below 50%."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\na = (46 - 2, 46 + 2)\nb = (52 - 5, 52 + 5)\nassert a[1] < 50\nassert b[0] <= a[1] and b[0] < 50\nassert answer == 'C' and 'Less than half' in choices['C'] and 'Town A' in choices['C']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

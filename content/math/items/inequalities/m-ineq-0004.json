@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0004",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A freight elevator can safely carry at most 1,100 kilograms. An operator who weighs 80 kilograms rides with boxes that weigh 23 kilograms each. What is the greatest number of boxes the elevator can safely carry along with the operator?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "44"
+  ],
+  "solution": [
+    "Let \\(b\\) be the number of boxes: \\(80 + 23b \\le 1100\\).",
+    "Subtract 80: \\(23b \\le 1020\\), so \\(b \\le 44.34...\\).",
+    "The number of boxes is a whole number, so the greatest value is 44. (45 boxes would weigh \\(1035\\) kilograms, plus 80 is too much.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "b = symbols('b')\ns = solve_univariate_inequality(80 + 23*b <= 1100, b, relational=False)\nassert s == Interval(-oo, Rational(1020, 23))\nbest = floor(Rational(1020, 23))\nassert best == 44\nassert [Rational(a) for a in spr_answers] == [best]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "44",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

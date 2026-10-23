@@ -1,0 +1,106 @@
+{
+  "id": "m-cir-0112",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, \\(\\overline{PA}\\) and \\(\\overline{PB}\\) are tangent to the circle with center \\(O\\) at points \\(A\\) and \\(B\\), respectively. The measure of angle \\(APB\\) is \\(50^{\\circ}\\). What is the measure, in degrees, of angle \\(AOB\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "P": [
+        11.831,
+        0
+      ],
+      "A": [
+        2.113,
+        4.532
+      ],
+      "B": [
+        2.113,
+        -4.532
+      ]
+    },
+    "segments": [
+      [
+        "P",
+        "A"
+      ],
+      [
+        "P",
+        "B"
+      ],
+      [
+        "O",
+        "A"
+      ],
+      [
+        "O",
+        "B"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 5
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          9.631,
+          0
+        ],
+        "text": "50°"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "B"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "130"
+  ],
+  "solution": [
+    "A tangent is perpendicular to the radius at the point of tangency, so angles \\(OAP\\) and \\(OBP\\) each measure \\(90^{\\circ}\\).",
+    "The angles of quadrilateral \\(OAPB\\) add to \\(360^{\\circ}\\): \\(m\\angle AOB = 360 - 90 - 90 - 50 = 130\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(ang('O','A','P')-90)<0.1 and abs(ang('O','B','P')-90)<0.1 and abs(ang('A','P','B')-50)<0.1\nans=360-90-90-50\nassert abs(ang('A','O','B')-ans)<0.1\nassert all(Rational(s)==ans==130 for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "130",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

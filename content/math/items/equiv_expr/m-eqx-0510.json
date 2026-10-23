@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0510",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A theater charges 15 dollars for an adult ticket and 9 dollars for a child ticket. A group buys \\(a\\) adult tickets and \\((a + 2)\\) child tickets. Which expression represents the total cost, in dollars, of the tickets?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(24a + 18\\)",
+    "B": "\\(24a + 2\\)",
+    "C": "\\(24a + 11\\)",
+    "D": "\\(24a + 30\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The adult tickets cost \\(15a\\) dollars and the child tickets cost \\(9(a + 2) = 9a + 18\\) dollars.",
+    "Add: \\(15a + 9a + 18 = 24a + 18\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(15a + 9(a + 2) = 24a + 18\\).",
+    "B": "Incorrect. This is the result of multiplying only \\(a\\) by 9 and not the 2 extra child tickets.",
+    "C": "Incorrect. This is the result of adding 9 and 2 instead of multiplying them.",
+    "D": "Incorrect. This is the result of charging the 2 extra tickets at the adult price of 15 dollars instead of the child price."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "arithmetic",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\na = symbols('a')\ntarget = 15*a + 9*(a + 2)\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

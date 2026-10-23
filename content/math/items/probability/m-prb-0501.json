@@ -1,0 +1,58 @@
+{
+  "id": "m-prb-0501",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "An integer is selected at random from the integers 1 through 25, inclusive. What is the probability that the integer is a multiple of 5?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{1}{5}\\)",
+    "B": "\\(\\frac{4}{5}\\)",
+    "C": "\\(\\frac{1}{25}\\)",
+    "D": "\\(\\frac{1}{4}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The multiples of 5 from 1 to 25 are 5, 10, 15, 20 and 25, so there are 5 of them.",
+    "The probability is \\(\\frac{5}{25} = \\frac{1}{5}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The multiples of 5 are 5, 10, 15, 20 and 25: 5 of the 25 integers, and \\(\\frac{5}{25} = \\frac{1}{5}\\).",
+    "B": "Incorrect. This is the probability that the integer is NOT a multiple of 5.",
+    "C": "Incorrect. This is the probability of selecting one particular integer, not any of the 5 multiples of 5.",
+    "D": "Incorrect. This is \\(\\frac{5}{20}\\): it compares the multiples of 5 with the integers that are not multiples of 5 instead of with all 25 integers."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nn = len([k for k in range(1, 26) if k % 5 == 0])\np = Rational(n, 25)\nassert p == Rational(1, 5)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

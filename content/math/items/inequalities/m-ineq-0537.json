@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0537",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the inequality \\(4(x + c) \\ge 4x - 3c + 14\\), \\(c\\) is a constant. Which of the following describes all values of \\(c\\) for which every real number \\(x\\) is a solution to the inequality?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(c \\le 2\\)",
+    "B": "\\(c \\ge 2\\)",
+    "C": "\\(c \\ge \\frac{1}{2}\\)",
+    "D": "\\(c \\ge 14\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Expand: \\(4x + 4c \\ge 4x - 3c + 14\\). Subtracting \\(4x\\) from both sides removes \\(x\\): \\(4c \\ge -3c + 14\\).",
+    "The inequality no longer depends on \\(x\\), so it is true for every \\(x\\) exactly when \\(7c \\ge 14\\).",
+    "So \\(c \\ge 2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This reverses the inequality sign; with \\(c = 0\\), for example, the inequality becomes \\(0 \\ge 14\\), which is never true.",
+    "B": "Correct. The \\(x\\)-terms cancel, leaving \\(7c \\ge 14\\), so every real \\(x\\) is a solution exactly when \\(c \\ge 2\\).",
+    "C": "Incorrect. This divides 7 by 14 instead of 14 by 7.",
+    "D": "Incorrect. This moves \\(-3c\\) to the left side without changing its sign, writing \\(4c - 3c \\ge 14\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "reciprocal",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nR = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nx, c = symbols('x c')\nd = expand(4*(x + c) - (4*x - 3*c + 14))\nassert not d.has(x)\nS = solve_univariate_inequality(d >= 0, c, relational=False)\nassert S == Interval(2, oo)\nok = [k for k in choices if R(choices[k]).as_set() == S]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

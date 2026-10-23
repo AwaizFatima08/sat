@@ -1,0 +1,59 @@
+{
+  "id": "m-prb-0522",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A shop in Dhaka has a box of 12 juice packs: 5 mango and 7 lychee. Two packs are selected at random from the box, one after the other, without replacement. What is the probability that both packs are mango?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{4}{11}\\)",
+    "B": "\\(\\frac{5}{33}\\)",
+    "C": "\\(\\frac{5}{36}\\)",
+    "D": "\\(\\frac{25}{144}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "First pack mango: \\(\\frac{5}{12}\\).",
+    "Then 4 mango packs remain among 11 packs: \\(\\frac{4}{11}\\).",
+    "Both mango: \\(\\frac{5}{12} \\cdot \\frac{4}{11} = \\frac{5}{33}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is only the probability that the second pack is mango given that the first was mango; it must be multiplied by \\(\\frac{5}{12}\\).",
+    "B": "Correct. \\(\\frac{5}{12} \\cdot \\frac{4}{11} = \\frac{20}{132} = \\frac{5}{33}\\).",
+    "C": "Incorrect. This is \\(\\frac{5}{12} \\cdot \\frac{4}{12}\\): it removes a mango pack from the top of the second fraction but not from the total.",
+    "D": "Incorrect. This is \\(\\frac{5}{12} \\cdot \\frac{5}{12}\\), the probability if the first pack were put back before the second selection."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "arithmetic",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\np = Rational(5, 12) * Rational(4, 11)\nassert p == Rational(5, 33)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

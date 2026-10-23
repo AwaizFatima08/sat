@@ -1,0 +1,79 @@
+{
+  "id": "m-pct-0538",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The table shows three values of the function \\(f\\). For each increase of 1 in \\(t\\), the value of \\(f(t)\\) decreases by the same percent. By what percent does \\(f(t)\\) decrease for each increase of 1 in \\(t\\)?",
+  "figure": {
+    "kind": "table",
+    "columns": [
+      "t",
+      "f(t)"
+    ],
+    "rows": [
+      [
+        "0",
+        "800"
+      ],
+      [
+        "2",
+        "648"
+      ],
+      [
+        "4",
+        "524.88"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(19\\%\\)",
+    "B": "\\(81\\%\\)",
+    "C": "\\(10\\%\\)",
+    "D": "\\(9.5\\%\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "From \\(t = 0\\) to \\(t = 2\\), \\(f\\) is multiplied by \\(\\frac{648}{800} = 0.81\\). (Also \\(\\frac{524.88}{648} = 0.81\\).)",
+    "This is two steps of the same factor \\(r\\), so \\(r^{2} = 0.81\\) and \\(r = 0.9\\).",
+    "A factor of 0.9 is a decrease of \\(10\\%\\) for each increase of 1 in \\(t\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the percent decrease for an increase of 2 in \\(t\\), not 1.",
+    "B": "Incorrect. This is the factor 0.81 for an increase of 2 in \\(t\\), written as a percent. It is neither the decrease nor for an increase of 1.",
+    "C": "Correct. The factor for 2 units is 0.81, so the factor for 1 unit is \\(\\sqrt{0.81} = 0.9\\), a \\(10\\%\\) decrease.",
+    "D": "Incorrect. This halves the \\(19\\%\\) decrease over 2 units of \\(t\\). Percent changes multiply, so the factor for 1 unit is \\(\\sqrt{0.81} = 0.9\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "concept",
+    "D": "percent_add"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nf = {r[0]: Rational(r[1]) for r in figure['rows']}\nassert f['4'] / f['2'] == f['2'] / f['0']\nr = sqrt(f['2'] / f['0'])\nassert r == Rational(9, 10)\nv = 1 - r\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

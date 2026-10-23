@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0526",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The time \\(T\\), in seconds, for a pendulum of length \\(L\\) meters to complete one swing back and forth is given by \\(T = 2\\pi\\sqrt{\\frac{L}{g}}\\), where \\(g\\) is a positive constant. Which of the following gives \\(L\\) in terms of \\(T\\) and \\(g\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{g T^{2}}{4\\pi^{2}}\\)",
+    "B": "\\(\\frac{g T}{2\\pi}\\)",
+    "C": "\\(\\frac{T^{2}}{4\\pi^{2} g}\\)",
+    "D": "\\(\\frac{g T^{2}}{2\\pi}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Divide both sides by \\(2\\pi\\): \\(\\frac{T}{2\\pi} = \\sqrt{\\frac{L}{g}}\\).",
+    "Square both sides: \\(\\frac{T^{2}}{4\\pi^{2}} = \\frac{L}{g}\\).",
+    "Multiply by \\(g\\): \\(L = \\frac{g T^{2}}{4\\pi^{2}}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Isolating the root, squaring and multiplying by \\(g\\) gives \\(L = \\frac{g T^{2}}{4\\pi^{2}}\\).",
+    "B": "Incorrect. This is the result of skipping the squaring step, which is needed to undo the square root.",
+    "C": "Incorrect. This is the result of dividing by \\(g\\) instead of multiplying by \\(g\\) in the last step.",
+    "D": "Incorrect. This is the result of squaring \\(T\\) but not squaring \\(2\\pi\\) when squaring both sides."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "reciprocal",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'C': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'C', 'D': 'B'}[answer]  # shuffled: original letters\nT, L, g = symbols('T L g', positive=True)\nsol = solve(Eq(T, 2*pi*sqrt(L/g)), L)\nassert len(sol) == 1\nf = lambda c: value(choices[c]).subs({Symbol('T'): T, Symbol('g'): g})\nassert simplify(f(answer) - sol[0]) == 0\nassert all(simplify(f(c) - sol[0]) != 0 for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

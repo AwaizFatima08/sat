@@ -1,0 +1,163 @@
+{
+  "id": "m-eqx-0517",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A square photo has sides of \\(s\\) centimeters. It is placed in a square frame that adds a border 3 centimeters wide on every side, as shown. Which expression represents the area, in square centimeters, of the border?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        8,
+        0
+      ],
+      "C": [
+        8,
+        8
+      ],
+      "D": [
+        0,
+        8
+      ],
+      "E": [
+        1.5,
+        1.5
+      ],
+      "F": [
+        6.5,
+        1.5
+      ],
+      "G": [
+        6.5,
+        6.5
+      ],
+      "H": [
+        1.5,
+        6.5
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "F",
+        "G"
+      ],
+      [
+        "G",
+        "H"
+      ],
+      [
+        "H",
+        "E"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          4,
+          2.1
+        ],
+        "text": "s"
+      },
+      {
+        "at": [
+          4,
+          0.75
+        ],
+        "text": "3"
+      },
+      {
+        "at": [
+          0.75,
+          4
+        ],
+        "text": "3"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(36\\)",
+    "B": "\\(6s + 9\\)",
+    "C": "\\(s^{2} + 12s + 36\\)",
+    "D": "\\(12s + 36\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Each side of the framed square is \\(s + 3 + 3 = s + 6\\) centimeters, so its area is \\((s + 6)^{2} = s^{2} + 12s + 36\\).",
+    "Subtract the area of the photo, \\(s^{2}\\): \\(s^{2} + 12s + 36 - s^{2} = 12s + 36\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of writing \\((s + 6)^{2}\\) as \\(s^{2} + 36\\), leaving out the middle term \\(12s\\).",
+    "B": "Incorrect. This is the result of adding the 3-centimeter border to only one side of the photo, using \\((s + 3)^{2} - s^{2}\\).",
+    "C": "Incorrect. This is the area of the whole framed square; the area of the photo still has to be subtracted.",
+    "D": "Correct. \\((s + 6)^{2} - s^{2} = 12s + 36\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "C": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\ns = symbols('s')\ntarget = (s + 6)**2 - s**2\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

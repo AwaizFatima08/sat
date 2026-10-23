@@ -1,0 +1,45 @@
+{
+  "id": "m-rtt-0520",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A straight support cable runs from a point on a vertical communications tower to an anchor in the level ground 16 meters from the base of the tower. The cable makes an angle of \\(x^{\\circ}\\) with the ground, where \\(\\cos x^{\\circ} = \\frac{8}{17}\\). How many meters above the ground is the cable attached to the tower?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "30"
+  ],
+  "solution": [
+    "\\(\\cos x^{\\circ} = \\frac{16}{\\text{cable}}\\), so the cable is \\(16 \\div \\frac{8}{17} = 34\\) meters long.",
+    "Height \\(= \\sqrt{34^{2} - 16^{2}} = \\sqrt{900} = 30\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "c0=Rational(8,17)\nLc=16/c0\nans=sqrt(Lc**2-16**2)\nassert Lc==34 and ans==30\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "30",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

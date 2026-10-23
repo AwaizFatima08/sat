@@ -1,0 +1,90 @@
+{
+  "id": "m-nle-0154",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of \\(y = x^{3} - 3x\\) is shown. How many distinct real solutions does the equation \\(x^{3} - 3x + 3 = 0\\) have?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -3,
+      3
+    ],
+    "y": [
+      -5,
+      5
+    ],
+    "curves": [
+      {
+        "expr": "x**3 - 3*x",
+        "label": "y = x^3 - 3x"
+      }
+    ],
+    "points": [
+      {
+        "x": -1,
+        "y": 2,
+        "label": "(-1, 2)"
+      },
+      {
+        "x": 1,
+        "y": -2,
+        "label": "(1, -2)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0\\)",
+    "B": "\\(1\\)",
+    "C": "\\(2\\)",
+    "D": "\\(3\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Rewrite the equation as \\(x^{3} - 3x = -3\\). Its solutions are the \\(x\\)-coordinates of the points where the graph of \\(y = x^{3} - 3x\\) meets the horizontal line \\(y = -3\\).",
+    "The lower turning point of the graph is \\((1, -2)\\), which is above the line \\(y = -3\\). Between the turning points the graph stays between \\(-2\\) and \\(2\\), and to the right of \\((1, -2)\\) it rises.",
+    "Only the left part of the graph, which falls without bound as \\(x\\) decreases, reaches \\(y = -3\\), and it crosses the line exactly once. So the equation has 1 distinct real solution."
+  ],
+  "explanation": {
+    "A": "Incorrect. The graph of a cubic falls or rises without bound at each end, so it meets every horizontal line at least once; the left part of this graph crosses \\(y = -3\\).",
+    "B": "Correct. The line \\(y = -3\\) lies below both turning points, \\((-1, 2)\\) and \\((1, -2)\\), so it crosses the graph only once, on the left.",
+    "C": "Incorrect. This is the result of reading the line \\(y = -3\\) as touching the turning point \\((1, -2)\\). That point is 1 unit above the line, so the graph crosses the line only once.",
+    "D": "Incorrect. This assumes that a cubic equation always has 3 real solutions. The line \\(y = -3\\) lies below both turning points, so it crosses the graph only once."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "misread_graph",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\nr = real_roots(x**3 - 3*x + 3)\nassert len(set(r)) == 1\nassert value(choices[answer]) == 1\nassert all(value(choices[k]) != 1 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0004",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A train makes a 1,210-kilometer trip from Lahore to Karachi at a constant speed. After the train has traveled for 5 hours, 815 kilometers of the trip remain. What is the train's speed, in kilometers per hour?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "79"
+  ],
+  "solution": [
+    "Let \\(s\\) be the speed. After 5 hours the train has covered \\(5s\\) kilometers.",
+    "Distance remaining: \\(1210 - 5s = 815\\).",
+    "So \\(5s = 395\\) and \\(s = 79\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "s = symbols('s')\nsol = solve(Eq(1210 - 5*s, 815), s)\nassert sol == [79]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "79",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

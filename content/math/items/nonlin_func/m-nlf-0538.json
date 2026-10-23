@@ -1,0 +1,94 @@
+{
+  "id": "m-nlf-0538",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The graphs of \\(y = 2^{x}\\) and \\(y = x + 1\\) are shown in the \\(xy\\)-plane. They intersect at \\((0, 1)\\) and \\((1, 2)\\). For which values of \\(x\\) is \\(2^{x} < x + 1\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -3,
+      4
+    ],
+    "y": [
+      -2,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "2**x",
+        "label": "y = 2^x"
+      },
+      {
+        "expr": "x + 1",
+        "label": "y = x + 1"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 1,
+        "label": "(0, 1)"
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "label": "(1, 2)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1 < x < 2\\)",
+    "B": "\\(x > 1\\)",
+    "C": "\\(x < 0\\) or \\(x > 1\\)",
+    "D": "\\(0 < x < 1\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "\\(2^{x} < x + 1\\) where the exponential graph is below the line.",
+    "The graphs meet only at \\(x = 0\\) and \\(x = 1\\). Between them, for example at \\(x = \\frac{1}{2}\\), \\(2^{\\frac{1}{2}} \\approx 1.41 < 1.5\\), so the curve is below the line.",
+    "Outside that interval the curve is above the line (for example \\(2^{2} = 4 > 3\\) and \\(2^{-1} = 0.5 > 0\\)). So \\(0 < x < 1\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of reading the \\(y\\)-coordinates of the intersection points, \\(1\\) and \\(2\\), as \\(x\\)-values.",
+    "B": "Incorrect. For \\(x > 1\\) the exponential curve rises above the line (for example \\(2^{2} = 4 > 3\\)).",
+    "C": "Incorrect. On these intervals \\(2^{x} > x + 1\\): this describes where the curve is above the line, the opposite inequality.",
+    "D": "Correct. Between the intersection points the exponential curve is below the line."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "misread_graph",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nd = 2**x - (x + 1)\nassert d.subs(x, 0) == 0 and d.subs(x, 1) == 0 and diff(d, x, 2).subs(x, 0) > 0\nassert d.subs(x, Rational(1, 2)) < 0 and d.subs(x, -1) > 0 and d.subs(x, 2) > 0\nassert '0 < x < 1' in choices[answer]\nassert all('0 < x < 1' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

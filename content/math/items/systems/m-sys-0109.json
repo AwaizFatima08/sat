@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0109",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[y = -3x + 5\\] \\[6x + 2y = 10\\] How many solutions does the system of equations above have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Zero",
+    "B": "Exactly two",
+    "C": "Infinitely many",
+    "D": "Exactly one"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Solve the second equation for \\(y\\): \\(2y = -6x + 10\\), so \\(y = -3x + 5\\).",
+    "The two equations describe the same line, so every point on that line is a solution.",
+    "The system has infinitely many solutions."
+  ],
+  "explanation": {
+    "A": "Incorrect. The equations only look different; the second one simplifies to \\(y = -3x + 5\\), the same line, so the lines do meet.",
+    "B": "Incorrect. Two different lines cross at most once, so a system of two linear equations never has exactly two solutions.",
+    "C": "Correct. Dividing \\(6x + 2y = 10\\) by 2 and solving for \\(y\\) gives \\(y = -3x + 5\\), so both equations describe the same line.",
+    "D": "Incorrect. Two lines meet in exactly one point only when their slopes differ; here both equations are the same line."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nsol = linsolve([y - (-3*x + 5), 6*x + 2*y - 10], [x, y])\nassert sol == linsolve([y - (-3*x + 5)], [x, y]) and sol.free_symbols\nassert choices[answer] == 'Infinitely many'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

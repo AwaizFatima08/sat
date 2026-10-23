@@ -1,0 +1,58 @@
+{
+  "id": "m-ovd-0517",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The mean hourly wage of the 25 employees at a store is \\$31. If every employee receives a raise of \\$4 per hour, what is the new mean hourly wage, in dollars?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(31\\)",
+    "B": "\\(35\\)",
+    "C": "\\(131\\)",
+    "D": "\\(124\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Adding the same amount to every value adds that amount to the mean.",
+    "New mean: \\(31 + 4 = 35\\) dollars."
+  ],
+  "explanation": {
+    "A": "Incorrect. Every wage goes up by 4 dollars, so the total goes up and the mean goes up too.",
+    "B": "Correct. The total of the wages increases by \\(25 \\cdot 4 = 100\\) dollars, so the mean increases by \\(\\frac{100}{25} = 4\\) dollars, to 35.",
+    "C": "Incorrect. This adds the total of all the raises, \\(25 \\cdot 4 = 100\\), to the mean. That total must be shared among the 25 employees, so the mean rises by only 4.",
+    "D": "Incorrect. This is \\(31 \\cdot 4\\). The raise is added to each wage, not multiplied."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nw = [Integer(31)] * 25\nr = Rational(sum(x + 4 for x in w), 25)\nassert r == 35\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

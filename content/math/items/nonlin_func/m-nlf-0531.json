@@ -1,0 +1,59 @@
+{
+  "id": "m-nlf-0531",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = a(x - 2)(x - 8)\\), where \\(a\\) is a constant. The graph of \\(y = f(x)\\) in the \\(xy\\)-plane passes through the point \\((4, 16)\\). What is the maximum value of \\(f(x)\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(-18\\)",
+    "C": "\\(18\\)",
+    "D": "\\(16\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Use the point: \\(f(4) = a(2)(-4) = -8a = 16\\), so \\(a = -2\\). Since \\(a < 0\\), the parabola opens downward and has a maximum.",
+    "The vertex is halfway between the zeros \\(2\\) and \\(8\\), at \\(x = 5\\).",
+    "\\(f(5) = -2(3)(-3) = 18\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(5\\) is the \\(x\\)-coordinate of the vertex, where the maximum occurs, not the maximum value.",
+    "B": "Incorrect. This is the result of a sign slip with \\(a\\): using \\(a = 2\\) gives \\(f(5) = -18\\), but \\(-8a = 16\\) means \\(a = -2\\).",
+    "C": "Correct. \\(a = -2\\), the vertex is at \\(x = 5\\), and \\(f(5) = -2(3)(-3) = 18\\).",
+    "D": "Incorrect. \\(16\\) is the value of \\(f(4)\\), given in the problem; \\(x = 4\\) is not the vertex, so this is not the maximum."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "sign_error",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx, a = symbols('x a')\nf = a*(x - 2)*(x - 8)\nav = solve(Eq(f.subs(x, 4), 16), a)\nassert av == [-2]\ng = f.subs(a, -2)\ncrit = solve(diff(g, x), x)\nassert crit == [5] and diff(g, x, 2) < 0\nmx = g.subs(x, 5)\nassert mx == 18 and value(choices[answer]) == mx\nassert all(value(choices[k]) != mx for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "m-rtt-0512",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In right triangle \\(JKL\\), angle \\(K\\) is a right angle, \\(JL = 34\\), and \\(\\cos J = \\frac{8}{17}\\). What is the length of \\(\\overline{KL}\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "30"
+  ],
+  "solution": [
+    "\\(\\cos J = \\frac{JK}{JL}\\), so \\(JK = 34 \\cdot \\frac{8}{17} = 16\\).",
+    "\\(KL = \\sqrt{34^{2} - 16^{2}} = \\sqrt{900} = 30\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "JL=34\nJK=JL*Rational(8,17)\nans=sqrt(JL**2-JK**2)\nassert JK==16 and ans==30\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "30",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

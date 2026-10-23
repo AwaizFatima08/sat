@@ -1,0 +1,142 @@
+{
+  "id": "m-lat-0113",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, line \\(\\ell\\) is parallel to line \\(m\\). Which equation must be true?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "E": [
+        3,
+        0
+      ],
+      "F": [
+        5,
+        4
+      ],
+      "G": [
+        2,
+        -2
+      ],
+      "H": [
+        6,
+        6
+      ],
+      "J": [
+        -1,
+        4
+      ],
+      "K": [
+        10,
+        4
+      ],
+      "U": [
+        -1,
+        0
+      ],
+      "V": [
+        10,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "J",
+        "K"
+      ],
+      [
+        "U",
+        "V"
+      ],
+      [
+        "G",
+        "H"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          4.422,
+          4.936
+        ],
+        "text": "a°"
+      },
+      {
+        "at": [
+          2.064,
+          -0.578
+        ],
+        "text": "b°"
+      },
+      {
+        "at": [
+          10.5,
+          4.4
+        ],
+        "text": "ℓ"
+      },
+      {
+        "at": [
+          10.5,
+          0.4
+        ],
+        "text": "m"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(a + b = 360\\)",
+    "B": "\\(a + b = 90\\)",
+    "C": "\\(a + b = 180\\)",
+    "D": "\\(a = b\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The angle just below line \\(\\ell\\) on the left side of the transversal corresponds to angle \\(b^{\\circ}\\) (just below line \\(m\\) on the left), so it also measures \\(b^{\\circ}\\).",
+    "That angle and angle \\(a^{\\circ}\\) form a straight angle along the transversal, so \\(a + b = 180\\).",
+    "(Angles \\(a^{\\circ}\\) and \\(b^{\\circ}\\) are same-side exterior angles, which are always supplementary.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(360^{\\circ}\\) is the sum of the angles around a point, not the relationship between these two angles.",
+    "B": "Incorrect. This treats the angles as complementary; same-side exterior angles are supplementary.",
+    "C": "Correct. Angles \\(a^{\\circ}\\) and \\(b^{\\circ}\\) are same-side exterior angles, so they are supplementary.",
+    "D": "Incorrect. Same-side exterior angles are not equal; in the figure one is obtuse and the other is acute."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\na=ang('J','F','H'); b=ang('U','E','G')\nassert P['J'][1]==P['K'][1] and P['U'][1]==P['V'][1]\nassert abs(a+b-180)<0.1 and abs(a-b)>5 and abs(a+b-90)>5 and abs(a+b-360)>5\nassert choices[answer]=='\\\\(a + b = 180\\\\)'\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

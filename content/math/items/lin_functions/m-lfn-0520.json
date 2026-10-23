@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0520",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Water drains from a storage tank at a constant rate. Two hours after draining begins, 840 liters of water remain in the tank. Five hours after draining begins, 525 liters remain. How many hours after draining begins will the tank be empty?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "10"
+  ],
+  "solution": [
+    "The rate is \\(\\frac{525 - 840}{5 - 2} = \\frac{-315}{3} = -105\\) liters per hour.",
+    "At the start there were \\(840 + 2(105) = 1{,}050\\) liters, so \\(W(t) = 1{,}050 - 105t\\).",
+    "\\(W(t) = 0\\) when \\(t = \\frac{1{,}050}{105} = 10\\) hours."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t')\nm = Rational(525 - 840, 5 - 2)\nW = 840 + m*(t - 2)\nsol = solve(W, t)\nassert m == -105 and sol == [10]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "10",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

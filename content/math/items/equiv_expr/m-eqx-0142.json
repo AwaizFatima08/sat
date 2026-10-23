@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0142",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is equivalent to \\((3x^{2} - 2x)(x + 4) - 3x^{3}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10x^{2} - 8x\\)",
+    "B": "\\(12x^{2} - 8x\\)",
+    "C": "\\(10x^{2} + 8x\\)",
+    "D": "\\(6x^{3} + 10x^{2} - 8x\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Expand: \\((3x^{2} - 2x)(x + 4) = 3x^{3} + 12x^{2} - 2x^{2} - 8x = 3x^{3} + 10x^{2} - 8x\\).",
+    "Subtract \\(3x^{3}\\): \\(10x^{2} - 8x\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The product is \\(3x^{3} + 10x^{2} - 8x\\), and subtracting \\(3x^{3}\\) leaves \\(10x^{2} - 8x\\).",
+    "B": "Incorrect. This is the result of leaving out the product \\((-2x)(x) = -2x^{2}\\) when expanding.",
+    "C": "Incorrect. This is the result of writing \\((-2x)(4)\\) as \\(+8x\\).",
+    "D": "Incorrect. This is the result of adding \\(3x^{3}\\) instead of subtracting it."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\nt = (3*x**2 - 2*x)*(x + 4) - 3*x**3\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "m-ovd-0529",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The bar graph shows the number of pets in each of 20 households surveyed on one street. What is the mean number of pets per household?",
+  "figure": {
+    "kind": "bar",
+    "title": "Pets per household",
+    "x_label": "Number of pets",
+    "y_label": "Number of households",
+    "series": [
+      {
+        "name": "Households",
+        "points": [
+          [
+            "0",
+            6
+          ],
+          [
+            "1",
+            9
+          ],
+          [
+            "2",
+            4
+          ],
+          [
+            "3",
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1\\)",
+    "B": "\\(9\\)",
+    "C": "\\(1.5\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Total pets: \\(0 \\cdot 6 + 1 \\cdot 9 + 2 \\cdot 4 + 3 \\cdot 1 = 20\\).",
+    "There are 20 households, so the mean is \\(\\frac{20}{20} = 1\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The 20 households have 20 pets in all, so the mean is 1 pet per household.",
+    "B": "Incorrect. This is the height of the tallest bar, the number of households with 1 pet.",
+    "C": "Incorrect. This is the mean of the categories 0, 1, 2 and 3, \\(\\frac{6}{4} = 1.5\\), which ignores how many households are in each category.",
+    "D": "Incorrect. This is the mean height of the bars, \\(\\frac{20}{4} = 5\\). That is the average number of households per category, not the average number of pets."
+  },
+  "traps": {
+    "B": "misread_graph",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'D': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'D', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\np = [(int(a), b) for a, b in figure['series'][0]['points']]\nn = sum(b for a, b in p)\nassert n == 20\nr = Rational(sum(a * b for a, b in p), n)\nassert r == 1\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

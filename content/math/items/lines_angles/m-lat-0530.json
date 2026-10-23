@@ -1,0 +1,159 @@
+{
+  "id": "m-lat-0530",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "Three straight, parallel streets are crossed by two straight avenues, as shown. Along the first avenue, the blocks between the streets are 60 meters and 90 meters long. Along the second avenue, the first block is 80 meters long. What is the length, in meters, of the second block along the second avenue? Note: Figure not drawn to scale.",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        2,
+        0
+      ],
+      "B": [
+        3.042,
+        5.909
+      ],
+      "C": [
+        4.605,
+        14.772
+      ],
+      "D": [
+        5,
+        0
+      ],
+      "E": [
+        10.393,
+        5.909
+      ],
+      "F": [
+        18.483,
+        14.772
+      ],
+      "G": [
+        -1,
+        0
+      ],
+      "H": [
+        25,
+        0
+      ],
+      "I": [
+        -1,
+        5.909
+      ],
+      "J": [
+        25,
+        5.909
+      ],
+      "K": [
+        -1,
+        14.772
+      ],
+      "L": [
+        25,
+        14.772
+      ]
+    },
+    "segments": [
+      [
+        "G",
+        "H"
+      ],
+      [
+        "I",
+        "J"
+      ],
+      [
+        "K",
+        "L"
+      ],
+      [
+        "A",
+        "C"
+      ],
+      [
+        "D",
+        "F"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          0.921,
+          2.954
+        ],
+        "text": "60 m"
+      },
+      {
+        "at": [
+          2.223,
+          10.34
+        ],
+        "text": "90 m"
+      },
+      {
+        "at": [
+          9.297,
+          2.954
+        ],
+        "text": "80 m"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": true
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{160}{3}\\)",
+    "B": "\\(110\\)",
+    "C": "\\(67.5\\)",
+    "D": "\\(120\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Parallel lines cut any two transversals into proportional segments.",
+    "\\(\\frac{y}{80} = \\frac{90}{60}\\).",
+    "\\(y = 80 \\cdot 1.5 = 120\\) meters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(80 \\cdot \\frac{60}{90}\\); the ratio is inverted, but the second block on each avenue is the longer one.",
+    "B": "Incorrect. This adds 30 to 80 because 90 is 30 more than 60. The blocks are proportional, so use a ratio, not a difference.",
+    "C": "Incorrect. This is \\(\\frac{60 \\cdot 90}{80}\\); it pairs the segments incorrectly in the proportion.",
+    "D": "Correct. Parallel lines divide transversals proportionally: \\(\\frac{y}{80} = \\frac{90}{60}\\), so \\(y = 120\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "concept",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['G'][1]==P['H'][1] and P['I'][1]==P['J'][1] and P['K'][1]==P['L'][1]\nassert abs(d('A','B')/d('B','C')-Rational(60,90))<0.01 and abs(d('D','E')/d('E','F')-Rational(80,120))<0.01\nans=Rational(80*90,60)\nassert ans==120\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

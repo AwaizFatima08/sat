@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0504",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "In a cricket match, Kamran scored all of his runs from boundaries: fours, worth 4 runs each, and sixes, worth 6 runs each. He hit 13 boundaries and scored 64 runs from them. The system \\(f + s = 13\\) and \\(4f + 6s = 64\\) models this, where \\(f\\) is the number of fours and \\(s\\) is the number of sixes. How many sixes did Kamran hit?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "From the first equation, \\(f = 13 - s\\).",
+    "Substitute: \\(4(13 - s) + 6s = 64\\), so \\(52 + 2s = 64\\).",
+    "Then \\(2s = 12\\) and \\(s = 6\\). (Check: 7 fours and 6 sixes give \\(28 + 36 = 64\\) runs.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "f, s = symbols('f s')\nsol = solve([f + s - 13, 4*f + 6*s - 64], [f, s])\nassert sol == {f: 7, s: 6}\nassert [Rational(a) for a in spr_answers] == [sol[s]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

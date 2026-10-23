@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0122",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following systems of equations has no solution?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3x + y = 4\\) and \\(6x + 2y = 8\\)",
+    "B": "\\(y = x\\) and \\(y = 3\\)",
+    "C": "\\(x - 2y = 3\\) and \\(2x - 4y = 5\\)",
+    "D": "\\(y = 2x + 1\\) and \\(y = -2x + 1\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "A system of two linear equations has no solution when the lines are parallel: same slope, different \\(y\\)-intercepts.",
+    "In choice C, the second equation is \\(2x - 4y = 5\\). Doubling the first gives \\(2x - 4y = 6\\), so the left sides match but the constants differ.",
+    "Both lines have slope \\(\\frac{1}{2}\\), with \\(y\\)-intercepts \\(-\\frac{3}{2}\\) and \\(-\\frac{5}{4}\\), so they never meet."
+  ],
+  "explanation": {
+    "A": "Incorrect. The second equation is the first multiplied by 2, so both describe the same line and the system has infinitely many solutions.",
+    "B": "Incorrect. A slanted line and a horizontal line always meet; here they meet at \\((3, 3)\\).",
+    "C": "Correct. The lines have the same slope, \\(\\frac{1}{2}\\), but different \\(y\\)-intercepts, so they are parallel and never meet.",
+    "D": "Incorrect. The slopes, 2 and \\(-2\\), are different, so the lines meet in exactly one point, \\((0, 1)\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\neqs = lambda s: [value(p.split('=')[0]) - value(p.split('=')[1]) for p in s.split(' and ')]\n\nx, y = symbols('x y')\nn = {c: linsolve(eqs(choices[c]), [x, y]) for c in choices}\nassert n[answer] == EmptySet\nassert all(n[c] != EmptySet for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

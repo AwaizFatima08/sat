@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0537",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "\\[5x + 7y = 31\\] \\[7x + 5y = 41\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(\\frac{x + y}{x - y}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{6}{5}\\)",
+    "B": "\\(\\frac{5}{6}\\)",
+    "C": "\\(-\\frac{6}{5}\\)",
+    "D": "\\(\\frac{36}{5}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Add the equations: \\(12x + 12y = 72\\), so \\(x + y = 6\\).",
+    "Subtract the first equation from the second: \\(2x - 2y = 10\\), so \\(x - y = 5\\).",
+    "So \\(\\frac{x + y}{x - y} = \\frac{6}{5}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Adding and subtracting the equations gives \\(x + y = 6\\) and \\(x - y = 5\\), so the quotient is \\(\\frac{6}{5}\\).",
+    "B": "Incorrect. This is \\(\\frac{x - y}{x + y}\\), the reciprocal of the expression asked for.",
+    "C": "Incorrect. This subtracts the second equation from the first but keeps the result as \\(x - y\\); that gives \\(y - x = -5\\), not \\(x - y\\).",
+    "D": "Incorrect. This divides 72 by 10, the sums before dividing by 12 and by 2."
+  },
+  "traps": {
+    "B": "reciprocal",
+    "C": "sign_error",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nsol = solve([5*x + 7*y - 31, 7*x + 5*y - 41], [x, y])\nassert sol == {x: Rational(11, 2), y: Rational(1, 2)}\nv = (sol[x] + sol[y])/(sol[x] - sol[y])\nassert v == Rational(6, 5)\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

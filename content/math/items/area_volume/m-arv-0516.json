@@ -1,0 +1,45 @@
+{
+  "id": "m-arv-0516",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "An aquarium is shaped like a rectangular prism. Inside, it is 50 centimeters long, 30 centimeters wide, and 40 centimeters tall. One liter is equal to 1,000 cubic centimeters. How many liters of water does the aquarium hold when it is completely full?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "60"
+  ],
+  "solution": [
+    "Volume: \\(50 \\cdot 30 \\cdot 40 = 60{,}000\\) cubic centimeters.",
+    "Convert: \\(60{,}000 \\div 1{,}000 = 60\\) liters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "ans=Rational(50*30*40,1000)\nassert ans==60\nassert Rational(spr_answers[0])==ans and len(spr_answers)==1\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "60",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

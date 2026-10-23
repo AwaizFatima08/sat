@@ -1,0 +1,59 @@
+{
+  "id": "m-tvd-0531",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "While a tank of water is being heated, the line of best fit \\(y = 0.9x + 18\\) models the water temperature \\(y\\), in degrees Celsius, \\(x\\) minutes after heating began. Which equation gives the same model in terms of \\(h\\), the number of hours after heating began?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = 54h + 1{,}080\\)",
+    "B": "\\(y = 0.015h + 18\\)",
+    "C": "\\(y = 54h + 18\\)",
+    "D": "\\(y = 0.9h + 18\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "There are 60 minutes in an hour, so \\(x = 60h\\).",
+    "Substitute: \\(y = 0.9(60h) + 18 = 54h + 18\\).",
+    "The starting temperature, 18 degrees, does not depend on the time unit, so the constant stays the same."
+  ],
+  "explanation": {
+    "A": "Incorrect. This multiplies the whole equation, including the starting temperature, by 60. Only the rate depends on the time unit.",
+    "B": "Incorrect. This divides the rate by 60. A rate of 0.9 degree per minute is a larger number per hour, \\(0.9 \\cdot 60 = 54\\) degrees.",
+    "C": "Correct. Replacing \\(x\\) with \\(60h\\) gives \\(y = 0.9(60h) + 18 = 54h + 18\\).",
+    "D": "Incorrect. This keeps the per-minute rate. In terms of hours, the rate must be per hour, 54 degrees."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nx, h = symbols('x h')\ntarget = expand((Rational(9, 10)*x + 18).subs(x, 60*h))\nf = lambda k: value(choices[k].split('=')[1].strip(' \\\\)').replace('h', '*h'))\nassert simplify(f(answer) - target) == 0\nassert all(simplify(f(k) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

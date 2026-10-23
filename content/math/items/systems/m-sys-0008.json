@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0008",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A bakery sells only cakes and pies, each at a fixed price. On Monday it sold 14 cakes and 9 pies for a total of \\$387. On Tuesday it sold 9 cakes and 14 pies for a total of \\$372. How many dollars more does one cake cost than one pie?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3"
+  ],
+  "solution": [
+    "Let \\(c\\) and \\(p\\) be the prices: \\(14c + 9p = 387\\) and \\(9c + 14p = 372\\).",
+    "Subtract the second equation from the first: \\(5c - 5p = 15\\).",
+    "Divide by 5: \\(c - p = 3\\). There is no need to find each price (they are \\$18 and \\$15)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "c, p = symbols('c p')\nsol = solve([14*c + 9*p - 387, 9*c + 14*p - 372], [c, p])\nassert sol == {c: 18, p: 15}\nassert [Rational(s) for s in spr_answers] == [sol[c] - sol[p]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

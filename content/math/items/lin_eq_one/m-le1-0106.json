@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0106",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The charge of a delivery drone's battery, in percent, decreases at a constant rate during a flight. The equation \\(92 - 1.5t = 20\\) can be used to find the number of minutes, \\(t\\), after takeoff when the battery's charge is 20 percent. What does 92 represent in this equation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The decrease in the battery's charge, in percent, each minute",
+    "B": "The number of minutes the drone can fly",
+    "C": "The battery's charge, in percent, when the drone lands",
+    "D": "The battery's charge, in percent, at takeoff"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "When \\(t = 0\\) (at takeoff), the charge is \\(92 - 1.5(0) = 92\\) percent.",
+    "So 92 is the battery's charge, in percent, at takeoff; 1.5 is the decrease per minute."
+  ],
+  "explanation": {
+    "A": "Incorrect. The decrease per minute is the coefficient 1.5, not the constant 92.",
+    "B": "Incorrect. The number of minutes is \\(t\\), which equals 48 here; 92 is a percent, not a time.",
+    "C": "Incorrect. The charge at the moment described is 20 percent; nothing in the equation gives the charge at landing.",
+    "D": "Correct. Substituting \\(t = 0\\) gives a charge of 92 percent, so 92 is the charge at takeoff."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nt = symbols('t')\nc = 92 - Rational(3, 2)*t\nassert c.subs(t, 0) == 92\nassert solve(Eq(c, 20), t) == [48]\nassert 'at takeoff' in choices[answer]\nassert sum('at takeoff' in v for v in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

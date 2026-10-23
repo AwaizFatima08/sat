@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0502",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A florist sold 40 bouquets on Saturday, each either small or large. She sold 12 more small bouquets than large bouquets. Which system of equations can be used to find the number of small bouquets, \\(s\\), and the number of large bouquets, \\(l\\), that she sold?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(s - l = 40\\) and \\(s = l + 12\\)",
+    "B": "\\(s + l = 40\\) and \\(s = l + 12\\)",
+    "C": "\\(s + l = 12\\) and \\(s = l + 40\\)",
+    "D": "\\(s + l = 40\\) and \\(l = s + 12\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The total number of bouquets is 40, so \\(s + l = 40\\).",
+    "There were 12 more small bouquets than large ones, so the number of small bouquets equals the number of large ones plus 12: \\(s = l + 12\\).",
+    "(Solving gives \\(s = 26\\) and \\(l = 14\\), and \\(26 - 14 = 12\\) checks.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. The total of 40 is a sum, \\(s + l\\), not a difference; with a minus sign the two equations contradict each other.",
+    "B": "Correct. The total gives \\(s + l = 40\\), and 12 more small than large gives \\(s = l + 12\\).",
+    "C": "Incorrect. This swaps the two numbers: 40 is the total number of bouquets and 12 is the difference.",
+    "D": "Incorrect. The equation \\(l = s + 12\\) says there are 12 more large bouquets than small ones, the reverse of the description."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\ns, l = symbols('s l')\neqs = lambda s: [value(e.split('=')[0]) - value(e.split('=')[1]) for e in s.split(' and ')]\ntrue = solve([s + l - 40, s - (l + 12)], [s, l])\nassert true == {s: 26, l: 14}\nfits = [k for k in choices if solve(eqs(choices[k]), [s, l]) == true]\nassert fits == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

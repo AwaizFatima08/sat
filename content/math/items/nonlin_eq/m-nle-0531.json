@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0531",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the equation \\(x^{2} + bx + 25 = 0\\), \\(b\\) is a constant. If the equation has no real solutions, which of the following could be the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-12\\)",
+    "B": "\\(9\\)",
+    "C": "\\(20\\)",
+    "D": "\\(-10\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "A quadratic equation has no real solutions when its discriminant is negative.",
+    "The discriminant is \\(b^{2} - 4(1)(25) = b^{2} - 100\\), so we need \\(b^{2} < 100\\), that is, \\(-10 < b < 10\\).",
+    "Of the choices, only \\(9\\) is in this interval: \\(81 - 100 = -19 < 0\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of thinking a negative \\(b\\) makes the discriminant negative; \\(b\\) is squared, so \\((-12)^{2} - 100 = 44 > 0\\) and there are two solutions.",
+    "B": "Correct. \\(9^{2} - 100 = -19\\), which is negative, so there are no real solutions.",
+    "C": "Incorrect. This is the result of forgetting to square \\(b\\) in the discriminant (\\(20 - 100 < 0\\)); in fact \\(20^{2} - 100 = 300 > 0\\).",
+    "D": "Incorrect. With \\(b = -10\\) the discriminant is exactly \\(0\\), so the equation has one real solution, \\(x = 5\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x', real=True)\nnone = lambda c: len(solve(x**2 + value(choices[c])*x + 25, x)) == 0\nassert none(answer)\nassert not any(none(c) for c in choices if c != answer)\nassert discriminant(x**2 + value(choices[answer])*x + 25, x) < 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

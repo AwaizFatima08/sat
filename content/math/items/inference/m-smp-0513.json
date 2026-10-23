@@ -1,0 +1,84 @@
+{
+  "id": "m-smp-0513",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A village in Sindh, Pakistan, has 640 households. The dot plot shows the number of mobile phones in each of 20 households selected at random from the village. Based on the sample, which of the following is the best estimate of the total number of mobile phones in all the households in the village?",
+  "figure": {
+    "kind": "dotplot",
+    "x_label": "Number of mobile phones",
+    "values": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(52\\)",
+    "B": "\\(1{,}664\\)",
+    "C": "\\(33{,}280\\)",
+    "D": "\\(1{,}600\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Total phones in the sample: \\(3(1) + 7(2) + 6(3) + 3(4) + 1(5) = 52\\).",
+    "Sample mean: \\(\\frac{52}{20} = 2.6\\) phones per household.",
+    "Estimated total for the village: \\(2.6(640) = 1{,}664\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. 52 is the total number of phones in the 20 sampled households, not in the whole village.",
+    "B": "Correct. The sample mean is \\(\\frac{52}{20} = 2.6\\) phones, and \\(2.6(640) = 1{,}664\\).",
+    "C": "Incorrect. This multiplies the sample total, 52, by 640 without first dividing by the sample size of 20.",
+    "D": "Incorrect. This uses the median of the sample, 2.5, instead of the mean, 2.6: \\(2.5(640) = 1{,}600\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nv = figure['values']\nassert len(v) == 20\nmean = Rational(sum(v), len(v))\nest = mean * 640\nassert est == 1664 and value(choices[answer]) == est\nassert all(value(choices[k]) != est for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

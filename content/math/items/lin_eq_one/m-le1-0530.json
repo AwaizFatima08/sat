@@ -1,0 +1,59 @@
+{
+  "id": "m-le1-0530",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(\\frac{x}{2} - \\frac{x}{5} = 6 + \\frac{x}{10}\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(15\\)",
+    "B": "\\(30\\)",
+    "C": "\\(120\\)",
+    "D": "\\(60\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Multiply every term by 10: \\(5x - 2x = 60 + x\\).",
+    "So \\(3x = 60 + x\\), which gives \\(2x = 60\\).",
+    "Divide by 2: \\(x = 30\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding \\(x\\) to both sides instead of subtracting it: \\(4x = 60\\).",
+    "B": "Correct. Clearing fractions gives \\(3x = 60 + x\\), so \\(2x = 60\\) and \\(x = 30\\).",
+    "C": "Incorrect. This is the result of multiplying 60 by 2 instead of dividing by 2.",
+    "D": "Incorrect. This is the value of \\(2x\\), not \\(x\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "arithmetic",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nx = symbols('x')\ns = solve(Eq(x/2 - x/5, 6 + x/10), x)[0]\nassert s == 30\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

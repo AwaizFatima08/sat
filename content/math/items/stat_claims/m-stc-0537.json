@@ -1,0 +1,59 @@
+{
+  "id": "m-stc-0537",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "In Study 1, researchers selected 2,000 households at random from a country and found that children in households with more books had higher reading scores, on average. In Study 2, researchers recruited 400 volunteer families from the same country who had few books at home and randomly assigned 200 of them to receive 50 free children's books; the other 200 received none. After one year, the average reading scores of the children in the two groups of Study 2 were almost the same. Which of the following conclusions is best supported by the two studies?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Because Study 2 used volunteers, its results should be ignored, and Study 1 shows that books cause higher reading scores.",
+    "B": "Study 1 shows that having more books causes higher reading scores for all children in the country.",
+    "C": "Study 2 shows that giving free books lowers children's reading scores.",
+    "D": "For families like those in Study 2, the evidence does not show that giving books raises reading scores; the association in Study 1 may be explained by other factors, such as how often parents read with their children."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Study 1 is observational: it shows an association across the country, not cause and effect.",
+    "Study 2 is an experiment with random assignment; it found almost no difference, so it gives no evidence that providing books causes higher scores for families like the volunteers.",
+    "Together, the studies suggest that something else linked to having books (for example, reading habits at home) may explain the association in Study 1."
+  ],
+  "explanation": {
+    "A": "Incorrect. Volunteers limit how far Study 2 can be generalized, but they do not turn Study 1's observational result into a causal one.",
+    "B": "Incorrect. Study 1 has no random assignment, so it cannot show cause and effect.",
+    "C": "Incorrect. The scores were almost the same, which does not show that books lower scores.",
+    "D": "Correct. The experiment found no effect for families like its volunteers, so the observed association may come from other factors."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nstudy1 = {'random_sample': True, 'random_assignment': False}\nstudy2 = {'random_assignment': True, 'difference': 0}\nassert not study1['random_assignment'] and study2['random_assignment'] and study2['difference'] == 0\nok = [k for k, v in choices.items() if 'does not show' in v and 'other factors' in v]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

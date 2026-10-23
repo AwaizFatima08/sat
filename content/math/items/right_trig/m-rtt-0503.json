@@ -1,0 +1,109 @@
+{
+  "id": "m-rtt-0503",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A 5-meter rope is pulled straight from the top of a vertical pole to a stake in the level ground 1.4 meters from the base of the pole, as shown. How tall, in meters, is the pole?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "W": [
+        0,
+        0
+      ],
+      "T": [
+        0,
+        4.8
+      ],
+      "F": [
+        1.4,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "W",
+        "T"
+      ],
+      [
+        "W",
+        "F"
+      ],
+      [
+        "T",
+        "F"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.25,
+          2.7
+        ],
+        "text": "5 m"
+      },
+      {
+        "at": [
+          0.7,
+          -0.35
+        ],
+        "text": "1.4 m"
+      }
+    ],
+    "right_angles": [
+      "W"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\sqrt{3.6}\\)",
+    "B": "\\(3.6\\)",
+    "C": "\\(4.8\\)",
+    "D": "\\(23.04\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The pole, the ground, and the rope form a right triangle with hypotenuse 5 (the rope) and one leg 1.4.",
+    "\\(h^{2} = 5^{2} - 1.4^{2} = 25 - 1.96 = 23.04\\), so \\(h = 4.8\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\sqrt{5 - 1.4}\\); the lengths must be squared before subtracting.",
+    "B": "Incorrect. This is \\(5 - 1.4\\). The legs and hypotenuse are related through their squares, not by subtracting lengths.",
+    "C": "Correct. \\(\\sqrt{5^{2} - 1.4^{2}} = \\sqrt{23.04} = 4.8\\).",
+    "D": "Incorrect. This is the square of the height; the square root still must be taken."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nP=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('T','F')==5 and abs(d('W','F')-Rational('1.4'))<1e-9 and abs(ang('T','W','F')-90)<0.1\nans=sqrt(5**2-Rational('1.4')**2)\nassert ans==Rational('4.8') and abs(d('W','T')-ans)<1e-9\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[c])-ans)!=0 for c in choices if c!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

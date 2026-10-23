@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0529",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the equation \\(x^{2} + kx + 16 = 0\\), \\(k\\) is a positive constant. If the equation has exactly one real solution, what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4\\)",
+    "B": "\\(16\\)",
+    "C": "\\(64\\)",
+    "D": "\\(8\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "A quadratic equation has exactly one real solution when its discriminant is \\(0\\).",
+    "The discriminant is \\(k^{2} - 4(1)(16) = k^{2} - 64\\). Set it equal to \\(0\\): \\(k^{2} = 64\\).",
+    "\\(k\\) is positive, so \\(k = 8\\). (Check: \\(x^{2} + 8x + 16 = (x + 4)^{2}\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of taking \\(\\sqrt{16}\\) and stopping; the middle coefficient of a perfect square \\((x + 4)^{2}\\) is \\(2 \\cdot 4 = 8\\).",
+    "B": "Incorrect. This is the result of setting \\(k\\) equal to the constant term; then the discriminant is \\(256 - 64 = 192\\), so there are two solutions.",
+    "C": "Incorrect. This is \\(k^{2}\\), not \\(k\\); the square root step is missing.",
+    "D": "Correct. \\(k^{2} - 64 = 0\\) and \\(k > 0\\) give \\(k = 8\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "C": "stopped_early"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'A': 'A', 'C': 'B', 'D': 'C', 'B': 'D'}.items()}; answer = {'A': 'A', 'B': 'C', 'C': 'D', 'D': 'B'}[answer]  # shuffled: original letters\nx, k = symbols('x k')\nks = [v for v in solve(Eq(discriminant(x**2 + k*x + 16, x), 0), k) if v > 0]\nassert ks == [8]\nans = ks[0]\nassert all(len(solve(x**2 + value(choices[c])*x + 16, x)) != 1 for c in choices if c != answer)\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

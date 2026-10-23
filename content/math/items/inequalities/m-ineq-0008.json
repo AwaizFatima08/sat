@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0008",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A delivery van can carry at most 1,200 kilograms of cargo. A driver loads \\(x\\) crates that weigh 45 kilograms each and \\(y\\) sacks that weigh 30 kilograms each. The order requires at least twice as many sacks as crates. What is the greatest number of crates the van can carry on one trip that meets both conditions?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "11"
+  ],
+  "solution": [
+    "The conditions are \\(45x + 30y \\le 1200\\) and \\(y \\ge 2x\\).",
+    "To fit the most crates, use the fewest sacks allowed: \\(y = 2x\\). Then \\(45x + 60x \\le 1200\\), so \\(105x \\le 1200\\) and \\(x \\le 11.42...\\).",
+    "So at most 11 crates. Check: 11 crates and 22 sacks weigh \\(495 + 660 = 1155\\) kilograms. With 12 crates, even the minimum of 24 sacks gives \\(540 + 720 = 1260\\) kilograms, too much."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "ok = [x for x in range(0, 30) for y in range(0, 60) if 45*x + 30*y <= 1200 and y >= 2*x]\nassert max(ok) == 11\nassert [Rational(a) for a in spr_answers] == [11]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "11",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

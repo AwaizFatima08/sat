@@ -16,9 +16,11 @@ class WorkedExample {
     this.passageB,
     this.notes,
     this.data,
+    this.raw = const {},
   });
 
   factory WorkedExample.fromJson(Map<String, Object?> j) => WorkedExample(
+    raw: j,
     passage: j['passage'] as String?,
     passageB: j['passage_b'] as String?,
     notes: (j['notes'] as List?)?.cast<String>(),
@@ -26,8 +28,10 @@ class WorkedExample {
         ? null
         : ItemData.fromJson(j['data']! as Map<String, Object?>),
     stem: j['stem']! as String,
-    choices: Map<String, String>.from(j['choices']! as Map),
-    answer: j['answer']! as String,
+    choices: Map<String, String>.from(j['choices'] as Map? ?? const {}),
+    answer:
+        j['answer'] as String? ??
+        ((j['spr_answers'] as List?)?.first as String? ?? ''),
     walkthrough: List<String>.from(j['walkthrough']! as List),
   );
 
@@ -39,6 +43,27 @@ class WorkedExample {
   final Map<String, String> choices;
   final String answer;
   final List<String> walkthrough;
+
+  /// The example as written, so a Math example (figure, typed answer) can be
+  /// shown with the Math question view; see [asMathItem].
+  final Map<String, Object?> raw;
+
+  /// This example as a Math [Item] whose solution is the walkthrough.
+  Item asMathItem({
+    required String type,
+    required String domain,
+    required int level,
+  }) => Item.fromJson({
+    ...raw,
+    'id': 'example-$type-$level',
+    'section': 'math',
+    'type': type,
+    'domain': domain,
+    'level': level,
+    'b': 0,
+    'pool': 'example',
+    'solution': walkthrough,
+  });
 }
 
 class StrategyCard {
@@ -78,6 +103,7 @@ class Lesson {
     required this.pitfalls,
     required this.cards,
     this.usUk,
+    this.calculator,
   });
 
   factory Lesson.fromJson(Map<String, Object?> j) => Lesson(
@@ -88,6 +114,7 @@ class Lesson {
     method: List<String>.from(j['method']! as List),
     pitfalls: List<String>.from(j['pitfalls'] as List? ?? const []),
     usUk: j['us_uk'] as String?,
+    calculator: j['calculator'] as String?,
     cards: [
       for (final c in j['cards']! as List)
         StrategyCard.fromJson(c as Map<String, Object?>),
@@ -101,10 +128,51 @@ class Lesson {
   final List<String> method;
   final List<String> pitfalls;
   final String? usUk;
+
+  /// Math only: when the built-in calculator helps for this skill.
+  final String? calculator;
   final List<StrategyCard> cards;
 }
 
 /// Everything shipped in `assets/data/rw_bank.json`.
+/// The Math section's own blueprint, papers and lessons.
+class SectionContent {
+  const SectionContent({
+    required this.blueprint,
+    required this.forms,
+    required this.lessons,
+    required this.reference,
+    required this.domainCounts,
+  });
+
+  factory SectionContent.fromJson(Map<String, Object?> j) {
+    final bp = j['blueprint']! as Map<String, Object?>;
+    return SectionContent(
+      blueprint: Blueprint.fromJson(bp),
+      forms: [
+        for (final f in j['forms']! as List)
+          PaperForm.fromJson(f as Map<String, Object?>, section: 'math'),
+      ]..sort((a, b) => a.number.compareTo(b.number)),
+      lessons: {
+        for (final l in j['lessons']! as List)
+          (l as Map<String, Object?>)['type']! as String: Lesson.fromJson(l),
+      },
+      reference: Map<String, Object?>.from(j['reference'] as Map? ?? const {}),
+      domainCounts: Map<String, int>.from(
+        ((bp['module_blueprint']! as Map)['domains']) as Map? ?? const {},
+      ),
+    );
+  }
+
+  final Blueprint blueprint;
+  final List<PaperForm> forms;
+  final Map<String, Lesson> lessons;
+  final Map<String, Object?> reference;
+
+  /// Questions of each domain in one Math module.
+  final Map<String, int> domainCounts;
+}
+
 class ContentBank {
   const ContentBank({
     required this.version,
@@ -114,6 +182,7 @@ class ContentBank {
     required this.lessons,
     required this.reference,
     required this.moduleTypeCounts,
+    this.math,
   });
 
   factory ContentBank.fromJson(Map<String, Object?> j) {
@@ -141,9 +210,72 @@ class ContentBank {
     );
   }
 
+  /// Adds the Math section; its items join the shared [items] map.
+  ContentBank withMath(Map<String, Object?> j) => ContentBank(
+    version: version,
+    blueprint: blueprint,
+    items: {
+      ...items,
+      for (final raw in j['items']! as List)
+        (raw as Map<String, Object?>)['id']! as String: Item.fromJson(raw),
+    },
+    forms: forms,
+    lessons: lessons,
+    reference: reference,
+    moduleTypeCounts: moduleTypeCounts,
+    math: SectionContent.fromJson(j),
+  );
+
   final String version;
+
+  /// Reading and Writing blueprint (see [bpOf] for either section).
   final Blueprint blueprint;
   final Map<String, Item> items;
+  final SectionContent? math;
+
+  bool get hasMath => math != null && math!.forms.isNotEmpty;
+
+  Blueprint bpOf(String section) =>
+      section == 'math' && math != null ? math!.blueprint : blueprint;
+
+  Blueprint bpForItem(Item i) => bpOf(i.section);
+
+  /// The blueprint that defines [type] (type keys are unique across sections).
+  Blueprint bpOfType(String type) =>
+      math?.blueprint.types.containsKey(type) ?? false
+      ? math!.blueprint
+      : blueprint;
+
+  /// The blueprint that defines [domain].
+  Blueprint bpOfDomain(String domain) =>
+      math?.blueprint.domains.containsKey(domain) ?? false
+      ? math!.blueprint
+      : blueprint;
+
+  /// Questions of each type in one module of [section]. Math blueprints fix
+  /// counts per domain; those are spread evenly over the domain's types.
+  Map<String, int> moduleTypeCountsOf(String section) {
+    final m = math;
+    if (section != 'math' || m == null) return moduleTypeCounts;
+    final out = <String, int>{};
+    for (final MapEntry(key: domain, value: n) in m.domainCounts.entries) {
+      final types = [
+        for (final t in m.blueprint.typeOrder)
+          if (m.blueprint.types[t]!.domain == domain) t,
+      ];
+      for (var i = 0; i < n && types.isNotEmpty; i++) {
+        final t = types[i % types.length];
+        out[t] = (out[t] ?? 0) + 1;
+      }
+    }
+    return out;
+  }
+
+  List<PaperForm> formsOf(String section) =>
+      section == 'math' ? (math?.forms ?? const []) : forms;
+
+  Map<String, Lesson> lessonsOf(String section) =>
+      section == 'math' ? (math?.lessons ?? const {}) : lessons;
   final List<PaperForm> forms;
   final Map<String, Lesson> lessons;
 
@@ -154,7 +286,7 @@ class ContentBank {
   final Map<String, int> moduleTypeCounts;
 
   PaperForm? form(String id) {
-    for (final f in forms) {
+    for (final f in [...forms, ...?math?.forms]) {
       if (f.id == id) return f;
     }
     return null;
@@ -170,11 +302,22 @@ class ContentBank {
       .length;
 }
 
-ContentBank _decode(String raw) =>
-    ContentBank.fromJson(jsonDecode(raw) as Map<String, Object?>);
+ContentBank _decode((String, String?) raw) {
+  final bank = ContentBank.fromJson(jsonDecode(raw.$1) as Map<String, Object?>);
+  final math = raw.$2;
+  return math == null
+      ? bank
+      : bank.withMath(jsonDecode(math) as Map<String, Object?>);
+}
 
 /// Loads and parses the bank once, off the UI isolate.
 final contentBankProvider = FutureProvider<ContentBank>((ref) async {
-  final raw = await rootBundle.loadString('assets/data/rw_bank.json');
-  return compute(_decode, raw);
+  final rw = await rootBundle.loadString('assets/data/rw_bank.json');
+  String? math;
+  try {
+    math = await rootBundle.loadString('assets/data/math_bank.json');
+  } on FlutterError {
+    math = null; // no Math pack shipped
+  }
+  return compute(_decode, (rw, math));
 });

@@ -1,0 +1,89 @@
+{
+  "id": "m-prb-0518",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The histogram summarizes a data set of 40 values. Each interval includes its left endpoint but not its right endpoint. If one of the 40 values is selected at random, what is the probability that the value is at least 15?",
+  "figure": {
+    "kind": "histogram",
+    "x_label": "Value",
+    "y_label": "Frequency",
+    "bins": [
+      [
+        0,
+        5,
+        4
+      ],
+      [
+        5,
+        10,
+        10
+      ],
+      [
+        10,
+        15,
+        14
+      ],
+      [
+        15,
+        20,
+        8
+      ],
+      [
+        20,
+        25,
+        4
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{7}{10}\\)",
+    "B": "\\(\\frac{1}{5}\\)",
+    "C": "\\(\\frac{3}{10}\\)",
+    "D": "\\(\\frac{13}{20}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Values that are at least 15 are in the bars from 15 to 20 and from 20 to 25: \\(8 + 4 = 12\\).",
+    "The probability is \\(\\frac{12}{40} = \\frac{3}{10}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the probability that the value is LESS than 15.",
+    "B": "Incorrect. This is \\(\\frac{8}{40}\\): it counts only the 15-to-20 bar and leaves out the 20-to-25 bar.",
+    "C": "Correct. \\(8 + 4 = 12\\) of the 40 values are at least 15, and \\(\\frac{12}{40} = \\frac{3}{10}\\).",
+    "D": "Incorrect. This is \\(\\frac{26}{40}\\): it also counts the 10-to-15 bar, whose values are less than 15."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'B': 'B', 'A': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'B', 'C': 'A', 'D': 'C'}[answer]  # shuffled: original letters\nbins = figure['bins']\nassert sum(b[2] for b in bins) == 40\np = Rational(sum(b[2] for b in bins if b[0] >= 15), 40)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

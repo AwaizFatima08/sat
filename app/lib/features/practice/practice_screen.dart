@@ -11,6 +11,7 @@ import 'package:moduleup/data/progress_repository.dart';
 import 'package:moduleup/engine/results.dart';
 import 'package:moduleup/features/auth/auth_screens.dart';
 import 'package:moduleup/features/practice/drill_session.dart';
+import 'package:moduleup/features/section/section.dart';
 
 /// The Practice tab: skills by domain, quizzes, timed module, mistakes.
 class PracticeScreen extends ConsumerWidget {
@@ -25,6 +26,8 @@ class PracticeScreen extends ConsumerWidget {
     final now = ref.watch(clockProvider).now();
     final due = progress.dueMistakes(now).length;
     final drill = ref.read(drillProvider.notifier);
+    final section = effectiveSection(ref);
+    final bp = bank.bpOf(section);
     void start(bool Function() begin) {
       if (!requireAccount(context, ref)) return;
       if (begin()) {
@@ -41,6 +44,7 @@ class PracticeScreen extends ConsumerWidget {
     return ListView(
       padding: const EdgeInsets.all(AppSpace.m),
       children: [
+        const SectionSwitcher(),
         IntrinsicHeight(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -49,8 +53,10 @@ class PracticeScreen extends ConsumerWidget {
                 child: _QuickCard(
                   icon: Icons.timer_outlined,
                   title: 'Timed module',
-                  subtitle: '27 questions · 32 min',
-                  onTap: () => start(drill.startModulePractice),
+                  subtitle:
+                      '${bp.moduleItems} questions · ${bp.moduleMinutes} min',
+                  onTap: () =>
+                      start(() => drill.startModulePractice(section: section)),
                 ),
               ),
               const SizedBox(width: AppSpace.s),
@@ -65,7 +71,7 @@ class PracticeScreen extends ConsumerWidget {
             ],
           ),
         ),
-        for (final d in bank.blueprint.domains.entries) ...[
+        for (final d in bp.domains.entries) ...[
           const SizedBox(height: AppSpace.l),
           Row(
             children: [
@@ -83,8 +89,8 @@ class PracticeScreen extends ConsumerWidget {
               ),
             ],
           ),
-          for (final t in bank.blueprint.typeOrder)
-            if (bank.blueprint.types[t]!.domain == d.key)
+          for (final t in bp.typeOrder)
+            if (bp.types[t]!.domain == d.key)
               _SkillTile(type: t, bank: bank, progress: progress),
         ],
       ],
@@ -154,7 +160,7 @@ class _SkillTile extends StatelessWidget {
       padding: const EdgeInsets.only(top: AppSpace.s),
       child: Card(
         child: ListTile(
-          title: Text(bank.blueprint.types[type]!.name),
+          title: Text(bank.bpOfType(type).types[type]!.name),
           subtitle: Padding(
             padding: const EdgeInsets.only(top: 6),
             child: MasteryDots(levels: levels),

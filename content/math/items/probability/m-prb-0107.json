@@ -1,0 +1,94 @@
+{
+  "id": "m-prb-0107",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A bus depot in Kolkata, India, recorded the 400 trips its buses made on four routes in one week and whether each trip arrived late. The results are shown in the table. For which route is the probability that a randomly selected trip on that route arrived late the greatest?",
+  "figure": {
+    "kind": "table",
+    "title": "Bus trips by route",
+    "columns": [
+      "Route",
+      "Number of trips",
+      "Trips that arrived late"
+    ],
+    "rows": [
+      [
+        "12",
+        "120",
+        "36"
+      ],
+      [
+        "25",
+        "90",
+        "24"
+      ],
+      [
+        "40",
+        "150",
+        "39"
+      ],
+      [
+        "51",
+        "40",
+        "14"
+      ],
+      [
+        "Total",
+        "400",
+        "113"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Route 40",
+    "B": "Route 12",
+    "C": "Route 25",
+    "D": "Route 51"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "For each route, divide the late trips by that route's trips.",
+    "Route 12: \\(\\frac{36}{120} = 0.30\\); Route 25: \\(\\frac{24}{90} \\approx 0.27\\); Route 40: \\(\\frac{39}{150} = 0.26\\); Route 51: \\(\\frac{14}{40} = 0.35\\).",
+    "The greatest probability is for Route 51."
+  ],
+  "explanation": {
+    "A": "Incorrect. Route 40 has the most late trips, but its probability, \\(\\frac{39}{150} = 0.26\\), is the least of the four routes; the count must be compared with that route's number of trips.",
+    "B": "Incorrect. For Route 12 the probability is \\(\\frac{36}{120} = 0.30\\), which is less than Route 51's 0.35.",
+    "C": "Incorrect. For Route 25 the probability is \\(\\frac{24}{90} \\approx 0.27\\), which is less than Route 51's 0.35.",
+    "D": "Correct. For Route 51 the probability is \\(\\frac{14}{40} = 0.35\\), the greatest of the four routes."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "C": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nr = figure['rows'][:4]\np = {row[0]: Rational(int(row[2]), int(row[1])) for row in r}\nbest = max(p, key=p.get)\nassert best == '51' and sorted(p.values())[-2] < p['51']\nassert choices[answer] == 'Route ' + best\nassert sum(int(row[1]) for row in r) == 400 and sum(int(row[2]) for row in r) == 113",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

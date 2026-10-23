@@ -1,0 +1,46 @@
+{
+  "id": "m-nlf-0512",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The vertex of the graph of \\(y = x^{2} - 10x + 31\\) in the \\(xy\\)-plane is \\((h, k)\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "Complete the square: \\(x^{2} - 10x + 31 = (x^{2} - 10x + 25) - 25 + 31\\).",
+    "So \\(y = (x - 5)^{2} + 6\\), and the vertex is \\((5, 6)\\).",
+    "Therefore \\(k = 6\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nf = x**2 - 10*x + 31\nhv = solve(diff(f, x), x)\nassert hv == [5]\nassert [Rational(s) for s in spr_answers] == [f.subs(x, 5)] == [6]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

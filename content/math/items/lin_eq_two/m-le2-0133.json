@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0133",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(p\\) passes through the point \\((3, -1)\\) and is parallel to the graph of \\(5x - 2y = 4\\). At which point does line \\(p\\) cross the \\(x\\)-axis?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((\\frac{4}{5}, 0)\\)",
+    "B": "\\((\\frac{13}{5}, 0)\\)",
+    "C": "\\((\\frac{17}{5}, 0)\\)",
+    "D": "\\((0, -\\frac{17}{2})\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "A parallel line has the form \\(5x - 2y = c\\). Using \\((3, -1)\\): \\(c = 15 + 2 = 17\\).",
+    "Line \\(p\\) is \\(5x - 2y = 17\\). With \\(y = 0\\), \\(x = \\frac{17}{5}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the \\(x\\)-intercept of the given line \\(5x - 2y = 4\\), not of line \\(p\\).",
+    "B": "Incorrect. This uses \\(5(3) - 2(1) = 13\\); the \\(y\\)-coordinate of the point is \\(-1\\), so the constant is \\(15 + 2 = 17\\).",
+    "C": "Correct. Line \\(p\\) is \\(5x - 2y = 17\\), which crosses the \\(x\\)-axis where \\(5x = 17\\).",
+    "D": "Incorrect. This is where line \\(p\\) crosses the \\(y\\)-axis, not the \\(x\\)-axis."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "sign_error",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\npt = lambda s: [value(t) for t in s.replace('\\\\(', '').replace('\\\\)', '').strip()[1:-1].split(',')]\nc = 5*3 - 2*(-1)\nxi = solve(Eq(5*x, c), x)[0]\nassert xi == Rational(17, 5)\nok = [k for k in choices if pt(choices[k]) == [xi, 0]]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

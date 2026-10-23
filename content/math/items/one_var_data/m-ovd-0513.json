@@ -1,0 +1,59 @@
+{
+  "id": "m-ovd-0513",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "What is the interquartile range of the data set \\(2, 5, 7, 8, 10, 12, 15, 20\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(13.5\\)",
+    "B": "\\(10\\)",
+    "C": "\\(7.5\\)",
+    "D": "\\(18\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The 8 values are in order. The lower half is 2, 5, 7, 8 and the upper half is 10, 12, 15, 20.",
+    "First quartile: \\(\\frac{5 + 7}{2} = 6\\). Third quartile: \\(\\frac{12 + 15}{2} = 13.5\\).",
+    "Interquartile range: \\(13.5 - 6 = 7.5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the third quartile. The first quartile, 6, must be subtracted from it.",
+    "B": "Incorrect. This is the 7th value minus the 2nd value, \\(15 - 5 = 10\\). Each quartile is the median of one half of the data: the mean of the two middle values of that half.",
+    "C": "Correct. \\(Q_{1} = 6\\) and \\(Q_{3} = 13.5\\), so the interquartile range is \\(13.5 - 6 = 7.5\\).",
+    "D": "Incorrect. This is the range, \\(20 - 2 = 18\\), not the interquartile range."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\ns = sorted([2, 5, 7, 8, 10, 12, 15, 20])\nq1 = Rational(s[1] + s[2], 2)\nq3 = Rational(s[5] + s[6], 2)\nr = q3 - q1\nassert r == Rational(15, 2)\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

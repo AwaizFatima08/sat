@@ -1,0 +1,59 @@
+{
+  "id": "m-smp-0106",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A city has 12,000 registered dog owners. A random sample of 500 of them was asked whether they would use a proposed dog park. Based on the sample, 35% of the city's registered dog owners are estimated to be willing to use the park, with a margin of error of 4.2 percentage points. Which of the following statements is (are) supported by the data? I. It is plausible that between 30.8% and 39.2% of the city's registered dog owners would use the park. II. A random sample of 2,000 of the city's registered dog owners would most likely produce a smaller margin of error. III. It is plausible that between 30.8% and 39.2% of all adults in the city would use the park.",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "I and III only",
+    "B": "I and II only",
+    "C": "I, II and III",
+    "D": "I only"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "I: The plausible values are \\(35 - 4.2 = 30.8\\) percent to \\(35 + 4.2 = 39.2\\) percent of the population sampled, the registered dog owners. Supported.",
+    "II: With the sample proportion about the same, a larger random sample gives a smaller margin of error. Supported.",
+    "III: The sample was drawn only from registered dog owners, so the results cannot be generalized to all adults in the city. Not supported."
+  ],
+  "explanation": {
+    "A": "Incorrect. Statement III is not supported because only registered dog owners were sampled, and statement II is supported.",
+    "B": "Correct. Statements I and II are supported, but III generalizes beyond the population that was sampled.",
+    "C": "Incorrect. Statement III is not supported: the results apply only to the city's registered dog owners, not to all adults in the city.",
+    "D": "Incorrect. Statement II is also supported: a larger random sample from the same population most likely gives a smaller margin of error."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'D': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'D', 'D': 'A'}[answer]  # shuffled: original letters\nlo, hi = Rational(35) - Rational('4.2'), Rational(35) + Rational('4.2')\nassert (lo, hi) == (Rational('30.8'), Rational('39.2'))\nsupported = {'I': True, 'II': 2000 > 500, 'III': False}\nkey = sorted(s for s, v in supported.items() if v)\nparse = {'A': ['I'], 'B': ['I', 'II'], 'C': ['I', 'III'], 'D': ['I', 'II', 'III']}\nassert [k for k, v in parse.items() if v == key] == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

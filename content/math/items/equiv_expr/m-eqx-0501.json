@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0501",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which of the following is equivalent to \\(4(2x - 5) + 3x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(11x - 20\\)",
+    "B": "\\(11x + 20\\)",
+    "C": "\\(11x - 5\\)",
+    "D": "\\(9x - 20\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Distribute the 4 to both terms in the parentheses: \\(8x - 20 + 3x\\).",
+    "Combine the \\(x\\)-terms: \\(8x + 3x = 11x\\), so the expression is \\(11x - 20\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Distributing gives \\(8x - 20 + 3x\\), which simplifies to \\(11x - 20\\).",
+    "B": "Incorrect. This is the result of a sign slip: \\(4 \\cdot (-5)\\) is \\(-20\\), not \\(20\\).",
+    "C": "Incorrect. This is the result of multiplying only \\(2x\\) by 4 and leaving \\(-5\\) unchanged.",
+    "D": "Incorrect. This is the result of adding \\(4 + 2\\) instead of multiplying \\(4 \\cdot 2\\), giving \\(6x\\) instead of \\(8x\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx = symbols('x')\ntarget = 4*(2*x - 5) + 3*x\nassert simplify(value(choices[answer]) - target) == 0\nassert all(simplify(value(choices[k]) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

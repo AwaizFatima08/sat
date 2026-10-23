@@ -1,0 +1,44 @@
+{
+  "id": "m-eqx-0516",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the equation \\((kx + 7)(4x - 3) = 12x^{2} + bx - 21\\), \\(k\\) and \\(b\\) are constants, and the equation is true for all values of \\(x\\). What is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "19"
+  ],
+  "solution": [
+    "Expand the left side: \\(4kx^{2} - 3kx + 28x - 21 = 4kx^{2} + (28 - 3k)x - 21\\).",
+    "Match the \\(x^{2}\\) coefficients: \\(4k = 12\\), so \\(k = 3\\).",
+    "Then \\(b = 28 - 3(3) = 19\\)."
+  ],
+  "verify": "x, k = symbols('x k')\nks = solve(Eq(Poly(expand((k*x + 7)*(4*x - 3)), x).coeff_monomial(x**2), 12), k)\nassert ks == [3]\nb = Poly(expand((3*x + 7)*(4*x - 3)), x).coeff_monomial(x)\nassert b == 19\nassert [Rational(s) for s in spr_answers] == [19]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "19",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

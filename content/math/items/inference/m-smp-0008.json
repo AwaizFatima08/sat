@@ -1,0 +1,46 @@
+{
+  "id": "m-smp-0008",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "tryit",
+  "stem": "A university has 18,000 students. In a random sample of 250 of these students, 30% bike to campus, and the margin of error for this estimate is 6 percentage points. Based on these results, what is the greatest plausible number of students at the university who bike to campus?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6480"
+  ],
+  "solution": [
+    "The plausible percents for all students run from \\(30 - 6 = 24\\%\\) to \\(30 + 6 = 36\\%\\).",
+    "The greatest plausible percent is 36%.",
+    "\\(0.36(18000) = 6480\\) students."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "hi = Rational(30 + 6, 100)\nest = hi * 18000\nassert est == 6480\nassert [Rational(a) for a in spr_answers] == [est]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-22",
+        "answer": "6480",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-ovd-0504",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "The dot plot shows a data set of 9 values. What is the range of the data set?",
+  "figure": {
+    "kind": "dotplot",
+    "x_label": "Value",
+    "values": [
+      4,
+      5,
+      5,
+      6,
+      7,
+      7,
+      7,
+      8,
+      10
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "The range is the greatest value minus the least value.",
+    "The greatest value is 10 and the least is 4, so the range is \\(10 - 4 = 6\\)."
+  ],
+  "verify": "v = figure['values']\nassert len(v) == 9\nr = max(v) - min(v)\nassert r == 6\nassert Rational(spr_answers[0]) == r and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

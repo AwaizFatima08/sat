@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:moduleup/core/theme.dart';
+import 'package:moduleup/data/content_bank.dart';
+import 'package:moduleup/features/math/math_tools.dart';
 import 'package:moduleup/features/paper/paper_session.dart';
-import 'package:moduleup/widgets/question_view.dart';
+import 'package:moduleup/widgets/math_question_view.dart';
 
 String formatClock(int seconds) {
   final s = seconds < 0 ? 0 : seconds;
@@ -25,6 +27,7 @@ class TestScreen extends ConsumerWidget {
     if (s == null) {
       return const Scaffold(body: Center(child: Text('No paper in progress.')));
     }
+    final bp = ref.read(contentBankProvider).requireValue.bpOf(s.form.section);
     final notifier = ref.read(paperSessionProvider.notifier);
     return PopScope(
       canPop: false,
@@ -39,6 +42,8 @@ class TestScreen extends ConsumerWidget {
         appBar: AppBar(
           title: Text('Module ${s.module} of 2'),
           actions: [
+            if (s.form.section == 'math' && s.phase == PaperPhase.answering)
+              const MathToolButtons(),
             _TimerChip(state: s, onToggle: notifier.toggleTimer),
             const SizedBox(width: AppSpace.s),
           ],
@@ -47,6 +52,8 @@ class TestScreen extends ConsumerWidget {
           PaperPhase.answering => _Answering(state: s, notifier: notifier),
           PaperPhase.checkWork => _CheckWork(state: s, notifier: notifier),
           PaperPhase.betweenModules => _BetweenModules(
+            items: bp.moduleItems,
+            minutes: bp.moduleMinutes,
             onStart: notifier.beginModule2,
           ),
           PaperPhase.finished => const Center(
@@ -120,9 +127,9 @@ class _Answering extends StatelessWidget {
     return Column(
       children: [
         Expanded(
-          child: QuestionView(
+          child: ItemQuestionView(
             key: ValueKey(state.current.id),
-            content: contentOfItem(state.current),
+            item: state.current,
             selected: q.answer,
             eliminated: q.eliminated,
             highlights: q.highlights,
@@ -383,7 +390,13 @@ class _CheckWork extends StatelessWidget {
 }
 
 class _BetweenModules extends StatelessWidget {
-  const _BetweenModules({required this.onStart});
+  const _BetweenModules({
+    required this.items,
+    required this.minutes,
+    required this.onStart,
+  });
+  final int items;
+  final int minutes;
   final VoidCallback onStart;
 
   @override
@@ -400,9 +413,10 @@ class _BetweenModules extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineSmall,
           ),
           const SizedBox(height: AppSpace.s),
-          const Text(
-            'Module 2 has 27 questions and 32 minutes. Its difficulty depends on '
-            'how you did in module 1. The clock starts when you tap Start.',
+          Text(
+            'Module 2 has $items questions and $minutes minutes. Its difficulty '
+            'depends on how you did in module 1. The clock starts when you tap '
+            'Start.',
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: AppSpace.l),

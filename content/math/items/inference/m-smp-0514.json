@@ -1,0 +1,59 @@
+{
+  "id": "m-smp-0514",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Based on a random sample, 38% of a population is estimated to have a certain trait, with a margin of error of 4 percentage points. Which of the following statements is best supported by the data?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Less than 35% of the population has the trait.",
+    "B": "More than 30% of the population has the trait.",
+    "C": "More than 40% of the population has the trait.",
+    "D": "Exactly 38% of the population has the trait."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Plausible values for the population percent: \\(38 - 4 = 34\\%\\) to \\(38 + 4 = 42\\%\\).",
+    "Every plausible value is greater than 30%, so the statement that more than 30% of the population has the trait is supported.",
+    "The other statements are contradicted by some plausible values in the range."
+  ],
+  "explanation": {
+    "A": "Incorrect. Plausible values go up to 42%, so it is not shown that the percent is less than 35%.",
+    "B": "Correct. The plausible values run from 34% to 42%, and all of them are greater than 30%.",
+    "C": "Incorrect. Plausible values from 34% to 40% are not greater than 40%, so this is not supported.",
+    "D": "Incorrect. 38% is an estimate; the margin of error shows the population percent is not known exactly."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nlo, hi = 38 - 4, 38 + 4\nassert lo > 30 and not lo > 40 and not hi < 35\nassert answer == 'A' and 'More than 30%' in choices['A']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

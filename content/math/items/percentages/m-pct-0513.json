@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0513",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "If \\(40\\%\\) of \\(n\\) is 18, what is \\(75\\%\\) of \\(n\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(33.75\\)",
+    "B": "\\(60\\)",
+    "C": "\\(45\\)",
+    "D": "\\(13.5\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Solve \\(0.4n = 18\\): \\(n = \\frac{18}{0.4} = 45\\).",
+    "Find \\(75\\%\\) of 45: \\(0.75 \\cdot 45 = 33.75\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Since \\(n = 45\\), \\(75\\%\\) of \\(n\\) is \\(0.75 \\cdot 45 = 33.75\\).",
+    "B": "Incorrect. This is the result of dividing 45 by 0.75 instead of multiplying 45 by 0.75.",
+    "C": "Incorrect. This is the value of \\(n\\). The question asks for \\(75\\%\\) of \\(n\\).",
+    "D": "Incorrect. This is \\(75\\%\\) of 18, not \\(75\\%\\) of \\(n\\)."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'D': 'B', 'C': 'C', 'A': 'D'}.items()}; answer = {'A': 'B', 'B': 'D', 'C': 'C', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nn = solve(Eq(Rational(40, 100) * x, 18), x)[0]\nassert n == 45\nv = Rational(75, 100) * n\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

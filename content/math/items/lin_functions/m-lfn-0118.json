@@ -1,0 +1,80 @@
+{
+  "id": "m-lfn-0118",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "An elevator in an office tower moves downward at a constant speed. The table shows the height \\(h\\), in meters, of the elevator above the ground \\(t\\) seconds after a timer is started. Which function gives \\(h(t)\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "Elevator height",
+    "columns": [
+      "Time, t (seconds)",
+      "Height (meters)"
+    ],
+    "rows": [
+      [
+        "4",
+        "96"
+      ],
+      [
+        "10",
+        "69"
+      ],
+      [
+        "16",
+        "42"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(h(t) = 114 - \\frac{2}{9}t\\)",
+    "B": "\\(h(t) = 78 - 4.5t\\)",
+    "C": "\\(h(t) = 114 - 4.5t\\)",
+    "D": "\\(h(t) = 96 - 4.5t\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Between \\(t = 4\\) and \\(t = 10\\), the height falls \\(96 - 69 = 27\\) meters in 6 seconds, or 4.5 meters per second.",
+    "At \\(t = 0\\) the height was \\(96 + 4(4.5) = 114\\) meters.",
+    "So \\(h(t) = 114 - 4.5t\\). Check: \\(h(16) = 114 - 72 = 42\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses \\(\\frac{6}{27} = \\frac{2}{9}\\), seconds per meter, as the rate; that is the reciprocal of the speed.",
+    "B": "Incorrect. This finds the height at \\(t = 0\\) by subtracting \\(4(4.5) = 18\\) from 96; going back in time the elevator was higher, so 18 must be added.",
+    "C": "Correct. The elevator descends 4.5 meters per second and was at 114 meters when \\(t = 0\\); every row of the table fits.",
+    "D": "Incorrect. This uses 96, the height at \\(t = 4\\), as the height at \\(t = 0\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "sign_error",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nt = symbols('t')\nr = [[int(c) for c in row] for row in figure['rows']]\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if all(rhs(choices[k]).subs(t, a) == b for a, b in r)]\nassert ok == [answer]\nassert simplify(rhs(choices[answer]) - (114 - Rational(9, 2)*t)) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

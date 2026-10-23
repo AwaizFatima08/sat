@@ -1,0 +1,59 @@
+{
+  "id": "m-cir-0105",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\((x - 5)^{2} + (y + 1)^{2} = 29\\) is a circle. Which of the following points lies inside the circle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((7, 3)\\)",
+    "B": "\\((-3, 2)\\)",
+    "C": "\\((0, 1)\\)",
+    "D": "\\((11, -1)\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "A point lies inside the circle when \\((x - 5)^{2} + (y + 1)^{2} < 29\\).",
+    "For \\((7, 3)\\): \\((7 - 5)^{2} + (3 + 1)^{2} = 4 + 16 = 20 < 29\\), so it is inside.",
+    "The other points give 25 + 4 = 29 (on the circle), 64 + 9 = 73, and 36 + 0 = 36 (outside)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(4 + 16 = 20 < 29\\), so \\((7, 3)\\) is inside the circle.",
+    "B": "Incorrect. This point is inside the circle \\((x + 5)^{2} + (y - 1)^{2} = 29\\); the signs of the center's coordinates were reversed. For the given circle, \\(64 + 9 = 73 > 29\\).",
+    "C": "Incorrect. \\((0 - 5)^{2} + (1 + 1)^{2} = 29\\), so this point lies on the circle, not inside it.",
+    "D": "Incorrect. This point is 6 units from the center; that is less than 29, but the radius is \\(\\sqrt{29} \\approx 5.39\\), so the point is outside."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nx,y=symbols('x y')\nf=(x-5)**2+(y+1)**2\npts={'A':(0,1),'B':(-3,2),'C':(7,3),'D':(11,-1)}\nassert all(choices[k]=='\\\\((%d, %d)\\\\)'%pts[k] for k in pts)\ninside=[k for k in pts if f.subs({x:pts[k][0],y:pts[k][1]})<29]\nassert inside==[answer]\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0515",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "Which ordered pair \\((x, y)\\) is a solution to the system of equations below? \\[y = x^{2}\\] \\[y = 2x + 8\\]",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((4, 8)\\)",
+    "B": "\\((2, 4)\\)",
+    "C": "\\((4, 16)\\)",
+    "D": "\\((-4, 16)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(y = x^{2}\\) into the second equation: \\(x^{2} = 2x + 8\\).",
+    "Rearrange and factor: \\(x^{2} - 2x - 8 = 0\\), so \\((x - 4)(x + 2) = 0\\).",
+    "\\(x = 4\\) gives \\(y = 16\\), and \\(x = -2\\) gives \\(y = 4\\). Of the choices, only \\((4, 16)\\) is a solution."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of finding \\(x = 4\\) and then computing \\(y = 2x\\) instead of \\(y = 2x + 8\\) or \\(y = x^{2}\\).",
+    "B": "Incorrect. This is the result of a sign slip when factoring, giving \\(x = 2\\); \\((2, 4)\\) is on the parabola, but \\(2(2) + 8 = 12\\), not \\(4\\).",
+    "C": "Correct. \\(16 = 4^{2}\\) and \\(16 = 2(4) + 8\\).",
+    "D": "Incorrect. This is the result of a sign slip, giving \\(x = -4\\); \\((-4, 16)\\) is on the parabola, but \\(2(-4) + 8 = 0\\), not \\(16\\)."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nx, y = symbols('x y')\nsols = solve([Eq(y, x**2), Eq(y, 2*x + 8)], [x, y])\nassert sorted(sols) == [(-2, 4), (4, 16)]\nok = lambda p: tuple(value(p)) in sols\nassert ok(choices[answer])\nassert not any(ok(choices[k]) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

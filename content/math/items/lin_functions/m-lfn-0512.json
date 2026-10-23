@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0512",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "The charge of a phone battery decreases at a constant rate while a video plays. When the video starts, the battery is at 92 percent. After 3 hours of playing, the battery is at 71 percent. If the charge continues to decrease at this rate, what percent will the battery be at 8 hours after the video starts?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "36"
+  ],
+  "solution": [
+    "The charge drops \\(92 - 71 = 21\\) percentage points in 3 hours, or 7 points per hour.",
+    "A linear model is \\(B(t) = 92 - 7t\\).",
+    "\\(B(8) = 92 - 56 = 36\\) percent."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t')\nm = Rational(71 - 92, 3)\nB = 92 + m*t\nassert m == -7 and B.subs(t, 8) == 36\nassert [Rational(s) for s in spr_answers] == [B.subs(t, 8)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "36",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

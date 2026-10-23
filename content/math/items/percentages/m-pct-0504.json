@@ -1,0 +1,43 @@
+{
+  "id": "m-pct-0504",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A restaurant bill comes to \\$64. A customer leaves a tip equal to \\(15\\%\\) of the bill. What is the amount of the tip, in dollars?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "9.6"
+  ],
+  "solution": [
+    "The tip is \\(15\\%\\) of 64, or \\(0.15 \\cdot 64\\).",
+    "\\(0.15 \\cdot 64 = 9.6\\), so the tip is 9.60 dollars."
+  ],
+  "verify": "v = Rational(15, 100) * 64\nassert v == Rational(48, 5)\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == v",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "9.6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

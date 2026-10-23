@@ -1,0 +1,152 @@
+{
+  "id": "m-lat-0536",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "drill",
+  "stem": "In the figure, line \\(\\ell\\) is parallel to line \\(m\\). Point \\(A\\) lies on line \\(\\ell\\), and point \\(B\\) lies on line \\(m\\). What is the value of \\(x\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "C": [
+        -3,
+        6
+      ],
+      "D": [
+        9,
+        6
+      ],
+      "E": [
+        -3,
+        0
+      ],
+      "F": [
+        9,
+        0
+      ],
+      "A": [
+        0,
+        6
+      ],
+      "P": [
+        3.625,
+        4.31
+      ],
+      "Q": [
+        1.504,
+        2.188
+      ],
+      "B": [
+        5.294,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "A",
+        "P"
+      ],
+      [
+        "P",
+        "Q"
+      ],
+      [
+        "Q",
+        "B"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.562,
+          5.654
+        ],
+        "text": "25°"
+      },
+      {
+        "at": [
+          2.739,
+          4.153
+        ],
+        "text": "x°"
+      },
+      {
+        "at": [
+          2.396,
+          2.306
+        ],
+        "text": "75°"
+      },
+      {
+        "at": [
+          3.749,
+          0.414
+        ],
+        "text": "30°"
+      },
+      {
+        "at": [
+          8.6,
+          6.5
+        ],
+        "text": "ℓ"
+      },
+      {
+        "at": [
+          8.6,
+          0.5
+        ],
+        "text": "m"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "70"
+  ],
+  "solution": [
+    "Draw lines through \\(P\\) and \\(Q\\) parallel to \\(\\ell\\) and \\(m\\). Each of these lines splits the angle at that point into two parts.",
+    "At \\(Q\\): the lower part is an alternate interior angle with the \\(30^{\\circ}\\) angle at \\(B\\), so it is 30°, and the upper part is \\(75 - 30 = 45^{\\circ}\\).",
+    "At \\(P\\): the lower part is an alternate interior angle with that \\(45^{\\circ}\\) part, and the upper part is an alternate interior angle with the \\(25^{\\circ}\\) angle at \\(A\\).",
+    "\\(x = 25 + 45 = 70\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['C'][1]==P['D'][1]==P['A'][1] and P['E'][1]==P['F'][1]==P['B'][1]\nassert abs(ang('D','A','P')-25)<0.1 and abs(ang('P','Q','B')-75)<0.1 and abs(ang('E','B','Q')-30)<0.1\nans=25+75-30\nassert abs(ang('A','P','Q')-ans)<0.1\nassert Rational(spr_answers[0])==ans==70\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "70",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

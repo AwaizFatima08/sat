@@ -1,0 +1,60 @@
+{
+  "id": "m-le2-0538",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A florist makes small bouquets that use 15 stems each and large bouquets that use 25 stems each. She uses exactly 200 stems, with none left over. How many different combinations of numbers of small and large bouquets are possible? (A combination may include zero bouquets of one size.)",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(8\\)",
+    "C": "\\(3\\)",
+    "D": "\\(9\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(s\\) be small and \\(\\ell\\) large bouquets: \\(15s + 25\\ell = 200\\), or \\(3s + 5\\ell = 40\\).",
+    "Then \\(3s = 40 - 5\\ell\\) must be a nonnegative multiple of 3, with \\(\\ell\\) from 0 to 8.",
+    "This happens for \\(\\ell = 2\\) (\\(s = 10\\)), \\(\\ell = 5\\) (\\(s = 5\\)) and \\(\\ell = 8\\) (\\(s = 0\\)).",
+    "So there are 3 combinations."
+  ],
+  "explanation": {
+    "A": "Incorrect. This misses the combination with zero small bouquets and 8 large bouquets, which the question allows.",
+    "B": "Incorrect. 8 is the greatest number of large bouquets, \\(\\frac{200}{25}\\), not the number of combinations.",
+    "C": "Correct. The combinations are 10 small and 2 large, 5 small and 5 large, and 0 small and 8 large.",
+    "D": "Incorrect. This counts every number of large bouquets from 0 to 8 without checking that the remaining stems make a whole number of small bouquets."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'C': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'C', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nsols = [(s, l) for s in range(0, 14) for l in range(0, 9) if 15*s + 25*l == 200]\nassert sols == [(0, 8), (5, 5), (10, 2)]\nassert value(choices[answer]) == len(sols)\nassert all(value(choices[k]) != len(sols) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

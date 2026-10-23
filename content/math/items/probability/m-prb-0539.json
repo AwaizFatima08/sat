@@ -1,0 +1,59 @@
+{
+  "id": "m-prb-0539",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A raffle box contains only red tickets and blue tickets. If one ticket is selected at random from the box, the probability that it is red is \\(\\frac{1}{4}\\). After 12 more red tickets are added to the box, the probability that a randomly selected ticket is red is \\(\\frac{1}{2}\\). How many blue tickets are in the box?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12\\)",
+    "B": "\\(18\\)",
+    "C": "\\(6\\)",
+    "D": "\\(24\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(r\\) be the number of red tickets. A probability of \\(\\frac{1}{4}\\) means the box holds \\(4r\\) tickets, so there are \\(3r\\) blue tickets.",
+    "After adding 12 red: \\(\\frac{r + 12}{4r + 12} = \\frac{1}{2}\\), so \\(2r + 24 = 4r + 12\\) and \\(r = 6\\).",
+    "Blue tickets: \\(3(6) = 18\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the number of red tickets added; it assumes the added tickets match the blue tickets.",
+    "B": "Correct. With \\(r\\) red and \\(3r\\) blue tickets, \\(\\frac{r + 12}{4r + 12} = \\frac{1}{2}\\) gives \\(r = 6\\), so there are \\(3(6) = 18\\) blue tickets.",
+    "C": "Incorrect. This is the number of red tickets originally in the box, not the number of blue tickets.",
+    "D": "Incorrect. This is the total number of tickets originally in the box (6 red and 18 blue)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'B': 'B', 'A': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'B', 'C': 'A', 'D': 'D'}[answer]  # shuffled: original letters\nr, b = symbols('r b')\ns = solve([Eq(r / (r + b), Rational(1, 4)), Eq((r + 12) / (r + b + 12), Rational(1, 2))], [r, b], dict=True)[0]\np = s[b]\nassert p == 18\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

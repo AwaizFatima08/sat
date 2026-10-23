@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:moduleup/features/math/math_tools.dart';
 import 'package:go_router/go_router.dart';
 import 'package:moduleup/core/theme.dart';
 import 'package:moduleup/data/ads_service.dart';
@@ -10,7 +11,7 @@ import 'package:moduleup/engine/results.dart';
 import 'package:moduleup/features/paper/test_screen.dart' show formatClock;
 import 'package:moduleup/features/practice/drill_session.dart';
 import 'package:moduleup/widgets/common.dart';
-import 'package:moduleup/widgets/question_view.dart';
+import 'package:moduleup/widgets/math_question_view.dart';
 
 /// A practice set in progress, then its results.
 class DrillScreen extends ConsumerWidget {
@@ -32,6 +33,8 @@ class DrillScreen extends ConsumerWidget {
       appBar: AppBar(
         title: Text(s.title),
         actions: [
+          if (!s.finished && s.current.section == 'math')
+            const MathToolButtons(),
           if (s.secondsLeft case final left? when !s.finished)
             Padding(
               padding: const EdgeInsets.only(right: AppSpace.m),
@@ -59,24 +62,17 @@ class _Question extends StatelessWidget {
     final item = state.current;
     final answered = state.answers[item.id] != null;
     final last = state.index + 1 == state.items.length;
-    final reveal = state.revealed && state.instantFeedback
-        ? Reveal(
-            answer: item.answer,
-            why: item.why,
-            explanations: item.choiceExplanations,
-            source: item.source,
-          )
-        : null;
+    final revealed = state.revealed && state.instantFeedback;
     return Column(
       children: [
         LinearProgressIndicator(value: (state.index + 1) / state.items.length),
         Expanded(
-          child: QuestionView(
+          child: ItemQuestionView(
             key: ValueKey('${item.id}-${state.revealed}'),
-            content: contentOfItem(item),
+            item: item,
             selected: state.answers[item.id],
-            onSelect: reveal == null ? notifier.select : null,
-            reveal: reveal,
+            onSelect: revealed ? null : notifier.select,
+            revealed: revealed,
             header: Padding(
               padding: const EdgeInsets.only(bottom: AppSpace.s),
               child: Text(
@@ -142,7 +138,7 @@ class _Results extends ConsumerWidget {
     final b = breakdown(responses, bank.items);
     final wrong = [
       for (final i in state.items)
-        if (state.answers[i.id] != i.answer) i,
+        if (!i.isCorrect(state.answers[i.id])) i,
     ];
     return ListView(
       padding: const EdgeInsets.all(AppSpace.m),
@@ -191,7 +187,7 @@ class _Results extends ConsumerWidget {
                     contentPadding: EdgeInsets.zero,
                     title: Text(bank.blueprint.types[i.type]!.name),
                     subtitle: Text(
-                      'You chose ${state.answers[i.id] ?? '—'} · answer ${i.answer}',
+                      'You chose ${state.answers[i.id] ?? '—'} · answer ${i.keyLabel}',
                     ),
                     trailing: const Icon(Icons.chevron_right),
                     onTap: () => unawaited(
@@ -239,15 +235,14 @@ class _Results extends ConsumerWidget {
     return Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (_) => Scaffold(
-          appBar: AppBar(title: Text(bank.blueprint.types[item.type]!.name)),
-          body: QuestionView(
-            content: contentOfItem(item),
+          appBar: AppBar(
+            title: Text(bank.bpForItem(item).types[item.type]!.name),
+          ),
+          body: ItemQuestionView(
+            item: item,
             selected: chosen,
-            reveal: Reveal(
-              answer: item.answer,
-              why: item.why,
-              explanations: item.choiceExplanations,
-            ),
+            revealed: true,
+            showSource: false,
           ),
         ),
       ),

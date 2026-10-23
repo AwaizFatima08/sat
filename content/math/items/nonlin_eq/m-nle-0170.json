@@ -1,0 +1,119 @@
+{
+  "id": "m-nle-0170",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A circular pond with radius \\(r\\) meters is surrounded by a path 2 meters wide, as shown. The area of the path is equal to the area of the pond. What is the value of \\(r\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "O": [
+        0,
+        0
+      ],
+      "P": [
+        4.83,
+        0
+      ],
+      "Q": [
+        6.83,
+        0
+      ]
+    },
+    "segments": [
+      [
+        "O",
+        "P"
+      ],
+      [
+        "P",
+        "Q"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 4.83
+      },
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 6.83
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          2.4,
+          0.5
+        ],
+        "text": "r"
+      },
+      {
+        "at": [
+          5.83,
+          0.5
+        ],
+        "text": "2"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4 + 2\\sqrt{2}\\)",
+    "B": "\\(2 + 2\\sqrt{2}\\)",
+    "C": "\\(2\\)",
+    "D": "\\(2\\sqrt{2} - 2\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The pond and the path together form a circle of radius \\(r + 2\\), so the area of the path is \\(\\pi(r + 2)^{2} - \\pi r^{2}\\).",
+    "Setting this equal to \\(\\pi r^{2}\\) gives \\(\\pi(r + 2)^{2} = 2\\pi r^{2}\\), so \\((r + 2)^{2} = 2r^{2}\\).",
+    "Both \\(r + 2\\) and \\(r\\) are positive, so take square roots: \\(r + 2 = \\sqrt{2}r\\). Then \\(r(\\sqrt{2} - 1) = 2\\), so \\(r = \\frac{2}{\\sqrt{2} - 1} = 2(\\sqrt{2} + 1) = 2 + 2\\sqrt{2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(r + 2\\), the radius of the outer edge of the path, not the radius of the pond.",
+    "B": "Correct. With \\(r = 2 + 2\\sqrt{2}\\), \\(r + 2 = \\sqrt{2}r\\), so the whole circle has area \\(2\\pi r^{2}\\), and the path has area \\(\\pi r^{2}\\).",
+    "C": "Incorrect. This is the result of setting the outer radius equal to twice the inner radius, \\(r + 2 = 2r\\), instead of making the areas match. With \\(r = 2\\), the path's area is \\(12\\pi\\), three times the pond's area.",
+    "D": "Incorrect. This is the result of a sign error when rationalizing the denominator: \\(\\frac{2}{\\sqrt{2} - 1} = \\frac{2(\\sqrt{2} + 1)}{1}\\), which is \\(2\\sqrt{2} + 2\\), not \\(2\\sqrt{2} - 2\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nr = symbols('r', positive=True)\nsol = solve(Eq(pi*(r + 2)**2 - pi*r**2, pi*r**2), r)\nassert len(sol) == 1\nans = sol[0]\nassert simplify(value(choices[answer]) - ans) == 0\nassert all(simplify(value(choices[k]) - ans) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

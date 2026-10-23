@@ -1,0 +1,45 @@
+{
+  "id": "m-stc-0504",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "A bookstore has 3,000 regular customers. The owner selected 250 of these customers at random and asked whether they would join a monthly reading club. Of the customers surveyed, 40% said they would join. Based on the survey, about how many of the bookstore's 3,000 regular customers would be expected to join the reading club?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1200"
+  ],
+  "solution": [
+    "The 250 customers are a random sample of the regular customers, so the sample percent can be applied to all 3,000.",
+    "40% of 3,000 is \\(0.40 \\cdot 3{,}000 = 1{,}200\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "customers, sampled, pct = 3000, 250, Rational(40, 100)\nest = pct * customers\nassert est == 1200\nassert [Rational(a) for a in spr_answers] == [est]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "1200",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "m-ineq-0125",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A smoothie is made from \\(x\\) milliliters of fruit puree and \\(y\\) milliliters of yogurt, and nothing else. To be labeled \"fruit-rich,\" at least 40% of the smoothie's total volume must be fruit puree. Which inequality represents this requirement?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x \\ge 0.4(x + y)\\)",
+    "B": "\\(x \\ge 0.4y\\)",
+    "C": "\\(x + y \\ge 0.4x\\)",
+    "D": "\\(0.4x \\ge x + y\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The total volume of the smoothie is \\(x + y\\) milliliters.",
+    "40% of the total volume is \\(0.4(x + y)\\).",
+    "The fruit puree must be at least that amount: \\(x \\ge 0.4(x + y)\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The fruit puree, \\(x\\), must be at least 40% of the total, \\(0.4(x + y)\\).",
+    "B": "Incorrect. This takes 40% of the yogurt only; the percent must be of the total volume, \\(x + y\\).",
+    "C": "Incorrect. This says the total is at least 40% of the fruit puree, which is true for every smoothie and does not limit the recipe.",
+    "D": "Incorrect. This applies the 40% to the fruit puree instead of to the total and compares in the wrong direction; it can never hold for positive amounts."
+  },
+  "traps": {
+    "B": "percent_add",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'D': 'C', 'C': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'D', 'D': 'C'}[answer]  # shuffled: original letters\nP = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nx, y = symbols('x y')\ngood = lambda a, b: a >= Rational(2, 5)*(a + b)\npts = [(a, b) for a in range(0, 300, 20) for b in range(0, 300, 20)]\npred = lambda c, a, b: bool(P(c).subs({x: a, y: b}))\nassert all(pred(choices[answer], a, b) == good(a, b) for a, b in pts)\nassert all(any(pred(c, a, b) != good(a, b) for a, b in pts) for k, c in choices.items() if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

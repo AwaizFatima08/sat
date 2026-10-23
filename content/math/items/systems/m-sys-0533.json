@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0533",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "drill",
+  "stem": "At a museum, all adult tickets have the same price and all child tickets have the same price. One group paid \\$84 for 3 adult tickets and 5 child tickets. Another group paid \\$92 for 5 adult tickets and 3 child tickets. What is the total price, in dollars, of 1 adult ticket and 1 child ticket?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(176\\)",
+    "B": "\\(13\\)",
+    "C": "\\(22\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(a\\) and \\(c\\) be the prices: \\(3a + 5c = 84\\) and \\(5a + 3c = 92\\).",
+    "Add the equations: \\(8a + 8c = 176\\).",
+    "Divide by 8: \\(a + c = 22\\). (Solving fully gives \\(a = 13\\) and \\(c = 9\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(8a + 8c\\); the last step, dividing by 8, is missing.",
+    "B": "Incorrect. This is the price of 1 adult ticket only.",
+    "C": "Correct. Adding the equations gives \\(8a + 8c = 176\\), so \\(a + c = 22\\).",
+    "D": "Incorrect. This is \\(a - c\\), found by subtracting the equations: an adult ticket costs \\$4 more than a child ticket."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'C': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'D', 'B': 'C', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\na, c = symbols('a c')\nsol = solve([3*a + 5*c - 84, 5*a + 3*c - 92], [a, c])\nassert sol == {a: 13, c: 9}\nassert value(choices[answer]) == sol[a] + sol[c]\nassert all(value(choices[k]) != sol[a] + sol[c] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

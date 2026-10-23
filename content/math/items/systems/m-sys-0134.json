@@ -1,0 +1,59 @@
+{
+  "id": "m-sys-0134",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A food truck has fixed costs of \\$1,440 per week. Each meal costs the truck \\$3.60 to make and sells for \\$8.40. How many meals must the truck sell in a week for its revenue from meals to equal its total costs for the week?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(400\\)",
+    "B": "\\(120\\)",
+    "C": "\\(300\\)",
+    "D": "\\(2{,}520\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "For \\(m\\) meals, cost is \\(C = 1{,}440 + 3.60m\\) and revenue is \\(R = 8.40m\\).",
+    "Set them equal: \\(8.40m = 1{,}440 + 3.60m\\), so \\(4.80m = 1{,}440\\).",
+    "So \\(m = 300\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This divides \\$1,440 by the cost per meal, \\$3.60, and ignores the selling price.",
+    "B": "Incorrect. This divides \\$1,440 by \\(8.40 + 3.60 = 12\\), adding the cost per meal to the price instead of subtracting it.",
+    "C": "Correct. Each meal brings in \\(8.40 - 3.60 = 4.80\\) dollars above its cost, and \\(1{,}440 \\div 4.80 = 300\\).",
+    "D": "Incorrect. This is the revenue in dollars, \\(8.40(300)\\), not the number of meals."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "sign_error",
+    "D": "wrong_quantity"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'A': 'B', 'B': 'C', 'D': 'D'}.items()}; answer = {'A': 'C', 'B': 'A', 'C': 'B', 'D': 'D'}[answer]  # shuffled: original letters\nm = symbols('m')\nsol = solve(Eq(Rational('8.40')*m, 1440 + Rational('3.60')*m), m)\nassert sol == [300]\nassert value(choices[answer]) == 300\nassert all(value(choices[k]) != 300 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-22",
+    "checks": [
+      {
+        "by": "opus-blind",
+        "date": "2026-10-23",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}
