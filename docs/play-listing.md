@@ -18,13 +18,13 @@ Each paper has two modules, timed like the digital test: 27 questions in 32 minu
 When you finish, you get an estimated section score (200–800) with a likely range, a breakdown by skill, and a full
 explanation for every question.
 
-**Practice every skill, at four levels**
+**Practice every Reading and Writing skill, at four levels**
 All 11 question types — Words in Context, Text Structure and Purpose, Cross-Text Connections, Central Ideas,
 Command of Evidence (text and data), Inferences, Boundaries, Form Structure and Sense, Transitions and Rhetorical
 Synthesis — with lessons, strategy cards, worked examples and practice sets from Foundations to Challenge.
 
 **Math with the tools you get on test day**
-All 19 Math skills — linear equations and functions, systems, inequalities, equivalent expressions, nonlinear
+All 19 Math skills, each with lessons and practice at four levels — linear equations and functions, systems, inequalities, equivalent expressions, nonlinear
 equations and functions, ratios, percentages, data and statistics, probability, area and volume, lines and angles,
 right-triangle trigonometry and circles. Type-in answers follow the official entry rules. A built-in scientific and
 graphing calculator and the reference sheet are one tap away on every Math question.

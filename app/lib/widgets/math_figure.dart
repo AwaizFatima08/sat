@@ -86,7 +86,7 @@ void _label(
   final tp = TextPainter(
     text: TextSpan(
       text: s,
-      style: TextStyle(color: color, fontSize: size),
+      style: TextStyle(color: color, fontSize: size, fontFamily: 'Roboto'),
     ),
     textDirection: TextDirection.ltr,
   )..layout(maxWidth: 140);
