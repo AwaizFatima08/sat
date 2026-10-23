@@ -1,8 +1,10 @@
+> The published version is site/moduleup/privacy-policy.html in homilabs_tools (live at tools.homilabs.org/moduleup/privacy-policy.html).
+
 # Module Up: Digital SAT Prep — Privacy Policy
 
 Last updated: 22 October 2026. App by HomiLabs (homilabs.org). Contact: homilabs.smc@gmail.com
 
-Module Up is a study app for the Reading and Writing section of the Digital SAT®. This policy explains what
+Module Up is a study app for the Digital SAT® (Reading and Writing and Math). This policy explains what
 the app collects, why, and how you can delete it.
 
 ## What we collect
@@ -35,7 +37,7 @@ Module Up is for students aged 13 and over. It is not directed at children under
 ## Keeping and deleting your data
 Your data is kept while your account exists. You can delete your account and all study data at any time:
 - in the app: **Account and settings → Delete account and data**, or
-- on the web: https://homilabs.org/moduleup/delete-account (send the request from your account email).
+- on the web: https://tools.homilabs.org/moduleup/delete-account.html (send the request from your account email).
 Deletion is permanent and is completed within 30 days, including backups.
 
 ## Changes

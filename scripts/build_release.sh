@@ -4,7 +4,7 @@
 #   bash scripts/build_release.sh
 #
 # Signing: app/android/key.properties -> .secrets/moduleup-upload.keystore (both gitignored).
-# Gates: content validates, only checked/approved items ship, all 10 papers present, release ad ids
+# Gates: R&W and Math content validate, only checked/approved items ship, 10 papers per section present, release ad ids
 # are the real ones, tests pass, APK signed with the HomiLabs upload key (not the debug key).
 # Follows ~/.claude/heavy-jobs.md: needs >= 4 GiB available memory; stops the Gradle daemon after.
 set -euo pipefail
@@ -15,9 +15,12 @@ avail=$(free -g | awk '/^Mem:/{print $7}')
 [ -f app/android/key.properties ] || { echo "Missing app/android/key.properties (see .secrets/README.txt)"; exit 1; }
 
 python3 pipeline/validate.py --quiet
+python3 pipeline/validate_math.py --quiet
 python3 pipeline/build_packs.py
 forms=$(python3 -c "import json;print(json.load(open('app/assets/data/manifest.json'))['forms'])")
 [ "$forms" -ge 10 ] || { echo "FAIL: only $forms releasable papers in the pack (need 10)"; exit 1; }
+mforms=$(python3 -c "import json;print(len(json.load(open('app/assets/data/math_bank.json'))['forms']))")
+[ "$mforms" -ge 10 ] || { echo "FAIL: only $mforms releasable Math papers in the pack (need 10)"; exit 1; }
 bash scripts/check-release-ad-ids.sh
 
 cd app

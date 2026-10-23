@@ -99,8 +99,8 @@ class WelcomeScreen extends ConsumerWidget {
                 ),
                 const SizedBox(height: AppSpace.s),
                 const Text(
-                  'Digital SAT® Reading and Writing practice: 10 full adaptive papers, '
-                  'skill drills and a progress board.',
+                  'Digital SAT® practice for Reading and Writing and Math: 10 full '
+                  'adaptive papers in each section, skill drills and a progress board.',
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: AppSpace.xl),
@@ -338,7 +338,7 @@ class _ProfileSetupScreenState extends ConsumerState<ProfileSetupScreen> {
           decoration: const InputDecoration(labelText: 'First name'),
         ),
         const SizedBox(height: AppSpace.l),
-        Text('Target Reading and Writing score: ${_target.round()}'),
+        Text('Target score for each section: ${_target.round()}'),
         Slider(
           value: _target,
           min: 400,

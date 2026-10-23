@@ -7,6 +7,7 @@ import 'package:moduleup/data/progress_repository.dart';
 import 'package:moduleup/engine/content.dart';
 import 'package:moduleup/engine/results.dart';
 import 'package:moduleup/features/paper/paper_session.dart';
+import 'package:moduleup/features/section/section.dart';
 import 'package:moduleup/widgets/common.dart';
 
 /// Score report for the paper just finished (from the session) or for the
@@ -44,7 +45,11 @@ class ScoreReportScreen extends ConsumerWidget {
       body: ListView(
         padding: const EdgeInsets.all(AppSpace.m),
         children: [
-          _ScoreCard(result: result, correct: b.overall),
+          _ScoreCard(
+            result: result,
+            correct: b.overall,
+            section: form?.section ?? 'rw',
+          ),
           const SizedBox(height: AppSpace.m),
           SectionCard(
             title: 'By content domain',
@@ -96,9 +101,14 @@ class ScoreReportScreen extends ConsumerWidget {
 }
 
 class _ScoreCard extends StatelessWidget {
-  const _ScoreCard({required this.result, required this.correct});
+  const _ScoreCard({
+    required this.result,
+    required this.correct,
+    required this.section,
+  });
   final PaperResult result;
   final Tally correct;
+  final String section;
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +119,7 @@ class _ScoreCard extends StatelessWidget {
         padding: const EdgeInsets.all(AppSpace.l),
         child: Column(
           children: [
-            const Text('Estimated Reading and Writing score'),
+            Text('Estimated ${sectionNames[section]} score'),
             const SizedBox(height: AppSpace.s),
             Text(
               '${e.score}',

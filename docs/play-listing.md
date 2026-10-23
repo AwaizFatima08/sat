@@ -7,20 +7,27 @@ Target audience: 13+ (not Designed for Families) · Content rating: Everyone / P
 Module Up: Digital SAT Prep  (27)
 
 ## Short description (80 max)
-10 full adaptive SAT® Reading & Writing tests, skill drills and score estimates.  (79)
+Adaptive SAT® practice tests: Reading & Writing and Math, with score estimates  (79)
 
 ## Full description
-Get ready for the Reading and Writing section of the Digital SAT® with practice that works like the real test.
+Get ready for the Digital SAT® — Reading and Writing and Math — with practice that works like the real test.
 
-**10 full-length adaptive papers**
-Each paper has two modules of 27 questions and 32 minutes, just like the digital test. How you do in module 1
-decides whether module 2 is easier or harder. When you finish, you get an estimated section score with a likely
-range, a breakdown by skill, and a full explanation for every question.
+**20 full-length adaptive papers: 10 Reading and Writing, 10 Math**
+Each paper has two modules, timed like the digital test: 27 questions in 32 minutes per Reading and Writing module,
+22 questions in 35 minutes per Math module. How you do in module 1 decides whether module 2 is easier or harder.
+When you finish, you get an estimated section score (200–800) with a likely range, a breakdown by skill, and a full
+explanation for every question.
 
 **Practice every skill, at four levels**
 All 11 question types — Words in Context, Text Structure and Purpose, Cross-Text Connections, Central Ideas,
 Command of Evidence (text and data), Inferences, Boundaries, Form Structure and Sense, Transitions and Rhetorical
 Synthesis — with lessons, strategy cards, worked examples and practice sets from Foundations to Challenge.
+
+**Math with the tools you get on test day**
+All 19 Math skills — linear equations and functions, systems, inequalities, equivalent expressions, nonlinear
+equations and functions, ratios, percentages, data and statistics, probability, area and volume, lines and angles,
+right-triangle trigonometry and circles. Type-in answers follow the official entry rules. A built-in scientific and
+graphing calculator and the reference sheet are one tap away on every Math question.
 
 **See exactly why you miss questions**
 Every wrong answer is linked to the trap behind it (too broad, reversed, true but irrelevant…), so you learn to
@@ -33,7 +40,7 @@ with Google or email to keep your progress on any phone. Works offline.
 **Also included:** a grammar handbook for American English conventions, a word bank of 400+ academic words with
 flashcards, a trap guide and a test-day guide.
 
-All questions are original, written by HomiLabs in the style of the Digital SAT. Scores are estimates, not
+More than 3,100 questions, all original, written by HomiLabs in the style of the Digital SAT. Scores are estimates, not
 official SAT scores.
 
 SAT® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this app.
@@ -43,8 +50,9 @@ SAT® is a trademark registered by the College Board, which is not affiliated wi
   (study progress, app functionality); device or other IDs (advertising, via AdMob); approximate location (AdMob).
 - Shared: device IDs and approximate location with Google AdMob for advertising.
 - Encrypted in transit: yes. Users can request deletion: yes (in-app and web link).
-- Account deletion URL: https://homilabs.org/moduleup/delete-account
-- Privacy policy URL: https://homilabs.org/moduleup/privacy
+- Account deletion URL: https://tools.homilabs.org/moduleup/delete-account.html
+- Privacy policy URL: https://tools.homilabs.org/moduleup/privacy-policy.html
+- Website: https://tools.homilabs.org/moduleup/ · Email: homilabs.smc@gmail.com
 
 ## Graphics to make (homidev / Homi approval per asset)
 - App icon 512×512 (launcher icon via icon-cutout-basic or SVG in code).
