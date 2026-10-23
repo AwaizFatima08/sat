@@ -10,8 +10,8 @@ import 'package:moduleup/data/content_bank.dart';
 import 'package:moduleup/data/progress_repository.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-const privacyUrl = 'https://tools.homilabs.org/moduleup/privacy-policy.html';
-const deletionUrl = 'https://tools.homilabs.org/moduleup/delete-account.html';
+const privacyUrl = 'https://sat-prep.homilabs.org/privacy-policy.html';
+const deletionUrl = 'https://sat-prep.homilabs.org/delete-account.html';
 
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
@@ -164,7 +164,7 @@ class AboutScreen extends ConsumerWidget {
           ),
           const SizedBox(height: AppSpace.l),
           const Text(
-            'Made by HomiLabs · tools.homilabs.org',
+            'Made by HomiLabs · sat-prep.homilabs.org',
             style: TextStyle(color: AppColors.muted),
           ),
           TextButton(

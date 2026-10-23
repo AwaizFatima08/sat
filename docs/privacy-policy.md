@@ -37,7 +37,7 @@ Module Up is for students aged 13 and over. It is not directed at children under
 ## Keeping and deleting your data
 Your data is kept while your account exists. You can delete your account and all study data at any time:
 - in the app: **Account and settings → Delete account and data**, or
-- on the web: https://tools.homilabs.org/moduleup/delete-account.html (send the request from your account email).
+- on the web: https://sat-prep.homilabs.org/delete-account.html (send the request from your account email).
 Deletion is permanent and is completed within 30 days, including backups.
 
 ## Changes

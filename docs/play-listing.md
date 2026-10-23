@@ -50,9 +50,9 @@ SAT® is a trademark registered by the College Board, which is not affiliated wi
   (study progress, app functionality); device or other IDs (advertising, via AdMob); approximate location (AdMob).
 - Shared: device IDs and approximate location with Google AdMob for advertising.
 - Encrypted in transit: yes. Users can request deletion: yes (in-app and web link).
-- Account deletion URL: https://tools.homilabs.org/moduleup/delete-account.html
-- Privacy policy URL: https://tools.homilabs.org/moduleup/privacy-policy.html
-- Website: https://tools.homilabs.org/moduleup/ · Email: homilabs.smc@gmail.com
+- Account deletion URL: https://sat-prep.homilabs.org/delete-account.html
+- Privacy policy URL: https://sat-prep.homilabs.org/privacy-policy.html
+- Website: https://sat-prep.homilabs.org/ · Email: homilabs.smc@gmail.com
 
 ## Graphics to make (homidev / Homi approval per asset)
 - App icon 512×512 (launcher icon via icon-cutout-basic or SVG in code).
