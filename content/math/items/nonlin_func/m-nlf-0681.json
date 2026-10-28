@@ -1,0 +1,48 @@
+{
+  "id": "m-nlf-0681",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The number of trees in a forest infected by a fungus \\(w\\) weeks after the fungus was first detected is modeled by \\(F(w) = 300(1.5)^{\\frac{w}{2}}\\). Which of the following statements best describes this model?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The number of infected trees increases by 50% every 2 weeks.",
+    "B": "The number of infected trees increases by 50% every week.",
+    "C": "The number of infected trees increases by 25% every week.",
+    "D": "The number of infected trees increases by 150% every 2 weeks."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The exponent \\(\\frac{w}{2}\\) increases by 1 every time \\(w\\) increases by 2, so every 2 weeks the number is multiplied by \\(1.5\\).",
+    "A factor of \\(1.5\\) is an increase of \\(50\\%\\). So the number of infected trees increases by \\(50\\%\\) every 2 weeks."
+  ],
+  "explanation": {
+    "A": "Correct. When \\(w\\) increases by 2, the exponent increases by 1, so the number is multiplied by \\(1.5\\), an increase of \\(50\\%\\).",
+    "B": "Incorrect. The exponent is \\(\\frac{w}{2}\\), not \\(2w\\). One week multiplies the number by \\(1.5^{1/2} \\approx 1.22\\), about \\(22\\%\\), not \\(50\\%\\).",
+    "C": "Incorrect. Splitting \\(50\\%\\) into two equal \\(25\\%\\) steps would give a factor of \\(1.25^{2} \\approx 1.56\\) every 2 weeks, not \\(1.5\\). Percent growth does not divide evenly across time.",
+    "D": "Incorrect. Multiplying by \\(1.5\\) means the new amount is \\(150\\%\\) of the old amount, which is an increase of \\(50\\%\\), not \\(150\\%\\)."
+  },
+  "traps": {
+    "B": "reciprocal",
+    "C": "percent_add",
+    "D": "concept"
+  },
+  "verify": "w = symbols('w')\nF = 300*Rational('1.5')**(w/2)\nassert simplify(F.subs(w, w + 2)/F) == Rational(3, 2)          # x1.5 every 2 weeks = +50% per 2 weeks\nassert simplify(F.subs(w, w + 1)/F) == sqrt(Rational(3, 2))    # not +50% or +25% per week\nassert choices[answer] == 'The number of infected trees increases by 50% every 2 weeks.'\nassert all(choices[c] != choices[answer] for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-opus-5-5",
+    "written": "2026-10-28",
+    "checks": [],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

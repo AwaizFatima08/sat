@@ -3,6 +3,7 @@
 
   python3 pipeline/assemble_forms.py          # writes content/rw/forms/paper-01.json .. paper-10.json
   python3 pipeline/assemble_forms.py --check  # report only
+  python3 pipeline/assemble_forms.py --set 2  # papers 11-20 from paper items numbered 0601+
 
 For each question type, paper items are sorted by difficulty and dealt round-robin to the 10 papers, so every
 paper gets the same spread (snake order). Within a paper, each type's items are split into thirds by difficulty:
@@ -24,9 +25,13 @@ PAPERS = BP["papers"]
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--set", type=int, default=1, choices=[1, 2])
     a = ap.parse_args()
+    lo, hi = (101, 499) if a.set == 1 else (601, 999)
+    first = (a.set - 1) * PAPERS + 1
     items = [json.loads(p.read_text()) for p in sorted((RW / "items").glob("*/*.json"))]
-    pool = [i for i in items if i["pool"] == "paper" and i["provenance"]["status"] != "retired"]
+    pool = [i for i in items if i["pool"] == "paper" and i["provenance"]["status"] != "retired"
+            and lo <= int(i["id"].rsplit("-", 1)[1]) <= hi]
     per_module = BP["module_blueprint"]["types"]
     papers = [{"m1": [], "m2_easy": [], "m2_hard": []} for _ in range(PAPERS)]
     short = []
@@ -50,7 +55,7 @@ def main():
         print("Not enough paper items yet:\n  " + "\n  ".join(short))
         return
     order = {t: n for n, t in enumerate(BP["type_order"])}
-    for n, mods in enumerate(papers, 1):
+    for n, mods in enumerate(papers, first):
         out = {"id": f"paper-{n:02d}", "number": n, "title": f"Paper {n}", "modules": {}}
         for m, lst in mods.items():
             lst.sort(key=lambda i: (order[i["type"]], i["b"], i["id"]))

@@ -47,6 +47,10 @@ def plan():
             batches.append({"name": f"m-drill-{abbr}-{i}", "type": t, "pool": "drill", "items": part})
         for i, part in enumerate(chunks(paper, 30), 1):
             batches.append({"name": f"m-paper-{abbr}-{i}", "type": t, "pool": "paper", "items": part})
+        # Paper set 2 (papers 11-20): same quotas and levels, ids from 0601.
+        paper2 = entries(abbr, 601, [int(l) for l in "1234" for _ in range(cnt[l])])
+        for i, part in enumerate(chunks(paper2, 30), 1):
+            batches.append({"name": f"m-paper2-{abbr}-{i}", "type": t, "pool": "paper", "items": part})
     PLAN.write_text(json.dumps(batches, indent=1))
     print(f"{len(batches)} batches, {sum(len(b['items']) for b in batches)} items, "
           f"{sum(e['spr'] for b in batches for e in b['items'])} typed-answer")

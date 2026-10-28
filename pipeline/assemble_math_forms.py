@@ -3,6 +3,7 @@
 
   python3 pipeline/assemble_math_forms.py          # writes content/math/forms/math-01.json .. math-10.json
   python3 pipeline/assemble_math_forms.py --check  # report only
+  python3 pipeline/assemble_math_forms.py --set 2  # math-11 .. math-20 from paper items numbered 0601+
 
 Math modules have fixed counts per domain (blueprint module_blueprint.domains), not per type. For each domain the
 paper items are sorted by difficulty, then type, and dealt in snake order to the 10 papers, so every paper gets the
@@ -68,9 +69,13 @@ def repair_spr(papers):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--set", type=int, default=1, choices=[1, 2])
     a = ap.parse_args()
+    lo, hi = (101, 499) if a.set == 1 else (601, 999)
+    first = (a.set - 1) * PAPERS + 1
     items = [json.loads(p.read_text()) for p in sorted((M / "items").glob("*/*.json"))]
-    pool = [i for i in items if i["pool"] == "paper" and i["provenance"]["status"] == "checked"]
+    pool = [i for i in items if i["pool"] == "paper" and i["provenance"]["status"] == "checked"
+            and lo <= int(i["id"].rsplit("-", 1)[1]) <= hi]
     type_rank = {t: n for n, t in enumerate(BP["type_order"])}
     papers = [{m: [] for m in MODS} for _ in range(PAPERS)]
     short = []
@@ -94,7 +99,7 @@ def main():
         return
     if not repair_spr(papers):
         print("warning: could not bring every module's typed-answer count into range")
-    for n, mods in enumerate(papers, 1):
+    for n, mods in enumerate(papers, first):
         out = {"id": f"math-{n:02d}", "number": n, "title": f"Math Paper {n}", "section": "math", "modules": {}}
         for m in ("m1", "m2_easy", "m2_hard"):
             lst = sorted(mods[m], key=lambda i: (i["b"], mix(i)))

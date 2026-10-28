@@ -38,6 +38,14 @@ def plan():
         size = 30 if len(paper) % 30 == 0 or len(paper) < 40 else 30
         for i, part in enumerate(chunks(paper, size), 1):
             batches.append({"name": f"paper-{abbr}-{i}", "type": t, "pool": "paper", "items": part})
+        # Paper set 2 (papers 11-20): same quotas and levels, ids from 0601.
+        paper2, n = [], 601
+        for lvl in "1234":
+            for _ in range(quotas[t][lvl]):
+                paper2.append((f"rw-{abbr}-{n:04d}", int(lvl)))
+                n += 1
+        for i, part in enumerate(chunks(paper2, size), 1):
+            batches.append({"name": f"paper2-{abbr}-{i}", "type": t, "pool": "paper", "items": part})
     PLAN.write_text(json.dumps(batches, indent=1))
     print(f"{len(batches)} batches, {sum(len(b['items']) for b in batches)} items")
 
