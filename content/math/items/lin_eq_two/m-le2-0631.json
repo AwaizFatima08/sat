@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0631",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A fishing boat in Chattogram sells hilsa for 1,200 taka per kilogram and rohu for 400 taka per kilogram. The equation \\(1{,}200x + 400y = 48{,}000\\) represents a catch of \\(x\\) kilograms of hilsa and \\(y\\) kilograms of rohu that sells for exactly 48,000 taka. One day the boat sells 25 kilograms of hilsa and a catch of rohu that satisfies the equation, but the price of rohu drops to 300 taka per kilogram before the sale. How many taka does the boat receive that day?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(45{,}500\\)",
+    "B": "\\(66{,}000\\)",
+    "C": "\\(43{,}500\\)",
+    "D": "\\(48{,}000\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "With \\(x = 25\\): \\(30{,}000 + 400y = 48{,}000\\), so \\(y = 45\\) kilograms of rohu.",
+    "At the new price: \\(30{,}000 + 300(45) = 30{,}000 + 13{,}500 = 43{,}500\\) taka."
+  ],
+  "explanation": {
+    "A": "Incorrect. This applies the 100-taka drop to the 25 kilograms of hilsa instead of to the 45 kilograms of rohu.",
+    "B": "Incorrect. This takes \\(y = 48{,}000 \\div 400 = 120\\), ignoring the hilsa in the equation.",
+    "C": "Correct. \\(1{,}200(25) = 30{,}000\\), so \\(400y = 18{,}000\\) and \\(y = 45\\); at 300 taka, the rohu brings \\(13{,}500\\), for a total of \\(43{,}500\\).",
+    "D": "Incorrect. This is the planned amount; the price drop on the rohu reduces it."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "y = symbols('y')\nyy = solve(Eq(1200*25 + 400*y, 48000), y)[0]\ntotal = 1200*25 + 300*yy\nassert total == 43500\nassert value(choices[answer]) == total\nassert all(value(choices[k]) != total for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

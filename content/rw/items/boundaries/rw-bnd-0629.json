@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0629",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Teresa owned exactly one thing of value, and she had never once thought of selling it. The ______ her grandfather had carried from Lisbon in a case lined with faded green silk was older than anyone in the family could say, and its varnish had worn to bare wood where generations of chins had rested. When she tuned it on quiet evenings, the sound seemed to fill the small apartment with voices she had never heard.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "violin, which",
+    "B": "violin that",
+    "C": "violin, that",
+    "D": "violin; that"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "\"That her grandfather had carried from Lisbon in a case lined with faded green silk\" identifies which violin is meant; it is essential information, so no comma separates it from \"violin.\" The subject \"The violin\" then meets its verb, \"was,\" with no punctuation in between.",
+    "A": "Incorrect. A comma plus \"which\" would make the clause extra information, which must then be closed with a second comma before \"was\"; no such comma exists in the text, so the pair is left open.",
+    "B": "Correct. The essential \"that\" clause attaches directly to \"violin,\" and the subject connects to its verb \"was.\"",
+    "C": "Incorrect. An essential clause beginning with \"that\" is never set off by a comma.",
+    "D": "Incorrect. A semicolon must have an independent clause on each side; \"that her grandfather had carried from Lisbon\" can't stand alone."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "punctuation",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

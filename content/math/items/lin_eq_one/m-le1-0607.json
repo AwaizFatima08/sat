@@ -1,0 +1,57 @@
+{
+  "id": "m-le1-0607",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(5x = 3x + 18\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(18\\)",
+    "B": "\\(9\\)",
+    "C": "\\(\\frac{9}{4}\\)",
+    "D": "\\(3\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Subtract \\(3x\\) from both sides: \\(2x = 18\\).",
+    "Divide by 2: \\(x = 9\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(2x\\), not \\(x\\).",
+    "B": "Correct. \\(2x = 18\\), so \\(x = 9\\). Check: \\(5(9) = 45 = 3(9) + 18\\).",
+    "C": "Incorrect. This is the result of adding \\(3x\\) to the left side instead of subtracting it: \\(8x = 18\\).",
+    "D": "Incorrect. This is the result of dividing 18 by 6 instead of by 2."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "x = symbols('x')\ns = solve(Eq(5*x, 3*x + 18), x)[0]\nassert s == 9\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

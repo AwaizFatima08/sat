@@ -1,0 +1,76 @@
+{
+  "id": "m-ovd-0601",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The dot plot shows the number of passengers in each of 14 cars that passed a highway checkpoint during one hour. What is the mode of the data?",
+  "figure": {
+    "kind": "dotplot",
+    "x_label": "Number of passengers",
+    "values": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4,
+      5
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1\\)",
+    "B": "\\(2\\)",
+    "C": "\\(4\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The mode is the value that occurs most often.",
+    "The value 1 has 5 dots, more than any other value, so the mode is 1."
+  ],
+  "explanation": {
+    "A": "Correct. The value 1 appears 5 times, more than any other value.",
+    "B": "Incorrect. This is the median: with 14 values, the 7th and 8th values are both 2. The mode is the most frequent value.",
+    "C": "Incorrect. This is the range, \\(5 - 1 = 4\\), not the mode.",
+    "D": "Incorrect. This is the greatest value in the data, not the value that occurs most often."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "v = figure['values']\nassert len(v) == 14\nmode = max(set(v), key=v.count)\nassert v.count(mode) > max(v.count(u) for u in set(v) if u != mode)\nassert mode == 1\nassert value(choices[answer]) == mode\nassert all(value(choices[k]) != mode for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

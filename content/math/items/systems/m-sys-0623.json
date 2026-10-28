@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0623",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Bilal is 5 years older than his sister Hina. In 4 years, the sum of their ages will be 41. How old is Hina now?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(19\\)",
+    "B": "\\(18\\)",
+    "C": "\\(14\\)",
+    "D": "\\(16\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(b\\) and \\(h\\) be Bilal's and Hina's ages now: \\(b = h + 5\\) and \\((b + 4) + (h + 4) = 41\\), so \\(b + h = 33\\).",
+    "Substitute: \\((h + 5) + h = 33\\), so \\(2h = 28\\) and \\(h = 14\\).",
+    "(Then \\(b = 19\\); in 4 years they will be 23 and 18, and \\(23 + 18 = 41\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is Bilal's age now, not Hina's.",
+    "B": "Incorrect. This is Hina's age in 4 years, not her age now.",
+    "C": "Correct. If \\(b\\) and \\(h\\) are their ages now, \\(b = h + 5\\) and \\((b + 4) + (h + 4) = 41\\), so \\(2h + 13 = 41\\) and \\(h = 14\\).",
+    "D": "Incorrect. This adds 4 years only once; both Bilal and Hina will be 4 years older, so the sum of their ages increases by 8."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_quantity",
+    "D": "arithmetic"
+  },
+  "verify": "b, h = symbols('b h')\nsol = solve([b - (h + 5), (b + 4) + (h + 4) - 41], [b, h])\nassert sol == {b: 19, h: 14}\nassert value(choices[answer]) == 14\nassert all(value(choices[k]) != 14 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

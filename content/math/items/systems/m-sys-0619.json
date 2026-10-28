@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0619",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The sum of the two digits of a two-digit positive integer is 11. The tens digit is 3 more than the units digit. What is the integer?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(47\\)",
+    "B": "\\(83\\)",
+    "C": "\\(92\\)",
+    "D": "\\(74\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(t\\) be the tens digit and \\(u\\) the units digit: \\(t + u = 11\\) and \\(t = u + 3\\).",
+    "Substitute: \\(u + 3 + u = 11\\), so \\(2u = 8\\) and \\(u = 4\\). Then \\(t = 7\\).",
+    "The integer is \\(74\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This reverses the digits; the tens digit must be the larger one, \\(7\\).",
+    "B": "Incorrect. The digits add to 11, but \\(8\\) is \\(5\\) more than \\(3\\), not \\(3\\) more.",
+    "C": "Incorrect. The digits add to 11, but \\(9\\) is \\(7\\) more than \\(2\\), not \\(3\\) more.",
+    "D": "Correct. With tens digit \\(t\\) and units digit \\(u\\), \\(t + u = 11\\) and \\(t = u + 3\\) give \\(u = 4\\) and \\(t = 7\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "arithmetic",
+    "C": "concept"
+  },
+  "verify": "t, u = symbols('t u')\nsol = solve([t + u - 11, t - (u + 3)], [t, u])\nassert sol == {t: 7, u: 4}\nn = 10*sol[t] + sol[u]\nassert value(choices[answer]) == n == 74\nassert all(value(choices[k]) != n for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

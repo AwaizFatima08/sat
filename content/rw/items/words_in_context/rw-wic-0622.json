@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0622",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "For the first week at her new school, Mei said almost nothing. She chose the seat nearest the window, answered questions in a voice the teacher could barely hear, and spent lunch reading alone. Her classmates decided she was shy and left her alone. They were wrong. Mei was not timid; she was ______, taking careful note of who was kind, who was loud, and whom she might like to know before deciding where to begin.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "lonely",
+    "B": "observant",
+    "C": "nervous",
+    "D": "bored"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The text says the classmates \"were wrong\" to think Mei was shy, and it explains what she was actually doing: \"taking careful note\" of everyone around her. Someone who watches carefully is observant.",
+    "A": "Incorrect. Mei is alone by choice while she studies her classmates; the text does not say she is unhappy about it.",
+    "B": "Correct. Mei is quietly watching and noting who is kind and who is loud, which is what being observant means.",
+    "C": "Incorrect. The text says Mei \"was not timid,\" so describing her as nervous repeats the mistake her classmates made.",
+    "D": "Incorrect. Mei is paying close attention to her classmates, not losing interest in them."
+  },
+  "traps": {
+    "A": "wrong_tone",
+    "C": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

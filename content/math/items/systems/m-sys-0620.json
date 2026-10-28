@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0620",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Omar has 18 postage stamps. Each stamp is worth either 50 cents or 20 cents, and the stamps are worth \\$6.60 in all. How many 50-cent stamps does Omar have?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "10"
+  ],
+  "solution": [
+    "Let \\(f\\) and \\(t\\) be the numbers of 50-cent and 20-cent stamps: \\(f + t = 18\\) and \\(0.50f + 0.20t = 6.60\\).",
+    "Substitute \\(t = 18 - f\\): \\(0.50f + 0.20(18 - f) = 6.60\\), so \\(0.30f + 3.60 = 6.60\\) and \\(0.30f = 3.00\\).",
+    "So \\(f = 10\\). (Then \\(t = 8\\); check \\(5.00 + 1.60 = 6.60\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "f, t = symbols('f t')\nsol = solve([f + t - 18, Rational(1, 2)*f + Rational(1, 5)*t - Rational(33, 5)], [f, t])\nassert sol == {f: 10, t: 8}\nassert [Rational(s) for s in spr_answers] == [sol[f]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "10",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

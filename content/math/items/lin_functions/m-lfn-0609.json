@@ -1,0 +1,57 @@
+{
+  "id": "m-lfn-0609",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A freelance translator charges a fee of 15 dollars for each document plus 0.08 dollar for each word translated. Which function gives the total charge \\(C(w)\\), in dollars, for translating a document of \\(w\\) words?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(C(w) = 15w + 0.08\\)",
+    "B": "\\(C(w) = 0.08w - 15\\)",
+    "C": "\\(C(w) = 0.08w + 15\\)",
+    "D": "\\(C(w) = 8w + 15\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The per-word part of the charge is \\(0.08\\) dollar times \\(w\\) words: \\(0.08w\\).",
+    "The fixed fee of 15 dollars is added once, so \\(C(w) = 0.08w + 15\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This swaps the two numbers: 15 dollars is the one-time fee, and 0.08 dollar is charged per word.",
+    "B": "Incorrect. The 15-dollar fee is added to the charge, not subtracted from it.",
+    "C": "Correct. The per-word charge \\(0.08w\\) grows with the number of words, and the 15-dollar fee is added once.",
+    "D": "Incorrect. 0.08 dollar is 8 cents, not 8 dollars; the per-word charge in dollars is 0.08."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "w = symbols('w')\nrhs = lambda s: value(s.split('=')[1])\nC = Rational(8, 100)*w + 15\nok = [k for k in choices if simplify(rhs(choices[k]) - C) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0650",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A shop sells \\(x\\) lamps per week at a price of \\(p\\) dollars each. The owner estimates that if she raises the price by 10 dollars, she will sell 5 fewer lamps per week. Which expression represents the change in weekly revenue, in dollars, that would result from the price increase?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10x - 5p + 50\\)",
+    "B": "\\(10x - 5p\\)",
+    "C": "\\(10x - 5p - 50\\)",
+    "D": "\\(px + 10x - 5p - 50\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Current weekly revenue is \\(px\\) dollars.",
+    "After the change, revenue is \\((p + 10)(x - 5) = px - 5p + 10x - 50\\).",
+    "The change is the new revenue minus the old: \\(10x - 5p - 50\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of computing \\(10 \\cdot (-5)\\) as \\(+50\\) when expanding \\((p + 10)(x - 5)\\).",
+    "B": "Incorrect. This is the result of dropping the constant \\(10 \\cdot (-5) = -50\\) from the expansion.",
+    "C": "Correct. \\((p + 10)(x - 5) - px = 10x - 5p - 50\\).",
+    "D": "Incorrect. This is the new weekly revenue, not the change in revenue; the original revenue \\(px\\) must be subtracted."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "arithmetic",
+    "D": "wrong_quantity"
+  },
+  "verify": "x, p = symbols('x p')\nt = (p + 10)*(x - 5) - p*x\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0657",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When the Dutch East India Company was founded in 1602, it raised money in a way that was new at the time: rather than borrowing for a single voyage and repaying investors when the ships returned, it sold shares in the company itself, with no promise that the money would ever be paid back. The company's charter, though, allowed a share to be transferred to someone else. ______ an investor who wanted to get out did not need a refund from the company; he could sell his share to another investor, and within months a market for buying and selling shares had grown up in Amsterdam, where prices rose and fell with rumors of the fleet's fortunes.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Accordingly,",
+    "B": "In particular,",
+    "C": "Nevertheless,",
+    "D": "Likewise,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The second sentence states a rule: shares could be transferred to others. The last sentence spells out what followed from that rule: investors could sell rather than seek refunds, and a market formed. A transition that introduces a consequence is needed.",
+    "A": "Correct. \"Accordingly\" shows that the ability to sell shares, and the market that grew up, followed from the charter's rule on transfers.",
+    "B": "Incorrect. \"In particular\" would single out one detail of the transfer rule, but the last sentence describes the rule's broader effects, including a whole market. This is the most tempting trap because the sentence does give detail.",
+    "C": "Incorrect. The market did not arise in spite of the transfer rule; it arose because of it.",
+    "D": "Incorrect. \"Likewise\" would introduce a parallel point, but the last sentence is the outcome of the point before, not a similar one."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

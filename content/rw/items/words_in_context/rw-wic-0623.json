@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0623",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Tariq had ridden the city bus a hundred times with his mother, but today he rode it alone for the first time. He counted the stops under his breath, checked the name of each street against the folded note in his pocket, and kept one hand on the bell cord the whole way. When the bus finally reached the library and he stepped down onto the curb, his careful ______ had paid off: he had not missed a single turn.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "silence",
+    "B": "speed",
+    "C": "attention",
+    "D": "memory"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Tariq counts the stops, checks every street name against his note, and keeps his hand on the bell cord. He is watching closely the whole way, and that close watching is what \"paid off.\" The blank needs \"attention.\"",
+    "A": "Incorrect. Tariq is quiet, but being quiet is not what gets him to the right stop; watching the streets and counting the stops does.",
+    "B": "Incorrect. Nothing in the text is about going fast; Tariq's success comes from being careful.",
+    "C": "Correct. Counting stops and checking street names are ways of paying attention, and that careful attention is why he did not miss a turn.",
+    "D": "Incorrect. Tariq does not rely on remembering the route; he checks each street against a written note."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "wrong_logic",
+    "D": "wrong_tone"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

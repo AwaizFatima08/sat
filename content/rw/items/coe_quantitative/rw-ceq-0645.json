@@ -1,0 +1,91 @@
+{
+  "id": "rw-ceq-0645",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Ground beetles that live in the hedgerows at the edges of farm fields prey on slugs, which damage young wheat. Because these beetles walk rather than fly, entomologist Hugo Lindqvist expected their benefit to fade with distance from the hedge. He trapped beetles and recorded slug damage at set distances into fields bordered by hedgerows and in a field with no hedgerow. His results, he argues, show a sharp boundary rather than a gradual fade: beetle numbers and protection from slugs are both high within about 20 meters of the hedge, but beyond that distance beetles are scarce and slug damage climbs to the level seen where there is no hedgerow at all.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Ground Beetles and Slug Damage at Increasing Distances from a Hedgerow",
+    "columns": [
+      "Distance from hedgerow (m)",
+      "Beetles per trap",
+      "Wheat seedlings damaged by slugs (%)"
+    ],
+    "rows": [
+      [
+        "5",
+        31,
+        6
+      ],
+      [
+        "20",
+        24,
+        8
+      ],
+      [
+        "40",
+        7,
+        19
+      ],
+      [
+        "80",
+        5,
+        21
+      ],
+      [
+        "No hedgerow",
+        4,
+        22
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Lindqvist's argument?",
+  "choices": {
+    "A": "Slug damage decreased steadily as distance from the hedgerow increased.",
+    "B": "At every distance sampled, the fields with hedgerows had less slug damage than the field with no hedgerow.",
+    "C": "Between 20 and 40 meters from the hedgerow, beetles per trap fell from 24 to 7 and slug damage rose from 8 to 19 percent, close to the 22 percent seen without a hedgerow.",
+    "D": "Beetle numbers were highest 5 meters from the hedgerow, at 31 per trap."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Lindqvist's specific claim is that the change is abrupt and located at about 20 meters, after which conditions match a field with no hedge. The evidence must show a small change between 5 and 20 meters, a large change between 20 and 40 meters, and values beyond 40 meters near the no-hedgerow figures (beetles 7 and 5 against 4; damage 19 and 21 against 22).",
+    "A": "Incorrect. Damage rose with distance, from 6 to 21 percent, so this reverses the table.",
+    "B": "Incorrect. This is true in the narrowest sense (21 percent at 80 meters against 22), but it suggests the hedge helps everywhere, whereas Lindqvist's point is that beyond 20 meters the benefit is essentially gone.",
+    "C": "Correct. It locates the sharp drop in beetles and rise in damage between 20 and 40 meters and shows that beyond it damage nearly matches the field with no hedgerow.",
+    "D": "Incorrect. This is true, but one reading near the hedge cannot show where the beetles' benefit ends or how sharply."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0636",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The Mary Rose, a warship of the English king Henry VIII, sank in 1545 during a battle just outside Portsmouth harbor, and part of its hull lay buried in the seabed for more than four centuries. In 1982 the surviving hull was lifted from the water in front of a television audience of millions. ______ the timbers could not simply be put on display: waterlogged wood shrinks and cracks as it dries, so the hull was sprayed first with water and then with a waxy chemical for nearly thirty years before it could finally be left to dry in open air.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Therefore,",
+    "B": "For example,",
+    "C": "However,",
+    "D": "Likewise,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The second sentence describes a triumph: the hull was raised before millions of viewers. The last sentence introduces a complication that followed the triumph: the wood could not be displayed and needed decades of treatment. A transition that signals a contrast with the apparent success is needed.",
+    "A": "Incorrect. The need for decades of spraying was not caused by the televised lifting; it was a separate problem that the lifting did not solve. This is tempting because the last sentence contains its own cause and effect.",
+    "B": "Incorrect. The long treatment of the timbers is not an example of the hull being raised.",
+    "C": "Correct. \"However\" signals that, despite the successful raising, a long and difficult task remained.",
+    "D": "Incorrect. \"Likewise\" would introduce a parallel success, but the last sentence describes a difficulty."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

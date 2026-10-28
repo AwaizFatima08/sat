@@ -1,0 +1,56 @@
+{
+  "id": "rw-cid-0617",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "central_ideas",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Wandering albatrosses can travel thousands of kilometers across the Southern Ocean while rarely beating their wings. They do so by exploiting the fact that wind blows more slowly close to the surface of the sea, where friction with the waves slows it, than it does a few meters higher. An albatross glides upward into the wind, gaining energy as it rises into faster-moving air, then turns and swoops back down toward the water, gaining speed from the descent before it climbs again. Each loop takes only seconds, and by repeating it the bird can stay aloft for hours at almost no cost in effort.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "According to the text, what allows an albatross to gain energy as it rises into the wind?",
+  "choices": {
+    "A": "The bird beats its wings more strongly at the top of each loop.",
+    "B": "The waves push air upward and lift the bird as it climbs.",
+    "C": "The wind is faster a few meters above the waves than it is at the surface.",
+    "D": "The bird turns downwind before it begins to climb."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The text says the bird \"gains energy as it rises into faster-moving air,\" and the previous sentence explains why the air is faster higher up: friction with the waves slows the wind near the surface. So the difference in wind speed between the surface and a few meters up is what the bird exploits.",
+    "A": "Incorrect. The text says the albatross rarely beats its wings at all.",
+    "B": "Incorrect. The text describes the waves slowing the wind through friction, not pushing air upward.",
+    "C": "Correct. The text explains that wind is slower near the surface and faster higher up, and the bird gains energy by rising into the faster air.",
+    "D": "Incorrect. The text says the bird climbs into the wind, then turns and descends; it does not turn downwind before climbing."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-rat-0606",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A square floor tile has sides of length 30 centimeters. How many of these tiles are needed to cover a floor with an area of 5.4 square meters? (1 meter = 100 centimeters)",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(18\\)",
+    "B": "\\(60\\)",
+    "C": "\\(600\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "One tile covers \\(30 \\cdot 30 = 900\\) square centimeters, which is \\(0.09\\) square meter.",
+    "Number of tiles \\(= \\frac{5.4}{0.09} = 60\\). (Or: \\(5.4\\) square meters \\(= 54{,}000\\) square centimeters, and \\(\\frac{54{,}000}{900} = 60\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{5.4}{0.3}\\), dividing an area by a length. The number of tiles is the floor area divided by the area of one tile.",
+    "B": "Correct. Each tile is \\(0.09\\) square meter, and \\(\\frac{5.4}{0.09} = 60\\).",
+    "C": "Incorrect. This is \\(\\frac{5.4}{0.009}\\), a decimal slip in the tile's area: \\(0.3 \\cdot 0.3 = 0.09\\), not \\(0.009\\).",
+    "D": "Incorrect. This treats 1 square meter as 100 square centimeters, giving \\(\\frac{540}{900}\\) and then a rounded guess. One square meter is \\(100 \\cdot 100 = 10{,}000\\) square centimeters."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "arithmetic",
+    "D": "wrong_formula"
+  },
+  "verify": "ans = Rational('5.4') / (Rational('0.3')**2)\nassert ans == 60\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0620",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A mobile data plan provides 12 gigabytes of data at the start of each month. The amount of data, in gigabytes, remaining after \\(h\\) hours of video streaming is given by \\(D(h) = 12 - 0.75h\\). According to the function, after how many hours of video streaming will no data remain?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "16"
+  ],
+  "solution": [
+    "No data remains when \\(D(h) = 0\\): \\(12 - 0.75h = 0\\).",
+    "\\(0.75h = 12\\), so \\(h = \\frac{12}{0.75} = 16\\) hours."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "h = symbols('h')\nsol = solve(Eq(12 - Rational(3, 4)*h, 0), h)\nassert sol == [16]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "16",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0643",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A snake flicking its tongue is not tasting the air in the way that a person tastes food. Each flick collects tiny chemical particles from the air or the ground, and when the tongue is drawn back into the mouth, those particles are delivered to a sense organ in the roof of the mouth, where they are analyzed. The tongue's forked shape matters too. ______ because the two tips sample points a short distance apart, the snake can compare the strength of a scent on its left and right and turn toward the stronger side.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Specifically,",
+    "B": "However,",
+    "C": "Likewise,",
+    "D": "As a result,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The third sentence makes a brief, general claim: the forked shape \"matters too.\" The last sentence explains exactly how it matters: the two tips let the snake compare scent on each side. A transition that introduces a more precise explanation of the claim is needed.",
+    "A": "Correct. \"Specifically\" introduces the precise way in which the forked shape matters.",
+    "B": "Incorrect. The explanation of the two tips supports the claim that the fork matters; it does not contrast with it.",
+    "C": "Incorrect. \"Likewise\" would introduce a separate, similar point, but the last sentence explains the point just made rather than adding a parallel one. This is tempting because the sentence before ends with \"too.\"",
+    "D": "Incorrect. The snake's ability to compare scents is not caused by the statement that the fork matters; it is what that statement means."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

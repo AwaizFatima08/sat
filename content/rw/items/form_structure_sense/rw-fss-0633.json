@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0633",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The resurrection fern grows on the branches of oak and other trees in the southeastern United States. During a dry spell, the ______ fronds curl up, turn gray-brown, and look completely dead. The plant can lose about three quarters of its water and survive, which few other ferns can do. When rain finally arrives, the fronds unfold and turn green again within hours, which is how the fern earned its name.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "ferns",
+    "B": "fern's",
+    "C": "ferns'",
+    "D": "ferns's"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The fronds belong to one plant, \"the resurrection fern,\" which the text treats as singular (\"the plant,\" \"its water\"). A singular noun shows possession with an apostrophe followed by s: \"fern's.\"",
+    "A": "Incorrect. \"Ferns\" is a plain plural with no apostrophe, so it cannot show that the fronds belong to the fern.",
+    "B": "Correct. \"Fern's\" is the singular possessive, showing that the fronds belong to the one fern.",
+    "C": "Incorrect. \"Ferns'\" is a plural possessive, but the text is about a single fern (\"the plant,\" \"its\").",
+    "D": "Incorrect. \"Ferns's\" is not a standard form; a plural ending in s takes only an apostrophe, and in any case the owner here is singular."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "plural_possessive",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": "C",
+        "note": "fern's (one plant's fronds) and ferns' (the species) both fit the stem.",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

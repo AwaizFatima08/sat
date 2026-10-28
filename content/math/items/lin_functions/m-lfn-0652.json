@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0652",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = 5x - 12\\). For what value of \\(x\\) is \\(f(2x) - f(x) = 9\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "9/5"
+  ],
+  "solution": [
+    "\\(f(2x) = 10x - 12\\) and \\(f(x) = 5x - 12\\), so \\(f(2x) - f(x) = 5x\\).",
+    "Then \\(5x = 9\\), so \\(x = \\frac{9}{5} = 1.8\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nf = lambda u: 5*u - 12\nsol = solve(Eq(f(2*x) - f(x), 9), x)\nassert sol == [Rational(9, 5)]\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == sol[0]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "9/5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

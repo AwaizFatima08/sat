@@ -1,0 +1,57 @@
+{
+  "id": "m-smp-0601",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A traffic engineer selected 80 cars at random from the cars that passed through a toll booth on one day. Of the selected cars, 32 had only the driver inside. Based on the sample, which of the following is the best estimate of the percent of all cars that passed through the toll booth that day that had only the driver inside?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "32%",
+    "B": "60%",
+    "C": "The percent cannot be estimated without counting the occupants of every car that passed through the booth.",
+    "D": "40%"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The sample proportion is \\(\\frac{32}{80} = 0.4\\), or 40%.",
+    "Because the sample was selected at random, the sample percent is the best estimate of the percent for all cars that passed through the booth that day."
+  ],
+  "explanation": {
+    "A": "Incorrect. 32 is the number of sampled cars with only the driver, not a percent; it must be divided by the sample size of 80.",
+    "B": "Incorrect. This is \\(\\frac{48}{80}\\), the percent of sampled cars that had at least one passenger.",
+    "C": "Incorrect. A random sample allows the percent for all cars to be estimated; counting every car is not required.",
+    "D": "Correct. \\(\\frac{32}{80} = 40\\%\\) of the sampled cars had only the driver, so about 40% of all cars that day are estimated to have had only the driver."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "p = Rational(32, 80)\nassert p == Rational(2, 5)\nnum = {k: Rational(choices[k].rstrip('%')) / 100 for k in choices if choices[k].endswith('%')}\nassert [k for k in num if num[k] == p] == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

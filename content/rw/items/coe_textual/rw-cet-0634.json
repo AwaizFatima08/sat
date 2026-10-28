@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0634",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the Waitomo caves of New Zealand, the larvae of a small fly glow blue-green on the cave ceilings and hang sticky silk threads beneath them. Flying insects drawn toward the lights blunder into the threads and are hauled up and eaten. Biologist Hemi Walker proposes that each larva adjusts its brightness according to its hunger: a larva that has not eaten for some time glows more brightly, drawing more prey toward its threads, while a well-fed larva dims to save energy. The proposal would explain why the glow of a single larva can vary from night to night.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly weaken Walker's proposal?",
+  "choices": {
+    "A": "Larvae that hung a greater number of threads caught more prey over a month than larvae with fewer threads.",
+    "B": "Insects in the cave were strongly attracted to artificial lights of the same color as the larvae's glow.",
+    "C": "Larvae glowed most brightly in sections of the cave where flying insects were scarcest.",
+    "D": "Larvae that had just been fed glowed as brightly over the following nights as larvae that had gone without food for two weeks."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Walker's proposal predicts that hunger raises brightness and feeding lowers it. A finding weakens it if brightness turns out not to depend on hunger at all. If recently fed larvae glow just as brightly as larvae starved for two weeks, hunger is not controlling the glow, and the proposal fails.",
+    "A": "Incorrect. The link between thread number and catch says nothing about whether brightness depends on hunger.",
+    "B": "Incorrect. That insects are drawn to this color explains why glowing works, not whether larvae adjust it according to hunger.",
+    "C": "Incorrect. Brighter glowing where prey are scarce, and larvae presumably hungrier, is consistent with Walker's proposal.",
+    "D": "Correct. If feeding makes no difference to brightness, hunger cannot be what controls the glow, which is the core of Walker's proposal."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "m-lat-0626",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Two vertical posts stand on level ground, as shown. One post is \\(a\\) meters tall and the other is \\(b\\) meters tall. A straight wire runs from the top of each post to the base of the other post. Which of the following expressions gives the height, in meters, at which the two wires cross?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A1": [
+        0.0,
+        0.0
+      ],
+      "A2": [
+        0.0,
+        6.0
+      ],
+      "B1": [
+        10.0,
+        0.0
+      ],
+      "B2": [
+        10.0,
+        4.0
+      ],
+      "G1": [
+        -2.0,
+        0.0
+      ],
+      "G2": [
+        12.0,
+        0.0
+      ]
+    },
+    "segments": [
+      [
+        "A1",
+        "A2"
+      ],
+      [
+        "B1",
+        "B2"
+      ],
+      [
+        "G1",
+        "G2"
+      ],
+      [
+        "A2",
+        "B1"
+      ],
+      [
+        "B2",
+        "A1"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          -0.8,
+          3.0
+        ],
+        "text": "a"
+      },
+      {
+        "at": [
+          10.8,
+          2.0
+        ],
+        "text": "b"
+      }
+    ],
+    "right_angles": [
+      "A1",
+      "B1"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{a + b}{2}\\)",
+    "B": "\\(\\frac{ab}{a - b}\\)",
+    "C": "\\(\\frac{ab}{a + b}\\)",
+    "D": "\\(\\frac{a + b}{ab}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let the posts be \\(w\\) meters apart and let the wires cross at height \\(h\\), directly above a point that is \\(p\\) meters from the base of the \\(a\\)-meter post.",
+    "The wire from the top of the \\(a\\)-meter post creates similar triangles: \\(\\frac{h}{a} = \\frac{w - p}{w}\\). The other wire gives \\(\\frac{h}{b} = \\frac{p}{w}\\).",
+    "Adding: \\(\\frac{h}{a} + \\frac{h}{b} = 1\\), so \\(h\\left(\\frac{a + b}{ab}\\right) = 1\\) and \\(h = \\frac{ab}{a + b}\\). The distance \\(w\\) cancels out."
+  ],
+  "explanation": {
+    "A": "Incorrect. The crossing height is not the average of the two heights; for posts of 6 and 4 meters the wires cross at 2.4 meters, not 5.",
+    "B": "Incorrect. The two similar-triangle equations add to \\(\\frac{h}{a} + \\frac{h}{b} = 1\\); a minus sign here would make the height negative or undefined for some posts.",
+    "C": "Correct. From \\(\\frac{h}{a} + \\frac{h}{b} = 1\\), \\(h = \\frac{ab}{a + b}\\).",
+    "D": "Incorrect. This is the reciprocal of the correct expression; \\(\\frac{a + b}{ab} = \\frac{1}{h}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "reciprocal"
+  },
+  "verify": "a,b,w,p,h=symbols('a b w p h',positive=True)\nsol=solve([Eq(h/a,(w-p)/w),Eq(h/b,p/w)],[h,p])\nhs=simplify(sol[h])\ncand={'A':(a+b)/2,'B':a*b/(a-b),'C':a*b/(a+b),'D':(a+b)/(a*b)}\nassert simplify(cand[answer]-hs)==0 and all(simplify(cand[k]-hs)!=0 for k in cand if k!=answer)\nP=figure['points']\nassert P['A2'][1]==6 and P['B2'][1]==4 and hs.subs({a:6,b:4})==Rational(12,5)\nassert choices[answer]=='\\\\(\\\\frac{ab}{a + b}\\\\)'\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

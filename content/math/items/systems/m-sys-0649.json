@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0649",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[x + ky = 3\\] \\[kx + 4y = 6\\] In the system of equations above, \\(k\\) is a constant. For which value of \\(k\\) does the system have no solution?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(-4\\)",
+    "C": "\\(-2\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The lines are parallel when the slopes match: \\(-\\frac{1}{k} = -\\frac{k}{4}\\), so \\(k^{2} = 4\\) and \\(k = 2\\) or \\(k = -2\\).",
+    "\\(k = 2\\): \\(x + 2y = 3\\) and \\(2x + 4y = 6\\) are the same line, so there are infinitely many solutions.",
+    "\\(k = -2\\): \\(x - 2y = 3\\) and \\(-2x + 4y = 6\\). Doubling the first gives \\(2x - 4y = 6\\), that is, \\(-2x + 4y = -6\\), which contradicts \\(-2x + 4y = 6\\). No solution, so \\(k = -2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. With \\(k = 2\\), the second equation \\(2x + 4y = 6\\) is exactly 2 times the first, \\(x + 2y = 3\\), so the system has infinitely many solutions, not none.",
+    "B": "Incorrect. With \\(k = -4\\) the slopes are \\(\\frac{1}{4}\\) and \\(1\\), so the lines cross once; the slopes match only when \\(k^{2} = 4\\).",
+    "C": "Correct. With \\(k = -2\\): \\(x - 2y = 3\\) and \\(-2x + 4y = 6\\); multiplying the first by \\(-2\\) gives \\(-2x + 4y = -6 \\ne 6\\), so the lines are parallel and distinct.",
+    "D": "Incorrect. With \\(k = 4\\) the slopes are \\(-\\frac{1}{4}\\) and \\(-1\\), so the lines cross once; the slopes match only when \\(k^{2} = 4\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "x, y = symbols('x y')\nnone = [k for k in choices if linsolve([x + value(choices[k])*y - 3, value(choices[k])*x + 4*y - 6], [x, y]) == EmptySet]\nassert none == [answer]\nassert value(choices[answer]) == -2",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

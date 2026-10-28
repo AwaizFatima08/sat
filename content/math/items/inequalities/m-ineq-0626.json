@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0626",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(x\\) and \\(y\\) are positive integers such that \\(x + 2y \\le 14\\) and \\(3x - y \\ge 7\\), what is the greatest possible value of \\(y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(7\\)",
+    "B": "\\(6\\)",
+    "C": "\\(4\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From the inequalities, \\(y \\le \\frac{14 - x}{2}\\) and \\(y \\le 3x - 7\\). A larger \\(x\\) loosens the second bound but tightens the first.",
+    "Try \\(x = 4\\): \\(y \\le 5\\) and \\(y \\le 5\\), so \\(y = 5\\) works (\\(4 + 10 = 14\\) and \\(12 - 5 = 7\\)).",
+    "For \\(x \\le 3\\), \\(y \\le 3x - 7 \\le 2\\); for \\(x \\ge 5\\), \\(y \\le \\frac{14 - 5}{2} = 4.5\\). So the greatest value is 5."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(y = 7\\) satisfies the first inequality only with \\(x = 0\\), which is not positive, and then \\(3(0) - 7 \\ge 7\\) fails. This uses only the first inequality.",
+    "B": "Incorrect. \\(y = 6\\) needs \\(x \\le 2\\) from the first inequality and \\(3x \\ge 13\\) from the second; no integer \\(x\\) does both.",
+    "C": "Incorrect. \\(y = 4\\) is possible (for example with \\(x = 5\\)), but \\(x = 4\\), \\(y = 5\\) also satisfies both inequalities, so 4 is not the greatest.",
+    "D": "Correct. \\((x, y) = (4, 5)\\) satisfies both inequalities, and no larger \\(y\\) does."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "arithmetic",
+    "C": "concept"
+  },
+  "verify": "best = max(b for a in range(1, 40) for b in range(1, 40) if a + 2*b <= 14 and 3*a - b >= 7)\nassert best == 5\nassert value(choices[answer]) == best\nassert all(value(choices[k]) != best for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

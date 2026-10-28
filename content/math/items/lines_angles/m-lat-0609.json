@@ -1,0 +1,109 @@
+{
+  "id": "m-lat-0609",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A straight rope runs from the top of a vertical 6-meter pole in a park in Dhaka, Bangladesh, to a peg on level ground 8 meters from the base of the pole. A vertical stick 1.5 meters tall stands between the pole and the peg and just touches the rope. How far, in meters, is the stick from the base of the pole?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "B": [
+        0.0,
+        0.0
+      ],
+      "T": [
+        0.0,
+        6.0
+      ],
+      "G": [
+        8.0,
+        0.0
+      ]
+    },
+    "segments": [
+      [
+        "B",
+        "T"
+      ],
+      [
+        "T",
+        "G"
+      ],
+      [
+        "B",
+        "G"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          -0.7,
+          3.0
+        ],
+        "text": "6 m"
+      },
+      {
+        "at": [
+          4.0,
+          -0.8
+        ],
+        "text": "8 m"
+      }
+    ],
+    "right_angles": [
+      "B"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(4.5\\)",
+    "C": "\\(6\\)",
+    "D": "\\(6.5\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The stick, the rope, and the ground form a small right triangle at the peg that is similar to the large triangle formed by the pole, the rope, and the ground.",
+    "Let \\(d\\) be the distance from the stick to the peg: \\(\\frac{d}{8} = \\frac{1.5}{6}\\), so \\(d = 2\\).",
+    "The stick is \\(8 - 2 = 6\\) meters from the base of the pole."
+  ],
+  "explanation": {
+    "A": "Incorrect. 2 meters is the distance from the stick to the peg, not to the pole.",
+    "B": "Incorrect. \\(6 - 1.5 = 4.5\\) is a difference of heights, not a distance along the ground.",
+    "C": "Correct. The stick is 2 meters from the peg, so it is \\(8 - 2 = 6\\) meters from the pole.",
+    "D": "Incorrect. This subtracts the stick's height from the 8-meter ground distance; heights and ground distances cannot be combined this way."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "P=figure['points']\nassert P['B'][1]==P['G'][1]==0 and P['T'][0]==P['B'][0]\nassert abs(P['T'][1]-6)<1e-9 and abs(P['G'][0]-8)<1e-9\n# rope falls linearly from height 6 at the pole to 0 at the peg, 8 m away\ns=(Rational(6)-Rational(3,2))/(Rational(6)/Rational(8))\nans=s\nassert ans==6\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h3-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

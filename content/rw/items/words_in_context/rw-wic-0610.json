@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0610",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In 1905, a librarian in Washington County, Maryland, loaded shelves of books onto a horse-drawn wagon and sent it along the county's back roads. Farming families who lived too far from town to visit the library could now borrow books at their own gates. The wagon was so well received that it ______ many similar services: by the 1920s, motor trucks fitted with shelves were carrying books to rural readers across the United States.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "inspired",
+    "B": "outlasted",
+    "C": "delayed",
+    "D": "replaced"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The wagon \"was so well received\" that other services like it appeared later, as the colon explains. A success that leads others to copy it inspires them, so \"inspired\" fits.",
+    "A": "Correct. Because the wagon was popular, many similar services followed; it inspired them.",
+    "B": "Incorrect. The text says nothing about how long the wagon lasted compared with the later trucks.",
+    "C": "Incorrect. The wagon's success led to more services, not fewer or later ones.",
+    "D": "Incorrect. The wagon came first; the similar services came after it, so it could not have replaced them."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0601",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In 1937, a botanist at the University of Iowa carefully washed the soil from a single rye plant that had grown in a box for four months. He then measured every root he could find. His count showed that the roots of one rye plant, not counting the tiny root hairs, ______ to a combined length of more than 600 kilometers.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "has added up",
+    "B": "add up",
+    "C": "is adding up",
+    "D": "adds up"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The subject of the verb is \"roots,\" which is plural; \"of one rye plant\" and \"not counting the tiny root hairs\" only describe the roots. A plural subject needs the plural verb \"add up.\"",
+    "A": "Incorrect. \"Has added up\" is singular, but the subject \"roots\" is plural.",
+    "B": "Correct. The plural verb \"add up\" agrees with the plural subject \"roots.\"",
+    "C": "Incorrect. \"Is adding up\" is singular, but the subject \"roots\" is plural.",
+    "D": "Incorrect. \"Adds up\" is singular and would agree with \"plant,\" but the subject is the plural \"roots.\""
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

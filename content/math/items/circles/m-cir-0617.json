@@ -1,0 +1,59 @@
+{
+  "id": "m-cir-0617",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A circular wooden tabletop has a radius of 20 centimeters. A carpenter cuts off a piece along a straight line from point \\(A\\) to point \\(B\\) on the edge of the tabletop, where angle \\(AOB\\) at the center \\(O\\) is a right angle. What is the area, in square centimeters, of the smaller piece?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(100\\pi - 200\\sqrt{2}\\)",
+    "B": "\\(100\\pi - 200\\)",
+    "C": "\\(100\\pi\\)",
+    "D": "\\(400\\pi - 200\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The cut-off piece is sector \\(AOB\\) minus triangle \\(AOB\\).",
+    "Sector: angle \\(AOB\\) is \\(90^{\\circ}\\), a quarter of the circle, so its area is \\(\\frac{1}{4}\\pi(20)^{2} = 100\\pi\\).",
+    "Triangle \\(AOB\\) is a right triangle with legs \\(OA = OB = 20\\): area \\(\\frac{1}{2}(20)(20) = 200\\).",
+    "Cut-off piece: \\(100\\pi - 200\\) square centimeters."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(200\\sqrt{2}\\) comes from using the chord \\(AB = 20\\sqrt{2}\\) as the base of the triangle with the radius 20 as its height; the height to that base is only \\(10\\sqrt{2}\\).",
+    "B": "Correct. Quarter circle \\(100\\pi\\) minus right triangle \\(\\frac{1}{2}(20)(20) = 200\\).",
+    "C": "Incorrect. \\(100\\pi\\) is the whole sector; the triangle \\(AOB\\), which stays on the table, must be subtracted.",
+    "D": "Incorrect. \\(400\\pi\\) is the whole circle, but only the quarter sector \\(AOB\\) is involved."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "r=20\nsector=Rational(90,360)*pi*r**2\ntri=Rational(1,2)*r*r\nans=sector-tri\nassert ans==100*pi-200\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\nassert simplify(value(choices['C'])-sector)==0 and simplify(value(choices['A'])-(sector-Rational(1,2)*r*sqrt(2)*r))==0 and simplify(value(choices['D'])-(pi*r**2-tri))==0\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

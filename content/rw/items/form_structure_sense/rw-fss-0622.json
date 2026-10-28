@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0622",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "NASA's New Horizons spacecraft was launched from Florida in January 2006 on a mission to Pluto. By the time it flew past the dwarf planet in July 2015, the spacecraft ______ for more than nine years and covered nearly five billion kilometers, and it had spent much of that long cruise in a low-power sleep mode to protect its instruments.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "will have traveled",
+    "B": "travels",
+    "C": "has traveled",
+    "D": "had traveled"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The sentence describes an action completed before another past event: the traveling was finished \"by the time it flew past\" Pluto in 2015. An action completed before a past moment takes the past perfect, \"had traveled,\" which also matches \"had spent\" later in the sentence.",
+    "A": "Incorrect. The future perfect \"will have traveled\" refers to a future point, but the flyby happened in 2015.",
+    "B": "Incorrect. The present tense \"travels\" does not fit an action completed before a past event in 2015.",
+    "C": "Incorrect. The present perfect \"has traveled\" links an action to the present, but the sentence measures the travel up to a past moment, July 2015.",
+    "D": "Correct. The past perfect \"had traveled\" shows that the traveling was complete by the past moment \"it flew past the dwarf planet.\""
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "C": "grammar_rule"
+  },
+  "grammar": "verb_form",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

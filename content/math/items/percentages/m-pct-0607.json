@@ -1,0 +1,57 @@
+{
+  "id": "m-pct-0607",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(a\\) is \\(25\\%\\) of \\(b\\), where \\(b > 0\\), then \\(b\\) is what percent greater than \\(a\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(75\\%\\)",
+    "B": "\\(300\\%\\)",
+    "C": "\\(400\\%\\)",
+    "D": "\\(25\\%\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(a = 0.25b\\), so \\(b = 4a\\).",
+    "\\(b - a = 3a\\), which is \\(300\\%\\) of \\(a\\). So \\(b\\) is \\(300\\%\\) greater than \\(a\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(100\\% - 25\\%\\), the percent by which \\(a\\) is less than \\(b\\). The question measures the difference as a percent of \\(a\\), the smaller number, so the answer is larger than \\(100\\%\\).",
+    "B": "Correct. \\(b = 4a\\), so \\(b\\) exceeds \\(a\\) by \\(3a\\), which is \\(300\\%\\) of \\(a\\).",
+    "C": "Incorrect. \\(b\\) is \\(400\\%\\) of \\(a\\), but the amount by which it is greater is \\(b - a = 3a\\), or \\(300\\%\\) of \\(a\\).",
+    "D": "Incorrect. This is the percent that \\(a\\) is of \\(b\\), not how much greater \\(b\\) is than \\(a\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "b = symbols('b', positive=True)\na = Rational(25, 100)*b\nans = simplify((b - a)/a)\nassert ans == 3\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

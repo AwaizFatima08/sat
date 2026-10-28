@@ -1,0 +1,46 @@
+{
+  "id": "m-ovd-0612",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The mean of the daily sales, in thousands of dollars, at a bookshop over 5 days was 18. If the day with the greatest sales is excluded, the mean of the other 4 days is 15. If instead the day with the least sales is excluded, the mean of the other 4 days is 20. What is the range, in thousands of dollars, of the daily sales over the 5 days?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "20"
+  ],
+  "solution": [
+    "Total sales over 5 days: \\(5 \\times 18 = 90\\).",
+    "Greatest daily sales: \\(90 - 4 \\times 15 = 30\\). Least daily sales: \\(90 - 4 \\times 20 = 10\\).",
+    "Range: \\(30 - 10 = 20\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "tot = 5 * 18\nmx = tot - 4 * 15\nmn = tot - 4 * 20\nassert (mx, mn) == (30, 10)\nassert [Rational(s) for s in spr_answers] == [mx - mn] == [20]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "20",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

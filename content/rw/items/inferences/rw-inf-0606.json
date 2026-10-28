@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0606",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "For centuries, English officials recorded debts and payments on tally sticks. A clerk cut notches into a wooden stick to show the amount, then split the stick lengthwise so that the notches ran across both halves. The treasury kept one half, and the person who had paid or was owed the money kept the other. To check the debt later, the two halves were fitted together. Because wood splits along an irregular path and no two sticks have the same grain, this method meant that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "tally sticks had to be replaced whenever the wood began to dry out.",
+    "B": "a forged half would be easy to detect, since it would not fit the genuine one.",
+    "C": "clerks could record much larger sums than written documents allowed.",
+    "D": "either half of a tally could be read on its own without the other."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The halves are checked by fitting them together, and the text stresses that wood splits irregularly and every stick's grain is unique. A false half made separately could not match the split or the grain of the real one, so forgery would be obvious.",
+    "A": "Incorrect. The text says nothing about wood drying out or sticks being replaced.",
+    "B": "Correct. A unique split and grain mean only the original matching half will fit, exposing any fake.",
+    "C": "Incorrect. The text compares nothing about the size of sums that tallies or documents could record.",
+    "D": "Incorrect. The text says the halves were fitted together to check a debt, which implies both halves were needed."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

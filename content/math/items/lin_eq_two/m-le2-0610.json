@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0610",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which equation is equivalent to \\(9x - 3y = 21\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = 3x - 7\\)",
+    "B": "\\(y = -3x + 7\\)",
+    "C": "\\(y = 3x + 7\\)",
+    "D": "\\(y = 9x - 21\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Subtract \\(9x\\): \\(-3y = -9x + 21\\).",
+    "Divide by \\(-3\\): \\(y = 3x - 7\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(-3y = -9x + 21\\), and dividing by \\(-3\\) gives \\(y = 3x - 7\\).",
+    "B": "Incorrect. Dividing \\(-9x + 21\\) by \\(-3\\) changes both signs: \\(3x - 7\\).",
+    "C": "Incorrect. \\(21 \\div (-3) = -7\\), not \\(7\\).",
+    "D": "Incorrect. Both sides must still be divided by \\(-3\\) after moving \\(9x\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "arithmetic",
+    "D": "wrong_formula"
+  },
+  "verify": "x, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\ntarget = 9*x - 3*y - 21\ngood = lambda s: simplify(eq(s) * 3 + target) == 0 or simplify(eq(s) * 3 - target) == 0\nok = [k for k in choices if good(choices[k])]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0623",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rickshaw driver in Dhaka pays 400 taka each day to rent his rickshaw and charges 50 taka for each ride. One day, after paying the rental, he had 1,050 taka left from his fares. How many rides did he give that day?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(13\\)",
+    "B": "\\(21\\)",
+    "C": "\\(29\\)",
+    "D": "\\(1{,}450\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(r\\) be the number of rides. Fares minus rent equals what is left: \\(50r - 400 = 1{,}050\\).",
+    "Add 400: \\(50r = 1{,}450\\).",
+    "Divide by 50: \\(r = 29\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of subtracting the rent from 1,050 instead of adding it: \\(50r = 650\\).",
+    "B": "Incorrect. This is the result of ignoring the rent: \\(\\frac{1{,}050}{50} = 21\\).",
+    "C": "Correct. \\(50r = 1{,}050 + 400 = 1{,}450\\), so \\(r = 29\\).",
+    "D": "Incorrect. This is the total amount of fares, in taka, not the number of rides."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "wrong_formula",
+    "D": "stopped_early"
+  },
+  "verify": "r = symbols('r')\ns = solve(Eq(50*r - 400, 1050), r)[0]\nassert s == 29\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "m-tvd-0701",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A teacher in Multan recorded the weekly study hours and the practice test score for 8 students. The scatterplot shows the data and the line of best fit. Based on the line of best fit, what is the predicted practice test score for a student who studies 5 hours per week?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Study hours per week",
+    "y_label": "Practice test score",
+    "points": [
+      [
+        1,
+        52
+      ],
+      [
+        2,
+        58
+      ],
+      [
+        3,
+        64
+      ],
+      [
+        4,
+        73
+      ],
+      [
+        5,
+        74
+      ],
+      [
+        6,
+        80
+      ],
+      [
+        7,
+        86
+      ],
+      [
+        8,
+        97
+      ]
+    ],
+    "line": "6*x + 46"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(76\\)",
+    "B": "\\(82\\)",
+    "C": "\\(46\\)",
+    "D": "\\(70\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The line of best fit is \\(y = 6x + 46\\), where \\(x\\) is study hours and \\(y\\) is the score.",
+    "Substitute \\(x = 5\\): \\(y = 6(5) + 46 = 76\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(6(5) + 46 = 76\\).",
+    "B": "Incorrect. This is the value at 6 hours, \\(6(6) + 46 = 82\\). The wrong number of hours was used.",
+    "C": "Incorrect. \\(46\\) is the predicted score for a student who studies 0 hours, which is the vertical intercept. It is not the prediction at 5 hours.",
+    "D": "Incorrect. This is the value of the line at 4 hours, \\(6(4) + 46 = 70\\). The wrong point on the horizontal axis was read."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\npts = figure['points']\nn = len(pts)\nmx = Rational(sum(p[0] for p in pts), n)\nmy = Rational(sum(p[1] for p in pts), n)\nb = sum((p[0] - mx)*(p[1] - my) for p in pts)/sum((p[0] - mx)**2 for p in pts)\nassert b == 6 and my - b*mx == 46\nassert 6*5 + 46 == value(choices[answer]) and answer == 'C'\nassert all(value(choices[k]) != 76 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h4-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

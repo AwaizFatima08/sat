@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0603",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following describes all solutions to the inequality \\(7 - 3x > 22\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x > -5\\)",
+    "B": "\\(x < -5\\)",
+    "C": "\\(x < 5\\)",
+    "D": "\\(x < -\\frac{29}{3}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Subtract 7 from both sides: \\(-3x > 15\\).",
+    "Divide both sides by \\(-3\\) and reverse the inequality sign: \\(x < -5\\).",
+    "Check: \\(x = -6\\) gives \\(7 + 18 = 25 > 22\\), while \\(x = 0\\) gives \\(7\\), which is not greater than 22."
+  ],
+  "explanation": {
+    "A": "Incorrect. Dividing by the negative number \\(-3\\) reverses the inequality sign; this answer keeps the sign unchanged.",
+    "B": "Correct. \\(-3x > 15\\), and dividing by \\(-3\\) reverses the sign: \\(x < -5\\).",
+    "C": "Incorrect. \\(x = 0\\) is less than 5 but gives \\(7 - 0 = 7\\), not greater than 22. This drops the negative sign when dividing.",
+    "D": "Incorrect. This adds 7 to 22 instead of subtracting it, giving \\(-3x > 29\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "arithmetic",
+    "D": "arithmetic"
+  },
+  "verify": "P = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nx = symbols('x')\ns = solve_univariate_inequality(7 - 3*x > 22, x, relational=False)\nassert s == Interval.open(-oo, -5)\nassert solve_univariate_inequality(P(choices[answer]), x, relational=False) == s\nassert all(solve_univariate_inequality(P(choices[k]), x, relational=False) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

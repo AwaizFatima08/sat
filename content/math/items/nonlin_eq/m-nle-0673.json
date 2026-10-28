@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0673",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A tank containing 500 liters of water is drained through a valve at its base. The volume \\(V\\), in liters, of water remaining in the tank \\(t\\) minutes after the valve is opened is modeled by \\(V = 500\\left(1 - \\frac{t}{20}\\right)^{2}\\) for \\(0 \\le t \\le 20\\). According to the model, how many minutes after the valve is opened does the tank contain 250 liters of water?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10\\)",
+    "B": "\\(10\\sqrt{2}\\)",
+    "C": "\\(20 + 10\\sqrt{2}\\)",
+    "D": "\\(20 - 10\\sqrt{2}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Set \\(V = 250\\): \\(500\\left(1 - \\frac{t}{20}\\right)^{2} = 250\\), so \\(\\left(1 - \\frac{t}{20}\\right)^{2} = \\frac{1}{2}\\).",
+    "For \\(0 \\le t \\le 20\\), \\(1 - \\frac{t}{20} \\ge 0\\), so take the positive root: \\(1 - \\frac{t}{20} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}\\).",
+    "Then \\(\\frac{t}{20} = 1 - \\frac{\\sqrt{2}}{2}\\), so \\(t = 20 - 10\\sqrt{2} \\approx 5.9\\) minutes. The tank drains faster at first, so it is half empty well before the halfway time."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of assuming the tank drains at a constant rate, so that half the water is gone at half of 20 minutes; the model is quadratic, and \\(V(10) = 125\\), not \\(250\\).",
+    "B": "Incorrect. This is the result of solving \\(\\frac{t}{20} = \\frac{1}{\\sqrt{2}}\\), dropping the \\(1 -\\) in \\(1 - \\frac{t}{20}\\).",
+    "C": "Incorrect. This is the result of taking the negative root \\(1 - \\frac{t}{20} = -\\frac{1}{\\sqrt{2}}\\); it is greater than 20, outside the interval on which the model applies.",
+    "D": "Correct. \\(\\left(1 - \\frac{t}{20}\\right)^{2} = \\frac{1}{2}\\) with \\(t \\le 20\\) gives \\(t = 20 - 10\\sqrt{2}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "stopped_early",
+    "C": "sign_error"
+  },
+  "verify": "t = symbols('t', real=True)\nsols = [s for s in solve(Eq(500*(1 - t/20)**2, 250), t) if 0 <= s <= 20]\nassert len(sols) == 1 and simplify(sols[0] - (20 - 10*sqrt(2))) == 0\nassert simplify(value(choices[answer]) - sols[0]) == 0\nassert all(simplify(value(choices[k]) - sols[0]) != 0 for k in choices if k != answer)\nassert 500*(1 - Rational(10, 20))**2 == 125",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

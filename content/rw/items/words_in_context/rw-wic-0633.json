@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0633",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The boat had been their father's, and for three summers it had sat upside down behind the shed while the paint flaked away. When Rosa finally proposed repainting it, her sister Marta agreed at once, but their ideas of the job were different. Rosa wanted the hull ______ in a single afternoon: scrape, prime, paint, done. Marta insisted on sanding every plank and letting each coat dry overnight. The work took ten days, and when they turned the boat right side up, even Rosa admitted that the patient way had been the right one.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "preserved",
+    "B": "finished",
+    "C": "abandoned",
+    "D": "inspected"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The sisters' \"ideas of the job were different\": Rosa wants everything done \"in a single afternoon: scrape, prime, paint, done,\" while Marta takes ten days. The blank describes Rosa's goal of completing the whole job quickly, so \"finished\" is the precise choice.",
+    "A": "Incorrect. Preserving the boat is the purpose of repainting it, but the sentence is about how fast Rosa wants the job completed.",
+    "B": "Correct. Rosa wants the whole job completed in one afternoon, in contrast to Marta's ten-day approach.",
+    "C": "Incorrect. Rosa is the one who proposed repainting the boat; she does not want to give it up.",
+    "D": "Incorrect. Rosa's list (\"scrape, prime, paint\") is a plan for doing the work, not for examining the boat."
+  },
+  "traps": {
+    "A": "wrong_tone",
+    "C": "reversed",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

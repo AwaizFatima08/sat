@@ -1,0 +1,58 @@
+{
+  "id": "m-tvd-0614",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A line of best fit \\(y = 2x + 7\\) models the cost \\(y\\), in dollars, of a piece of rope of length \\(x\\), in meters. Which of the following equations gives the same model when the length \\(x\\) is measured in centimeters and the cost \\(y\\) is measured in cents?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = 200x + 700\\)",
+    "B": "\\(y = 2x + 700\\)",
+    "C": "\\(y = 0.02x + 700\\)",
+    "D": "\\(y = 2x + 7\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "If \\(x\\) is in centimeters, the length in meters is \\(\\frac{x}{100}\\), so the cost in dollars is \\(2\\left(\\frac{x}{100}\\right) + 7 = 0.02x + 7\\).",
+    "To express the cost in cents, multiply by 100: \\(y = 100(0.02x + 7) = 2x + 700\\).",
+    "Check: 1 meter (100 cm) costs \\(2(1) + 7 = 9\\) dollars, and \\(2(100) + 700 = 900\\) cents."
+  ],
+  "explanation": {
+    "A": "Incorrect. This multiplies the slope by 100 for the change to cents but forgets to divide by 100 for the change from meters to centimeters; the two changes cancel in the slope.",
+    "B": "Correct. Changing \\(x\\) to centimeters divides the slope by 100, changing \\(y\\) to cents multiplies everything by 100, so the slope stays 2 and the constant becomes 700.",
+    "C": "Incorrect. This converts the length to centimeters but leaves the slope in dollars per centimeter instead of multiplying it by 100 to get cents.",
+    "D": "Incorrect. The numbers in the model change when the units change: for example, 1 meter costs 9 dollars, which is 900 cents, but this equation gives \\(2(100) + 7 = 207\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "reciprocal",
+    "D": "concept"
+  },
+  "verify": "x = symbols('x')\ntarget = expand(100 * (2 * (x / 100) + 7))\nassert target == 2*x + 700\nf = lambda k: value(choices[k].replace('y = ', ''))\nassert simplify(f(answer) - target) == 0\nassert all(simplify(f(k) - target) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

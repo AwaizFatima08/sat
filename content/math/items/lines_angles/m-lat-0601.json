@@ -1,0 +1,127 @@
+{
+  "id": "m-lat-0601",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "On a tea estate near Sylhet, Bangladesh, the rows of tea bushes are straight and parallel. A straight footpath crosses two of the rows, as shown, making a \\(118^{\\circ}\\) angle with the first row. What is the value of \\(x\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "U": [
+        -1.0,
+        0.0
+      ],
+      "V": [
+        10.0,
+        0.0
+      ],
+      "J": [
+        -1.0,
+        4.0
+      ],
+      "K": [
+        10.0,
+        4.0
+      ],
+      "E": [
+        3.0,
+        0.0
+      ],
+      "F": [
+        5.127,
+        4.0
+      ],
+      "G": [
+        2.39,
+        -1.148
+      ],
+      "H": [
+        5.737,
+        5.148
+      ]
+    },
+    "segments": [
+      [
+        "U",
+        "V"
+      ],
+      [
+        "J",
+        "K"
+      ],
+      [
+        "G",
+        "H"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          2.279,
+          1.2
+        ],
+        "text": "118°"
+      },
+      {
+        "at": [
+          4.406,
+          5.2
+        ],
+        "text": "x°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(62\\)",
+    "B": "\\(118\\)",
+    "C": "\\(28\\)",
+    "D": "\\(59\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The two rows are parallel lines, and the footpath is a transversal.",
+    "The \\(118^{\\circ}\\) angle and the \\(x^{\\circ}\\) angle are in the same position at the two crossings, so they are corresponding angles.",
+    "Corresponding angles are equal: \\(x = 118\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(180 - 118\\); corresponding angles are equal, not supplementary.",
+    "B": "Correct. The two angles are corresponding angles at parallel lines, so \\(x = 118\\).",
+    "C": "Incorrect. This is \\(118 - 90\\); there is no right angle in the figure to subtract from.",
+    "D": "Incorrect. This is half of 118; a parallel-line angle pair is equal or supplementary, never halved."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "arithmetic"
+  },
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['U'][1]==P['V'][1] and P['J'][1]==P['K'][1]\nassert abs(ang('U','E','F')-118)<0.1 and abs(ang('J','F','H')-118)<0.1\nans=118\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

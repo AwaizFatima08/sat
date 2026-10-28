@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0698",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Basketball players and fans alike believe in the \"hot hand\": the sense that a player who has made several shots in a row is more likely to make the next. A widely cited statistical analysis published in the 1980s examined shooting records and found no such pattern, and for decades the belief was cited by psychologists as a textbook case of people seeing streaks in random data. More recently, however, statisticians have shown that the method used in that analysis was subtly biased against detecting a streak, and several reanalyses of the same kind of data have found a modest hot hand after all. Taken together, the evidence remains ______: neither the believers nor the skeptics can yet claim to have been proved right.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "contrived",
+    "B": "conclusive",
+    "C": "equivocal",
+    "D": "anecdotal"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The colon defines the blank: \"neither the believers nor the skeptics can yet claim to have been proved right.\" Evidence that points both ways and settles nothing is \"equivocal.\" The passage has shown one analysis finding no streak and later reanalyses finding \"a modest hot hand,\" so the picture is genuinely mixed.",
+    "A": "Incorrect. \"Contrived\" means artificially arranged. The text says the original method was biased, not that anyone faked or arranged the evidence.",
+    "B": "Incorrect. \"Conclusive\" means decisive. The text says neither side has been proved right, so the evidence is the opposite of decisive.",
+    "C": "Correct. \"Equivocal\" means open to more than one interpretation or inconclusive, which fits evidence that lets neither side claim victory.",
+    "D": "Incorrect. \"Anecdotal\" describes evidence based on personal stories rather than data. The text describes statistical analyses of shooting records, which are data."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "wrong_tone"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

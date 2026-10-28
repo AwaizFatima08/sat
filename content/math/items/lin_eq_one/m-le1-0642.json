@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0642",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The length of a rectangular photo is 3 centimeters more than twice its width. If both the length and the width were increased by 2 centimeters, the perimeter of the photo would be 50 centimeters. What is the width, in centimeters, of the photo?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(15\\)",
+    "B": "\\(8\\)",
+    "C": "\\(\\frac{22}{3}\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(w\\) be the width; the length is \\(2w + 3\\). The enlarged photo would be \\(w + 2\\) by \\(2w + 5\\).",
+    "Perimeter: \\(2(w + 2) + 2(2w + 5) = 50\\), so \\(6w + 14 = 50\\).",
+    "Then \\(6w = 36\\) and \\(w = 6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the length of the photo, \\(2(6) + 3\\), not the width.",
+    "B": "Incorrect. This is the width of the enlarged photo, \\(w + 2\\), not the original width.",
+    "C": "Incorrect. This is the result of ignoring the 2-centimeter increases: \\(2w + 2(2w + 3) = 50\\).",
+    "D": "Correct. \\(6w + 14 = 50\\) gives \\(w = 6\\). Check: the enlarged photo is 8 by 17, with perimeter \\(2(8 + 17) = 50\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_quantity",
+    "C": "wrong_formula"
+  },
+  "verify": "w = symbols('w')\ns = solve(Eq(2*(w + 2) + 2*(2*w + 3 + 2), 50), w)[0]\nassert s == 6\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

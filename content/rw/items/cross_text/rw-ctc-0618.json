@@ -1,0 +1,56 @@
+{
+  "id": "rw-ctc-0618",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Were dinosaurs warm-blooded, like birds and mammals, or cold-blooded, like lizards? Paleontologist Rosa Benavides argues for warm-blooded. Thin slices of dinosaur bone show tissue packed with channels for blood vessels, a pattern found in fast-growing mammals, and growth rings indicate that some species went from hatchling to a multi-ton adult in two or three decades. No living reptile grows at anything like that rate, and such growth, Benavides concludes, requires the high, steady metabolism of a warm-blooded animal.",
+  "passage_b": "The growth evidence is sound, but it need not force a choice between two categories. When growth rates are plotted against metabolic rates for hundreds of living species, dinosaurs fall neither with lizards nor with mammals but between them, alongside animals such as tuna and leatherback turtles, which generate their own heat without holding a fixed body temperature. For such animals, biologists have coined the term mesotherm. Asking whether dinosaurs were warm- or cold-blooded may simply be asking the wrong question.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the conclusion reached by Benavides in Text 1?",
+  "choices": {
+    "A": "By denying that bone structure can reveal anything about an animal's metabolism",
+    "B": "By suggesting that tuna and leatherback turtles are more closely related to dinosaurs than birds are",
+    "C": "By arguing that dinosaur growth rates were no faster than those of modern reptiles",
+    "D": "By accepting the growth evidence but arguing that it points to an intermediate kind of metabolism"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Benavides concludes from growth rates that dinosaurs were warm-blooded. Text 2 agrees that \"the growth evidence is sound\" but says it \"need not force a choice between two categories\": plotted against living species, dinosaurs fall \"between\" lizards and mammals, like tuna and leatherback turtles. So the author of Text 2 accepts the evidence and rejects the either-or conclusion.",
+    "A": "Incorrect. Text 2 calls the bone-based growth evidence \"sound.\"",
+    "B": "Incorrect. Text 2 compares dinosaurs' metabolism with that of tuna and leatherback turtles; it says nothing about how closely related they are.",
+    "C": "Incorrect. Text 2 accepts the growth evidence and places dinosaurs above living reptiles, not level with them.",
+    "D": "Correct. Text 2 grants the evidence but argues that it places dinosaurs in a middle category, the mesotherms."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "not_in_text",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

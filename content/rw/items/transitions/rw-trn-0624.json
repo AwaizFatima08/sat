@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0624",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Along the northeastern coast of Japan stand hundreds of stone markers, some of them centuries old, that record the great tsunamis of the past. Most of the stones simply note the date of a wave and the losses it caused, serving as memorials. ______ the stone above the village of Aneyoshi gives a direct instruction, warning residents not to build their homes below the point where it stands. The village's families had obeyed, and when the tsunami of March 2011 swept up the valley, the water stopped just short of the stone.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "As a result,",
+    "B": "For example,",
+    "C": "Likewise,",
+    "D": "By contrast,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence describes what most stones do: record dates and losses as memorials. The third sentence describes a stone that does something different: it gives an instruction. A transition that signals a difference from the general pattern is needed.",
+    "A": "Incorrect. The Aneyoshi stone's instruction is not a result of other stones being memorials.",
+    "B": "Incorrect. \"For example\" is tempting because the Aneyoshi stone is a specific stone, but it is not an example of a memorial that records a date; it does something different.",
+    "C": "Incorrect. \"Likewise\" signals a similar case, but the Aneyoshi stone differs from the memorial stones by giving an instruction.",
+    "D": "Correct. \"By contrast\" shows that the Aneyoshi stone, unlike most of the markers, gives a warning rather than a memorial."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

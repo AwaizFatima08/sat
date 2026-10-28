@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0631",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x > 0\\), which of the following is equivalent to \\(\\sqrt[4]{x^{3}} \\cdot \\sqrt{x}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x^{\\frac{3}{8}}\\)",
+    "B": "\\(x^{\\frac{5}{4}}\\)",
+    "C": "\\(x^{\\frac{2}{3}}\\)",
+    "D": "\\(x^{\\frac{3}{2}}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Write each radical as a power: \\(\\sqrt[4]{x^{3}} = x^{\\frac{3}{4}}\\) and \\(\\sqrt{x} = x^{\\frac{1}{2}}\\).",
+    "Multiplying adds exponents: \\(\\frac{3}{4} + \\frac{1}{2} = \\frac{5}{4}\\), so the product is \\(x^{\\frac{5}{4}}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of multiplying the exponents \\(\\frac{3}{4} \\cdot \\frac{1}{2}\\) instead of adding them.",
+    "B": "Correct. \\(x^{\\frac{3}{4}} \\cdot x^{\\frac{1}{2}} = x^{\\frac{3}{4} + \\frac{2}{4}} = x^{\\frac{5}{4}}\\).",
+    "C": "Incorrect. This is the result of adding numerators and denominators separately: \\(\\frac{3 + 1}{4 + 2}\\).",
+    "D": "Incorrect. This is the result of reading \\(\\sqrt[4]{x^{3}}\\) as \\(x^{1}\\) and adding \\(\\frac{1}{2}\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "X0 = Symbol('x'); x = symbols('x', positive=True)\nv = lambda k: value(choices[k]).subs([(X0, x)])\nt = x**Rational(3, 4) * sqrt(x)\nassert simplify(v(answer) - t) == 0\nassert all(simplify(v(k) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

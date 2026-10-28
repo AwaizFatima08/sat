@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0604",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(15 - \\frac{x}{2} \\ge 6\\), what is the greatest possible value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "18"
+  ],
+  "solution": [
+    "Subtract 15 from both sides: \\(-\\frac{x}{2} \\ge -9\\).",
+    "Multiply both sides by \\(-2\\) and reverse the sign: \\(x \\le 18\\).",
+    "The greatest possible value of \\(x\\) is 18. Check: \\(15 - 9 = 6\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\ns = solve_univariate_inequality(15 - x/2 >= 6, x, relational=False)\nassert s == Interval(-oo, 18)\nassert [Rational(a) for a in spr_answers] == [s.sup]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "18",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

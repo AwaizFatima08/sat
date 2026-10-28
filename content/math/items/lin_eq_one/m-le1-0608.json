@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0608",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The temperature of water in a kettle is 20 degrees Celsius when the kettle is switched on, and the temperature rises at a constant rate of 8 degrees Celsius per minute. How many minutes after the kettle is switched on will the water's temperature be 92 degrees Celsius?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "9"
+  ],
+  "solution": [
+    "Let \\(t\\) be the number of minutes: \\(20 + 8t = 92\\).",
+    "Subtract 20: \\(8t = 72\\).",
+    "Divide by 8: \\(t = 9\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t')\nsol = solve(Eq(20 + 8*t, 92), t)\nassert sol == [9]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "9",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0627",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is equivalent to \\((x + 2)\\left(x^{2} - 2x + 4\\right)\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x^{3} - 8\\)",
+    "B": "\\(x^{3} + 4x^{2} + 8\\)",
+    "C": "\\(x^{3} + 8\\)",
+    "D": "\\(x^{3} + 4x + 8\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Multiply each term of \\((x + 2)\\) by the trinomial: \\(x^{3} - 2x^{2} + 4x + 2x^{2} - 4x + 8\\).",
+    "The \\(x^{2}\\) terms cancel and the \\(x\\) terms cancel, leaving \\(x^{3} + 8\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of a sign slip on the constant: \\(2 \\cdot 4 = +8\\).",
+    "B": "Incorrect. This is the result of adding \\(-2x^{2}\\) and \\(2x^{2}\\) as \\(4x^{2}\\) instead of letting them cancel.",
+    "C": "Correct. After the middle terms cancel, only \\(x^{3} + 8\\) remains.",
+    "D": "Incorrect. This is the result of treating \\(4x - 4x\\) as \\(4x\\) rather than 0."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "x = symbols('x')\nt = (x + 2)*(x**2 - 2*x + 4)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

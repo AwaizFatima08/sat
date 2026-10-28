@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0614",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Between 1892 and 1954, most immigrants who arrived in New York by ship were taken first to Ellis Island. There, doctors checked each newcomer for illness, and officials asked a list of questions about work, money, and family. The process sounds daunting, but for the great majority it was ______: most people passed through the building in a few hours, and only about two in every hundred were turned away.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "brief",
+    "B": "permanent",
+    "C": "exhausting",
+    "D": "pointless"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "\"But\" contrasts the blank with \"daunting,\" and the colon explains it: most people \"passed through the building in a few hours.\" A process that took only a few hours was brief.",
+    "A": "Correct. Most immigrants were through in a few hours, so for them the process was brief.",
+    "B": "Incorrect. The text describes a process that lasted a few hours, not something lasting.",
+    "C": "Incorrect. \"But\" signals that the process was not as hard as it sounds; calling it exhausting would agree with \"daunting\" instead of contrasting with it.",
+    "D": "Incorrect. The text says the checks had a purpose and that some people were turned away; it never suggests the process was useless."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

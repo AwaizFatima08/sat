@@ -1,0 +1,119 @@
+/* HomiLabs Tools: one stylesheet for the hub and its legal pages. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #16181d;
+  --muted: #5b6270;
+  --line: #e3e6eb;
+  --accent: #4f5fe8;
+  --accent-soft: #eceefe;
+  --radius: 18px;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0e12;
+    --surface: #15181e;
+    --text: #eceae6;
+    --muted: #9aa0ab;
+    --line: #262a32;
+    --accent: #8b96ff;
+    --accent-soft: #1d2140;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+/* Header and footer */
+.top { border-bottom: 1px solid var(--line); background: var(--surface); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--text); text-decoration: none; }
+.brand img { width: 30px; height: 30px; }
+.nav { display: flex; gap: 18px; }
+.nav a { color: var(--muted); text-decoration: none; font-weight: 500; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--text); }
+footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 28px 0; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+footer a { color: var(--muted); }
+
+/* Hub */
+.hero { padding: 56px 0 24px; }
+.hero h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.02em; }
+.hero p { color: var(--muted); font-size: 18px; max-width: 620px; margin: 0; }
+.pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
+.pill { background: var(--accent-soft); color: var(--accent); border-radius: 99px; padding: 4px 12px; font-size: 13px; font-weight: 600; }
+.section-title { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 40px 0 16px; }
+.tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.tool {
+  --tool: var(--accent);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  scroll-margin-top: 20px;
+}
+.tool-head { display: flex; gap: 14px; align-items: center; }
+.tool-head img { width: 64px; height: 64px; border-radius: 16px; flex: none; }
+.tool h3 { margin: 0; font-size: 20px; }
+.tool .tagline { margin: 0; color: var(--muted); font-size: 14px; }
+.tool p { margin: 0; }
+.tool ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip { border: 1px solid var(--line); border-radius: 99px; padding: 2px 10px; font-size: 12px; color: var(--muted); }
+.tool-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding-top: 6px; }
+.status {
+  display: inline-block; border-radius: 10px; padding: 8px 14px; font-weight: 600; font-size: 14px; text-decoration: none;
+  background: var(--tool); color: #16181d;
+}
+.status.soon { background: transparent; color: var(--muted); border: 1px dashed var(--line); }
+.tool-links { font-size: 14px; display: flex; gap: 12px; }
+.tool-links a { color: var(--muted); }
+.card-empty {
+  border: 1px dashed var(--line); border-radius: var(--radius); padding: 22px; color: var(--muted);
+  display: flex; align-items: center; justify-content: center; text-align: center; min-height: 160px;
+}
+
+/* Legal pages */
+.doc { max-width: 760px; padding-top: 40px; }
+.doc h1 { font-size: 34px; line-height: 1.15; margin: 0 0 6px; }
+.doc .meta { color: var(--muted); margin: 0 0 24px; font-size: 14px; }
+.doc h2 { margin-top: 36px; font-size: 22px; }
+.doc h3 { margin-top: 24px; font-size: 18px; }
+.doc section { scroll-margin-top: 20px; }
+.summary { background: var(--accent-soft); border-radius: 14px; padding: 16px 18px; }
+.toc { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; }
+.toc ul { margin: 6px 0 0; padding-left: 18px; }
+.app-block { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 4px 22px 18px; margin-top: 20px; }
+.app-block h2 { display: flex; align-items: center; gap: 10px; }
+.app-block h2 img { width: 36px; height: 36px; border-radius: 9px; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+@media (max-width: 520px) {
+  .nav { gap: 14px; }
+  .tool { padding: 18px; }
+  .doc h1 { font-size: 28px; }
+}
+
+/* Data tables stack into one card per row on phones.
+   Give cells a data-label="..." to show their column name when stacked. */
+@media (max-width: 600px) {
+  table, tbody, tr, td { display: block; width: 100%; }
+  tr.head { display: none; }
+  tr { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  td { border: 0; padding: 2px 0; }
+  td:first-child { font-weight: 600; }
+  td[data-label]::before { content: attr(data-label); color: var(--muted); }
+}

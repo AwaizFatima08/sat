@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0711",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = 4(x + 1)(x - 5)\\). The function \\(g\\) is defined by \\(g(x) = f(x + c)\\), where \\(c\\) is a positive constant. If the graph of \\(y = g(x)\\) in the \\(xy\\)-plane passes through the origin, what is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1\\)",
+    "B": "\\(-1\\)",
+    "C": "\\(2\\)",
+    "D": "\\(5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The graph passes through the origin when \\(g(0) = 0\\), that is, \\(f(c) = 0\\).",
+    "The zeros of \\(f\\) are \\(x = -1\\) and \\(x = 5\\), so \\(c = -1\\) or \\(c = 5\\).",
+    "Since \\(c\\) is positive, \\(c = 5\\). (Shifting the graph of \\(f\\) 5 units to the left moves the intercept \\((5, 0)\\) to the origin.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(f(1) = 4(2)(-4) = -32 \\ne 0\\). The zero of \\(f\\) is \\(x = -1\\), not \\(x = 1\\), and \\(-1\\) is not positive anyway.",
+    "B": "Incorrect. \\(c = -1\\) does satisfy \\(f(c) = 0\\), but the question states that \\(c\\) is positive.",
+    "C": "Incorrect. 2 is the \\(x\\)-coordinate of the vertex of \\(f\\). Moving the vertex to \\(x = 0\\) does not put the graph through the origin, since \\(f(2) = -36\\).",
+    "D": "Correct. \\(g(0) = f(c) = 0\\) requires \\(c\\) to be a zero of \\(f\\): \\(-1\\) or \\(5\\). The positive one is 5."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "x, c = symbols('x c')\nf = 4*(x + 1)*(x - 5)\nsols = solve(Eq(f.subs(x, c), 0), c)\nassert sorted(sols) == [-1, 5]\nassert value(choices[answer]) == 5\nassert all(value(choices[k]) != 5 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

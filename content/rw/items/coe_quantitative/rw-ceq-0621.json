@@ -1,0 +1,90 @@
+{
+  "id": "rw-ceq-0621",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Peat bogs store large amounts of carbon, but many bogs in Ireland were drained for farming or fuel, and drained peat dries out and releases carbon dioxide. In 2018, conservationists blocked the drainage ditches on part of a bog in County Offaly to raise the water table. Soil scientist Ciara Doyle measured the water table and the carbon dioxide released from the soil each summer on both the restored section and an unrestored section. Doyle's data support the view that raising the water table reduces carbon release: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Water Table and Carbon Dioxide Release on Two Sections of an Irish Bog",
+    "columns": [
+      "Year",
+      "Restored: water table (cm below surface)",
+      "Restored: CO₂ released (tonnes per hectare)",
+      "Unrestored: water table (cm below surface)",
+      "Unrestored: CO₂ released (tonnes per hectare)"
+    ],
+    "rows": [
+      [
+        "2018",
+        48,
+        6.2,
+        50,
+        6.4
+      ],
+      [
+        "2020",
+        21,
+        3.5,
+        52,
+        6.5
+      ],
+      [
+        "2023",
+        9,
+        1.4,
+        55,
+        6.9
+      ]
+    ],
+    "note": "Ditches on the restored section were blocked in autumn 2018."
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "in 2018, before the ditches were blocked, the two sections released almost the same amount of carbon dioxide.",
+    "B": "the restored section's water table rose from 48 to 9 centimeters below the surface and its carbon dioxide release fell from 6.2 to 1.4 tonnes, while the unrestored section changed little.",
+    "C": "in 2023, the water table in the unrestored section was 55 centimeters below the surface, deeper than it had been in 2018.",
+    "D": "carbon dioxide release from the restored section rose between 2018 and 2023 as its water table climbed toward the surface."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "To show that raising the water table reduces carbon release, the choice must pair the rise in the restored section's water table with its falling carbon dioxide figures, and ideally contrast that with the unrestored section. From 2018 to 2023 the restored water table went from 48 to 9 centimeters below the surface while its release fell from 6.2 to 1.4 tonnes; the unrestored section stayed near 50 centimeters and 6.5 tonnes.",
+    "A": "Incorrect. This is true, but it describes the starting point before restoration and shows no effect of raising the water table.",
+    "B": "Correct. This links the rising water table to the fall in carbon dioxide and uses the unrestored section to show that nothing similar happened without restoration.",
+    "C": "Incorrect. This is accurate, but it describes only the unrestored section's water table and never mentions carbon dioxide.",
+    "D": "Incorrect. This reverses the data: carbon dioxide release from the restored section fell from 6.2 to 1.4 tonnes; it did not rise."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

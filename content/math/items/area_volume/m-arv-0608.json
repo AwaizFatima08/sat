@@ -1,0 +1,45 @@
+{
+  "id": "m-arv-0608",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A mixing bowl is shaped like a hemisphere (half of a sphere) with a radius of 6 inches. The volume of the bowl is \\(k\\pi\\) cubic inches. What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "144"
+  ],
+  "solution": [
+    "Volume of a full sphere: \\(\\frac{4}{3}\\pi r^{3} = \\frac{4}{3}\\pi(6^{3}) = \\frac{4}{3}\\pi(216) = 288\\pi\\).",
+    "A hemisphere is half of that: \\(144\\pi\\). So \\(k = 144\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "ans=(Rational(1,2)*Rational(4,3)*pi*6**3)/pi\nassert ans==144\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "144",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

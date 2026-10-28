@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0641",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(\\ell\\) passes through the points \\((-2, 1)\\) and \\((4, 4)\\). What is the solution \\((x, y)\\) to the system formed by line \\(\\ell\\) and the line \\(x - y = 2\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((8, 6)\\)",
+    "B": "\\((6, 8)\\)",
+    "C": "\\((4, 4)\\)",
+    "D": "\\((2, 0)\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Slope of \\(\\ell\\): \\(\\frac{4 - 1}{4 - (-2)} = \\frac{1}{2}\\). Using \\((4, 4)\\): \\(y - 4 = \\frac{1}{2}(x - 4)\\), so \\(y = \\frac{1}{2}x + 2\\).",
+    "The other line is \\(y = x - 2\\). Set equal: \\(\\frac{1}{2}x + 2 = x - 2\\), so \\(\\frac{1}{2}x = 4\\) and \\(x = 8\\).",
+    "Then \\(y = 8 - 2 = 6\\). Check on \\(\\ell\\): \\(\\frac{1}{2}(8) + 2 = 6\\). The solution is \\((8, 6)\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Line \\(\\ell\\) is \\(y = \\frac{1}{2}x + 2\\); with \\(y = x - 2\\), \\(\\frac{1}{2}x + 2 = x - 2\\) gives \\(x = 8\\), \\(y = 6\\).",
+    "B": "Incorrect. This reverses the coordinates of the solution \\((8, 6)\\); also, \\(6 - 8 \\ne 2\\).",
+    "C": "Incorrect. This point is on line \\(\\ell\\), but \\(4 - 4 = 0 \\ne 2\\), so it is not on the line \\(x - y = 2\\).",
+    "D": "Incorrect. This point is on the line \\(x - y = 2\\), but line \\(\\ell\\) gives \\(y = 3\\) at \\(x = 2\\), so it is not on \\(\\ell\\)."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "pt = lambda s: [value(t) for t in s.strip('\\\\()').split(',')]\nx, y = symbols('x y')\nl = Rational(1, 2)*(x + 2) + 1\nassert l.subs(x, 4) == 4\nsol = solve([y - l, x - y - 2], [x, y])\nassert sol == {x: 8, y: 6}\nassert pt(choices[answer]) == [8, 6]\nassert all(pt(choices[k]) != [8, 6] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

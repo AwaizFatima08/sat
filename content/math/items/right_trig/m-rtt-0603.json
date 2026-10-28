@@ -1,0 +1,57 @@
+{
+  "id": "m-rtt-0603",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In right triangle \\(ABC\\), angle \\(C\\) is a right angle. Which of the following is equal to \\(\\frac{BC}{AB}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\cos A\\)",
+    "B": "\\(\\tan A\\)",
+    "C": "\\(\\sin A\\)",
+    "D": "\\(\\sin B\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Since the right angle is at \\(C\\), \\(\\overline{AB}\\) is the hypotenuse and \\(\\overline{BC}\\) is the leg opposite angle \\(A\\).",
+    "\\(\\frac{\\text{opposite}}{\\text{hypotenuse}} = \\sin A\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(\\cos A = \\frac{AC}{AB}\\), the leg adjacent to angle \\(A\\) over the hypotenuse.",
+    "B": "Incorrect. \\(\\tan A = \\frac{BC}{AC}\\), opposite over adjacent; the hypotenuse is not involved.",
+    "C": "Correct. \\(\\overline{BC}\\) is opposite angle \\(A\\) and \\(\\overline{AB}\\) is the hypotenuse, so the ratio is \\(\\sin A\\).",
+    "D": "Incorrect. \\(\\sin B = \\frac{AC}{AB}\\); \\(\\overline{BC}\\) is adjacent to angle \\(B\\), not opposite it."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "A,B,C=Point(0,4),Point(3,0),Point(0,0)\nassert (A-C).dot(B-C)==0\nr=C.distance(B)/A.distance(B)\nt=atan2(3,4)  # angle A: opposite BC=3, adjacent AC=4\nassert r==Rational(3,5) and simplify(sin(t)-r)==0 and simplify(cos(t)-r)!=0 and simplify(tan(t)-r)!=0 and simplify(sin(pi/2-t)-r)!=0\nassert answer=='C' and 'sin A' in choices[answer]\nassert 'cos A' in choices['A'] and 'tan A' in choices['B'] and 'sin B' in choices['D']\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

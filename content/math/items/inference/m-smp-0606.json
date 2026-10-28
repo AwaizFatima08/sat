@@ -1,0 +1,57 @@
+{
+  "id": "m-smp-0606",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A town has 8,000 residents. In a random sample of 400 of the town's residents, 52% support a new recycling program, and the margin of error for this estimate is 5 percentage points. A city has 80,000 residents. In a random sample of 400 of the city's residents, 52% support the same program. Which of the following is most likely true about the margin of error for the city's estimate?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "It is about 50 percentage points, because the city's population is 10 times as large as the town's.",
+    "B": "It is about 5 percentage points, because the margin of error depends mainly on the sample size, and the two samples have the same size.",
+    "C": "It is about 0.5 percentage point, because the sample is a much smaller fraction of the city's population.",
+    "D": "It cannot be estimated, because a sample of 400 is too small for a population of 80,000."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The margin of error for a random sample depends mainly on the sample size (and the sample percent), not on the size of the population.",
+    "Both samples have 400 residents and the same sample percent, so the city's margin of error is about the same as the town's, roughly 5 percentage points."
+  ],
+  "explanation": {
+    "A": "Incorrect. The margin of error is not proportional to the population size; a larger population does not make a random sample of 400 less precise.",
+    "B": "Correct. With the same sample size and sample percent, the margin of error is about the same, roughly 5 percentage points, whatever the population size.",
+    "C": "Incorrect. Sampling a smaller fraction of the population does not reduce the margin of error; the margin of error is set by the number sampled, not the fraction.",
+    "D": "Incorrect. A random sample of 400 gives a usable estimate for a population of any size; its margin of error is about 5 percentage points."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "p = Rational(52, 100)\nse_town = sqrt(p*(1 - p) / 400)\nse_city = sqrt(p*(1 - p) / 400)\nassert se_town == se_city\nkey = choices[answer]\nassert answer == 'B' and 'about 5 percentage points' in key and 'sample size' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

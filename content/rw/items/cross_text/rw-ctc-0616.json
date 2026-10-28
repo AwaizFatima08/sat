@@ -1,0 +1,56 @@
+{
+  "id": "rw-ctc-0616",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Johannes Gutenberg's printing press, developed in Germany around 1450, made books far cheaper and more plentiful than handwritten copies had ever been. The flood of printed books that followed is often credited with creating readers: as books became common, more people had reason to learn to read, and literacy spread across Europe.",
+  "passage_b": "Historian Agnieszka Dobrowolska argues that the usual story gets cause and effect partly backward. In the decades before Gutenberg, demand for books was already rising: universities were growing, merchants kept written accounts, and workshops of scribes were producing books in surprising quantity. Printing succeeded because readers already existed to buy its products. The press certainly multiplied readers later, but it did not create the first of them.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the claim that printing created readers in Text 1?",
+  "choices": {
+    "A": "By arguing that existing readers made printing possible, even if printing later increased their number",
+    "B": "By denying that printing had any effect on the number of readers",
+    "C": "By claiming that handwritten books were cheaper than printed ones",
+    "D": "By agreeing that printing created the first readers in Europe"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Text 1 credits printed books with \"creating readers.\" Dobrowolska says this \"gets cause and effect partly backward\": demand for books was already rising, and printing \"succeeded because readers already existed.\" She adds that the press \"certainly multiplied readers later.\" So she accepts part of Text 1 while reversing the order of cause and effect.",
+    "A": "Correct. Text 2 argues that readers came first and made printing succeed, while granting that printing later increased their number.",
+    "B": "Incorrect. Text 2 says the press \"certainly multiplied readers later.\"",
+    "C": "Incorrect. Text 2 never compares the prices of handwritten and printed books.",
+    "D": "Incorrect. Text 2 says printing \"did not create the first\" readers."
+  },
+  "traps": {
+    "B": "too_broad",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

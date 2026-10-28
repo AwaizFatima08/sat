@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0635",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A printed geography of 1550 contains woodcut views of more than a hundred European towns, each labeled with the town's name, and historians have occasionally used these views to reconstruct the appearance of towns that were later rebuilt. Art historian Noor El-Amin compared the views closely. Several, she found, were printed from the very same wooden block: a view labeled as a town in Flanders shows the same walls, towers, and river, down to a small nick in the block's edge, as a view labeled as a town in Hungary hundreds of kilometers away. A few other views, by contrast, show distinctive buildings that still stand in the towns they name. El-Amin concludes that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "a view can be trusted only where something in it can be matched to the town it names.",
+    "B": "the views of the Flemish and Hungarian towns are accurate because both towns had similar walls and towers.",
+    "C": "none of the views in the geography depicts the actual appearance of the town it names.",
+    "D": "the printer visited each of the hundred towns in order to record its appearance."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The same block cannot show two towns hundreds of kilometers apart, so at least some views were not drawn from the towns they name. Yet a few views match buildings that still stand, so not every view is a stock image. The only safe rule is to trust a view when it can be checked against the town.",
+    "A": "Correct. Some views are stock images reused for different towns, while a few can be tied to real buildings, so each view must be judged on its own evidence.",
+    "B": "Incorrect. The views match down to a nick in the block because they were printed from one block, not because the towns resembled each other.",
+    "C": "Incorrect. The text says a few views show distinctive buildings that still stand, so some views do depict their towns.",
+    "D": "Incorrect. A block reused for towns in Flanders and Hungary shows that at least those views were not drawn from observation of each town."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "too_broad",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

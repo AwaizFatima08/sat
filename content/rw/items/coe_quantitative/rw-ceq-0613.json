@@ -1,0 +1,91 @@
+{
+  "id": "rw-ceq-0613",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Reindeer calves born in spring must survive their first winter, when snow can bury the lichens they eat. Sámi herders in northern Sweden told ecologist Anna Lindgren that deep snow is less dangerous for calves than a hard crust of ice over the snow, which forms when rain falls in midwinter and then freezes. Lindgren compared calf survival across four winters in one herd. The herders' view is consistent with her data: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Winter Conditions and Reindeer Calf Survival in One Herd",
+    "columns": [
+      "Winter",
+      "Average snow depth (cm)",
+      "Days with ice crust",
+      "Calves surviving to spring (%)"
+    ],
+    "rows": [
+      [
+        "2019–20",
+        95,
+        2,
+        81
+      ],
+      [
+        "2020–21",
+        60,
+        19,
+        54
+      ],
+      [
+        "2021–22",
+        110,
+        4,
+        78
+      ],
+      [
+        "2022–23",
+        70,
+        23,
+        49
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "the two winters with the most ice-crust days had the lowest calf survival, even though their snow was shallower than in the other two winters.",
+    "B": "calf survival was above 75 percent in two of the four winters and below 55 percent in the other two.",
+    "C": "calf survival was lowest in 2022–23, the winter with the shallowest snow of the four.",
+    "D": "the winter of 2021–22 had the deepest snow, 110 centimeters, and only 4 days with an ice crust."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The herders claim that ice crust, not deep snow, is the danger. Supporting data must show survival falling with crust days and not with snow depth. The winters with 19 and 23 crust days had survival of 54% and 49%, while the two deep-snow winters (95 and 110 cm) with few crust days had survival of 81% and 78%.",
+    "A": "Correct. This links low survival to the ice-crust winters and shows that snow depth did not matter in the way one might expect, which is exactly the herders' point.",
+    "B": "Incorrect. This is accurate, but it does not connect the survival figures to either snow depth or ice crust, so it cannot support the herders' explanation.",
+    "C": "Incorrect. The shallowest snow (60 cm) was in 2020–21, not 2022–23, so this misreads the table, and it points to snow depth rather than ice crust.",
+    "D": "Incorrect. This describes a single winter and does not mention calf survival at all."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

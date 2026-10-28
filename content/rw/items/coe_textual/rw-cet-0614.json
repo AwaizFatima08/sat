@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0614",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many reef corals contain proteins that glow green or orange when light strikes them, a property called fluorescence. One long-standing hypothesis holds that these proteins act as a sunscreen: by absorbing harmful high-energy light and releasing it as harmless lower-energy light, they protect the coral and the algae living inside it from damage in bright, shallow water.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly weaken the sunscreen hypothesis?",
+  "choices": {
+    "A": "Shallow-water corals kept in shaded tanks gradually produced less and less fluorescent protein over several weeks.",
+    "B": "Fluorescent proteins in corals were first described by scientists in the middle of the twentieth century, decades after fluorescence in other animals.",
+    "C": "Some fish that live among the corals can see the fluorescent glow, which is invisible to people without special filters.",
+    "D": "Corals in deep, dim water, where little harmful light reaches, make as much fluorescent protein as shallow-water corals or more."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The sunscreen hypothesis predicts that corals make fluorescent proteins to cope with strong light. A finding that corals in dim deep water, where strong light is not a problem, make just as much or more of the protein does not fit that prediction and so weakens the hypothesis. A finding that production falls in the shade would fit the prediction and support it.",
+    "A": "Incorrect. Producing less protein when light is reduced fits the sunscreen idea and would support the hypothesis rather than weaken it.",
+    "B": "Incorrect. When the proteins were discovered has no bearing on what they do.",
+    "C": "Incorrect. Whether fish can see the glow does not tell us whether the proteins protect the coral from light.",
+    "D": "Correct. If corals that need no protection from strong light make just as much of the protein, protection from light is unlikely to be its purpose, which weakens the hypothesis."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

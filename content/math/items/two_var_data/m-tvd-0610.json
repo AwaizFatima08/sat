@@ -1,0 +1,105 @@
+{
+  "id": "m-tvd-0610",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The scatterplot shows a set of data and its line of best fit. The line of best fit passes through the points \\((4, 30)\\) and \\((12, 18)\\). For what value of \\(x\\) does the line of best fit predict \\(y = 0\\)?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        2,
+        32
+      ],
+      [
+        4,
+        31
+      ],
+      [
+        5,
+        28
+      ],
+      [
+        7,
+        26
+      ],
+      [
+        8,
+        23
+      ],
+      [
+        10,
+        22
+      ],
+      [
+        12,
+        17
+      ],
+      [
+        14,
+        16
+      ],
+      [
+        16,
+        11
+      ],
+      [
+        18,
+        10
+      ]
+    ],
+    "line": "36 - 1.5*x"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(36\\)",
+    "B": "\\(20\\)",
+    "C": "\\(16\\)",
+    "D": "\\(24\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Slope: \\(\\frac{18 - 30}{12 - 4} = \\frac{-12}{8} = -1.5\\).",
+    "Using \\((4, 30)\\): \\(y = 30 - 1.5(x - 4) = 36 - 1.5x\\).",
+    "Set \\(y = 0\\): \\(1.5x = 36\\), so \\(x = 24\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. 36 is the \\(y\\)-intercept of the line, the value of \\(y\\) when \\(x = 0\\). The question asks for \\(x\\) when \\(y = 0\\).",
+    "B": "Incorrect. This uses a slope of \\(-1.8\\) (\\(\\frac{36}{20}\\)); the slope is \\(\\frac{18 - 30}{12 - 4} = -1.5\\).",
+    "C": "Incorrect. This comes from a \\(y\\)-intercept of 24, found by computing \\(30 - 1.5(4)\\) instead of \\(30 + 1.5(4)\\) when moving from \\(x = 4\\) back to \\(x = 0\\).",
+    "D": "Correct. The line is \\(y = 36 - 1.5x\\), which equals 0 when \\(x = 24\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "arithmetic",
+    "C": "sign_error"
+  },
+  "verify": "x = symbols('x')\nline = sympify(figure['line'])\nassert line.subs(x, 4) == 30 and line.subs(x, 12) == 18\nsol = solve(Eq(line, 0), x)\nassert sol == [24]\nassert value(choices[answer]) == 24\nassert all(value(choices[k]) != 24 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

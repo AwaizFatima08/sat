@@ -1,0 +1,88 @@
+{
+  "id": "m-le2-0607",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The line shown in the \\(xy\\)-plane passes through the points \\((0, -2)\\) and \\((3, 4)\\). Which of the following points also lies on the line?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -3,
+      7
+    ],
+    "y": [
+      -5,
+      11
+    ],
+    "curves": [
+      {
+        "expr": "2*x - 2",
+        "label": ""
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": -2,
+        "label": "(0, -2)"
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "label": "(3, 4)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((6, 12)\\)",
+    "B": "\\((10, 6)\\)",
+    "C": "\\((-2, -4)\\)",
+    "D": "\\((6, 10)\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From \\((0, -2)\\) to \\((3, 4)\\), \\(y\\) rises 6 while \\(x\\) rises 3, so the slope is \\(2\\).",
+    "The line is \\(y = 2x - 2\\). At \\(x = 6\\), \\(y = 10\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This treats the line as \\(y = 2x\\); its \\(y\\)-intercept is \\(-2\\), not \\(0\\).",
+    "B": "Incorrect. The coordinates are reversed; at \\(x = 10\\), \\(y = 18\\).",
+    "C": "Incorrect. At \\(x = -2\\), \\(y = 2(-2) - 2 = -6\\), not \\(-4\\).",
+    "D": "Correct. The slope is \\(2\\), so the line is \\(y = 2x - 2\\), and \\(2(6) - 2 = 10\\)."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "pt = lambda s: [value(t) for t in s.replace('\\\\(', '').replace('\\\\)', '').strip()[1:-1].split(',')]\nx = symbols('x')\np = figure['points']\nm = Rational(p[1]['y'] - p[0]['y'], p[1]['x'] - p[0]['x'])\nline = m*x + p[0]['y']\nok = [k for k in choices if line.subs(x, pt(choices[k])[0]) == pt(choices[k])[1]]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

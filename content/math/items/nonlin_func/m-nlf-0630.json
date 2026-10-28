@@ -1,0 +1,57 @@
+{
+  "id": "m-nlf-0630",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of which of the following functions is a parabola with \\(x\\)-intercepts \\((-2, 0)\\) and \\((6, 0)\\) that opens downward?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(f(x) = (x + 2)(x - 6)\\)",
+    "B": "\\(f(x) = -(x - 2)(x + 6)\\)",
+    "C": "\\(f(x) = -(x + 2)(x - 6)\\)",
+    "D": "\\(f(x) = -(x + 2)(x + 6)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "A parabola with \\(x\\)-intercepts at \\(x = -2\\) and \\(x = 6\\) has factors \\((x + 2)\\) and \\((x - 6)\\).",
+    "Opening downward requires a negative leading coefficient, so \\(f(x) = -(x + 2)(x - 6)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The intercepts are right, but the leading coefficient is positive, so this parabola opens upward.",
+    "B": "Incorrect. The signs inside the factors are reversed; this parabola has \\(x\\)-intercepts \\((2, 0)\\) and \\((-6, 0)\\).",
+    "C": "Correct. Zeros at \\(x = -2\\) and \\(x = 6\\), and the leading coefficient \\(-1\\) makes it open downward.",
+    "D": "Incorrect. The factor \\((x + 6)\\) gives an intercept at \\(x = -6\\), not \\(x = 6\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "x = symbols('x')\nrhs = {k: expand(value(v.split('=')[1])) for k, v in choices.items()}\nok = [k for k in rhs if sorted(solve(rhs[k], x)) == [-2, 6] and Poly(rhs[k], x).LC() < 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

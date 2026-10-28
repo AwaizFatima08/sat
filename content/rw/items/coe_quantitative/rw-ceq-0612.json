@@ -1,0 +1,96 @@
+{
+  "id": "rw-ceq-0612",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Public swimming pools give city residents a place to cool off, so their use may rise when temperatures climb. Officials in Madrid, Spain, recorded the number of visitors to one outdoor pool on each day of a week in July 2024, along with each day's highest temperature. The figures suggest that pool attendance followed the heat: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Visitors to a Madrid Outdoor Pool during One Week in July 2024",
+    "columns": [
+      "Day",
+      "High temperature (°C)",
+      "Visitors"
+    ],
+    "rows": [
+      [
+        "Monday",
+        31,
+        640
+      ],
+      [
+        "Tuesday",
+        33,
+        720
+      ],
+      [
+        "Wednesday",
+        38,
+        1180
+      ],
+      [
+        "Thursday",
+        40,
+        1310
+      ],
+      [
+        "Friday",
+        36,
+        960
+      ],
+      [
+        "Saturday",
+        32,
+        790
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "the two hottest days, Wednesday and Thursday, also drew the most visitors, 1,180 and 1,310.",
+    "B": "the pool stayed open for more hours on Thursday than on any other day of the week.",
+    "C": "attendance was lowest on Monday, when the high was 31°C, and highest on Tuesday, when it was 33°C.",
+    "D": "the high temperature rose from 31°C on Monday to 33°C on Tuesday."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The statement says attendance followed the heat, so the choice must link the temperature column to the visitor column. The hottest days, Wednesday (38°C) and Thursday (40°C), had the largest visitor counts, 1,180 and 1,310.",
+    "A": "Correct. The highest temperatures and the highest visitor counts fall on the same two days, which is exactly what \"followed the heat\" means.",
+    "B": "Incorrect. The table gives no information about opening hours.",
+    "C": "Incorrect. Monday was indeed the lowest day, but the highest attendance was on Thursday (1,310), not Tuesday (720).",
+    "D": "Incorrect. This is accurate, but it mentions temperatures only, without the visitor numbers that the statement is about."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

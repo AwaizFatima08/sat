@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0636",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When a school district in the midwestern United States moved its high school start time from 7:30 a.m. to 8:30 a.m., some parents predicted that students would simply go to bed an hour later and gain no sleep at all. Sleep researcher Anika Rao, who had students log their bedtimes and wake times for two weeks before the change and two weeks after it, argues that the prediction was only partly borne out: students did stay up somewhat later, she acknowledges, but they shifted their bedtimes by much less than the full hour, so that their average nightly sleep still grew.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Student Sleep Logs before and after a Later School Start Time",
+    "columns": [
+      "Measure",
+      "Before the change",
+      "After the change"
+    ],
+    "rows": [
+      [
+        "Average bedtime",
+        "11:05 p.m.",
+        "11:25 p.m."
+      ],
+      [
+        "Average wake time",
+        "6:20 a.m.",
+        "7:15 a.m."
+      ],
+      [
+        "Average nightly sleep (hours)",
+        7.2,
+        7.8
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Rao's argument?",
+  "choices": {
+    "A": "Average bedtime shifted later by 20 minutes, far less than the hour the start time moved, and average sleep rose from 7.2 to 7.8 hours.",
+    "B": "Students reported feeling more alert in morning classes after the start time changed.",
+    "C": "Students went to bed later after the change, which left their average nightly sleep unchanged.",
+    "D": "Students' average wake time moved from 6:20 a.m. to 7:15 a.m. after the start time changed."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Rao concedes that bedtimes moved later but argues that the shift was much smaller than an hour and that sleep therefore increased. The evidence must show both the size of the bedtime shift (11:05 to 11:25 p.m., 20 minutes) and the gain in sleep (7.2 to 7.8 hours).",
+    "A": "Correct. A 20-minute shift against a 60-minute change in start time, together with the rise in sleep, is exactly what Rao describes.",
+    "B": "Incorrect. The table reports bedtimes, wake times, and hours of sleep, not how alert students felt.",
+    "C": "Incorrect. Average sleep rose from 7.2 to 7.8 hours, so it did not stay unchanged.",
+    "D": "Incorrect. This is true, but a later wake time is simply what the new start time allows; it does not show whether students gave the gain back by staying up later."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

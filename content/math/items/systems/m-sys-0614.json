@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0614",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A plumber charges a fixed call-out fee plus a constant amount per hour of work. A job that takes 2 hours costs \\$170, and a job that takes 5 hours costs \\$350. How many dollars more does a 4-hour job cost than a 1-hour job?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(230\\)",
+    "B": "\\(110\\)",
+    "C": "\\(60\\)",
+    "D": "\\(180\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(f\\) be the fee and \\(r\\) the hourly rate: \\(f + 2r = 170\\) and \\(f + 5r = 350\\).",
+    "Subtract: \\(3r = 180\\), so \\(r = 60\\) (and \\(f = 50\\)).",
+    "Both jobs include the same fee, so the difference is just the extra 3 hours: \\(3(60) = 180\\) dollars."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the total cost of a 4-hour job (\\(50 + 4 \\cdot 60\\)), not the difference between the two jobs.",
+    "B": "Incorrect. This is the total cost of a 1-hour job (\\(50 + 60\\)), not the difference between the two jobs.",
+    "C": "Incorrect. This is the hourly rate; the 4-hour job has 3 more hours than the 1-hour job, so the difference is \\(3(60)\\).",
+    "D": "Correct. The hourly rate is \\(\\frac{350 - 170}{5 - 2} = 60\\) dollars, so 3 extra hours cost \\(3(60) = 180\\) dollars."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_quantity",
+    "C": "stopped_early"
+  },
+  "verify": "f, r = symbols('f r')\nsol = solve([f + 2*r - 170, f + 5*r - 350], [f, r])\nassert sol == {f: 50, r: 60}\nd = (f + 4*r).subs(sol) - (f + r).subs(sol)\nassert value(choices[answer]) == d == 180\nassert all(value(choices[k]) != d for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

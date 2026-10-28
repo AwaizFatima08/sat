@@ -1,0 +1,91 @@
+{
+  "id": "rw-ceq-0647",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Beginning in 2013, a wasting disease killed most ochre sea stars along the Pacific coast of North America. Sea stars eat mussels, and in their absence mussel beds spread across rocks that had been open to other species. Marine ecologist Priya Natarajan, who has monitored tide pools on the Oregon coast since before the outbreak, argues that recovery is under way but incomplete in an important sense: the sea stars returning to her sites are overwhelmingly small juveniles, and because juveniles eat far fewer mussels than adults do, mussel cover has yet to fall even where sea star numbers have climbed back toward their earlier levels.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Sea Stars and Mussel Cover at Oregon Tide Pool Sites",
+    "columns": [
+      "Year",
+      "Sea stars per 100 square meters",
+      "Sea stars that were juveniles (%)",
+      "Mussel cover (%)"
+    ],
+    "rows": [
+      [
+        "2012",
+        48,
+        15,
+        22
+      ],
+      [
+        "2015",
+        6,
+        40,
+        35
+      ],
+      [
+        "2018",
+        29,
+        78,
+        44
+      ],
+      [
+        "2021",
+        42,
+        71,
+        45
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Natarajan's argument?",
+  "choices": {
+    "A": "Sea star numbers fell from 48 per 100 square meters in 2012 to 6 in 2015, when mussel cover rose to 35 percent.",
+    "B": "By 2021 sea star numbers were near their 2012 level, but about 70 percent were juveniles and mussel cover stayed at 45 percent, double the 2012 figure.",
+    "C": "Mussel cover began to decline once sea star numbers rose above their 2015 level.",
+    "D": "Juvenile sea stars at the sites grew more slowly than juveniles had before the outbreak."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Natarajan's argument links three facts: sea star numbers have nearly recovered, most of those sea stars are juveniles, and mussel cover has not fallen. The evidence must use all three columns for the recent years: 42 per 100 square meters in 2021 against 48 in 2012, 71 percent juveniles, and mussel cover at 45 percent against 22 percent in 2012.",
+    "A": "Incorrect. This is true, but it describes the outbreak and its immediate effect, not the recovery that Natarajan is characterizing.",
+    "B": "Correct. It shows recovered numbers, a juvenile-dominated population, and mussel cover still at its high level, which together support the argument.",
+    "C": "Incorrect. Mussel cover rose from 35 to 44 and then 45 percent as sea star numbers recovered, so it did not decline.",
+    "D": "Incorrect. The table gives the share of juveniles, not how fast they grew."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

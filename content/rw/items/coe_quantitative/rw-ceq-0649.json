@@ -1,0 +1,91 @@
+{
+  "id": "rw-ceq-0649",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Great spotted woodpeckers excavate a fresh nest hole nearly every spring, leaving earlier holes empty. Many birds that cannot dig their own cavities, such as tits and starlings, nest in these abandoned holes. Ornithologist Katrin Hoffmann inspected old woodpecker holes of known age in a forest in Germany each spring and recorded whether another bird species was nesting inside. Some foresters assume that the holes decay quickly and are useful for only a season or two. Hoffmann argues instead that the holes remain in demand for years: occupancy by other species, she finds, is actually lowest in the first spring after excavation and rises as holes age, before eventually declining in the oldest holes.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Occupancy of Abandoned Woodpecker Holes by Other Bird Species",
+    "columns": [
+      "Age of hole (years)",
+      "Holes inspected",
+      "Holes occupied by other bird species (%)"
+    ],
+    "rows": [
+      [
+        "1",
+        40,
+        25
+      ],
+      [
+        "2",
+        38,
+        48
+      ],
+      [
+        "3–5",
+        61,
+        62
+      ],
+      [
+        "6–10",
+        44,
+        55
+      ],
+      [
+        "More than 10",
+        22,
+        27
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Hoffmann's argument?",
+  "choices": {
+    "A": "Occupancy fell steadily as holes aged, from 25 percent in the first year.",
+    "B": "Occupancy of holes more than 10 years old was about the same as occupancy of one-year-old holes.",
+    "C": "Holes aged 3 to 5 years were the most numerous in the sample and also the most often occupied.",
+    "D": "Only 25 percent of one-year-old holes were occupied, compared with 62 percent of holes aged 3 to 5 years and 55 percent of those aged 6 to 10."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Hoffmann's argument is that holes stay useful for years, with occupancy lowest at first and higher in older holes. The evidence must compare the occupancy of young holes with that of holes several years old: 25 percent at one year against 62 percent at 3–5 years and 55 percent at 6–10 years.",
+    "A": "Incorrect. Occupancy rose from 25 to 48 and then 62 percent before falling, so it did not decline steadily.",
+    "B": "Incorrect. This is true (27 against 25 percent), but comparing the two ends says nothing about the high occupancy of holes in between, which is Hoffmann's point.",
+    "C": "Incorrect. The number of holes inspected reflects how many Hoffmann could find, not how birds used them, and the choice does not compare occupancy across ages.",
+    "D": "Correct. It shows the low occupancy of new holes and the much higher occupancy of holes that are several years old, which is the pattern Hoffmann describes."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

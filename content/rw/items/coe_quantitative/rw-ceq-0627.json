@@ -1,0 +1,97 @@
+{
+  "id": "rw-ceq-0627",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In the haors, the vast seasonal wetlands of northeastern Bangladesh, many families keep flocks of ducks that feed on snails and insects in the flooded fields. Agricultural economist Mahbub Hossain recorded egg production and feed purchases for a group of flocks over one year. He observed that the ducks laid best during the monsoon months, when the wetlands were flooded and the ducks could find their own food, and that this was also when families spent the least on purchased feed: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Egg Production and Feed Purchases for Haor Duck Flocks, per Duck",
+    "columns": [
+      "Month",
+      "Eggs laid per duck",
+      "Feed bought per duck (taka)"
+    ],
+    "rows": [
+      [
+        "February",
+        12,
+        45
+      ],
+      [
+        "April",
+        14,
+        40
+      ],
+      [
+        "June",
+        21,
+        12
+      ],
+      [
+        "August",
+        23,
+        8
+      ],
+      [
+        "October",
+        18,
+        25
+      ],
+      [
+        "December",
+        11,
+        48
+      ]
+    ],
+    "note": "The wetlands are flooded from roughly June to September."
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "families bought the most feed in December, when they spent 48 taka per duck.",
+    "B": "in June and August, ducks laid 21 and 23 eggs per month, while families spent 45 and 48 taka per duck on feed.",
+    "C": "egg production rose from 12 eggs per duck in February to 14 in April.",
+    "D": "in June and August, ducks laid 21 and 23 eggs per month, the most of any months, while feed spending fell to 12 and 8 taka per duck, the least."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The statement links the monsoon months to two things: the most eggs and the least feed spending. The choice must give both for June and August, the flooded months in the table: 21 and 23 eggs (the highest values) and 12 and 8 taka (the lowest).",
+    "A": "Incorrect. This is true, but it describes feed spending in a dry month only and says nothing about eggs or the monsoon.",
+    "B": "Incorrect. This misreads the feed column: 45 and 48 taka are the February and December figures; in June and August feed spending was 12 and 8 taka.",
+    "C": "Incorrect. This is accurate, but both months are before the monsoon, and it mentions neither the peak months nor feed spending.",
+    "D": "Correct. The two monsoon months had the highest egg counts and the lowest feed spending, which is exactly what Hossain observed."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

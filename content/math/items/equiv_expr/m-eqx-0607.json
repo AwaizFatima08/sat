@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0607",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is equivalent to \\(x^{2} + 8x + 12\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((x + 3)(x + 4)\\)",
+    "B": "\\((x + 2)(x + 6)\\)",
+    "C": "\\((x + 4)(x + 2)\\)",
+    "D": "\\((x + 1)(x + 12)\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Find two numbers whose product is 12 and whose sum is 8: \\(2\\) and \\(6\\).",
+    "So \\(x^{2} + 8x + 12 = (x + 2)(x + 6)\\). Check: \\(2x + 6x = 8x\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(3 \\cdot 4 = 12\\), but \\(3 + 4 = 7\\), so this product is \\(x^{2} + 7x + 12\\).",
+    "B": "Correct. \\(2 \\cdot 6 = 12\\) and \\(2 + 6 = 8\\).",
+    "C": "Incorrect. \\(4 + 2 = 8\\), but \\(4 \\cdot 2 = 8\\), so this product is \\(x^{2} + 6x + 8\\).",
+    "D": "Incorrect. \\(1 \\cdot 12 = 12\\), but \\(1 + 12 = 13\\), so this product is \\(x^{2} + 13x + 12\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "x = symbols('x')\nt = x**2 + 8*x + 12\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

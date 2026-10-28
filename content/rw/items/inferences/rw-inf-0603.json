@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0603",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "On the first rainy afternoon of October, Jonas lent his umbrella to the new boy at the bus stop, a quiet student named Emeka who had arrived with nothing but a thin jacket. The umbrella was an old one, with a cracked wooden handle wrapped in tape and one bent rib. A week later, Emeka handed it back. The handle was now smooth, freshly varnished wood, and the bent rib had been replaced. Emeka said only, \"Thanks,\" and walked away. The condition of the returned umbrella suggests that Emeka ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "was embarrassed that he had damaged the umbrella during the week.",
+    "B": "had taken the trouble to repair the umbrella before returning it.",
+    "C": "planned to ask Jonas to lend him the umbrella again soon.",
+    "D": "had lost the original umbrella and bought a new one to replace it."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The umbrella went out with a taped, cracked handle and a bent rib and came back with a varnished handle and a replaced rib. It is the same umbrella, now fixed, so Emeka must have repaired it before giving it back.",
+    "A": "Incorrect. The damage was already there when Jonas lent the umbrella; Emeka repaired it rather than causing it.",
+    "B": "Correct. The specific repairs to the handle and rib show that Emeka fixed the umbrella.",
+    "C": "Incorrect. Nothing in the text suggests Emeka wanted to borrow the umbrella again.",
+    "D": "Incorrect. The text describes the same umbrella with its handle refinished and one rib replaced, not a new umbrella."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

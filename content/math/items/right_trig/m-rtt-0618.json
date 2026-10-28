@@ -1,0 +1,130 @@
+{
+  "id": "m-rtt-0618",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A sandbox has the shape of a regular pentagon with sides 10 feet long, as shown. Point \\(O\\) is the center of the pentagon, and point \\(M\\) is the midpoint of one side. What is the length, in feet, of \\(\\overline{OM}\\), rounded to the nearest tenth?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "P1": [
+        0.0,
+        8.507
+      ],
+      "P2": [
+        -8.09,
+        2.629
+      ],
+      "P3": [
+        -5.0,
+        -6.882
+      ],
+      "P4": [
+        5.0,
+        -6.882
+      ],
+      "P5": [
+        8.09,
+        2.629
+      ],
+      "O": [
+        0,
+        0
+      ],
+      "M": [
+        0.0,
+        -6.882
+      ]
+    },
+    "segments": [
+      [
+        "P1",
+        "P2"
+      ],
+      [
+        "P2",
+        "P3"
+      ],
+      [
+        "P3",
+        "P4"
+      ],
+      [
+        "P4",
+        "P5"
+      ],
+      [
+        "P5",
+        "P1"
+      ],
+      [
+        "O",
+        "M"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          0,
+          -7.981999999999999
+        ],
+        "text": "10 ft"
+      }
+    ],
+    "right_angles": [
+      "M"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3.6\\)",
+    "B": "\\(6.9\\)",
+    "C": "\\(8.5\\)",
+    "D": "\\(13.8\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The five segments from \\(O\\) to the vertices divide the pentagon into 5 congruent isosceles triangles, each with a \\(\\frac{360^{\\circ}}{5} = 72^{\\circ}\\) angle at \\(O\\).",
+    "\\(\\overline{OM}\\) splits one of these triangles into two right triangles, each with a \\(36^{\\circ}\\) angle at \\(O\\) and a leg of \\(5\\) feet (half a side) opposite that angle.",
+    "\\(\\tan 36^{\\circ} = \\frac{5}{OM}\\), so \\(OM = \\frac{5}{\\tan 36^{\\circ}} \\approx 6.9\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(5 \\tan 36^{\\circ}\\); the 5-foot half side is opposite the \\(36^{\\circ}\\) angle, so \\(OM = \\frac{5}{\\tan 36^{\\circ}}\\).",
+    "B": "Correct. \\(OM = \\frac{5}{\\tan 36^{\\circ}} \\approx 6.9\\) feet.",
+    "C": "Incorrect. This is \\(\\frac{5}{\\sin 36^{\\circ}}\\), the distance from \\(O\\) to a vertex, not to the midpoint of a side.",
+    "D": "Incorrect. This is \\(\\frac{10}{\\tan 36^{\\circ}}\\); it uses the whole side instead of half of it."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "C": "wrong_quantity",
+    "D": "arithmetic"
+  },
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('P3','P4')-10)<0.01 and abs(ang('P3','O','M')-36)<0.1 and abs(ang('O','M','P3')-90)<0.1\nans=N(5/tan(36*pi/180))\nassert abs(ans-6.882)<0.001 and abs(d('O','M')-ans)<0.01\nassert abs(value(choices[answer])-ans)<0.05\nassert all(abs(value(choices[k])-ans)>0.3 for k in choices if k!=answer)\nassert abs(value(choices['C'])-d('O','P3'))<0.05\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

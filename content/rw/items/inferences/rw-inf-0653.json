@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0653",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Hospitals commonly measure how often staff clean their hands when entering a patient's room by stationing a trained observer on a ward for an hour at a time, and the rates these observers record, often 80 percent or higher, are reported to regulators. Epidemiologist Sunita Varghese installed electronic sensors that logged every entry to the rooms of one ward and every use of the dispensers beside the doors, around the clock, for three months. The sensors recorded hand cleaning at about 45 percent of entries overall, but at close to 80 percent during the hours when an observer was present on the ward. Varghese notes that observers wear identifying badges and that staff can see them. Taken together, these results indicate that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the sensors failed to register many of the hand cleanings that observers were able to see.",
+    "B": "the rates reported to regulators chiefly describe how staff behave when they know they are being watched.",
+    "C": "observers should be stationed on the ward around the clock so that compliance stays near 80 percent.",
+    "D": "staff on this ward cleaned their hands less often than staff at hospitals without sensors."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Two numbers from the same sensors must be reconciled: 80 percent with an observer present, 45 percent overall. Observers are visible to staff. The simplest account is that staff clean their hands more when watched, which means the figure regulators receive is the watched figure, not the everyday one.",
+    "A": "Incorrect. The sensors matched the observers' 80 percent during observed hours, so they were not missing events; the difference arises when no observer is present.",
+    "B": "Correct. The sensors agree with the observers while an observer is visible and drop sharply when none is, so the reported figure captures observed behavior rather than typical behavior.",
+    "C": "Incorrect. The text draws a conclusion about what the reported rates mean; it makes no recommendation about staffing.",
+    "D": "Incorrect. The text compares observed and unobserved hours on one ward; it says nothing about other hospitals."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "too_broad",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

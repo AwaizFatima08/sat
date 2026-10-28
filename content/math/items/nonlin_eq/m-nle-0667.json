@@ -1,0 +1,78 @@
+{
+  "id": "m-nle-0667",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of \\(y = x^{2} - 4x\\) is shown. In the equation \\(x^{2} - 4x = k\\), \\(k\\) is a constant. If the two solutions to the equation differ by 6, what is the value of \\(k\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -3,
+      7
+    ],
+    "y": [
+      -5,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "x**2 - 4*x",
+        "label": "y = x^2 - 4x"
+      }
+    ],
+    "points": [],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(-4\\)",
+    "C": "\\(12\\)",
+    "D": "\\(21\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The solutions of \\(x^{2} - 4x = k\\) are the \\(x\\)-coordinates where the parabola meets the horizontal line \\(y = k\\). They are symmetric about the axis of the parabola, \\(x = 2\\).",
+    "Two solutions that differ by 6 are therefore \\(2 - 3 = -1\\) and \\(2 + 3 = 5\\).",
+    "So \\(k = 5^{2} - 4(5) = 5\\). (Check: \\((-1)^{2} - 4(-1) = 5\\) as well.)"
+  ],
+  "explanation": {
+    "A": "Correct. The solutions are \\(-1\\) and \\(5\\), symmetric about \\(x = 2\\), and \\(k = 25 - 20 = 5\\).",
+    "B": "Incorrect. This is the minimum value of \\(y = x^{2} - 4x\\), at the vertex \\((2, -4)\\); for \\(k = -4\\) the equation has only one solution.",
+    "C": "Incorrect. This is the result of taking \\(x = 6\\) as a solution (the difference 6 treated as a solution) and evaluating \\(6^{2} - 4(6)\\).",
+    "D": "Incorrect. This is the result of centering the two solutions at the \\(x\\)-intercept \\(x = 4\\) instead of the axis of symmetry \\(x = 2\\), giving \\(7^{2} - 4(7)\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "misread_graph"
+  },
+  "verify": "x, k = symbols('x k', real=True)\nr = solve(Eq(x**2 - 4*x, k), x)\nkv = solve(Eq(expand((r[1] - r[0])**2), 36), k)\nassert kv == [5]\nassert sorted(solve(Eq(x**2 - 4*x, 5), x)) == [-1, 5]\nassert value(choices[answer]) == 5\nassert all(value(choices[c]) != 5 for c in choices if c != answer)\nassert figure['curves'][0]['expr'] == 'x**2 - 4*x'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

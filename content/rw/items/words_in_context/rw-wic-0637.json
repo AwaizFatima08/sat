@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0637",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The Namib Desert of southwestern Africa receives almost no rain, but on many mornings a thick fog rolls in from the Atlantic. Several darkling beetles that live there have turned this fog into a water supply. At dawn a beetle climbs a dune ridge, faces the wind, and tilts its body so that its back is raised. Droplets ______ on the bumpy surface of its wing cases, merge into larger drops, and roll down grooves toward its mouth. The beetle never visits a pool or a stream; the only water it ever drinks is the water it harvests from the air.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "collect",
+    "B": "evaporate",
+    "C": "dissolve",
+    "D": "scatter"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The sentence describes a sequence: droplets do something on the beetle's back, then \"merge into larger drops\" and \"roll down\" to its mouth. For the fog to become drinking water, the droplets must first gather on the surface, so \"collect\" fits.",
+    "A": "Correct. Fog droplets gather, or collect, on the beetle's back, then merge and run down to its mouth.",
+    "B": "Incorrect. Droplets that evaporated would disappear, not merge and roll to the beetle's mouth.",
+    "C": "Incorrect. The droplets are water; there is nothing for them to dissolve into, and dissolving would not produce drinking water.",
+    "D": "Incorrect. Scattering would spread the droplets apart, the opposite of what must happen for them to merge."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

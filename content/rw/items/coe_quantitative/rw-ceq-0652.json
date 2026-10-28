@@ -1,0 +1,89 @@
+{
+  "id": "rw-ceq-0652",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the mid-nineteenth century, many English novels first reached readers in monthly magazine installments, and a magazine's editor could ask a novelist to lengthen or shorten a part so that it fit the issue. Literary historian Margaret Ashdown, who measured every installment of three novels serialized in one magazine during the 1860s, challenges the assumption that such pressure made each installment roughly the same length. The constraint operated, she argues, only at the extremes: installments varied considerably in length within a single novel, yet across all three novels none fell below about 6,000 words or rose above about 11,000, which suggests that the editor enforced a floor and a ceiling rather than a target.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Installment Lengths of Three Novels Serialized in One Magazine, 1860s",
+    "columns": [
+      "Novel",
+      "Installments",
+      "Shortest installment (words)",
+      "Longest installment (words)",
+      "Average installment (words)"
+    ],
+    "rows": [
+      [
+        "Novel 1",
+        18,
+        6200,
+        10800,
+        8400
+      ],
+      [
+        "Novel 2",
+        12,
+        6500,
+        9900,
+        8100
+      ],
+      [
+        "Novel 3",
+        20,
+        6100,
+        10600,
+        8700
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Ashdown's argument?",
+  "choices": {
+    "A": "The average installment lengths of the three novels differed from one another by no more than 600 words.",
+    "B": "Installments of the novel with the most parts were the most uniform in length.",
+    "C": "Within each novel the longest installment exceeded the shortest by at least 3,400 words, yet no installment in any novel was shorter than 6,100 or longer than 10,800 words.",
+    "D": "The editor shortened installments more often than he lengthened them."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Ashdown's argument has two halves: wide variation within each novel, and firm limits that no installment crossed. The evidence must show both the spread within novels (10,800 minus 6,200, 9,900 minus 6,500, and 10,600 minus 6,100 give 4,600, 3,400, and 4,500 words) and the overall minimum and maximum (6,100 and 10,800 words).",
+    "A": "Incorrect. This is true (8,100 to 8,700 words), but similar averages, if anything, suggest a common target, which is the view Ashdown rejects; averages also hide the variation within each novel.",
+    "B": "Incorrect. Novel 3 has the most parts (20) but a range of 4,500 words; Novel 2 has the narrowest range (3,400), so this misreads the table.",
+    "C": "Correct. The large gap between shortest and longest in each novel shows the variation, and the shared limits show the floor and ceiling.",
+    "D": "Incorrect. The table gives only lengths; it records nothing about what the editor asked for."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

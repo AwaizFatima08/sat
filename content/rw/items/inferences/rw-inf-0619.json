@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0619",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In the mountain valleys of Chitral, in northern Pakistan, walnut trees are a valued source of food and timber. Farmers there traditionally plant walnuts along the edges of their fields or beside irrigation channels rather than among their crops, and some say that little will grow beneath a walnut's branches. Plant scientist Zarina Baig tested soil collected under walnut trees and found that it contained juglone, a chemical released by walnut roots and fallen leaves, and that seedlings of wheat and several vegetables grew poorly in that soil. Baig's findings suggest that the farmers' traditional practice ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "prevents walnut trees from growing as large as they otherwise would.",
+    "B": "may help protect their crops from a harmful effect of the trees.",
+    "C": "was adopted mainly to make the walnuts easier to harvest.",
+    "D": "has reduced the amount of juglone that walnut trees produce."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The soil under walnut trees contains juglone, and crop seedlings grow poorly in it. Keeping walnuts at the edges of fields rather than among the crops keeps the crops away from that soil, so the traditional placement may shield the crops from the trees' harmful effect.",
+    "A": "Incorrect. The text gives no information about the size of the trees.",
+    "B": "Correct. Planting walnuts away from crops keeps crops out of juglone-affected soil, where seedlings grow poorly.",
+    "C": "Incorrect. The text does not mention harvesting as a reason; it connects the practice to the effect on crops.",
+    "D": "Incorrect. The text says juglone was present in the soil; nothing suggests the practice changed how much the trees produce."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

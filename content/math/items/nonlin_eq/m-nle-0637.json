@@ -1,0 +1,57 @@
+{
+  "id": "m-nle-0637",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The speed \\(v\\) needed for an object to escape the gravity of a planet of mass \\(M\\) and radius \\(r\\) is given by \\(v = \\sqrt{\\frac{2GM}{r}}\\), where \\(G\\) is a constant. Which of the following expresses \\(M\\) in terms of \\(v\\), \\(r\\), and \\(G\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{v^{2}r}{G}\\)",
+    "B": "\\(\\frac{2G}{v^{2}r}\\)",
+    "C": "\\(\\frac{v^{2}r}{2G}\\)",
+    "D": "\\(\\frac{vr}{2G}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Square both sides: \\(v^{2} = \\frac{2GM}{r}\\).",
+    "Multiply by \\(r\\) and divide by \\(2G\\): \\(M = \\frac{v^{2}r}{2G}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This leaves out the factor of 2 in \\(2GM\\).",
+    "B": "Incorrect. This is the reciprocal of the correct expression.",
+    "C": "Correct. Substituting back, \\(\\sqrt{\\frac{2G}{r} \\cdot \\frac{v^{2}r}{2G}} = \\sqrt{v^{2}} = v\\).",
+    "D": "Incorrect. This does not square \\(v\\) when removing the square root."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "reciprocal",
+    "D": "stopped_early"
+  },
+  "verify": "v, r, G, M = symbols('v r G M', positive=True)\nsol = solve(Eq(v, sqrt(2*G*M/r)), M)\nassert len(sol) == 1\nvv, rr, GG = symbols('v r G')\nans = sol[0].subs({v: vv, r: rr, G: GG})\nassert simplify(value(choices[answer]) - ans) == 0\nassert all(simplify(value(choices[k]) - ans) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

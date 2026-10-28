@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0671",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(\\frac{x^{2} - 4}{x - 2} = k\\), \\(k\\) is a constant. For which of the following values of \\(k\\) does the equation have no solution?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0\\)",
+    "B": "\\(2\\)",
+    "C": "There is no such value of \\(k\\).",
+    "D": "\\(4\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The left side is undefined at \\(x = 2\\), so any solution must satisfy \\(x \\ne 2\\).",
+    "For \\(x \\ne 2\\), \\(\\frac{x^{2} - 4}{x - 2} = \\frac{(x - 2)(x + 2)}{x - 2} = x + 2\\), so the equation becomes \\(x + 2 = k\\), that is, \\(x = k - 2\\).",
+    "This gives a solution unless \\(k - 2 = 2\\), the excluded value. So the equation has no solution exactly when \\(k = 4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of excluding \\(x = -2\\) instead of \\(x = 2\\); with \\(k = 0\\), \\(x = -2\\) is a valid solution, since \\(\\frac{0}{-4} = 0\\).",
+    "B": "Incorrect. This is the excluded value of \\(x\\), not the value of \\(k\\); with \\(k = 2\\), \\(x = 0\\) is a solution.",
+    "C": "Incorrect. This is the result of simplifying to \\(x = k - 2\\) and ignoring the restriction \\(x \\ne 2\\); when \\(k = 4\\) the only candidate is the excluded value.",
+    "D": "Correct. The equation reduces to \\(x = k - 2\\) with \\(x \\ne 2\\); \\(k = 4\\) forces \\(x = 2\\), which is excluded, so there is no solution."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "x, k = symbols('x k')\ndef sols(kv):\n    return [s for s in solve(Eq(x + 2, kv), x) if s != 2 and ((s**2 - 4)/(s - 2)).subs(x, s) == kv]\nassert value(choices[answer]) == 4 and sols(4) == []\nassert sols(0) == [-2] and sols(2) == [0]\nassert solve(Eq((x**2 - 4)/(x - 2), 4), x) == []\nassert 'no such value' in choices['C']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

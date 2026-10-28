@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0655",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "literature",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The night bus to Karachi left the depot an hour late, and by then Imran had given up hope of sleeping. The passenger beside him, an elderly man with a wool cap pulled low, had already begun to snore. Outside, the lights of roadside tea stalls flashed past and then gave way to a darkness so complete that the window became a mirror. Pressing his forehead against the cool glass and watching his own reflection, ______ It was the first time he had traveled so far alone, and the thought was both frightening and strangely pleasant.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "Imran's thoughts drifted to the morning ahead and the city he had never seen.",
+    "B": "the morning ahead and the city he had never seen filled Imran's thoughts.",
+    "C": "Imran let his thoughts drift to the morning ahead and the city he had never seen.",
+    "D": "the hours seemed to Imran to stretch out without end."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The introductory phrase \"Pressing his forehead against the cool glass and watching his own reflection\" describes Imran. The subject after the comma must be Imran himself, not his thoughts or the hours.",
+    "A": "Incorrect. The subject is \"Imran's thoughts,\" not Imran; thoughts cannot press a forehead to glass.",
+    "B": "Incorrect. The subject is \"the morning ahead and the city,\" which cannot watch a reflection.",
+    "C": "Correct. \"Imran\" directly follows the modifier, so he is the one pressing his forehead to the glass.",
+    "D": "Incorrect. The subject is \"the hours,\" so the sentence says the hours were pressing a forehead against the glass; the modifier dangles."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "modifier",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0650",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(\\ell\\) has equation \\(y = mx + b\\), where \\(m\\) and \\(b\\) are positive constants. Line \\(n\\) is perpendicular to line \\(\\ell\\) and has the same \\(x\\)-intercept as line \\(\\ell\\). What is the \\(y\\)-coordinate of the \\(y\\)-intercept of line \\(n\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{b}{m^{2}}\\)",
+    "B": "\\(-\\frac{m}{b}\\)",
+    "C": "\\(-\\frac{b}{m}\\)",
+    "D": "\\(-\\frac{b}{m^{2}}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The \\(x\\)-intercept of \\(\\ell\\): \\(0 = mx + b\\) gives \\(x = -\\frac{b}{m}\\).",
+    "Line \\(n\\) has slope \\(-\\frac{1}{m}\\) and passes through \\(\\left(-\\frac{b}{m}, 0\\right)\\): \\(y = -\\frac{1}{m}\\left(x + \\frac{b}{m}\\right)\\).",
+    "At \\(x = 0\\): \\(y = -\\frac{b}{m^{2}}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(-\\frac{1}{m} \\cdot \\frac{b}{m}\\) is negative when \\(m\\) and \\(b\\) are positive.",
+    "B": "Incorrect. This inverts the fraction; the \\(x\\)-intercept \\(-\\frac{b}{m}\\) multiplied by the slope \\(-\\frac{1}{m}\\) gives \\(-\\frac{b}{m^{2}}\\) in size.",
+    "C": "Incorrect. \\(-\\frac{b}{m}\\) is the shared \\(x\\)-intercept, not the \\(y\\)-intercept of line \\(n\\).",
+    "D": "Correct. Line \\(\\ell\\) crosses the \\(x\\)-axis at \\(x = -\\frac{b}{m}\\); line \\(n\\) is \\(y = -\\frac{1}{m}\\left(x + \\frac{b}{m}\\right)\\), whose \\(y\\)-intercept is \\(-\\frac{b}{m^{2}}\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "reciprocal",
+    "C": "concept"
+  },
+  "verify": "m, b = symbols('m b', positive=True)\nx = symbols('x')\nxi = solve(Eq(m*x + b, 0), x)[0]\nline_n = (-1/m)*(x - xi)\nyi = simplify(line_n.subs(x, 0))\nassert simplify(yi + b/m**2) == 0\nassert simplify(value(choices[answer]).subs({symbols('m'): m, symbols('b'): b}) - yi) == 0\nassert all(simplify(value(choices[k]).subs({symbols('m'): m, symbols('b'): b}) - yi) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

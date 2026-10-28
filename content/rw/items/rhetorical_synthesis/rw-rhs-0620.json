@@ -1,0 +1,61 @@
+{
+  "id": "rw-rhs-0620",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "Mercury is the closest planet to the Sun and the smallest planet in the solar system.",
+    "Mercury takes about 88 Earth days to complete one orbit of the Sun, so its year is 88 Earth days long.",
+    "Mercury rotates slowly, turning once on its axis every 59 Earth days.",
+    "Because of the combination of its slow rotation and fast orbit, a full cycle from one sunrise to the next on Mercury takes about 176 Earth days, or two Mercury years."
+  ],
+  "data": null,
+  "stem": "The student wants to emphasize how unusual the length of a day on Mercury is. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "Mercury is the smallest planet in the solar system and the closest planet to the Sun.",
+    "B": "Mercury, the closest planet to the Sun, completes one orbit in about 88 Earth days, so its year is 88 Earth days long.",
+    "C": "Mercury rotates slowly, turning once on its axis every 59 Earth days.",
+    "D": "Because Mercury rotates slowly but orbits the Sun quickly, a single sunrise-to-sunrise cycle there lasts about 176 Earth days, or two Mercury years."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The goal is about the length of a day on Mercury, meaning the time from one sunrise to the next. The last note gives the striking fact: that cycle lasts 176 Earth days, which is two of Mercury's years. The key must state that fact; a planet whose day is longer than its year is clearly unusual.",
+    "A": "Incorrect. This gives Mercury's size and position, which say nothing about its day.",
+    "B": "Incorrect. This is about Mercury's year, not its day.",
+    "C": "Incorrect. The rotation period is only one part of the story and, on its own, does not show how unusual the day is.",
+    "D": "Correct. It gives the length of the sunrise-to-sunrise cycle and notes that it equals two Mercury years, which makes the oddity plain."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "misses_goal",
+    "C": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

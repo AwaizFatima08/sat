@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0631",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Most octopuses avoid predators by hiding: they match the color and texture of nearby rocks or coral and stay still until the danger passes. The mimic octopus, which lives on open sandy seafloors off Indonesia, takes a bolder approach, impersonating animals that predators prefer to leave alone. ______ when threatened, it may spread its arms into the banded, spiny outline of a lionfish, or bury six arms in the sand and wave the other two like a pair of venomous sea snakes.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For instance,",
+    "B": "Nevertheless,",
+    "C": "In contrast,",
+    "D": "As a result,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The second sentence makes a general claim: the mimic octopus impersonates \"animals that predators prefer to leave alone.\" The last sentence describes two particular impersonations, a lionfish and sea snakes, which illustrate that claim. A transition that introduces examples is needed.",
+    "A": "Correct. \"For instance\" introduces the lionfish and sea snake displays as specific cases of the octopus impersonating dangerous animals.",
+    "B": "Incorrect. The lionfish and sea snake displays support the claim about impersonation; they do not happen in spite of it.",
+    "C": "Incorrect. The contrast in the text is between hiding and impersonating, and that contrast was already made in the second sentence. The last sentence does not contrast with the sentence before it; it illustrates it. This is the most tempting trap.",
+    "D": "Incorrect. The specific displays are not caused by the general strategy; they are examples of it."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

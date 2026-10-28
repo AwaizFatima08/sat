@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0630",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Radio dramas, serialized plays performed for broadcast, remain popular in Ghana, where many listeners follow them on local stations. Media researcher Kofi Mensah surveyed 1,200 people in Accra about one drama that a station broadcast twice a day, at 7 a.m. and at 8 p.m., and also posted online. He expected the morning broadcast to attract the most listeners, since many people listen to the radio while traveling to work, but the survey showed otherwise: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "How 1,200 Survey Respondents in Accra Followed a Radio Drama",
+    "columns": [
+      "How the drama was followed",
+      "Respondents",
+      "Average episodes heard per week"
+    ],
+    "rows": [
+      [
+        "Morning broadcast",
+        290,
+        3.1
+      ],
+      [
+        "Evening broadcast",
+        610,
+        4.4
+      ],
+      [
+        "Online",
+        220,
+        2.6
+      ],
+      [
+        "Did not follow the drama",
+        80,
+        0
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "respondents who followed the drama online heard an average of 2.6 episodes a week.",
+    "B": "the morning broadcast attracted more respondents than the evening broadcast and the online version combined.",
+    "C": "the evening broadcast attracted 610 respondents, more than twice as many as the morning broadcast's 290.",
+    "D": "290 of the respondents followed the drama through the morning broadcast."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Mensah expected the morning broadcast to have the most listeners, and the statement says the survey showed otherwise. The choice must therefore show that another option beat the morning broadcast: 610 respondents followed the evening broadcast, compared with 290 for the morning one.",
+    "A": "Incorrect. This is true, but it concerns how many episodes online followers heard, not which broadcast attracted the most listeners.",
+    "B": "Incorrect. This reverses the table: the morning broadcast's 290 is far below the evening broadcast's 610 alone.",
+    "C": "Correct. The evening broadcast's 610 respondents far exceed the morning broadcast's 290, which contradicts Mensah's expectation just as the statement says.",
+    "D": "Incorrect. This is accurate, but on its own it does not show that any other option drew more listeners than the morning broadcast."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

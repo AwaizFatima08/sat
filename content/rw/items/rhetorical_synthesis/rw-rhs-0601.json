@@ -1,0 +1,61 @@
+{
+  "id": "rw-rhs-0601",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "The Mariana Trench is a deep trench in the floor of the western Pacific Ocean.",
+    "Its deepest point, the Challenger Deep, lies about 11,000 meters below the sea surface.",
+    "Mount Everest, the highest mountain on land, rises about 8,850 meters above sea level.",
+    "The first crewed descent to the Challenger Deep was made in 1960 by Jacques Piccard and Don Walsh."
+  ],
+  "data": null,
+  "stem": "The student wants to emphasize how deep the Mariana Trench is to an audience unfamiliar with it. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "The Mariana Trench, in the floor of the western Pacific Ocean, is so deep that Mount Everest could stand inside it with more than 2,000 meters of water above its peak.",
+    "B": "Mount Everest, the highest mountain on land, rises about 8,850 meters above sea level.",
+    "C": "In 1960, Jacques Piccard and Don Walsh made the first crewed descent to the Challenger Deep, the deepest point of the Mariana Trench.",
+    "D": "The deepest point of the Mariana Trench, the Challenger Deep, lies about 11,000 meters below the surface of the sea."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The goal has two parts: tell readers who do not know the trench what and where it is, and make them feel how deep it is. A bare number means little to a new audience, so the best choice compares the depth with something familiar. Only one choice both introduces the trench and sets its depth against the height of Mount Everest.",
+    "A": "Correct. It names the trench, says where it is, and makes the depth vivid by showing that the tallest mountain on land would fit inside it with room to spare.",
+    "B": "Incorrect. This is about Mount Everest only and never mentions the trench.",
+    "C": "Incorrect. This tells who first reached the bottom, which says nothing about how deep the trench is.",
+    "D": "Incorrect. This gives the depth as a number but does not help a new reader picture it, and it leaves out the comparison with Everest that the notes make possible."
+  },
+  "traps": {
+    "B": "misses_goal",
+    "C": "true_irrelevant",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": "D",
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

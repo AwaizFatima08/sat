@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0713",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Birds that live in dense forest tend to sing lower, slower songs than their relatives in open country, and ornithologists have long suspected that the habitat itself is responsible. A song is a signal that must reach a listener some distance away, and leaves, branches, and trunks are not neutral to it: a high, rapid trill that would carry cleanly across a meadow loses energy at every surface it meets among the trees, so that little of it remains a few dozen meters from the singer. Because foliage ______ high frequencies far more than low ones, a forest bird that sang like a meadowlark would be wasting its breath. Low, pure tones, by contrast, slip between the trunks relatively unharmed.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "amplifies",
+    "B": "distorts",
+    "C": "attenuates",
+    "D": "synchronizes"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The previous sentence describes what happens to a high trill in forest: it \"loses energy at every surface it meets,\" so that \"little of it remains.\" The blank must name this weakening of a signal, and \"attenuates\" means reduces in strength. The contrast with low tones that pass \"relatively unharmed\" confirms the meaning.",
+    "A": "Incorrect. \"Amplifies\" means makes stronger, the opposite of a signal that loses energy.",
+    "B": "Incorrect. \"Distorts\" means changes the shape or quality of a signal. The text describes loss of energy, not a change in the sound's form.",
+    "C": "Correct. \"Attenuates\" means weakens or reduces in intensity, which matches a trill that loses energy until little remains.",
+    "D": "Incorrect. \"Synchronizes\" means makes things happen at the same time. The text says nothing about timing."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "wrong_tone",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

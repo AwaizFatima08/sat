@@ -1,0 +1,57 @@
+{
+  "id": "m-cir-0609",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The boundary of a circular cricket ground is a circle with a radius of 70 meters. A fielder runs along the boundary from one point to another. The two points and the center of the ground form an angle of \\(72^{\\circ}\\). How far, in meters, does the fielder run?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(14\\)",
+    "B": "\\(28\\)",
+    "C": "\\(14\\pi\\)",
+    "D": "\\(28\\pi\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The arc is \\(\\frac{72}{360} = \\frac{1}{5}\\) of the circumference.",
+    "Circumference \\(= 2\\pi(70) = 140\\pi\\), so the arc length is \\(\\frac{1}{5}(140\\pi) = 28\\pi\\) meters."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(\\frac{1}{5}(70) = 14\\) uses the radius in place of the circumference \\(2\\pi r\\).",
+    "B": "Incorrect. \\(\\frac{1}{5}(140) = 28\\) leaves out the factor \\(\\pi\\) in the circumference.",
+    "C": "Incorrect. \\(\\frac{1}{5}(\\pi \\cdot 70) = 14\\pi\\) uses \\(\\pi r\\) for the circumference instead of \\(2\\pi r\\) (or \\(\\pi d\\)).",
+    "D": "Correct. \\(\\frac{72}{360} \\cdot 2\\pi(70) = \\frac{1}{5}(140\\pi) = 28\\pi\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_formula",
+    "C": "radius_diameter"
+  },
+  "verify": "r=70\nans=Rational(72,360)*2*pi*r\nassert ans==28*pi\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\nassert simplify(value(choices['C'])-Rational(72,360)*pi*r)==0 and value(choices['B'])==28\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

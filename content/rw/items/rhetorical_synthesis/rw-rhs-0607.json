@@ -1,0 +1,61 @@
+{
+  "id": "rw-rhs-0607",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "Ocean tides are caused mainly by the pull of the Moon's gravity on Earth's oceans.",
+    "The Sun's gravity also affects the tides, though less strongly than the Moon's.",
+    "At new moon and full moon, the Sun, Moon, and Earth lie in a nearly straight line.",
+    "The highest high tides and lowest low tides of the month, called spring tides, occur at new moon and full moon."
+  ],
+  "data": null,
+  "stem": "The student wants to explain why spring tides occur at new moon and full moon. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "Ocean tides are caused mainly by the pull of the Moon's gravity on Earth's oceans, with the Sun's gravity having a smaller effect.",
+    "B": "Spring tides occur at new moon and full moon because the Sun, Moon, and Earth then lie in a nearly straight line, so the Sun's pull adds to the Moon's.",
+    "C": "Although the Sun's gravity affects the tides, its effect is weaker than the Moon's.",
+    "D": "Spring tides, the highest high tides and lowest low tides of the month, occur at new moon and full moon."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The goal asks for a cause, so the key must say why, not just when, spring tides happen. The notes supply the reason: at new and full moon the Sun and Moon line up with Earth, and both pull on the oceans. Only one choice links the alignment to the extra-high tides.",
+    "A": "Incorrect. This explains tides in general, not why the biggest tides come at new moon and full moon.",
+    "B": "Correct. \"Because\" introduces the cause: the alignment of the Sun, Moon, and Earth, which lets the two pulls combine.",
+    "C": "Incorrect. This compares the Sun's and Moon's effects but never mentions spring tides or the alignment.",
+    "D": "Incorrect. This says when spring tides occur but gives no reason."
+  },
+  "traps": {
+    "A": "misses_goal",
+    "C": "true_irrelevant",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0609",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Most animals use more energy the faster they move, but kangaroos are an exception over a wide range of hopping speeds. Long, springy tendons in a kangaroo's legs stretch when it lands and then snap back, returning much of the energy of each landing to the next hop. Researchers who measured the oxygen used by red kangaroos hopping on a treadmill found that the animals used almost no more oxygen at a fast hop than at a slow one. These measurements suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "hopping faster costs a kangaroo little extra energy.",
+    "B": "the tendons in a kangaroo's legs are longer than those of other animals.",
+    "C": "kangaroos cannot hop for long without becoming exhausted.",
+    "D": "red kangaroos use more energy at slow speeds than at fast ones."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The oxygen an animal uses is a measure of the energy it spends. The kangaroos used almost no more oxygen at a fast hop than at a slow one, so going faster must cost them almost no extra energy, which fits the explanation about the springy tendons.",
+    "A": "Correct. Nearly equal oxygen use at slow and fast speeds means little added energy cost for speed.",
+    "B": "Incorrect. The text does not compare kangaroo tendons with those of other animals.",
+    "C": "Incorrect. The text describes an energy-saving mechanism and says nothing about exhaustion.",
+    "D": "Incorrect. The text says oxygen use was almost the same at both speeds, not higher at slow speeds."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

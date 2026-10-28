@@ -1,0 +1,90 @@
+{
+  "id": "m-ovd-0615",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The bar graph shows the number of textbooks owned by each of the 30 students in a class in Nairobi. What percent of the students own more than the mean number of textbooks?",
+  "figure": {
+    "kind": "bar",
+    "title": "Textbooks owned",
+    "x_label": "Number of textbooks",
+    "y_label": "Number of students",
+    "series": [
+      {
+        "name": "Students",
+        "points": [
+          [
+            "0",
+            2
+          ],
+          [
+            "1",
+            10
+          ],
+          [
+            "2",
+            9
+          ],
+          [
+            "3",
+            6
+          ],
+          [
+            "4",
+            3
+          ]
+        ]
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(60\\%\\)",
+    "B": "\\(40\\%\\)",
+    "C": "\\(50\\%\\)",
+    "D": "\\(30\\%\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Total textbooks: \\(0(2) + 1(10) + 2(9) + 3(6) + 4(3) = 58\\), so the mean is \\(\\frac{58}{30} \\approx 1.93\\).",
+    "Students who own more than 1.93 textbooks are those with 2, 3 or 4: \\(9 + 6 + 3 = 18\\).",
+    "\\(\\frac{18}{30} = 60\\%\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The mean is about 1.93 textbooks, and \\(9 + 6 + 3 = 18\\) of the 30 students own 2 or more, which is \\(60\\%\\).",
+    "B": "Incorrect. This is the percent of students who own fewer than the mean (0 or 1 textbook), \\(\\frac{12}{30}\\).",
+    "C": "Incorrect. Half of the values are above the median, not necessarily above the mean. The mean here is about 1.93, and 18 of the 30 students are above it.",
+    "D": "Incorrect. This is \\(\\frac{9}{30}\\), the percent who own 3 or more textbooks. Students with exactly 2 textbooks also own more than the mean of about 1.93."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "pts = [(Integer(a), n) for a, n in figure['series'][0]['points']]\nN = sum(n for a, n in pts)\nassert N == 30\nm = Rational(sum(a * n for a, n in pts), N)\nassert 1 < m < 2\nfr = Rational(sum(n for a, n in pts if a > m), N)\nassert fr == Rational(3, 5)\nassert value(choices[answer]) == fr\nassert all(value(choices[k]) != fr for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

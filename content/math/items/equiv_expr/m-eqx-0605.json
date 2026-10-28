@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0605",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rectangular garden plot has a length of \\(5x\\) meters and a width of \\((2x - 3)\\) meters. Which expression represents the area, in square meters, of the plot?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10x^{2} - 3\\)",
+    "B": "\\(7x^{2} - 15x\\)",
+    "C": "\\(10x^{2} - 15\\)",
+    "D": "\\(10x^{2} - 15x\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Area is length times width: \\(5x(2x - 3) = 5x \\cdot 2x - 5x \\cdot 3\\).",
+    "The expression equals \\(10x^{2} - 15x\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of multiplying only the first term by \\(5x\\); the \\(-3\\) must be multiplied too.",
+    "B": "Incorrect. This is the result of adding the coefficients 5 and 2 instead of multiplying them.",
+    "C": "Incorrect. This is the result of multiplying \\(-3\\) by 5 but not by \\(x\\).",
+    "D": "Correct. \\(5x \\cdot 2x - 5x \\cdot 3 = 10x^{2} - 15x\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "C": "arithmetic"
+  },
+  "verify": "x = symbols('x')\nt = 5*x*(2*x - 3)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

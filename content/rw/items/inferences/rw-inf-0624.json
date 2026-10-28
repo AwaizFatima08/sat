@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0624",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Urban planner Devika Menon surveyed passengers waiting at two sets of bus stops in the same city. At the first set, electronic displays showed how many minutes remained until the next bus; at the second set, there were no displays. Buses on both sets of routes ran on the same schedule, and Menon timed each passenger's actual wait. When passengers were asked how long they thought they had waited, those at stops without displays gave estimates well above their actual waits, while those at stops with displays gave estimates close to the truth. Menon's findings suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "not knowing when a bus will come makes a wait feel longer than it really is.",
+    "B": "most passengers do not look at the displays while they are waiting.",
+    "C": "passengers at stops with displays waited less time than those at stops without them.",
+    "D": "buses arrive more promptly at stops that are fitted with electronic displays."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Actual waits were the same at both kinds of stops, so the displays did not change how long anyone waited. What changed was perception: without a display, passengers overestimated their waits. So uncertainty about the bus's arrival is what makes the wait feel longer.",
+    "A": "Correct. Equal real waits but inflated estimates only where there was no display point to uncertainty as the cause.",
+    "B": "Incorrect. Passengers at stops with displays estimated their waits accurately, which suggests they did use the displays.",
+    "C": "Incorrect. The text says Menon timed actual waits and that the schedules were the same; only the estimates differed.",
+    "D": "Incorrect. The buses ran on the same schedule at both sets of stops; the displays did not affect arrivals."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

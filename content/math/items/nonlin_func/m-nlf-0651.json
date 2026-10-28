@@ -1,0 +1,57 @@
+{
+  "id": "m-nlf-0651",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The volume \\(V(r)\\), in cubic centimeters, of a spherical balloon with radius \\(r\\) centimeters is given by \\(V(r) = \\frac{4}{3}\\pi r^{3}\\). If the radius of the balloon is doubled, the volume is multiplied by what factor?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(4\\)",
+    "C": "\\(8\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Replace \\(r\\) with \\(2r\\): \\(V(2r) = \\frac{4}{3}\\pi (2r)^{3} = \\frac{4}{3}\\pi \\cdot 8r^{3} = 8V(r)\\).",
+    "So the volume is multiplied by \\(8\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Doubling the radius doubles a length, but the volume depends on \\(r^{3}\\), so it is multiplied by \\(2^{3}\\).",
+    "B": "Incorrect. \\(4 = 2^{2}\\) is the factor for an area, such as surface area; volume uses the cube, \\(2^{3} = 8\\).",
+    "C": "Correct. \\((2r)^{3} = 8r^{3}\\).",
+    "D": "Incorrect. \\(2 \\cdot 3 = 6\\) is not the same as \\(2^{3} = 8\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "r = symbols('r', positive=True)\nV = Lambda(r, Rational(4, 3)*pi*r**3)\nassert simplify(V(2*r)/V(r)) == 8\nassert value(choices[answer]) == 8\nassert all(value(choices[k]) != 8 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

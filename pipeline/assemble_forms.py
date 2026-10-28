@@ -30,7 +30,7 @@ def main():
     lo, hi = (101, 499) if a.set == 1 else (601, 999)
     first = (a.set - 1) * PAPERS + 1
     items = [json.loads(p.read_text()) for p in sorted((RW / "items").glob("*/*.json"))]
-    pool = [i for i in items if i["pool"] == "paper" and i["provenance"]["status"] != "retired"
+    pool = [i for i in items if i["pool"] == "paper" and i["provenance"]["status"] == "checked"
             and lo <= int(i["id"].rsplit("-", 1)[1]) <= hi]
     per_module = BP["module_blueprint"]["types"]
     papers = [{"m1": [], "m2_easy": [], "m2_hard": []} for _ in range(PAPERS)]

@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0619",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Lake Baikal in Siberia is the deepest lake in the world and holds about a fifth of the planet's unfrozen fresh water. The Baikal seal, the only seal species that spends its entire life in fresh water, along with hundreds of other animals found nowhere else on Earth, ______ in the lake's cold, clear waters. How the seals' ancestors reached a lake so far from any ocean remains a puzzle.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "have lived",
+    "B": "live",
+    "C": "are living",
+    "D": "lives"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The subject of the verb is \"The Baikal seal,\" which is singular. The long phrase \"along with hundreds of other animals found nowhere else on Earth\" is not part of the subject; \"along with\" does not make a subject plural the way \"and\" would. So the singular verb \"lives\" is needed.",
+    "A": "Incorrect. \"Have lived\" is plural, but the subject \"The Baikal seal\" is singular.",
+    "B": "Incorrect. \"Live\" is plural and would agree with \"animals,\" but \"along with\" sets that phrase aside; the subject is the singular \"seal.\"",
+    "C": "Incorrect. \"Are living\" is plural, but the subject \"The Baikal seal\" is singular.",
+    "D": "Correct. The singular verb \"lives\" agrees with the singular subject \"The Baikal seal.\""
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "C": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

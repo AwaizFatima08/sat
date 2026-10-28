@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0612",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The volume of water, in liters, in a rainwater tank on a rooftop \\(t\\) minutes after a rainstorm begins is given by \\(W(t) = 25t + 140\\). According to the function, how many liters of water are in the tank 12 minutes after the rainstorm begins?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "440"
+  ],
+  "solution": [
+    "Substitute \\(t = 12\\): \\(W(12) = 25(12) + 140\\).",
+    "\\(25(12) = 300\\), so \\(W(12) = 300 + 140 = 440\\) liters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t')\nW = 25*t + 140\nans = W.subs(t, 12)\nassert ans == 440\nassert Rational(spr_answers[0]) == ans and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "440",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

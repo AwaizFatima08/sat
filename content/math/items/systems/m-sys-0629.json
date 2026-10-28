@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0629",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following equations, together with \\(4x - 6y = 10\\), forms a system of linear equations that has infinitely many solutions?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-6x + 9y = 15\\)",
+    "B": "\\(6x + 9y = 15\\)",
+    "C": "\\(-6x + 9y = -15\\)",
+    "D": "\\(2x - 3y = -5\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "A system has infinitely many solutions when both equations describe the same line, that is, when one is a constant multiple of the other.",
+    "Multiply \\(4x - 6y = 10\\) by \\(-\\frac{3}{2}\\): \\(-6x + 9y = -15\\).",
+    "The other choices either change the sign of the constant (parallel line, no solution) or change the slope (one solution)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The left side is \\(-\\frac{3}{2}\\) times \\(4x - 6y\\), but \\(-\\frac{3}{2}(10) = -15\\), not \\(15\\); this line is parallel to the given one, so there is no solution.",
+    "B": "Incorrect. This line has slope \\(-\\frac{2}{3}\\), while \\(4x - 6y = 10\\) has slope \\(\\frac{2}{3}\\); the lines cross in exactly one point.",
+    "C": "Correct. This is \\(-\\frac{3}{2}\\) times \\(4x - 6y = 10\\), so it describes the same line.",
+    "D": "Incorrect. Halving \\(4x - 6y = 10\\) gives \\(2x - 3y = 5\\), not \\(-5\\); this line is parallel to the given one, so there is no solution."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "D": "sign_error"
+  },
+  "verify": "x, y = symbols('x y')\nL = value(choices[answer].split('=')[0]) - value(choices[answer].split('=')[1])\ninf = [k for k in choices if len(linsolve([4*x - 6*y - 10, value(choices[k].split('=')[0]) - value(choices[k].split('=')[1])], [x, y]).free_symbols) > 0]\nassert inf == [answer]\nassert simplify(L - Rational(-3, 2)*(4*x - 6*y - 10)) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-ctc-0608",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Children are often told never to touch a baby bird that has fallen from its nest. The warning rests on a widely repeated belief: if the parents smell a human on their chick, they will reject it and let it starve. According to this view, the best thing to do with a bird on the ground is to leave it alone.",
+  "passage_b": "Ornithologist Teodora Vlahović notes that most songbirds have a weak sense of smell and do not reject a chick that a person has handled. Still, she agrees that a young bird on the ground is usually best left where it is, because a fledgling with feathers is normally being fed by parents nearby and is learning to fly. A featherless nestling, however, can safely be placed back in its nest.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, both authors would most likely agree with which statement?",
+  "choices": {
+    "A": "A young bird found on the ground should often be left where it is.",
+    "B": "A baby bird found on the ground should be taken to a wildlife center.",
+    "C": "Featherless nestlings can safely be returned to their nests.",
+    "D": "Parent birds abandon chicks that carry a human scent."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Text 1 concludes that \"the best thing to do with a bird on the ground is to leave it alone.\" Text 2 \"agrees that a young bird on the ground is usually best left where it is,\" though for a different reason. Both authors therefore accept that leaving the bird is often right.",
+    "A": "Correct. Text 1 says to leave the bird alone, and Vlahović agrees that a young bird is usually best left where it is.",
+    "B": "Incorrect. Neither text mentions wildlife centers.",
+    "C": "Incorrect. Only Text 2 says this; Text 1 says never to touch a baby bird.",
+    "D": "Incorrect. This is the belief in Text 1, but Text 2 says most songbirds have a weak sense of smell and do not reject handled chicks."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

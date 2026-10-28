@@ -1,0 +1,57 @@
+{
+  "id": "m-tvd-0613",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "For a town, the line of best fit \\(y = 0.4x + 10\\) models the percent \\(y\\) of households that have a solar water heater \\(x\\) years after 2000. Which of the following is the best interpretation of the slope of the line of best fit in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The predicted percent of households with a solar water heater increases by 0.4 percentage point every 10 years.",
+    "B": "The predicted percent of households with a solar water heater increases by 4 percentage points each year.",
+    "C": "The predicted percent of households with a solar water heater increases by 4 percentage points every 10 years.",
+    "D": "The predicted percent of households with a solar water heater increases by 40 percentage points every 10 years."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The slope 0.4 means the predicted percent rises by 0.4 percentage point for each additional year.",
+    "Over 10 years that is \\(0.4 \\times 10 = 4\\) percentage points."
+  ],
+  "explanation": {
+    "A": "Incorrect. 0.4 percentage point is the increase per year, not per 10 years.",
+    "B": "Incorrect. The increase per year is 0.4 percentage point; 4 percentage points is the increase over 10 years.",
+    "C": "Correct. The slope is 0.4 percentage point per year, which is \\(0.4 \\times 10 = 4\\) percentage points every 10 years.",
+    "D": "Incorrect. This multiplies by 100 instead of 10; \\(0.4 \\times 10 = 4\\), not 40."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_formula",
+    "D": "arithmetic"
+  },
+  "verify": "x = symbols('x')\nf = Rational(4, 10)*x + 10\nper_decade = f.subs(x, 10) - f.subs(x, 0)\nassert per_decade == 4\nassert 'by 4 percentage points every 10 years' in choices[answer]\nassert sum('by 4 percentage points every 10 years' in choices[k] for k in choices) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

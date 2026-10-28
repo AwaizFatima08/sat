@@ -1,0 +1,58 @@
+{
+  "id": "m-pct-0613",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A shopkeeper in Peshawar bought 40 kilograms of almonds at a cost of 1,800 rupees per kilogram. The shopkeeper sold 30 kilograms at a price \\(25\\%\\) above the cost per kilogram and sold the remaining 10 kilograms at a price \\(10\\%\\) below the cost per kilogram. The shopkeeper's total profit was what percent of the total cost?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(15\\%\\)",
+    "B": "\\(16.25\\%\\)",
+    "C": "\\(18.75\\%\\)",
+    "D": "\\(7.5\\%\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Total cost: \\(40 \\cdot 1{,}800 = 72{,}000\\) rupees.",
+    "Revenue: \\(30 \\cdot 2{,}250 + 10 \\cdot 1{,}620 = 67{,}500 + 16{,}200 = 83{,}700\\) rupees.",
+    "Profit: \\(83{,}700 - 72{,}000 = 11{,}700\\) rupees, and \\(\\frac{11{,}700}{72{,}000} = 0.1625 = 16.25\\%\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(25\\% - 10\\%\\). Percents of different quantities cannot be added or subtracted directly.",
+    "B": "Correct. The profit of \\(11{,}700\\) rupees is \\(16.25\\%\\) of the cost of \\(72{,}000\\) rupees.",
+    "C": "Incorrect. This is \\(\\frac{13{,}500}{72{,}000}\\), the profit on the first 30 kilograms only, ignoring the loss on the last 10 kilograms.",
+    "D": "Incorrect. This is the average of \\(+25\\%\\) and \\(-10\\%\\). The two percents apply to different amounts of almonds, so they cannot simply be averaged."
+  },
+  "traps": {
+    "A": "percent_add",
+    "C": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "cost = 40*1800\nrev = 30*1800*Rational(125, 100) + 10*1800*Rational(90, 100)\nans = Rational(rev - cost, cost)\nassert ans == Rational('0.1625')\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0602",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In most big cities, construction crews surround a rising building with scaffolding made of steel tubes. In Hong Kong, scaffolding is still often built from bamboo poles tied together with strips of plastic. Bamboo is light enough for a worker to carry several poles at once, and it costs far less than steel. ______ it is strong enough that workers use it on buildings dozens of stories tall.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For example,",
+    "B": "Instead,",
+    "C": "Moreover,",
+    "D": "Consequently,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The third sentence lists two advantages of bamboo: it is light and cheap. The last sentence adds a third advantage, its strength. A transition that adds another point of the same kind is needed.",
+    "A": "Incorrect. Bamboo's strength is not an example of its being light or cheap; it is a separate advantage.",
+    "B": "Incorrect. \"Instead\" would mean that strength replaces the advantages just listed, but the sentence adds to them.",
+    "C": "Correct. \"Moreover\" adds the strength of bamboo to the other advantages already named.",
+    "D": "Incorrect. Bamboo is not strong because it is light and cheap; the last sentence adds a new point rather than stating a result."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

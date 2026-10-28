@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0608",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(y = 3x + b\\), where \\(b\\) is a constant, passes through the point \\((2, 11)\\). What is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "5"
+  ],
+  "solution": [
+    "The point \\((2, 11)\\) is on the graph, so \\(11 = 3(2) + b\\).",
+    "\\(11 = 6 + b\\), so \\(b = 5\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "b = symbols('b')\nsol = solve(Eq(3*2 + b, 11), b)\nassert sol == [5]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

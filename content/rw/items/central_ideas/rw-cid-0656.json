@@ -1,0 +1,56 @@
+{
+  "id": "rw-cid-0656",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "central_ideas",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A plant root grows downward, and the mechanism by which it senses which way is down has been debated for more than a century. The leading explanation points to a cluster of cells at the root's tip that contain dense, starch-filled grains. Within minutes of a root being turned on its side, these grains settle to the new bottom of each cell, and the shift is thought to trigger the signals that redirect growth. The hypothesis predicts that a root without such grains should be unable to sense gravity. Yet mutant plants whose cells cannot make starch, and whose grains are therefore too light to settle properly, still bend downward when tilted, only more slowly and less reliably than normal roots. The result does not overturn the explanation so much as complicate it: the settling grains evidently sharpen the root's sense of gravity, but they are not its only source.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Based on the text, what do the experiments with starchless mutant plants indicate?",
+  "choices": {
+    "A": "The debate over how roots sense gravity has been settled by the discovery of starchless mutants.",
+    "B": "Starchless mutants sense gravity through a cluster of cells located far from the root tip.",
+    "C": "Starch-filled grains are the only means by which a root detects the direction of gravity.",
+    "D": "The settling of the grains improves a root's response to gravity but does not entirely account for it."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The hypothesis predicts that roots without settling grains \"should be unable to sense gravity,\" yet the starchless mutants \"still bend downward,\" only \"more slowly and less reliably.\" The text's conclusion is that the grains \"sharpen the root's sense of gravity, but they are not its only source.\" The correct choice restates this partial role.",
+    "A": "Incorrect. The text says the result \"complicate[s]\" the explanation rather than settling the debate.",
+    "B": "Incorrect. The text never says where the mutants' remaining sense of gravity comes from.",
+    "C": "Incorrect. This reverses the finding: the mutants still respond, so the grains are \"not its only source.\"",
+    "D": "Correct. The grains improve the response (mutants are slower and less reliable) but are not the whole mechanism."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "not_in_text",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h3-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "rw-rhs-0639",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "Beriberi is a disease that causes weakness, nerve damage, and heart problems.",
+    "In the 1890s most physicians believed beriberi was caused by an infection.",
+    "Christiaan Eijkman, a Dutch physician working on the island of Java, was studying the disease.",
+    "Chickens kept at his laboratory developed symptoms resembling beriberi after being fed polished (white) rice left over from a hospital kitchen.",
+    "When the chickens were switched to unpolished rice, which keeps its outer layer, they recovered.",
+    "Later researchers found that the outer layer of rice contains thiamine, a vitamin removed by polishing."
+  ],
+  "data": null,
+  "stem": "The student wants to present Eijkman's observation as evidence against the view that beriberi was an infection. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "Although most physicians in the 1890s believed beriberi was an infection, Eijkman found that chickens developed similar symptoms when fed polished rice and recovered on unpolished rice, pointing to diet instead.",
+    "B": "Later researchers found that the outer layer of rice contains thiamine, a vitamin that polishing removes, which explained why the chickens that ate unpolished rice recovered.",
+    "C": "Christiaan Eijkman, a Dutch physician working on the island of Java in the 1890s, studied beriberi at a time when most physicians believed the disease was caused by an infection.",
+    "D": "Chickens kept at Eijkman's laboratory developed symptoms resembling beriberi after they were fed polished white rice left over from a hospital kitchen."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "To present an observation as evidence against a view, the sentence must state the view (beriberi is an infection) and the observation that conflicts with it (symptoms came and went with the type of rice). The rice observation points to diet, which is why it counts against infection.",
+    "A": "Correct. \"Although\" sets the infection view against the rice observation, and \"pointing to diet instead\" makes the conflict clear.",
+    "B": "Incorrect. It explains the later discovery of thiamine, which is not Eijkman's observation and does not mention the infection view.",
+    "C": "Incorrect. It states the infection view but gives no observation that challenges it.",
+    "D": "Incorrect. It gives half the observation (the chickens got sick on polished rice) without the recovery on unpolished rice, and it never mentions the view the observation argues against."
+  },
+  "traps": {
+    "B": "misses_goal",
+    "C": "too_narrow",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

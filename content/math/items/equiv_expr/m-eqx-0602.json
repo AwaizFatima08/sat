@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0602",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A tailor in Dhaka has a roll of fabric that is \\(L\\) meters long. She cuts 5 pieces from the roll, each \\(2x\\) meters long. Which expression represents the length, in meters, of fabric left on the roll?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(L - 7x\\)",
+    "B": "\\(10x - L\\)",
+    "C": "\\(L - 10x\\)",
+    "D": "\\(5L - 2x\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The 5 pieces use \\(5 \\cdot 2x = 10x\\) meters in total.",
+    "Subtract that from the roll: \\(L - 10x\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding 5 and \\(2x\\) instead of multiplying them: 5 pieces of \\(2x\\) meters use \\(10x\\) meters.",
+    "B": "Incorrect. This is the fabric used minus the roll length; the order of subtraction is reversed.",
+    "C": "Correct. The pieces use \\(10x\\) meters, leaving \\(L - 10x\\) meters.",
+    "D": "Incorrect. This is the result of multiplying the roll length by 5 instead of the length of each piece."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "sign_error",
+    "D": "concept"
+  },
+  "verify": "L, x = symbols('L x')\nt = L - 5*(2*x)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

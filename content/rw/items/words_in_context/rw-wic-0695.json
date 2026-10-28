@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0695",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Sea cucumbers, soft-bodied relatives of starfish, spend their lives swallowing sand and mud from the seafloor and extracting the organic matter mixed into it; a single animal can process many kilograms of sediment in a year. The sand that passes through them comes out cleaner and better mixed, and their constant burrowing lets oxygen reach layers that would otherwise turn stagnant. Marine ecologists have found that reefs stripped of sea cucumbers by overharvesting accumulate organic waste and lose some of their resilience. These benefits are ______ to the animals themselves, which are simply feeding, but they are substantial enough that some fisheries managers now treat sea cucumbers as a kind of maintenance crew.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "indispensable",
+    "B": "attributable",
+    "C": "incidental",
+    "D": "imperceptible"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The clause \"which are simply feeding\" explains the blank: the cleaning and mixing happen as a side effect of the animals' feeding, not as their purpose. The blank must therefore mean \"occurring by the way, as a byproduct,\" which is what \"incidental\" means. The \"but\" that follows contrasts this accidental origin with the benefits' importance to the reef.",
+    "A": "Incorrect. \"Indispensable\" means essential. The benefits are essential to the reef, not to the sea cucumbers, which gain nothing from cleaning the sand.",
+    "B": "Incorrect. The benefits are indeed caused by the animals, but \"attributable\" does not fit the contrast with \"simply feeding\": the point is that the animals do not intend the benefits, not that they cause them.",
+    "C": "Correct. \"Incidental\" describes something that happens as a byproduct of another activity, which fits benefits produced by animals that are \"simply feeding.\"",
+    "D": "Incorrect. \"Imperceptible\" means too small to notice, but the text calls the benefits \"substantial\" and says reefs suffer without them."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "wrong_logic",
+    "D": "wrong_tone"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

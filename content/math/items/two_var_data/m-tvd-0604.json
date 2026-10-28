@@ -1,0 +1,65 @@
+{
+  "id": "m-tvd-0604",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A ball is dropped onto a floor. The table shows the maximum height \\(y\\), in centimeters, that the ball reached after each of its first 3 bounces, where \\(x\\) is the bounce number. The relationship between \\(x\\) and \\(y\\) is exponential. What is the maximum height, in centimeters, the ball reaches after the 4th bounce?",
+  "figure": {
+    "kind": "table",
+    "columns": [
+      "Bounce number, x",
+      "Maximum height (cm), y"
+    ],
+    "rows": [
+      [
+        "1",
+        "64"
+      ],
+      [
+        "2",
+        "48"
+      ],
+      [
+        "3",
+        "36"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "27"
+  ],
+  "solution": [
+    "Each bounce multiplies the height by the same factor: \\(\\frac{48}{64} = \\frac{36}{48} = 0.75\\).",
+    "After the 4th bounce: \\(36 \\times 0.75 = 27\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "v = [Integer(r[1]) for r in figure['rows']]\nratios = {v[i + 1] / v[i] for i in range(2)}\nassert ratios == {Rational(3, 4)}\nassert [Rational(s) for s in spr_answers] == [v[-1] * Rational(3, 4)] == [27]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "27",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

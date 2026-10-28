@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0622",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A widely repeated story holds that when lemmings become too numerous, they march to the sea and throw themselves off cliffs. The scene that fixed this image in the public mind, in a 1958 nature documentary, was staged: the animals were pushed into the water by the film crew. ______ the legend grew from a grain of truth. Lemming populations in the Arctic rise and crash in cycles of a few years, and in crowded years large numbers of the animals migrate in search of food, some drowning as they try to cross rivers and lakes.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Therefore,",
+    "B": "Nevertheless,",
+    "C": "For example,",
+    "D": "In other words,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The second sentence shows that the famous footage was faked, which seems to dismiss the story completely. The third sentence says that the story nonetheless has some basis in real lemming behavior. A transition that signals something true in spite of the previous point is needed.",
+    "A": "Incorrect. \"Therefore\" would mean the grain of truth follows from the footage being staged, but the two points pull in opposite directions.",
+    "B": "Correct. \"Nevertheless\" shows that, even though the famous scene was staged, the legend has a real basis in lemming migrations.",
+    "C": "Incorrect. The grain of truth is not an example of the staged scene; it is a point that partly qualifies the dismissal of the story.",
+    "D": "Incorrect. \"In other words\" would restate the previous sentence, but the third sentence makes a different point: that the story is not entirely false."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

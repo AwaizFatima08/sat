@@ -1,0 +1,57 @@
+{
+  "id": "m-cir-0601",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which equation represents the circle in the \\(xy\\)-plane with center \\((-3, 2)\\) and radius 6?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((x + 3)^{2} + (y - 2)^{2} = 36\\)",
+    "B": "\\((x - 3)^{2} + (y + 2)^{2} = 36\\)",
+    "C": "\\((x + 3)^{2} + (y - 2)^{2} = 6\\)",
+    "D": "\\((x - 3)^{2} + (y + 2)^{2} = 6\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "A circle with center \\((h, k)\\) and radius \\(r\\) has equation \\((x - h)^{2} + (y - k)^{2} = r^{2}\\).",
+    "With \\(h = -3\\), \\(k = 2\\), and \\(r = 6\\): \\((x + 3)^{2} + (y - 2)^{2} = 36\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(x - (-3) = x + 3\\), \\(y - 2\\), and \\(r^{2} = 6^{2} = 36\\).",
+    "B": "Incorrect. The signs are reversed: this circle has center \\((3, -2)\\).",
+    "C": "Incorrect. The right side must be \\(r^{2} = 36\\), not the radius 6.",
+    "D": "Incorrect. The signs are reversed and the right side is \\(r\\) instead of \\(r^{2}\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "x,y=symbols('x y')\ntarget=expand((x+3)**2+(y-2)**2-36)\ndef eqn(s):\n    l,r=s.replace('\\\\(','').replace('\\\\)','').split('=')\n    return expand(value(l)-value(r))\nassert simplify(eqn(choices[answer])-target)==0\nassert all(simplify(eqn(choices[k])-target)!=0 for k in choices if k!=answer)\nassert eqn(choices[answer]).subs({x:-3,y:2})==-36 and eqn(choices[answer]).subs({x:3,y:2})==0\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0700",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many oak forests in eastern North America depend on fire to regenerate, because oak seedlings need open sunlight to grow. For much of the twentieth century, however, most wildfires were quickly suppressed, and fast-growing maples filled the gaps beneath the oaks. ______ land managers have begun to use prescribed burns that thin the understory and let oak seedlings reach the light.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Still,",
+    "B": "In response,",
+    "C": "Similarly,",
+    "D": "For example,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The first two sentences describe a problem: suppressed fires let maples shade out oak seedlings. The blank must introduce what managers now do about that problem, so the transition must show a response to it.",
+    "A": "Incorrect. \"Still\" signals that a point holds despite a conflicting fact. No conflicting fact is set up here; the managers' response follows from the problem.",
+    "B": "Correct. Managers are acting because of the problem the previous sentence describes, so \"In response\" shows the relationship between the problem and the new practice.",
+    "C": "Incorrect. \"Similarly\" would introduce a parallel point. The sentence contrasts past suppression with present action, not two cases that work the same way.",
+    "D": "Incorrect. The sentence describes what managers now do in response to the problem. It is not an example of the suppression described before it."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

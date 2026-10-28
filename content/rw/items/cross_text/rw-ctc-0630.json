@@ -1,0 +1,56 @@
+{
+  "id": "rw-ctc-0630",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Within a span of perhaps twenty-five million years beginning about 540 million years ago, nearly every major group of animals alive today makes its first appearance in the fossil record, an episode known as the Cambrian explosion. Paleontologist Keiko Arimura regards the fossils as testimony to a genuine burst of evolutionary invention, perhaps triggered by rising oxygen levels or by the arrival of the first predators, which forced prey into an arms race of shells, spines, and speed.",
+  "passage_b": "Molecular clock analyses, which estimate when lineages diverged by comparing the DNA of living animals and calibrating the differences against dated fossils, place the origins of the major animal groups tens of millions of years before the Cambrian. Such estimates are imprecise, and different methods disagree about the dates, but they agree in putting the divergences well before the first recognizable fossils. The explosion in the rocks may record, at least in part, the moment when animals became large and hard enough to fossilize rather than the moment they came into being.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, both authors would most likely agree with which statement?",
+  "choices": {
+    "A": "The first predators appeared only after all the major animal groups had evolved.",
+    "B": "The fossil record cannot be trusted to show when any group of animals evolved.",
+    "C": "Many major animal groups first appear in the fossil record during the Cambrian.",
+    "D": "The major animal lineages originated during the Cambrian period."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Arimura describes the Cambrian as the time when nearly every major animal group \"makes its first appearance in the fossil record.\" Text 2 does not dispute this; it speaks of \"the first recognizable fossils\" and \"the explosion in the rocks,\" arguing only that lineages diverged earlier than they fossilized. Both authors accept the fossil pattern and disagree about what it records.",
+    "A": "Incorrect. Text 1 proposes predators as a possible trigger of the explosion; neither text says they came after all groups had evolved.",
+    "B": "Incorrect. Text 2 says the fossil record may be misleading \"at least in part\" about origins, and it still uses dated fossils to calibrate its clocks; neither author rejects the record wholesale.",
+    "C": "Correct. Text 1 states it directly, and Text 2 accepts the appearance of fossils in the Cambrian while reinterpreting what it means.",
+    "D": "Incorrect. Text 1 implies this, but Text 2 places the origins \"tens of millions of years before the Cambrian.\""
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "too_broad",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

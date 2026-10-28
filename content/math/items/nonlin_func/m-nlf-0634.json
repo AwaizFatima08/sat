@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0634",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A parking garage charges \\(p\\) dollars per car for a full day. The owner models the daily revenue, in dollars, with the function \\(R(p) = p(120 - 4p)\\). What price per car gives the maximum daily revenue?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(30\\)",
+    "B": "\\(15\\)",
+    "C": "\\(900\\)",
+    "D": "\\(60\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(R(p) = p(120 - 4p)\\) is zero when \\(p = 0\\) and when \\(120 - 4p = 0\\), that is, \\(p = 30\\).",
+    "The graph of \\(R\\) is a parabola opening downward, so its maximum is midway between the zeros: \\(p = \\frac{0 + 30}{2} = 15\\).",
+    "At that price the revenue is \\(R(15) = 15(60) = 900\\) dollars."
+  ],
+  "explanation": {
+    "A": "Incorrect. At \\(p = 30\\) dollars, \\(120 - 4(30) = 0\\) cars park, so the revenue is \\(0\\); this is a zero of \\(R\\), not the maximum.",
+    "B": "Correct. The vertex of the parabola lies halfway between the zeros \\(0\\) and \\(30\\), at \\(p = 15\\).",
+    "C": "Incorrect. \\(900\\) dollars is the maximum revenue, \\(R(15)\\), not the price that produces it.",
+    "D": "Incorrect. This is \\(120 \\div 2\\); the second zero is \\(120 \\div 4 = 30\\), and the vertex is at half of that, \\(15\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_quantity",
+    "D": "arithmetic"
+  },
+  "verify": "p = symbols('p')\nR = p*(120 - 4*p)\npv = solve(diff(R, p), p)[0]\nassert pv == 15 and R.subs(p, pv) == 900\nassert value(choices[answer]) == 15\nassert all(value(choices[k]) != 15 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

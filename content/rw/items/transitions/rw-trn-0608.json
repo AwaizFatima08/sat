@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0608",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Hina had watched her aunt slap rounds of dough onto the hot clay wall of the tandoor hundreds of times, and the motion looked as easy as closing a door. ______ when her aunt finally let her try, the dough stuck to her fingers, folded on itself, and slid down the wall into the coals, where it burned to a crisp before she could reach it.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "However,",
+    "B": "Similarly,",
+    "C": "Therefore,",
+    "D": "In other words,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The first sentence says the motion \"looked as easy as closing a door.\" The second sentence describes Hina's attempt, which went badly. A transition that signals a contrast between how easy it looked and how hard it was is needed.",
+    "A": "Correct. \"However\" signals the contrast between how easy the task appeared and what happened when Hina tried it.",
+    "B": "Incorrect. \"Similarly\" signals a matching idea, but Hina's failed attempt is the opposite of the easy motion she had watched.",
+    "C": "Incorrect. \"Therefore\" would mean the dough fell because the motion looked easy, but the sentence shows that the appearance was misleading.",
+    "D": "Incorrect. \"In other words\" would restate the first sentence, but the second sentence describes a different event."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

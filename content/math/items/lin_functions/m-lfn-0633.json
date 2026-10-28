@@ -1,0 +1,57 @@
+{
+  "id": "m-lfn-0633",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A tailor buys an industrial sewing machine for 72,000 dollars. For tax purposes, the value \\(V(t)\\), in dollars, of the machine \\(t\\) years after it is bought is modeled by \\(V(t) = 72{,}000 - 4{,}500t\\). The graph of \\(y = V(t)\\) in the \\(ty\\)-plane has a \\(t\\)-intercept at \\((16, 0)\\). Which of the following is the best interpretation of this \\(t\\)-intercept?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "According to the model, the value of the machine decreases by 16 dollars each year.",
+    "B": "According to the model, the value of the machine is 72,000 dollars 16 years after it is bought.",
+    "C": "According to the model, the value of the machine is 4,500 dollars 16 years after it is bought.",
+    "D": "According to the model, the value of the machine is 0 dollars 16 years after it is bought."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "A \\(t\\)-intercept is a point where \\(y = V(t) = 0\\).",
+    "\\(V(16) = 72{,}000 - 4{,}500(16) = 0\\), so 16 years after the purchase the machine's modeled value is 0 dollars."
+  ],
+  "explanation": {
+    "A": "Incorrect. The yearly decrease is the coefficient 4,500 dollars; 16 is a number of years.",
+    "B": "Incorrect. 72,000 dollars is the value at \\(t = 0\\) (the \\(y\\)-intercept); at \\(t = 16\\) the value is 0.",
+    "C": "Incorrect. 4,500 dollars is the yearly decrease, not a value; \\(V(16) = 72{,}000 - 4{,}500(16) = 0\\).",
+    "D": "Correct. At the \\(t\\)-intercept, \\(V(16) = 0\\): the input is 16 years and the output is a value of 0 dollars."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "t = symbols('t')\nV = 72000 - 4500*t\nassert solve(V, t) == [16]\nkey = 'is 0 dollars 16 years'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

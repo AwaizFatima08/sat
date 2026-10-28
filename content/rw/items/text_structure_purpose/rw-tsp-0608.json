@@ -1,0 +1,56 @@
+{
+  "id": "rw-tsp-0608",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "text_structure_purpose",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Vultures are often seen as unpleasant because they feed on dead animals, yet this habit makes them valuable. Their stomach acid is strong enough to destroy many of the bacteria that grow in rotting flesh, so a vulture can eat a carcass that would make most other animals sick. By clearing away dead animals quickly, a flock of vultures also removes a breeding ground for disease before it can spread to livestock or people.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": {
+    "A": "To describe the bacteria that grow in rotting flesh",
+    "B": "To explain why vultures' feeding habits are useful",
+    "C": "To argue that vultures should be kept away from livestock",
+    "D": "To describe how vultures locate food from the air"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The first sentence admits that vultures seem unpleasant \"yet\" says their habit \"makes them valuable.\" The next two sentences explain why: their stomach acid lets them eat what would sicken other animals, and they remove sources of disease. The text explains the value of their feeding habits.",
+    "A": "Incorrect. Bacteria are mentioned only to show what vultures' stomach acid can destroy; the text does not describe them.",
+    "B": "Correct. The text explains that vultures can safely eat rotting carcasses and that doing so removes a source of disease.",
+    "C": "Incorrect. The text says vultures protect livestock from disease, the opposite of this claim.",
+    "D": "Incorrect. The text never mentions how vultures find food."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

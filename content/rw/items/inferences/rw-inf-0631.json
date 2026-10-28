@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0631",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Flowers typically carry a weak negative electric charge, while a bumblebee picks up a positive charge as it flies, and bees can sense the faint electric field that forms between them. Biologist Tomás Ferreira presented bumblebees with two sets of artificial flowers that looked identical. One set carried a small electric charge and offered sugar water; the other was uncharged and offered only plain water. After a few visits, the bees chose the charged flowers far more often than chance would predict. When Ferreira then switched off the charge on every flower, the bees' choices fell back to random. These results suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the bees could taste the difference between sugar water and plain water before landing on a flower.",
+    "B": "the bees had been relying on the electric charge to tell the rewarding flowers from the others.",
+    "C": "bumblebees are unable to locate real flowers unless those flowers carry an electric charge.",
+    "D": "the bees came to prefer the uncharged flowers once they discovered that these held only plain water."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The two sets of flowers looked identical, so the bees needed some other cue to tell them apart. They chose well while the charged flowers were charged, and their choices became random as soon as the charge was turned off. The charge, then, was the cue that had been guiding them.",
+    "A": "Incorrect. If the bees could detect the sugar water directly, they would have kept choosing well after the charge was switched off, but their choices became random.",
+    "B": "Correct. The bees could find the sugar water only while the charge was on, so the charge was the cue they were using.",
+    "C": "Incorrect. The experiment used identical artificial flowers; it shows nothing about how bees find real flowers, which differ in color and scent.",
+    "D": "Incorrect. The bees preferred the charged flowers, which held the sugar water, and chose at random once the charge was removed."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "too_broad",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

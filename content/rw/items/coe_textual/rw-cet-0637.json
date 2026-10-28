@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0637",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Traces of pigment have been detected in some fossil dinosaur eggshells, including the blue-green and brown-spotted colors found in the eggs of many living birds. Paleontologist Lukas Meier argues that egg color in dinosaurs evolved as camouflage and therefore depended on nesting habits. Species that laid their eggs in open nests, where eggs lay exposed to the eyes of predators, would have gained from colored, spotted shells, he reasons, while species that buried their eggs in sand or soil, where color could serve no purpose, would have kept plain white shells.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Meier's argument?",
+  "choices": {
+    "A": "Species that buried their eggs show the same shell pigments as species that nested in the open.",
+    "B": "Among living birds, species that nest in dark burrows or tree holes usually lay plain white eggs.",
+    "C": "Pigment was found in the eggshells of species whose nests were open, and absent in species whose eggs were buried.",
+    "D": "Pigmented eggshells have been identified in several different groups of dinosaurs that lived on different continents."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Meier's argument predicts a match between nesting habit and egg color in dinosaurs: color in open nesters, none in buriers. A finding supports it most directly if it shows that very pattern in dinosaur fossils. Pigment present in open nesters and absent in buriers is that pattern.",
+    "A": "Incorrect. The same pigments in buriers and open nesters would break the link Meier proposes, so this would weaken his argument.",
+    "B": "Incorrect. The pattern in living birds suggests the idea is reasonable, but it is not evidence about dinosaurs, which is what Meier's argument concerns.",
+    "C": "Correct. Pigment tracking nesting habit in the fossils is the exact prediction Meier makes.",
+    "D": "Incorrect. Finding pigment in several groups says nothing about whether color matched nesting habits."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

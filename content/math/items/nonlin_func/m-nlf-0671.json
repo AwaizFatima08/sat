@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0671",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rain barrel contains 80 liters of water. Because of a slow leak, the amount of water in the barrel decreases by \\(5\\%\\) every 2 hours. Which of the following functions gives the amount of water \\(W(h)\\), in liters, in the barrel \\(h\\) hours after it was filled?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(W(h) = 80(0.95)^{2h}\\)",
+    "B": "\\(W(h) = 80(0.95)^{\\frac{h}{2}}\\)",
+    "C": "\\(W(h) = 80(0.05)^{\\frac{h}{2}}\\)",
+    "D": "\\(W(h) = 80(0.975)^{h}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "A decrease of \\(5\\%\\) leaves \\(95\\%\\), so the amount is multiplied by \\(0.95\\) once every 2 hours.",
+    "In \\(h\\) hours there are \\(\\frac{h}{2}\\) two-hour periods, so \\(W(h) = 80(0.95)^{\\frac{h}{2}}\\).",
+    "Check: after 2 hours, \\(W(2) = 80(0.95) = 76\\) liters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This applies the \\(5\\%\\) decrease twice every hour. The decrease happens once every 2 hours, so the exponent is \\(\\frac{h}{2}\\).",
+    "B": "Correct. The factor \\(0.95\\) is applied once per 2-hour period, and \\(h\\) hours contain \\(\\frac{h}{2}\\) such periods.",
+    "C": "Incorrect. This multiplies by \\(0.05\\), leaving only \\(5\\%\\) of the water each period. A \\(5\\%\\) decrease leaves \\(95\\%\\), so the factor is \\(0.95\\).",
+    "D": "Incorrect. This assumes a \\(2.5\\%\\) decrease each hour. Two such decreases give \\((0.975)^{2} \\approx 0.9506\\), not the \\(0.95\\) factor the model requires."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "h = symbols('h')\nrhs = lambda k: value(choices[k].split('=', 1)[1])\nW = rhs(answer)\nassert W.subs(h, 2) == 76 and W.subs(h, 4) == 80*Rational('0.95')**2\nassert all(rhs(k).subs(h, 2) != 76 or rhs(k).subs(h, 4) != 80*Rational('0.95')**2 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

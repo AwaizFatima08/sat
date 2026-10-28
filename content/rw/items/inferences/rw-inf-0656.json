@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0656",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The great temple complexes of Tamil Nadu, in southern India, grew over centuries by accretion. A modest early shrine was enclosed by a wall with a gateway tower, or gopuram; when later rulers wished to leave their mark, they rarely altered the sanctum, which was too sacred to touch, and instead added a new, larger wall outside the existing one, with a taller gopuram of their own. The result is a series of nested enclosures whose towers generally grow taller toward the outside. At one temple, however, architectural historian Meenakshi Sundaram found the tower of the outermost wall to be markedly shorter than the one just inside it. Inscriptions show that the outermost tower was begun in 1620 by a ruler who died three years later. Taken together, these details suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the sanctum at the center of this temple was altered by the rulers who added the outer walls.",
+    "B": "the outermost tower's height reflects an interrupted project rather than an exception to the usual order of building.",
+    "C": "the outermost wall was built before the wall inside it, reversing the temple's usual pattern of growth.",
+    "D": "the ruler who began the outermost tower intended it to be shorter than the others as a sign of humility."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The pattern is that each new ruler builds outward and taller. The short outermost tower looks like a violation until the inscription is added: its builder died three years after beginning it. A tower begun and then abandoned would naturally stand lower than planned. The order of building holds; only the height was cut short.",
+    "A": "Incorrect. The text says rulers rarely touched the sanctum and offers nothing about this temple's sanctum in particular.",
+    "B": "Correct. The outermost tower is still the latest, as the pattern predicts; it is short because its builder died three years after starting it, not because the temple grew in a different order.",
+    "C": "Incorrect. The inscription dates the outermost tower to 1620 and explains its height; nothing indicates the walls were built in reverse order.",
+    "D": "Incorrect. The text gives the ruler's death, not his intentions, as the relevant fact."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

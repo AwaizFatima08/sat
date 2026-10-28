@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0633",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Antlion larvae dig cone-shaped pits in loose sand and wait buried at the bottom; an ant that steps over the rim slides down the wall into the larva's jaws. Larvae given a choice of sands consistently build their pits in the finest grains available. The usual explanation is simply that fine sand is easier to dig. Entomologist Rina Kaur hypothesizes that something else matters more: walls made of fine grains sit closer to the point of collapse, so even a small insect's steps set off a slide that carries it to the bottom. On her view, larvae choose fine sand because pits built in it trap prey more reliably, not because they are easier to build.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Kaur's hypothesis?",
+  "choices": {
+    "A": "Larvae still chose fine sand when it had been dampened so that digging it took longer than digging the coarse sand beside it, and their pits there caught more of the ants that entered.",
+    "B": "Pits built in fine sand and pits built in coarse sand reached the same depth and width and held the same number of larvae.",
+    "C": "Larvae completed pits in fine sand in about half the time they needed to complete pits of the same size and depth in coarse sand.",
+    "D": "Ants that entered pits built in coarse sand were caught just as often as ants that entered pits built in fine sand."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Kaur's hypothesis separates two possible reasons for the preference: ease of digging and effectiveness at trapping. To support her, a finding must show that larvae prefer fine sand even when it is not easier to dig, and that fine-sand pits trap better. The dampened-sand result does both: digging was harder, the preference remained, and the pits caught more prey.",
+    "A": "Correct. With the digging advantage removed, the larvae still chose fine sand, and the pits trapped more prey, which is what Kaur predicts.",
+    "B": "Incorrect. Equal size says nothing about which sand traps prey better or why larvae prefer it.",
+    "C": "Incorrect. Faster digging in fine sand supports the usual explanation that Kaur is arguing against.",
+    "D": "Incorrect. If coarse-sand pits trapped just as well, trapping could not explain the preference; this would weaken Kaur's hypothesis."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

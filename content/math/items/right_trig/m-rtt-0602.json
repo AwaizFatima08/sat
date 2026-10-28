@@ -1,0 +1,57 @@
+{
+  "id": "m-rtt-0602",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A straight hiking trail runs from the shore of a lake up to a lookout point. The trail is 500 meters long, and the lookout point is 140 meters higher than the shore. What is the sine of the angle the trail makes with the horizontal?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{7}{25}\\)",
+    "B": "\\(\\frac{7}{24}\\)",
+    "C": "\\(\\frac{24}{25}\\)",
+    "D": "\\(\\frac{25}{7}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The trail is the hypotenuse of a right triangle, and the 140-meter rise is the side opposite the angle with the horizontal.",
+    "\\(\\sin \\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{140}{500} = \\frac{7}{25}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\sin \\theta = \\frac{140}{500} = \\frac{7}{25}\\).",
+    "B": "Incorrect. This is the tangent: the rise over the horizontal distance \\(\\sqrt{500^{2} - 140^{2}} = 480\\).",
+    "C": "Incorrect. This is the cosine: the horizontal distance 480 over the trail length 500.",
+    "D": "Incorrect. This is \\(\\frac{500}{140}\\), the hypotenuse over the opposite side, which is the reciprocal of the sine."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "wrong_formula",
+    "D": "reciprocal"
+  },
+  "verify": "ans=Rational(140,500)\nassert ans==Rational(7,25)\nassert value(choices[answer])==ans\nassert value(choices['B'])==Rational(140,sqrt(500**2-140**2))\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

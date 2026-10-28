@@ -1,0 +1,58 @@
+{
+  "id": "m-rat-0619",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A car travels from town X to town Y and then returns to town X by the same road. On the trip from X to Y, the car's average speed is \\(v\\) kilometers per hour, and on the return trip its average speed is \\(1.5v\\) kilometers per hour. What is the car's average speed, in kilometers per hour, for the entire round trip?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.6v\\)",
+    "B": "\\(1.2v\\)",
+    "C": "\\(1.25v\\)",
+    "D": "\\(1.5v\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let the one-way distance be \\(d\\). Time out: \\(\\frac{d}{v}\\). Time back: \\(\\frac{d}{1.5v}\\).",
+    "Total time \\(= \\frac{d}{v} + \\frac{d}{1.5v} = \\frac{d}{v}\\left(1 + \\frac{2}{3}\\right) = \\frac{5d}{3v}\\).",
+    "Average speed \\(= \\frac{2d}{5d/(3v)} = \\frac{6v}{5} = 1.2v\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{1}{1 + 2/3}\\) times \\(v\\), the reciprocal of the total time factor without the factor of 2 for the round-trip distance.",
+    "B": "Correct. Total distance \\(2d\\) divided by total time \\(\\frac{5d}{3v}\\) gives \\(1.2v\\).",
+    "C": "Incorrect. This is the average of the two speeds, \\(\\frac{v + 1.5v}{2}\\). The car spends more time at the slower speed, so the average speed is less than the midpoint.",
+    "D": "Incorrect. This is the return speed only. The average over the whole trip must lie between \\(v\\) and \\(1.5v\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "v, d = symbols('v d', positive=True)\nans = simplify(2*d / (d/v + d/(Rational(3, 2)*v)))\nassert simplify(ans - Rational(6, 5)*v) == 0\nassert simplify(value(choices[answer]).subs(Symbol('v'), v) - ans) == 0\nassert all(simplify(value(choices[k]).subs(Symbol('v'), v) - ans) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0649",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A beaver dam looks like an obstacle, and for a long time landowners treated it as one, tearing out dams to keep streams flowing. Recent studies in the dry valleys of the western United States suggest the dams do something more useful. The pond behind a dam slows the stream and pushes water into the surrounding soil, raising the water table across the valley floor. When a dry summer arrives, that stored water seeps back out slowly, and the meadow stays green while land along undammed streams turns brown. In effect, the beavers ______ water during wet months for release during dry ones.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "waste",
+    "B": "bank",
+    "C": "purify",
+    "D": "divert"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The text says water is \"stored\" in the soil behind the dam and then \"seeps back out slowly\" in a dry summer. The last sentence sums this up: the beavers put water aside in wet months and release it later. Setting something aside for later use is to \"bank\" it.",
+    "A": "Incorrect. This reverses the point: the dams save water that would otherwise flow away.",
+    "B": "Correct. To bank water is to store it for later, which matches \"stored water\" released \"during dry ones.\"",
+    "C": "Incorrect. The text says nothing about making the water cleaner.",
+    "D": "Incorrect. The dam does push water sideways into the soil, but the sentence is about saving water for release later, not merely sending it elsewhere."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "wrong_tone"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

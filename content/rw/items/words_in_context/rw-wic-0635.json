@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0635",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Pollen grains have a tough outer wall that lets them survive for thousands of years in the mud at the bottom of lakes. By drilling a core through these layered sediments and counting the grains in each layer, researchers can reconstruct how a region's vegetation changed over time. The record is not a simple mirror of the past landscape, however. Wind-pollinated trees such as pine release enormous quantities of pollen, so they are ______ in the core relative to their actual numbers, while insect-pollinated plants, which produce far less, can be nearly invisible.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "overrepresented",
+    "B": "preserved",
+    "C": "undercounted",
+    "D": "concentrated"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The text says the record is \"not a simple mirror\" of the landscape. Pines release \"enormous quantities of pollen,\" and the sentence contrasts them with insect-pollinated plants that are \"nearly invisible\" in the core. So pines must appear in the core more than their real numbers would justify: they are \"overrepresented.\"",
+    "A": "Correct. Because pines shed so much pollen, they show up in the core out of proportion to their actual numbers.",
+    "B": "Incorrect. The first sentence says all pollen grains survive in the mud; being preserved does not explain why the record is not a mirror of the landscape.",
+    "C": "Incorrect. This reverses the logic: a tree that releases huge amounts of pollen would be counted too often, not too rarely.",
+    "D": "Incorrect. \"Concentrated\" describes grains being packed together in one place, not how a species' share of the core compares with its real numbers."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "wrong_tone"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "m-eqx-0620",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The area, in square centimeters, of a square is \\(x^{2} - 14x + k\\), where \\(k\\) is a constant, and each side of the square is \\((x - 7)\\) centimeters long, where \\(x > 7\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "49"
+  ],
+  "solution": [
+    "The area is the side squared: \\((x - 7)^{2} = x^{2} - 14x + 49\\).",
+    "Match the constant terms: \\(k = 49\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nk = Poly(expand((x - 7)**2), x).coeff_monomial(1)\nassert k == 49\nassert expand((x - 7)**2 - (x**2 - 14*x + k)) == 0\nassert [Rational(v) for v in spr_answers] == [k]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "49",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

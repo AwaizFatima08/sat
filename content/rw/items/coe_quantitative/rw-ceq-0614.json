@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0614",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Bangladesh grows much of the world's jute, a plant fiber used for sacks and bags, and the government restricts thin plastic shopping bags. Economist Tahmina Rahman surveyed 40 grocery shops in Dhaka to learn what kind of bag each shop mainly gave customers in 2019 and again in 2023, after enforcement of the restrictions was tightened. She concluded that although plastic bags had become much less common, shops had replaced them mainly with paper bags rather than with jute ones: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Main Type of Bag Given to Customers by 40 Dhaka Grocery Shops",
+    "columns": [
+      "Bag type",
+      "Shops in 2019",
+      "Shops in 2023"
+    ],
+    "rows": [
+      [
+        "Thin plastic",
+        28,
+        9
+      ],
+      [
+        "Paper",
+        6,
+        19
+      ],
+      [
+        "Jute",
+        4,
+        8
+      ],
+      [
+        "Cloth",
+        2,
+        4
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "the number of shops mainly using paper bags rose from 6 to 19, while the number using jute bags rose only from 4 to 8.",
+    "B": "by 2023, more shops mainly used jute bags than paper bags, although plastic bags were still the most common.",
+    "C": "the number of shops mainly using thin plastic bags fell from 28 to 9, while the number using cloth bags rose from 2 to 4.",
+    "D": "the number of shops mainly using jute bags doubled, from 4 in 2019 to 8 in 2023."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Rahman's conclusion has two parts: plastic became rarer, and the replacement was mainly paper, not jute. The choice must therefore compare the growth of paper with the growth of jute. Paper went from 6 shops to 19 (up 13), while jute went from 4 to 8 (up only 4).",
+    "A": "Correct. Paper gained 13 shops while jute gained only 4, which shows that shops turned mainly to paper.",
+    "B": "Incorrect. In 2023, 19 shops mainly used paper and only 8 used jute, and plastic (9 shops) was no longer the most common.",
+    "C": "Incorrect. These figures are accurate, but they concern plastic and cloth and say nothing about paper or jute, which the conclusion is about.",
+    "D": "Incorrect. This is true, but on its own it shows jute growing and never mentions paper, so it cannot show that paper, not jute, took plastic's place."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "true_irrelevant",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

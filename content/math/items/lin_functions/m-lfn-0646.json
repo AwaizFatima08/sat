@@ -1,0 +1,57 @@
+{
+  "id": "m-lfn-0646",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A bakery in Lahore sells naan. The bakery's profit \\(P(n)\\), in rupees, on a day when it sells \\(n\\) naan is given by \\(P(n) = 35(n - 120)\\). Which of the following is the best interpretation of the number 120 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The bakery must sell 120 naan in a day for its profit that day to be 0 rupees.",
+    "B": "The bakery's fixed costs each day are 120 rupees.",
+    "C": "The bakery earns a profit of 35 rupees on each of the first 120 naan it sells in a day.",
+    "D": "The bakery sells 120 naan each day."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "When \\(n = 120\\), \\(P(120) = 35(120 - 120) = 0\\). So 120 is the number of naan the bakery must sell to break even.",
+    "Expanding gives \\(P(n) = 35n - 4{,}200\\): each naan adds 35 rupees of profit, and the fixed costs are 4,200 rupees, not 120."
+  ],
+  "explanation": {
+    "A": "Correct. \\(P(120) = 0\\), so selling 120 naan gives a profit of exactly 0 rupees; fewer gives a loss, more gives a profit.",
+    "B": "Incorrect. The fixed costs are the loss when nothing is sold: \\(P(0) = -4{,}200\\), so they are 4,200 rupees, not 120.",
+    "C": "Incorrect. Every naan sold, not only the first 120, changes the profit by 35 rupees; the first 120 naan only cover the fixed costs.",
+    "D": "Incorrect. The function gives the profit for any number \\(n\\) of naan sold; it does not say how many are sold on a given day."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "n = symbols('n')\nP = 35*(n - 120)\nassert solve(Eq(P, 0), n) == [120]\nassert P.subs(n, 0) == -4200\nassert answer == 'A' and 'profit that day to be 0 rupees' in choices['A']\nassert all('to be 0 rupees' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

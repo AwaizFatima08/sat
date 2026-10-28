@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0626",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Downtown shop owners often oppose raising the price of street parking, fearing that higher prices will drive customers away. Transportation economist Mei-Ling Chen argues the opposite: that higher prices on the busiest blocks free up spaces by discouraging drivers from parking all day, so that more shoppers can find a spot and the shops gain customers.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Chen's argument?",
+  "choices": {
+    "A": "After a city raised prices on its busiest downtown blocks, the average parking stay fell by half and shops there reported more customers.",
+    "B": "Most drivers surveyed said that they would rather pay more for parking than spend time circling the block looking for a space.",
+    "C": "Shops on blocks where prices were raised reported fewer customers, and many parking spaces sat empty for most of the day.",
+    "D": "After the price rise, drivers who had parked downtown all day began parking on nearby residential streets and walking the rest of the way."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Chen's argument has a chain: higher prices lead to shorter stays, shorter stays free up spaces, and more shoppers reach the shops. The most direct support reports both ends of the chain after a real price rise: shorter stays and more customers. A finding of fewer customers would support the shop owners instead.",
+    "A": "Correct. Shorter stays and more customers after the price rise are exactly the two effects Chen predicts.",
+    "B": "Incorrect. What drivers say they prefer does not show what actually happened to parking turnover or to the shops.",
+    "C": "Incorrect. Fewer customers and empty spaces would support the shop owners' fear, not Chen's argument.",
+    "D": "Incorrect. Where the all-day parkers went does not show whether shops gained customers."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

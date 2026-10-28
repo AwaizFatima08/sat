@@ -1,0 +1,70 @@
+{
+  "id": "m-ovd-0603",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The box plot summarizes a data set. What is the interquartile range of the data set?",
+  "figure": {
+    "kind": "boxplot",
+    "x_label": "Value",
+    "plots": [
+      {
+        "name": "Data set",
+        "min": 8,
+        "q1": 15,
+        "median": 22,
+        "q3": 31,
+        "max": 40
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(32\\)",
+    "B": "\\(22\\)",
+    "C": "\\(16\\)",
+    "D": "\\(25\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The interquartile range is the third quartile minus the first quartile: the length of the box.",
+    "From the box plot, \\(31 - 15 = 16\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the range, \\(40 - 8 = 32\\), the distance between the ends of the whiskers.",
+    "B": "Incorrect. This is the median, the line inside the box, not the interquartile range.",
+    "C": "Correct. The interquartile range is \\(31 - 15 = 16\\).",
+    "D": "Incorrect. This is the maximum minus the first quartile, \\(40 - 15\\). The interquartile range uses the third quartile, 31."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "p = figure['plots'][0]\niqr = p['q3'] - p['q1']\nassert iqr == 16\nassert value(choices[answer]) == iqr\nassert all(value(choices[k]) != iqr for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

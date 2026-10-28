@@ -1,0 +1,45 @@
+{
+  "id": "m-rtt-0608",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A drawbridge is a straight, rigid deck 18 meters long, hinged at one end on level ground. When the bridge is raised, its free end is 9 meters above the ground. What is the measure, in degrees, of the angle the raised bridge makes with the ground?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "30"
+  ],
+  "solution": [
+    "The deck is the hypotenuse and the 9-meter height is the side opposite the angle \\(\\theta\\) with the ground.",
+    "\\(\\sin \\theta = \\frac{9}{18} = \\frac{1}{2}\\), so \\(\\theta = 30^{\\circ}\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "s=Rational(9,18)\nassert s==Rational(1,2)\nans=N(asin(s)*180/pi)\nassert abs(ans-30)<1e-9\nassert all(abs(Rational(v)-ans)<1e-9 for v in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "30",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

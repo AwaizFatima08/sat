@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0613",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A tumbleweed starts its life as an ordinary rooted plant. In late summer, after it has flowered, the whole plant dries out and its stem becomes brittle at the base. A strong wind then snaps the dead plant free, and it begins to roll across the open ground. ______ it scatters its seeds, dropping a few at a time over a distance that can stretch for kilometers.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For instance,",
+    "B": "Along the way,",
+    "C": "In contrast,",
+    "D": "Even so,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The text describes what happens to a tumbleweed in order: it dries, snaps free, and rolls across the ground. The last sentence describes what happens while it rolls: it drops seeds. A transition that connects this action to the rolling journey is needed.",
+    "A": "Incorrect. Dropping seeds is not an example of the plant rolling; it is what the plant does as it rolls.",
+    "B": "Correct. \"Along the way\" shows that the seeds are scattered during the plant's rolling journey across the ground.",
+    "C": "Incorrect. \"In contrast\" signals a difference, but scattering seeds is part of the rolling described just before, not an opposing idea.",
+    "D": "Incorrect. \"Even so\" signals something true despite the previous point, but nothing in the text works against the scattering of seeds."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

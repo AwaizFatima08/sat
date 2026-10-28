@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0614",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "In a school council election, 612 votes were cast for the two candidates, Dev and Lina. Dev received 48 more votes than Lina. How many votes did Lina receive?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(330\\)",
+    "B": "\\(306\\)",
+    "C": "\\(258\\)",
+    "D": "\\(282\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(v\\) be Lina's votes; Dev received \\(v + 48\\).",
+    "\\(v + (v + 48) = 612\\), so \\(2v = 564\\).",
+    "Then \\(v = 282\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is Dev's number of votes, \\(282 + 48\\).",
+    "B": "Incorrect. This is half of 612; it ignores the 48-vote difference.",
+    "C": "Incorrect. This is the result of subtracting 48 after halving: \\(306 - 48\\). The 48 must be subtracted before halving.",
+    "D": "Correct. \\(2v + 48 = 612\\) gives \\(2v = 564\\), so Lina received 282 votes and Dev 330."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_formula",
+    "C": "arithmetic"
+  },
+  "verify": "v = symbols('v')\ns = solve(Eq(v + (v + 48), 612), v)[0]\nassert s == 282\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-le1-0603",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(5 = 9 - \\frac{x}{2}\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-8\\)",
+    "B": "\\(8\\)",
+    "C": "\\(28\\)",
+    "D": "\\(2\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Subtract 9 from both sides: \\(-4 = -\\frac{x}{2}\\).",
+    "Multiply both sides by \\(-2\\): \\(x = 8\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of a sign slip: \\(-4 = -\\frac{x}{2}\\) gives \\(x = 8\\), not \\(-8\\).",
+    "B": "Correct. \\(9 - \\frac{x}{2} = 5\\) means \\(\\frac{x}{2} = 4\\), so \\(x = 8\\).",
+    "C": "Incorrect. This is the result of adding 9 to 5 instead of subtracting: \\(\\frac{x}{2} = 14\\).",
+    "D": "Incorrect. This is the result of dividing 4 by 2 instead of multiplying by 2."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "sign_error",
+    "D": "reciprocal"
+  },
+  "verify": "x = symbols('x')\ns = solve(Eq(5, 9 - x/2), x)[0]\nassert s == 8\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0653",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In a town near Sylhet, Bangladesh, a group of women who had been sewing garments at home formed a cooperative in 2021, renting a shared workshop and taking orders jointly. A common worry about such arrangements is that pooling work merely redistributes a fixed quantity of orders, so that members who previously had the most customers lose out to those who had few. Development economist Rumana Haque, who followed the earnings of the founding members, argues that the cooperative expanded the work available rather than redistributing it: the members who had earned least before joining gained the most, she acknowledges, but even the members who had earned the most saw their incomes rise.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Monthly Earnings of a Tailoring Cooperative's Founding Members",
+    "columns": [
+      "Members grouped by earnings before joining",
+      "Average monthly earnings, 2020 (taka)",
+      "Average monthly earnings, 2023 (taka)"
+    ],
+    "rows": [
+      [
+        "Lowest third",
+        3200,
+        7100
+      ],
+      [
+        "Middle third",
+        5400,
+        8300
+      ],
+      [
+        "Highest third",
+        8100,
+        9600
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Haque's argument?",
+  "choices": {
+    "A": "By 2023, the gap in average earnings between the lowest and highest thirds had narrowed to 2,500 taka.",
+    "B": "The lowest third gained 3,900 taka a month on average, but the highest third, far from losing customers, also gained 1,500 taka.",
+    "C": "Average earnings of the highest third declined slightly after the cooperative formed.",
+    "D": "The lowest third's average earnings more than doubled between 2020 and 2023."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The worry Haque answers is that the highest earners lose when work is pooled. Her argument therefore needs the highest third's earnings to have risen, alongside the larger gains of the lowest third. The lowest third went from 3,200 to 7,100 taka (up 3,900); the highest third went from 8,100 to 9,600 (up 1,500).",
+    "A": "Incorrect. This is true (9,600 minus 7,100), but a narrowing gap is also what redistribution would produce; it does not show that the top earners gained.",
+    "B": "Correct. It shows the large gain at the bottom and, crucially, a gain rather than a loss at the top, which is what distinguishes expansion from redistribution.",
+    "C": "Incorrect. The highest third's earnings rose from 8,100 to 9,600 taka, so this misreads the table.",
+    "D": "Incorrect. This is true (3,200 to 7,100), but it describes the group everyone expects to gain; the dispute is about the highest third."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

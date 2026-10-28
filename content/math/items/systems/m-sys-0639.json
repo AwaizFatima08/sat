@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0639",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "An internet provider offers two monthly plans. Plan P costs \\$25 per month plus \\$0.10 per gigabyte of data used, and plan Q costs \\$40 per month plus \\$0.04 per gigabyte of data used. The system \\(y = 25 + 0.10x\\) and \\(y = 40 + 0.04x\\) models the monthly cost \\(y\\), in dollars, of each plan when \\(x\\) gigabytes of data are used. If \\((x, y)\\) is the solution to this system, which of the following best describes \\(y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The number of gigabytes of data at which the two plans cost the same amount",
+    "B": "The difference, in dollars, between the two plans' fixed monthly charges",
+    "C": "The total monthly cost, in dollars, of buying both plans",
+    "D": "The monthly cost, in dollars, at which the two plans cost the same amount"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The solution of a system is the point that satisfies both equations: the data use \\(x\\) at which plan P and plan Q have the same monthly cost \\(y\\).",
+    "So \\(y\\) is that shared monthly cost. (Solving: \\(25 + 0.10x = 40 + 0.04x\\) gives \\(x = 250\\), and \\(y = 25 + 0.10(250) = 50\\).)",
+    "The number of gigabytes is \\(x\\), not \\(y\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. That is \\(x\\), the first coordinate of the solution (250 gigabytes), not \\(y\\).",
+    "B": "Incorrect. The difference in fixed charges is \\(40 - 25 = 15\\) dollars; \\(y\\) is a plan's full monthly cost, not a difference.",
+    "C": "Incorrect. Each equation gives the cost of one plan; \\(y\\) at the solution is the cost of either plan, not the sum of both.",
+    "D": "Correct. At the solution, both equations give the same \\(y\\): the cost (\\$50) that both plans charge for the same data use (250 gigabytes)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "x, y = symbols('x y')\nsol = solve([y - (25 + Rational(1, 10)*x), y - (40 + Rational(4, 100)*x)], [x, y])\nassert sol == {x: 250, y: 50}\nassert choices[answer].startswith('The monthly cost, in dollars, at which the two plans cost the same')",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

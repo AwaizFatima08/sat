@@ -1,0 +1,103 @@
+{
+  "id": "m-sys-0630",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Two walkers, A and B, start along a straight path at the same time. The graph shows each walker's distance, in meters, from the start of the path \\(t\\) minutes after they begin. The labeled points lie on the lines. How many minutes after they begin are the two walkers the same distance from the start of the path?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      0,
+      12
+    ],
+    "y": [
+      0,
+      600
+    ],
+    "curves": [
+      {
+        "expr": "120 + 30*x",
+        "label": "Walker A"
+      },
+      {
+        "expr": "50*x",
+        "label": "Walker B"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 120,
+        "label": "(0, 120)"
+      },
+      {
+        "x": 10,
+        "y": 420,
+        "label": "(10, 420)"
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "label": "(0, 0)"
+      },
+      {
+        "x": 10,
+        "y": 500,
+        "label": "(10, 500)"
+      }
+    ],
+    "segments": [],
+    "x_label": "Time (minutes)",
+    "y_label": "Distance (meters)"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6\\)",
+    "B": "\\(300\\)",
+    "C": "\\(4\\)",
+    "D": "\\(12\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Walker A starts 120 meters along the path and gains \\(\\frac{420 - 120}{10} = 30\\) meters per minute: \\(d = 120 + 30t\\).",
+    "Walker B starts at 0 and gains \\(\\frac{500}{10} = 50\\) meters per minute: \\(d = 50t\\).",
+    "Set the distances equal: \\(120 + 30t = 50t\\), so \\(20t = 120\\) and \\(t = 6\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Walker A: \\(d = 120 + 30t\\). Walker B: \\(d = 50t\\). Setting \\(120 + 30t = 50t\\) gives \\(t = 6\\).",
+    "B": "Incorrect. This is the distance, in meters, at which the walkers meet (\\(50 \\cdot 6\\)), not the time.",
+    "C": "Incorrect. This is \\(120 \\div 30\\), the head start divided by walker A's own speed; the gap closes at the difference of the speeds, \\(50 - 30 = 20\\) meters per minute.",
+    "D": "Incorrect. This is the result of an arithmetic slip; \\(120 \\div (50 - 30) = 6\\), not 12."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "x = symbols('x')\nP = [(q['x'], q['y']) for q in figure['points']]\nline = lambda a, b: (b[1] - a[1])*(x - a[0])/(b[0] - a[0]) + a[1]\nl1, l2 = line(P[0], P[1]), line(P[2], P[3])\nassert {sympify(c['expr']) for c in figure['curves']} == {l1, l2}\nts = solve(Eq(l1, l2), x)\nassert ts == [6]\nassert value(choices[answer]) == 6\nassert all(value(choices[k]) != 6 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

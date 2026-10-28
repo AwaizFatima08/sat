@@ -1,0 +1,45 @@
+{
+  "id": "m-nle-0620",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graphs of \\(y = x^{2} + 4\\) and \\(y = 4x\\) in the \\(xy\\)-plane intersect at exactly one point. What is the \\(y\\)-coordinate of that point?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "At an intersection, \\(x^{2} + 4 = 4x\\), so \\(x^{2} - 4x + 4 = 0\\).",
+    "This is \\((x - 2)^{2} = 0\\), so \\(x = 2\\), and \\(y = 4(2) = 8\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, y = symbols('x y')\nsols = solve([Eq(y, x**2 + 4), Eq(y, 4*x)], [x, y], dict=True)\nassert len(sols) == 1 and sols[0][y] == 8\nassert Rational(spr_answers[0]) == 8",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

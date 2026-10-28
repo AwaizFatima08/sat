@@ -1,0 +1,57 @@
+{
+  "id": "m-ineq-0606",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "How many integers \\(x\\) satisfy the inequality \\(2 < x \\le 7\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4\\)",
+    "B": "\\(5\\)",
+    "C": "\\(6\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The integers greater than 2 and at most 7 are 3, 4, 5, 6 and 7.",
+    "That is 5 integers. Note that 2 is excluded (strict \\(<\\)) and 7 is included (\\(\\le\\))."
+  ],
+  "explanation": {
+    "A": "Incorrect. This excludes 7, but \\(x \\le 7\\) includes 7.",
+    "B": "Correct. The integers are 3, 4, 5, 6, 7.",
+    "C": "Incorrect. This includes 2, but \\(2 < x\\) excludes 2.",
+    "D": "Incorrect. This counts from 1 to 7, or simply takes the number 7 from the inequality, instead of counting the integers between the two bounds."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "n = len([k for k in range(-20, 30) if 2 < k <= 7])\nassert n == 5\nassert value(choices[answer]) == n\nassert all(value(choices[k]) != n for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0657",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A canal that crosses a ridge must climb to a summit level and descend the other side by means of locks. Each time a boat passes through a lock, one lockful of water drains from the level above to the level below, so every boat that crosses the summit draws water from the summit level, and that water can be replaced only from the reservoirs and streams that feed it. Economic historian Johan Lindgren studied the toll records of a canal of this kind, which carried coal to a growing industrial town. In the dry summers of 1826 and 1834, tolls fell by a third, while the price of coal in the town, which rose whenever supplies ran short, climbed to its highest levels of the decade. Lindgren's findings suggest that in those summers ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the reservoirs feeding the summit were enlarged in response to the shortage of water.",
+    "B": "boat owners stopped using the canal because the tolls charged had become too expensive for them.",
+    "C": "the town's demand for coal fell, so fewer boats were needed to supply it.",
+    "D": "the canal carried fewer boats because the summit lacked water to pass them, not because fewer were wanted."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Two signals point in opposite directions: tolls fell, so fewer boats passed, yet coal prices rose, so the town wanted more coal than it got. Demand was not the problem. The text explains what was: each boat drains water from the summit, and in a dry summer the reservoirs and streams could not replace it, so boats could not be passed.",
+    "A": "Incorrect. The text says nothing about any works on the reservoirs.",
+    "B": "Incorrect. The text reports that tolls collected fell, not that the rate charged rose, and never mentions boat owners' choices.",
+    "C": "Incorrect. Coal prices reached their highest levels of the decade, which the text says happened when supplies ran short, not when demand fell.",
+    "D": "Correct. High coal prices show that the town wanted more coal, so the fall in traffic must have come from the canal's side, and dry summers starve the summit level that every boat draws on."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

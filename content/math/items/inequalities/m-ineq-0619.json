@@ -1,0 +1,89 @@
+{
+  "id": "m-ineq-0619",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of the linear function \\(h\\) is shown in the \\(xy\\)-plane. Which of the following is the solution set of the inequality \\(h(x) \\le -3\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      8
+    ],
+    "y": [
+      -6,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "-3*x/2 + 6",
+        "label": "y = h(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 6,
+        "label": "(0, 6)"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "label": "(4, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x \\le 6\\)",
+    "B": "\\(x \\ge 2\\)",
+    "C": "\\(x \\ge 4\\)",
+    "D": "\\(x \\ge 6\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The line passes through \\((0, 6)\\) and \\((4, 0)\\): slope \\(\\frac{0 - 6}{4 - 0} = -\\frac{3}{2}\\), so \\(h(x) = -\\frac{3}{2}x + 6\\).",
+    "Solve \\(-\\frac{3}{2}x + 6 \\le -3\\): \\(-\\frac{3}{2}x \\le -9\\).",
+    "Divide by \\(-\\frac{3}{2}\\) and reverse the sign: \\(x \\ge 6\\). The line is at or below \\(y = -3\\) from \\(x = 6\\) onward."
+  ],
+  "explanation": {
+    "A": "Incorrect. Dividing by the negative slope reverses the inequality sign; the line falls, so it is below \\(-3\\) to the right of 6, not the left.",
+    "B": "Incorrect. This solves \\(-\\frac{3}{2}x \\le -3\\), forgetting to subtract the \\(y\\)-intercept 6 first.",
+    "C": "Incorrect. \\(x = 4\\) is where \\(h(x) = 0\\), the \\(x\\)-intercept, not where \\(h(x) = -3\\).",
+    "D": "Correct. \\(h(x) = -\\frac{3}{2}x + 6\\), and \\(h(x) \\le -3\\) when \\(x \\ge 6\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "arithmetic",
+    "C": "misread_graph"
+  },
+  "verify": "P = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nx = symbols('x')\nh = sympify(figure['curves'][0]['expr'])\ns = solve_univariate_inequality(h <= -3, x, relational=False)\nassert s == Interval(6, oo)\nassert solve_univariate_inequality(P(choices[answer]), x, relational=False) == s\nassert all(solve_univariate_inequality(P(choices[k]), x, relational=False) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

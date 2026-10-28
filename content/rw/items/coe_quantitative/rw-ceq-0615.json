@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0615",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Publishers often assume that listeners give up on long audiobooks more readily than readers give up on long books. Reading researcher Olivia Brennan tested this idea with records from a library app in Dublin, Ireland, that tracks how far users get in both e-books and audiobooks. For each range of book lengths, she calculated the share of borrowers who finished the book. Brennan found that the assumption held only for the longest books: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Share of Library App Borrowers Who Finished a Book, by Format and Length",
+    "columns": [
+      "Book length",
+      "E-book borrowers finishing (%)",
+      "Audiobook borrowers finishing (%)"
+    ],
+    "rows": [
+      [
+        "Under 200 pages",
+        71,
+        74
+      ],
+      [
+        "200–350 pages",
+        63,
+        65
+      ],
+      [
+        "350–500 pages",
+        52,
+        54
+      ],
+      [
+        "Over 500 pages",
+        41,
+        29
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "audiobook borrowers finished books in every length range at a lower rate than e-book borrowers did.",
+    "B": "for books over 500 pages, only 41 percent of e-book borrowers and 29 percent of audiobook borrowers finished.",
+    "C": "the share of borrowers finishing fell as books got longer for both e-books and audiobooks.",
+    "D": "audiobook borrowers finished at equal or higher rates than e-book borrowers for books up to 500 pages, but at a much lower rate for books over 500 pages."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The statement says the assumption (that listeners give up more readily) held only for the longest books, so the choice must show both halves: no audiobook disadvantage for shorter books and a clear one for the longest. For the first three rows the audiobook rate is higher (74 vs. 71, 65 vs. 63, 54 vs. 52); for books over 500 pages it is much lower (29 vs. 41).",
+    "A": "Incorrect. This misreads the table: for the three shorter ranges, audiobook borrowers finished at a slightly higher rate, not a lower one.",
+    "B": "Incorrect. This shows the longest books only, so it supports the assumption without showing that it failed for shorter books, which \"only\" requires.",
+    "C": "Incorrect. This is true, but it describes length alone and never compares the two formats, which is what the assumption is about.",
+    "D": "Correct. This shows that audiobooks matched or beat e-books up to 500 pages and fell far behind only for the longest books, exactly what the statement needs."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "too_narrow",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

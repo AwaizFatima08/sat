@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0624",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(y = mx + b\\), where \\(m\\) and \\(b\\) are constants, passes through the points \\((3, 0)\\) and \\((0, -6)\\). What is the value of \\(m + b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-4"
+  ],
+  "solution": [
+    "The point \\((0, -6)\\) gives \\(b = -6\\).",
+    "Slope: \\(m = \\frac{0 - (-6)}{3 - 0} = 2\\).",
+    "\\(m + b = 2 + (-6) = -4\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "m, b = symbols('m b')\nsol = solve([Eq(3*m + b, 0), Eq(b, -6)], [m, b])\nans = sol[m] + sol[b]\nassert ans == -4\nassert Rational(spr_answers[0]) == ans and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "-4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

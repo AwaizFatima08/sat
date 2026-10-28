@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0641",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Meteorites fall at roughly the same rate over the whole planet, yet most of those ever collected come from two kinds of places: the ice fields of Antarctica and hot deserts such as the Sahara, where dark stones stand out against pale ground and few ordinary rocks confuse searchers. In Antarctica, a fallen stone lies frozen in ice until wind strips the ice away; in a hot desert, it rests on the surface, where heat, occasional rain, and windblown sand slowly break it apart. Planetary scientist Tobias Keller compared the two collections and found that small, crumbly types of meteorite make up a much larger share of the Antarctic finds than of the desert finds. Since the same mix of meteorites should fall in both regions, Keller's comparison suggests that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the Antarctic collection contains more meteorites of every type than the desert collection does.",
+    "B": "the desert collections underrepresent fragile meteorites, which tend to disintegrate before they are found.",
+    "C": "fragile meteorites fall more often over Antarctica than over the Sahara.",
+    "D": "searchers in hot deserts deliberately leave small meteorites where they lie."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Start from the premise that the same mix of meteorites falls everywhere. The Antarctic and desert collections nonetheless differ, with far fewer crumbly types in the desert. The text supplies the reason: desert stones lie exposed to heat, rain, and sand that break them up, while Antarctic stones stay frozen. Fragile stones are therefore lost from the desert before anyone finds them.",
+    "A": "Incorrect. Keller compared the share of fragile types within each collection, which says nothing about the total number of meteorites in either.",
+    "B": "Correct. The same mix falls in both places, and desert conditions break stones apart, so fragile types are the ones most likely to vanish from the desert record.",
+    "C": "Incorrect. The text states that the same mix of meteorites should fall in both regions, which rules out a difference in what falls.",
+    "D": "Incorrect. Nothing in the text suggests that desert searchers ignore small stones; the difference is explained by weathering."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

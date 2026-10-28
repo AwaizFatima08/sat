@@ -1,0 +1,85 @@
+{
+  "id": "rw-ceq-0637",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Hand-knotted carpets from the Kashmir Valley are woven from a talim, a coded script that tells the weaver the color of every knot. Learning to read it is slow, and workshop owners often say that a weaver is not fully productive until several years into the trade. Textile scholar Nighat Mir, who timed weavers of different experience at a workshop near Srinagar, agrees that speed rises with experience, but she argues that most of the gain comes early: the largest jump, she contends, occurs within the first two years, after which weavers improve only gradually.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Weaving Speed by Experience at a Kashmiri Carpet Workshop",
+    "columns": [
+      "Years of experience",
+      "Knots tied per hour (average)"
+    ],
+    "rows": [
+      [
+        "Under 1",
+        410
+      ],
+      [
+        "1–2",
+        720
+      ],
+      [
+        "3–5",
+        790
+      ],
+      [
+        "6–10",
+        850
+      ],
+      [
+        "More than 10",
+        880
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Mir's argument?",
+  "choices": {
+    "A": "Weavers with under 1 year of experience tied fewer than half as many knots per hour as those with more than 10 years.",
+    "B": "Knots per hour rose by roughly equal amounts from each experience group to the next.",
+    "C": "Knots per hour rose by 310 between the first year and the second, but by only 160 across all the more experienced groups combined.",
+    "D": "Weavers with more than 10 years of experience tied the most knots per hour, 880."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Mir does not dispute that experienced weavers are faster; her specific claim is about timing: the big jump comes in the first two years and later gains are gradual. To support it, compare the size of the increases between rows. From under 1 year to 1–2 years, speed rises 410 to 720 (310 knots); from 1–2 years to more than 10, it rises only 720 to 880 (160 knots).",
+    "A": "Incorrect. This is true (410 versus 880), but a comparison of the two extremes shows that speed rises with experience, not that most of the rise happens early.",
+    "B": "Incorrect. The increases are 310, 70, 60, and 30 knots, which are far from equal.",
+    "C": "Correct. A 310-knot jump in the first two years against a 160-knot rise over all the later years shows that most of the improvement comes early.",
+    "D": "Incorrect. This is true, but the most experienced group being fastest is what the workshop owners also believe; it says nothing about when the gains occur."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

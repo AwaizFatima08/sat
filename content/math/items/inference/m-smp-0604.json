@@ -1,0 +1,71 @@
+{
+  "id": "m-smp-0604",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A college has 2,400 students. The table shows the number of student clubs each student in a random sample of 150 of the college's students belongs to. The percent of all the college's students who belong to at least one club is estimated from the sample, with a margin of error of 4 percentage points. Based on these results, what is the least plausible number of the college's students who belong to at least one club?",
+  "figure": {
+    "kind": "table",
+    "title": "Clubs joined by sampled students",
+    "columns": [
+      "Number of clubs",
+      "Number of students"
+    ],
+    "rows": [
+      [
+        "0",
+        "48"
+      ],
+      [
+        "1",
+        "57"
+      ],
+      [
+        "2",
+        "30"
+      ],
+      [
+        "3 or more",
+        "15"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1536"
+  ],
+  "solution": [
+    "In the sample, \\(57 + 30 + 15 = 102\\) of the 150 students belong to at least one club: \\(\\frac{102}{150} = 68\\%\\).",
+    "With a margin of error of 4 percentage points, the least plausible percent is \\(68\\% - 4\\% = 64\\%\\).",
+    "Applied to 2,400 students: \\(0.64 \\cdot 2{,}400 = 1{,}536\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r = figure['rows']\nn = sum(int(c) for _, c in r)\nassert n == 150\np = Rational(n - int(r[0][1]), n)\nassert p == Rational(68, 100)\nlo = (p - Rational(4, 100)) * 2400\nassert lo == 1536\nassert [Rational(a) for a in spr_answers] == [lo]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "1536",
+        "second": null,
+        "note": "'Least plausible' is ambiguous for a typed answer: I took the smallest plausible value (64% of 2,400 = 1,536); any number outside 1,536 to 1,728 also fits.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

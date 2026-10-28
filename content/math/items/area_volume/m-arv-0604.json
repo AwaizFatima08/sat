@@ -1,0 +1,45 @@
+{
+  "id": "m-arv-0604",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "An equilateral triangle has a perimeter of \\(51\\). What is the length of one side of the triangle?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "17"
+  ],
+  "solution": [
+    "All three sides of an equilateral triangle are equal, so \\(3s = 51\\).",
+    "\\(s = 51 \\div 3 = 17\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "s=symbols('s')\nans=solve(Eq(3*s,51),s)[0]\nassert ans==17\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "17",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

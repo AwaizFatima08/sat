@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0639",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Every afternoon that summer, Zainab climbed to the roof of her grandmother's house in Rohri and counted the freight trains crossing the junction below, writing the number of wagons in a notebook she had labeled Official Records. Her cousins laughed at the notebook and said the trains were the same every day. ______ Zainab knew they were wrong: the Tuesday train had been three wagons shorter for two weeks, the evening train now came after dark, and nobody but her had noticed.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Still,",
+    "B": "In other words,",
+    "C": "Likewise,",
+    "D": "Therefore,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The second sentence reports the cousins' view: the trains \"were the same every day.\" The last sentence gives Zainab's opposite view, backed by details only she had noticed. A transition that sets her view against theirs is needed.",
+    "A": "Correct. \"Still\" signals that, in spite of the cousins' teasing, Zainab held to her own view.",
+    "B": "Incorrect. Zainab's view does not restate the cousins' claim; it contradicts it.",
+    "C": "Incorrect. \"Likewise\" would mean Zainab agreed with the cousins, but she knew they were wrong.",
+    "D": "Incorrect. The cousins' laughter is not the reason Zainab knew they were wrong; her own observations were. This is tempting because the sentence that follows gives reasons, but those reasons are hers, not theirs."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

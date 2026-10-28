@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0652",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What is the greatest solution to the equation \\(\\sqrt{5x + 1} = x + 1\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3"
+  ],
+  "solution": [
+    "Square both sides: \\(5x + 1 = x^{2} + 2x + 1\\).",
+    "Rearrange: \\(x^{2} - 3x = 0\\), so \\(x(x - 3) = 0\\) and \\(x = 0\\) or \\(x = 3\\).",
+    "Check both in the original equation: \\(\\sqrt{1} = 1 = 0 + 1\\) and \\(\\sqrt{16} = 4 = 3 + 1\\). Neither is extraneous, so the greatest solution is \\(3\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nsols = solve(Eq(sqrt(5*x + 1), x + 1), x)\nassert sorted(sols) == [0, 3]\nassert Rational(spr_answers[0]) == max(sols) == 3",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

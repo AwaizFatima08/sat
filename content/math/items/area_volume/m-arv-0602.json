@@ -1,0 +1,57 @@
+{
+  "id": "m-arv-0602",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rectangular vegetable plot in Faisalabad is 15 meters long and has an area of 180 square meters. What is the width of the plot, in meters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(75\\)",
+    "B": "\\(12\\)",
+    "C": "\\(165\\)",
+    "D": "\\(2{,}700\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Area of a rectangle \\(=\\) length \\(\\times\\) width, so \\(15w = 180\\).",
+    "\\(w = 180 \\div 15 = 12\\) meters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This treats 180 as the perimeter: \\((180 - 2 \\cdot 15) \\div 2 = 75\\). But 180 is the area.",
+    "B": "Correct. \\(15 \\cdot w = 180\\) gives \\(w = 12\\).",
+    "C": "Incorrect. This is \\(180 - 15\\); the width is found by dividing the area by the length, not subtracting.",
+    "D": "Incorrect. This is \\(180 \\cdot 15\\); multiplying gives neither a width nor a sensible size for a plot."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "wrong_formula"
+  },
+  "verify": "w=symbols('w')\nans=solve(Eq(15*w,180),w)[0]\nassert ans==12\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

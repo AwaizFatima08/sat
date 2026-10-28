@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0603",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "At a school store, a notebook costs \\$2 more than a pen. One notebook and 3 pens cost a total of \\$14. What is the price, in dollars, of one notebook?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(8\\)",
+    "C": "\\(5\\)",
+    "D": "\\(11\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(n\\) and \\(p\\) be the prices of a notebook and a pen: \\(n = p + 2\\) and \\(n + 3p = 14\\).",
+    "Substitute: \\((p + 2) + 3p = 14\\), so \\(4p = 12\\) and \\(p = 3\\).",
+    "Then \\(n = 3 + 2 = 5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the price of a pen, not a notebook.",
+    "B": "Incorrect. This is the price of a notebook and a pen together, \\(5 + 3\\); the work stops before separating the two.",
+    "C": "Correct. With \\(n = p + 2\\) and \\(n + 3p = 14\\), substituting gives \\(4p + 2 = 14\\), so \\(p = 3\\) and \\(n = 5\\).",
+    "D": "Incorrect. This is \\(14 - 3\\), treating the 3 pens as costing \\$3 in all; they cost \\$3 each."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "D": "arithmetic"
+  },
+  "verify": "n, p = symbols('n p')\nsol = solve([n - (p + 2), n + 3*p - 14], [n, p])\nassert sol == {n: 5, p: 3}\nassert value(choices[answer]) == 5\nassert all(value(choices[k]) != 5 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

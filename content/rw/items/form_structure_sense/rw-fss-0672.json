@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0672",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In 1884 the city of Calais commissioned Auguste Rodin to make a monument to an episode from 1347, when, according to the chronicler Jean Froissart, six leading citizens offered their lives to the English king Edward III in exchange for the lifting of a siege. The city expected a single heroic figure on a tall pedestal. Rodin instead modeled all six men, ______ he showed not as triumphant heroes but as exhausted and uncertain figures walking toward what they believed was their execution, and he wanted the group set at ground level so that viewers could walk among them.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "whom",
+    "B": "whose",
+    "C": "which",
+    "D": "who"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The blank introduces a clause describing \"all six men,\" and within that clause the pronoun is the object of the verb \"showed\" (he showed them). An object pronoun referring to people is \"whom.\"",
+    "A": "Correct. \"Whom\" is the object form, correct here because the pronoun is the object of \"showed\" (\"he showed them\").",
+    "B": "Incorrect. \"Whose\" shows possession, but nothing in the clause belongs to the men; the pronoun is the object of \"showed.\"",
+    "C": "Incorrect. \"Which\" refers to things, not to people such as the six men.",
+    "D": "Incorrect. \"Who\" is the subject form, but the clause already has its subject, \"he\"; the pronoun is the object of \"showed.\""
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "pronoun",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

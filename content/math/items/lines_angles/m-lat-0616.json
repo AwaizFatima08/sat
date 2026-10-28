@@ -1,0 +1,103 @@
+{
+  "id": "m-lat-0616",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A long strip of paper is folded along line \\(PQ\\), as shown. Before the fold, the lower edge of the strip was the straight line through points \\(A\\), \\(P\\), and \\(B\\). After the fold, the part of that edge from \\(P\\) toward \\(B\\) lies along \\(\\overline{PR}\\). Angle \\(QPB\\) measures \\(62^{\\circ}\\). What is the value of \\(x\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0.0,
+        0.0
+      ],
+      "P": [
+        8.0,
+        0.0
+      ],
+      "B": [
+        16.0,
+        0.0
+      ],
+      "Q": [
+        10.817,
+        5.298
+      ],
+      "R": [
+        4.645,
+        4.974
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "P",
+        "Q"
+      ],
+      [
+        "P",
+        "R"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          9.457,
+          0.876
+        ],
+        "text": "62°"
+      },
+      {
+        "at": [
+          6.499,
+          0.798
+        ],
+        "text": "x°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "56"
+  ],
+  "solution": [
+    "Folding does not change angles: the angle between the fold line and the edge is \\(62^{\\circ}\\) before the fold, so after the fold angle \\(QPR\\) also measures \\(62^{\\circ}\\).",
+    "Angles \\(APR\\), \\(RPQ\\), and \\(QPB\\) together form the straight angle \\(APB\\): \\(x + 62 + 62 = 180\\).",
+    "\\(x = 56\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['A'][1]==P['P'][1]==P['B'][1] and P['A'][0]<P['P'][0]<P['B'][0]\nassert abs(ang('Q','P','B')-62)<0.1 and abs(ang('Q','P','R')-62)<0.1\nans=180-2*62\nassert abs(ang('A','P','R')-ans)<0.1\nassert Rational(spr_answers[0])==ans==56\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "56",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

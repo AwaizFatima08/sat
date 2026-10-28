@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0626",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Kolkata, in eastern India, has the oldest tram system still operating in Asia. Horse-drawn trams began running there in 1873, and electric trams followed in 1902. Supporters of the system point out that the trams produce no exhaust, cost riders very little, and carry far more people per vehicle than cars do. ______ the network has shrunk steadily for decades, as routes were closed to make room for buses and cars on the city's crowded roads, and only a handful of lines now remain in service.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "In other words,",
+    "B": "Consequently,",
+    "C": "Nonetheless,",
+    "D": "For instance,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The third sentence lists the trams' advantages, which would seem to argue for keeping them. The last sentence says the network has been shrinking anyway. A transition that signals a development that goes against what the previous sentence would lead you to expect is needed.",
+    "A": "Incorrect. \"In other words\" would restate the trams' advantages, but the last sentence describes something quite different: the system's decline.",
+    "B": "Incorrect. \"Consequently\" is tempting because the sentence describes a change over time, but the shrinking did not result from the trams' advantages; it happened in spite of them.",
+    "C": "Correct. \"Nonetheless\" shows that the network has shrunk despite the advantages its supporters point out.",
+    "D": "Incorrect. The shrinking of the network is not an example of the trams' advantages."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

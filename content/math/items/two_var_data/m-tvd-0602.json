@@ -1,0 +1,96 @@
+{
+  "id": "m-tvd-0602",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The scatterplot shows 8 data points and their line of best fit, which has the equation \\(y = -2x + 20\\). What is the residual for the data point \\((6, 11)\\)? (Residual = actual \\(y\\)-value \\(-\\) predicted \\(y\\)-value.)",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        1,
+        17
+      ],
+      [
+        2,
+        16
+      ],
+      [
+        3,
+        13
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        3
+      ]
+    ],
+    "line": "-2*x + 20"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(-3\\)",
+    "C": "\\(8\\)",
+    "D": "\\(11\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Predicted value at \\(x = 6\\): \\(y = -2(6) + 20 = 8\\).",
+    "Residual: actual minus predicted, \\(11 - 8 = 3\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The line predicts \\(y = 8\\) at \\(x = 6\\), and \\(11 - 8 = 3\\).",
+    "B": "Incorrect. This is predicted minus actual, \\(8 - 11\\). The residual is actual minus predicted.",
+    "C": "Incorrect. This is the predicted value at \\(x = 6\\), not the residual.",
+    "D": "Incorrect. This is the actual \\(y\\)-value of the data point, not the residual."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "x = symbols('x')\nassert [6, 11] in figure['points']\nr = 11 - sympify(figure['line']).subs(x, 6)\nassert r == 3\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

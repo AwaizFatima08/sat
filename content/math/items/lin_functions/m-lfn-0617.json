@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0617",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = 4(x - 3) + 10\\). What is the \\(y\\)-intercept of the graph of \\(y = f(x)\\) in the \\(xy\\)-plane?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((0, -2)\\)",
+    "B": "\\((0, 10)\\)",
+    "C": "\\((0, -12)\\)",
+    "D": "\\((0, 2)\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The \\(y\\)-intercept is the point \\((0, f(0))\\).",
+    "\\(f(0) = 4(0 - 3) + 10 = -12 + 10 = -2\\), so the \\(y\\)-intercept is \\((0, -2)\\).",
+    "Equivalently, expand: \\(f(x) = 4x - 12 + 10 = 4x - 2\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(f(0) = 4(0 - 3) + 10 = -12 + 10 = -2\\).",
+    "B": "Incorrect. 10 is the constant written at the end, but the \\(y\\)-intercept is \\(f(0)\\), and \\(4(0 - 3)\\) also contributes.",
+    "C": "Incorrect. This is \\(4(0 - 3)\\) without adding 10.",
+    "D": "Incorrect. \\(f(0) = -12 + 10 = -2\\), not \\(12 - 10\\)."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "arithmetic",
+    "D": "sign_error"
+  },
+  "verify": "x = symbols('x')\nf = 4*(x - 3) + 10\nassert f.subs(x, 0) == -2\nkey = '(0, -2)'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

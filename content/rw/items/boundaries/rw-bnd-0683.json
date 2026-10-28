@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0683",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Traditional Japanese carpentry is admired for timber frames that stand for centuries without a single metal fastener. Their joints—mortises, tenons, and interlocking notches cut so precisely that they hold without glue or ______ a building to flex during an earthquake and then settle back into place. Because the pieces are shaped to slide together, a damaged beam can be withdrawn and replaced rather than cut out, which is one reason temple buildings are periodically dismantled and reassembled. Apprentices in the craft spend years learning to sharpen and use hand planes before they are trusted to cut a joint on a finished timber.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "nails; allow",
+    "B": "nails—allow",
+    "C": "nails, allow",
+    "D": "nails allow"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The subject of the sentence is \"Their joints,\" and its verb is \"allow.\" Everything from \"mortises\" to \"glue or nails\" is extra information describing the joints. It opens with a dash, so it must close with a matching dash before the verb, even though the description contains commas of its own.",
+    "A": "Incorrect. A semicolon must join two independent clauses, but \"Their joints—mortises, tenons, and interlocking notches … glue or nails\" has no main verb.",
+    "B": "Correct. The second dash closes the pair around the description, so the subject \"Their joints\" connects to its verb \"allow.\"",
+    "C": "Incorrect. Extra information that opens with a dash cannot close with a comma; the two marks must match.",
+    "D": "Incorrect. Without a closing dash, the description is never set off, and \"glue or nails allow a building\" misleadingly reads as if the nails do the allowing."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "supplements",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

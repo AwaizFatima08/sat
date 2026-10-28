@@ -1,0 +1,44 @@
+{
+  "id": "m-nlf-0717",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A water tank holds 640 liters of water at time \\(t = 0\\) hours. The number of liters remaining \\(t\\) hours later is modeled by \\(V(t) = 640\\left(\\dfrac{1}{2}\\right)^{t/3}\\). After how many hours will 20 liters remain?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "15"
+  ],
+  "solution": [
+    "Set the model equal to \\(20\\): \\(640\\left(\\dfrac{1}{2}\\right)^{t/3} = 20\\).",
+    "Divide by \\(640\\): \\(\\left(\\dfrac{1}{2}\\right)^{t/3} = \\dfrac{1}{32}\\), since \\(\\dfrac{20}{640} = \\dfrac{1}{32}\\).",
+    "Because \\(32 = 2^{5}\\), \\(\\dfrac{t}{3} = 5\\), so \\(t = 15\\)."
+  ],
+  "verify": "t = symbols('t')\nV = 640*Rational(1, 2)**(t/3)\nassert simplify(V.subs(t, 15)) == 20\nassert [simplify(s) for s in solve(Eq(V, 20), t)] == [15]\nassert spr_answers == ['15']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h4-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "15",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

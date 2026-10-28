@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0617",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A print shop charges the same price for every flyer and the same price for every poster. One customer paid \\$86 for 200 flyers and 10 posters, and another customer paid \\$110 for 150 flyers and 25 posters. What is the price, in dollars, of one poster?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.30\\)",
+    "B": "\\(2.60\\)",
+    "C": "\\(2.40\\)",
+    "D": "\\(8.60\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(f\\) and \\(p\\) be the prices of a flyer and a poster: \\(200f + 10p = 86\\) and \\(150f + 25p = 110\\).",
+    "Multiply the first equation by 2.5: \\(500f + 25p = 215\\). Subtract the second: \\(350f = 105\\), so \\(f = 0.30\\).",
+    "Then \\(60 + 10p = 86\\), so \\(p = 2.60\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the price of one flyer, not one poster.",
+    "B": "Correct. With \\(f\\) and \\(p\\) the prices, \\(200f + 10p = 86\\) and \\(150f + 25p = 110\\) give \\(f = 0.30\\) and \\(p = 2.60\\).",
+    "C": "Incorrect. This is the result of an arithmetic slip; \\(86 - 200(0.30) = 26\\), and \\(26 \\div 10 = 2.60\\).",
+    "D": "Incorrect. This is \\(86 \\div 10\\), which ignores the 200 flyers in the first order."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "f, p = symbols('f p')\nsol = solve([200*f + 10*p - 86, 150*f + 25*p - 110], [f, p])\nassert sol == {f: Rational(3, 10), p: Rational(13, 5)}\nassert value(choices[answer]) == Rational(13, 5)\nassert all(value(choices[k]) != Rational(13, 5) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

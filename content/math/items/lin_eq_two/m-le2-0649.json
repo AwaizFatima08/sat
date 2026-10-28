@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0649",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A coffee roaster sells light roast for \\$14 per kilogram and dark roast for \\$20 per kilogram. The equation \\(14x + 20y = 2{,}800\\) represents the combinations of \\(x\\) kilograms of light roast and \\(y\\) kilograms of dark roast that sell for exactly \\$2,800. The roaster raises both prices by 25%. Which equation represents the combinations that sell for exactly \\$2,800 at the new prices?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(39x + 45y = 2{,}800\\)",
+    "B": "\\(17.5x + 25y = 2{,}800\\)",
+    "C": "\\(14x + 20y = 3{,}500\\)",
+    "D": "\\(17.5x + 25y = 3{,}500\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "New prices: \\(14 \\times 1.25 = 17.5\\) and \\(20 \\times 1.25 = 25\\).",
+    "Combinations that sell for \\$2,800: \\(17.5x + 25y = 2{,}800\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds 25 to each price; a 25% increase multiplies each price by 1.25.",
+    "B": "Correct. The new prices are \\(14(1.25) = 17.5\\) and \\(20(1.25) = 25\\) dollars per kilogram, and the total is still \\$2,800.",
+    "C": "Incorrect. Raising the prices does not raise the \\$2,800 total; the prices, not the total, must change. (This equation buys 25% more coffee, not less.)",
+    "D": "Incorrect. The total to be reached is still \\$2,800; only the prices rise by 25%."
+  },
+  "traps": {
+    "A": "percent_add",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "x, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\ntarget = Rational(14, 1)*Rational(5, 4)*x + Rational(20, 1)*Rational(5, 4)*y - 2800\ngood = lambda s: simplify(eq(s)/target).is_number\nok = [k for k in choices if good(choices[k])]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

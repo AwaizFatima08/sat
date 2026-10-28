@@ -1,0 +1,46 @@
+{
+  "id": "m-eqx-0612",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A square garden has sides of \\((3x - 2)\\) meters. A rectangular flower bed with an area of \\(5x\\) square meters is added beside it. The total area, in square meters, of the garden and the flower bed is \\(ax^{2} + bx + c\\), where \\(a\\), \\(b\\), and \\(c\\) are constants. What is the value of \\(a + b + c\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "The garden's area is \\((3x - 2)^{2} = 9x^{2} - 12x + 4\\).",
+    "Add the flower bed: \\(9x^{2} - 7x + 4\\), so \\(a + b + c = 9 - 7 + 4 = 6\\).",
+    "Shortcut: \\(a + b + c\\) is the total area at \\(x = 1\\), which is \\(1^{2} + 5 = 6\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\np = Poly(expand((3*x - 2)**2 + 5*x), x)\nassert p.all_coeffs() == [9, -7, 4]\nassert [Rational(v) for v in spr_answers] == [sum(p.all_coeffs())]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

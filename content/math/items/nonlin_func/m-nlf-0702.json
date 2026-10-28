@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0702",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A model of the number of yearly visitors to a hill resort near Murree, Pakistan, says that the number increased by \\(25\\%\\) each year from 2020 to 2022 and then decreased by \\(20\\%\\) each year from 2022 to 2024. According to the model, which of the following best describes the number of visitors in 2024 compared with the number in 2020?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The number of visitors in 2024 is equal to the number in 2020.",
+    "B": "The number of visitors in 2024 is 10% greater than the number in 2020.",
+    "C": "The number of visitors in 2024 is 25% greater than the number in 2020.",
+    "D": "The number of visitors in 2024 is 20% less than the number in 2020."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Two increases of \\(25\\%\\) multiply the 2020 number by \\((1.25)^{2} = 1.5625\\).",
+    "Two decreases of \\(20\\%\\) then multiply by \\((0.8)^{2} = 0.64\\).",
+    "Overall factor: \\(1.5625 \\times 0.64 = 1\\). The 2024 number equals the 2020 number."
+  ],
+  "explanation": {
+    "A": "Correct. \\((1.25)^{2}(0.8)^{2} = (1.25 \\times 0.8)^{2} = 1^{2} = 1\\), so the two years of growth are exactly undone by the two years of decline.",
+    "B": "Incorrect. This adds the percents: \\(25 + 25 - 20 - 20 = 10\\). Percent changes multiply, and \\(1.25 \\times 1.25 \\times 0.8 \\times 0.8 = 1\\).",
+    "C": "Incorrect. After 2023 the factor is \\(1.5625 \\times 0.8 = 1.25\\), but 2024 brings a second \\(20\\%\\) decrease, which returns the factor to 1.",
+    "D": "Incorrect. A \\(20\\%\\) decrease is applied to the larger 2022 number, not to the 2020 number, and it exactly cancels a \\(25\\%\\) increase: \\(1.25 \\times 0.8 = 1\\)."
+  },
+  "traps": {
+    "B": "percent_add",
+    "C": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "factor = Rational('1.25')**2 * Rational('0.8')**2\nassert factor == 1\nassert choices[answer] == 'The number of visitors in 2024 is equal to the number in 2020.'\nassert len(set(choices.values())) == 4",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

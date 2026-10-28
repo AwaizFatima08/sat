@@ -1,0 +1,45 @@
+{
+  "id": "m-rat-0616",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The value of \\(y\\) is inversely proportional to the value of \\(x\\), where \\(x > 0\\). When \\(x = 4\\), \\(y = 9\\). For what value of \\(x\\) is \\(y = x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "Inverse proportion means \\(xy\\) is constant: \\(xy = 4 \\cdot 9 = 36\\).",
+    "If \\(y = x\\), then \\(x^{2} = 36\\), so \\(x = 6\\) (since \\(x > 0\\))."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x', positive=True)\nk = 4*9\nsol = solve(Eq(x*x, k), x)\nassert sol == [6]\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == 6",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

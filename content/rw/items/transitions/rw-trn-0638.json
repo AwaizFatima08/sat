@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0638",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "For most of the sixth century BCE, Greek potters decorated their vases in the black-figure technique: figures were painted onto the reddish clay in a liquid that turned glossy black when fired, and details such as eyes and folds of cloth were then scratched into the black surface with a sharp point. Around 530 BCE, painters in Athens reversed the scheme, filling in the background with black and leaving the figures the natural red of the clay. ______ details could now be drawn with a brush rather than scratched, which allowed smoother, more flowing lines, and within a few decades the new red-figure style had largely replaced the old one.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Nonetheless,",
+    "B": "In contrast,",
+    "C": "For example,",
+    "D": "As a result,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence describes a change in technique: the figures were now left in red clay instead of being painted black. The last sentence explains what that change made possible: details could be brushed on rather than scratched into the black. A cause-and-effect transition is needed.",
+    "A": "Incorrect. \"Nonetheless\" would mean brushed details happened despite the reversal, but they happened because of it.",
+    "B": "Incorrect. The last sentence does not contrast with the reversal of the scheme; it follows from it. The contrast between the two styles was already drawn in the sentence before. This is the most tempting trap.",
+    "C": "Incorrect. Brushed details are not an example of reversing the colors; they are a consequence of it.",
+    "D": "Correct. \"As a result\" shows that leaving the figures in red clay is what allowed details to be drawn with a brush."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

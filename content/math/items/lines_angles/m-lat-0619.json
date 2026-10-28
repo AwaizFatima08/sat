@@ -1,0 +1,126 @@
+{
+  "id": "m-lat-0619",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Lena holds a 30-centimeter ruler vertically at arm's length, 60 centimeters from her eye, so that the ruler exactly covers her view of a vertical building, as shown. The building is 300 meters from her eye, and the ruler and the building are parallel. What is the height, in meters, of the building? Note: Figure not drawn to scale.",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "E": [
+        0.0,
+        0.0
+      ],
+      "R1": [
+        2.0,
+        -0.5
+      ],
+      "R2": [
+        2.0,
+        0.5
+      ],
+      "B1": [
+        10.0,
+        -2.5
+      ],
+      "B2": [
+        10.0,
+        2.5
+      ]
+    },
+    "segments": [
+      [
+        "E",
+        "B1"
+      ],
+      [
+        "E",
+        "B2"
+      ],
+      [
+        "R1",
+        "R2"
+      ],
+      [
+        "B1",
+        "B2"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.0,
+          1.0
+        ],
+        "text": "60 cm"
+      },
+      {
+        "at": [
+          2.9,
+          0.0
+        ],
+        "text": "30 cm"
+      },
+      {
+        "at": [
+          6.0,
+          2.4
+        ],
+        "text": "300 m"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": true
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(90\\)",
+    "B": "\\(600\\)",
+    "C": "\\(500\\)",
+    "D": "\\(150\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The lines of sight from the eye to the top and bottom of the ruler continue to the top and bottom of the building. Because the ruler and the building are parallel, the two triangles with the eye as a vertex are similar.",
+    "Matching ratios: \\(\\frac{\\text{building height}}{\\text{ruler length}} = \\frac{300\\text{ m}}{0.6\\text{ m}} = 500\\).",
+    "Building height \\(= 0.3 \\cdot 500 = 150\\) meters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This multiplies \\(0.3 \\cdot 300\\) and never divides by the 0.6-meter distance to the ruler.",
+    "B": "Incorrect. This is \\(300 \\cdot \\frac{0.6}{0.3}\\); the ratio is inverted, so the ruler's length should be scaled up by 500, not the distance scaled by 2.",
+    "C": "Incorrect. 500 is the scale factor \\(\\frac{300}{0.6}\\) between the triangles; it still must be multiplied by the ruler's length, 0.3 meters.",
+    "D": "Correct. The scale factor is \\(\\frac{300}{0.6} = 500\\), so the building is \\(0.3 \\cdot 500 = 150\\) meters tall."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "reciprocal",
+    "C": "stopped_early"
+  },
+  "verify": "k=Rational(300)/Rational(6,10)\nans=Rational(3,10)*k\nassert value(choices[answer])==ans==150\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\nassert value(choices['C'])==k and value(choices['B'])==300*Rational(6,10)/Rational(3,10)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

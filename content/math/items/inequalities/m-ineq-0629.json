@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0629",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Let \\(R\\) be the set of all points \\((x, y)\\) in the \\(xy\\)-plane that satisfy \\(x \\ge 0\\), \\(y \\ge 0\\), \\(2x + y \\le 12\\) and \\(x + y \\le 8\\). What is the greatest value of \\(3x + 2y\\) for a point in \\(R\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20\\)",
+    "B": "\\(18\\)",
+    "C": "\\(16\\)",
+    "D": "\\(24\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The region \\(R\\) is a quadrilateral with vertices \\((0, 0)\\), \\((6, 0)\\), \\((0, 8)\\) and the intersection of \\(2x + y = 12\\) and \\(x + y = 8\\), which is \\((4, 4)\\).",
+    "A linear expression takes its greatest value on such a region at a vertex: \\(3x + 2y\\) is 0, 18, 16 and 20 at the four vertices.",
+    "The greatest value is 20, at \\((4, 4)\\)."
+  ],
+  "explanation": {
+    "A": "Correct. At the vertex \\((4, 4)\\), \\(3(4) + 2(4) = 20\\), and no point of \\(R\\) gives more.",
+    "B": "Incorrect. 18 is the value at \\((6, 0)\\), the vertex on the \\(x\\)-axis, but the vertex \\((4, 4)\\) gives 20.",
+    "C": "Incorrect. 16 is the value at \\((0, 8)\\), the vertex on the \\(y\\)-axis, but \\((4, 4)\\) gives more.",
+    "D": "Incorrect. 24 is the value at \\((0, 12)\\), but that point does not satisfy \\(x + y \\le 8\\), so it is not in \\(R\\)."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "x, y = symbols('x y')\nfeas = lambda a, b: a >= 0 and b >= 0 and 2*a + b <= 12 and a + b <= 8\nlines = [x, y, 2*x + y - 12, x + y - 8]\nverts = []\nfor i in range(4):\n    for j in range(i + 1, 4):\n        sol = solve([lines[i], lines[j]], [x, y], dict=True)\n        verts += [(s[x], s[y]) for s in sol if feas(s[x], s[y])]\nbest = max(3*a + 2*b for a, b in verts)\nassert best == 20 and (4, 4) in verts\nassert value(choices[answer]) == best\nassert all(value(choices[k]) != best for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

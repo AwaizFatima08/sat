@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0629",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(5(2x + 3) - 7 = 28\\), what is the value of \\(6x + 9\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(7\\)",
+    "C": "\\(21\\)",
+    "D": "\\(12.6\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Add 7: \\(5(2x + 3) = 35\\), so \\(2x + 3 = 7\\).",
+    "Since \\(6x + 9 = 3(2x + 3)\\), the value is \\(3(7) = 21\\).",
+    "(Alternatively, \\(x = 2\\) and \\(6(2) + 9 = 21\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(x\\), not of \\(6x + 9\\).",
+    "B": "Incorrect. This is the value of \\(2x + 3\\); the question asks for \\(6x + 9 = 3(2x + 3)\\).",
+    "C": "Correct. \\(2x + 3 = 7\\), so \\(6x + 9 = 3 \\cdot 7 = 21\\).",
+    "D": "Incorrect. This is the result of subtracting 7 instead of adding it: \\(5(2x + 3) = 21\\) gives \\(x = 0.6\\) and \\(6x + 9 = 12.6\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "D": "sign_error"
+  },
+  "verify": "x = symbols('x')\nxs = solve(Eq(5*(2*x + 3) - 7, 28), x)[0]\nassert xs == 2\ns = 6*xs + 9\nassert s == 21\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

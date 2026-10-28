@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0628",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Common starlings feed on the ground in flocks that range from a handful of birds to hundreds. Each bird feeding with its head down must regularly pause and lift its head to scan for hawks. Ornithologist Teodora Ilić filmed starling flocks of different sizes and measured how often each bird looked up. She found that birds in large flocks raised their heads far less often than birds in small flocks, yet when a model hawk was flown over, the large flocks reacted at least as quickly as the small ones. Ilić's findings suggest that a starling in a large flock ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "relies on its own vigilance rather than on the other birds in the flock.",
+    "B": "is less likely to be noticed by a hawk than a starling in a small flock.",
+    "C": "can spend more time feeding without being slower to detect danger.",
+    "D": "spends more of its time watching for hawks than a starling in a small flock."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Birds in large flocks looked up less, which means more time with the head down feeding, yet the large flocks detected the model hawk just as fast. So an individual in a large flock gains feeding time without losing early warning.",
+    "A": "Incorrect. A bird that looks up less yet is warned as early must be benefiting from the vigilance of others, not relying only on its own.",
+    "B": "Incorrect. The study measured how quickly flocks detected the hawk, not whether hawks noticed individual birds.",
+    "C": "Correct. Less time scanning plus equally fast reaction means more feeding at no cost in detection.",
+    "D": "Incorrect. This reverses the finding; birds in large flocks looked up less often, not more."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

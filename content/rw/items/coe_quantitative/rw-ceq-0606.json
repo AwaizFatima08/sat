@@ -1,0 +1,79 @@
+{
+  "id": "rw-ceq-0606",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Students sometimes cram all of their studying into one long session the night before a test. Psychology instructor Daniel Okoro asked 60 students in Abuja, Nigeria, to learn a list of 40 unfamiliar words. Half of the students studied for 60 minutes in one session, and the other half studied for 20 minutes on each of three days. Each group was tested right after its last session and again one week later. Okoro's results favored the group that spread out its studying: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Words Recalled by Two Study Groups (40 words on the list)",
+    "columns": [
+      "Group",
+      "Total study time",
+      "Average words recalled right after studying",
+      "Average words recalled one week later"
+    ],
+    "rows": [
+      [
+        "One session",
+        "60 minutes",
+        31,
+        17
+      ],
+      [
+        "Three sessions",
+        "60 minutes",
+        29,
+        26
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "students in the three-session group reported feeling less nervous before the test.",
+    "B": "the one-session group recalled an average of 26 words one week later, compared with 17 for the three-session group.",
+    "C": "the one-session group recalled an average of 31 words right after studying.",
+    "D": "the three-session group recalled an average of 26 words one week later, compared with 17 for the one-session group."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The statement says the results favored the group that spread out its studying, so the choice must show that group doing better. In the \"one week later\" column, the three-session group recalled 26 words and the one-session group only 17.",
+    "A": "Incorrect. The table reports only words recalled; it says nothing about how students felt.",
+    "B": "Incorrect. This swaps the two groups: it was the three-session group that recalled 26 words one week later.",
+    "C": "Incorrect. This is accurate, but it describes only the one-session group and, if anything, shows that group doing slightly better right after studying.",
+    "D": "Correct. One week later, the three-session group remembered 26 words on average and the one-session group only 17, so spreading out the studying paid off."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

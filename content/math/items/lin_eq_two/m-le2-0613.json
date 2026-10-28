@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0613",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the point \\((k, k)\\) lies on the graph of \\(y = \\frac{2}{3}x - 4\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12\\)",
+    "B": "\\(-4\\)",
+    "C": "\\(-6\\)",
+    "D": "\\(-12\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = k\\) and \\(y = k\\): \\(k = \\frac{2}{3}k - 4\\).",
+    "Subtract \\(\\frac{2}{3}k\\): \\(\\frac{1}{3}k = -4\\), so \\(k = -12\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(\\frac{1}{3}k = -4\\) gives a negative \\(k\\); check: \\(\\frac{2}{3}(12) - 4 = 4 \\ne 12\\).",
+    "B": "Incorrect. \\(-4\\) is the \\(y\\)-intercept; the point \\((0, -4)\\) does not have equal coordinates.",
+    "C": "Incorrect. Check: \\(\\frac{2}{3}(-6) - 4 = -8 \\ne -6\\).",
+    "D": "Correct. \\(k = \\frac{2}{3}k - 4\\) gives \\(\\frac{1}{3}k = -4\\), so \\(k = -12\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "C": "arithmetic"
+  },
+  "verify": "k = symbols('k')\nsol = solve(Eq(k, Rational(2, 3)*k - 4), k)\nassert sol == [-12]\nassert value(choices[answer]) == -12\nassert all(value(choices[k]) != -12 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

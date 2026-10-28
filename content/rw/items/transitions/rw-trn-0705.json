@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0705",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "An eggshell must do two jobs that pull in opposite directions. It has to be strong enough to protect a developing embryo from being crushed, yet thin enough to let oxygen in and carbon dioxide out through tiny pores. ______ the shell is a compromise that balances protection against gas exchange.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "By contrast,",
+    "B": "In other words,",
+    "C": "Consequently,",
+    "D": "Nonetheless,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The first two sentences describe two opposing demands on the eggshell. The blank sentence restates those demands as a compromise, so the transition must signal a restatement.",
+    "A": "Incorrect. \"By contrast\" would introduce an opposing point. The sentence restates the two-job idea in simpler terms rather than setting it against anything else.",
+    "B": "Correct. The sentence restates the idea of two opposing jobs as a compromise, which is a simpler way of saying the same thing. \"In other words\" marks a restatement.",
+    "C": "Incorrect. The shell's design is not a result of the two jobs; the sentence restates what the two jobs mean for the shell. \"Consequently\" would present a cause and effect that the passage does not set up.",
+    "D": "Incorrect. \"Nonetheless\" would mean that a point holds despite an opposing fact. The sentence does not make a concession; it explains what the two jobs add up to."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

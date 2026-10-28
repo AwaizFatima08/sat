@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0617",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x \\neq 3\\) and \\(x \\neq -3\\), which of the following is equivalent to \\(\\frac{x^{2} - 6x + 9}{x^{2} - 9}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{2x}{3}\\)",
+    "B": "\\(1\\)",
+    "C": "\\(\\frac{x - 3}{x + 3}\\)",
+    "D": "\\(\\frac{x + 3}{x - 3}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Factor: the numerator is \\((x - 3)^{2}\\) and the denominator is \\((x - 3)(x + 3)\\).",
+    "Cancel one factor of \\((x - 3)\\): \\(\\frac{x - 3}{x + 3}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of canceling \\(x^{2}\\) with \\(x^{2}\\) and \\(9\\) with \\(9\\) term by term; only common factors can be canceled.",
+    "B": "Incorrect. This is the result of canceling both factors of the numerator against the denominator, but the denominator has only one factor of \\((x - 3)\\).",
+    "C": "Correct. \\(\\frac{(x - 3)^{2}}{(x - 3)(x + 3)} = \\frac{x - 3}{x + 3}\\).",
+    "D": "Incorrect. This is the reciprocal of the correct expression; the remaining \\((x - 3)\\) is in the numerator."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "reciprocal"
+  },
+  "verify": "x = symbols('x')\nt = (x**2 - 6*x + 9)/(x**2 - 9)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

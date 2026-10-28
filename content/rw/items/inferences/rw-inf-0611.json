@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0611",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The town of Uch Sharif in Punjab, Pakistan, is known for a group of tombs built in the fifteenth century and covered with patterns of blue and white glazed tiles. The most famous, the tomb of Bibi Jawindi, was built as an eight-sided structure with the same design repeated on every side. In 1817, floodwaters washed away roughly half of the building. Because the tomb's design was so regular, the half that still stands allows conservators to ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "determine the exact date on which the tomb was finished.",
+    "B": "identify the names of the craftsmen who made the tiles.",
+    "C": "work out how the parts that were lost must have looked.",
+    "D": "replace the missing half using the original fifteenth-century tiles."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The tomb had eight identical sides, and half of it survives. Since the design was repeated on every side, the surviving sides show what the lost sides looked like, so conservators can reconstruct the missing half's appearance.",
+    "A": "Incorrect. A repeated design tells conservators about the shape of the lost parts, not about the completion date.",
+    "B": "Incorrect. The text gives no information about the craftsmen or their names.",
+    "C": "Correct. A symmetrical design means the surviving half is a model for the half that was lost.",
+    "D": "Incorrect. The text says the tiles on the missing half were washed away, so the original tiles are not available."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

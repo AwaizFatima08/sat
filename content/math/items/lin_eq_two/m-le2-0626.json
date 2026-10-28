@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0626",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which equation represents the line in the \\(xy\\)-plane that has an \\(x\\)-intercept of \\((5, 0)\\) and the same slope as the graph of \\(y = -\\frac{4}{5}x + 3\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = -\\frac{4}{5}x + 5\\)",
+    "B": "\\(y = -\\frac{4}{5}x + 4\\)",
+    "C": "\\(y = -\\frac{4}{5}x - 4\\)",
+    "D": "\\(y = -\\frac{4}{5}x + 3\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The slope is \\(-\\frac{4}{5}\\). Use point-slope form with \\((5, 0)\\): \\(y = -\\frac{4}{5}(x - 5)\\).",
+    "Expand: \\(y = -\\frac{4}{5}x + 4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. 5 is the \\(x\\)-intercept, not the \\(y\\)-intercept; at \\(x = 5\\) this gives \\(y = 1\\).",
+    "B": "Correct. \\(y = -\\frac{4}{5}(x - 5) = -\\frac{4}{5}x + 4\\), which is 0 at \\(x = 5\\).",
+    "C": "Incorrect. \\(-\\frac{4}{5}(x - 5)\\) expands to \\(-\\frac{4}{5}x + 4\\), not \\(-4\\).",
+    "D": "Incorrect. This is the given line, whose \\(x\\)-intercept is \\(\\frac{15}{4}\\), not 5."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "x, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\ngood = lambda s: eq(s).subs({x: 5, y: 0}) == 0 and diff(solve(eq(s), y)[0], x) == Rational(-4, 5)\nok = [k for k in choices if good(choices[k])]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

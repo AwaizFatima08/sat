@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0655",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following sets of three points could all lie on the graph of a linear function in the \\(xy\\)-plane?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((1, 2), (2, 4), (3, 8)\\)",
+    "B": "\\((1, 2), (3, 8), (6, 17)\\)",
+    "C": "\\((1, 2), (3, 8), (6, 14)\\)",
+    "D": "\\((2, 5), (4, 9), (8, 13)\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Three points lie on one line only if the slope between each pair is the same.",
+    "For \\((1, 2), (3, 8), (6, 17)\\): \\(\\frac{8 - 2}{3 - 1} = 3\\) and \\(\\frac{17 - 8}{6 - 3} = 3\\). The slopes match, so these points lie on the line \\(y = 3x - 1\\).",
+    "In each other set the two slopes differ, so no single line passes through all three points."
+  ],
+  "explanation": {
+    "A": "Incorrect. The \\(y\\)-values double each time (\\(2, 4, 8\\)), which is exponential growth: the slopes are \\(2\\) and then \\(4\\).",
+    "B": "Correct. Both slopes equal 3, so the points lie on the line \\(y = 3x - 1\\).",
+    "C": "Incorrect. The \\(y\\)-values rise by 6 each time, but the \\(x\\)-values rise by 2 and then by 3, so the slopes are \\(3\\) and then \\(2\\).",
+    "D": "Incorrect. The \\(y\\)-values rise by 4 each time, but the \\(x\\)-values rise by 2 and then by 4, so the slopes are \\(2\\) and then \\(1\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "wrong_formula"
+  },
+  "verify": "sets = {'A': [(1, 2), (2, 4), (3, 8)], 'B': [(1, 2), (3, 8), (6, 17)], 'C': [(1, 2), (3, 8), (6, 14)], 'D': [(2, 5), (4, 9), (8, 13)]}\nfor k, pts in sets.items():\n    assert all(str(p[0]) in choices[k] and str(p[1]) in choices[k] for p in pts)\nslope = lambda p, q: Rational(q[1] - p[1], q[0] - p[0])\nlinear = [k for k, (p, q, r) in sets.items() if slope(p, q) == slope(q, r)]\nassert linear == [answer] == ['B']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

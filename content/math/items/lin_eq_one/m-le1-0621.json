@@ -1,0 +1,57 @@
+{
+  "id": "m-le1-0621",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A hiker begins descending a mountain trail from an elevation of 2,850 meters and descends at a constant rate of 120 meters per hour. Which equation can be used to find \\(h\\), the number of hours after the hiker begins when the hiker's elevation is 1,650 meters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2{,}850 + 120h = 1{,}650\\)",
+    "B": "\\(2{,}850 - 120h = 1{,}650\\)",
+    "C": "\\(1{,}650 - 120h = 2{,}850\\)",
+    "D": "\\(120h - 2{,}850 = 1{,}650\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "After \\(h\\) hours the hiker has descended \\(120h\\) meters.",
+    "Elevation = starting elevation minus the descent: \\(2{,}850 - 120h = 1{,}650\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds the descent to the starting elevation, which would describe climbing.",
+    "B": "Correct. The elevation after \\(h\\) hours is \\(2{,}850 - 120h\\), and this equals 1,650. (The solution is \\(h = 10\\).)",
+    "C": "Incorrect. This swaps the starting elevation and the final elevation.",
+    "D": "Incorrect. This subtracts the starting elevation from the descent instead of the other way around."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "wrong_quantity",
+    "D": "sign_error"
+  },
+  "verify": "h = symbols('h')\nassert solve(Eq(2850 - 120*h, 1650), h) == [10]\nassert choices[answer] == r'\\(2{,}850 - 120h = 1{,}650\\)'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

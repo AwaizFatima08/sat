@@ -1,0 +1,84 @@
+{
+  "id": "m-nlf-0633",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of the quadratic function \\(y = f(x)\\) is shown in the \\(xy\\)-plane. For which of the following values of \\(x\\) is \\(f(x) > 0\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -4,
+      6
+    ],
+    "y": [
+      -4,
+      10
+    ],
+    "curves": [
+      {
+        "expr": "-(x - 1)**2 + 9",
+        "label": "y = f(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 1,
+        "y": 9,
+        "label": "(1, 9)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-2 < x < 4\\)",
+    "B": "\\(x < -2\\) or \\(x > 4\\)",
+    "C": "\\(0 < x < 9\\)",
+    "D": "\\(x > 1\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "\\(f(x) > 0\\) where the graph is above the \\(x\\)-axis.",
+    "The graph crosses the \\(x\\)-axis at \\(x = -2\\) and \\(x = 4\\) and is above the axis between these crossings, since the parabola opens downward.",
+    "So \\(f(x) > 0\\) when \\(-2 < x < 4\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Between the \\(x\\)-intercepts \\(-2\\) and \\(4\\) the graph is above the \\(x\\)-axis.",
+    "B": "Incorrect. Outside the intercepts the graph is below the \\(x\\)-axis, so \\(f(x) < 0\\) there.",
+    "C": "Incorrect. \\(0\\) and \\(9\\) are \\(y\\)-values (the graph reaches up to \\(9\\)), not the \\(x\\)-values where the graph crosses the axis.",
+    "D": "Incorrect. \\(x = 1\\) is where the maximum occurs, but \\(f(x)\\) is positive on both sides of it, up to \\(x = 4\\) only."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "misread_graph",
+    "D": "concept"
+  },
+  "verify": "x = symbols('x')\nf = sympify(figure['curves'][0]['expr'])\nassert sorted(solve(f, x)) == [-2, 4] and Poly(f, x).LC() < 0\nassert choices[answer] == r'\\(-2 < x < 4\\)'\nassert all(p['y'] != 0 for p in figure['points'])",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "m-le2-0628",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(\\ell\\) is the perpendicular bisector of the line segment with endpoints \\((1, 2)\\) and \\((7, 6)\\). At what value of \\(x\\) does line \\(\\ell\\) cross the \\(x\\)-axis?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "20/3"
+  ],
+  "solution": [
+    "The midpoint of the segment is \\((4, 4)\\), and the segment has slope \\(\\frac{6 - 2}{7 - 1} = \\frac{2}{3}\\).",
+    "Line \\(\\ell\\) passes through \\((4, 4)\\) with slope \\(-\\frac{3}{2}\\): \\(y = -\\frac{3}{2}(x - 4) + 4 = -\\frac{3}{2}x + 10\\).",
+    "Set \\(y = 0\\): \\(x = \\frac{20}{3}\\)."
+  ],
+  "verify": "x = symbols('x')\nmid = (Rational(1 + 7, 2), Rational(2 + 6, 2))\nms = Rational(6 - 2, 7 - 1)\nline = (-1/ms)*(x - mid[0]) + mid[1]\nxi = solve(line, x)[0]\nassert xi == Rational(20, 3)\nassert [Rational(s) for s in spr_answers] == [xi]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "20/3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

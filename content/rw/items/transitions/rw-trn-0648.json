@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0648",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Lanternfish, small fish that live in the dim waters a few hundred meters below the ocean surface, are among the most numerous vertebrates on Earth. During the day, nearly all of them remain at depth, where the darkness hides them from larger predators. ______ they do not stay there: each night, vast numbers rise toward the surface to feed on plankton and sink again before dawn, a daily round trip often described as the largest migration on the planet by weight. Early sonar operators, watching the layer of fish rise and fall on their screens, sometimes mistook it for the seafloor itself.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Consequently,",
+    "B": "Instead,",
+    "C": "However,",
+    "D": "For example,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The second sentence explains that lanternfish stay deep by day because the darkness protects them. The third sentence says they nonetheless leave that safety every night. The transition must signal a contrast with the idea of staying hidden, without suggesting that staying hidden was rejected or replaced.",
+    "A": "Incorrect. The nightly migration is not caused by the darkness hiding the fish; it happens in spite of the safety the darkness offers.",
+    "B": "Incorrect. \"Instead\" would mean the fish make the nightly trip in place of staying at depth, but the text says they do both: they stay hidden by day and rise at night. The contrast is a qualification, not a replacement. This is the most tempting trap.",
+    "C": "Correct. \"However\" signals that, despite the safety of the depths, the fish leave them every night.",
+    "D": "Incorrect. Rising toward the surface each night is not an example of hiding at depth."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0628",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The Hawa Mahal in Jaipur, India, completed in 1799, is a five-story facade of pink sandstone pierced by more than nine hundred small windows. The windows were screened with carved stone lattices so that the women of the royal household, who at the time did not appear in public, could watch festivals and processions in the street below without being seen. The same lattices let the breeze pass freely through the building's narrow upper rooms, keeping them cool through Jaipur's long, hot summers. ______ the building came to be known by the name it carries today, which means \"Palace of the Winds.\"",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Nevertheless,",
+    "B": "Hence,",
+    "C": "Likewise,",
+    "D": "For example,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The third sentence explains that the lattices let the breeze flow through the rooms. The last sentence says the building was named \"Palace of the Winds.\" The name follows from the breeze that moves through the building, so a cause-and-effect transition is needed.",
+    "A": "Incorrect. \"Nevertheless\" signals a contrast, but the name agrees with the description of the breezy rooms rather than going against it.",
+    "B": "Correct. \"Hence\" shows that the building was named for the winds because the lattices let the breeze pass through it.",
+    "C": "Incorrect. \"Likewise\" would introduce a feature similar to the breeze, but the sentence explains the origin of the name.",
+    "D": "Incorrect. The name is not an example of the lattices letting the breeze through; it is a result of that feature."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

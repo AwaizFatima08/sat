@@ -1,0 +1,58 @@
+{
+  "id": "m-lat-0618",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Triangle \\(ABC\\) is similar to triangle \\(QRP\\), where \\(A\\), \\(B\\), and \\(C\\) correspond to \\(Q\\), \\(R\\), and \\(P\\), respectively. Which of the following must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The measure of angle \\(B\\) equals the measure of angle \\(P\\).",
+    "B": "\\(\\frac{AB}{QR} = \\frac{BC}{RP}\\)",
+    "C": "\\(\\frac{AB}{PQ} = \\frac{BC}{QR}\\)",
+    "D": "\\(\\frac{AC}{QR} = \\frac{AB}{QP}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "In similar triangles, corresponding angles are equal and corresponding sides are in the same ratio. Here \\(A \\to Q\\), \\(B \\to R\\), \\(C \\to P\\).",
+    "So \\(\\overline{AB}\\) corresponds to \\(\\overline{QR}\\), \\(\\overline{BC}\\) to \\(\\overline{RP}\\), and \\(\\overline{AC}\\) to \\(\\overline{QP}\\).",
+    "Therefore \\(\\frac{AB}{QR} = \\frac{BC}{RP}\\) must be true."
+  ],
+  "explanation": {
+    "A": "Incorrect. Angle \\(B\\) corresponds to angle \\(R\\), not angle \\(P\\); angle \\(P\\) corresponds to angle \\(C\\).",
+    "B": "Correct. \\(\\overline{AB} \\to \\overline{QR}\\) and \\(\\overline{BC} \\to \\overline{RP}\\), so these ratios are equal.",
+    "C": "Incorrect. This pairs the sides in the order the letters are written, but \\(\\overline{AB}\\) corresponds to \\(\\overline{QR}\\), not \\(\\overline{PQ}\\).",
+    "D": "Incorrect. \\(\\overline{AC}\\) corresponds to \\(\\overline{QP}\\) and \\(\\overline{AB}\\) to \\(\\overline{QR}\\); this choice pairs each side with the wrong one."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "AB,BC,CA=3,5,7\nQR,RP,PQ=6,10,14\nassert Rational(AB,QR)==Rational(BC,RP)==Rational(CA,PQ)\ncosB=(AB**2+BC**2-CA**2)/Rational(2*AB*BC); cosP=(RP**2+PQ**2-QR**2)/Rational(2*RP*PQ)\nassert cosB!=cosP\nassert Rational(AB,PQ)!=Rational(BC,QR)\nassert Rational(CA,QR)!=Rational(AB,PQ)\nassert choices[answer]=='\\\\(\\\\frac{AB}{QR} = \\\\frac{BC}{RP}\\\\)'\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

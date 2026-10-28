@@ -1,0 +1,45 @@
+{
+  "id": "m-eqx-0616",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x \\neq 0\\), the expression \\(\\frac{20x^{5} - 8x^{3}}{4x^{2}}\\) is equivalent to \\(ax^{3} - bx\\), where \\(a\\) and \\(b\\) are constants. What is the value of \\(a + b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7"
+  ],
+  "solution": [
+    "Divide each term of the numerator by \\(4x^{2}\\): \\(\\frac{20x^{5}}{4x^{2}} = 5x^{3}\\) and \\(\\frac{8x^{3}}{4x^{2}} = 2x\\).",
+    "The expression is \\(5x^{3} - 2x\\), so \\(a = 5\\), \\(b = 2\\), and \\(a + b = 7\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nq = cancel((20*x**5 - 8*x**3)/(4*x**2))\nassert expand(q - (5*x**3 - 2*x)) == 0\nassert [Rational(v) for v in spr_answers] == [5 + 2]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-nlf-0631",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The battery charge of a delivery drone, as a percent of a full charge, \\(m\\) minutes after takeoff is modeled by \\(B(m) = 100(0.97)^{m}\\). According to the model, what is the battery charge, to the nearest percent, 10 minutes after takeoff?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(70\\%\\)",
+    "B": "\\(97\\%\\)",
+    "C": "\\(30\\%\\)",
+    "D": "\\(74\\%\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(10\\) for \\(m\\): \\(B(10) = 100(0.97)^{10}\\).",
+    "With a calculator, \\(0.97^{10} \\approx 0.7374\\), so \\(B(10) \\approx 73.7\\), which rounds to \\(74\\%\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This subtracts \\(3\\%\\) of the full charge ten times, \\(100 - 10(3)\\). Each minute removes \\(3\\%\\) of the current charge, so the losses shrink.",
+    "B": "Incorrect. \\(97\\%\\) is the charge after only 1 minute, \\(B(1)\\).",
+    "C": "Incorrect. \\(30\\%\\) is \\(10 \\times 3\\%\\), the total loss if the decrease were a constant \\(3\\) percentage points per minute, not the remaining charge.",
+    "D": "Correct. \\(100(0.97)^{10} \\approx 73.7\\), or about \\(74\\%\\)."
+  },
+  "traps": {
+    "A": "percent_add",
+    "B": "stopped_early",
+    "C": "wrong_quantity"
+  },
+  "verify": "b = 100*Rational('0.97')**10\nassert round(float(b)) == 74\nassert value(choices[answer]) == Rational(74, 100)\nassert all(value(choices[k]) != Rational(74, 100) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

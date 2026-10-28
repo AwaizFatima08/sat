@@ -1,0 +1,84 @@
+{
+  "id": "rw-ceq-0602",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In 2023, officials in Rawalpindi, Pakistan, installed lamps along a cycle track in a city park that had been unlit after sunset. Planner Nadia Akhtar counted the cyclists using the track during the same two-hour evening period on one weekday in each month, both before and after the lamps were switched on in April. Akhtar reports that evening use of the track rose sharply once the lighting was installed: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Evening Cyclists Counted on a Rawalpindi Park Track, 2023",
+    "x_label": "Month",
+    "y_label": "Cyclists counted",
+    "series": [
+      {
+        "name": "Evening cyclists",
+        "points": [
+          [
+            "February",
+            38
+          ],
+          [
+            "March",
+            42
+          ],
+          [
+            "May",
+            117
+          ],
+          [
+            "June",
+            131
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "the count was lower in June than it had been in February.",
+    "B": "the count rose from 38 cyclists in February to 42 in March.",
+    "C": "the count rose from about 40 cyclists before April to well over 100 afterward.",
+    "D": "most of the cyclists counted after April were commuters returning from work."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The statement says use rose sharply after the lamps were installed in April, so the choice must compare the months before April with the months after. The graph shows 38 and 42 cyclists in February and March and 117 and 131 in May and June.",
+    "A": "Incorrect. The graph shows 131 cyclists in June and only 38 in February, so June was much higher, not lower.",
+    "B": "Incorrect. Both of these months come before the lamps were installed, so this small rise says nothing about the effect of the lighting.",
+    "C": "Correct. The counts went from about 40 per evening before the lighting to 117 and 131 after it, a sharp rise.",
+    "D": "Incorrect. The graph shows only how many cyclists were counted, not why they were riding."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

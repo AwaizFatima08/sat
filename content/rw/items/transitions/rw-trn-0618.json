@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0618",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The shiny inner layer of many seashells, called nacre or mother-of-pearl, is made almost entirely of a mineral called aragonite. On its own, aragonite is brittle and shatters easily. ______ nacre is remarkably tough, because the mineral is arranged in thousands of tiny flat plates held together by thin layers of soft protein, like bricks in a wall of mortar, so that a crack cannot travel straight through it.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Therefore,",
+    "B": "Similarly,",
+    "C": "However,",
+    "D": "For example,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The second sentence says the mineral aragonite \"is brittle and shatters easily.\" The last sentence says that nacre, made of that mineral, is \"remarkably tough.\" A transition that signals a contrast between the brittle mineral and the tough shell layer is needed.",
+    "A": "Incorrect. \"Therefore\" would mean nacre is tough because aragonite is brittle, but the text says the toughness comes from the arrangement of plates, in spite of the brittle mineral.",
+    "B": "Incorrect. \"Similarly\" signals a matching quality, but tough and brittle are opposite qualities.",
+    "C": "Correct. \"However\" signals the contrast between the brittle mineral and the tough material it forms when arranged in plates.",
+    "D": "Incorrect. Nacre being tough is not an example of aragonite being brittle; it is the opposite."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

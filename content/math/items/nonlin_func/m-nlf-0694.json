@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0694",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = 2x^{2} + 12x + 23\\). Which of the following is an equivalent form of \\(f(x)\\) that displays the minimum value of \\(f\\) as a constant?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2(x + 3)^{2} + 23\\)",
+    "B": "\\(2(x - 3)^{2} + 5\\)",
+    "C": "\\(2(x + 3)^{2} + 5\\)",
+    "D": "\\(2(x + 6)^{2} - 49\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Factor 2 from the \\(x\\) terms: \\(f(x) = 2(x^{2} + 6x) + 23\\).",
+    "Complete the square: \\(x^{2} + 6x = (x + 3)^{2} - 9\\), so \\(f(x) = 2(x + 3)^{2} - 18 + 23 = 2(x + 3)^{2} + 5\\).",
+    "Since \\(2(x + 3)^{2} \\ge 0\\), the minimum value of \\(f\\) is the constant 5, at \\(x = -3\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Completing the square inside the parentheses adds \\(2 \\cdot 9 = 18\\), which must be subtracted from 23. This expression equals \\(2x^{2} + 12x + 41\\).",
+    "B": "Incorrect. \\(x^{2} + 6x\\) completes to \\((x + 3)^{2} - 9\\), not \\((x - 3)^{2}\\). This expression equals \\(2x^{2} - 12x + 23\\).",
+    "C": "Correct. \\(2(x + 3)^{2} + 5 = 2x^{2} + 12x + 18 + 5 = f(x)\\), and the constant 5 is the minimum value, reached at \\(x = -3\\).",
+    "D": "Incorrect. This completes the square on \\(2x^{2} + 12x\\) as if the leading coefficient were 1. This expression equals \\(2x^{2} + 24x + 23\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\nf = 2*x**2 + 12*x + 23\nmn = f.subs(x, solve(diff(f, x), x)[0])\nassert mn == 5\nassert expand(value(choices[answer]) - f) == 0 and '+ 5' in choices[answer]\nassert all(expand(value(choices[k]) - f) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

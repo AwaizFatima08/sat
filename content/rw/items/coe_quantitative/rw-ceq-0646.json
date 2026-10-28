@@ -1,0 +1,85 @@
+{
+  "id": "rw-ceq-0646",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Owners of secondhand bookshops often say that literary fiction sells slowly while crime novels fly off the shelves, so a shop should take in all the crime it can. Bookseller Tomasz Nowicki, who kept detailed records at his shop in Kraków, Poland, questions the second half of that advice. Crime novels do sell faster, he acknowledges, but they are also what customers most often bring in to sell, so his shop acquires crime titles far more quickly than it can sell them and the shelves fill with unsold copies. Literary fiction, though slower to sell, arrives in such modest numbers that what comes in is roughly matched by what goes out.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Secondhand Books Bought and Sold at a Kraków Bookshop, 2023",
+    "columns": [
+      "Genre",
+      "Copies bought in",
+      "Copies sold",
+      "Average days on shelf before sale"
+    ],
+    "rows": [
+      [
+        "Crime",
+        2400,
+        1650,
+        38
+      ],
+      [
+        "Literary fiction",
+        900,
+        870,
+        95
+      ],
+      [
+        "Poetry",
+        300,
+        210,
+        160
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Nowicki's view?",
+  "choices": {
+    "A": "The shop sold nearly twice as many crime novels as literary fiction titles in 2023.",
+    "B": "Literary fiction was the only genre for which the shop sold more copies than it bought in.",
+    "C": "Crime novels sold after an average of 38 days on the shelf, less than half the time literary fiction took.",
+    "D": "The shop took in 750 more crime novels than it sold in 2023, whereas copies of literary fiction bought and sold were nearly equal."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Nowicki accepts that crime sells faster; his point is about the balance between what comes in and what goes out. The evidence must compare the 'bought in' and 'sold' columns for both genres: crime 2,400 in against 1,650 out (750 left over), literary fiction 900 in against 870 out (only 30 left over).",
+    "A": "Incorrect. This is true (1,650 against 870), but sales alone cannot show that crime piles up; that depends on how many copies came in.",
+    "B": "Incorrect. Every genre sold fewer copies than it bought in (870 against 900 for literary fiction), so this misreads the table.",
+    "C": "Incorrect. This is true (38 against 95 days), but it shows only that crime sells faster, which both Nowicki and the other owners accept.",
+    "D": "Correct. The large surplus of unsold crime novels beside the near balance for literary fiction is exactly the pattern Nowicki describes."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

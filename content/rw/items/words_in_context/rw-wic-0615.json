@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0615",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Shisha embroidery, practiced in Sindh in Pakistan and in Gujarat and Rajasthan in India, fixes small pieces of mirror onto cloth. The embroiderer does not glue the glass in place. Instead, each piece is laid on the fabric and a tight ring of thread is stitched around its edge, so that the thread alone ______ the mirror. Light bouncing off dozens of these tiny mirrors makes a finished garment glitter as its wearer moves.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "colors",
+    "B": "hides",
+    "C": "polishes",
+    "D": "secures"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The embroiderer \"does not glue the glass in place\"; instead, a ring of thread is stitched around each piece. The thread therefore does the job the glue would have done, which is holding the mirror in place. \"Secures\" fits.",
+    "A": "Incorrect. The text says nothing about the thread changing the color of the mirror.",
+    "B": "Incorrect. The mirrors are meant to be seen; the finished garment glitters because light bounces off them.",
+    "C": "Incorrect. Thread stitched around the edge of a mirror does not make its surface shiny; the text is about holding the mirror on the cloth.",
+    "D": "Correct. Since no glue is used, the ring of thread is what holds, or secures, each mirror on the cloth."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0647",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x \\neq 0\\) and \\(y \\neq 0\\), which of the following is equivalent to \\(\\frac{x^{-1} + y^{-1}}{(xy)^{-1}}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x + y\\)",
+    "B": "\\(\\frac{1}{x + y}\\)",
+    "C": "\\(\\frac{x + y}{xy}\\)",
+    "D": "\\(x^{2}y + xy^{2}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Rewrite the negative exponents: the numerator is \\(\\frac{1}{x} + \\frac{1}{y} = \\frac{y + x}{xy}\\), and the denominator is \\(\\frac{1}{xy}\\).",
+    "Dividing by \\(\\frac{1}{xy}\\) is multiplying by \\(xy\\): \\(\\frac{x + y}{xy} \\cdot xy = x + y\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\left(\\frac{1}{x} + \\frac{1}{y}\\right) \\cdot xy = y + x\\).",
+    "B": "Incorrect. This is the result of treating \\(x^{-1} + y^{-1}\\) as \\((x + y)^{-1}\\); negative exponents do not distribute over a sum.",
+    "C": "Incorrect. This is the numerator \\(x^{-1} + y^{-1}\\) combined; it has not yet been divided by \\((xy)^{-1}\\).",
+    "D": "Incorrect. This is the result of multiplying the numerator \\(x + y\\) by \\(xy\\) after it had already been multiplied by \\(xy\\) once."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "stopped_early",
+    "D": "arithmetic"
+  },
+  "verify": "x, y = symbols('x y')\nt = (1/x + 1/y)/(1/(x*y))\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0725",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The visitor studied the vase for nearly an hour before speaking to the curator. Then the visitor asked the curator ______ The curator replied that the records were incomplete, so no one could be certain.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "whether the glaze on the vase was original.",
+    "B": "whether the glaze on the vase was original?",
+    "C": "whether the glaze on the vase was original!",
+    "D": "whether the glaze on the vase was original,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The blank ends a reported question, which is a sentence that describes what the visitor asked rather than quoting the question itself. Such a sentence takes a period, and the next sentence starts fresh.",
+    "A": "Correct. The sentence reports a question indirectly, so it is a statement and ends with a period. The next sentence begins a new independent clause that starts with a capital letter.",
+    "B": "Incorrect. A question mark is used only for a direct question. This sentence reports the visitor's question without quoting it, so it ends with a period.",
+    "C": "Incorrect. An exclamation point signals strong feeling. A reported question in formal writing ends with a period, not an exclamation point.",
+    "D": "Incorrect. A comma cannot end a complete sentence. With \"The curator replied\" following, this creates a comma splice."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "punctuation",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0664",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the early 1950s, the geochemist Clair Patterson set out to determine the age of Earth by measuring the ratios of lead isotopes in meteorites, which formed at the same time as the planets. His early measurements kept coming out wrong, and he eventually realized why: lead from the laboratory's air, dust, and glassware was contaminating every sample. Only after he built one of the first ultra-clean laboratories did he obtain consistent results. The age that Patterson announced in 1956, about 4.55 billion years, derived from a meteorite that had struck Arizona some 50,000 years earlier and refined by later work on other meteorites, ______ the accepted figure today.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "to remain",
+    "B": "having remained",
+    "C": "remains",
+    "D": "remaining"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The subject of the final sentence is \"The age that Patterson announced in 1956\"; everything from \"about 4.55 billion years\" to \"other meteorites\" describes that age, and the verbs inside it (\"announced,\" \"had struck\") belong to smaller clauses. The sentence still needs its own main verb, so the blank must be a finite verb: \"remains.\"",
+    "A": "Incorrect. \"To remain\" is an infinitive, which cannot serve as the main verb of a sentence.",
+    "B": "Incorrect. \"Having remained\" is a participle phrase, not a main verb, so the subject \"The age\" would be left without a verb.",
+    "C": "Correct. The present-tense verb \"remains\" gives the subject \"The age\" its main verb and fits \"today.\"",
+    "D": "Incorrect. \"Remaining\" is a participle, not a main verb, so the sentence would be a fragment."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "verb_form",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

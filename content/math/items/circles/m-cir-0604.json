@@ -1,0 +1,45 @@
+{
+  "id": "m-cir-0604",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A curved footpath in a park is an arc of a circle with a radius of 15 meters. The central angle of the arc measures 1.2 radians. What is the length, in meters, of the footpath?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "18"
+  ],
+  "solution": [
+    "For a central angle \\(\\theta\\) in radians, the arc length is \\(s = r\\theta\\).",
+    "\\(s = 15(1.2) = 18\\) meters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r=15; th=Rational('1.2')\nans=r*th\nassert ans==18 and simplify(ans-2*pi*r*th/(2*pi))==0\nassert len(spr_answers)==1 and Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "18",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

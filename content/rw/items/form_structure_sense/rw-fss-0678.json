@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0678",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 4,
+  "b": 1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Mr. Halloran had kept the shop on Carver Street for forty years, and in that time he had sold fewer than a third of the books that passed through his hands. The rest he gave away. A student who lingered too long over a volume she could not afford would find it wrapped in brown paper by the door the next day; a retired engineer who mentioned bridges went home with a crate. His daughter, who kept the accounts, pointed out more than once that a man who gave books to ______ asked for them could not expect to stay in business, and he agreed every time and changed nothing.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "whoever",
+    "B": "whomever",
+    "C": "whom",
+    "D": "who"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The pronoun is the subject of the verb \"asked\" (whoever asked for them), and the whole clause \"whoever asked for them\" is the object of the preposition \"to.\" Because the pronoun does the asking, it takes the subject form \"whoever,\" even though it follows \"to.\"",
+    "A": "Correct. \"Whoever\" is the subject of \"asked\"; the entire clause, not the pronoun alone, is the object of \"to.\"",
+    "B": "Incorrect. \"Whomever\" is an object form, but the pronoun is the subject of the verb \"asked\" inside its own clause; the preposition \"to\" governs the whole clause, not the pronoun.",
+    "C": "Incorrect. \"Whom\" is an object form and, without \"-ever,\" has no antecedent here; the pronoun must be the subject of \"asked.\"",
+    "D": "Incorrect. \"Who\" is the right case but needs an antecedent to refer to; there is none, so the sentence needs the indefinite \"whoever.\""
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "pronoun",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

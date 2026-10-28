@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0611",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is equivalent to \\(3x^{2} - 11x - 4\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((3x - 1)(x + 4)\\)",
+    "B": "\\((3x - 4)(x + 1)\\)",
+    "C": "\\((3x + 4)(x - 1)\\)",
+    "D": "\\((3x + 1)(x - 4)\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Look for \\((3x + p)(x + q)\\) with \\(pq = -4\\) and \\(3q + p = -11\\).",
+    "\\(p = 1\\), \\(q = -4\\) works: \\(3(-4) + 1 = -11\\). So the expression is \\((3x + 1)(x - 4)\\).",
+    "Check: \\((3x + 1)(x - 4) = 3x^{2} - 12x + x - 4 = 3x^{2} - 11x - 4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This product is \\(3x^{2} + 11x - 4\\); the signs of the constants are swapped.",
+    "B": "Incorrect. This product is \\(3x^{2} - x - 4\\); the middle term is wrong.",
+    "C": "Incorrect. This product is \\(3x^{2} + x - 4\\); the middle term is wrong.",
+    "D": "Correct. \\(3x^{2} - 12x + x - 4 = 3x^{2} - 11x - 4\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "arithmetic",
+    "C": "arithmetic"
+  },
+  "verify": "x = symbols('x')\nt = 3*x**2 - 11*x - 4\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0602",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The resurrection plant of the Chihuahuan Desert can lose almost all of its water during a drought. As it dries, its stems curl inward into a tight brown ball that looks completely dead, and the plant can stay that way for months or even years. Yet the plant is only ______: a few hours after rain finally falls, the ball unfolds, turns green, and begins growing again.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "lifeless",
+    "B": "damaged",
+    "C": "exposed",
+    "D": "inactive"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "\"Yet\" signals a contrast with the ball that \"looks completely dead.\" After rain, the plant \"unfolds, turns green, and begins growing again,\" so it was alive but not active. \"Inactive\" captures that state.",
+    "A": "Incorrect. \"Yet\" tells you the plant is not what it looks like. Calling it lifeless would repeat the false appearance instead of contrasting with it.",
+    "B": "Incorrect. The plant recovers completely and grows again within hours; nothing in the text suggests it has been harmed.",
+    "C": "Incorrect. The text says nothing about the plant being uncovered or left open to danger.",
+    "D": "Correct. The plant stops growing during the drought but is still alive, and it starts growing again after rain, so it was only inactive."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "wrong_tone",
+    "C": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

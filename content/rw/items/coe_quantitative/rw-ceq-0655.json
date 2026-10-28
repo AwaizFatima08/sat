@@ -1,0 +1,91 @@
+{
+  "id": "rw-ceq-0655",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Historians of eighteenth-century Britain have generally held that tea overtook coffee as the preferred hot drink gradually, as the price of tea fell across the century. Economic historian Thomas Reade, who transcribed the customs ledgers of one provincial English port for the years 1700 to 1760, argues that in that port at least the change was neither gradual nor driven simply by cheapness. Coffee imports, he notes, continued to grow for decades; what changed was that tea imports grew far faster, so that tea overtook coffee in volume within a single twenty-year span even though, pound for pound, tea remained the dearer commodity throughout.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Coffee and Tea Imports Recorded at a Provincial English Port",
+    "columns": [
+      "Year",
+      "Coffee imported (thousand lb)",
+      "Tea imported (thousand lb)",
+      "Price of tea per lb as a multiple of coffee"
+    ],
+    "rows": [
+      [
+        "1700",
+        42,
+        8,
+        2.9
+      ],
+      [
+        "1720",
+        55,
+        30,
+        2.4
+      ],
+      [
+        "1740",
+        68,
+        96,
+        1.9
+      ],
+      [
+        "1760",
+        71,
+        210,
+        1.6
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Reade's argument?",
+  "choices": {
+    "A": "By 1760, the port imported roughly three times as much tea as coffee.",
+    "B": "Coffee imports rose from 42 to 71 thousand pounds over the period, but tea imports rose from 30 to 96 thousand between 1720 and 1740 alone, overtaking coffee while still costing nearly twice as much per pound.",
+    "C": "Coffee imports declined after 1720 as merchants shifted their trade to tea.",
+    "D": "Tea remained more expensive than coffee per pound in every year shown."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Reade's argument has three parts: coffee kept growing, tea grew much faster and overtook coffee within twenty years, and tea stayed dearer. The evidence must draw on all three columns: coffee 42 to 71 thousand pounds; tea 30 to 96 thousand between 1720 and 1740, passing coffee's 68 thousand; tea still 1.9 times the price of coffee in 1740.",
+    "A": "Incorrect. This is true (210 against 71 thousand pounds), but the end point alone cannot show how quickly tea overtook coffee or that coffee kept growing.",
+    "B": "Correct. It shows coffee growing, tea leaping past it within a single twenty-year span, and tea remaining the costlier drink at that moment, supporting every part of the argument.",
+    "C": "Incorrect. Coffee imports rose in every period shown, from 55 thousand pounds in 1720 to 71 thousand in 1760.",
+    "D": "Incorrect. This is true, but it supports only the smallest part of Reade's argument and says nothing about how tea overtook coffee."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

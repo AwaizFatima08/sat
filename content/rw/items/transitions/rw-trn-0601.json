@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0601",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The sand cat lives in the deserts of North Africa, Arabia, and Central Asia, where the ground can become painfully hot by midday. Unlike most cats, it has a thick mat of fur growing across the pads of its paws. ______ the sand cat can walk on scorching sand without burning its feet, and the soft fur leaves almost no tracks for predators or prey to follow.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "However,",
+    "B": "For example,",
+    "C": "Similarly,",
+    "D": "As a result,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence describes a feature: fur on the paw pads. The last sentence describes what that feature allows the cat to do: walk on hot sand and leave few tracks. A cause-and-effect transition is needed.",
+    "A": "Incorrect. \"However\" signals a contrast, but walking safely on hot sand follows from the furry paws rather than contrasting with them.",
+    "B": "Incorrect. Walking on hot sand is not an example of having furry paws; it is what the fur makes possible.",
+    "C": "Incorrect. \"Similarly\" would introduce a parallel feature, but the last sentence describes a consequence of the fur, not another feature like it.",
+    "D": "Correct. \"As a result\" shows that walking on hot sand without harm is the effect of the furry paws."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

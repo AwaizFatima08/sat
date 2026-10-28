@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0702",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For which values of \\(k\\) does the equation \\(kx^{2} + 4x + 3 = 0\\) have no real solutions?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(k > \\dfrac{3}{4}\\)",
+    "B": "\\(k < \\dfrac{4}{3}\\)",
+    "C": "\\(k > \\dfrac{16}{3}\\)",
+    "D": "\\(k > \\dfrac{4}{3}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "A quadratic has no real solutions when its discriminant \\(b^{2} - 4ac\\) is negative.",
+    "Here \\(a = k\\), \\(b = 4\\), and \\(c = 3\\), so the discriminant is \\(16 - 12k\\).",
+    "\\(16 - 12k < 0\\) gives \\(12k > 16\\), so \\(k > \\dfrac{4}{3}\\). Every such \\(k\\) is nonzero, so the equation is truly quadratic."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the reciprocal of \\(\\dfrac{4}{3}\\). The inequality \\(12k > 16\\) was solved by dividing in the wrong order, giving \\(k > \\dfrac{12}{16}\\).",
+    "B": "Incorrect. The inequality was reversed. When \\(k < \\dfrac{4}{3}\\), the discriminant \\(16 - 12k\\) is positive, so there are two real solutions.",
+    "C": "Incorrect. The discriminant was taken as \\(16 - 3k\\), which forgets the factor \\(4\\) in \\(4ac = 4 \\cdot k \\cdot 3\\).",
+    "D": "Correct. The discriminant \\(16 - 12k\\) is negative exactly when \\(k > \\dfrac{4}{3}\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "sign_error",
+    "C": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'B': 'A', 'A': 'B', 'C': 'C', 'D': 'D'}.items()}; answer = {'A': 'B', 'B': 'A', 'C': 'C', 'D': 'D'}[answer]  # shuffled: original letters\nk = symbols('k')\ndisc = 4**2 - 4*k*3\nassert solve(disc, k) == [Rational(4, 3)]\nassert disc.subs(k, 2) < 0 and disc.subs(k, 1) > 0\nassert answer == 'D' and '4}{3' in choices[answer] and '>' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h4-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

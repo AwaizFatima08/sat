@@ -1,0 +1,45 @@
+{
+  "id": "m-arv-0612",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The area of a trapezoid with parallel sides \\(a\\) and \\(b\\) and height \\(h\\) is \\(\\frac{1}{2}(a + b)h\\). A trapezoid has parallel sides of length \\(7\\) and \\(13\\) and an area of \\(90\\). What is the height of the trapezoid?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "9"
+  ],
+  "solution": [
+    "Substitute: \\(\\frac{1}{2}(7 + 13)h = 90\\), so \\(10h = 90\\).",
+    "\\(h = 9\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "h=symbols('h')\nans=solve(Eq(Rational(1,2)*(7+13)*h,90),h)[0]\nassert ans==9\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "9",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

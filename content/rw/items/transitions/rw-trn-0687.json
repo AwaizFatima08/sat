@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0687",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In 1824 the French engineer Sadi Carnot asked a question that steam-engine builders had been answering by trial and error: whether the share of a fuel's heat that an engine could turn into work was limited only by the ingenuity of its design or by some principle no design could overcome. His answer, reached by reasoning about an idealized engine, was that a limit exists and is set by a single quantity, the same for every engine whether it runs on steam, air, or any other substance. ______ the ceiling depends on how far the temperature of the engine's source of heat stands above the temperature at which it discards its waste heat, and on nothing else.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Nevertheless,",
+    "B": "In other words,",
+    "C": "Specifically,",
+    "D": "Consequently,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The second sentence says that the limit is set by \"a single quantity\" but does not say what that quantity is. The last sentence names it: the gap between the two temperatures. The blank needs a transition that introduces the precise statement of something just mentioned in general terms.",
+    "A": "Incorrect. The last sentence does not oppose the claim that a single quantity sets the limit; it spells that quantity out.",
+    "B": "Incorrect. \"In other words\" would restate the previous claim in different terms, but the last sentence supplies new information, the identity of the quantity, which the previous sentence left unnamed. This is the closest near miss.",
+    "C": "Correct. \"Specifically\" signals that the last sentence states exactly what the \"single quantity\" is.",
+    "D": "Incorrect. The dependence on temperature is not a result of there being a limit; it is the content of the limit."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

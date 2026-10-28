@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0649",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The expression \\(x^{2} + bx + 18\\), where \\(b\\) is a constant, is equivalent to \\((x - r)(x - 2r)\\), where \\(r\\) is a positive constant. What is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-3\\)",
+    "B": "\\(-9\\)",
+    "C": "\\(9\\)",
+    "D": "\\(-18\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Expand: \\((x - r)(x - 2r) = x^{2} - 3rx + 2r^{2}\\).",
+    "Match the constant terms: \\(2r^{2} = 18\\), so \\(r^{2} = 9\\) and \\(r = 3\\) (since \\(r > 0\\)).",
+    "Match the \\(x\\) terms: \\(b = -3r = -9\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(-r\\), the value found after solving \\(2r^{2} = 18\\); the coefficient \\(b\\) is \\(-3r\\).",
+    "B": "Correct. \\(r = 3\\), so \\(b = -3r = -9\\).",
+    "C": "Incorrect. This is the result of a sign slip: \\((x - r)(x - 2r)\\) has a negative \\(x\\) coefficient, \\(-3r\\).",
+    "D": "Incorrect. This is the negative of the constant term 18, not the coefficient of \\(x\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "sign_error",
+    "D": "wrong_quantity"
+  },
+  "verify": "x, b, r = symbols('x b r')\neqs = Poly(expand((x - r)*(x - 2*r) - (x**2 + b*x + 18)), x).all_coeffs()\nsols = [s for s in solve(eqs, [b, r], dict=True) if s[r] > 0]\nassert len(sols) == 1 and sols[0][b] == -9\nassert value(choices[answer]) == -9\nassert all(value(choices[k]) != -9 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

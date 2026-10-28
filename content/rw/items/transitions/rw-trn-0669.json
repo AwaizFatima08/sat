@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0669",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In most plants, the enzyme that first captures carbon dioxide, rubisco, has a costly flaw: it sometimes binds oxygen instead, triggering a wasteful reaction called photorespiration that grows more frequent as temperatures rise and leaves close their pores. Plants such as maize and sugarcane use a different arrangement, known as the C4 pathway, in which carbon dioxide is first captured in the leaf's outer cells and then pumped into inner cells, where it is concentrated around rubisco. ______ these plants lose far less to photorespiration and need less water per unit of growth in hot, sunny conditions. The pathway is not always better, however: its extra steps cost energy, and in cool or shaded settings ordinary plants often grow faster.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For example,",
+    "B": "As a result,",
+    "C": "Granted,",
+    "D": "By contrast,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The second sentence describes the C4 arrangement: carbon dioxide is concentrated around rubisco. The third sentence states what that arrangement achieves: less photorespiration and better water use. The blank needs a transition showing that the benefits are the effect of the arrangement just described.",
+    "A": "Incorrect. Reduced photorespiration is not an example of the C4 pumping arrangement; it is what the arrangement produces.",
+    "B": "Correct. \"As a result\" shows that concentrating carbon dioxide around rubisco is why C4 plants lose less to photorespiration.",
+    "C": "Incorrect. \"Granted\" concedes a point against the preceding claim, but the third sentence supports the value of the C4 pathway; the concession comes in the next sentence (\"however\").",
+    "D": "Incorrect. The third sentence is about the same plants as the second, so it does not contrast with it; the contrast with ordinary plants was drawn earlier and is not the point here."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

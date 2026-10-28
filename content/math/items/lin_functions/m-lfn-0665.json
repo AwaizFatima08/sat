@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0665",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A bicycle factory increases its monthly output at a constant rate. The number of bicycles \\(N(t)\\) the factory produces in the month that is \\(t\\) months after January 2025 is modeled by \\(N(t) = 1{,}200 + 80t\\), where \\(t\\) is a whole number. According to the model, what is the least value of \\(t\\) for which the factory's monthly output is at least 50 percent greater than its output when \\(t = 6\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9\\)",
+    "B": "\\(16\\)",
+    "C": "\\(17\\)",
+    "D": "\\(23\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "When \\(t = 6\\), \\(N(6) = 1{,}200 + 480 = 1{,}680\\). An output 50 percent greater is \\(1.5 \\cdot 1{,}680 = 2{,}520\\).",
+    "Solve \\(1{,}200 + 80t \\ge 2{,}520\\): \\(80t \\ge 1{,}320\\), so \\(t \\ge 16.5\\).",
+    "Since \\(t\\) is a whole number, the least value is \\(t = 17\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(1.5 \\cdot 6\\); increasing \\(t\\) by 50 percent does not increase the output by 50 percent, because of the constant term 1,200.",
+    "B": "Incorrect. \\(N(16) = 2{,}480\\), which is less than 2,520; \\(t \\ge 16.5\\) must be rounded up to the next whole month, not down.",
+    "C": "Correct. \\(N(17) = 2{,}560 \\ge 2{,}520\\), and \\(N(16) = 2{,}480 < 2{,}520\\).",
+    "D": "Incorrect. This adds 6 to 16.5 and rounds, as if \\(t\\) counted months after \\(t = 6\\); \\(t\\) is counted from January 2025."
+  },
+  "traps": {
+    "A": "percent_add",
+    "B": "arithmetic",
+    "D": "wrong_quantity"
+  },
+  "verify": "t = symbols('t')\nN = 1200 + 80*t\ntarget = Rational(3, 2) * N.subs(t, 6)\nassert target == 2520\nans = min(v for v in range(0, 60) if N.subs(t, v) >= target)\nassert ans == 17 and N.subs(t, 16) < target\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

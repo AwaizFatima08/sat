@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0723",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Glaciologists studying the thinning of Antarctic ice shelves face a persistent problem. Satellite altimeters register changes in surface height, but height alone cannot reveal whether a change comes from melting underneath the ice or from fresh snow accumulating on top. Some teams have ______ the two signals by combining altimetry with gravity measurements, which respond to changes in the mass beneath the ice. The combined method is imperfect, yet it has begun to separate the competing explanations in several regions.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "disentangle",
+    "B": "amplify",
+    "C": "conceal",
+    "D": "reconcile"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The blank describes what the teams do to two signals that cannot otherwise be told apart. The next sentence says the method \"has begun to separate the competing explanations,\" which is the meaning of \"disentangle.\"",
+    "A": "Correct. The two signals are mixed together, and the passage says the combined method has begun to separate the competing explanations. To disentangle is to untangle things that are mixed.",
+    "B": "Incorrect. Amplifying the signals would make both stronger, but the passage says the combination helps separate the causes. Making the signals louder does not address the problem of ambiguity.",
+    "C": "Incorrect. The passage presents the method as a way to reveal causes that were unclear. Concealing the signals would make the problem harder, which reverses the author's point.",
+    "D": "Incorrect. To reconcile two signals is to bring them into agreement. The passage's method does the opposite: it sorts the signals so that the competing causes can be told apart."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

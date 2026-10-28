@@ -1,0 +1,96 @@
+{
+  "id": "rw-ceq-0629",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A free telephone homework-help line in Toronto, Canada, is staffed by volunteer teachers on weekday evenings. Coordinator Priya Raman reviewed the call logs for one school term to decide how to schedule volunteers with different specialties. She found that math calls made up the largest share of calls in every hour, but that the balance shifted later in the evening, when science questions became much more common: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Calls to a Homework-Help Line during One Term, by Hour and Subject",
+    "columns": [
+      "Hour",
+      "Math calls",
+      "Science calls",
+      "English calls",
+      "Other calls"
+    ],
+    "rows": [
+      [
+        "5–6 p.m.",
+        96,
+        22,
+        41,
+        15
+      ],
+      [
+        "6–7 p.m.",
+        118,
+        35,
+        48,
+        17
+      ],
+      [
+        "7–8 p.m.",
+        104,
+        61,
+        39,
+        12
+      ],
+      [
+        "8–9 p.m.",
+        85,
+        72,
+        27,
+        9
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "English calls were most common in the 6–7 p.m. hour, when 48 English calls were received.",
+    "B": "math calls outnumbered science calls in every hour, but science calls rose from 22 in the 5–6 p.m. hour to 72 in the 8–9 p.m. hour.",
+    "C": "math calls peaked in the 6–7 p.m. hour, when 118 math calls were received.",
+    "D": "science calls outnumbered math calls in the 8–9 p.m. hour, the only hour in which math was not the largest category."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The statement makes two claims: math led in every hour, and science grew much more common later in the evening. The choice must show both. Math is the largest column in all four rows, and science climbs from 22 to 35 to 61 to 72 across the evening.",
+    "A": "Incorrect. This is true, but English calls are not part of the statement, which concerns math and science.",
+    "B": "Correct. Math leading in all four hours and science rising from 22 to 72 calls support both halves of the statement.",
+    "C": "Incorrect. This is accurate, but it describes math alone and says nothing about the rise in science calls.",
+    "D": "Incorrect. This misreads the table: in the 8–9 p.m. hour there were 85 math calls and 72 science calls, so math still led."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

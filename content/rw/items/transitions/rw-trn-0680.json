@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0680",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Readers of Homer have always noticed the fixed epithets that accompany each hero, such as \"swift-footed\" for Achilles, and for centuries these were treated as ornaments chosen for their aptness. In the 1920s the American scholar Milman Parry showed that the epithets form a system: each hero has a set of them, each of a different metrical shape, and the one that appears in a given line is the one whose length fits the space remaining in the verse. ______ the poet's choice between \"swift-footed Achilles\" and \"godlike Achilles\" was governed less by what Achilles happened to be doing than by how many syllables he had left to fill.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For instance,",
+    "B": "Consequently,",
+    "C": "Nevertheless,",
+    "D": "In other words,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence states Parry's finding in technical terms: the epithet used is the one whose metrical shape fits the remaining space. The last sentence says the same thing in plainer language, using Achilles as the illustration. A transition that introduces a restatement is needed.",
+    "A": "Incorrect. Although the sentence names two epithets, its claim is the general principle itself, restated; it is not a new instance added to the system described.",
+    "B": "Incorrect. The last sentence does not describe a separate result that follows from Parry's finding; it is that finding put another way. This is the closest near miss.",
+    "C": "Incorrect. The last sentence does not oppose Parry's finding; it repeats it.",
+    "D": "Correct. \"In other words\" signals that the last sentence restates Parry's technical finding in plain terms: the meter, not the moment, chose the epithet."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

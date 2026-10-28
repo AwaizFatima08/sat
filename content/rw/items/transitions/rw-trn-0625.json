@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0625",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Two different creatures are commonly called daddy longlegs, and both are said to carry a venom so powerful that only their tiny mouthparts keep them from being dangerous to people. The claim fails for the first creature, the harvestman, at the outset: harvestmen are not spiders and have no venom glands at all. The second, the cellar spider, does produce venom and uses it to subdue insects. ______ tests in which cellar spiders were induced to bite people produced nothing worse than a brief, mild sting.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Therefore,",
+    "B": "In fact,",
+    "C": "Still,",
+    "D": "Similarly,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The author is arguing against the claim that daddy longlegs are dangerously venomous. The third sentence admits a point in the claim's favor: cellar spiders do have venom. The last sentence returns to the author's position by showing that the venom is harmless to people. A transition that signals a return to the main point after a concession is needed.",
+    "A": "Incorrect. \"Therefore\" would mean the mild results follow from the spider having venom, but the harmless bite runs against what the venom claim predicts.",
+    "B": "Incorrect. \"In fact\" would strengthen the point that cellar spiders have venom, but the last sentence works against the idea that the venom is dangerous. This is the closest near miss.",
+    "C": "Correct. \"Still\" shows that, although cellar spiders do have venom, the tests support the author's point that they are harmless to people.",
+    "D": "Incorrect. \"Similarly\" signals a parallel point, but a harmless bite is not similar to having venom that subdues prey; it limits that point."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

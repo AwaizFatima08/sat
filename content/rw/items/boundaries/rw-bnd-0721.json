@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0721",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Hydrologists often describe the Indus as one of the great irrigation systems of the world. The river ______ flows about 3,000 kilometers from the Tibetan Plateau to the Arabian Sea, has supported farming along its floodplain for thousands of years.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": " which",
+    "B": ". Which",
+    "C": ", which",
+    "D": "; which"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "\"Which flows about 3,000 kilometers ...\" is a nonessential clause that adds information about the river, so it needs a comma before it and a comma after it. The sentence then reaches its main verb \"has supported.\"",
+    "A": "Incorrect. A nonessential clause needs a comma before it. Without the opening comma, the closing comma after \"Sea\" splits the subject from its verb.",
+    "B": "Incorrect. A period turns the clause into a sentence fragment that starts with \"Which\" and has no independent clause. The text needs one sentence here.",
+    "C": "Correct. The clause \"which flows about 3,000 kilometers\" adds extra detail, so it is set off by a pair of commas. The main sentence then continues with its verb \"has supported.\"",
+    "D": "Incorrect. A semicolon joins two independent clauses. \"Which flows...\" is a dependent clause, so a semicolon cannot introduce it."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "supplements",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

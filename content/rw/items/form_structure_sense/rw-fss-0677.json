@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0677",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A camel's reputation for going without water rests on several adaptations that work together: it can lose a quarter of its body weight in water without serious harm, its body temperature can rise by several degrees during the day so that it sweats less, and its kidneys produce highly concentrated urine. Less obvious is the camel's nose. Its long nasal passages absorb heat from inhaled air during the day and then, cooling at night, recover moisture from the air the animal breathes out. Among the reasons the camel loses so little water through breathing, then, ______ the scrolled bony structures inside the nose, whose large surface makes this exchange efficient.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "was",
+    "B": "has been",
+    "C": "are",
+    "D": "is"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The sentence is inverted: it opens with the phrase \"Among the reasons…,\" and the subject comes after the verb. That subject is \"the scrolled bony structures,\" which is plural, so the verb must be the plural \"are.\" The nearby singular nouns \"camel\" and \"breathing\" are not the subject.",
+    "A": "Incorrect. \"Was\" is singular and past tense; the subject \"structures\" is plural and the passage is in the present tense.",
+    "B": "Incorrect. \"Has been\" is singular, but the subject \"structures\" is plural.",
+    "C": "Correct. The plural verb \"are\" agrees with the plural subject \"structures,\" which follows the verb in this inverted sentence.",
+    "D": "Incorrect. \"Is\" is singular and seems to agree with \"camel\" or \"breathing,\" but the real subject, which follows the verb, is the plural \"structures.\""
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

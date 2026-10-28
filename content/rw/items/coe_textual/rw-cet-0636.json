@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0636",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Pitcher plants trap insects in cup-shaped leaves filled with digestive fluid and draw nitrogen from the remains. One large species found in the mountains of Borneo has an unusual feature: the lid of its pitcher produces a sugary secretion, and tree shrews climb onto the pitcher to lick it, often leaving droppings in the cup as they do. Botanist Ananya Rao hypothesizes that in this species the pitcher has become primarily a collector of droppings rather than a trap: its main source of nitrogen, she suggests, is the shrews' waste, and insect capture has become a minor sideline.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Rao's hypothesis?",
+  "choices": {
+    "A": "The pitchers of this species captured as many insects per week as the pitchers of related species that shrews do not visit.",
+    "B": "Tree shrews visit the pitchers mainly in the early morning, when the secretion is most plentiful.",
+    "C": "The pitchers of this species contain the same digestive fluid found in the pitchers of related species.",
+    "D": "Chemical analysis showed that most of the nitrogen in the plant's tissues came from the shrews' droppings rather than from insects."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Rao's hypothesis is specific: the plant gets most of its nitrogen from droppings, and insects contribute little. The direct test is where the plant's nitrogen actually comes from. Analysis showing that most of it comes from droppings confirms the hypothesis.",
+    "A": "Incorrect. Capturing as many insects as its relatives suggests the trap is still fully in use, which works against the idea that insect capture is a minor sideline.",
+    "B": "Incorrect. When the shrews visit does not tell us how much of the plant's nitrogen their droppings supply.",
+    "C": "Incorrect. Having digestive fluid shows the plant can still digest something, not where most of its nitrogen comes from.",
+    "D": "Correct. Nitrogen coming mostly from droppings is exactly what Rao claims."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

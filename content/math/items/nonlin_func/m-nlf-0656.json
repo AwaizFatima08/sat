@@ -1,0 +1,45 @@
+{
+  "id": "m-nlf-0656",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(y = x^{2} - 6x + 5\\) crosses the \\(x\\)-axis at the points \\((a, 0)\\) and \\((b, 0)\\). What is the value of \\(a + b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "Set \\(x^{2} - 6x + 5 = 0\\) and factor: \\((x - 1)(x - 5) = 0\\), so \\(x = 1\\) or \\(x = 5\\).",
+    "\\(a + b = 1 + 5 = 6\\). (The sum of the \\(x\\)-intercepts is also twice the \\(x\\)-coordinate of the vertex, \\(2 \\cdot 3\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nsols = solve(Eq(x**2 - 6*x + 5, 0), x)\nassert sorted(sols) == [1, 5]\nassert [Rational(s) for s in spr_answers] == [sum(sols)]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

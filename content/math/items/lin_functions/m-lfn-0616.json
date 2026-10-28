@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0616",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For the linear function \\(f\\), \\(f(3) = 10\\) and \\(f(7) = 22\\). What is the value of \\(f(0)\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1"
+  ],
+  "solution": [
+    "Slope: \\(\\frac{22 - 10}{7 - 3} = 3\\).",
+    "\\(f(x) = 3x + b\\) with \\(10 = 3(3) + b\\), so \\(b = 1\\).",
+    "\\(f(0) = b = 1\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nm = Rational(22 - 10, 7 - 3)\nf = 10 + m*(x - 3)\nans = f.subs(x, 0)\nassert ans == 1\nassert Rational(spr_answers[0]) == ans and len(spr_answers) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "1",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "m-cir-0616",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, a circle is tangent to both the \\(x\\)-axis and the \\(y\\)-axis and passes through the point \\((1, 2)\\). What is one possible value of the radius of the circle?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1",
+    "5"
+  ],
+  "solution": [
+    "A circle tangent to both axes has center \\((\\pm r, \\pm r)\\) with radius \\(r\\). Since \\((1, 2)\\) is in the first quadrant, the center is \\((r, r)\\).",
+    "The point lies on the circle: \\((1 - r)^{2} + (2 - r)^{2} = r^{2}\\), which simplifies to \\(r^{2} - 6r + 5 = 0\\).",
+    "\\((r - 1)(r - 5) = 0\\), so \\(r = 1\\) or \\(r = 5\\). Either value is accepted."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r=symbols('r',positive=True)\nsols=set()\nfor sx in (1,-1):\n    for sy in (1,-1):\n        sols|=set(solve(Eq((1-sx*r)**2+(2-sy*r)**2,r**2),r))\nassert sols=={1,5}\nassert set(Rational(s) for s in spr_answers)==sols\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "1",
+        "second": null,
+        "note": "Also valid: 5 (center (5,5), radius 5); the stem does not make the answer unique.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

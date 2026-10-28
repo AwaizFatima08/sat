@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0635",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The waiting room outside the audition hall was so quiet that Ayesha could hear the clock on the far wall. She had practiced the piece every evening for three months, and still her fingers felt cold and stiff. Gripping the neck of the violin a little too tightly, ______ The accompanist smiled at her, and the first note came out clearer than she had expected.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "she walked through the door when the examiner called her name.",
+    "B": "the door opened and her name was called by the examiner.",
+    "C": "the examiner called her name, and she walked through the door.",
+    "D": "her name was called by the examiner, and the door opened."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The introductory phrase \"Gripping the neck of the violin a little too tightly\" describes Ayesha. An introductory modifier attaches to the subject that comes right after the comma, so that subject must be \"she.\"",
+    "A": "Correct. \"She\" (Ayesha) comes right after the introductory phrase, so she is the one gripping the violin.",
+    "B": "Incorrect. The subject after the comma is \"the door,\" so the sentence says the door was gripping the violin; the modifier dangles.",
+    "C": "Incorrect. The subject is \"the examiner,\" so the sentence wrongly says the examiner was gripping Ayesha's violin.",
+    "D": "Incorrect. The subject is \"her name,\" which cannot grip a violin."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "modifier",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

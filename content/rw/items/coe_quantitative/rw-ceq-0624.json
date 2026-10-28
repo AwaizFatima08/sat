@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0624",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Ancient Greek theaters were built as bowls of stone seats rising around a circular performance space, and visitors today still remark that an unamplified voice carries to the top rows. Acoustics researcher Sofia Karamanlis tested this reputation at a theater built in the fourth century BCE. She played recorded speech from the performance space and asked listeners seated in different rows to write down the words they heard. Her results show that clarity fell with distance, but only slightly, and that even the highest rows remained easy to understand: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Words Correctly Identified by Listeners in an Ancient Greek Theater",
+    "columns": [
+      "Row",
+      "Distance from performance space (meters)",
+      "Words correctly identified (%)"
+    ],
+    "rows": [
+      [
+        "5",
+        15,
+        98
+      ],
+      [
+        "15",
+        30,
+        96
+      ],
+      [
+        "30",
+        48,
+        93
+      ],
+      [
+        "45",
+        62,
+        91
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "listeners in row 5 sat 15 meters from the performance space and identified 98 percent of the words correctly.",
+    "B": "listeners in row 5 identified fewer of the words correctly than listeners in row 45, who were 62 meters away.",
+    "C": "listeners in row 45, 62 meters away, identified 91 percent of the words correctly, compared with 98 percent for listeners in row 5.",
+    "D": "the theater's rows of seats rise far more steeply than the seating in a modern concert hall does."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The statement makes two claims: clarity dropped only slightly with distance, and the top rows were still easy to understand. The choice must compare a near row with a far one: 98 percent in row 5 versus 91 percent in row 45, a drop of only 7 points that still leaves the far rows above 90 percent.",
+    "A": "Incorrect. This is accurate, but it gives one row only, so it cannot show how clarity changed with distance.",
+    "B": "Incorrect. This reverses the data: row 5 listeners identified more words (98 percent), not fewer, than row 45 listeners (91 percent).",
+    "C": "Correct. Comparing 98 percent at 15 meters with 91 percent at 62 meters shows both the small decline and the high clarity in the top rows.",
+    "D": "Incorrect. The table says nothing about how steep the seating is or about concert halls."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

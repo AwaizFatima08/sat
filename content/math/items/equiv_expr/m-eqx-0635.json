@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0635",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A printing shop in Rawalpindi charges a fixed setup fee of 1,200 rupees plus 15 rupees for each poster printed. Which expression represents the average cost per poster, in rupees, when \\(n\\) posters are printed?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{1{,}215}{n}\\)",
+    "B": "\\(15 + \\frac{1{,}200}{n}\\)",
+    "C": "\\(\\frac{1{,}200}{n} + 15n\\)",
+    "D": "\\(\\frac{n}{1{,}200 + 15n}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The total cost for \\(n\\) posters is \\(1{,}200 + 15n\\) rupees.",
+    "Average cost per poster is the total divided by \\(n\\): \\(\\frac{1{,}200 + 15n}{n} = \\frac{1{,}200}{n} + 15\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding the setup fee and the per-poster price before dividing, as if only one poster were printed.",
+    "B": "Correct. \\(\\frac{1{,}200 + 15n}{n} = \\frac{1{,}200}{n} + 15\\).",
+    "C": "Incorrect. This is the result of dividing only the setup fee by \\(n\\); the \\(15n\\) term must be divided by \\(n\\) as well.",
+    "D": "Incorrect. This is the reciprocal of the average cost, the number of posters per rupee."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "C": "concept",
+    "D": "reciprocal"
+  },
+  "verify": "n = symbols('n')\nt = (1200 + 15*n)/n\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

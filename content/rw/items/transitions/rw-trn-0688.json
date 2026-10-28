@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0688",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The process that Henry Bessemer announced in 1856, in which air blown through molten iron burned away the excess carbon in minutes, promised to make steel cheap enough for rails and ships. His success in his own trials owed something to luck: the iron he happened to use was low in phosphorus. Manufacturers who licensed the process and ran it with iron from ordinary British ores found that the phosphorus stayed in the metal and made it brittle, and several demanded refunds. ______ the process could not be applied to most of Europe's ore until 1878, when Sidney Gilchrist Thomas and his cousin Percy Gilchrist lined the converter with a limestone-based material that drew the phosphorus out of the molten iron.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For example,",
+    "B": "In contrast,",
+    "C": "Indeed,",
+    "D": "As a result,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The third sentence explains that phosphorus in ordinary ores made the steel brittle. The last sentence states the outcome: the process was unusable with most ore until the phosphorus problem was solved in 1878. The transition must show that the limited use was caused by the phosphorus problem.",
+    "A": "Incorrect. The twenty-year delay is not an example of licensees finding their steel brittle; it is what that problem led to.",
+    "B": "Incorrect. The last sentence does not contrast with the failure of the licensees; it follows from it.",
+    "C": "Incorrect. \"Indeed\" would intensify or confirm the previous statement, but the last sentence reports a consequence of the brittle steel, not a stronger version of the same point. This is the closest near miss.",
+    "D": "Correct. \"As a result\" shows that, because phosphorus made the steel brittle, the process stayed limited until 1878."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0634",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In bright light, the pupil of a cuttlefish narrows into a shape like a flattened W rather than the round dot or vertical slit seen in most animals. Researchers have proposed that the W shape helps the eye cope with light that arrives unevenly through the water, since the sea above the animal is much brighter than the seafloor below it. ______ some researchers suggest that the shape widens the cuttlefish's field of view, letting it watch for predators approaching from almost any direction.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Moreover,",
+    "B": "Consequently,",
+    "C": "For example,",
+    "D": "However,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The second sentence gives one proposed benefit of the W-shaped pupil: it helps the eye handle uneven light. The last sentence gives a second, separate benefit: a wider field of view. A transition that adds a further point is needed.",
+    "A": "Correct. \"Moreover\" adds a second proposed benefit of the pupil shape to the one already given.",
+    "B": "Incorrect. The second benefit is not caused by the first; the two are independent suggestions.",
+    "C": "Incorrect. The wider field of view is not an example of handling uneven light; it is a different benefit altogether. This is tempting because both sentences are about what the pupil shape does.",
+    "D": "Incorrect. A wider field of view does not conflict with coping with uneven light; it is an additional advantage, not a contrasting one."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

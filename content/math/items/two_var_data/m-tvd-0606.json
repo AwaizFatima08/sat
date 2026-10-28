@@ -1,0 +1,92 @@
+{
+  "id": "m-tvd-0606",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following equations best models the data shown in the scatterplot?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "x",
+    "y_label": "y",
+    "points": [
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        14
+      ],
+      [
+        4,
+        19
+      ],
+      [
+        5,
+        27
+      ],
+      [
+        6,
+        38
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = 5 + 5.5x\\)",
+    "B": "\\(y = 5(0.4)^{x}\\)",
+    "C": "\\(y = 5(1.4)^{x}\\)",
+    "D": "\\(y = 1.4(5)^{x}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The \\(y\\)-values increase by larger and larger amounts (2, 3, 4, 5, 8, 11), so the data are better modeled by an increasing exponential function than by a line.",
+    "The value at \\(x = 0\\) is 5, and each step multiplies \\(y\\) by about 1.4 (for example \\(\\frac{7}{5} = 1.4\\) and \\(\\frac{38}{27} \\approx 1.41\\)).",
+    "So \\(y = 5(1.4)^{x}\\) fits best."
+  ],
+  "explanation": {
+    "A": "Incorrect. A line through the first and last points predicts 16 at \\(x = 2\\) and 27 at \\(x = 4\\), far from the data points 10 and 19; the increases are not constant.",
+    "B": "Incorrect. A growth factor of 0.4 gives a decreasing function, but the data increase.",
+    "C": "Correct. The starting value is 5 and each increase of 1 in \\(x\\) multiplies \\(y\\) by about 1.4.",
+    "D": "Incorrect. This swaps the starting value and the growth factor: it predicts \\(y = 1.4\\) at \\(x = 0\\) and \\(y = 35\\) at \\(x = 2\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\nsse = lambda k: sum((value(choices[k].replace('y = ', '')).subs(x, a) - b)**2 for a, b in figure['points'])\nbest = min(choices, key=sse)\nassert best == answer == 'C'\nassert all(sse(k) > 10 * sse(answer) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "m-lfn-0647",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Water drains from a trough at a constant rate after a plug is removed. The table shows the amount of water \\(W\\), in liters, in the trough at three times after the plug was removed. Which of the following describes how the amount of water in the trough changes during any 3-minute interval while it drains?",
+  "figure": {
+    "kind": "table",
+    "title": "Water in the trough",
+    "columns": [
+      "Time since plug removed (minutes)",
+      "Water (liters)"
+    ],
+    "rows": [
+      [
+        "2",
+        "95"
+      ],
+      [
+        "5",
+        "86"
+      ],
+      [
+        "11",
+        "68"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "It decreases by 3 liters.",
+    "B": "It decreases by 9 liters.",
+    "C": "It increases by 9 liters.",
+    "D": "It decreases by 18 liters."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "From 2 to 5 minutes the amount falls from 95 to 86 liters, a change of \\(-9\\) liters over 3 minutes; from 5 to 11 minutes it falls by 18 liters over 6 minutes.",
+    "Both give a rate of \\(-3\\) liters per minute, so in any 3-minute interval the amount decreases by \\(3 \\cdot 3 = 9\\) liters."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the change in one minute, 3 liters; the question asks about a 3-minute interval.",
+    "B": "Correct. The water drains at 3 liters per minute, so it decreases by 9 liters in any 3-minute interval.",
+    "C": "Incorrect. The amount of water is falling, so the change over 3 minutes is a decrease of 9 liters, not an increase.",
+    "D": "Incorrect. This is the change between 5 and 11 minutes in the table, which is a 6-minute interval, not a 3-minute interval."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "sign_error",
+    "D": "misread_graph"
+  },
+  "verify": "r = [[int(c) for c in row] for row in figure['rows']]\nm = Rational(r[1][1] - r[0][1], r[1][0] - r[0][0])\nassert m == Rational(r[2][1] - r[1][1], r[2][0] - r[1][0]) == -3\nassert 3*m == -9\nassert answer == 'B' and choices['B'].startswith('It decreases by 9')\nassert all(not c.startswith('It decreases by 9') for k, c in choices.items() if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "rw-rhs-0608",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "Pumice is a light-colored volcanic rock.",
+    "It forms when frothy lava full of gas bubbles cools very quickly during an explosive eruption.",
+    "The bubbles leave the hardened rock full of tiny holes, so a piece of pumice is mostly empty space.",
+    "Pumice is one of the few rocks that can float on water; after some eruptions, rafts of pumice drift across the sea for months."
+  ],
+  "data": null,
+  "stem": "The student wants to explain why pumice floats. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "Pumice, a light-colored volcanic rock, is one of the few rocks that can float on water.",
+    "B": "After some volcanic eruptions, rafts of pumice drift across the surface of the sea for months.",
+    "C": "Pumice forms during explosive volcanic eruptions, when lava cools very quickly into a light-colored rock.",
+    "D": "Pumice can float because it forms from frothy, gas-filled lava that cools quickly, leaving the rock so full of tiny holes that it is mostly empty space."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "To explain why pumice floats, the sentence must connect floating to its cause. The notes give the chain: gas bubbles in the lava leave holes, so the rock is mostly empty space. Only one choice links the floating to that structure.",
+    "A": "Incorrect. This states that pumice floats but gives no reason.",
+    "B": "Incorrect. This describes what floating pumice does, not why it floats.",
+    "C": "Incorrect. This tells how pumice forms but leaves out the gas bubbles and holes, which are what make it float.",
+    "D": "Correct. \"Because\" connects the floating to the holes left by gas bubbles, which is the reason given in the notes."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "C": "misses_goal"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

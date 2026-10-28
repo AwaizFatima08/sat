@@ -1,0 +1,57 @@
+{
+  "id": "m-stc-0601",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A student wants to estimate the mean number of hours per week that students at her university spend studying. One morning she asked the first 50 students who entered the university library how many hours per week they study. The mean of their answers was 24 hours. Which of the following best explains why this result should NOT be used to estimate the mean for all students at the university?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The 50 students were not selected at random from all students at the university, so they may not be representative of all students.",
+    "B": "A sample of 50 students is too small to give any information about the university's students.",
+    "C": "The number of hours a student studies cannot be measured by asking the student.",
+    "D": "The result can be used, because the library is open to every student at the university."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The sample was not selected at random: it consists of students who chose to go to the library early in the morning, who may study more than other students.",
+    "Without random selection from all students at the university, the result cannot be generalized to all of them."
+  ],
+  "explanation": {
+    "A": "Correct. Students entering the library early may study more than a typical student; because the sample was not selected at random from all students, it may not represent them.",
+    "B": "Incorrect. A random sample of 50 students could give a reasonable estimate; the problem is how the students were chosen, not how many there were.",
+    "C": "Incorrect. Asking students about their study hours is an acceptable way to collect this information; the flaw is in the sampling method.",
+    "D": "Incorrect. The library being open to everyone does not make the early visitors a random sample of all students."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "design = {'random_sample': False, 'sample_size': 50}\nassert not design['random_sample']\nkey = choices[answer]\nassert answer == 'A' and 'not selected at random' in key and 'representative' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

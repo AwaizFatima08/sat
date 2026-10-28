@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0650",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Residents of a neighborhood in Bogotá, Colombia, asked the city to install speed humps on a street that through traffic used as a shortcut. Traffic engineer Camila Restrepo measured vehicle speeds and traffic volume before the humps were installed and again six months afterward. Opponents had predicted that drivers would slow for each hump and then accelerate hard between them, so that speeds along most of the street would barely change while the street grew noisier. Restrepo argues that the humps achieved what residents wanted: speeds dropped substantially along the whole street, she reports, and a good part of the shortcut traffic disappeared altogether, presumably to other routes.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Traffic on a Bogotá Residential Street before and after Speed Humps",
+    "columns": [
+      "Measure",
+      "Before humps",
+      "Six months after"
+    ],
+    "rows": [
+      [
+        "Average speed at the humps (km/h)",
+        47,
+        18
+      ],
+      [
+        "Average speed midway between humps (km/h)",
+        49,
+        31
+      ],
+      [
+        "Vehicles per weekday",
+        3900,
+        2700
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Restrepo's argument?",
+  "choices": {
+    "A": "Traffic volume fell slightly while speeds between the humps stayed close to their earlier level.",
+    "B": "After installation, drivers traveled faster midway between the humps than at the humps themselves.",
+    "C": "Speeds midway between the humps fell from 49 to 31 km/h, and weekday traffic dropped from 3,900 to 2,700 vehicles.",
+    "D": "Average speed at the humps fell from 47 to 18 km/h after they were installed."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Restrepo's two claims are that speeds fell along the whole street, not just at the humps, and that some traffic left the street. The opponents' prediction concerned the stretches between humps, so the evidence must show the drop there (49 to 31 km/h) together with the fall in volume (3,900 to 2,700 vehicles).",
+    "A": "Incorrect. Speeds between the humps fell from 49 to 31 km/h, and traffic fell by nearly a third, so neither part of this is accurate.",
+    "B": "Incorrect. This is true (31 against 18 km/h), but it fits the opponents' picture of slowing and speeding up; it does not show the overall drop or the fall in traffic.",
+    "C": "Correct. A large fall in speed between the humps and a sizable fall in traffic volume support both parts of Restrepo's argument.",
+    "D": "Incorrect. This is true, but a drop at the humps themselves is what the opponents expected; it does not show that speeds fell along the whole street."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

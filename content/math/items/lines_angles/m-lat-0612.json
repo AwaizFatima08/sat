@@ -1,0 +1,114 @@
+{
+  "id": "m-lat-0612",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, \\(AB = CD\\) and \\(AD = CB\\). What is the value of \\(x\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0.0,
+        0.0
+      ],
+      "B": [
+        6.799,
+        5.123
+      ],
+      "C": [
+        10.0,
+        0.0
+      ],
+      "D": [
+        3.201,
+        -5.123
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "A",
+        "C"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.707,
+          0.571
+        ],
+        "text": "37°"
+      },
+      {
+        "at": [
+          8.426,
+          0.873
+        ],
+        "text": "58°"
+      },
+      {
+        "at": [
+          1.574,
+          -0.873
+        ],
+        "text": "x°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "58"
+  ],
+  "solution": [
+    "Triangles \\(ABC\\) and \\(CDA\\) have \\(AB = CD\\), \\(BC = DA\\), and the shared side \\(\\overline{AC}\\), so they are congruent by side-side-side, with \\(A\\), \\(B\\), \\(C\\) corresponding to \\(C\\), \\(D\\), \\(A\\).",
+    "Angle \\(DAC\\) (at \\(A\\) in triangle \\(CDA\\)) corresponds to angle \\(BCA\\) (at \\(C\\) in triangle \\(ABC\\)), which measures \\(58^{\\circ}\\).",
+    "So \\(x = 58\\). (The \\(37^{\\circ}\\) angle corresponds to angle \\(DCA\\), not to \\(x\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('A','B')-d('C','D'))<0.01 and abs(d('A','D')-d('C','B'))<0.01\nassert abs(ang('B','A','C')-37)<0.1 and abs(ang('B','C','A')-58)<0.1\nans=58\nassert abs(ang('D','A','C')-ans)<0.1\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "58",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

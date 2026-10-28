@@ -1,0 +1,85 @@
+{
+  "id": "rw-ceq-0631",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "On steep hillside farms in the highlands of Guatemala, heavy rains can wash topsoil away from fields left bare between harvests. Agronomist Rosa Menchú compared plots left bare after the maize harvest with plots sown with velvet bean, a cover crop that blankets the soil, measuring how much soil each kind of plot lost during the rainy season over three years. She concluded that the cover crop greatly reduced erosion on these slopes and that its protective effect held up even in the wettest year of the study.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Soil Loss on Hillside Plots during the Rainy Season",
+    "columns": [
+      "Year",
+      "Rainy-season rainfall (mm)",
+      "Soil lost, bare plots (tons per hectare)",
+      "Soil lost, cover-crop plots (tons per hectare)"
+    ],
+    "rows": [
+      [
+        "2021",
+        1180,
+        28,
+        7
+      ],
+      [
+        "2022",
+        1420,
+        41,
+        9
+      ],
+      [
+        "2023",
+        1250,
+        31,
+        8
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Menchú's conclusion?",
+  "choices": {
+    "A": "In 2022, the wettest year, bare plots lost 41 tons of soil per hectare while cover-crop plots lost only 9 tons.",
+    "B": "Cover-crop plots lost more soil in 2023 than they had lost in 2022.",
+    "C": "The cover crop also raised maize yields on the hillside plots in each of the three years.",
+    "D": "Bare plots lost the most soil in 2022, the year with the highest rainy-season rainfall."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Menchú's conclusion has two parts: the cover crop greatly reduced erosion, and the effect held up even in the wettest year. The support should compare bare and cover-crop plots in the year with the most rain. In 2022, rainfall was highest (1,420 mm), and bare plots lost 41 tons per hectare against 9 tons for cover-crop plots.",
+    "A": "Correct. It compares the two kinds of plot in the wettest year and shows a large reduction, which supports both parts of the conclusion.",
+    "B": "Incorrect. Cover-crop plots lost 8 tons in 2023 and 9 tons in 2022, so this misreads the table.",
+    "C": "Incorrect. The table records rainfall and soil loss, not maize yields, so the data cannot support this.",
+    "D": "Incorrect. This is true, but it describes bare plots only; without the cover-crop figure it cannot show that the cover crop reduced erosion."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0652",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Experiments in which a large tree is supplied with carbon that carries a detectable label have found that some of that carbon later turns up in shaded seedlings nearby, whose roots are linked to the tree's by a shared fungal network. Many have concluded that trees feed their neighbors' offspring with sugar through the fungus. Forest ecologist Hanna Berglund objects that the evidence does not show this. The fungus, she points out, takes sugar from the tree for its own use and grows inside the seedlings' roots; labeled carbon found in a seedling's root could simply be fungal tissue lodged there, with no sugar ever handed over to the seedling itself.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly weaken Berglund's objection?",
+  "choices": {
+    "A": "Labeled carbon from the large tree was found in the seedlings' new leaves and stems, tissues that the fungus does not enter.",
+    "B": "The same fungal species also forms connections with shrubs and grasses growing in the forest.",
+    "C": "Within the seedlings' roots, the labeled carbon was concentrated in the root tips where the fungus lives.",
+    "D": "Seedlings whose fungal connections were left intact survived their first summer at higher rates than seedlings whose connections had been severed."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Berglund's objection is that the labeled carbon may never have left the fungus. It fails if the carbon appears in parts of the seedling the fungus cannot reach. Carbon in new leaves and stems must have been taken up by the seedling itself, which is what her objection says has not been shown.",
+    "A": "Correct. Carbon in tissues the fungus never enters must have passed into the seedling, so Berglund's alternative explanation cannot account for it.",
+    "B": "Incorrect. Which other plants the fungus connects to says nothing about whether carbon reached the seedlings.",
+    "C": "Incorrect. Carbon concentrated where the fungus lives is exactly what Berglund would expect if the carbon is still fungal tissue, so this supports her objection.",
+    "D": "Incorrect. Better survival with intact connections could result from water or minerals supplied by the fungus; it does not show that sugar from the tree reached the seedling, which is the point Berglund disputes."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

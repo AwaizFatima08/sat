@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0640",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(3(2x + 5) - 2(x - 4) = 4(x + 1) + c\\), \\(c\\) is a constant. If the equation has infinitely many solutions, what is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "19"
+  ],
+  "solution": [
+    "Simplify the left side: \\(6x + 15 - 2x + 8 = 4x + 23\\).",
+    "The right side is \\(4x + 4 + c\\).",
+    "The \\(x\\)-terms already match, so for infinitely many solutions the constants must match: \\(23 = 4 + c\\), giving \\(c = 19\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, c = symbols('x c')\nd = expand(3*(2*x + 5) - 2*(x - 4) - (4*(x + 1) + c))\nassert d.coeff(x, 1) == 0\nsol = solve(Eq(d, 0), c)\nassert sol == [19]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "19",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

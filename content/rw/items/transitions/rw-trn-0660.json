@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0660",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A newly hatched flounder looks like any other small fish: it swims upright, with one eye on each side of its head and its body symmetrical from side to side. Within a few weeks, that symmetry is undone. One eye begins to move across the top of the skull toward the other side, the skull itself bends to let it pass, and the young fish begins to swim with a tilt that grows until it is lying flat on the seafloor with both eyes facing upward. ______ the adult's lopsided face is not a defect; it is the outcome of a controlled process that reshapes the skull during development.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "However,",
+    "B": "Likewise,",
+    "C": "In short,",
+    "D": "For instance,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The third sentence describes the step-by-step transformation of the young flounder. The last sentence draws the whole account together into a single conclusion: the strange face is the product of a controlled process. A transition that introduces a summary is needed.",
+    "A": "Incorrect. The conclusion does not contrast with the description of the eye's migration; it follows from it. This is tempting because the sentence contains \"not a defect,\" but that contrast is inside the sentence, not between it and the text before.",
+    "B": "Incorrect. \"Likewise\" would introduce a parallel case, but the sentence sums up the same case.",
+    "C": "Correct. \"In short\" introduces the conclusion that sums up the transformation just described.",
+    "D": "Incorrect. The last sentence is a general statement about the adult, not an example of the migration process."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

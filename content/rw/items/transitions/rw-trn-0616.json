@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0616",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Nadia and her cousin Leo had planned to spend the first morning of the holiday swimming off the rocks below their grandparents' house. When they reached the water, though, a cold wind had come in overnight, and the waves were gray and rough. ______ they spent the morning walking the tide line, filling their pockets with pieces of sea glass that the waves had worn smooth and cloudy.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Instead,",
+    "B": "For example,",
+    "C": "Likewise,",
+    "D": "Meanwhile,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The first sentence states the cousins' plan: to swim. The second sentence explains why the plan failed. The last sentence describes what they did in place of swimming. A transition that introduces a replacement for the original plan is needed.",
+    "A": "Correct. \"Instead\" shows that collecting sea glass replaced the swim the cousins had planned.",
+    "B": "Incorrect. Collecting sea glass is not an example of the rough sea; it is what the cousins did because they could not swim.",
+    "C": "Incorrect. \"Likewise\" signals a matching idea, but walking the beach is a different activity from the swim they had planned.",
+    "D": "Incorrect. \"Meanwhile\" means at the same time, but the walk replaced the swim rather than happening alongside it."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (distractor B changed from 'As a result,' to 'Meanwhile,' (which implies simultaneous events); 'Instead,' is the only fit)",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

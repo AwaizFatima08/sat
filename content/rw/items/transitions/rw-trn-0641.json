@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0641",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Before the nineteenth century, most people who wrote in Europe used quill pens cut from goose feathers, which wore out quickly and had to be recut with a knife every few days. In the 1820s, workshops in Birmingham, England, began stamping pen nibs out of thin sheets of steel. Machines made the nibs so cheaply that by the 1850s a gross of 144 could be bought for a few pennies. ______ the steel pen spread quickly through schools and offices, and Birmingham was soon producing most of the pen nibs used anywhere in the world.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "As a result,",
+    "B": "Even so,",
+    "C": "For example,",
+    "D": "In contrast,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The third sentence explains that machines made steel nibs extremely cheap. The last sentence describes what followed: the steel pen spread quickly and Birmingham dominated the trade. A cause-and-effect transition is needed.",
+    "A": "Correct. \"As a result\" shows that the rapid spread of the steel pen was caused by its low price.",
+    "B": "Incorrect. \"Even so\" would mean the pen spread despite being cheap, which makes no sense.",
+    "C": "Incorrect. The spread through schools and offices is not an example of low prices; it is their effect. This is tempting because the sentence before gives a specific price.",
+    "D": "Incorrect. The spread of the steel pen does not contrast with its cheapness; it follows from it. The only contrast in the text, with the quill, was made earlier."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

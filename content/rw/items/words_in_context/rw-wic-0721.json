@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0721",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "An octopus does not need its brain to taste everything it touches. Each sucker carries thousands of chemical sensors, and many of the neurons that process these signals sit within the arm itself. Experiments have shown that a severed arm can still ______ edible objects from unpleasant ones by touch alone, recoiling from some and grasping others. This local processing is efficient, yet it also means the central brain must coordinate hundreds of partly independent limbs.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "reproduce",
+    "B": "confuse",
+    "C": "distinguish",
+    "D": "transport"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The passage says the arm responds differently to edible and unpleasant objects, \"recoiling from some and grasping others.\" The blank must name the ability to tell those two kinds apart, which is what \"distinguish\" means.",
+    "A": "Incorrect. The passage is about sensing and responding to touch. Nothing in it concerns copying or producing objects.",
+    "B": "Incorrect. Confusing edible and unpleasant objects would make the arm grasp harmful items, but the passage says it recoils from them. The word reverses the point.",
+    "C": "Correct. To distinguish is to tell two things apart. The arm recoils from some objects and grasps others, which is exactly the ability to separate edible objects from unpleasant ones.",
+    "D": "Incorrect. Moving objects would describe handling them, but the sentence is about judging them by touch. The arm's response is a decision about the object, not a transfer."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

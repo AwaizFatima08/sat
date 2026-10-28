@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0647",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(2kx + (k - 3)y = 6\\), where \\(k\\) is a constant, passes through the point \\((1, 2)\\). Which of the following best describes the graph?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A horizontal line through the point \\((0, 2)\\)",
+    "B": "A line with slope \\(-2\\)",
+    "C": "A vertical line through the point \\((1, 0)\\)",
+    "D": "A line that passes through the origin"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\((1, 2)\\): \\(2k(1) + (k - 3)(2) = 6\\), so \\(4k - 6 = 6\\) and \\(k = 3\\).",
+    "The equation becomes \\(6x + 0y = 6\\), that is, \\(x = 1\\): a vertical line through \\((1, 0)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. With \\(k = 3\\) the \\(y\\) term vanishes, not the \\(x\\) term; the equation \\(x = 1\\) is vertical.",
+    "B": "Incorrect. \\(2k + 2(k - 3) = 6\\) gives \\(4k = 12\\), so \\(k = 3\\); the coefficient of \\(y\\) is then 0, and the slope is undefined.",
+    "C": "Correct. Substituting \\((1, 2)\\) gives \\(4k - 6 = 6\\), so \\(k = 3\\) and the equation becomes \\(6x = 6\\), or \\(x = 1\\): a vertical line.",
+    "D": "Incorrect. The line \\(x = 1\\) never has \\(x = 0\\), so it misses the origin."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "D": "wrong_formula"
+  },
+  "verify": "k, x, y = symbols('k x y')\nkk = solve(Eq(2*k*1 + (k - 3)*2, 6), k)[0]\nassert kk == 3\nassert (kk - 3) == 0 and solve(Eq(2*kk*x, 6), x) == [1]\nassert choices[answer].startswith('A vertical line')",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

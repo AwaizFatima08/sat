@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0630",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Roosters famously crow at dawn. Some scientists believe that crowing is triggered simply by the first light of morning. Animal behaviorist Yusuf Demir rejects this view. He hypothesizes that roosters crow according to an internal clock that tells them when dawn is near, so that they would start crowing at about the usual time even if no light appeared.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly weaken Demir's hypothesis?",
+  "choices": {
+    "A": "The highest-ranking rooster in a group is usually the first to crow each morning, followed by the others in order of rank.",
+    "B": "Roosters kept in constant dim light for several days still began crowing at roughly 24-hour intervals, shortly before the time of sunrise outside.",
+    "C": "Roosters often crow during the day in response to the crowing of other roosters nearby or to sudden loud noises.",
+    "D": "Roosters kept in constant dim light for several days crowed only when a lamp was switched on, at whatever hour that happened to be."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Demir predicts that roosters will crow at the usual time even without light. A finding that weakens this must show roosters failing to crow at the usual time when light is absent and crowing only when light appears. Roosters crowing on schedule in constant dim light would support him instead.",
+    "A": "Incorrect. Which rooster crows first does not show whether light or an internal clock sets the time.",
+    "B": "Incorrect. Crowing at the usual time without any dawn light is what an internal clock would produce, so this supports Demir rather than weakening him.",
+    "C": "Incorrect. Daytime crowing in reply to other roosters says nothing about what triggers the dawn crowing.",
+    "D": "Correct. Crowing that depends entirely on a light being switched on, with no crowing at the usual time, shows that light rather than an internal clock triggers it."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

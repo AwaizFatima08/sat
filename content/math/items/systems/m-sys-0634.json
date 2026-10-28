@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0634",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[2x + 5y = 23\\] \\[4x - 3y = 7\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(6x + 2y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(16\\)",
+    "B": "\\(7\\)",
+    "C": "\\(4\\)",
+    "D": "\\(30\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Notice that \\(6x + 2y\\) is the sum of the left sides: \\((2x + 5y) + (4x - 3y) = 6x + 2y\\).",
+    "So \\(6x + 2y = 23 + 7 = 30\\).",
+    "(Solving fully gives \\(x = 4\\), \\(y = 3\\), and \\(6(4) + 2(3) = 30\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(2x + 8y\\), the result of subtracting the second equation from the first instead of adding.",
+    "B": "Incorrect. This is the value of \\(4x - 3y\\), not \\(6x + 2y\\).",
+    "C": "Incorrect. This is the value of \\(x\\) alone; the question asks for \\(6x + 2y\\).",
+    "D": "Correct. Adding the two equations gives \\(6x + 2y = 30\\) directly (the solution is \\(x = 4\\), \\(y = 3\\))."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "x, y = symbols('x y')\nsol = solve([2*x + 5*y - 23, 4*x - 3*y - 7], [x, y])\nassert sol == {x: 4, y: 3}\nv = (6*x + 2*y).subs(sol)\nassert value(choices[answer]) == v == 30\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

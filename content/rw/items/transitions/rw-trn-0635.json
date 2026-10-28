@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0635",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Azulejos, the glazed ceramic tiles that cover walls throughout Portugal, were at first used mainly for repeating geometric patterns. By the 1600s, however, painters were treating whole walls as canvases, arranging hundreds of blue-and-white tiles into large pictures of battles, legends, and daily life. The tradition has never really ended. ______ the São Bento railway station in Porto, completed in the early twentieth century, greets passengers with panels of roughly 20,000 tiles that depict scenes from Portuguese history.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Similarly,",
+    "B": "For example,",
+    "C": "Nevertheless,",
+    "D": "As a result,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The third sentence makes a general claim: the tradition of pictorial tile panels \"has never really ended.\" The last sentence describes one twentieth-century station whose walls carry such panels, which illustrates that the tradition continued. A transition that introduces an example is needed.",
+    "A": "Incorrect. \"Similarly\" would introduce a separate case like one already described, but no particular building has been described before this sentence.",
+    "B": "Correct. \"For example\" introduces the São Bento station as a specific case of the tradition continuing into the twentieth century.",
+    "C": "Incorrect. The station's panels support the claim that the tradition continued; they do not go against it. This is tempting because \"however\" appears earlier in the text.",
+    "D": "Incorrect. The station's panels were not caused by the tradition never ending; they are evidence of it."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

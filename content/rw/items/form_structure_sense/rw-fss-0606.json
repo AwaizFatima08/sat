@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0606",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The steelpan was invented in Trinidad and Tobago in the 1930s and 1940s, when musicians began hammering the ends of old oil barrels into playing surfaces. The notes on a finished pan ______ arranged in a pattern that lets a player move quickly between them, and each note is a small dented area tuned by careful hammering.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "has been",
+    "B": "are",
+    "C": "is",
+    "D": "was"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The subject of the verb is \"notes,\" which is plural; \"on a finished pan\" only tells where the notes are. The passage describes the instrument in the present (\"lets,\" \"is\"), so the plural present verb \"are\" is correct.",
+    "A": "Incorrect. \"Has been\" is singular, but the subject \"notes\" is plural.",
+    "B": "Correct. The plural verb \"are\" agrees with the plural subject \"notes\" and matches the present tense of the sentence.",
+    "C": "Incorrect. \"Is\" is singular and would agree with \"pan,\" but the subject is the plural \"notes.\"",
+    "D": "Incorrect. \"Was\" is singular, but the subject \"notes\" is plural."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

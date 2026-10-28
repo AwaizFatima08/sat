@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0609",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "For more than a thousand years, most writing in Europe was done with iron gall ink. To make it, ink makers first gathered oak galls, the small round growths that form on oak twigs around the eggs of certain wasps. They crushed the galls and soaked them in water to draw out their acids. ______ they stirred in iron salts and a little gum, and the mixture turned a deep blue-black as it met the air.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Next,",
+    "B": "In contrast,",
+    "C": "Nevertheless,",
+    "D": "For example,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The text describes the steps of making ink in order: ink makers \"first gathered oak galls,\" then crushed and soaked them. The last sentence gives the step that came after soaking. A transition that marks the next step in a sequence is needed.",
+    "A": "Correct. \"Next\" shows that stirring in iron salts was the step that followed soaking the crushed galls.",
+    "B": "Incorrect. \"In contrast\" signals a difference, but adding iron salts is simply the following step, not an opposing idea.",
+    "C": "Incorrect. \"Nevertheless\" signals something done despite the previous step, but there is no obstacle in the text for the ink makers to overcome.",
+    "D": "Incorrect. Adding iron salts is not an example of soaking the galls; it is a separate step."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0687",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 4,
+  "b": 1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The hamper had been packed by their aunt with the thoroughness of a woman who had once been caught in the rain without an umbrella. Tomas, who was eight and considered himself the expedition's leader, insisted on carrying it across the meadow himself and set it down at the top of the hill with the air of someone who had crossed a continent. His sister unbuckled the straps. Beneath the folded cloth ______ a loaf still warm from the oven and a bottle of lemonade wrapped in newspaper, and beneath those, to the children's astonishment, a second, smaller cloth folded over a cake.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "is",
+    "B": "were",
+    "C": "has been",
+    "D": "was"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The final sentence is inverted: it begins with the phrase \"Beneath the folded cloth,\" and the subject comes after the verb. That subject is \"a loaf … and a bottle of lemonade,\" two things joined by \"and,\" so it is plural and the verb must be \"were.\" The singular \"cloth\" just before the blank is not the subject.",
+    "A": "Incorrect. \"Is\" is singular and present tense; the subject is plural and the story is told in the past tense.",
+    "B": "Correct. The plural verb \"were\" agrees with the compound subject \"a loaf … and a bottle,\" which follows the verb, and matches the past tense of the story.",
+    "C": "Incorrect. \"Has been\" is singular and present perfect; the subject is plural and the story is told in the past tense.",
+    "D": "Incorrect. \"Was\" is singular and seems to agree with \"cloth\" or \"a loaf,\" but the subject is the pair \"a loaf … and a bottle,\" which is plural."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

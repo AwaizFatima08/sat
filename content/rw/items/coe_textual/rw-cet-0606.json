@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0606",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Urban planner Felix Osei has noticed that some streets in his city are busy with people on foot while similar streets nearby are nearly empty. He hypothesizes that the difference is shade: on hot days, people choose to walk along streets lined with trees and avoid streets that have no shade.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Osei's hypothesis?",
+  "choices": {
+    "A": "On every street surveyed, counts of walkers were higher on weekends than on weekdays throughout the year.",
+    "B": "Residents who were surveyed said that they liked the look of trees on their streets and wanted more planted.",
+    "C": "Tree-lined streets in the city tend to have more shops, cafes, and other attractions than streets without trees do.",
+    "D": "On hot afternoons, tree-lined streets had far more walkers than treeless streets; on cool, cloudy days, the difference nearly vanished."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Osei thinks people pick shady streets on hot days. To support that, a finding should show that tree-lined streets are busier specifically when it is hot. If the difference appears on hot days but disappears on cool days, shade is the likely reason. A choice offering a different cause for the busy streets, such as shops, would not support Osei.",
+    "A": "Incorrect. Weekend crowds say nothing about why some streets are busier than others.",
+    "B": "Incorrect. Liking the look of trees is not the same as choosing to walk in their shade on hot days.",
+    "C": "Incorrect. This suggests a different reason for the busier streets, shops rather than shade, so it does not support Osei's explanation.",
+    "D": "Correct. The tree-lined streets drew more walkers only when it was hot, which shows that people were seeking shade."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

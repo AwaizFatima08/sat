@@ -1,0 +1,46 @@
+{
+  "id": "m-tvd-0608",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In an exponential model, the value of \\(y\\) decreases by \\(10\\%\\) for each increase of 1 in \\(x\\). The model gives \\(y = 500\\) when \\(x = 0\\). What is the value of \\(y\\) when \\(x = 3\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "364.5",
+    "729/2"
+  ],
+  "solution": [
+    "A decrease of \\(10\\%\\) each step means multiplying by \\(0.9\\) each step: \\(y = 500(0.9)^{x}\\).",
+    "At \\(x = 3\\): \\(500(0.9)^{3} = 500(0.729) = 364.5\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nf = 500 * Rational(9, 10)**x\nr = f.subs(x, 3)\nassert r == Rational(729, 2)\nassert all(Rational(s) == r for s in spr_answers)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "364.5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

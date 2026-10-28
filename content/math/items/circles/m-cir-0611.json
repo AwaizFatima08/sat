@@ -1,0 +1,129 @@
+{
+  "id": "m-cir-0611",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A lighthouse at point \\(L\\) lights every point within 2 kilometers of \\(L\\). A fishing boat travels along the straight path shown. The closest the boat comes to the lighthouse is 1.2 kilometers, at point \\(M\\). For how many kilometers of its path is the boat inside the lit region?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "L": [
+        0,
+        0
+      ],
+      "M": [
+        0,
+        1.2
+      ],
+      "P": [
+        -3,
+        1.2
+      ],
+      "Q": [
+        3,
+        1.2
+      ],
+      "A": [
+        1.6,
+        1.2
+      ]
+    },
+    "segments": [
+      [
+        "L",
+        "M"
+      ],
+      [
+        "M",
+        "Q"
+      ],
+      [
+        "P",
+        "M"
+      ],
+      [
+        "L",
+        "A"
+      ]
+    ],
+    "circles": [
+      {
+        "center": [
+          0,
+          0
+        ],
+        "radius": 2
+      }
+    ],
+    "labels": [
+      {
+        "at": [
+          -0.5,
+          0.6
+        ],
+        "text": "1.2 km"
+      },
+      {
+        "at": [
+          1.15,
+          0.35
+        ],
+        "text": "2 km"
+      }
+    ],
+    "right_angles": [
+      "M"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1.6\\)",
+    "B": "\\(2.4\\)",
+    "C": "\\(3.2\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The lit part of the path is a chord of the circle of radius 2 centered at \\(L\\). The segment from \\(L\\) to \\(M\\) is perpendicular to the path, so it bisects the chord.",
+    "In right triangle \\(LMA\\): \\(MA = \\sqrt{2^{2} - 1.2^{2}} = \\sqrt{2.56} = 1.6\\).",
+    "The whole chord is \\(2(1.6) = 3.2\\) kilometers."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(1.6\\) is only half the chord, from \\(M\\) to one edge of the lit region.",
+    "B": "Incorrect. \\(2.4 = 2(1.2)\\) doubles the closest distance instead of the half-chord length.",
+    "C": "Correct. Half the chord is \\(\\sqrt{4 - 1.44} = 1.6\\), so the lit part of the path is \\(3.2\\) kilometers.",
+    "D": "Incorrect. \\(4\\) is the diameter; the path does not pass through \\(L\\), so the chord is shorter than the diameter."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert abs(d('L','A')-2)<1e-9 and abs(d('L','M')-Rational('1.2'))<1e-9 and abs(ang('L','M','A')-90)<0.1\nhalf=sqrt(2**2-Rational('1.2')**2)\nans=2*half\nassert half==Rational('1.6') and ans==Rational('3.2') and abs(d('M','A')-half)<1e-9\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\nassert value(choices['A'])==half and value(choices['D'])==4\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

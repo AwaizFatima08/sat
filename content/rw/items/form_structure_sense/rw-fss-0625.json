@@ -1,0 +1,64 @@
+{
+  "id": "rw-fss-0625",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In 1925, at the Harvard College Observatory, Cecilia Payne completed a doctoral thesis ______ conclusion, that stars are made mostly of hydrogen and helium, contradicted the common view that they resembled Earth in composition. Senior astronomers at first persuaded her to describe the result as probably mistaken, but within a few years other researchers confirmed it.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "whose",
+    "B": "who",
+    "C": "which",
+    "D": "who's"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The blank must show that the conclusion belongs to the thesis: the thesis's conclusion contradicted the common view. The relative pronoun that shows possession is \"whose,\" which in English can refer to things as well as people.",
+    "A": "Correct. \"Whose conclusion\" shows that the conclusion belongs to the thesis.",
+    "B": "Incorrect. \"Who\" is used for people and does not show possession; \"who conclusion\" is not grammatical.",
+    "C": "Incorrect. \"Which conclusion\" does not show possession; \"which\" would have to stand for the thesis itself, so \"conclusion\" is left hanging and the clause makes no sense.",
+    "D": "Incorrect. \"Who's\" means \"who is\"; it is not a possessive."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "pronoun",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "No comma before the blank, so \"whose conclusion\" reads as attaching to the Observatory rather than the thesis; consider \", whose\" or rewording.",
+        "result": "agree"
+      },
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (comma-free 'whose' now attaches to the thesis)",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0668",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Until the 1780s, letters in Britain traveled with post boys on horseback, who were slow and easy prey for highwaymen. In 1784, John Palmer, a theater manager from Bath, persuaded the government to let him try an alternative. His mail coaches—light, fast vehicles that carried a few paying passengers, ran to a strict timetable, and were accompanied by an armed guard who sounded a horn to clear the ______ the journey from Bristol to London from about thirty-eight hours to sixteen. Within a few years the system covered the main roads of the country, and the coach's arrival became the event by which many towns set their clocks.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "road cut",
+    "B": "road—cut",
+    "C": "road, cut",
+    "D": "road; cut"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The subject of the sentence is \"His mail coaches,\" and its verb is \"cut.\" Everything from \"light, fast vehicles\" to \"clear the road\" is extra information describing the coaches. It opens with a dash, so it must close with a matching dash before the verb, even though the description contains commas of its own.",
+    "A": "Incorrect. Without a closing dash, the description is never set off, and \"clear the road cut the journey\" runs together.",
+    "B": "Correct. The second dash closes the pair around the description, so the subject \"His mail coaches\" connects to its verb \"cut.\"",
+    "C": "Incorrect. Extra information that opens with a dash cannot close with a comma; the two marks must match.",
+    "D": "Incorrect. A semicolon must join two independent clauses, but \"His mail coaches—light, fast vehicles … clear the road\" has no main verb."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "supplements",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": "C",
+        "note": "The word 'cut' reads as a stray finite verb; only the dash-versus-comma choice really matters.",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

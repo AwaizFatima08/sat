@@ -1,0 +1,57 @@
+{
+  "id": "m-nle-0603",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What are all the solutions to the equation \\(|2x + 1| = 7\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\) only",
+    "B": "\\(-4\\) and \\(-3\\)",
+    "C": "\\(-4\\) and \\(3\\)",
+    "D": "\\(-3\\) and \\(4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The expression inside the absolute value is \\(7\\) or \\(-7\\).",
+    "\\(2x + 1 = 7\\) gives \\(x = 3\\); \\(2x + 1 = -7\\) gives \\(2x = -8\\), so \\(x = -4\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This misses the second case, \\(2x + 1 = -7\\), which gives \\(x = -4\\).",
+    "B": "Incorrect. This is the result of a sign slip in the first case: \\(2x + 1 = 7\\) gives \\(x = 3\\), not \\(-3\\).",
+    "C": "Correct. \\(|2(3) + 1| = 7\\) and \\(|2(-4) + 1| = |-7| = 7\\).",
+    "D": "Incorrect. This is the result of reversing the signs of both solutions."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "def vals(s):\n    s = s.replace(' only', '')\n    return {value(p) for p in s.split(' and ')}\nx = symbols('x', real=True)\nsol = set(solve(Eq(Abs(2*x + 1), 7), x))\nassert sol == {-4, 3}\nassert vals(choices[answer]) == sol\nassert all(vals(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

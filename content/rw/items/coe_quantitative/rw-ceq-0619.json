@@ -1,0 +1,87 @@
+{
+  "id": "rw-ceq-0619",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The railway between Colombo and Kandy in Sri Lanka climbs through hill country on a line opened in the nineteenth century. In 2022, the railway replaced old hand-operated signals on part of the route with an electronic system. Transport analyst Dilshan Perera compared the punctuality of the daily express trains in the year before and the year after the change. He concluded that the new signals helped, but that they addressed only part of the problem, since many delays were caused by landslides and track repairs rather than by signaling.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Delayed Express Trains on the Colombo–Kandy Line, by Cause of Delay",
+    "columns": [
+      "Cause of delay",
+      "Delayed trains in 2021",
+      "Delayed trains in 2023"
+    ],
+    "rows": [
+      [
+        "Signal failures",
+        142,
+        31
+      ],
+      [
+        "Landslides and track repairs",
+        118,
+        121
+      ],
+      [
+        "Locomotive breakdowns",
+        64,
+        58
+      ],
+      [
+        "Other causes",
+        37,
+        40
+      ]
+    ],
+    "note": "The electronic signals were installed during 2022."
+  },
+  "stem": "Which choice most effectively uses data from the table to support Perera's conclusion?",
+  "choices": {
+    "A": "Delays caused by landslides and track repairs fell sharply after the new signals were installed.",
+    "B": "The number of trains delayed by signal failures fell from 142 in 2021 to 31 in 2023.",
+    "C": "Delays from signal failures dropped from 142 to 31, but delays from landslides and track repairs stayed at about 120.",
+    "D": "The total number of delayed trains fell from 361 in 2021 to 250 in 2023."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Perera's conclusion has two parts: the signals helped, and they fixed only part of the problem because other causes remained. The support must show both: signal delays fell from 142 to 31, while landslide and track-repair delays stayed almost unchanged (118 and 121).",
+    "A": "Incorrect. This misreads the table: landslide and track-repair delays went from 118 to 121, so they did not fall at all.",
+    "B": "Incorrect. This is true, but it shows only that the signals helped; it says nothing about the delays the signals could not fix.",
+    "C": "Correct. This pairs the sharp drop in signal delays with the unchanged landslide and repair delays, supporting both halves of the conclusion.",
+    "D": "Incorrect. These totals are correct, but they show overall improvement without separating what the signals fixed from what they did not."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "too_narrow",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

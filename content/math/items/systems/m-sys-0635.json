@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0635",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "At a stationery store, every pen costs \\$1.20 and every marker costs \\$2.50. A customer buys twice as many pens as markers and pays a total of \\$19.60. How many pens does the customer buy?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(8\\)",
+    "B": "\\(4\\)",
+    "C": "\\(12\\)",
+    "D": "\\(16\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(p\\) and \\(m\\) be the numbers of pens and markers: \\(p = 2m\\) and \\(1.20p + 2.50m = 19.60\\).",
+    "Substitute: \\(1.20(2m) + 2.50m = 19.60\\), so \\(4.90m = 19.60\\) and \\(m = 4\\).",
+    "Then \\(p = 2(4) = 8\\). Check: \\(8(1.20) + 4(2.50) = 9.60 + 10.00 = 19.60\\)."
+  ],
+  "explanation": {
+    "A": "Correct. With \\(p = 2m\\), \\(1.20(2m) + 2.50m = 4.90m = 19.60\\), so \\(m = 4\\) and \\(p = 8\\).",
+    "B": "Incorrect. This is the number of markers, not pens.",
+    "C": "Incorrect. This is the total number of items, \\(8 + 4\\), not the number of pens.",
+    "D": "Incorrect. This doubles the number of pens; \\(16\\) pens and \\(8\\) markers would cost \\$39.20."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "wrong_quantity",
+    "D": "arithmetic"
+  },
+  "verify": "p, m = symbols('p m')\nsol = solve([p - 2*m, Rational(12, 10)*p + Rational(5, 2)*m - Rational(196, 10)], [p, m])\nassert sol == {p: 8, m: 4}\nassert value(choices[answer]) == 8\nassert all(value(choices[k]) != 8 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

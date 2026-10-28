@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0634",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In many towns in Bangladesh, drivers of pedal-powered three-wheelers have switched to battery-powered versions, which are faster and less tiring to operate but must be rented at a higher daily rate from the vehicles' owners. Critics argued that the switch mainly benefits the owners, since drivers hand over so much more in rent. Economist Farhana Chowdhury, who surveyed drivers in a district town, argues that the drivers themselves come out ahead: although their rental payments rise and they must pay to charge the batteries, she contends, the extra fares they collect more than cover these costs, leaving them with higher daily earnings than before.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Average Daily Figures Reported by Three-Wheeler Drivers in a District Town",
+    "columns": [
+      "Daily figure",
+      "Pedal-powered (taka)",
+      "Battery-powered (taka)"
+    ],
+    "rows": [
+      [
+        "Fares collected",
+        650,
+        1100
+      ],
+      [
+        "Rental paid to owner",
+        100,
+        300
+      ],
+      [
+        "Battery charging cost",
+        0,
+        120
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Chowdhury's argument?",
+  "choices": {
+    "A": "Drivers of battery-powered vehicles paid three times as much daily rent as drivers of pedal-powered ones.",
+    "B": "After rent and charging costs, drivers of battery-powered vehicles kept about 680 taka a day, compared with about 550 taka for pedal-powered drivers.",
+    "C": "Battery-powered vehicles brought in 1,100 taka in fares per day, 450 taka more than pedal-powered vehicles did.",
+    "D": "Daily charging costs alone exceeded the extra rent that battery-powered drivers paid."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Chowdhury's claim concerns what drivers keep after costs, so the evidence must combine all three rows. A pedal driver keeps 650 minus 100, or 550 taka; a battery driver keeps 1,100 minus 300 minus 120, or 680 taka. Only the choice that completes this calculation shows that drivers come out ahead.",
+    "A": "Incorrect. This is true (300 versus 100 taka), but higher rent is the critics' point; on its own it suggests drivers are worse off.",
+    "B": "Correct. Subtracting rent and charging from fares shows battery-powered drivers keeping 130 taka more per day, which is exactly what Chowdhury argues.",
+    "C": "Incorrect. This is true, but extra fares alone do not show that drivers come out ahead, since the extra fares must cover 200 taka more rent and 120 taka of charging.",
+    "D": "Incorrect. Charging cost 120 taka, while the extra rent was 200 taka, so this misreads the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

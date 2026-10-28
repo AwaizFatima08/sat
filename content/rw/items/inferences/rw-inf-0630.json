@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0630",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Hoping to slow traffic near a school, a town painted a crosswalk so that, from a driver's seat, its white stripes appeared to be solid blocks rising from the road. Traffic engineer Lucía Ferreira measured vehicle speeds at the crosswalk before the painting and at intervals afterward. In the first month, average speeds dropped by about a fifth. By the third month the drop had shrunk by half, and by the sixth month speeds were almost back to what they had been before the painting. Ferreira's measurements suggest that the crosswalk's effect ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "was limited because most drivers never noticed the painted blocks.",
+    "B": "would have lasted longer if the stripes had been painted a brighter color.",
+    "C": "was strongest among drivers who rarely used the road.",
+    "D": "depended on drivers being unfamiliar with the illusion and faded once they grew used to it."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Speeds fell sharply at first and then returned toward the original level over six months, while the painting itself stayed the same. The steady fading of the effect as time passed fits drivers getting used to the illusion and no longer reacting to it.",
+    "A": "Incorrect. The sharp initial drop in speed shows that drivers did notice the blocks at first.",
+    "B": "Incorrect. The text gives no information about colors or any comparison of paints.",
+    "C": "Incorrect. The measurements were averages at the crosswalk; the text does not separate regular drivers from occasional ones, though this would be a plausible next question.",
+    "D": "Correct. A large initial drop that steadily disappears while the paint remains points to drivers growing accustomed to the illusion."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

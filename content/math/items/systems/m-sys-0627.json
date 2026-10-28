@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0627",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A juice bar sells small glasses of juice for \\$1.50 each and large glasses for \\$2.50 each. On Saturday it sold 92 glasses and collected \\$198. How many more large glasses than small glasses did the juice bar sell on Saturday?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(60\\)",
+    "B": "\\(28\\)",
+    "C": "\\(32\\)",
+    "D": "\\(24\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(s\\) and \\(l\\) be the numbers of small and large glasses: \\(s + l = 92\\) and \\(1.50s + 2.50l = 198\\).",
+    "Substitute \\(s = 92 - l\\): \\(1.50(92 - l) + 2.50l = 198\\), so \\(138 + l = 198\\) and \\(l = 60\\).",
+    "Then \\(s = 32\\), and the difference is \\(60 - 32 = 28\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the number of large glasses sold, not how many more large glasses than small glasses were sold.",
+    "B": "Correct. With \\(s + l = 92\\) and \\(1.50s + 2.50l = 198\\), \\(s = 32\\) and \\(l = 60\\), so \\(l - s = 28\\).",
+    "C": "Incorrect. This is the number of small glasses sold, not the difference.",
+    "D": "Incorrect. This is the result of an arithmetic slip; \\(60 - 32 = 28\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_quantity",
+    "D": "arithmetic"
+  },
+  "verify": "s, l = symbols('s l')\nsol = solve([s + l - 92, Rational(3, 2)*s + Rational(5, 2)*l - 198], [s, l])\nassert sol == {s: 32, l: 60}\nd = sol[l] - sol[s]\nassert value(choices[answer]) == d == 28\nassert all(value(choices[k]) != d for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

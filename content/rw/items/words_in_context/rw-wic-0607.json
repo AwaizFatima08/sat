@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0607",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Lake Natron, in northern Tanzania, is so salty and alkaline that its water can burn the skin of most animals, and few creatures can survive there. Lesser flamingos, however, have tough skin and scales on their legs, and they build their nests on islands of mud far out in the lake. The very ______ that keeps other animals away makes the lake a safe place for the flamingos to raise their chicks.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "harshness",
+    "B": "heat",
+    "C": "wildlife",
+    "D": "distance"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The text says the water \"can burn the skin of most animals\" and \"few creatures can survive there.\" What keeps other animals away is how hostile the lake is, so the blank needs \"harshness.\"",
+    "A": "Correct. The lake's harsh conditions, water that burns skin, keep predators away, and that same harshness protects the flamingos' chicks.",
+    "B": "Incorrect. The text describes the water as salty and alkaline, not hot.",
+    "C": "Incorrect. The text says \"few creatures can survive there,\" so wildlife is not what keeps other animals away.",
+    "D": "Incorrect. The nests are far out in the lake, but what keeps other animals away, according to the text, is the burning water, not how far away the islands are."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "wrong_logic",
+    "D": "wrong_tone"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

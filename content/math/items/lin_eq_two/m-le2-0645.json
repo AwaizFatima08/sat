@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0645",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(\\ell\\) passes through the points \\((2, 3)\\) and \\((6, 11)\\). Line \\(m\\) is the reflection of line \\(\\ell\\) across the line \\(y = x\\). What is the slope of line \\(m\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-2\\)",
+    "B": "\\(\\frac{1}{2}\\)",
+    "C": "\\(-\\frac{1}{2}\\)",
+    "D": "\\(2\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Reflecting a point across \\(y = x\\) swaps its coordinates: \\((2, 3) \\to (3, 2)\\) and \\((6, 11) \\to (11, 6)\\).",
+    "Slope of \\(m\\): \\(\\frac{6 - 2}{11 - 3} = \\frac{1}{2}\\) (the reciprocal of the slope of \\(\\ell\\), which is 2)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(-2\\) is the slope of a line perpendicular to \\(\\ell\\); reflection across \\(y = x\\) gives the reciprocal, not the negative reciprocal.",
+    "B": "Correct. Reflecting across \\(y = x\\) swaps coordinates: \\(m\\) passes through \\((3, 2)\\) and \\((11, 6)\\), so its slope is \\(\\frac{4}{8} = \\frac{1}{2}\\).",
+    "C": "Incorrect. The reflected line still rises from left to right, since both points keep positive coordinates in the same order.",
+    "D": "Incorrect. 2 is the slope of \\(\\ell\\) itself; reflecting across \\(y = x\\) changes the slope to its reciprocal."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "m = Rational(6 - 2, 11 - 3)\nassert m == Rational(1, 2) and m == 1/Rational(11 - 3, 6 - 2)\nassert value(choices[answer]) == m\nassert all(value(choices[k]) != m for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0629",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x \\neq 0\\) and \\(x \\neq -3\\), which of the following is equivalent to \\(\\frac{x}{x + 3} - \\frac{2}{x}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{x^{2} - 2x - 6}{x^{2} + 3x}\\)",
+    "B": "\\(\\frac{x^{2} - 2x + 6}{x^{2} + 3x}\\)",
+    "C": "\\(\\frac{x - 2}{2x + 3}\\)",
+    "D": "\\(\\frac{x^{2} - 2}{x^{2} + 3x}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The common denominator is \\(x(x + 3)\\). Rewrite: \\(\\frac{x \\cdot x}{x(x + 3)} - \\frac{2(x + 3)}{x(x + 3)}\\).",
+    "Subtract the numerators: \\(x^{2} - 2x - 6\\), over \\(x(x + 3) = x^{2} + 3x\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\frac{x^{2} - 2(x + 3)}{x(x + 3)} = \\frac{x^{2} - 2x - 6}{x^{2} + 3x}\\).",
+    "B": "Incorrect. This is the result of distributing \\(-2\\) to \\(x\\) but not to \\(3\\): \\(-2(x + 3) = -2x - 6\\).",
+    "C": "Incorrect. This is the result of subtracting the numerators and adding the denominators separately; fractions must first be written over a common denominator.",
+    "D": "Incorrect. This is the result of subtracting 2 instead of \\(2(x + 3)\\) after rewriting the first fraction."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "x = symbols('x')\nt = x/(x + 3) - 2/x\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

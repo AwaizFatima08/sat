@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0617",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Rania makes small candles that sell for \\$8 each and large candles that sell for \\$14 each. For a craft fair she will make at most 40 candles in total, and she wants the total selling price of all the candles to be at least \\$400. If she makes exactly 15 small candles, how many different numbers of large candles satisfy both conditions?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5\\)",
+    "B": "\\(6\\)",
+    "C": "\\(20\\)",
+    "D": "\\(25\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(L\\) be the number of large candles. The total count gives \\(15 + L \\le 40\\), so \\(L \\le 25\\).",
+    "The selling price gives \\(8(15) + 14L \\ge 400\\), so \\(14L \\ge 280\\) and \\(L \\ge 20\\).",
+    "The possible values are \\(L = 20, 21, 22, 23, 24, 25\\): 6 different numbers."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(25 - 20 = 5\\), but both endpoints 20 and 25 are allowed, so there are \\(5 + 1 = 6\\) values.",
+    "B": "Correct. \\(20 \\le L \\le 25\\) has 6 integer values.",
+    "C": "Incorrect. 20 is the least number of large candles, not the number of possible values.",
+    "D": "Incorrect. 25 is the greatest number of large candles, not the number of possible values."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "C": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "vals = [L for L in range(0, 41) if 15 + L <= 40 and 8*15 + 14*L >= 400]\nassert vals == list(range(20, 26))\nassert value(choices[answer]) == len(vals)\nassert all(value(choices[k]) != len(vals) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

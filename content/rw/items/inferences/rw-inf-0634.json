@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0634",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Between the fourteenth and sixteenth centuries, many European cities passed sumptuary laws, which restricted the fabrics, furs, and jewels that people of each social rank were permitted to wear. Historians have sometimes taken the sheer number of these laws as a sign of how firmly rank was policed. One city's council, however, issued a law limiting the wearing of silk in 1432 and then reissued it, in nearly the same words, in 1439, 1447, 1455, and 1468, each time complaining that the earlier version was being \"daily disregarded.\" A law that is obeyed rarely needs to be proclaimed again. Historian Beatriz Almeida therefore suggests that the repeated reissues are better read as evidence that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "social rank mattered less in this city than in cities that passed fewer sumptuary laws.",
+    "B": "the restrictions on silk were widely ignored than as evidence that they were strictly enforced.",
+    "C": "the council itself had little interest in controlling what the city's residents wore.",
+    "D": "silk became cheaper and more widely available over the course of the fifteenth century."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The council reissued the same law five times and each time complained that it was being ignored. The text adds that obeyed laws rarely need repeating. Together these points turn the usual reading on its head: many laws suggest weak enforcement, not strong.",
+    "A": "Incorrect. The text compares nothing between cities and draws no conclusion about how much rank mattered; it concerns whether one law was obeyed.",
+    "B": "Correct. A law that has to be proclaimed five times, each time with a complaint that it is disregarded, is one that people were not obeying.",
+    "C": "Incorrect. A council that reissues the same law five times clearly cares about it; the question is whether residents obeyed.",
+    "D": "Incorrect. The text says nothing about the price or supply of silk; it discusses only the law and its reissues."
+  },
+  "traps": {
+    "A": "too_broad",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "Choice D is ungrammatical as written ('were widely ignored than as evidence'); the intended sense is clear.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

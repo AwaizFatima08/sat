@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0633",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of \\(2x - 5y = 10\\) in the \\(xy\\)-plane is translated 3 units down. What is the \\(x\\)-coordinate of the \\(x\\)-intercept of the translated graph?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(5\\)",
+    "C": "\\(12.5\\)",
+    "D": "\\(-12.5\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Write the line as \\(y = \\frac{2}{5}x - 2\\). Translating down 3 units gives \\(y = \\frac{2}{5}x - 5\\).",
+    "Set \\(y = 0\\): \\(\\frac{2}{5}x = 5\\), so \\(x = 12.5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Shifting down 3 units does not move the \\(x\\)-intercept 3 units left; the slope \\(\\frac{2}{5}\\) means it moves \\(7.5\\) units right.",
+    "B": "Incorrect. 5 is the \\(x\\)-intercept of the original graph; the translation changes it.",
+    "C": "Correct. The line is \\(y = \\frac{2}{5}x - 2\\); shifted down it is \\(y = \\frac{2}{5}x - 5\\), which is 0 when \\(x = 12.5\\).",
+    "D": "Incorrect. \\(\\frac{2}{5}x = 5\\) gives \\(x = 12.5\\), which is positive."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "D": "sign_error"
+  },
+  "verify": "x, y = symbols('x y')\nline = solve(Eq(2*x - 5*y, 10), y)[0] - 3\nxi = solve(line, x)[0]\nassert xi == Rational(25, 2)\nassert value(choices[answer]) == xi\nassert all(value(choices[k]) != xi for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0655",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The Cingino Dam, in the Italian Alps, is a wall of stone blocks that rises almost vertically for fifty meters. Visitors are regularly startled to see Alpine ibex, wild goats with heavy curved horns, standing on its face, picking their way along ledges only a few centimeters wide. The animals are not there for the view. The mortar between the blocks contains mineral salts that the ibex need and cannot easily find in their grassy pastures, and they have learned that the dam ______ what the pasture lacks. The climb is dangerous, but the reward appears to be worth the risk.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "requires",
+    "B": "supplies",
+    "C": "conceals",
+    "D": "destroys"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The ibex \"need\" mineral salts, cannot find them in their pastures, and climb the dam because its mortar \"contains\" them. The dam therefore provides what the pasture lacks, and \"supplies\" says exactly that.",
+    "A": "Incorrect. The ibex, not the dam, need the salts; the dam is their source.",
+    "B": "Correct. The mortar provides the mineral salts that the pastures lack, which is why the ibex climb.",
+    "C": "Incorrect. The dam makes the salts available to the ibex; it does not hide them.",
+    "D": "Incorrect. The dam gives the ibex something valuable; it does not destroy anything."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

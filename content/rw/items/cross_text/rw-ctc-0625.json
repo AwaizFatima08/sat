@@ -1,0 +1,56 @@
+{
+  "id": "rw-ctc-0625",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When caterpillars chew on a plant's leaves, the plant releases a cloud of volatile chemicals into the air. Neighboring plants exposed to those chemicals begin producing their own defensive compounds before any caterpillar reaches them. Ecologist Priyanka Deshmukh describes this as a warning system: a plant under attack alerts its neighbors, and she argues that the ability to send such warnings evolved because it protects the surrounding community.",
+  "passage_b": "The word \"warning\" smuggles in an assumption. A plant's neighbors are also its competitors for light and water, so a plant that spent resources alerting them would be helping its rivals. A more likely account is that the volatiles are messages a plant sends to its own distant leaves, which the air carries faster than the plant's internal channels can; neighbors simply eavesdrop. The neighbors' response is real enough, but the intention implied by \"warning\" has not been shown.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the description of a warning system in Text 1?",
+  "choices": {
+    "A": "By accepting that neighbors respond to the chemicals but doubting that alerting them is the chemicals' function",
+    "B": "By rejecting the idea that plants respond to airborne chemicals at all",
+    "C": "By agreeing that plants release the chemicals in order to protect their neighbors",
+    "D": "By arguing that the chemicals attract predators of the attacking caterpillars"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Deshmukh calls the volatiles a warning system that evolved to protect neighbors. Text 2 says the word \"warning\" assumes an intention that \"has not been shown,\" proposes that the chemicals are messages to the plant's own leaves, and notes that neighbors \"simply eavesdrop,\" while granting that \"the neighbors' response is real enough.\" So the author of Text 2 accepts the effect but not the purpose Deshmukh assigns to it.",
+    "A": "Correct. Text 2 grants that neighbors respond but argues that the chemicals most likely serve the emitting plant itself.",
+    "B": "Incorrect. Text 2 says the neighbors' response \"is real enough.\"",
+    "C": "Incorrect. Text 2 argues that helping neighbors would mean helping competitors, so it rejects this purpose.",
+    "D": "Incorrect. Text 2 says nothing about predators of caterpillars."
+  },
+  "traps": {
+    "B": "too_broad",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

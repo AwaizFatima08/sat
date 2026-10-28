@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0635",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In Phoenix, Arizona, summer asphalt can reach temperatures far above that of the air. City engineers coated several residential streets with a pale, reflective sealant in the hope of cooling the neighborhoods around them. Urban climatologist Marisol Vega measured surface and air temperatures on coated streets and on nearby untreated streets over several afternoons. She concludes that the coating works as a surface treatment but not as a neighborhood one: it lowers the temperature of the pavement itself substantially, she argues, while the air a pedestrian actually breathes, at head height, is scarcely any cooler.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Afternoon Measurements on Coated and Untreated Streets in Phoenix",
+    "columns": [
+      "Measurement",
+      "Untreated streets",
+      "Coated streets"
+    ],
+    "rows": [
+      [
+        "Pavement surface temperature (°C)",
+        64,
+        52
+      ],
+      [
+        "Air temperature at 1.5 m above pavement (°C)",
+        41.0,
+        40.6
+      ],
+      [
+        "Sunlight reflected by pavement (%)",
+        12,
+        33
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Vega's conclusion?",
+  "choices": {
+    "A": "Air temperature at 1.5 meters was lower on coated streets than on untreated streets.",
+    "B": "On coated streets, the pavement surface was cooler than the air 1.5 meters above it.",
+    "C": "Coated streets reflected nearly three times as much sunlight as untreated streets did.",
+    "D": "Coated streets had pavement surfaces 12°C cooler than untreated streets but air at 1.5 meters only 0.4°C cooler."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Vega's conclusion contrasts a large effect on the pavement with a negligible effect on the air at head height. The evidence must report both differences: surface temperature fell from 64°C to 52°C, a 12-degree drop, while air temperature fell from 41.0°C to 40.6°C, less than half a degree.",
+    "A": "Incorrect. This is true, but it states only that the air was cooler; without the size of the difference it cannot show that the air was 'scarcely any cooler.'",
+    "B": "Incorrect. The coated surface was 52°C and the air above it 40.6°C, so the surface was warmer, not cooler.",
+    "C": "Incorrect. This is true, but reflectivity explains why the coating might work; it does not show what happened to either temperature.",
+    "D": "Correct. It sets the large surface difference beside the tiny air difference, which is precisely the contrast Vega draws."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

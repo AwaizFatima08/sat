@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0606",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The aye-aye, a lemur found only in Madagascar, searches for food at night in an unusual way. It taps on tree trunks with a long, thin middle finger and listens closely for a hollow sound that reveals a tunnel made by an insect larva. Once the aye-aye ______ a tunnel, it gnaws a hole in the wood and uses the same finger to pull out its meal.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "locates",
+    "B": "seals",
+    "C": "ignores",
+    "D": "widens"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The aye-aye taps and listens for a sound that \"reveals a tunnel.\" The blank describes what happens before it gnaws into the wood, so it must mean finding the tunnel. \"Locates\" fits.",
+    "A": "Correct. Tapping and listening lets the aye-aye find, or locate, a tunnel, and only then does it gnaw into the wood.",
+    "B": "Incorrect. Sealing the tunnel would shut the larva inside, the opposite of opening the wood to pull out a meal.",
+    "C": "Incorrect. The aye-aye taps and listens precisely in order to find tunnels; ignoring one would not lead it to gnaw a hole and pull out a meal.",
+    "D": "Incorrect. The aye-aye opens the wood by gnawing a hole after the blank, so it cannot already have widened the tunnel."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "reversed",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

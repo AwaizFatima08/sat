@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0624",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A car's fuel tank contains 42 liters of fuel, and the car uses 0.065 liter of fuel for each kilometer it travels. The driver wants at least 8 liters of fuel to remain in the tank at the end of a trip. What is the greatest whole number of kilometers the car can travel on the trip?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "523"
+  ],
+  "solution": [
+    "After \\(d\\) kilometers, the fuel left is \\(42 - 0.065d\\) liters.",
+    "Require \\(42 - 0.065d \\ge 8\\): \\(0.065d \\le 34\\), so \\(d \\le 523.07\\).",
+    "The greatest whole number of kilometers is 523. Check: \\(42 - 0.065(523) = 8.005 \\ge 8\\), while 524 km would leave \\(7.94\\) liters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "d = symbols('d')\ns = solve_univariate_inequality(42 - Rational('0.065')*d >= 8, d, relational=False)\nbest = floor(s.sup)\nassert best == 523 and 42 - Rational('0.065')*523 >= 8 and 42 - Rational('0.065')*524 < 8\nassert [Rational(a) for a in spr_answers] == [best]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "523",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

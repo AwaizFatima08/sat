@@ -1,0 +1,57 @@
+{
+  "id": "m-tvd-0605",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A line of best fit for a set of data has a slope of \\(-3\\). The line predicts \\(y = 42\\) when \\(x = 5\\). What value of \\(y\\) does the line predict when \\(x = 9\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(54\\)",
+    "B": "\\(15\\)",
+    "C": "\\(39\\)",
+    "D": "\\(30\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From \\(x = 5\\) to \\(x = 9\\), \\(x\\) increases by 4.",
+    "With slope \\(-3\\), \\(y\\) changes by \\(-3 \\times 4 = -12\\), so the prediction is \\(42 - 12 = 30\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds 12 instead of subtracting it; the slope is negative, so \\(y\\) decreases as \\(x\\) increases.",
+    "B": "Incorrect. This is \\(42 - 3(9)\\), which treats 42 as the \\(y\\)-intercept. The value 42 is the prediction at \\(x = 5\\), not at \\(x = 0\\).",
+    "C": "Incorrect. This subtracts 3 only once. The increase in \\(x\\) is 4, so \\(y\\) changes by \\(-3 \\times 4\\).",
+    "D": "Correct. \\(42 + (-3)(9 - 5) = 30\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "wrong_formula",
+    "C": "stopped_early"
+  },
+  "verify": "x = symbols('x')\nf = -3 * (x - 5) + 42\nr = f.subs(x, 9)\nassert r == 30\nassert value(choices[answer]) == r\nassert all(value(choices[k]) != r for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

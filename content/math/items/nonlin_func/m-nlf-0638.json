@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0638",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is an equivalent form of the equation \\(y = x^{2} + 6x + 1\\) in which the coordinates of the vertex of its graph in the \\(xy\\)-plane appear as constants?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = (x + 3)^{2} - 8\\)",
+    "B": "\\(y = (x + 3)^{2} + 1\\)",
+    "C": "\\(y = (x - 3)^{2} - 8\\)",
+    "D": "\\(y = (x + 3)^{2} + 10\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Complete the square: \\(x^{2} + 6x = (x + 3)^{2} - 9\\).",
+    "So \\(y = (x + 3)^{2} - 9 + 1 = (x + 3)^{2} - 8\\), and the vertex is \\((-3, -8)\\).",
+    "Check by expanding: \\((x + 3)^{2} - 8 = x^{2} + 6x + 9 - 8 = x^{2} + 6x + 1\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\((x + 3)^{2} - 8\\) expands to \\(x^{2} + 6x + 1\\).",
+    "B": "Incorrect. \\((x + 3)^{2}\\) already includes \\(+9\\), which must be subtracted; this expands to \\(x^{2} + 6x + 10\\).",
+    "C": "Incorrect. The sign inside the square is wrong; \\((x - 3)^{2}\\) gives \\(-6x\\), not \\(+6x\\).",
+    "D": "Incorrect. This adds \\(9\\) instead of subtracting it; it expands to \\(x^{2} + 6x + 19\\)."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "x = symbols('x')\nrhs = {k: value(v.split('=')[1]) for k, v in choices.items()}\nok = [k for k in rhs if simplify(rhs[k] - (x**2 + 6*x + 1)) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

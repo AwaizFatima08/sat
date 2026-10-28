@@ -1,0 +1,59 @@
+{
+  "id": "m-lat-0625",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In an isosceles triangle, the measure of one angle is twice the measure of another angle. Which of the following could be the measure, in degrees, of the largest angle of the triangle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(60\\)",
+    "B": "\\(72\\)",
+    "C": "\\(108\\)",
+    "D": "\\(120\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let the two equal base angles measure \\(b^{\\circ}\\) each and the third angle \\(a^{\\circ}\\), with \\(a + 2b = 180\\).",
+    "Case 1: \\(a = 2b\\). Then \\(4b = 180\\), \\(b = 45\\), \\(a = 90\\): the angles are \\(45, 45, 90\\).",
+    "Case 2: \\(b = 2a\\). Then \\(5a = 180\\), \\(a = 36\\), \\(b = 72\\): the angles are \\(36, 72, 72\\).",
+    "The largest angle is either \\(90^{\\circ}\\) or \\(72^{\\circ}\\); of the choices, only 72 is possible."
+  ],
+  "explanation": {
+    "A": "Incorrect. If the largest angle is \\(60^{\\circ}\\), all three angles are \\(60^{\\circ}\\) and no angle is twice another.",
+    "B": "Correct. The triangle with angles \\(36^{\\circ}, 72^{\\circ}, 72^{\\circ}\\) is isosceles, and \\(72 = 2 \\cdot 36\\).",
+    "C": "Incorrect. A largest angle of \\(108^{\\circ}\\) gives base angles of \\(36^{\\circ}\\), and \\(108 = 3 \\cdot 36\\), not twice.",
+    "D": "Incorrect. A largest angle of \\(120^{\\circ}\\) gives base angles of \\(30^{\\circ}\\), and \\(120 = 4 \\cdot 30\\), not twice."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "arithmetic",
+    "D": "arithmetic"
+  },
+  "verify": "poss=set()\nfor b2 in range(1,90):\n    a=180-2*b2\n    if a==2*b2 or b2==2*a: poss.add(max(a,b2))\nassert poss=={72,90}\nassert value(choices[answer]) in poss\nassert all(value(choices[k]) not in poss for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

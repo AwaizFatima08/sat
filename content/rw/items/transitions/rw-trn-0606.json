@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0606",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The dromedary camel is well suited to dry, sandy places. It can close its nostrils tightly, which keeps blowing sand out of its nose during a desert windstorm. ______ the inside of its nose is lined with folds that cool the air the camel breathes out, so that moisture condenses on them and is recovered instead of being lost to the dry desert air.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For example,",
+    "B": "In contrast,",
+    "C": "In addition,",
+    "D": "Therefore,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The second sentence describes one feature of the camel's nose: nostrils that close against sand. The last sentence describes a second, separate feature: folds that recover moisture. A transition that adds another point is needed.",
+    "A": "Incorrect. Recovering moisture is not an example of closing the nostrils against sand; it is a different adaptation.",
+    "B": "Incorrect. \"In contrast\" signals a difference, but both sentences describe features that help the camel in the desert.",
+    "C": "Correct. \"In addition\" adds the moisture-recovering folds to the first feature of the nose already described.",
+    "D": "Incorrect. The folds that recover moisture are not a result of the nostrils closing; they are a separate feature."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

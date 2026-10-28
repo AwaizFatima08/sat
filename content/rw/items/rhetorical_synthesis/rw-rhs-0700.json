@@ -1,0 +1,62 @@
+{
+  "id": "rw-rhs-0700",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "Bats and birds both fly by flapping their wings, and both can change direction quickly in flight.",
+    "A bat's wing is a thin membrane stretched across long finger bones.",
+    "A bird's wing is covered in feathers attached to its arm and hand bones.",
+    "Bats and birds evolved the ability to fly independently, from different ancestors.",
+    "Bats are mammals, and their young are born alive and nurse on milk."
+  ],
+  "data": null,
+  "stem": "The student wants to emphasize a similarity between bats and birds. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "Bats are mammals, and their young are born alive and nurse on milk.",
+    "B": "Although bats and birds evolved flight independently, both use flapping wings to change direction quickly in the air.",
+    "C": "Bats use their wings to change direction quickly in flight.",
+    "D": "A bat's wing is a thin membrane stretched across long finger bones, while a bird's wing is covered in feathers attached to its arm and hand bones."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The goal is to emphasize a similarity. Only the key names a similarity that the notes support, while the other choices describe differences, cover only one animal, or use facts that do not bear on the goal.",
+    "A": "Incorrect. This sentence is accurate and comes from the notes, but it says nothing about flight or about a similarity in how the two animals move.",
+    "B": "Correct. The sentence states a similarity between bats and birds, that both fly with flapping wings and change direction quickly. It also uses the notes' fact that the two groups evolved flight independently.",
+    "C": "Incorrect. This sentence describes only bats. It gives half of the similarity, not the comparison the student wants to make.",
+    "D": "Incorrect. This sentence accurately describes the wings, but it emphasizes how the two wings differ. The student's goal is to emphasize a similarity."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "too_narrow",
+    "D": "misses_goal"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "D says both use flapping wings to change direction, which slightly stretches the notes (they say both can change direction, not that flapping does it).",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

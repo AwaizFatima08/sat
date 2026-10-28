@@ -1,0 +1,43 @@
+{
+  "id": "m-le2-0616",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A print shop uses 0.2 milliliters of ink for each text page and 0.5 milliliters of ink for each photo page. The shop uses all 60 milliliters of ink in a new cartridge to print exactly 150 text pages and \\(y\\) photo pages. What is the value of \\(y\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "60"
+  ],
+  "solution": [
+    "The ink used is \\(0.2(150) + 0.5y = 60\\).",
+    "\\(30 + 0.5y = 60\\), so \\(0.5y = 30\\) and \\(y = 60\\)."
+  ],
+  "verify": "y = symbols('y')\nsol = solve(Eq(Rational(2, 10)*150 + Rational(5, 10)*y, 60), y)\nassert sol == [60]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "60",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

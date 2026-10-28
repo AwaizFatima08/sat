@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0610",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A bus company runs a 45-seat bus from Peshawar to Islamabad. Each ticket costs 850 rupees, and the company needs at least 25,000 rupees in ticket sales from a trip to cover the cost of the trip. Which of the following gives all possible numbers of tickets \\(t\\) the company can sell for one trip that covers its cost?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(29 \\le t \\le 45\\)",
+    "B": "\\(t \\ge 30\\)",
+    "C": "\\(0 \\le t \\le 29\\)",
+    "D": "\\(30 \\le t \\le 45\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Ticket sales of \\(t\\) tickets are \\(850t\\) rupees, so \\(850t \\ge 25{,}000\\) gives \\(t \\ge 29.4\\).",
+    "The number of tickets is a whole number, so at least 30 tickets must be sold (29 tickets bring in only 24,650 rupees).",
+    "The bus has 45 seats, so \\(t \\le 45\\). Together, \\(30 \\le t \\le 45\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(850 \\times 29 = 24{,}650\\), which is less than 25,000. Rounding 29.4 down gives a number of tickets that does not cover the cost.",
+    "B": "Incorrect. This ignores the 45 seats on the bus; more than 45 tickets cannot be sold.",
+    "C": "Incorrect. This reverses the inequality: these are the numbers of tickets that do NOT cover the cost.",
+    "D": "Correct. At least 30 tickets (since \\(850 \\times 30 = 25{,}500\\)) and at most 45 tickets."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "stopped_early",
+    "C": "sign_error"
+  },
+  "verify": "ok = [k for k in range(0, 46) if 850*k >= 25000]\nassert ok == list(range(30, 46))\nparts = choices[answer].strip('\\\\() ').split('\\\\le')\nassert len(parts) == 3 and Rational(parts[0]) == 30 and Rational(parts[2]) == 45 and parts[1].strip() == 't'\nassert all(choices[k] != choices[answer] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

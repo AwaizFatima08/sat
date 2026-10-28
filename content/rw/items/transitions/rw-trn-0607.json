@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0607",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "At an exhibition in New York in 1854, the inventor Elisha Otis stood on a raised platform held up by a single rope and ordered the rope cut. The crowd expected the platform to crash, but a safety brake caught it after it dropped only a few inches. ______ Otis sold his safety elevators to one building owner after another, and in 1857 the first passenger elevator with his brake opened in a New York store.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For example,",
+    "B": "Afterward,",
+    "C": "Likewise,",
+    "D": "Nevertheless,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The text tells a story in time order. First Otis performs his demonstration in 1854; then he sells elevators, and the first passenger elevator opens in 1857. A transition that shows the next stage in a sequence is needed.",
+    "A": "Incorrect. Selling elevators is not an example of the demonstration; it is what happened after it.",
+    "B": "Correct. \"Afterward\" shows that the sales and the 1857 passenger elevator came after the 1854 demonstration.",
+    "C": "Incorrect. \"Likewise\" signals a similar point, but selling elevators is a later event, not a parallel to the demonstration.",
+    "D": "Incorrect. \"Nevertheless\" signals that something happened despite the previous point, but the demonstration's success helped Otis sell elevators."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

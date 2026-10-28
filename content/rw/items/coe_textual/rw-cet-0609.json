@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0609",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Houseplants are often said to clean the air inside homes. The idea comes from experiments in which plants placed in small sealed chambers removed certain pollutants from the air over several hours. Based on these results, a popular magazine claims that keeping a few houseplants in a room will noticeably improve the air that people breathe there.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly weaken the magazine's claim?",
+  "choices": {
+    "A": "People who keep houseplants often report that they feel more relaxed and cheerful at home.",
+    "B": "In ordinary rooms, outside air leaking in through windows and doors replaces the room's air far faster than plants can clean it.",
+    "C": "Rooms with many houseplants were found to have lower pollutant levels than similar rooms with no plants at all.",
+    "D": "Plants in sealed chambers removed more pollutants when the chambers were brightly lit than when they were dim."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The magazine moves from sealed chambers to real rooms. The claim is weakened by a finding that shows why the chamber results do not carry over: in an ordinary room, fresh air replaces the room's air much faster than plants can act, so the plants' effect would be too small to notice.",
+    "A": "Incorrect. Feeling relaxed is a different benefit and says nothing about air quality.",
+    "B": "Correct. If the room's air is replaced before plants can clean it, a few houseplants would make no noticeable difference, which undercuts the claim.",
+    "C": "Incorrect. This would support the magazine's claim, not weaken it.",
+    "D": "Incorrect. This adds detail about the chamber experiments but does not show whether plants help in a real room."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

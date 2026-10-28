@@ -1,0 +1,57 @@
+{
+  "id": "m-lfn-0602",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A parking garage charges \\(P(h) = 3h + 2\\) dollars for a car that is parked for \\(h\\) hours. Which of the following is the best interpretation of the number 2 in this context?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The garage charges 2 dollars for each hour a car is parked.",
+    "B": "The garage charges a fixed 2 dollars in addition to the charge for each hour.",
+    "C": "The garage charges 3 dollars in addition to 2 dollars for each hour a car is parked.",
+    "D": "A car can be parked in the garage for at most 2 hours."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "In \\(P(h) = 3h + 2\\), the term \\(3h\\) grows with the number of hours, so 3 dollars is the charge per hour.",
+    "The constant 2 is added no matter how many hours the car is parked, so it is a fixed charge of 2 dollars."
+  ],
+  "explanation": {
+    "A": "Incorrect. The charge for each hour is the coefficient of \\(h\\), which is 3 dollars, not 2.",
+    "B": "Correct. The constant term 2 is the charge when \\(h = 0\\): a fixed amount that does not depend on the number of hours.",
+    "C": "Incorrect. This swaps the roles of the two numbers: 3 is the hourly charge and 2 is the fixed charge.",
+    "D": "Incorrect. Nothing in the function limits the number of hours; 2 is a dollar amount, not a number of hours."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "h = symbols('h')\nP = 3*h + 2\nassert P.subs(h, 0) == 2 and diff(P, h) == 3\nkey = 'fixed 2 dollars'\nassert key in choices[answer]\nassert sum(key in c for c in choices.values()) == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

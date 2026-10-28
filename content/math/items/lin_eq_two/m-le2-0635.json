@@ -1,0 +1,89 @@
+{
+  "id": "m-le2-0635",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Line \\(\\ell\\) is shown in the \\(xy\\)-plane. Line \\(m\\) (not shown) has the same \\(x\\)-intercept as line \\(\\ell\\), and the slope of line \\(m\\) is twice the slope of line \\(\\ell\\). What is the \\(y\\)-coordinate of the \\(y\\)-intercept of line \\(m\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -6,
+      4
+    ],
+    "y": [
+      -3,
+      9
+    ],
+    "curves": [
+      {
+        "expr": "3*x/2 + 6",
+        "label": "ℓ"
+      }
+    ],
+    "points": [
+      {
+        "x": -4,
+        "y": 0,
+        "label": "(-4, 0)"
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "label": "(0, 6)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6\\)",
+    "B": "\\(3\\)",
+    "C": "\\(-12\\)",
+    "D": "\\(12\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Line \\(\\ell\\) passes through \\((-4, 0)\\) and \\((0, 6)\\): slope \\(\\frac{3}{2}\\).",
+    "Line \\(m\\) has slope \\(3\\) and passes through \\((-4, 0)\\): \\(y = 3(x + 4)\\).",
+    "At \\(x = 0\\), \\(y = 12\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. 6 is the \\(y\\)-intercept of line \\(\\ell\\); doubling the slope from the same \\(x\\)-intercept doubles it.",
+    "B": "Incorrect. 3 is the slope of line \\(m\\), not its \\(y\\)-intercept.",
+    "C": "Incorrect. \\(3(0 + 4) = 12\\), which is positive.",
+    "D": "Correct. Line \\(\\ell\\) has slope \\(\\frac{6}{4} = \\frac{3}{2}\\) and \\(x\\)-intercept \\(-4\\); line \\(m\\) is \\(y = 3(x + 4)\\), so its \\(y\\)-intercept is 12."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "C": "sign_error"
+  },
+  "verify": "x = symbols('x')\np = figure['points']\nml = Rational(p[1]['y'] - p[0]['y'], p[1]['x'] - p[0]['x'])\nxi = [q['x'] for q in p if q['y'] == 0][0]\nb = (2*ml*(x - xi)).subs(x, 0)\nassert b == 12\nassert value(choices[answer]) == b\nassert all(value(choices[k]) != b for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

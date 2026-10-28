@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0626",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A ship's navigator sailing at night along a coast with several lighthouses faces a problem: one steady light looks much like another, and mistaking one lighthouse for its neighbor can send a ship onto the rocks. By the nineteenth century, lighthouse authorities had begun giving each lighthouse its own pattern, or \"character,\" of flashes, such as one flash every five seconds or two quick flashes every fifteen seconds, and printing these patterns in lists that ships carried. The adoption of distinctive flash patterns suggests that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "navigators of the period relied on lighthouses to tell them when to drop anchor.",
+    "B": "lighthouses with steady lights were no longer needed to warn ships away from the coast.",
+    "C": "a navigator could identify a particular lighthouse by timing its flashes and consulting the list.",
+    "D": "ships of the period could not carry charts of the coast they were sailing along."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The problem was that lights looked alike. Giving each lighthouse a unique timed pattern, and giving ships a list of the patterns, solves exactly that problem: the navigator times the flashes, looks up the pattern, and knows which lighthouse it is.",
+    "A": "Incorrect. The text concerns identifying lighthouses, not anchoring.",
+    "B": "Incorrect. The text says nothing about removing lighthouses or that warning ships off the coast was no longer necessary.",
+    "C": "Correct. Unique patterns plus a printed list let the navigator match a flashing light to a specific lighthouse.",
+    "D": "Incorrect. The text mentions printed lists of patterns carried by ships; it says nothing about charts being unavailable."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

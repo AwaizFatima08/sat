@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0647",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[2x + 3y = a\\] \\[4x + 6y = 18\\] In the system of equations above, \\(a\\) is a constant. If the system has infinitely many solutions, what is the value of \\(x + 1.5y\\) for every solution \\((x, y)\\) of the system?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9\\)",
+    "B": "\\(4.5\\)",
+    "C": "\\(18\\)",
+    "D": "\\(3\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Infinitely many solutions means the equations describe the same line, so \\(4x + 6y = 18\\) must be 2 times \\(2x + 3y = a\\): \\(18 = 2a\\) and \\(a = 9\\).",
+    "Every solution satisfies \\(2x + 3y = 9\\).",
+    "Divide by 2: \\(x + 1.5y = 4.5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(a\\), that is, of \\(2x + 3y\\); the question asks for \\(x + 1.5y\\), which is half of that.",
+    "B": "Correct. Infinitely many solutions forces \\(a = 9\\); then \\(2x + 3y = 9\\), and dividing by 2 gives \\(x + 1.5y = 4.5\\).",
+    "C": "Incorrect. This is the value of \\(4x + 6y\\), which is 4 times \\(x + 1.5y\\).",
+    "D": "Incorrect. This is the result of an arithmetic slip; \\(9 \\div 2 = 4.5\\), not 3."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "x, y, a = symbols('x y a')\nav = [v for v in range(-30, 31) if len(linsolve([2*x + 3*y - v, 4*x + 6*y - 18], [x, y]).free_symbols) > 0]\nassert av == [9]\nS = linsolve([2*x + 3*y - 9, 4*x + 6*y - 18], [x, y])\n(px, py), = S\nv = simplify(px + Rational(3, 2)*py)\nassert v == Rational(9, 2)\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

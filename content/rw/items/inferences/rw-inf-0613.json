@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0613",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Plants respond to being touched. In a greenhouse experiment, botanist Anneli Virtanen grew two sets of young bean plants under identical light, water, and soil conditions. For a few seconds each day, she gently brushed the stems of one set by hand and left the other set untouched. After three weeks, the brushed plants were noticeably shorter and had thicker stems than the untouched ones. Wind pushes on a stem in much the same way that a hand does. Virtanen's results therefore suggest that, all else being equal, bean plants growing in a sheltered spot ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "would be more likely to be damaged by being touched than wind-exposed plants.",
+    "B": "would likely grow taller than bean plants exposed to frequent wind.",
+    "C": "would likely develop thicker stems than bean plants exposed to frequent wind.",
+    "D": "would need more light and water than bean plants exposed to frequent wind."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Brushing made the plants shorter and thicker, and the text says wind acts on stems the way brushing does. So wind-exposed plants should resemble the brushed plants, and sheltered plants should resemble the untouched ones, which were taller.",
+    "A": "Incorrect. The text does not describe touching as damaging; it describes a change in growth.",
+    "B": "Correct. Sheltered plants match the untouched set, which grew taller than the brushed set.",
+    "C": "Incorrect. Thicker stems went with brushing, so wind-exposed plants, not sheltered ones, should have thicker stems.",
+    "D": "Incorrect. Light and water were kept the same in the experiment, so nothing suggests different needs."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

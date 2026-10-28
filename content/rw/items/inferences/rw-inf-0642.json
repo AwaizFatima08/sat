@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0642",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "A windcatcher is a tall shaft rising above a house's roof, with openings near the top that capture breezes and channel them down into the rooms below. In the Iranian city of Yazd, most old windcatchers have openings on four or more sides, each of which must be closed with a shutter whenever the wind blows from a different quarter. In Hyderabad, in Sindh, Pakistan, travelers in the 1800s described a skyline crowded with thousands of windcatchers, nearly all with a single opening and nearly all facing the same way, toward the southwest. Architectural historian Faiza Siddiqui observes that a one-sided windcatcher is useless whenever the wind comes from any other direction. The contrast between the two cities therefore suggests that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "Hyderabad's windcatchers had to be closed with shutters more often than those of Yazd.",
+    "B": "the windcatchers of Hyderabad cooled houses more effectively than those of Yazd.",
+    "C": "builders in Hyderabad could count on breezes from one steady direction, whereas builders in Yazd could not.",
+    "D": "the builders of Yazd did not realize that a single opening could capture a breeze."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "A windcatcher with one opening works only when the wind blows from that direction. Thousands of them all facing southwest would be pointless unless Hyderabad's wind reliably came from the southwest. Yazd's many-sided designs, with shutters for shifting winds, suggest the opposite situation there.",
+    "A": "Incorrect. The text describes shutters on Yazd's many-sided windcatchers, not on Hyderabad's single-opening ones.",
+    "B": "Incorrect. The text compares the designs' orientation, not how well either city's windcatchers cooled rooms.",
+    "C": "Correct. A one-sided windcatcher pays off only if the wind reliably comes from that side; many-sided ones with shutters make sense where the wind shifts.",
+    "D": "Incorrect. Yazd's many-sided towers answer shifting winds; the text gives no reason to think its builders lacked knowledge."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

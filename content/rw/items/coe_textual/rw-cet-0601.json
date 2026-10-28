@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0601",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Maple seeds, called samaras, have a single thin wing that makes them spin like a tiny helicopter as they fall. Spinning slows the seed's descent and gives the wind more time to carry it away from the parent tree. Botanist Priya Raman hypothesizes that the slower a samara falls, the farther from its parent tree it will land.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Raman's hypothesis?",
+  "choices": {
+    "A": "Samaras with torn or damaged wings fall faster than samaras whose wings are intact and undamaged.",
+    "B": "In a field test, the samaras that fell most slowly were found farthest from the tree that dropped them.",
+    "C": "Maple trees growing in open fields produce more samaras than trees in dense forests.",
+    "D": "The samaras that fell most slowly landed just as close to the tree as those that fell fastest."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Raman's hypothesis connects two things: how slowly a samara falls and how far from the tree it lands. The best support is a finding that measures both and shows that slower seeds land farther away. Only one choice reports that connection.",
+    "A": "Incorrect. This tells us what makes a samara fall faster, but not whether falling speed affects how far it travels.",
+    "B": "Correct. This directly links slower falling to greater distance, which is exactly what Raman predicts.",
+    "C": "Incorrect. The number of seeds a tree makes has nothing to do with how far each seed travels.",
+    "D": "Incorrect. If slow and fast samaras landed at the same distance, falling speed would not matter, which goes against the hypothesis."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

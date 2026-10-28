@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0601",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Sea otters sleep floating on their backs at the surface of the ocean, where currents could easily carry a resting animal far out to sea. To avoid this, an otter often wraps itself in long strands of kelp before it dozes off. Because the kelp is rooted to the seafloor, it works like ______, holding the otter in place until it wakes.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "an anchor",
+    "B": "an alarm",
+    "C": "a blanket",
+    "D": "an obstacle"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The kelp is \"rooted to the seafloor\" and keeps the otter from being carried away by \"holding the otter in place.\" Something that keeps a floating object from drifting is an anchor, so \"anchor\" fits.",
+    "A": "Correct. An anchor keeps a floating object from drifting, which matches kelp that is \"rooted to the seafloor\" and holds the otter \"in place.\"",
+    "B": "Incorrect. Nothing in the text says the kelp warns the otter of anything; it simply stops the otter from drifting.",
+    "C": "Incorrect. The otter does wrap itself in kelp, but the text says the kelp's job is to hold the otter in place, not to keep it warm.",
+    "D": "Incorrect. An obstacle is something in the way. The kelp is not blocking the otter; it is keeping the otter where it is."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "wrong_tone",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

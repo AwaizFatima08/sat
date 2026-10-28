@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0645",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When his parents told him he would spend July with his great-aunt Honorine, who had taught piano for forty years, Emile pictured a month of scales played under a ticking metronome and a stern voice counting time. He packed his suitcase slowly, as if delay might change the plan. ______ his great-aunt let him choose the pieces, laughed when he improvised, and sometimes abandoned the lesson entirely to tell stories about concerts she had heard as a girl.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Therefore,",
+    "B": "For example,",
+    "C": "Instead,",
+    "D": "Likewise,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The first two sentences describe what Emile expected: scales, a metronome, and a stern voice. The last sentence describes what he actually got, which replaced those expectations with something quite different. A transition that signals one thing happening in place of another is needed.",
+    "A": "Incorrect. Emile's slow packing did not cause his great-aunt to teach gently. This is tempting because the last sentence follows the packing in time.",
+    "B": "Incorrect. Choosing pieces and hearing stories are not examples of the stern lessons Emile pictured.",
+    "C": "Correct. \"Instead\" shows that, in place of the strict lessons Emile feared, he got relaxed and friendly ones.",
+    "D": "Incorrect. The real lessons were not like the ones Emile imagined; they were the opposite of them."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

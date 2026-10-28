@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0682",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Old Mr. Vashti had drawn maps for forty years in a shop whose windows had not been washed in ten, and when the notice of closure appeared in the newspaper, his few remaining customers assumed that he had at last been defeated by the printed atlases that sold for less than the paper he drew on. ______ the closing was entirely his own idea, arrived at on a morning in April when he found that he could no longer make out the hairline of a contour without a glass, and he had placed the notice himself, having first drawn, with the glass, a last map of the street on which the shop stood.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Afterward,",
+    "B": "Likewise,",
+    "C": "Even so,",
+    "D": "In fact,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The first sentence reports what the customers assumed: that Mr. Vashti had been forced out by cheaper competition. The second sentence corrects that assumption: the decision was his own, made for a private reason. The transition must introduce the correction of the customers' belief.",
+    "A": "Incorrect. \"Afterward\" introduces a later event, but the sentence does not describe what happened after the assumption; it explains what was actually true all along.",
+    "B": "Incorrect. The true explanation is not parallel to the customers' assumption; it contradicts it.",
+    "C": "Incorrect. \"Even so\" would mean the closing was his idea in spite of the customers' assumption, but the sentence does not concede their view; it replaces it with the truth.",
+    "D": "Correct. \"In fact\" introduces the real reason for the closing, correcting what the customers assumed."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

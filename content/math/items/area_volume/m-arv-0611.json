@@ -1,0 +1,57 @@
+{
+  "id": "m-arv-0611",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A pile of sand at a construction site in Hyderabad is shaped like a right circular cone with a base radius of 3 meters and a height of 2 meters. Which of the following is closest to the volume of the pile, in cubic meters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(75\\)",
+    "B": "\\(28\\)",
+    "C": "\\(19\\)",
+    "D": "\\(57\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Volume of a cone: \\(\\frac{1}{3}\\pi r^{2}h = \\frac{1}{3}\\pi(3^{2})(2) = 6\\pi\\).",
+    "\\(6\\pi \\approx 18.8\\), so the closest choice is \\(19\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is about \\(24\\pi\\), from using \\(6\\) (the diameter) as the radius.",
+    "B": "Incorrect. This is about \\(9\\pi\\), from using \\(\\frac{1}{2}\\) instead of \\(\\frac{1}{3}\\) in the cone formula.",
+    "C": "Correct. \\(\\frac{1}{3}\\pi(9)(2) = 6\\pi \\approx 18.8\\).",
+    "D": "Incorrect. This is about \\(18\\pi\\), the volume of a cylinder with the same base and height; a cone is one third of that."
+  },
+  "traps": {
+    "A": "radius_diameter",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "ans=Rational(1,3)*pi*3**2*2\nassert ans==6*pi\nbest=min(choices,key=lambda k:abs(N(value(choices[k])-ans)))\nassert best==answer\nassert abs(N(value(choices[answer])-ans))<0.5\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

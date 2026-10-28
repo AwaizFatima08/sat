@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0618",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Over three days, Ibrahim cycled a total of 61 kilometers. On the second day he cycled 5 kilometers more than on the first day, and on the third day he cycled twice as far as on the first day. How many kilometers did Ibrahim cycle on the first day?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(19\\)",
+    "B": "\\(14\\)",
+    "C": "\\(28\\)",
+    "D": "\\(16.5\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(d\\) be the first day's distance. Then the distances are \\(d\\), \\(d + 5\\), and \\(2d\\).",
+    "\\(d + (d + 5) + 2d = 61\\), so \\(4d + 5 = 61\\).",
+    "Then \\(4d = 56\\) and \\(d = 14\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the second day's distance, \\(14 + 5\\).",
+    "B": "Correct. \\(4d + 5 = 61\\) gives \\(d = 14\\). Check: \\(14 + 19 + 28 = 61\\).",
+    "C": "Incorrect. This is the third day's distance, \\(2(14)\\).",
+    "D": "Incorrect. This is the result of adding 5 to 61 instead of subtracting it: \\(4d = 66\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_quantity",
+    "D": "sign_error"
+  },
+  "verify": "d = symbols('d')\ns = solve(Eq(d + (d + 5) + 2*d, 61), d)[0]\nassert s == 14\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0670",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the late 1960s, the Chinese pharmacologist Tu Youyou joined a government project to find new treatments for malaria, which had grown resistant to existing drugs. Her team screened hundreds of remedies from traditional medicine, and an extract of sweet wormwood showed promise, but the results were inconsistent. Noticing that a fourth-century handbook advised soaking the plant in cold water and wringing out the juice rather than boiling it, ______ Tested in 1971, the new extract cleared malaria parasites from infected animals, and its active compound, later named artemisinin, became the basis of the most effective antimalarial drugs in use today.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "Tu suspected that heat was destroying the active ingredient and switched to a low-temperature method of extraction.",
+    "B": "the active ingredient, Tu suspected, was being destroyed by heat, and she switched to a low-temperature method of extraction.",
+    "C": "heat, Tu suspected, was destroying the active ingredient, so a low-temperature method of extraction was adopted.",
+    "D": "Tu's suspicion was that heat was destroying the active ingredient, and a low-temperature method of extraction replaced boiling."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The sentence opens with the modifier \"Noticing that a fourth-century handbook advised…,\" which describes someone who noticed. The main clause must begin with that person, Tu, as its subject. Only one choice does.",
+    "A": "Correct. \"Tu\" is the subject right after the modifier, so it is she who noticed the handbook's advice.",
+    "B": "Incorrect. This makes \"the active ingredient\" the subject, so the modifier wrongly says that the ingredient noticed the advice.",
+    "C": "Incorrect. This makes \"heat\" the subject, so the modifier wrongly says that heat noticed the handbook's advice.",
+    "D": "Incorrect. This makes \"Tu's suspicion\" the subject, so the modifier wrongly describes the suspicion, not Tu, as noticing the advice."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "modifier",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

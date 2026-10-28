@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0632",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The Chaukhandi tombs, a cluster of graves on the outskirts of Karachi, Pakistan, were built mostly between the fifteenth and eighteenth centuries. The tombs are made of sandstone slabs stacked in stepped layers and carved with dense geometric and floral patterns. Historians note that many stones also show horses, swords, or jewelry; because ______ appear on the graves of men and women in different combinations, these details may have signaled the rank or trade of the person buried below.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "it",
+    "B": "one",
+    "C": "they",
+    "D": "this"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The things that \"appear on the graves ... in different combinations\" are the \"horses, swords, or jewelry\" just mentioned, a plural set. The verb \"appear\" is also plural, so the blank needs the plural subject pronoun \"they.\"",
+    "A": "Incorrect. \"It\" is singular, but the antecedent (\"horses, swords, or jewelry\") and the verb \"appear\" are plural.",
+    "B": "Incorrect. \"One\" is singular and would need \"appears\"; it also leaves unclear which single item is meant.",
+    "C": "Correct. The plural pronoun \"they\" refers to the horses, swords, and jewelry and agrees with \"appear.\"",
+    "D": "Incorrect. \"This\" is singular and does not fit the plural verb \"appear\" or the plural antecedent."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "pronoun",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0651",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Marine insurance premiums, the fees that merchants paid underwriters to cover a voyage against loss, survive in large numbers from the eighteenth century, and economic historians have used them as a gauge of how dangerous particular routes were: the higher the risk of shipwreck or capture, the reasoning goes, the higher the premium. Historian Daniel Achterberg examined premiums charged on a route through waters troubled by pirates. Between 1718 and 1730 the premiums fell by nearly half, even though the number of ships reported taken on the route each year hardly changed. Achterberg also found that a new insurance exchange opened in the port in 1721 and that the number of underwriters competing for business there roughly tripled over the following decade. His findings suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the pirates became less active after 1721, which allowed underwriters to lower their rates.",
+    "B": "premiums are a reliable gauge of risk only on routes where no pirates were active.",
+    "C": "the fall in premiums may reflect competition among underwriters rather than any decline in the dangers of the route.",
+    "D": "underwriters knew less about the route's dangers after the exchange opened than they had before."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "If premiums tracked danger, they should have stayed level, since ships were being taken at the same rate throughout. Instead they fell, and the fall coincides with a tripling of underwriters competing for the same business. Competition offers a reason for lower prices that has nothing to do with risk, which is why the premiums cannot simply be read as a gauge of danger.",
+    "A": "Incorrect. The text states that the number of ships taken each year hardly changed.",
+    "B": "Incorrect. The text questions the gauge because of competition, which could affect premiums on any route, pirates or not.",
+    "C": "Correct. Captures held steady while the number of underwriters tripled, so cheaper premiums point to rivals undercutting one another, not to safer seas.",
+    "D": "Incorrect. The text says nothing about what underwriters knew; it reports how many of them there were."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "too_broad",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0602",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A vending machine at a train station holds 48 bottles, each of which is either water or juice. The machine holds 3 times as many bottles of water as bottles of juice. How many bottles of juice does the machine hold?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(36\\)",
+    "B": "\\(12\\)",
+    "C": "\\(16\\)",
+    "D": "\\(24\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(w\\) be the number of water bottles and \\(j\\) the number of juice bottles: \\(w + j = 48\\) and \\(w = 3j\\).",
+    "Substitute: \\(3j + j = 48\\), so \\(4j = 48\\) and \\(j = 12\\).",
+    "(Then \\(w = 36\\), and \\(36 + 12 = 48\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the number of water bottles, \\(3(12) = 36\\), not the number of juice bottles.",
+    "B": "Correct. If \\(j\\) is the number of juice bottles, then \\(j + 3j = 48\\), so \\(j = 12\\).",
+    "C": "Incorrect. This divides 48 by 3, but the water bottles are 3 times the juice bottles, so the total is 4 times the juice bottles.",
+    "D": "Incorrect. This splits the bottles equally, ignoring that there are 3 times as many water bottles as juice bottles."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "w, j = symbols('w j')\nsol = solve([w + j - 48, w - 3*j], [w, j])\nassert sol == {w: 36, j: 12}\nassert value(choices[answer]) == 12\nassert all(value(choices[k]) != 12 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

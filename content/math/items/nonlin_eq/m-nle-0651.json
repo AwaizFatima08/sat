@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0651",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "In a cricket league in Bangladesh, every team plays every other team exactly once. If the league has \\(n\\) teams, the total number of matches played is \\(\\frac{n(n - 1)}{2}\\). A season of the league had 45 matches in all. How many teams were in the league?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10\\)",
+    "B": "\\(9\\)",
+    "C": "\\(45\\)",
+    "D": "\\(90\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Set the number of matches equal to 45: \\(\\frac{n(n - 1)}{2} = 45\\), so \\(n(n - 1) = 90\\).",
+    "Rearrange: \\(n^{2} - n - 90 = 0\\), which factors as \\((n - 10)(n + 9) = 0\\).",
+    "The number of teams must be positive, so \\(n = 10\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(n(n - 1) = 90\\) gives \\(n^{2} - n - 90 = 0\\), so \\(n = 10\\) (the other root, \\(-9\\), is not a number of teams).",
+    "B": "Incorrect. This is the result of using \\(\\frac{n(n + 1)}{2}\\) for the number of matches; with \\(n\\) teams each team plays \\(n - 1\\) others, not \\(n + 1\\).",
+    "C": "Incorrect. This is the result of treating the number of matches as the number of teams instead of solving \\(\\frac{n(n - 1)}{2} = 45\\).",
+    "D": "Incorrect. This is the result of doubling 45 to get \\(n(n - 1) = 90\\) and stopping there; 90 is \\(n(n - 1)\\), not \\(n\\)."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "n = symbols('n')\nsols = solve(Eq(n*(n - 1)/2, 45), n)\nassert sorted(sols) == [-9, 10]\nassert value(choices[answer]) == 10\nassert all(value(choices[k]) != 10 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

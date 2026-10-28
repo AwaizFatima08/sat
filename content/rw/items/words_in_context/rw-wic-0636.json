@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0636",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Tree-ring dating works by matching the pattern of wide and narrow rings in a piece of wood against a reference sequence built from thousands of samples. In a good year a tree adds a wide ring; in a drought, a narrow one. Because the sequence of good and bad years in a region is ______, a stretch of forty or fifty rings will usually fit the reference in only one place, fixing the year each ring grew. The method does have a limit: if a beam was trimmed before use, its outermost rings are lost, and the felling date can only be estimated.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "repetitive",
+    "B": "gradual",
+    "C": "distinctive",
+    "D": "predictable"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The clause after the blank says a run of rings \"will usually fit the reference in only one place.\" That is possible only if the pattern of good and bad years is unique enough not to be confused with any other stretch of years, so the blank needs a word meaning \"unlike any other\": \"distinctive.\"",
+    "A": "Incorrect. A repeating pattern would fit the reference in many places, which is the opposite of what the sentence says.",
+    "B": "Incorrect. The text describes sharp year-to-year differences (wide ring, narrow ring), not slow change.",
+    "C": "Correct. A distinctive pattern matches the reference in only one position, which is what allows an exact date.",
+    "D": "Incorrect. If the sequence of years could be predicted, it would not need matching; the method depends on the pattern being unique, not foreseeable."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

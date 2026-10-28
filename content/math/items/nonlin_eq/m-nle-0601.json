@@ -1,0 +1,57 @@
+{
+  "id": "m-nle-0601",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is a solution to the equation \\(2x^{2} - 18 = 0\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-3\\)",
+    "B": "\\(9\\)",
+    "C": "\\(-9\\)",
+    "D": "\\(3\\sqrt{2}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Add 18 to both sides and divide by 2: \\(x^{2} = 9\\).",
+    "So \\(x = 3\\) or \\(x = -3\\). Only \\(-3\\) is a choice."
+  ],
+  "explanation": {
+    "A": "Correct. \\(2(-3)^{2} - 18 = 18 - 18 = 0\\).",
+    "B": "Incorrect. This is the value of \\(x^{2}\\), not of \\(x\\).",
+    "C": "Incorrect. This is the result of treating \\(x^{2}\\) as if it were \\(2x\\), solving \\(2x = 18\\) and then changing the sign.",
+    "D": "Incorrect. This is the result of taking the square root of 18 without first dividing by 2."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "x = symbols('x')\nsols = solve(Eq(2*x**2 - 18, 0), x)\nassert set(sols) == {-3, 3}\nassert value(choices[answer]) in sols\nassert all(value(choices[k]) not in sols for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

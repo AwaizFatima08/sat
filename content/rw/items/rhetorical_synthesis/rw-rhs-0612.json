@@ -1,0 +1,61 @@
+{
+  "id": "rw-rhs-0612",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "The peregrine falcon is a bird of prey found on every continent except Antarctica.",
+    "It hunts other birds, usually catching them in the air.",
+    "In level flight, a peregrine falcon typically flies at about 65 to 90 kilometers per hour.",
+    "When it dives toward prey, it can reach speeds of more than 300 kilometers per hour, making it the fastest animal on Earth."
+  ],
+  "data": null,
+  "stem": "The student wants to emphasize how much faster the peregrine falcon's dive is than its level flight. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "When a peregrine falcon dives toward prey, it can reach speeds of more than 300 kilometers per hour, making it the fastest animal on Earth.",
+    "B": "The peregrine falcon, found on every continent except Antarctica, hunts other birds and usually catches them in the air.",
+    "C": "Although a peregrine falcon typically flies at about 65 to 90 kilometers per hour in level flight, it can reach more than 300 kilometers per hour when it dives toward prey.",
+    "D": "In level flight, a peregrine falcon typically flies at about 65 to 90 kilometers per hour."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The goal is a comparison between two speeds, so the key must give both: the level-flight speed and the dive speed. Only one choice sets the two figures against each other.",
+    "A": "Incorrect. This gives the dive speed but not the level-flight speed, so no comparison is made.",
+    "B": "Incorrect. This describes where the falcon lives and how it hunts, not its speed.",
+    "C": "Correct. \"Although\" contrasts the ordinary speed of 65 to 90 kilometers per hour with the dive speed of more than 300.",
+    "D": "Incorrect. This gives only the slower speed and says nothing about the dive."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "D": "misses_goal"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

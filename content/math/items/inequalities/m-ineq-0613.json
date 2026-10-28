@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0613",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A tutoring center charges a one-time registration fee of \\$35 plus \\$18 per lesson. Marcus wants to spend at most \\$250 at the center. The inequality \\(35 + 18n \\le 250\\) represents this situation, where \\(n\\) is the number of lessons. Which of the following is the best interpretation of the solution set of this inequality?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Marcus can afford at most 11 lessons.",
+    "B": "Marcus can afford at most 12 lessons.",
+    "C": "Each lesson costs Marcus at most \\$11.90.",
+    "D": "Marcus must take at least 11 lessons."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Subtract 35: \\(18n \\le 215\\), so \\(n \\le 11.94\\).",
+    "The number of lessons is a whole number, so the greatest number Marcus can afford is 11.",
+    "Check: 11 lessons cost \\(35 + 198 = 233\\) dollars; 12 lessons cost \\(251\\) dollars, which is over the limit."
+  ],
+  "explanation": {
+    "A": "Correct. \\(n \\le 11.94\\), and since lessons are whole, Marcus can afford at most 11 lessons.",
+    "B": "Incorrect. 12 lessons would cost \\(35 + 18(12) = 251\\) dollars, which is more than \\$250. The decimal 11.94 must be rounded down, not up.",
+    "C": "Incorrect. The solution set describes the number of lessons; the cost per lesson is the fixed \\$18.",
+    "D": "Incorrect. The inequality is \\(\\le\\), a limit on spending; it gives a maximum number of lessons, not a minimum."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "sign_error"
+  },
+  "verify": "n = symbols('n')\ns = solve_univariate_inequality(35 + 18*n <= 250, n, relational=False)\nassert floor(s.sup) == 11 and s.sup < 12\nassert 'at most 11 lessons' in choices[answer]\nassert all('at most 11 lessons' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-tvd-0615",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "After a pond is treated, the number of water hyacinth plants in the pond is modeled by \\(N(t) = 600(0.8)^{\\frac{t}{2}}\\), where \\(t\\) is the number of weeks after the treatment. According to the model, what is the least whole number of weeks after the treatment for which the number of plants is less than 300?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(4\\)",
+    "C": "\\(6\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The number is less than 300 when \\((0.8)^{\\frac{t}{2}} < 0.5\\).",
+    "Every 2 weeks the number is multiplied by 0.8: after 6 weeks it is \\(600(0.8)^{3} = 307.2\\), still more than 300.",
+    "At \\(t = 7\\), \\(600(0.8)^{3.5} \\approx 274.8 < 300\\). So the least whole number of weeks is 7."
+  ],
+  "explanation": {
+    "A": "Incorrect. At \\(t = 3\\), \\(N = 600(0.8)^{1.5} \\approx 429\\), well above 300.",
+    "B": "Incorrect. This treats the decrease of \\(20\\%\\) as happening every week. The exponent is \\(\\frac{t}{2}\\), so it happens every 2 weeks, and at \\(t = 4\\), \\(N = 600(0.8)^{2} = 384\\).",
+    "C": "Incorrect. At \\(t = 6\\), \\(N = 600(0.8)^{3} = 307.2\\), which is still more than 300.",
+    "D": "Correct. \\(N(6) = 307.2 > 300\\) and \\(N(7) \\approx 274.8 < 300\\), so 7 is the least whole number of weeks."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "wrong_formula",
+    "C": "stopped_early"
+  },
+  "verify": "N = lambda t: 600 * Rational(4, 5)**(Rational(t, 2))\nt0 = next(t for t in range(0, 40) if N(t) < 300)\nassert t0 == 7 and N(6) > 300\nassert value(choices[answer]) == t0\nassert all(value(choices[k]) != t0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

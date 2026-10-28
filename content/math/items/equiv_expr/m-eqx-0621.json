@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0621",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x > 0\\), which of the following is equivalent to \\(\\sqrt{72x^{4}}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6x^{2}\\sqrt{2}\\)",
+    "B": "\\(6x\\sqrt{2}\\)",
+    "C": "\\(36x^{2}\\)",
+    "D": "\\(6x^{2}\\sqrt{3}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Write \\(72 = 36 \\cdot 2\\), so \\(\\sqrt{72} = 6\\sqrt{2}\\).",
+    "\\(\\sqrt{x^{4}} = x^{2}\\), so the expression is \\(6x^{2}\\sqrt{2}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\sqrt{36 \\cdot 2 \\cdot x^{4}} = 6\\sqrt{2} \\cdot x^{2}\\).",
+    "B": "Incorrect. This is the result of taking \\(\\sqrt{x^{4}}\\) as \\(x\\); the square root halves the exponent, giving \\(x^{2}\\).",
+    "C": "Incorrect. This is the result of dropping the factor \\(\\sqrt{2}\\) after writing \\(72 = 36 \\cdot 2\\).",
+    "D": "Incorrect. This is the result of writing 72 as \\(36 \\cdot 3\\); in fact \\(36 \\cdot 2 = 72\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "stopped_early",
+    "D": "arithmetic"
+  },
+  "verify": "X0 = Symbol('x'); x = symbols('x', positive=True)\nv = lambda k: value(choices[k]).subs([(X0, x)])\nt = sqrt(72*x**4)\nassert simplify(v(answer) - t) == 0\nassert all(simplify(v(k) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

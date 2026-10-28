@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0703",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The line \\(y = mx + 1\\) and the parabola \\(y = x^{2} + 2x + 3\\) meet at exactly one point. Which of the following gives all possible values of \\(m\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(m = 2\\)",
+    "B": "\\(m = 2 \\pm \\sqrt{2}\\)",
+    "C": "\\(m = 2 \\pm 2\\sqrt{2}\\)",
+    "D": "\\(m = -2 \\pm 2\\sqrt{2}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Set the two expressions equal: \\(x^{2} + 2x + 3 = mx + 1\\), so \\(x^{2} + (2 - m)x + 2 = 0\\).",
+    "The line meets the parabola at exactly one point when this quadratic has discriminant zero: \\((2 - m)^{2} - 4(1)(2) = 0\\).",
+    "So \\((2 - m)^{2} = 8\\), which gives \\(2 - m = \\pm 2\\sqrt{2}\\) and \\(m = 2 \\pm 2\\sqrt{2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This treats the condition as \\(2 - m = 0\\). The discriminant \\((2 - m)^{2} - 8\\) is zero for two values of \\(m\\), not one.",
+    "B": "Incorrect. \\(\\sqrt{8}\\) was simplified as \\(\\sqrt{2}\\). Since \\(8 = 4 \\cdot 2\\), \\(\\sqrt{8} = 2\\sqrt{2}\\).",
+    "C": "Correct. The discriminant \\((2 - m)^{2} - 8\\) is zero when \\(m = 2 \\pm 2\\sqrt{2}\\).",
+    "D": "Incorrect. The sign of the \\(2\\) was flipped, as if the condition were \\((m + 2)^{2} = 8\\). That gives \\(m = -2 \\pm 2\\sqrt{2}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'D': 'A', 'A': 'B', 'B': 'C', 'C': 'D'}.items()}; answer = {'A': 'D', 'B': 'A', 'C': 'B', 'D': 'C'}[answer]  # shuffled: original letters\nm, x = symbols('m x')\ndisc = discriminant(x**2 + (2 - m)*x + 2, x)\nassert set(solve(disc, m)) == {2 + 2*sqrt(2), 2 - 2*sqrt(2)}\nassert answer == 'B'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h4-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

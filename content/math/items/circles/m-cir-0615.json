@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0615",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(x^{2} + y^{2} - 2kx + 4y + k^{2} - 5 = 0\\), where \\(k\\) is a constant, is a circle. Which of the following statements must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The center of the circle lies on the \\(y\\)-axis.",
+    "B": "The circle passes through the origin.",
+    "C": "The radius of the circle is \\(k\\).",
+    "D": "The radius of the circle is 3."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Group the terms: \\((x^{2} - 2kx + k^{2}) + (y^{2} + 4y) = 5\\). The \\(x\\)-group is already a perfect square, \\((x - k)^{2}\\).",
+    "Complete the square in \\(y\\): \\((x - k)^{2} + (y + 2)^{2} = 5 + 4 = 9\\).",
+    "So the center is \\((k, -2)\\) and the radius is \\(\\sqrt{9} = 3\\) for every value of \\(k\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The center is \\((k, -2)\\); it lies on the \\(y\\)-axis only when \\(k = 0\\).",
+    "B": "Incorrect. Substituting \\((0, 0)\\) gives \\(k^{2} - 5 = 0\\), which holds only for \\(k = \\pm\\sqrt{5}\\), not for every \\(k\\).",
+    "C": "Incorrect. \\(k\\) is the \\(x\\)-coordinate of the center, not the radius; the radius is 3 whatever \\(k\\) is.",
+    "D": "Correct. In standard form the equation is \\((x - k)^{2} + (y + 2)^{2} = 9\\), so the radius is 3 for every \\(k\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "C": "wrong_quantity"
+  },
+  "verify": "x,y,k=symbols('x y k')\nf=x**2+y**2-2*k*x+4*y+k**2-5\nassert expand((x-k)**2+(y+2)**2-9-f)==0\nassert simplify(f.subs({x:0,y:0}))!=0 and solve(f.subs({x:0,y:0}),k)==[-sqrt(5),sqrt(5)]\nassert answer=='D' and 'radius' in choices[answer] and '3' in choices[answer]\nassert 'k' in choices['C'] and 'origin' in choices['B'] and 'y' in choices['A']\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

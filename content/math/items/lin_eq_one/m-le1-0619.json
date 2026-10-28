@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0619",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(5(x - 2) = 3(x + 4) - 2x\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.5\\)",
+    "B": "\\(3.5\\)",
+    "C": "\\(22\\)",
+    "D": "\\(5.5\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Distribute and simplify the right side: \\(5x - 10 = 3x + 12 - 2x = x + 12\\).",
+    "Subtract \\(x\\) and add 10: \\(4x = 22\\).",
+    "So \\(x = 5.5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of distributing 5 with the wrong sign: \\(5x + 10 = x + 12\\).",
+    "B": "Incorrect. This is the result of distributing 3 to \\(x\\) only: \\(3x + 4\\) instead of \\(3x + 12\\).",
+    "C": "Incorrect. This is the value of \\(4x\\), not \\(x\\).",
+    "D": "Correct. \\(5x - 10 = x + 12\\) gives \\(4x = 22\\), so \\(x = 5.5\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "arithmetic",
+    "C": "stopped_early"
+  },
+  "verify": "x = symbols('x')\ns = solve(Eq(5*(x - 2), 3*(x + 4) - 2*x), x)[0]\nassert s == Rational(11, 2)\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

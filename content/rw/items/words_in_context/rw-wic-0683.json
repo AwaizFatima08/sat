@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0683",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In Ottoman Istanbul, the lodges of the Mevlevi order were among the principal schools of classical music, and most of the repertoire they taught passed from master to pupil by ear. Written notation existed, but musicians used it ______: a manuscript served as a memory aid for pieces one had already learned rather than as a text from which a stranger could reconstruct a performance. Historians who rely on such manuscripts to recover how the music sounded must therefore reckon with everything the notation was never meant to record.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "carelessly",
+    "B": "exclusively",
+    "C": "reluctantly",
+    "D": "sparingly"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Most of the repertoire \"passed from master to pupil by ear,\" and notation served only as \"a memory aid\" for music already learned. So musicians used notation in a limited way, which is what \"sparingly\" means.",
+    "A": "Incorrect. Nothing in the text suggests the manuscripts were made or used without care; the issue is their limited purpose.",
+    "B": "Incorrect. Most of the music was taught \"by ear,\" so notation was far from the only means of transmission.",
+    "C": "Incorrect. The text describes how little notation was used and for what, not any unwillingness to use it.",
+    "D": "Correct. Notation was a secondary aid for pieces already learned by ear, so musicians used it in a limited way, and much went unrecorded."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "wrong_tone"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": "B",
+        "note": "\"Exclusively\" is a defensible alternative to \"sparingly\".",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

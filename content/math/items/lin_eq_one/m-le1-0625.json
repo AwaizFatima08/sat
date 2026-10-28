@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0625",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(2(kx - 3) = 5x + k\\), \\(k\\) is a constant. If \\(x = 2\\) is a solution to the equation, what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{16}{3}\\)",
+    "B": "\\(\\frac{4}{3}\\)",
+    "C": "\\(\\frac{13}{3}\\)",
+    "D": "\\(16\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = 2\\): \\(2(2k - 3) = 10 + k\\).",
+    "Distribute: \\(4k - 6 = 10 + k\\).",
+    "Subtract \\(k\\) and add 6: \\(3k = 16\\), so \\(k = \\frac{16}{3}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(4k - 6 = 10 + k\\) gives \\(3k = 16\\), so \\(k = \\frac{16}{3}\\).",
+    "B": "Incorrect. This is the result of subtracting 6 from 10 instead of adding it: \\(3k = 4\\).",
+    "C": "Incorrect. This is the result of distributing 2 to \\(kx\\) only: \\(4k - 3 = 10 + k\\).",
+    "D": "Incorrect. This is the value of \\(3k\\), not \\(k\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "arithmetic",
+    "D": "stopped_early"
+  },
+  "verify": "x, k = symbols('x k')\ns = solve(Eq(2*(k*2 - 3), 5*2 + k), k)[0]\nassert s == Rational(16, 3)\nassert solve(Eq(2*(s*x - 3), 5*x + s), x) == [2]\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "m-le2-0644",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, a line passes through the point \\((2, 3)\\). The line has an \\(x\\)-intercept of \\((a, 0)\\) and a \\(y\\)-intercept of \\((0, b)\\), where \\(a\\) and \\(b\\) are nonzero constants and \\(a + b = 10\\). What is one possible value of the slope of the line?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-3/2",
+    "-1"
+  ],
+  "solution": [
+    "A line with intercepts \\((a, 0)\\) and \\((0, b)\\) satisfies \\(\\frac{x}{a} + \\frac{y}{b} = 1\\). With \\(b = 10 - a\\) and the point \\((2, 3)\\): \\(\\frac{2}{a} + \\frac{3}{10 - a} = 1\\).",
+    "Multiply out: \\(2(10 - a) + 3a = a(10 - a)\\), so \\(a^{2} - 9a + 20 = 0\\) and \\(a = 4\\) or \\(a = 5\\).",
+    "Intercepts \\((4, 0), (0, 6)\\) give slope \\(-\\frac{6}{4} = -\\frac{3}{2}\\); intercepts \\((5, 0), (0, 5)\\) give slope \\(-1\\). Either value is accepted."
+  ],
+  "verify": "a = symbols('a')\nsols = solve(Eq(2/a + 3/(10 - a), 1), a)\nslopes = sorted(-(10 - s)/s for s in sols)\nassert slopes == [Rational(-3, 2), -1]\nassert sorted(Rational(s) for s in spr_answers) == slopes",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "-1",
+        "second": null,
+        "note": "Stem asks for one possible value; -3/2 (a=4, b=6) also satisfies it.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

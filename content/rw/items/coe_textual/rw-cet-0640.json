@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0640",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Several studies have reported that shoppers in supermarkets buy more when slow background music is playing than when the music is fast. Consumer researcher Maya Lindqvist argues that the effect works entirely through walking pace and without the shoppers' awareness: slow music makes people move more slowly, slower movement means more time in the aisles, and more time in the aisles means more items noticed and picked up. On her account, the music need not be noticed at all; a shopper who never registers it is just as affected as one who does.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly weaken Lindqvist's argument?",
+  "choices": {
+    "A": "Shoppers walked more slowly on weekends than on weekdays, whatever music was playing.",
+    "B": "When questioned after leaving the store, most shoppers could not say whether any music had been playing during their visit.",
+    "C": "During slow-music sessions, only shoppers who reported noticing the music bought more than usual; those who had not noticed it bought their usual amount.",
+    "D": "Sales rose during slow-music sessions mainly in the aisles nearest the entrance, where shoppers spend the first minutes of a visit."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Lindqvist's argument rests on the claim that the effect does not depend on noticing the music. A finding weakens it if the effect appears only in shoppers who did notice. If unaware shoppers bought no more than usual, awareness is doing the work, contrary to her account.",
+    "A": "Incorrect. Walking pace varying by day of the week is unrelated to how music produces its effect.",
+    "B": "Incorrect. Shoppers failing to notice the music fits Lindqvist's claim that awareness is not required.",
+    "C": "Correct. If the extra buying occurred only among shoppers who noticed the music, the effect depends on awareness, which Lindqvist's argument denies.",
+    "D": "Incorrect. Where in the store sales rose does not show whether awareness of the music mattered."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

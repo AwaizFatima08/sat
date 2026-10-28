@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0622",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(3 < a < 5\\) and \\(-2 < b < 1\\), which of the following gives all possible values of \\(a - 2b\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-1 < a - 2b < 7\\)",
+    "B": "\\(1 < a - 2b < 9\\)",
+    "C": "\\(1 < a - 2b < 7\\)",
+    "D": "\\(2 < a - 2b < 7\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Multiply \\(-2 < b < 1\\) by \\(-2\\), reversing the signs: \\(-2 < -2b < 4\\).",
+    "Add this to \\(3 < a < 5\\): \\(3 + (-2) < a - 2b < 5 + 4\\).",
+    "So \\(1 < a - 2b < 9\\). The extremes come from \\(b\\) near 1 (smallest) and \\(b\\) near \\(-2\\) (largest)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Multiplying \\(-2 < b < 1\\) by \\(-2\\) reverses the inequality: \\(-2b\\) lies between \\(-2\\) and 4, not between \\(-4\\) and 2.",
+    "B": "Correct. \\(-2 < -2b < 4\\), so \\(1 < a - 2b < 9\\).",
+    "C": "Incorrect. The upper bound uses \\(5 + 2\\) instead of \\(5 + 4\\); when \\(b\\) is near \\(-2\\), \\(-2b\\) is near 4.",
+    "D": "Incorrect. This gives the range of \\(a - b\\), not \\(a - 2b\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "arithmetic",
+    "D": "wrong_quantity"
+  },
+  "verify": "vals = [a - 2*b for a in (3, 5) for b in (-2, 1)]\nlo, hi = min(vals), max(vals)\nassert (lo, hi) == (1, 9)\nparts = choices[answer].strip('\\\\() ').split('<')\nassert len(parts) == 3 and Rational(parts[0]) == lo and Rational(parts[2]) == hi and parts[1].strip() == 'a - 2b'\nassert all(choices[k] != choices[answer] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

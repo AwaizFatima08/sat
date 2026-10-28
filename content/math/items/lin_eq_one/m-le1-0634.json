@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0634",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "An electricity company in Karachi charges 12 rupees per unit for the first 100 units used in a month and 20 rupees per unit for each unit beyond 100. A household's bill for one month was 2,600 rupees. How many units did the household use that month?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(170\\)",
+    "B": "\\(70\\)",
+    "C": "\\(130\\)",
+    "D": "\\(230\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The first 100 units cost \\(12 \\cdot 100 = 1{,}200\\) rupees. Let \\(u\\) be the total units used.",
+    "\\(1{,}200 + 20(u - 100) = 2{,}600\\), so \\(20(u - 100) = 1{,}400\\).",
+    "Then \\(u - 100 = 70\\) and \\(u = 170\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(u - 100 = 70\\), so \\(u = 170\\). Check: \\(1{,}200 + 20(70) = 2{,}600\\).",
+    "B": "Incorrect. This is the number of units beyond 100, not the total number of units.",
+    "C": "Incorrect. This is the result of charging every unit 20 rupees: \\(\\frac{2{,}600}{20} = 130\\).",
+    "D": "Incorrect. This is the result of dividing the whole bill by 20 and then adding 100, without subtracting the cost of the first 100 units."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "wrong_formula",
+    "D": "wrong_formula"
+  },
+  "verify": "u = symbols('u')\ns = solve(Eq(12*100 + 20*(u - 100), 2600), u)[0]\nassert s == 170\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

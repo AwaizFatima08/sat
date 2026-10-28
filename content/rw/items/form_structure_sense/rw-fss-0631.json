@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0631",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Sundews are small carnivorous plants that grow in bogs where the soil holds little nitrogen. Each leaf is covered with hair-like tentacles, and the sticky droplet at the tip of these tentacles ______ like a bead of nectar to a passing insect. Once the insect lands and gets stuck, the tentacles slowly bend inward, pressing it against the leaf surface, where digestive enzymes break it down over several days.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "have looked",
+    "B": "looks",
+    "C": "are looking",
+    "D": "look"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Find the subject of the blank: \"the sticky droplet at the tip of these tentacles.\" The head noun is the singular \"droplet\"; \"tentacles\" is only part of a phrase describing where the droplet sits. A singular subject needs the singular verb \"looks.\"",
+    "A": "Incorrect. \"Have looked\" is plural; the subject \"droplet\" is singular.",
+    "B": "Correct. The singular verb \"looks\" agrees with the singular subject \"droplet.\"",
+    "C": "Incorrect. \"Are looking\" is plural; the subject \"droplet\" is singular.",
+    "D": "Incorrect. \"Look\" is plural and seems to agree with the nearby \"tentacles,\" but the subject is the singular \"droplet.\""
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

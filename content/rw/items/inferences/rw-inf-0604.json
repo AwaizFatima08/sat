@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0604",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the Namib Desert of southwestern Africa, rain may not fall for years at a time, but on many mornings a thick fog rolls in from the cold Atlantic coast. Several species of darkling beetle climb to the tops of sand dunes before dawn and tilt their bodies head-down into the fog. Droplets of water collect on the beetle's bumpy back, join together, and run down to its mouth. This behavior suggests that the beetles ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "climb the dunes mainly to warm themselves in the first sunlight.",
+    "B": "can obtain the water they need even where rain is very rare.",
+    "C": "can survive only in parts of the desert where rain falls each year.",
+    "D": "store water in their bodies for months between fogs."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Rain is almost absent, but fog arrives on many mornings, and the beetles collect droplets from that fog and drink them. So the beetles get water from the fog, which means they can meet their water needs in a place where rain hardly ever falls.",
+    "A": "Incorrect. The text says the beetles tilt into the fog to collect water, not that they seek warmth or sunlight.",
+    "B": "Correct. Drinking fog droplets lets the beetles get water without rain.",
+    "C": "Incorrect. This reverses the point: the beetles live where rain may not fall for years and get water from fog instead.",
+    "D": "Incorrect. The text says nothing about storing water; fog comes on many mornings, so long storage is not implied."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

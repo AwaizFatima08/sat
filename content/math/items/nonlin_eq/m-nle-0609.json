@@ -1,0 +1,57 @@
+{
+  "id": "m-nle-0609",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What are the solutions to the equation \\(x^{2} - 2x - 15 = 0\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-3\\) and \\(5\\)",
+    "B": "\\(-5\\) and \\(3\\)",
+    "C": "\\(3\\) and \\(5\\)",
+    "D": "\\(-15\\) and \\(1\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Factor: two numbers with product \\(-15\\) and sum \\(-2\\) are \\(-5\\) and \\(3\\), so \\(x^{2} - 2x - 15 = (x - 5)(x + 3)\\).",
+    "Set each factor equal to 0: \\(x = 5\\) or \\(x = -3\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\((-3)^{2} - 2(-3) - 15 = 0\\) and \\(5^{2} - 2(5) - 15 = 0\\).",
+    "B": "Incorrect. This is the result of reversing the signs of both solutions; \\(3^{2} - 2(3) - 15 = -12\\), not \\(0\\).",
+    "C": "Incorrect. This uses the numbers in the factors \\((x - 5)(x + 3)\\) without changing the sign of \\(+3\\).",
+    "D": "Incorrect. \\(-15\\) and \\(1\\) have product \\(-15\\) but sum \\(-14\\), not \\(-2\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "def vals(s):\n    return {value(p) for p in s.split(' and ')}\nx = symbols('x')\nsol = set(solve(Eq(x**2 - 2*x - 15, 0), x))\nassert sol == {-3, 5}\nassert vals(choices[answer]) == sol\nassert all(vals(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

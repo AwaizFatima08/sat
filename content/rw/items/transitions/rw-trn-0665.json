@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0665",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The permanently frozen ground of the Arctic holds roughly twice as much carbon as the atmosphere does, locked in plant remains that microbes could not decompose while the soil stayed frozen. As the ground thaws, decomposition resumes, releasing carbon dioxide and, where the soil is waterlogged, methane, a gas that traps heat far more effectively than carbon dioxide does. ______ methane persists in the atmosphere for only about a decade, a fraction of the time carbon dioxide remains. During that decade, though, each ton of methane traps roughly eighty times as much heat as a ton of carbon dioxide, so even a short-lived pulse can drive a sharp burst of warming.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Consequently,",
+    "B": "Granted,",
+    "C": "Likewise,",
+    "D": "Specifically,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The second sentence stresses how powerful methane is as a heat-trapping gas. The third sentence admits a point that seems to cut the other way: methane does not last long. The fourth sentence, beginning \"though,\" then answers that admission. The blank needs a transition that concedes a point before it is countered.",
+    "A": "Incorrect. Methane's short atmospheric lifetime is not a result of its heat-trapping power; the two are separate facts.",
+    "B": "Correct. \"Granted\" concedes that methane is short-lived, a point the next sentence (\"though\") goes on to answer.",
+    "C": "Incorrect. The short lifetime is not a parallel to methane's potency; it points in the opposite direction.",
+    "D": "Incorrect. \"Specifically\" would introduce a more precise statement of the previous claim, but the short lifetime is not a detail of methane's potency; it is a limitation of it."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

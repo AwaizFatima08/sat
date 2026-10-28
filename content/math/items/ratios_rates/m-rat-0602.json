@@ -1,0 +1,57 @@
+{
+  "id": "m-rat-0602",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The ratio of \\(p\\) to \\(q\\) is 9 to 4. If \\(p = 54\\), what is the value of \\(q\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(24\\)",
+    "B": "\\(49\\)",
+    "C": "\\(121.5\\)",
+    "D": "\\(216\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Write the proportion \\(\\frac{p}{q} = \\frac{9}{4}\\) with \\(p = 54\\): \\(\\frac{54}{q} = \\frac{9}{4}\\).",
+    "Cross-multiply: \\(9q = 216\\), so \\(q = 24\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(54\\) is \\(9 \\cdot 6\\), so \\(q = 4 \\cdot 6 = 24\\).",
+    "B": "Incorrect. This is \\(54 - 9 + 4\\), treating the ratio as a difference. A ratio of 9 to 4 means \\(p\\) is \\(\\frac{9}{4}\\) times \\(q\\).",
+    "C": "Incorrect. This is \\(54 \\cdot \\frac{9}{4}\\), using the ratio upside down. Since \\(p : q = 9 : 4\\), \\(q\\) is smaller than \\(p\\).",
+    "D": "Incorrect. This is \\(54 \\cdot 4\\), the value of \\(9q\\), not of \\(q\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "reciprocal",
+    "D": "stopped_early"
+  },
+  "verify": "q = symbols('q')\nans = solve(Eq(Rational(54, 1)/q, Rational(9, 4)), q)[0]\nassert ans == 24\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

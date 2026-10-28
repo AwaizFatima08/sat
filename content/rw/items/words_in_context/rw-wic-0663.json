@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0663",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Niall had assumed that the whistles were a kind of language with fixed words, one note for \"left\" and another for \"right.\" Watching his uncle work the dog along the ridge, he saw that it was less ______ than that. The same rising note sent the dog wide one minute and brought her in close the next, and what changed was not the sound but the dog's distance, the slope, and the way his uncle leaned on his stick.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "rigid",
+    "B": "musical",
+    "C": "subtle",
+    "D": "effective"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Niall expected \"fixed words,\" one note for each command, but \"the same rising note\" means different things depending on the situation. So the system is less fixed, or less \"rigid,\" than he assumed.",
+    "A": "Correct. Niall assumed each note had one fixed meaning; instead, the same note means different things, so the system is less rigid than he thought.",
+    "B": "Incorrect. The passage contrasts fixed meanings with meanings that change by situation; it says nothing about how musical the whistles are.",
+    "C": "Incorrect. The whistling turns out to be more subtle than a fixed code, not less, since the same note shifts meaning with distance, slope, and posture.",
+    "D": "Incorrect. The dog responds correctly in every case; nothing suggests the whistles work less well than Niall assumed."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

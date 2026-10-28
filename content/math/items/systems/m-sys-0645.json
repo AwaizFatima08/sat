@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0645",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[ax + by = 20\\] \\[3x + 5y = 10\\] In the system of equations above, \\(a\\) and \\(b\\) are constants. If the system has no solution, which of the following could be the values of \\(a\\) and \\(b\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(a = 6\\) and \\(b = 10\\)",
+    "B": "\\(a = 5\\) and \\(b = 3\\)",
+    "C": "\\(a = 3\\) and \\(b = -5\\)",
+    "D": "\\(a = 9\\) and \\(b = 15\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "No solution means the lines are parallel and distinct: the \\(x\\)- and \\(y\\)-coefficients of one equation are the same multiple of the other's, but the constants are not.",
+    "\\(a = 9\\), \\(b = 15\\): \\(9x + 15y = 20\\) has the same left side as \\(3(3x + 5y) = 30\\), but \\(20 \\ne 30\\). Parallel, distinct: no solution.",
+    "\\(a = 6\\), \\(b = 10\\) gives \\(2(3x + 5y) = 20\\), the same line (infinitely many solutions); the other pairs give different slopes (one solution)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(6x + 10y = 20\\) is exactly 2 times \\(3x + 5y = 10\\), so the equations describe the same line and the system has infinitely many solutions.",
+    "B": "Incorrect. This swaps the coefficients; the slopes are then \\(-\\frac{5}{3}\\) and \\(-\\frac{3}{5}\\), so the lines cross once.",
+    "C": "Incorrect. With \\(b = -5\\) the slopes are \\(\\frac{3}{5}\\) and \\(-\\frac{3}{5}\\), so the lines cross once; the sign of \\(b\\) must match.",
+    "D": "Correct. \\(9x + 15y\\) is 3 times \\(3x + 5y\\), but \\(20 \\ne 3(10)\\), so the lines are parallel and distinct."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "reciprocal",
+    "C": "sign_error"
+  },
+  "verify": "x, y = symbols('x y')\nvals = lambda s: [value(p.split('=')[1]) for p in s.split(' and ')]\nnone = [k for k in choices if linsolve([vals(choices[k])[0]*x + vals(choices[k])[1]*y - 20, 3*x + 5*y - 10], [x, y]) == EmptySet]\nassert none == [answer]\nassert vals(choices[answer]) == [9, 15]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "m-prb-0601",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The bar graph shows the number of medals of each type won by a school's track team at a regional meet. If one of the team's medals is selected at random, what is the probability that it is a bronze medal?",
+  "figure": {
+    "kind": "bar",
+    "title": "Medals won by the track team",
+    "x_label": "Type of medal",
+    "y_label": "Number of medals",
+    "series": [
+      {
+        "name": "Medals",
+        "points": [
+          [
+            "Gold",
+            5
+          ],
+          [
+            "Silver",
+            9
+          ],
+          [
+            "Bronze",
+            16
+          ]
+        ]
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{1}{3}\\)",
+    "B": "\\(\\frac{7}{15}\\)",
+    "C": "\\(\\frac{8}{15}\\)",
+    "D": "\\(\\frac{1}{6}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Read the bar heights: 5 gold, 9 silver and 16 bronze medals, so the team won \\(5 + 9 + 16 = 30\\) medals in all.",
+    "The probability of selecting a bronze medal is \\(\\frac{16}{30} = \\frac{8}{15}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This treats the three types of medal as equally likely, but there are different numbers of each type.",
+    "B": "Incorrect. This is \\(\\frac{14}{30}\\), the probability that the medal is NOT bronze.",
+    "C": "Correct. There are 16 bronze medals out of \\(5 + 9 + 16 = 30\\) medals, so the probability is \\(\\frac{16}{30} = \\frac{8}{15}\\).",
+    "D": "Incorrect. This is \\(\\frac{5}{30}\\), the probability of selecting a gold medal; the bronze bar is the tallest one."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "D": "misread_graph"
+  },
+  "verify": "pts = dict(figure['series'][0]['points'])\ntot = sum(pts.values())\nassert tot == 30\np = Rational(pts['Bronze'], tot)\nassert p == Rational(8, 15)\nassert value(choices[answer]) == p\nassert all(value(choices[k]) != p for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

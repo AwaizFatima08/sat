@@ -1,0 +1,59 @@
+{
+  "id": "m-eqx-0702",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is equivalent to \\(\\dfrac{x^{2} - 9}{x^{2} + x - 6}\\) for all values of \\(x\\) for which the expression is defined?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\dfrac{x - 3}{x + 2}\\)",
+    "B": "\\(\\dfrac{x - 2}{x - 3}\\)",
+    "C": "\\(\\dfrac{x - 3}{x - 2}\\)",
+    "D": "\\(\\dfrac{x + 3}{x + 2}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Factor the numerator as a difference of squares: \\(x^{2} - 9 = (x - 3)(x + 3)\\).",
+    "Factor the denominator: \\(x^{2} + x - 6 = (x + 3)(x - 2)\\), since \\(3 \\cdot (-2) = -6\\) and \\(3 + (-2) = 1\\).",
+    "Cancel the common factor \\(x + 3\\), which is allowed when \\(x \\neq -3\\): the result is \\(\\dfrac{x - 3}{x - 2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The denominator was factored as \\((x + 3)(x + 2) = x^{2} + 5x + 6\\). The sign of the constant term \\(-2\\) was lost.",
+    "B": "Incorrect. This is the reciprocal of the correct expression. The numerator and denominator were swapped.",
+    "C": "Correct. Factoring both parts and cancelling \\(x + 3\\) gives \\(\\dfrac{x - 3}{x - 2}\\).",
+    "D": "Incorrect. The denominator was factored as \\((x - 3)(x + 2) = x^{2} - x - 6\\), which is the wrong quadratic. The cancellation then used the wrong factor."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "reciprocal",
+    "D": "wrong_formula"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'B': 'C', 'A': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'B', 'D': 'A'}[answer]  # shuffled: original letters\nx = symbols('x')\nassert answer == 'B'\norig = (x**2 - 9)/(x**2 + x - 6)\nassert simplify(orig - value(choices[answer])) == 0\nassert all(simplify(orig - value(choices[k])) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h4-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

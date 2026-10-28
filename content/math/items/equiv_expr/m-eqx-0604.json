@@ -1,0 +1,45 @@
+{
+  "id": "m-eqx-0604",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A company's monthly revenue, in thousands of dollars, is modeled by \\(6x^{2} - x + 4\\), and its monthly cost, in thousands of dollars, is modeled by \\(2x^{2} + 5x - 9\\), where \\(x\\) is the number of units sold, in thousands. The company's monthly profit, revenue minus cost, is \\(ax^{2} + bx + c\\), where \\(a\\), \\(b\\), and \\(c\\) are constants. What is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-6"
+  ],
+  "solution": [
+    "Profit is \\(\\left(6x^{2} - x + 4\\right) - \\left(2x^{2} + 5x - 9\\right) = 6x^{2} - x + 4 - 2x^{2} - 5x + 9\\).",
+    "Combine the \\(x\\) terms: \\(-x - 5x = -6x\\), so \\(b = -6\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nb = Poly(expand((6*x**2 - x + 4) - (2*x**2 + 5*x - 9)), x).coeff_monomial(x)\nassert b == -6\nassert [Rational(v) for v in spr_answers] == [b]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "-6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0602",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A tour company charges \\$40 per adult and \\$25 per student for a day trip. The equation \\(40a + 25s = 1{,}450\\) represents a trip that brought in exactly \\$1,450 from \\(a\\) adults and \\(s\\) students. If 20 adults went on the trip, how many students went?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(26\\)",
+    "B": "\\(58\\)",
+    "C": "\\(650\\)",
+    "D": "\\(16\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "With \\(a = 20\\): \\(40(20) + 25s = 1{,}450\\), so \\(800 + 25s = 1{,}450\\).",
+    "Then \\(25s = 650\\) and \\(s = 26\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(40(20) = 800\\), so \\(25s = 650\\) and \\(s = 26\\).",
+    "B": "Incorrect. This is \\(1{,}450 \\div 25\\), which ignores the \\$800 paid by the adults.",
+    "C": "Incorrect. \\$650 is the amount paid by the students, not the number of students.",
+    "D": "Incorrect. This divides \\$650 by \\$40, the adult price, instead of by \\$25."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "s = symbols('s')\nsol = solve(Eq(40*20 + 25*s, 1450), s)\nassert sol == [26]\nassert value(choices[answer]) == 26\nassert all(value(choices[k]) != 26 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

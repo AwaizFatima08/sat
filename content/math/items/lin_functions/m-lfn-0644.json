@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0644",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A solar lantern in a village in Nepal charges at a constant rate. The lantern's battery is at 22 percent of its capacity when charging begins and at 58 percent 24 minutes later. If the lantern continues to charge at the same rate, how many minutes after charging begins will the battery reach 100 percent?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "52"
+  ],
+  "solution": [
+    "Rate: \\(\\frac{58 - 22}{24} = 1.5\\) percentage points per minute.",
+    "The charge, in percent, \\(t\\) minutes after charging begins is \\(22 + 1.5t\\). Set \\(22 + 1.5t = 100\\): \\(1.5t = 78\\), so \\(t = 52\\) minutes."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t')\nm = Rational(58 - 22, 24)\nsol = solve(Eq(22 + m*t, 100), t)\nassert sol == [52]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "52",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

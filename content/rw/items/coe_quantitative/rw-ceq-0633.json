@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0633",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Oyster reefs once lined the shores of Chesapeake Bay, in the eastern United States, but harvesting and disease reduced many of them to scattered shells. Coastal engineer Dana Whitfield helped rebuild a reef along an eroding shoreline in Virginia and measured wave heights on both sides of it during storms. Because the reef lies below the surface at high tide, some of her colleagues expected it to protect the shore only at low tide. Whitfield reports instead that the reef lowered wave heights at every tide level she measured, though its effect was strongest when the water was lowest.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Storm Wave Heights on Either Side of a Rebuilt Oyster Reef",
+    "columns": [
+      "Tide level",
+      "Wave height seaward of reef (cm)",
+      "Wave height shoreward of reef (cm)"
+    ],
+    "rows": [
+      [
+        "Low",
+        42,
+        15
+      ],
+      [
+        "Mid",
+        45,
+        27
+      ],
+      [
+        "High",
+        48,
+        38
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Whitfield's report?",
+  "choices": {
+    "A": "Waves seaward of the reef were higher at high tide than they were at low tide.",
+    "B": "At high tide, waves shoreward of the reef were 38 cm, nearly as high as the 48 cm waves seaward of it.",
+    "C": "Shoreward waves were lower than seaward waves at all three tide levels, by 27 cm at low tide but only 10 cm at high tide.",
+    "D": "The reef reduced wave height by a greater amount at high tide than at low tide."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Whitfield's report makes two claims: the reef lowered waves at every tide level, and its effect was strongest at low tide. The evidence must compare the seaward and shoreward columns at all three levels. The reductions are 27 cm at low tide (42 to 15), 18 cm at mid tide, and 10 cm at high tide.",
+    "A": "Incorrect. This is true, but it compares seaward waves at different tides and says nothing about what the reef did to them.",
+    "B": "Incorrect. This is true, but it describes high tide alone and stresses how small the effect was there, which does not show that the reef worked at every tide level.",
+    "C": "Correct. It shows a reduction at all three levels and that the reduction was largest at low tide, supporting both parts of the report.",
+    "D": "Incorrect. The reduction was 10 cm at high tide and 27 cm at low tide, so this reverses the pattern in the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

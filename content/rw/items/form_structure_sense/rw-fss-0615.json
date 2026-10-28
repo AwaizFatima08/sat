@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0615",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In the village of Henawala, near Kandy in central Sri Lanka, families have made Dumbara mats for generations. Woven from plant fibers dyed in deep reds, blacks, and yellows, ______ Today the weavers also make bags and wall hangings using the same patterns.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "rows of birds, elephants, and geometric shapes decorate the mats.",
+    "B": "weavers decorate the mats with rows of birds, elephants, and geometric shapes.",
+    "C": "the mats show rows of birds, elephants, and geometric shapes.",
+    "D": "the village is known for mats showing rows of birds, elephants, and geometric shapes."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The opening phrase \"Woven from plant fibers\" describes the mats, so \"the mats\" must be the subject that comes right after the comma. Only choice C does this.",
+    "A": "Incorrect. The subject here is \"rows of birds, elephants, and geometric shapes,\" but these are patterns, not the woven mats themselves.",
+    "B": "Incorrect. The subject here is \"weavers,\" so the sentence wrongly says the weavers are woven from plant fibers.",
+    "C": "Correct. \"The mats\" directly follows the phrase that describes them, so the modifier is not dangling.",
+    "D": "Incorrect. The subject here is \"the village,\" but a village is not woven from plant fibers."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "modifier",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

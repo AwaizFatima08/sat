@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0659",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The brick-and-timber temples of the Kathmandu Valley, in Nepal, often carry an inscription on a stone slab or metal plate naming a donor and giving a date, and these dates have been used to build a chronology of the valley's architecture. The region, however, has suffered a major earthquake roughly every century, and a temple whose upper stories collapsed was customarily rebuilt by a new donor, who recorded the gift in a fresh inscription. Architectural historian Sabina Shrestha studied a temple whose plate is dated 1835, two years after a severe earthquake. Its carved wooden roof struts, which could have been salvaged from a damaged building, show a style found elsewhere in the valley only on buildings documented before 1700. If the plate and the struts are both genuine, the most reasonable conclusion is that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the plate was inscribed by a donor who wished to claim credit for a temple built entirely by others.",
+    "B": "none of the dated inscriptions in the valley can be trusted to give the date of a temple's founding.",
+    "C": "the carvers of 1835 deliberately revived a style that had gone out of use more than a century earlier.",
+    "D": "the temple was first built before 1700 and the 1835 plate records its restoration after the earthquake."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The plate says 1835; the struts say before 1700. The text supplies a way to reconcile the two: temples were rebuilt after earthquakes, with new inscriptions, and struts could be reused. A temple built before 1700, damaged in 1833, and restored under a new donor in 1835 accounts for every detail.",
+    "A": "Incorrect. The text describes donors recording genuine rebuilding; it offers no reason to suspect a false claim.",
+    "B": "Incorrect. One temple's plate recording a restoration does not show that every inscription in the valley is misleading.",
+    "C": "Incorrect. The text points to the reuse of salvaged struts; a revival would require evidence the text does not give.",
+    "D": "Correct. The struts point to a building from before 1700; the plate, dated two years after an earthquake, fits the custom of a new donor recording a rebuilding."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "too_broad",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

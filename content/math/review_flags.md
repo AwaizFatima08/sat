@@ -20,3 +20,9 @@
 - m-smp-0537 RETIRED (23 Oct): adds district margins of error to get a city-wide maximum (margins of error do not add that way).
 - m-lat-0532 (exterior angle bisectors) and 0540 (triangle inequality count) a little outside usual SAT topics.
 - m-lat-0106/0122 angle-label placement: confirm not visually ambiguous; m-lat-0117 easy for level 3.
+- Set 2: m-arv-0614 label placement in frame figure; m-arv-0617 two "concept" distractors; m-arv-0626 artificial arithmetic distractor; m-le1-0631 touches one_var_data; m-le1-0638 text choice D.
+- Set 2: m-lfn-0633 three "concept" distractors; m-lfn-0642 dollar choices with 2 decimals; m-rat-0614 clock-time choices; m-pct-0607 approximate distractor; m-eqx-0646/0651 verify by sample points; m-eqx-0638 maybe L2-L3.
+- Set 2: m-nle-0618 distractor tag judgement; m-nle-0643 hardest L3 (maybe L4).
+- Set 2: m-le2-0644 L4 spr needs a small quadratic (two accepted slopes); 0645/0633 light transformations; 0641 touches systems.
+- Set 2 math: m-ovd-0614 mean>median word choices; m-ovd-0610 endpoint bounds; m-tvd-0615 non-integer exponent; m-ovd-0607 cannot-be-determined distractor.
+- Set 2 nle-3: m-nle-0658 choice order 'uf'; m-nle-0659 courtyard centering; m-nle-0673 exact-form answer.

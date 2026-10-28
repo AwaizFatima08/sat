@@ -1,0 +1,91 @@
+{
+  "id": "rw-ceq-0610",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Arctic foxes on the islands of Svalbard, Norway, raise their cubs in dens dug into hillsides, and the same dens may be used for many years. Ecologist Ingvild Haugen checked 25 known dens each summer from 2019 to 2023 and recorded how many were occupied by foxes with cubs. She noted that the number of occupied dens varied greatly from year to year: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Arctic Fox Dens Checked Each Summer on Svalbard (25 dens)",
+    "columns": [
+      "Year",
+      "Dens occupied (of 25)",
+      "Average cubs per occupied den"
+    ],
+    "rows": [
+      [
+        "2019",
+        9,
+        4.1
+      ],
+      [
+        "2020",
+        16,
+        5.3
+      ],
+      [
+        "2021",
+        4,
+        3.2
+      ],
+      [
+        "2022",
+        14,
+        4.8
+      ],
+      [
+        "2023",
+        7,
+        3.9
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "the average number of cubs per occupied den was highest in 2020.",
+    "B": "fewer dens were occupied in years when the geese that foxes hunt were scarce.",
+    "C": "the number of occupied dens rose steadily from 9 in 2019 to 16 in 2023.",
+    "D": "as few as 4 dens were occupied in 2021, while 16 were occupied in 2020."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The statement is about how much the number of occupied dens changed from year to year, so the choice should contrast a low year with a high year in the \"Dens occupied\" column. The lowest value is 4 (2021) and the highest is 16 (2020).",
+    "A": "Incorrect. This is true, but it concerns cubs per den, not the number of dens occupied.",
+    "B": "Incorrect. The table says nothing about geese or any other food supply.",
+    "C": "Incorrect. The number of occupied dens did not rise steadily; it was 16 in 2020, 4 in 2021 and 7 in 2023.",
+    "D": "Correct. Occupancy ranged from only 4 dens in 2021 to 16 dens in 2020, a very large difference between years."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "not_in_text",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

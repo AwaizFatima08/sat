@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0607",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A temperature of \\(C\\) degrees Celsius is equal to \\(F\\) degrees Fahrenheit, where \\(F = \\frac{9}{5}C + 32\\). For which values of \\(C\\) is the temperature below \\(50^{\\circ}\\)F?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(C < 10\\)",
+    "B": "\\(C > 10\\)",
+    "C": "\\(C < 18\\)",
+    "D": "\\(C < 32.4\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Below \\(50^{\\circ}\\)F means \\(\\frac{9}{5}C + 32 < 50\\).",
+    "Subtract 32: \\(\\frac{9}{5}C < 18\\).",
+    "Multiply by \\(\\frac{5}{9}\\): \\(C < 10\\). Check: \\(C = 10\\) gives exactly \\(18 + 32 = 50\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\frac{9}{5}C + 32 < 50\\) gives \\(\\frac{9}{5}C < 18\\), so \\(C < 10\\).",
+    "B": "Incorrect. Multiplying by the positive number \\(\\frac{5}{9}\\) does not reverse the inequality sign.",
+    "C": "Incorrect. This stops after subtracting 32; the 18 still has to be multiplied by \\(\\frac{5}{9}\\).",
+    "D": "Incorrect. This multiplies 18 by \\(\\frac{9}{5}\\) instead of dividing by it."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "stopped_early",
+    "D": "arithmetic"
+  },
+  "verify": "P = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nC = symbols('C')\ns = solve_univariate_inequality(Rational(9, 5)*C + 32 < 50, C, relational=False)\nassert s == Interval.open(-oo, 10)\nassert solve_univariate_inequality(P(choices[answer]), C, relational=False) == s\nassert all(solve_univariate_inequality(P(choices[k]), C, relational=False) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

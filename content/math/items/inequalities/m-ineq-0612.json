@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0612",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(-4 < 2 - 3x \\le 11\\), what is the least possible value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-3"
+  ],
+  "solution": [
+    "Subtract 2 from all three parts: \\(-6 < -3x \\le 9\\).",
+    "Divide by \\(-3\\) and reverse both signs: \\(2 > x \\ge -3\\), that is, \\(-3 \\le x < 2\\).",
+    "The least possible value of \\(x\\) is \\(-3\\). Check: \\(2 - 3(-3) = 11\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\ns = solve_univariate_inequality(-4 < 2 - 3*x, x, relational=False).intersect(solve_univariate_inequality(2 - 3*x <= 11, x, relational=False))\nassert s == Interval.Ropen(-3, 2)\nassert [Rational(a) for a in spr_answers] == [s.inf]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "-3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

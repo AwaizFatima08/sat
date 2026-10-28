@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0663",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A hiker walks from a trailhead up to a lookout at an average speed of \\(v\\) kilometers per hour and then walks back down the same trail to the trailhead at an average speed of \\(v + 3\\) kilometers per hour. The hiker's average speed for the entire round trip is 4 kilometers per hour. What is the value of \\(v\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(2\\)",
+    "C": "\\(2.5\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let the one-way distance be \\(d\\). Total time is \\(\\frac{d}{v} + \\frac{d}{v + 3}\\), and average speed is total distance over total time: \\(\\frac{2d}{\\frac{d}{v} + \\frac{d}{v + 3}} = 4\\).",
+    "The \\(d\\) cancels: \\(\\frac{1}{v} + \\frac{1}{v + 3} = \\frac{1}{2}\\). Multiply by \\(2v(v + 3)\\): \\(2(v + 3) + 2v = v(v + 3)\\).",
+    "So \\(v^{2} - v - 6 = 0\\), \\((v - 3)(v + 2) = 0\\), and since \\(v > 0\\), \\(v = 3\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Uphill at 3 km/h and downhill at 6 km/h: a trail of \\(d\\) km takes \\(\\frac{d}{3} + \\frac{d}{6} = \\frac{d}{2}\\) hours for \\(2d\\) km, an average of 4 km/h.",
+    "B": "Incorrect. This is the result of factoring \\(v^{2} - v - 6\\) as \\((v - 2)(v + 3)\\); the correct factoring is \\((v - 3)(v + 2)\\).",
+    "C": "Incorrect. This is the result of averaging the two speeds, \\(\\frac{v + (v + 3)}{2} = 4\\); the hiker spends more time at the slower speed, so the average speed is not the mean of the speeds.",
+    "D": "Incorrect. This is the downhill speed \\(v + 3\\), not \\(v\\)."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "v, d = symbols('v d', positive=True)\navg = 2*d/(d/v + d/(v + 3))\nsols = solve(Eq(avg, 4), v)\nassert sols == [3]\nassert value(choices[answer]) == 3\nassert all(value(choices[k]) != 3 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

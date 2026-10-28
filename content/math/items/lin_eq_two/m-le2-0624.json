@@ -1,0 +1,43 @@
+{
+  "id": "m-le2-0624",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, a line passes through the points \\((-2, -5)\\) and \\((4, 4)\\). The point \\((k, 2k)\\) lies on this line, where \\(k\\) is a constant. What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "-4"
+  ],
+  "solution": [
+    "Slope \\(= \\frac{4 - (-5)}{4 - (-2)} = \\frac{3}{2}\\). Through \\((4, 4)\\): \\(y = \\frac{3}{2}x - 2\\).",
+    "Substitute \\((k, 2k)\\): \\(2k = \\frac{3}{2}k - 2\\), so \\(\\frac{1}{2}k = -2\\) and \\(k = -4\\)."
+  ],
+  "verify": "x, k = symbols('x k')\nm = Rational(4 - (-5), 4 - (-2))\nline = m*(x - 4) + 4\nsol = solve(Eq(2*k, line.subs(x, k)), k)\nassert sol == [-4]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "-4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

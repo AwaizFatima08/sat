@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0638",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "For thousands of years the forests of the northern United States and Canada had no earthworms: the glaciers of the last ice age had wiped them out, and native species never returned. The earthworms found there today descend from European species carried in with plants and fishing bait. In these forests, fallen leaves normally build up into a thick, spongy layer in which many native wildflowers germinate and salamanders hunt. Earthworms feed on fallen leaves and pull them underground. Ecologist Marta Soler surveyed forest plots across a region where earthworms had spread over the previous thirty years and found that the plots with the most earthworms had the thinnest leaf layer. If the earthworms are responsible for the thinning, then the wildflowers and salamanders in heavily invaded plots ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "will adapt quickly to forests with little leaf litter, as European species have done.",
+    "B": "may be harmed even though the earthworms do not feed on them directly.",
+    "C": "had already begun declining before the earthworms arrived, which is why the leaf layer thinned.",
+    "D": "are being eaten by the earthworms along with the fallen leaves."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Two facts combine. Native wildflowers germinate in the leaf layer and salamanders hunt in it, and earthworms consume that layer. Earthworms eat leaves, not flowers or salamanders, yet removing the layer removes something these species rely on, so they can suffer without ever being eaten.",
+    "A": "Incorrect. The text says nothing about how European species adapted or how quickly native species might; it notes only that these forests developed without earthworms.",
+    "B": "Correct. The earthworms eat the leaf layer, and the wildflowers and salamanders depend on that layer, so the harm reaches them indirectly.",
+    "C": "Incorrect. The text attributes the thinning to earthworms eating leaves, not to a decline in wildflowers or salamanders.",
+    "D": "Incorrect. The text says earthworms feed on fallen leaves; the threat to wildflowers and salamanders is the loss of their habitat, not predation."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "reversed",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

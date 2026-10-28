@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0703",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The system of astronomy set out by Ptolemy in the second century CE placed a motionless Earth at the center of the universe and explained the wandering of the planets by means of circles riding on circles. Judged as a calculating device, it was a triumph: for some fourteen centuries, astronomers using Ptolemy's tables could forecast the positions of the planets, and the dates of eclipses, closely enough for almanacs, calendars, and navigation. Yet the system's success as a predictor did nothing to ______ its central physical claim. The planets kept their appointments with the tables, but the stationary Earth from which the tables were computed turned out not to exist.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "complicate",
+    "B": "vindicate",
+    "C": "undermine",
+    "D": "anticipate"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The passage separates two things: the system's success at prediction and its \"central physical claim\" that Earth is motionless. \"Yet\" signals that the success did not carry over to the claim, and the last sentence confirms that the claim \"turned out not to exist.\" So the success did nothing to prove the claim right, which is what \"vindicate\" means.",
+    "A": "Incorrect. \"Complicate\" means make more difficult. The text is about proof, not about making the claim harder to state.",
+    "B": "Correct. To vindicate a claim is to show it was justified. Centuries of accurate predictions did not show that the motionless Earth was real.",
+    "C": "Incorrect. The sentence is about whether success supported the claim, not whether it damaged it. Saying success \"did nothing to undermine\" the claim would suggest the claim was safe, but the text says it was false.",
+    "D": "Incorrect. \"Anticipate\" means foresee. A system cannot foresee its own central claim; the word does not fit the relationship between the predictions and the claim."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": "C",
+        "note": "\"Undermine\" is a possible reading of the blank, though \"vindicate\" fits better with the negation.",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

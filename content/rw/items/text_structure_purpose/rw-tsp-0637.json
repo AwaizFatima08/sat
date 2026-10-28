@@ -1,0 +1,56 @@
+{
+  "id": "rw-tsp-0637",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "text_structure_purpose",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In many large collections of numbers that arise naturally, from the populations of towns to the amounts on a company's invoices, the leading digit is not evenly distributed. The digit 1 comes first about 30 percent of the time, while 9 leads less than 5 percent of the time, a pattern known as Benford's law. The law holds for data that spread across several orders of magnitude; it fails for numbers that are assigned rather than measured, such as telephone numbers. Forensic accountants exploit this regularity. Someone fabricating expense figures tends to spread leading digits evenly, and a ledger whose first digits depart sharply from Benford's distribution may deserve a closer look. The deviation does not prove fraud, but it tells an auditor where to begin.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": {
+    "A": "To explain why telephone numbers and similar assigned data do not follow Benford's law",
+    "B": "To describe the mathematical proof that leading digits are unevenly distributed in natural data",
+    "C": "To describe a statistical pattern and explain how auditors use departures from it to flag records for review",
+    "D": "To argue that Benford's law can reliably prove whether a company's accounts are fraudulent"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The first half of the text describes Benford's law and when it applies. The second half explains how forensic accountants use it: invented figures tend not to follow the law, so a ledger that departs from it \"may deserve a closer look.\" The last sentence limits the claim: deviation is a starting point, not proof. The purpose is to describe the pattern and its use as a screening tool.",
+    "A": "Incorrect. Assigned numbers are mentioned in one clause as a limit of the law, not as the subject of the text.",
+    "B": "Incorrect. The text states the pattern and where it holds but offers no proof or mathematical explanation of it.",
+    "C": "Correct. The text explains Benford's law and then shows how a ledger that breaks the pattern tells an auditor \"where to begin.\"",
+    "D": "Incorrect. The text says plainly that a deviation \"does not prove fraud\"; it only points to where to look."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "not_in_text",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

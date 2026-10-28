@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0632",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The seeds in the head of a sunflower are arranged in two families of spirals—one curving clockwise and the other ______ and the number of spirals in each family is usually a pair of neighboring Fibonacci numbers, such as 34 and 55. The pattern is not a coincidence. Each new seed forms at the center at an angle of about 137.5 degrees from the one before it, and that particular angle packs the seeds more tightly than any other would, leaving no wasted space as the head grows.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "counterclockwise",
+    "B": "counterclockwise—",
+    "C": "counterclockwise,",
+    "D": "counterclockwise;"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "\"One curving clockwise and the other counterclockwise\" is extra information explaining the two families of spirals. It opens with a dash after \"spirals,\" so it must close with a dash before the sentence continues with \"and the number of spirals.\"",
+    "A": "Incorrect. Without a closing mark, the extra information is never set off and runs straight into \"and the number of spirals.\"",
+    "B": "Correct. The closing dash matches the opening dash after \"spirals\" and completes the pair around the extra information.",
+    "C": "Incorrect. The extra information opens with a dash, so it can't close with a comma; the two marks must match.",
+    "D": "Incorrect. A semicolon can't close a supplement that opened with a dash, and what follows it must be an independent clause."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "supplements",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

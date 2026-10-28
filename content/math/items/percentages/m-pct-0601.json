@@ -1,0 +1,82 @@
+{
+  "id": "m-pct-0601",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The table shows the number of students in a class who chose each of four subjects as their favorite. What percent of the students chose science?",
+  "figure": {
+    "kind": "table",
+    "title": "Favorite subject",
+    "columns": [
+      "Subject",
+      "Number of students"
+    ],
+    "rows": [
+      [
+        "Math",
+        "21"
+      ],
+      [
+        "Science",
+        "15"
+      ],
+      [
+        "History",
+        "9"
+      ],
+      [
+        "Art",
+        "15"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(25\\%\\)",
+    "B": "\\(15\\%\\)",
+    "C": "\\(33\\%\\)",
+    "D": "\\(75\\%\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Total students: \\(21 + 15 + 9 + 15 = 60\\).",
+    "\\(\\frac{15}{60} = 0.25 = 25\\%\\)."
+  ],
+  "explanation": {
+    "A": "Correct. 15 of the 60 students chose science, and \\(\\frac{15}{60} = 25\\%\\).",
+    "B": "Incorrect. This is the number of students who chose science, written as a percent. The count must be divided by the total of 60.",
+    "C": "Incorrect. This is approximately \\(\\frac{15}{45}\\), using the other three subjects as the base instead of all 60 students.",
+    "D": "Incorrect. This is \\(\\frac{45}{60}\\), the percent of students who did not choose science."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "percent_add",
+    "D": "wrong_quantity"
+  },
+  "verify": "rows = {r[0]: int(r[1]) for r in figure['rows']}\nans = Rational(rows['Science'], sum(rows.values()))\nassert ans == Rational(1, 4)\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

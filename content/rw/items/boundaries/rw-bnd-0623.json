@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0623",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Earth's rotation is not perfectly steady, so a day measured by the sun does not always match a day measured by atomic ______ keep the two in step, timekeepers have occasionally added a leap second to the world's official clocks, most recently at the end of 2016. The practice is now scheduled to end by 2035.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "clocks, to",
+    "B": "clocks; and to",
+    "C": "clocks. To",
+    "D": "clocks to"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "\"Earth's rotation is not perfectly steady, so a day measured by the sun does not always match a day measured by atomic clocks\" is a complete sentence. \"To keep the two in step\" introduces a second complete sentence whose subject is \"timekeepers\" and whose verb is \"have added.\" Two independent clauses need a strong boundary, such as a period, between them.",
+    "A": "Incorrect. A comma alone can't join two independent clauses; this creates a comma splice.",
+    "B": "Incorrect. A semicolon joins two independent clauses on its own; it is not used together with \"and.\"",
+    "C": "Correct. A period ends the first independent clause, and the second sentence begins with the phrase \"To keep the two in step.\"",
+    "D": "Incorrect. With no punctuation, the two independent clauses run together (a run-on sentence)."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "linking_clauses",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

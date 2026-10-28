@@ -1,0 +1,87 @@
+{
+  "id": "rw-ceq-0648",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "On the trekking routes of the Annapurna region of Nepal, porters carry visitors' baggage, and trekking companies generally limit the load a porter they employ may carry to 25 kilograms. Porters hired directly by independent trekkers are not bound by company rules, and some observers assumed that these porters simply carry whatever they are offered. Labor researcher Pemba Sherpa, who weighed porters' loads at a checkpoint on a popular route, argues that the company limit shapes expectations even where it does not apply: directly hired porters do carry more than company porters on average, he finds, but the difference is modest, and most of them still stay within the 25-kilogram limit.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Loads Carried by Porters Weighed at a Checkpoint in the Annapurna Region",
+    "columns": [
+      "Load",
+      "Company-hired porters (%)",
+      "Directly hired porters (%)"
+    ],
+    "rows": [
+      [
+        "Under 20 kg",
+        38,
+        24
+      ],
+      [
+        "20–25 kg",
+        55,
+        50
+      ],
+      [
+        "26–30 kg",
+        7,
+        19
+      ],
+      [
+        "Over 30 kg",
+        0,
+        7
+      ]
+    ],
+    "note": "Average load: company-hired porters 21.3 kg; directly hired porters 23.6 kg."
+  },
+  "stem": "Which choice most effectively uses data from the table to support Sherpa's argument?",
+  "choices": {
+    "A": "Seven percent of directly hired porters carried more than 30 kilograms, while no company-hired porter did.",
+    "B": "Directly hired porters averaged 23.6 kilograms against 21.3 for company-hired porters, and 74 percent of them still carried 25 kilograms or less.",
+    "C": "Most directly hired porters carried loads heavier than the 25-kilogram company limit.",
+    "D": "Directly hired porters were paid more per trip than company-hired porters were."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Sherpa's argument concedes a difference but insists it is modest and that most directly hired porters stay within the limit. The evidence must give both the size of the average difference (23.6 against 21.3 kilograms) and the share of directly hired porters at or under 25 kilograms (24 plus 50, or 74 percent).",
+    "A": "Incorrect. This is true, but it highlights the heaviest loads, which is the observers' picture; it says nothing about what most directly hired porters carry.",
+    "B": "Correct. A difference of about two kilograms in the averages and a clear majority within the limit are exactly the two points Sherpa makes.",
+    "C": "Incorrect. Only 26 percent of directly hired porters (19 plus 7) carried more than 25 kilograms, so most did not.",
+    "D": "Incorrect. The table records loads, not pay."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

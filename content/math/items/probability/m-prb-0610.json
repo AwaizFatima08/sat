@@ -1,0 +1,58 @@
+{
+  "id": "m-prb-0610",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A box contains pens and pencils, and it contains 3 times as many pens as pencils. Of the pens, 40% are blue, and of the pencils, 60% are blue. If a blue item is selected at random from the box, what is the probability that it is a pen?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{2}{5}\\)",
+    "B": "\\(\\frac{1}{2}\\)",
+    "C": "\\(\\frac{3}{4}\\)",
+    "D": "\\(\\frac{2}{3}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let the box contain \\(k\\) pencils and \\(3k\\) pens.",
+    "Blue pens: \\(0.4 \\cdot 3k = 1.2k\\). Blue pencils: \\(0.6k\\). Blue items in all: \\(1.8k\\).",
+    "The probability that a blue item is a pen is \\(\\frac{1.2k}{1.8k} = \\frac{2}{3}\\); the value of \\(k\\) does not matter."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the probability that a pen is blue, \\(40\\%\\), which reverses the condition in the question.",
+    "B": "Incorrect. This ignores that there are 3 times as many pens as pencils; the equal numbers of blue pens and blue pencils that this assumes are not what the box contains.",
+    "C": "Incorrect. This is the fraction of all items that are pens, \\(\\frac{3}{4}\\); the question asks only about the blue items, among which pencils are relatively more common.",
+    "D": "Correct. For every pencil there are 3 pens; blue pens are \\(0.4 \\cdot 3 = 1.2\\) per pencil and blue pencils are \\(0.6\\) per pencil, so the probability is \\(\\frac{1.2}{1.8} = \\frac{2}{3}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_formula",
+    "C": "stopped_early"
+  },
+  "verify": "k = symbols('k', positive=True)\nbp = Rational(40, 100) * 3*k\nbc = Rational(60, 100) * k\np = simplify(bp / (bp + bc))\nassert p == Rational(2, 3)\nassert value(choices[answer]) == p\nassert all(value(choices[c]) != p for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

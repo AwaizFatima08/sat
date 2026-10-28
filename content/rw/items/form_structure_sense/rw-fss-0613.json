@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0613",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Flamenco, a style of music and dance from southern Spain, uses the feet of the dancers as a kind of drum. In a duet, both ______ shoes have rows of small nails hammered into the toes and heels, so that every tap and stamp rings out sharply on the wooden floor. Skilled performers can produce a rapid burst of taps in just a second or two.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "dancers'",
+    "B": "dancer's",
+    "C": "dancers's",
+    "D": "dancers"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The shoes belong to the dancers, so a possessive is needed, and \"both\" shows there are two dancers, so the plural possessive \"dancers'\" (apostrophe after the s) is correct.",
+    "A": "Correct. \"Dancers'\" is the plural possessive, matching \"the dancers\" in the first sentence.",
+    "B": "Incorrect. \"dancer's\" is a singular possessive, but \"both\" tells us there are two dancers, so the plural possessive is needed.",
+    "C": "Incorrect. \"Dancers's\" is not a standard form; a plural ending in s takes only an apostrophe.",
+    "D": "Incorrect. \"Dancers\" has no apostrophe, so it does not show that the shoes belong to the dancers."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "plural_possessive",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (reworded to 'both ... shoes': plural possessive dancers' is the only fit)",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

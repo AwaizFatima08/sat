@@ -1,0 +1,96 @@
+{
+  "id": "rw-ceq-0656",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "House sparrows have declined sharply in many European cities since the 1980s, and the causes remain debated. One explanation blames the loss of nesting cavities as old buildings are renovated; another blames a shortage of the insects that sparrows need to feed their chicks. Urban ecologist Sven Lindgren, who counted sparrows and flying insects and surveyed nesting cavities across twelve neighborhoods of a Scandinavian city, argues that his data favor the second explanation. Neighborhoods with abundant cavities but few insects, he observes, hold scarcely more sparrows than neighborhoods lacking both, whereas insect-rich neighborhoods support many sparrows even where cavities are comparatively scarce.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Nesting Cavities, Insects, and Sparrows in Twelve City Neighborhoods",
+    "columns": [
+      "Neighborhood type",
+      "Neighborhoods",
+      "Nest cavities per 100 buildings",
+      "Insect abundance index",
+      "Sparrows per km of street"
+    ],
+    "rows": [
+      [
+        "Many cavities, many insects",
+        3,
+        48,
+        7.9,
+        31
+      ],
+      [
+        "Many cavities, few insects",
+        4,
+        45,
+        2.1,
+        6
+      ],
+      [
+        "Few cavities, many insects",
+        2,
+        13,
+        7.4,
+        24
+      ],
+      [
+        "Few cavities, few insects",
+        3,
+        11,
+        1.8,
+        4
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Lindgren's argument?",
+  "choices": {
+    "A": "Neighborhoods with many cavities and many insects had the highest sparrow count, 31 per kilometer of street.",
+    "B": "Neighborhoods with few cavities held fewer sparrows than those with many cavities regardless of insect abundance.",
+    "C": "Neighborhoods with many cavities but few insects held only 6 sparrows per kilometer, barely above the 4 found where both were scarce, while insect-rich neighborhoods with few cavities held 24.",
+    "D": "Renovation of old buildings removed more nesting cavities in insect-poor neighborhoods than in insect-rich ones."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "To favor one explanation over the other, Lindgren needs neighborhoods where cavities and insects point in different directions. The evidence must compare the two mixed rows: plenty of cavities but few insects gives 6 sparrows per kilometer, close to the 4 where both are scarce, while few cavities but many insects gives 24.",
+    "A": "Incorrect. This is true, but a neighborhood rich in both cavities and insects fits either explanation equally well, so it cannot show which factor matters.",
+    "B": "Incorrect. Neighborhoods with few cavities but many insects held 24 sparrows per kilometer, far more than the 6 in neighborhoods with many cavities but few insects.",
+    "C": "Correct. Cavities without insects yield almost no sparrows, while insects without cavities yield many, which is exactly the pattern that favors the insect explanation.",
+    "D": "Incorrect. The table reports how many cavities exist, not how or why any were lost."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-nlf-0614",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(y = x^{2}\\) is reflected across the \\(x\\)-axis. Which of the following is an equation of the resulting graph?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(y = (-x)^{2}\\)",
+    "B": "\\(y = x^{2} - 1\\)",
+    "C": "\\(y = -x^{2}\\)",
+    "D": "\\(y = -x\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Reflecting a graph across the \\(x\\)-axis changes the sign of every \\(y\\)-value: \\((x, y)\\) becomes \\((x, -y)\\).",
+    "So \\(y = x^{2}\\) becomes \\(y = -x^{2}\\), a parabola opening downward with the same vertex \\((0, 0)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\((-x)^{2} = x^{2}\\), so this is the same graph; replacing \\(x\\) with \\(-x\\) reflects across the \\(y\\)-axis, and the parabola is symmetric about that axis anyway.",
+    "B": "Incorrect. Subtracting \\(1\\) shifts the graph down 1 unit; it still opens upward.",
+    "C": "Correct. Each \\(y\\)-value is replaced by its opposite, giving \\(y = -x^{2}\\).",
+    "D": "Incorrect. \\(y = -x\\) is a line, not a parabola; the reflection keeps the shape and only flips it."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\nrhs = {k: value(v.split('=')[1]) for k, v in choices.items()}\nok = [k for k in rhs if simplify(rhs[k] + x**2) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

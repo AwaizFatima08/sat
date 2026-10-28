@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0622",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following systems of equations has infinitely many solutions?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2x - y = 4\\) and \\(-6x + 3y = 12\\)",
+    "B": "\\(2x - y = 4\\) and \\(-6x + 3y = -12\\)",
+    "C": "\\(2x - y = 4\\) and \\(6x + 3y = 12\\)",
+    "D": "\\(2x - y = 4\\) and \\(2x + y = 4\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "A system has infinitely many solutions when the two equations describe the same line, that is, when one equation is a multiple of the other.",
+    "\\(-3(2x - y) = -6x + 3y\\) and \\(-3(4) = -12\\), so \\(-6x + 3y = -12\\) is \\(-3\\) times \\(2x - y = 4\\).",
+    "In every other choice the second equation is not a multiple of the first: the lines are parallel (no solution) or cross once."
+  ],
+  "explanation": {
+    "A": "Incorrect. Multiplying the first equation by \\(-3\\) gives \\(-6x + 3y = -12\\), not \\(12\\); these lines are parallel, so the system has no solution.",
+    "B": "Correct. Multiplying \\(2x - y = 4\\) by \\(-3\\) gives \\(-6x + 3y = -12\\), so both equations describe the same line.",
+    "C": "Incorrect. These lines have slopes \\(2\\) and \\(-2\\), so they intersect in exactly one point.",
+    "D": "Incorrect. These lines have slopes \\(2\\) and \\(-2\\), so they intersect in exactly one point, \\((2, 0)\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "eqs = lambda s: [value(p.split('=')[0]) - value(p.split('=')[1]) for p in s.split(' and ')]\nx, y = symbols('x y')\ninf = [k for k in choices if len(linsolve(eqs(choices[k]), [x, y]).free_symbols) > 0]\nassert inf == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

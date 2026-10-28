@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0627",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(4(2x - 1) + c = 8x + 3c - 10\\), \\(c\\) is a constant. For which value of \\(c\\) does the equation have infinitely many solutions?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-7\\)",
+    "B": "\\(6\\)",
+    "C": "\\(-3\\)",
+    "D": "\\(3\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Distribute: \\(8x - 4 + c = 8x + 3c - 10\\).",
+    "The \\(x\\)-terms already match, so the equation has infinitely many solutions exactly when the constants match: \\(-4 + c = 3c - 10\\).",
+    "Then \\(6 = 2c\\), so \\(c = 3\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of a sign slip with the \\(-10\\): \\(-4 + c = 3c + 10\\) gives \\(c = -7\\).",
+    "B": "Incorrect. This is the value of \\(2c\\), not \\(c\\).",
+    "C": "Incorrect. This is the result of a sign slip when collecting the \\(c\\)-terms: \\(-2c = 6\\).",
+    "D": "Correct. With \\(c = 3\\), both sides equal \\(8x - 1\\), so every value of \\(x\\) is a solution."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "stopped_early",
+    "C": "sign_error"
+  },
+  "verify": "x, c = symbols('x c')\nd = expand(4*(2*x - 1) + c - (8*x + 3*c - 10))\nassert d.coeff(x, 1) == 0\ns = solve(Eq(d, 0), c)[0]\nassert s == 3\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

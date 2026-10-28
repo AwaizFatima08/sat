@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0643",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A storeroom attached to a medieval synagogue in Cairo preserved thousands of letters exchanged by merchants who traded between the Mediterranean and India in the eleventh and twelfth centuries. The merchants routinely entrusted valuable goods to partners in distant ports. Historian Yusuf Haddad argues that this trust rested not on enforceable contracts but on reputation within a close-knit community: a partner who cheated could expect to be shut out of future dealings by everyone who heard of it, and that threat, rather than any court, kept partners honest.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly weaken Haddad's argument?",
+  "choices": {
+    "A": "When a partner failed to deliver goods or payment, merchants routinely brought written contracts before a court and obtained judgments enforcing them.",
+    "B": "Most of the letters were written in Arabic using Hebrew letters.",
+    "C": "Many of the merchants dealt in spices and dyes brought from the coast of India.",
+    "D": "The letters frequently pass along news of which merchants had behaved dishonestly in other ports."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Haddad's argument is that reputation, not enforceable contracts, secured honest dealing. If merchants in fact used written contracts and obtained court judgments against partners who failed them, then enforcement did exist and was relied on, which directly contradicts his claim.",
+    "A": "Correct. Routine use of courts to enforce contracts shows that formal enforcement, not only reputation, kept partners honest.",
+    "B": "Incorrect. The script the letters used is unrelated to how merchants secured honest dealing.",
+    "C": "Incorrect. What goods were traded says nothing about how trust between partners was maintained.",
+    "D": "Incorrect. Spreading news of dishonest merchants is how a reputation system works, so this would support Haddad."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

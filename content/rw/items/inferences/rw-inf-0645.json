@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0645",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In kabaddi, a team sport played across South Asia, a \"raider\" crosses into the opposing half of the court, tries to touch as many defenders as possible, and must return to his own half without taking a breath. Under the traditional rules, the raider must also chant the word \"kabaddi\" aloud without pause for the whole of the raid; a raider whose chant stops is ruled out. Sports historian Arjun Bhattacharya notes that an official standing at the edge of the court cannot see whether a player has inhaled, and that a person cannot keep chanting steadily while breathing in. Considered in this light, the chanting rule most likely exists to ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "frighten the defenders by allowing the raider to make as much noise as possible.",
+    "B": "make the no-breath rule enforceable by turning an invisible act into an audible one.",
+    "C": "replace the no-breath rule, which officials had found impossible to enforce.",
+    "D": "give raiders a way to hold their breath for longer than they otherwise could."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The breath rule has a problem: an official cannot see whether a raider has inhaled. The text supplies the missing link, that steady chanting is impossible while breathing in. A raider who keeps chanting has therefore not inhaled, and a chant that stops gives the official something to hear. The chant lets the breath rule be enforced.",
+    "A": "Incorrect. The text never connects the chant to intimidation; it connects it to breathing and to what officials can detect.",
+    "B": "Correct. Officials cannot see a breath, but they can hear a chant stop, and chanting cannot continue through an inhalation, so the chant is the breath rule made audible.",
+    "C": "Incorrect. The chant supports the breath rule rather than replacing it; both rules apply to the raider.",
+    "D": "Incorrect. Chanting uses up air; the text presents it as a check on breathing, not as a way to extend a breath."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "reversed",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

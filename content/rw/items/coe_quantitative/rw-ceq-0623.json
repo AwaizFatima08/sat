@@ -1,0 +1,113 @@
+{
+  "id": "rw-ceq-0623",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Salt marshes along the coast of Georgia, in the United States, are feeding grounds for wading birds such as herons and egrets. In 2019, a conservation group removed an old earthen dike from one marsh so that tides could flow across it again. Ecologist Darnell Whitaker counted wading birds on the restored marsh and on a nearby marsh that had never been diked during the same week each spring. He argued that the restored marsh was recovering, though it had not yet caught up with the undiked marsh: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Wading Birds Counted on Two Georgia Salt Marshes, 2019–2023",
+    "x_label": "Year",
+    "y_label": "Wading birds counted",
+    "series": [
+      {
+        "name": "Restored marsh",
+        "points": [
+          [
+            "2019",
+            12
+          ],
+          [
+            "2020",
+            19
+          ],
+          [
+            "2021",
+            31
+          ],
+          [
+            "2022",
+            44
+          ],
+          [
+            "2023",
+            52
+          ]
+        ]
+      },
+      {
+        "name": "Undiked marsh",
+        "points": [
+          [
+            "2019",
+            68
+          ],
+          [
+            "2020",
+            71
+          ],
+          [
+            "2021",
+            66
+          ],
+          [
+            "2022",
+            73
+          ],
+          [
+            "2023",
+            70
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "the restored marsh had more wading birds than the undiked marsh by 2023, after rising every year since 2019.",
+    "B": "the undiked marsh had roughly 70 wading birds in every year from 2019 to 2023, with no clear trend.",
+    "C": "bird counts on the restored marsh rose from 12 in 2019 to 52 in 2023, still below the undiked marsh's roughly 70.",
+    "D": "bird counts on the restored marsh rose every year, from 12 in 2019 to 52 in 2023."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Whitaker's statement has two parts: the restored marsh is recovering (counts rising) and it has not yet caught up (still below the undiked marsh). The choice must give both: the restored line climbs from 12 to 52, while the undiked line stays near 70, so 52 is still well short of it.",
+    "A": "Incorrect. This reverses the graph: in 2023 the restored marsh had 52 birds, still below the undiked marsh's 70.",
+    "B": "Incorrect. This is accurate, but it describes only the undiked marsh and says nothing about whether the restored marsh is recovering.",
+    "C": "Correct. The rise from 12 to 52 shows recovery, and the comparison with roughly 70 on the undiked marsh shows the gap that remains.",
+    "D": "Incorrect. This shows the recovery but leaves out the comparison with the undiked marsh, so it does not support the \"not yet caught up\" part."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

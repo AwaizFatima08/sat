@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0623",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the 1930s, researchers traveled through the Balkans with recording equipment to study singers who performed long traditional epic poems from memory, without written texts. The singers insisted that they sang each poem exactly as they had learned it, word for word. Yet when the researchers recorded the same singer performing the same poem on two occasions months apart, the two versions differed in length, in the order of some episodes, and in many of their lines, although the overall story stayed the same. These recordings suggest that the singers ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "had forgotten large portions of the poems between the two performances.",
+    "B": "were deliberately misleading the researchers about how they learned the poems.",
+    "C": "recomposed much of a poem during each performance rather than reciting a fixed text.",
+    "D": "had learned different versions of the poems from different teachers."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The singers believed they repeated each poem word for word, but the recordings show that the same singer's two performances differed in length, order, and wording while keeping the story. A fixed memorized text would not vary that way, so the singers must have been shaping the lines anew each time they performed.",
+    "A": "Incorrect. The overall story stayed the same and the versions differed in order and wording, which is not the pattern of forgetting.",
+    "B": "Incorrect. The text says the singers insisted on their accuracy; nothing suggests they were lying rather than sincerely mistaken.",
+    "C": "Correct. Variation in wording and order from one performance to the next, with the story intact, points to composition during performance.",
+    "D": "Incorrect. The comparison was between two performances by the same singer, so different teachers cannot explain the differences."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0615",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Pokkali is a variety of rice grown in low-lying coastal fields in Kerala, India, where seawater seeps in and makes the soil salty. Most rice varieties die in such conditions, but pokkali plants grow tall and produce grain. Agricultural scientist Reshma Pillai hypothesizes that pokkali survives because its roots keep salt out, letting far less salt into the plant than other varieties do, rather than because the plant can tolerate high levels of salt in its tissues.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Pillai's hypothesis?",
+  "choices": {
+    "A": "Farmers in Kerala often raise prawns in the same fields during the months of the year when rice is not growing there.",
+    "B": "Pokkali plants grow taller than most other rice varieties even in fields that contain no salt at all, and their grain is coarser.",
+    "C": "Pokkali plants grown in salty water contained as much salt in their leaves as other varieties but showed far less leaf damage.",
+    "D": "Grown side by side in salty water, pokkali plants contained much less salt in their stems and leaves than other varieties did."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Pillai contrasts two explanations: keeping salt out versus tolerating salt inside. Her hypothesis is the first, so the best support measures salt inside the plants and finds less in pokkali. A finding of equal salt inside but less damage would support the rival explanation instead.",
+    "A": "Incorrect. The farming cycle has nothing to do with how pokkali handles salt.",
+    "B": "Incorrect. Height in salt-free fields says nothing about how the plant deals with salt.",
+    "C": "Incorrect. Equal salt inside the plant with less damage would mean the plant tolerates salt in its tissues, the explanation Pillai rejects.",
+    "D": "Correct. Less salt inside the plant under the same conditions shows that pokkali's roots are keeping salt out, as Pillai proposes."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

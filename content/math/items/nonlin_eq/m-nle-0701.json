@@ -1,0 +1,59 @@
+{
+  "id": "m-nle-0701",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What is the value of \\(x\\) that satisfies \\(\\sqrt{3x + 4} = x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4\\)",
+    "B": "\\(-1\\) and \\(4\\)",
+    "C": "\\(-1\\)",
+    "D": "\\(-4\\) and \\(1\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Square both sides: \\(3x + 4 = x^{2}\\), so \\(x^{2} - 3x - 4 = 0\\).",
+    "Factor: \\((x - 4)(x + 1) = 0\\), so \\(x = 4\\) or \\(x = -1\\).",
+    "Check both in the original equation. For \\(x = -1\\), the left side is \\(\\sqrt{1} = 1\\), but the right side is \\(-1\\), so \\(-1\\) is extraneous. For \\(x = 4\\), \\(\\sqrt{16} = 4\\), which works."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\sqrt{3(4) + 4} = \\sqrt{16} = 4\\), which equals \\(x\\).",
+    "B": "Incorrect. \\(-1\\) is extraneous because \\(\\sqrt{3x + 4}\\) cannot equal \\(-1\\). The solutions were not checked in the original equation.",
+    "C": "Incorrect. \\(x = -1\\) solves the squared equation but not the original one. A square root is never negative, so it cannot equal \\(-1\\). This value is extraneous.",
+    "D": "Incorrect. The equation was rearranged with the sign of the \\(3x\\) term reversed, giving \\(x^{2} + 3x - 4 = 0\\). Its roots \\(-4\\) and \\(1\\) belong to the wrong equation."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "choices = {o: choices[n] for o, n in {'C': 'A', 'D': 'B', 'A': 'C', 'B': 'D'}.items()}; answer = {'A': 'C', 'B': 'D', 'C': 'A', 'D': 'B'}[answer]  # shuffled: original letters\nx = symbols('x')\nsols = [s for s in solve(Eq(sqrt(3*x + 4), x), x) if simplify(sqrt(3*x + 4).subs(x, s) - s) == 0]\nassert sols == [4]\nassert answer == 'C'\nassert value(choices[answer]) == 4",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h4-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

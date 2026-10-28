@@ -1,0 +1,79 @@
+{
+  "id": "m-ovd-0613",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The box plots summarize the scores of the 24 students in Class A and the 24 students in Class B on the same test. Approximately how many more students in Class B than in Class A scored at least 70?",
+  "figure": {
+    "kind": "boxplot",
+    "x_label": "Test score",
+    "plots": [
+      {
+        "name": "Class A",
+        "min": 42,
+        "q1": 58,
+        "median": 70,
+        "q3": 80,
+        "max": 96
+      },
+      {
+        "name": "Class B",
+        "min": 50,
+        "q1": 70,
+        "median": 78,
+        "q3": 86,
+        "max": 98
+      }
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(8\\)",
+    "B": "\\(12\\)",
+    "C": "\\(6\\)",
+    "D": "\\(18\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "In Class A, 70 is the median, so about half of the 24 students, 12, scored at least 70.",
+    "In Class B, 70 is the first quartile, so about three quarters of the 24 students, 18, scored at least 70.",
+    "Difference: \\(18 - 12 = 6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the difference between the medians, \\(78 - 70\\), not a difference in numbers of students.",
+    "B": "Incorrect. This is the number of students in Class A who scored at least 70, not the difference between the classes.",
+    "C": "Correct. About 18 students in Class B and 12 in Class A scored at least 70, a difference of 6.",
+    "D": "Incorrect. This is the number of students in Class B who scored at least 70, not how many more than in Class A."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_quantity",
+    "D": "wrong_quantity"
+  },
+  "verify": "P = {p['name']: p for p in figure['plots']}\nassert P['Class A']['median'] == 70 and P['Class B']['q1'] == 70\na = Rational(24, 2)\nb = Rational(3 * 24, 4)\nd = b - a\nassert d == 6\nassert value(choices[answer]) == d\nassert all(value(choices[k]) != d for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "Approximate read from box plots; answer depends on estimating counts.",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0632",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The depth of snow on a mountain trail, in centimeters, \\(h\\) hours after noon on a warm day is modeled by \\(S(h) = 42 - 3.5h\\). According to the model, how many hours after noon will the depth of snow be 14 centimeters?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "Set \\(42 - 3.5h = 14\\).",
+    "\\(3.5h = 28\\), so \\(h = 8\\) hours."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "h = symbols('h')\nsol = solve(Eq(42 - Rational(7, 2)*h, 14), h)\nassert sol == [8]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

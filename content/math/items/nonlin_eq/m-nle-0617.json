@@ -1,0 +1,57 @@
+{
+  "id": "m-nle-0617",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rectangular vegetable garden in Colombo has a width of \\(w\\) meters. Its length is 5 meters more than twice its width, and its area is 75 square meters. Which of the following equations can be used to find \\(w\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2w^{2} + 5w - 75 = 0\\)",
+    "B": "\\(2w^{2} + 5w + 75 = 0\\)",
+    "C": "\\(w^{2} + 5w - 75 = 0\\)",
+    "D": "\\(6w + 10 = 75\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The length is \\(2w + 5\\), so the area is \\(w(2w + 5) = 75\\).",
+    "Expand: \\(2w^{2} + 5w = 75\\), or \\(2w^{2} + 5w - 75 = 0\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Width times length, \\(w(2w + 5)\\), equals the area, 75.",
+    "B": "Incorrect. Moving 75 to the left side changes its sign: \\(2w^{2} + 5w - 75 = 0\\), not \\(+75\\).",
+    "C": "Incorrect. This uses a length of \\(w + 5\\), leaving out the word \\\"twice.\\\"",
+    "D": "Incorrect. \\(6w + 10\\) is the perimeter, \\(2w + 2(2w + 5)\\), not the area."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "w = symbols('w')\nkey = expand(w*(2*w + 5) - 75)\nassert simplify(value(choices[answer].replace(' = 0', '')) - key) == 0\nassert all(simplify(value(choices[k].replace(' = 0', '').replace(' = 75', ' - 75')) - key) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

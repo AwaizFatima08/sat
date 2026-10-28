@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0642",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A workshop makes an open box from a rectangular sheet of metal that is \\(x\\) centimeters wide and \\((x + 8)\\) centimeters long, where \\(x > 4\\). A square with sides of 2 centimeters is cut from each corner, and the sides are folded up. Which expression represents the volume, in cubic centimeters, of the box?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2(x - 2)(x + 6)\\)",
+    "B": "\\(2x(x + 8)\\)",
+    "C": "\\((x - 4)(x + 4)\\)",
+    "D": "\\(2x^{2} - 32\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Cutting 2 centimeters from each corner shortens both dimensions by 4: the base is \\((x - 4)\\) by \\((x + 4)\\).",
+    "The folded sides give a height of 2 centimeters.",
+    "Volume is \\(2(x - 4)(x + 4) = 2\\left(x^{2} - 16\\right) = 2x^{2} - 32\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of shortening each dimension by only 2 centimeters; a square is removed from each end, so each dimension loses \\(2 + 2 = 4\\) centimeters.",
+    "B": "Incorrect. This uses the original sheet as the base and does not account for the corners that were cut away.",
+    "C": "Incorrect. This is the area of the base; the volume also needs the height of 2 centimeters.",
+    "D": "Correct. \\(2(x - 4)(x + 4) = 2x^{2} - 32\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\nt = 2*(x - 4)*(x + 4)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

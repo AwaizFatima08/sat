@@ -1,0 +1,63 @@
+{
+  "id": "rw-rhs-0632",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "Vanilla comes from the seed pods of an orchid native to Mexico.",
+    "In Mexico the orchid's flowers are pollinated by a species of bee that lives only in that region.",
+    "When vanilla plants were taken to other parts of the world, they flowered but produced no pods.",
+    "In 1841 Edmond Albius, a twelve-year-old on the French island of Réunion, devised a way to pollinate the flowers by hand.",
+    "His method uses a thin stick to lift the flap that separates the flower's male and female parts, which are then pressed together with the thumb.",
+    "Growers around the world still pollinate vanilla by hand using Albius's method."
+  ],
+  "data": null,
+  "stem": "The student wants to explain why vanilla grown outside Mexico must be pollinated by hand. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "Vanilla comes from the seed pods of an orchid native to Mexico, where its flowers are pollinated by a species of bee that lives only in that region.",
+    "B": "Albius's method uses a thin stick to lift the flap that separates the flower's male and female parts, which are then pressed together with the thumb.",
+    "C": "Because the bee that pollinates vanilla in Mexico lives nowhere else, vanilla plants grown in other regions produce no pods unless each flower is pollinated by hand.",
+    "D": "In 1841 Edmond Albius, a twelve-year-old on the island of Réunion, devised a method of pollinating vanilla flowers by hand that growers still use today."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The goal asks for a reason: why hand pollination is necessary outside Mexico. The notes give a chain of cause and effect: the bee that pollinates vanilla lives only in Mexico, so elsewhere the plants produce no pods on their own. The correct sentence must link that missing pollinator to the need for hand pollination.",
+    "A": "Incorrect. It gives the first half of the explanation (the bee lives only in Mexico) but stops before drawing the consequence for plants grown elsewhere.",
+    "B": "Incorrect. It describes how hand pollination is done, not why it is necessary.",
+    "C": "Correct. It names the missing pollinator as the cause and the need for hand pollination as the result.",
+    "D": "Incorrect. It tells who invented hand pollination and when, but it never says why the technique is needed."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "D": "misses_goal"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "id": "m-arv-0609",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure shown, \\(ABCD\\) is a rectangle with \\(AB = 12\\) and \\(BC = 8\\), and point \\(E\\) lies on \\(\\overline{DC}\\) with \\(DE = 5\\). What is the area of quadrilateral \\(ABCE\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        12,
+        0
+      ],
+      "C": [
+        12,
+        8
+      ],
+      "D": [
+        0,
+        8
+      ],
+      "E": [
+        5,
+        8
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "A",
+        "E"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          6,
+          -0.7
+        ],
+        "text": "12"
+      },
+      {
+        "at": [
+          12.7,
+          4
+        ],
+        "text": "8"
+      },
+      {
+        "at": [
+          2.5,
+          8.6
+        ],
+        "text": "5"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(76\\)",
+    "B": "\\(20\\)",
+    "C": "\\(56\\)",
+    "D": "\\(68\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Area of rectangle \\(ABCD\\): \\(12 \\cdot 8 = 96\\).",
+    "Triangle \\(ADE\\) has legs \\(AD = 8\\) and \\(DE = 5\\): area \\(\\frac{1}{2}(8)(5) = 20\\).",
+    "Quadrilateral \\(ABCE\\) is what is left: \\(96 - 20 = 76\\). (Check: it is a trapezoid with parallel sides \\(12\\) and \\(EC = 7\\) and height \\(8\\): \\(\\frac{1}{2}(12 + 7)(8) = 76\\).)"
+  ],
+  "explanation": {
+    "A": "Correct. \\(96 - 20 = 76\\), or \\(\\frac{1}{2}(12 + 7)(8) = 76\\).",
+    "B": "Incorrect. This is the area of triangle \\(ADE\\), the part that was removed, not the part that remains.",
+    "C": "Incorrect. This is \\(96 - 40\\); it subtracts \\(8 \\cdot 5\\) without the \\(\\frac{1}{2}\\) in the triangle area formula.",
+    "D": "Incorrect. This is \\(\\frac{1}{2}(12 + 5)(8)\\); it uses \\(DE = 5\\) as the top side of the trapezoid, but the top side is \\(EC = 12 - 5 = 7\\)."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "misread_graph"
+  },
+  "verify": "P=figure['points']\no=['A','B','C','E']\nans=Rational(1,2)*abs(sum(P[o[i]][0]*P[o[(i+1)%4]][1]-P[o[(i+1)%4]][0]*P[o[i]][1] for i in range(4)))\nassert P['B'][0]==12 and P['C'][1]==8 and P['E'][0]==5\nassert ans==12*8-Rational(1,2)*8*5==76\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-le1-0602",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A florist starts the day with 250 roses and uses 18 roses for each bouquet she makes. At the end of the day, 34 roses are left. Which equation can be used to find \\(b\\), the number of bouquets the florist made?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(250 + 18b = 34\\)",
+    "B": "\\(18b - 250 = 34\\)",
+    "C": "\\(250 - 18b = 34\\)",
+    "D": "\\(250 - 34b = 18\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Each bouquet removes 18 roses, so after \\(b\\) bouquets, \\(18b\\) roses have been used.",
+    "Roses left = roses at the start minus roses used: \\(250 - 18b = 34\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds the roses used instead of subtracting them from the starting number.",
+    "B": "Incorrect. This subtracts the starting number from the roses used; the roses used must be subtracted from 250.",
+    "C": "Correct. Starting roses minus \\(18b\\) roses used equals the 34 roses left: \\(250 - 18b = 34\\).",
+    "D": "Incorrect. This swaps the roles of 34 (roses left) and 18 (roses per bouquet)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "sign_error",
+    "D": "wrong_quantity"
+  },
+  "verify": "b = symbols('b')\ns = solve(Eq(250 - 18*b, 34), b)\nassert s == [12]\nassert choices[answer] == r'\\(250 - 18b = 34\\)'\nassert choices[answer].count('250 - 18b = 34') == 1",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

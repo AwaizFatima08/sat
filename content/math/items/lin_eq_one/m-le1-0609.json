@@ -1,0 +1,57 @@
+{
+  "id": "m-le1-0609",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(-2(x - 6) = 10\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1\\)",
+    "B": "\\(11\\)",
+    "C": "\\(-1\\)",
+    "D": "\\(8\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Divide both sides by \\(-2\\): \\(x - 6 = -5\\).",
+    "Add 6: \\(x = 1\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(x - 6 = -5\\), so \\(x = 1\\). Check: \\(-2(1 - 6) = -2(-5) = 10\\).",
+    "B": "Incorrect. This is the result of dividing by 2 instead of \\(-2\\): \\(x - 6 = 5\\).",
+    "C": "Incorrect. This is the result of a sign slip in the last step: \\(-2x = -2\\) gives \\(x = 1\\), not \\(-1\\).",
+    "D": "Incorrect. This is the result of adding 6 to 10 before dividing: \\(\\frac{16}{2} = 8\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "x = symbols('x')\ns = solve(Eq(-2*(x - 6), 10), x)[0]\nassert s == 1\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0613",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "How many solutions does the equation \\(4(x + 2) - 3 = 2(2x + 3) - 1\\) have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Exactly one",
+    "B": "Infinitely many",
+    "C": "Zero",
+    "D": "Exactly two"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Simplify the left side: \\(4x + 8 - 3 = 4x + 5\\).",
+    "Simplify the right side: \\(4x + 6 - 1 = 4x + 5\\).",
+    "Both sides are the same expression, so every value of \\(x\\) is a solution."
+  ],
+  "explanation": {
+    "A": "Incorrect. The \\(x\\)-terms cancel, so there is no single value of \\(x\\) to find.",
+    "B": "Correct. Both sides simplify to \\(4x + 5\\), so the equation is true for every \\(x\\).",
+    "C": "Incorrect. The constants also match (5 and 5), so the equation is not a false statement like \\(5 = 6\\).",
+    "D": "Incorrect. A linear equation never has exactly two solutions."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "x = symbols('x')\nd = expand(4*(x + 2) - 3 - (2*(2*x + 3) - 1))\nassert d == 0\nassert choices[answer] == 'Infinitely many'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

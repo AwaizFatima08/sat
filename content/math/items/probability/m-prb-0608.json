@@ -1,0 +1,65 @@
+{
+  "id": "m-prb-0608",
+  "section": "math",
+  "domain": "psda",
+  "type": "probability",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The table shows the deliveries made by two couriers last week and whether each delivery was on time or late, where \\(x\\) is a positive integer. If one of the late deliveries is selected at random, the probability that it was made by Courier A is \\(\\frac{2}{7}\\). What is the value of \\(x\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "Deliveries by courier",
+    "columns": [
+      "Courier",
+      "On time",
+      "Late"
+    ],
+    "rows": [
+      [
+        "Courier A",
+        "110",
+        "x"
+      ],
+      [
+        "Courier B",
+        "90",
+        "25"
+      ]
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "10"
+  ],
+  "solution": [
+    "The late deliveries number \\(x + 25\\), and \\(x\\) of them were made by Courier A, so \\(\\frac{x}{x + 25} = \\frac{2}{7}\\).",
+    "Cross-multiply: \\(7x = 2x + 50\\), so \\(5x = 50\\) and \\(x = 10\\). (The on-time counts are not needed.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x', positive=True)\nsol = solve(Eq(x / (x + 25), Rational(2, 7)), x)\nassert sol == [10]\nassert [Rational(a) for a in spr_answers] == [10]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "10",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

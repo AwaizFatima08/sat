@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0685",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Composed chess problems, positions constructed to be solved rather than played, are judged by standards that have little to do with competitive chess. A composer may reject a position because the winning move is too obvious, because a second, unintended solution exists, or simply because the pieces are arranged without economy. For composers, such flaws are not ______; an extra solution ruins a problem as surely as a false note ruins a melody, even though a player at the board would happily take either route to victory.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "intentional",
+    "B": "fatal",
+    "C": "trivial",
+    "D": "inevitable"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The semicolon introduces the reason: an extra solution \"ruins\" a problem, even though a player would not mind it. So for composers these flaws are serious, not minor; \"trivial\" is the word the sentence denies.",
+    "A": "Incorrect. The second solution is described as \"unintended\"; whether flaws are deliberate is not the contrast the sentence draws.",
+    "B": "Incorrect. The text says an extra solution ruins the problem, so for composers the flaw is fatal; the sentence needs a word for what the flaws are not.",
+    "C": "Correct. The flaws \"ruin\" a problem for composers, so composers do not regard them as minor, even though a player would.",
+    "D": "Incorrect. The text does not discuss whether such flaws can be avoided, only how seriously composers take them."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

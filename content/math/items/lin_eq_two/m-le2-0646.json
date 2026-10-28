@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0646",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A printing company charges \\(p\\) dollars for each poster and \\(q\\) dollars for each banner. The graph of \\(px + qy = 1{,}800\\) in the \\(xy\\)-plane shows the combinations of \\(x\\) posters and \\(y\\) banners that cost exactly \\$1,800. The graph has an \\(x\\)-intercept of \\((120, 0)\\), and a banner costs 3 times as much as a poster. What is the \\(y\\)-coordinate of the \\(y\\)-intercept of the graph?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(40\\)",
+    "B": "\\(360\\)",
+    "C": "\\(15\\)",
+    "D": "\\(60\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "From the \\(x\\)-intercept, \\(120p = 1{,}800\\), so \\(p = 15\\) and \\(q = 3(15) = 45\\).",
+    "At the \\(y\\)-intercept, \\(x = 0\\): \\(45y = 1{,}800\\), so \\(y = 40\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(120p = 1{,}800\\) gives \\(p = 15\\), so \\(q = 45\\) and \\(45y = 1{,}800\\) gives \\(y = 40\\). (Equivalently, if a banner costs 3 times as much, the money buys one third as many: \\(120 \\div 3\\).)",
+    "B": "Incorrect. This is \\(3 \\times 120\\); a banner costs 3 times as much, so the money buys 3 times fewer banners, not 3 times more.",
+    "C": "Incorrect. 15 is the price of a poster in dollars, not the number of banners.",
+    "D": "Incorrect. \\(1{,}800 \\div 45 = 40\\), not 60."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "wrong_quantity",
+    "D": "arithmetic"
+  },
+  "verify": "p, q, y = symbols('p q y')\npp = solve(Eq(120*p, 1800), p)[0]\nyi = solve(Eq(3*pp*y, 1800), y)[0]\nassert yi == 40\nassert value(choices[answer]) == yi\nassert all(value(choices[k]) != yi for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

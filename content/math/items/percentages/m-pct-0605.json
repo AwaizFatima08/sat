@@ -1,0 +1,57 @@
+{
+  "id": "m-pct-0605",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The number \\(x\\) is \\(20\\%\\) greater than 45, and the number \\(y\\) is \\(20\\%\\) less than 45. What is the value of \\(x - y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(40\\)",
+    "B": "\\(0\\)",
+    "C": "\\(9\\)",
+    "D": "\\(18\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "\\(x = 1.2 \\cdot 45 = 54\\) and \\(y = 0.8 \\cdot 45 = 36\\).",
+    "\\(x - y = 54 - 36 = 18\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(20 + 20\\), adding the percents as if they were the numbers themselves.",
+    "B": "Incorrect. The two percent changes cancel only in the percents, not in the numbers: \\(x\\) is above 45 and \\(y\\) is below 45, so \\(x - y\\) is positive.",
+    "C": "Incorrect. This is \\(20\\%\\) of 45, the amount by which each number differs from 45. The difference between \\(x\\) and \\(y\\) is twice that.",
+    "D": "Correct. \\(x = 54\\), \\(y = 36\\), and \\(54 - 36 = 18\\)."
+  },
+  "traps": {
+    "A": "percent_add",
+    "B": "concept",
+    "C": "stopped_early"
+  },
+  "verify": "x = Rational(120, 100)*45\ny = Rational(80, 100)*45\nans = x - y\nassert ans == 18\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

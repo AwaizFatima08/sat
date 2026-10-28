@@ -1,0 +1,78 @@
+{
+  "id": "m-lfn-0653",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The pressure \\(P\\), in kilopascals, on a diver at a depth of \\(d\\) meters below the surface of a lake is a linear function of \\(d\\). The table shows the pressure at three depths. By how many meters must the diver's depth increase for the pressure to increase by 49 kilopascals?",
+  "figure": {
+    "kind": "table",
+    "title": "Pressure at different depths",
+    "columns": [
+      "Depth (meters)",
+      "Pressure (kilopascals)"
+    ],
+    "rows": [
+      [
+        "5",
+        "150"
+      ],
+      [
+        "15",
+        "248"
+      ],
+      [
+        "30",
+        "395"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0.2\\)",
+    "B": "\\(2.5\\)",
+    "C": "\\(5\\)",
+    "D": "\\(10\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "From the table, the pressure rises \\(248 - 150 = 98\\) kilopascals as the depth rises 10 meters, so the rate is \\(9.8\\) kilopascals per meter. (The next pair, \\(\\frac{395 - 248}{30 - 15}\\), gives the same rate.)",
+    "An increase of 49 kilopascals needs \\(\\frac{49}{9.8} = 5\\) meters of extra depth."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{9.8}{49}\\), the reciprocal of the required ratio; divide the pressure increase by the rate, not the other way around.",
+    "B": "Incorrect. This is \\(\\frac{49}{19.6}\\), which uses twice the rate; the rate is \\(\\frac{98}{10} = 9.8\\) kilopascals per meter.",
+    "C": "Correct. \\(\\frac{49}{9.8} = 5\\) meters.",
+    "D": "Incorrect. This is the 10-meter step between the first two rows of the table, over which the pressure increases by 98 kilopascals, not 49."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "arithmetic",
+    "D": "misread_graph"
+  },
+  "verify": "r = [[int(c) for c in row] for row in figure['rows']]\nm = Rational(r[1][1] - r[0][1], r[1][0] - r[0][0])\nassert m == Rational(r[2][1] - r[1][1], r[2][0] - r[1][0]) == Rational('9.8')\nans = 49 / m\nassert ans == 5\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

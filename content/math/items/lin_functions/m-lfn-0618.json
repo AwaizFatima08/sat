@@ -1,0 +1,57 @@
+{
+  "id": "m-lfn-0618",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "After a freezer is switched on, the temperature inside it falls by 3 degrees Celsius every 2 minutes. The temperature inside the freezer was 18 degrees Celsius when it was switched on. Which function gives the temperature \\(T(m)\\), in degrees Celsius, inside the freezer \\(m\\) minutes after it is switched on?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(T(m) = 18 - 3m\\)",
+    "B": "\\(T(m) = 18 - 1.5m\\)",
+    "C": "\\(T(m) = 18 - \\frac{2}{3}m\\)",
+    "D": "\\(T(m) = 1.5m + 18\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Rate: 3 degrees per 2 minutes \\(= \\frac{3}{2} = 1.5\\) degrees per minute, and the temperature is falling.",
+    "Start at 18 degrees: \\(T(m) = 18 - 1.5m\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. 3 degrees is the fall over 2 minutes, not over 1 minute; the rate per minute is 1.5 degrees.",
+    "B": "Correct. A fall of 3 degrees every 2 minutes is 1.5 degrees per minute, starting from 18 degrees.",
+    "C": "Incorrect. This inverts the rate; the change per minute is \\(\\frac{3}{2}\\) degrees, not \\(\\frac{2}{3}\\).",
+    "D": "Incorrect. The temperature falls, so the rate must be subtracted from 18."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "reciprocal",
+    "D": "sign_error"
+  },
+  "verify": "m = symbols('m')\nrhs = lambda s: value(s.split('=')[1])\nT = 18 - Rational(3, 2)*m\nok = [k for k in choices if simplify(rhs(choices[k]) - T) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

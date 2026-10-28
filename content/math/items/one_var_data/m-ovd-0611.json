@@ -1,0 +1,58 @@
+{
+  "id": "m-ovd-0611",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following changes to the data set \\(2, 4, 6, 8, 10\\) would increase the mean of the data set but leave the median unchanged?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Adding the value 12 to the data set",
+    "B": "Replacing the value 10 with 16",
+    "C": "Adding the value 6 to the data set",
+    "D": "Replacing the value 2 with 0"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The data set has mean 6 and median 6.",
+    "Replacing 10 with 16 raises the total from 30 to 36, so the mean becomes 7.2, while the ordered data \\(2, 4, 6, 8, 16\\) still has middle value 6.",
+    "Adding 12 makes the median \\(\\frac{6 + 8}{2} = 7\\); adding 6 leaves the mean at 6; replacing 2 with 0 decreases the mean."
+  ],
+  "explanation": {
+    "A": "Incorrect. Adding 12 increases the mean, but the data set then has 6 values with median \\(\\frac{6 + 8}{2} = 7\\), so the median changes too.",
+    "B": "Correct. The mean rises from 6 to \\(\\frac{36}{5} = 7.2\\), and the middle value of \\(2, 4, 6, 8, 16\\) is still 6.",
+    "C": "Incorrect. Adding a value equal to the mean leaves the mean at 6 (the median also stays 6).",
+    "D": "Incorrect. Replacing 2 with 0 lowers the total, so the mean decreases to 5.6; the median stays 6."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "sign_error"
+  },
+  "verify": "def st(d):\n    d = sorted(d); n = len(d)\n    return Rational(sum(d), n), Rational(d[(n - 1) // 2] + d[n // 2], 2)\nm0, d0 = st([2, 4, 6, 8, 10])\nassert (m0, d0) == (6, 6)\nres = {'A': st([2, 4, 6, 8, 10, 12]), 'B': st([2, 4, 6, 8, 16]), 'C': st([2, 4, 6, 6, 8, 10]), 'D': st([0, 4, 6, 8, 10])}\nok = [k for k, (m, d) in res.items() if m > m0 and d == d0]\nassert ok == [answer] == ['B']\nassert choices[answer].startswith('Replacing the value 10')",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

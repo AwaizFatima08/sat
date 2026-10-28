@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0645",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(\\frac{a}{b} = 3\\), where \\(a\\) and \\(b\\) are nonzero, what is the value of \\(\\frac{a + b}{a - b}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{1}{2}\\)",
+    "B": "\\(-2\\)",
+    "C": "\\(2\\)",
+    "D": "\\(4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "From \\(\\frac{a}{b} = 3\\), \\(a = 3b\\).",
+    "Substitute: \\(\\frac{3b + b}{3b - b} = \\frac{4b}{2b} = 2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{a - b}{a + b}\\), the reciprocal of the asked expression.",
+    "B": "Incorrect. This is the result of reading \\(\\frac{a}{b} = 3\\) as \\(b = 3a\\): \\(\\frac{a + 3a}{a - 3a} = -2\\). In fact \\(a = 3b\\).",
+    "C": "Correct. With \\(a = 3b\\), \\(\\frac{4b}{2b} = 2\\).",
+    "D": "Incorrect. This is \\(\\frac{a + b}{b}\\), the numerator \\(4b\\) divided by \\(b\\) rather than by \\(a - b = 2b\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "concept",
+    "D": "wrong_quantity"
+  },
+  "verify": "a, b = symbols('a b', nonzero=True)\nt = simplify(((a + b)/(a - b)).subs(a, 3*b))\nassert t == 2\nassert value(choices[answer]) == t\nassert all(value(choices[k]) != t for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

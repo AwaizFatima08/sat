@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0647",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A carillon is a set of at least twenty-three bells, usually hung in a tower and played from a keyboard of wooden levers that the player strikes with loosely closed fists. Because the bells are fixed in place and only their clappers move, a carillon can be played with far more ______ than church bells swung by rope: the player can sound a quiet note or a loud one, a single bell or a chord, and a rapid run of notes that a ringer pulling on ropes could never manage.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "volume",
+    "B": "effort",
+    "C": "tradition",
+    "D": "control"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The colon lists what the carillon player can do: choose \"a quiet note or a loud one,\" one bell or several, fast or slow. All of these are ways of deciding exactly how the bells sound, so the blank must mean command over the music: \"control.\"",
+    "A": "Incorrect. The text says the player can choose a quiet note as well as a loud one, so the advantage is not simply loudness.",
+    "B": "Incorrect. The point is what the player can do, not how hard the player works; a rope ringer might use more effort and still have fewer options.",
+    "C": "Incorrect. The text compares what each kind of instrument can do, not how old or traditional each is.",
+    "D": "Correct. Fixed bells let the player decide the loudness, combination, and speed of the notes, which is control."
+  },
+  "traps": {
+    "A": "wrong_tone",
+    "B": "wrong_logic",
+    "C": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

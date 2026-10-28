@@ -1,0 +1,58 @@
+{
+  "id": "m-cir-0614",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "circles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A circular flower bed has a radius of 6 meters. Two radii divide the bed into two sectors. The smaller sector has an area of \\(9\\pi\\) square meters. What is the measure, in degrees, of the central angle of the larger sector?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(67.5\\)",
+    "B": "\\(90\\)",
+    "C": "\\(135\\)",
+    "D": "\\(270\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The whole bed has area \\(\\pi(6)^{2} = 36\\pi\\), so the larger sector has area \\(36\\pi - 9\\pi = 27\\pi\\).",
+    "The larger sector is \\(\\frac{27\\pi}{36\\pi} = \\frac{3}{4}\\) of the circle, so its central angle is \\(\\frac{3}{4}(360) = 270^{\\circ}\\).",
+    "(Equivalently, the smaller sector is \\(\\frac{1}{4}\\) of the circle, \\(90^{\\circ}\\), and \\(360 - 90 = 270\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(\\frac{27\\pi}{144\\pi}(360) = 67.5\\) uses the diameter 12 as the radius when finding the area of the whole bed.",
+    "B": "Incorrect. \\(90\\) is the central angle of the smaller sector, not the larger one.",
+    "C": "Incorrect. \\(\\frac{27}{36}(180) = 135\\) uses \\(180^{\\circ}\\) for the whole circle instead of \\(360^{\\circ}\\).",
+    "D": "Correct. The larger sector is \\(\\frac{27\\pi}{36\\pi} = \\frac{3}{4}\\) of the circle: \\(\\frac{3}{4}(360) = 270^{\\circ}\\)."
+  },
+  "traps": {
+    "A": "radius_diameter",
+    "B": "wrong_quantity",
+    "C": "concept"
+  },
+  "verify": "r=6\ntotal=pi*r**2\nbig=total-9*pi\nans=big/total*360\nassert ans==270 and 360-9*pi/total*360==ans\nassert value(choices[answer])==ans\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\nassert value(choices['B'])==360-ans and value(choices['C'])==big/total*180 and value(choices['A'])==big/(pi*12**2)*360\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

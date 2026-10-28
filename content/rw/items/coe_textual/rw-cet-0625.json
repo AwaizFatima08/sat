@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0625",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Pied kingfishers, black-and-white birds found near rivers and lakes in Africa and Asia, catch fish by diving from the air. Sometimes a kingfisher dives from a perch such as an overhanging branch; sometimes it hovers in place above the water, beating its wings rapidly, before plunging. Ornithologist Amadou Diallo hypothesizes that hovering costs far more energy than perching, so kingfishers hover only when no suitable perch is available.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Diallo's hypothesis?",
+  "choices": {
+    "A": "Kingfishers hovering over the river were seen more often in the early morning than at midday, regardless of the weather.",
+    "B": "Kingfishers caught fish on a higher proportion of dives made from a hover than of dives made from a perch.",
+    "C": "Where overhanging branches had been cleared, kingfishers hovered far more often; where artificial perches were added, they hovered less.",
+    "D": "Pied kingfishers are among the largest birds able to hover in still air for more than a few seconds at a time."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Diallo's hypothesis links hovering to the absence of perches. The best support changes the number of perches and watches hovering change in the opposite direction. A finding that hovering is actually more successful would suggest birds hover by preference, weakening the hypothesis.",
+    "A": "Incorrect. The time of day of hovering does not link hovering to the availability of perches.",
+    "B": "Incorrect. If hovering gives better results, the birds might hover by choice rather than only when forced to, which works against the hypothesis.",
+    "C": "Correct. Hovering rising when perches are removed and falling when perches are added shows that the birds hover only when they lack a perch.",
+    "D": "Incorrect. The bird's ability to hover does not show when or why it chooses to hover."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

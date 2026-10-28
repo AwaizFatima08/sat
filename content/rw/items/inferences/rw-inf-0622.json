@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0622",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Snowshoe hares of northern North America turn white each fall and brown again each spring. The timing of the change is set not by the weather but by the shortening and lengthening of the days, which is the same from year to year. In a long-term study in a mountain forest, ecologists tracked hares with radio collars and recorded when snow arrived. In years when snowfall came late, many hares turned white while the ground was still bare, and these mismatched hares were killed by predators at a higher rate than hares whose coats matched their surroundings. These findings suggest that if snow continues to arrive later in the fall, ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "more hares are likely to be lost to predators each fall.",
+    "B": "predators will have difficulty finding hares against the bare ground.",
+    "C": "the hares will stop turning white altogether.",
+    "D": "the hares will begin to turn white later to match the snow."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The coat change is triggered by day length, which does not shift, so later snow means more hares turning white on bare ground. Mismatched hares were killed more often, so later snow should lead to more hares being lost to predators.",
+    "A": "Correct. Fixed timing plus later snow means more mismatch, and mismatch means higher predation.",
+    "B": "Incorrect. This reverses the finding; white hares on bare ground were easier, not harder, for predators to find.",
+    "C": "Incorrect. The change is driven by day length, which continues as before; nothing suggests it would stop.",
+    "D": "Incorrect. The text says the timing is set by day length, not weather, so the hares cannot adjust to later snow."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

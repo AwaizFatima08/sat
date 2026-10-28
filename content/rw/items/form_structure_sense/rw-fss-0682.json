@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0682",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The Tsar Bell, which stands on a stone pedestal in the Moscow Kremlin, is the largest bell in the world, at roughly two hundred tons, and it has never been rung. Cast in 1735 by Ivan Motorin and his son Mikhail, it was still sitting in its casting pit two years later when a fire swept the Kremlin; water thrown on the hot metal caused a piece weighing some eleven tons to crack away. Lifted out only in 1836, the bell, together with the broken fragment that now leans against its base, ______ one of the Kremlin's most photographed sights, a monument to ambition rather than to sound.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "remains",
+    "B": "remain",
+    "C": "have remained",
+    "D": "are"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The subject of the final sentence is \"The bell,\" which is singular. The phrase \"together with the broken fragment…\" adds information but, unlike \"and,\" does not make the subject plural. A singular subject needs the singular verb \"remains.\"",
+    "A": "Correct. The singular verb \"remains\" agrees with the singular subject \"bell\"; \"together with\" does not create a plural subject.",
+    "B": "Incorrect. \"Remain\" is plural, as if \"the bell\" and \"the fragment\" were joined by \"and,\" but \"together with\" leaves the subject singular.",
+    "C": "Incorrect. \"Have remained\" is plural, but the subject \"bell\" is singular.",
+    "D": "Incorrect. \"Are\" is plural, but the subject \"bell\" is singular."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

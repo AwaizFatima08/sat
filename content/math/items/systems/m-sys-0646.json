@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0646",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[y = kx + 1\\] \\[y = -2x + 7\\] In the system of equations above, \\(k\\) is a constant. If the solution \\((x, y)\\) to the system satisfies \\(x = y\\), what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{4}{7}\\)",
+    "B": "\\(\\frac{7}{4}\\)",
+    "C": "\\(\\frac{10}{7}\\)",
+    "D": "\\(\\frac{7}{3}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Since \\(x = y\\), replace \\(y\\) with \\(x\\) in the second equation: \\(x = -2x + 7\\), so \\(3x = 7\\) and \\(x = y = \\frac{7}{3}\\).",
+    "The point \\(\\left(\\frac{7}{3}, \\frac{7}{3}\\right)\\) must also satisfy the first equation: \\(\\frac{7}{3} = \\frac{7}{3}k + 1\\).",
+    "So \\(\\frac{7}{3}k = \\frac{4}{3}\\) and \\(k = \\frac{4}{7}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. With \\(x = y\\), the second equation gives \\(x = -2x + 7\\), so \\(x = y = \\frac{7}{3}\\); then \\(\\frac{7}{3} = \\frac{7}{3}k + 1\\) gives \\(k = \\frac{4}{7}\\).",
+    "B": "Incorrect. This inverts the fraction; from \\(\\frac{7}{3}k = \\frac{4}{3}\\), \\(k = \\frac{4}{7}\\), not \\(\\frac{7}{4}\\).",
+    "C": "Incorrect. This comes from \\(\\frac{7}{3}k = \\frac{7}{3} + 1\\), adding the 1 instead of subtracting it.",
+    "D": "Incorrect. This is the common value of \\(x\\) and \\(y\\) at the solution, not the value of \\(k\\)."
+  },
+  "traps": {
+    "B": "reciprocal",
+    "C": "sign_error",
+    "D": "stopped_early"
+  },
+  "verify": "x, y, k = symbols('x y k')\nsol = solve([y - (k*x + 1), y - (-2*x + 7)], [x, y])\nks = solve(Eq(sol[x], sol[y]), k)\nassert ks == [Rational(4, 7)]\nassert value(choices[answer]) == ks[0]\nassert all(value(choices[k]) != ks[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

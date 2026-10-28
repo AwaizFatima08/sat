@@ -1,0 +1,83 @@
+{
+  "id": "m-lat-0623",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The table gives the measures of two of the three angles of each of four triangles. Which two of the triangles must be similar to each other?",
+  "figure": {
+    "kind": "table",
+    "title": "Angle measures of four triangles",
+    "columns": [
+      "Triangle",
+      "Two of its angle measures"
+    ],
+    "rows": [
+      [
+        "I",
+        "45°, 65°"
+      ],
+      [
+        "II",
+        "65°, 70°"
+      ],
+      [
+        "III",
+        "45°, 60°"
+      ],
+      [
+        "IV",
+        "70°, 60°"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "I and III",
+    "B": "II and IV",
+    "C": "III and IV",
+    "D": "I and II"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Find each third angle with the \\(180^{\\circ}\\) sum: I has \\(70^{\\circ}\\), II has \\(45^{\\circ}\\), III has \\(75^{\\circ}\\), IV has \\(50^{\\circ}\\).",
+    "Two triangles are similar when they have the same three angle measures (two matching pairs are enough).",
+    "Triangle I has angles \\(45^{\\circ}, 65^{\\circ}, 70^{\\circ}\\) and triangle II has \\(65^{\\circ}, 70^{\\circ}, 45^{\\circ}\\), the same set, so I and II are similar. No other pair shares two angle measures."
+  ],
+  "explanation": {
+    "A": "Incorrect. I and III share only the \\(45^{\\circ}\\) angle; their other angles are \\(65^{\\circ}, 70^{\\circ}\\) and \\(60^{\\circ}, 75^{\\circ}\\).",
+    "B": "Incorrect. II and IV share only the \\(70^{\\circ}\\) angle; comparing only the listed angles misses the third angle of each triangle.",
+    "C": "Incorrect. III and IV share only the \\(60^{\\circ}\\) angle; their third angles are \\(75^{\\circ}\\) and \\(50^{\\circ}\\).",
+    "D": "Correct. Both triangles have angles of \\(45^{\\circ}\\), \\(65^{\\circ}\\), and \\(70^{\\circ}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "stopped_early",
+    "C": "concept"
+  },
+  "verify": "rows={r[0]:[int(s.strip().rstrip('°')) for s in r[1].split(',')] for r in figure['rows']}\nfull={k:frozenset(v+[180-sum(v)]) for k,v in rows.items()}\nassert full['I']==full['II']==frozenset({45,65,70})\nnames=['I','II','III','IV']\nsim=[(p,q) for i,p in enumerate(names) for q in names[i+1:] if full[p]==full[q]]\nassert sim==[('I','II')]\nassert choices[answer]=='I and II'\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

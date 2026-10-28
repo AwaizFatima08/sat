@@ -1,0 +1,113 @@
+{
+  "id": "m-arv-0624",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In quadrilateral \\(ABCD\\) shown, angles \\(A\\) and \\(D\\) are right angles, \\(AB = 14\\), \\(DC = 8\\), and \\(BC = 10\\). What is the area of quadrilateral \\(ABCD\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        14,
+        0
+      ],
+      "C": [
+        8,
+        8
+      ],
+      "D": [
+        0,
+        8
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          7,
+          -0.7
+        ],
+        "text": "14"
+      },
+      {
+        "at": [
+          4,
+          8.6
+        ],
+        "text": "8"
+      },
+      {
+        "at": [
+          11.8,
+          4.4
+        ],
+        "text": "10"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "88"
+  ],
+  "solution": [
+    "Draw the perpendicular from \\(C\\) down to \\(\\overline{AB}\\), meeting it at \\(E\\). Then \\(AECD\\) is a rectangle, so \\(AE = 8\\) and \\(EB = 14 - 8 = 6\\).",
+    "In right triangle \\(CEB\\): \\(CE = \\sqrt{10^{2} - 6^{2}} = \\sqrt{64} = 8\\). So the height of the figure is \\(8\\).",
+    "Area \\(=\\) rectangle \\(8 \\cdot 8\\) plus triangle \\(\\frac{1}{2}(6)(8)\\) \\(= 64 + 24 = 88\\). (Or: trapezoid \\(\\frac{1}{2}(14 + 8)(8) = 88\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nassert P['B'][0]==14 and P['C'][0]==8 and P['C'][1]==P['D'][1]\nEB=14-8\nh=sqrt(10**2-EB**2)\nassert h==8==P['C'][1]\nans=Rational(1,2)*(14+8)*h\nassert ans==88\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "88",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

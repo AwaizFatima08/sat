@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0620",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When the chain slipped off Amir's bicycle for the third time, he was ready to give up on the bike. His neighbor Mr. Okafor came over with a toolbox but did not fix the chain himself. Instead, he handed Amir a wrench, pointed to the rear wheel, and answered each of Amir's questions with another question. By sunset the chain was tight, and Amir had done every step with his own hands. Mr. Okafor had not come to fix a bicycle, Amir realized; he had come to give ______.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "an apology",
+    "B": "a warning",
+    "C": "a lesson",
+    "D": "a demonstration"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Mr. Okafor \"did not fix the chain himself\" but made Amir do \"every step with his own hands,\" answering questions with questions. He was teaching Amir to fix the bike himself, so what he came to give was a lesson.",
+    "A": "Incorrect. Mr. Okafor has done nothing wrong and has no reason to apologize.",
+    "B": "Incorrect. Mr. Okafor does not caution Amir about anything; he guides him through the repair.",
+    "C": "Correct. By making Amir do the work and guiding him with questions, Mr. Okafor taught him how to fix the chain; he came to give a lesson.",
+    "D": "Incorrect. A demonstration would mean showing Amir how to do the repair, but Mr. Okafor \"did not fix the chain himself\"; he made Amir do every step."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-lfn-0666",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The functions \\(f\\) and \\(g\\) are defined by \\(f(x) = 3x - 2\\) and \\(g(x) = kx + 13\\), where \\(k\\) is a constant. In the \\(xy\\)-plane, the graphs of \\(y = f(x)\\) and \\(y = g(x)\\) intersect at the point \\((p, q)\\), where \\(p + q = 10\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-6\\)",
+    "B": "\\(3\\)",
+    "C": "\\(2\\)",
+    "D": "\\(-2\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The point \\((p, q)\\) is on the graph of \\(f\\), so \\(q = 3p - 2\\). With \\(p + q = 10\\): \\(p + 3p - 2 = 10\\), so \\(p = 3\\) and \\(q = 7\\).",
+    "The point \\((3, 7)\\) is also on the graph of \\(g\\): \\(3k + 13 = 7\\), so \\(3k = -6\\) and \\(k = -2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(3k\\), the value before dividing by 3; \\(3k = -6\\) gives \\(k = -2\\).",
+    "B": "Incorrect. This is the \\(x\\)-coordinate \\(p\\) of the intersection point, not the value of \\(k\\).",
+    "C": "Incorrect. This is \\(-k\\), from a sign slip when solving \\(3k + 13 = 7\\); the slope must be negative for \\(g\\) to come down from 13 to 7.",
+    "D": "Correct. The intersection point is \\((3, 7)\\), and \\(g(3) = 7\\) requires \\(3k + 13 = 7\\), so \\(k = -2\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "wrong_quantity",
+    "C": "sign_error"
+  },
+  "verify": "p, q, k = symbols('p q k')\nsol = solve([Eq(q, 3*p - 2), Eq(p + q, 10)], [p, q])\nassert sol == {p: 3, q: 7}\nks = solve(Eq(k*sol[p] + 13, sol[q]), k)\nassert ks == [-2]\nassert value(choices[answer]) == -2\nassert all(value(choices[c]) != -2 for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0605",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The olm is a pale, eel-like salamander that lives only in the water of underground caves in parts of southeastern Europe. Nearly blind and able to go without food for years, ______ Scientists are still studying how it survives so long in such a food-poor environment.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "scientists believe the olm can live for a century or more.",
+    "B": "the olm can live for a century or more.",
+    "C": "the olm's lifespan can reach a century or more.",
+    "D": "a century or more is the possible lifespan of the olm."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The opening phrase \"Nearly blind and able to go without food for years\" describes the olm, so the olm must be the subject that comes right after the comma. Only choice B begins the main clause with \"the olm.\"",
+    "A": "Incorrect. The subject here is \"scientists,\" so the sentence wrongly says the scientists are nearly blind and go without food.",
+    "B": "Correct. \"The olm\" directly follows the phrase that describes it, so the modifier is not dangling.",
+    "C": "Incorrect. The subject here is \"lifespan,\" but a lifespan is not blind or able to go without food.",
+    "D": "Incorrect. The subject here is \"a century or more,\" which cannot be blind or go without food."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "modifier",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

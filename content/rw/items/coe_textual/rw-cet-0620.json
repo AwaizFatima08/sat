@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0620",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many companies have replaced private offices and cubicles with open-plan workspaces in which employees sit at shared tables with no walls between them. Supporters argue that removing the walls increases face-to-face conversation among coworkers, since people can see one another and simply walk over to talk. Management researcher Leila Haddad calls this the open interaction hypothesis.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly weaken the open interaction hypothesis?",
+  "choices": {
+    "A": "Employees in open-plan offices reported that they could overhear their coworkers' conversations throughout the working day.",
+    "B": "At a company that switched to an open plan, employees were observed walking over to colleagues' desks several times each hour.",
+    "C": "After one company switched to an open plan, sensors worn by employees recorded a sharp drop in face-to-face conversation.",
+    "D": "Open-plan offices cost less to build and maintain than offices divided into private rooms, and they hold more workers."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The hypothesis predicts more face-to-face conversation once walls are removed. To weaken it, a finding must show that face-to-face conversation did not increase, or actually fell, after a switch to an open plan. Measurements showing a sharp drop in conversation do exactly that.",
+    "A": "Incorrect. Overhearing others is not the same as talking with them more, so this does not test the hypothesis.",
+    "B": "Incorrect. Frequent visits to colleagues' desks would support the hypothesis rather than weaken it.",
+    "C": "Correct. Less face-to-face conversation after the walls came down is the opposite of what the hypothesis predicts, so this finding weakens it.",
+    "D": "Incorrect. Cost has nothing to do with whether people talk face-to-face more often."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

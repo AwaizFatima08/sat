@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0605",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rooftop water tank in Karachi holds 1,500 liters of water when it is full. A family uses 180 liters of water from the tank each day, and the tank is not refilled. Which inequality represents the possible numbers of days \\(d\\) the family can use water from a full tank without it running out?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(180 + d \\le 1{,}500\\)",
+    "B": "\\(1{,}500d \\le 180\\)",
+    "C": "\\(180d \\ge 1{,}500\\)",
+    "D": "\\(180d \\le 1{,}500\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "In \\(d\\) days the family uses \\(180d\\) liters.",
+    "The tank does not run out as long as the water used is at most the 1,500 liters it holds: \\(180d \\le 1{,}500\\).",
+    "Solving gives \\(d \\le 8.3\\), so the water lasts 8 full days."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds the days to the daily use instead of multiplying: the water used in \\(d\\) days is \\(180d\\) liters, not \\(180 + d\\).",
+    "B": "Incorrect. This multiplies the tank's capacity by the number of days; it is the daily use, 180 liters, that is multiplied by \\(d\\).",
+    "C": "Incorrect. This says the water used is at least the capacity, which is the condition for running out, not for having enough.",
+    "D": "Correct. The water used, \\(180d\\) liters, must be at most the 1,500 liters in the tank."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "reciprocal",
+    "C": "sign_error"
+  },
+  "verify": "P = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nd = symbols('d')\nfits = lambda c: P(c).subs(d, 8) == True and P(c).subs(d, 9) == False\nassert fits(choices[answer])\nassert all(not fits(choices[k]) for k in choices if k != answer)\nassert floor(Rational(1500, 180)) == 8",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

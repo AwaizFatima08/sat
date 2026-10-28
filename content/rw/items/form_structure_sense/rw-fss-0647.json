@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0647",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The Alhambra, a palace complex built by the Nasrid rulers of Granada, Spain, in the thirteenth and fourteenth centuries, is famous for a kind of ceiling decoration called muqarnas. Hundreds of small plaster cells, each shaped like a tiny niche, hang in layered rows so that the ceiling resembles a honeycomb or a cave of dripping stalactites. The effect of these overlapping cells, especially when sunlight from the windows below ______ across them, is to make the heavy ceiling seem to float.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "move",
+    "B": "moves",
+    "C": "have moved",
+    "D": "are moving"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "In the clause \"when sunlight from the windows below ______ across them,\" the subject is \"sunlight,\" a singular noun; \"from the windows below\" only says where the light comes from. A singular subject takes the singular verb \"moves.\"",
+    "A": "Incorrect. \"Move\" is plural and seems to agree with \"windows,\" but the subject is \"sunlight.\"",
+    "B": "Correct. The singular verb \"moves\" agrees with the singular subject \"sunlight.\"",
+    "C": "Incorrect. \"Have moved\" is plural; the subject \"sunlight\" is singular.",
+    "D": "Incorrect. \"Are moving\" is plural; \"sunlight\" is singular."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

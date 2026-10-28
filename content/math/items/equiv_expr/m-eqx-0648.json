@@ -1,0 +1,45 @@
+{
+  "id": "m-eqx-0648",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The difference between the areas of two squares is 45 square centimeters, and the sum of their side lengths is 9 centimeters. What is the difference, in centimeters, between their side lengths?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "5"
+  ],
+  "solution": [
+    "Let the side lengths be \\(x\\) and \\(y\\) with \\(x > y\\): \\(x^{2} - y^{2} = 45\\) and \\(x + y = 9\\).",
+    "Factor: \\(x^{2} - y^{2} = (x + y)(x - y)\\), so \\(9(x - y) = 45\\) and \\(x - y = 5\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, y = symbols('x y')\nsols = solve([Eq(x**2 - y**2, 45), Eq(x + y, 9)], [x, y], dict=True)\nassert len(sols) == 1 and sols[0][x] - sols[0][y] == 5\nassert [Rational(v) for v in spr_answers] == [5]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "5",
+        "second": null,
+        "note": "Taken as the absolute difference of the side lengths (5, with sides 7 and 2).",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

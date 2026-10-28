@@ -1,0 +1,44 @@
+{
+  "id": "m-le2-0612",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, a line passes through the points \\((2, 10)\\) and \\((5, 1)\\). The line crosses the \\(x\\)-axis at the point \\((a, 0)\\). What is the value of \\(a\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "16/3"
+  ],
+  "solution": [
+    "Slope \\(= \\frac{1 - 10}{5 - 2} = -3\\).",
+    "Through \\((5, 1)\\): \\(y = -3(x - 5) + 1 = -3x + 16\\).",
+    "Set \\(y = 0\\): \\(x = \\frac{16}{3}\\)."
+  ],
+  "verify": "x = symbols('x')\nm = Rational(1 - 10, 5 - 2)\nline = m*(x - 5) + 1\na = solve(line, x)[0]\nassert a == Rational(16, 3)\nassert [Rational(s) for s in spr_answers] == [a]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "16/3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

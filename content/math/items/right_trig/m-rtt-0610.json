@@ -1,0 +1,78 @@
+{
+  "id": "m-rtt-0610",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane shown, the graph of \\(y = \\frac{5}{12}x\\) makes an acute angle \\(\\theta\\) with the positive \\(x\\)-axis. What is the value of \\(\\cos \\theta\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      14
+    ],
+    "y": [
+      -2,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "5*x/12",
+        "label": "y = (5/12)x"
+      }
+    ],
+    "points": [],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{12}{13}\\)",
+    "B": "\\(\\frac{5}{13}\\)",
+    "C": "\\(\\frac{5}{12}\\)",
+    "D": "\\(\\frac{12}{5}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The point \\((12, 5)\\) is on the line. With the origin and \\((12, 0)\\) it forms a right triangle with legs 12 (along the \\(x\\)-axis) and 5.",
+    "The hypotenuse is \\(\\sqrt{12^{2} + 5^{2}} = 13\\).",
+    "\\(\\cos \\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{12}{13}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The legs are 12 and 5, the hypotenuse is 13, and the leg adjacent to \\(\\theta\\) is 12.",
+    "B": "Incorrect. \\(\\frac{5}{13}\\) is \\(\\sin \\theta\\), the opposite leg over the hypotenuse.",
+    "C": "Incorrect. \\(\\frac{5}{12}\\) is the slope, which equals \\(\\tan \\theta\\), not \\(\\cos \\theta\\).",
+    "D": "Incorrect. \\(\\frac{12}{5}\\) is the adjacent leg over the opposite leg, the reciprocal of the slope; it is not a cosine."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "concept",
+    "D": "reciprocal"
+  },
+  "verify": "m=Rational(5,12)\nassert sympify(figure['curves'][0]['expr']).subs(symbols('x'),12)==5\nt=atan(m)\nans=simplify(cos(t))\nassert ans==Rational(12,13)\nassert value(choices[answer])==ans\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

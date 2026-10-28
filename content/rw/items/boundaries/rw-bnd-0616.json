@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0616",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Japanese macaques, which live farther north than any other nonhuman ______ have adapted to winters with deep snow. In Jigokudani, a valley in the mountains of central Japan, one troop is famous for soaking in natural hot springs, a habit that researchers first recorded in the 1960s and that the monkeys appear to have passed down through generations.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "primate,",
+    "B": "primate",
+    "C": "primate;",
+    "D": "primate, and"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "\"Which live farther north than any other nonhuman primate\" is extra information about the macaques. It opens with a comma after \"macaques,\" so it must close with a comma too, before the verb \"have adapted.\"",
+    "A": "Correct. The closing comma matches the opening comma after \"macaques\" and completes the pair around the extra information.",
+    "B": "Incorrect. Without a closing comma, the extra information is never set off and runs straight into the verb \"have adapted.\"",
+    "C": "Incorrect. A semicolon can't separate the subject \"Japanese macaques\" from its verb \"have adapted.\"",
+    "D": "Incorrect. Once the comma closes the extra information, \"and have adapted\" is left with nothing to join to; the subject \"Japanese macaques\" needs \"have adapted\" as its own verb, not as a second item after \"and.\""
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "supplements",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

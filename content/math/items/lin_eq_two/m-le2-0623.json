@@ -1,0 +1,58 @@
+{
+  "id": "m-le2-0623",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(\\ell\\) passes through the points \\((2, 7)\\) and \\((-4, -2)\\). Which of the following points also lies on line \\(\\ell\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((8, 11)\\)",
+    "B": "\\((4, 4)\\)",
+    "C": "\\((0, 7)\\)",
+    "D": "\\((8, 16)\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Slope \\(= \\frac{7 - (-2)}{2 - (-4)} = \\frac{9}{6} = \\frac{3}{2}\\).",
+    "Through \\((2, 7)\\): \\(y = \\frac{3}{2}(x - 2) + 7 = \\frac{3}{2}x + 4\\).",
+    "At \\(x = 8\\): \\(y = 12 + 4 = 16\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses slope \\(\\frac{2}{3}\\) from \\((2, 7)\\): the change in \\(x\\) over the change in \\(y\\).",
+    "B": "Incorrect. This uses slope \\(-\\frac{3}{2}\\); the line rises from \\((-4, -2)\\) to \\((2, 7)\\).",
+    "C": "Incorrect. 7 is the \\(y\\)-coordinate of a point with \\(x = 2\\), not the \\(y\\)-intercept; at \\(x = 0\\), \\(y = 4\\).",
+    "D": "Correct. The slope is \\(\\frac{7 - (-2)}{2 - (-4)} = \\frac{3}{2}\\), so \\(y = \\frac{3}{2}x + 4\\), and \\(\\frac{3}{2}(8) + 4 = 16\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "pt = lambda s: [value(t) for t in s.replace('\\\\(', '').replace('\\\\)', '').strip()[1:-1].split(',')]\nx = symbols('x')\nm = Rational(7 - (-2), 2 - (-4))\nline = m*(x - 2) + 7\nok = [k for k in choices if line.subs(x, pt(choices[k])[0]) == pt(choices[k])[1]]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

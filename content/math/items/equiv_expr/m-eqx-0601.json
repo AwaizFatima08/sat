@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0601",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is equivalent to \\(9 - 2(4x - 1)\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(11 - 8x\\)",
+    "B": "\\(7 - 8x\\)",
+    "C": "\\(8 - 8x\\)",
+    "D": "\\(28x - 7\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Distribute \\(-2\\) over both terms in the parentheses: \\(-2(4x - 1) = -8x + 2\\).",
+    "Combine the constants: \\(9 + 2 - 8x = 11 - 8x\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(9 - 8x + 2 = 11 - 8x\\).",
+    "B": "Incorrect. This is the result of distributing \\(-2\\) to \\(4x\\) but subtracting 2 instead of adding it: \\(-2 \\cdot (-1) = +2\\).",
+    "C": "Incorrect. This is the result of multiplying only \\(4x\\) by \\(-2\\) and leaving the \\(-1\\) alone.",
+    "D": "Incorrect. This is the result of computing \\(9 - 2 = 7\\) first and then multiplying by \\((4x - 1)\\). Multiplication comes before subtraction."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\nt = 9 - 2*(4*x - 1)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

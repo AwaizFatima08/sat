@@ -1,0 +1,43 @@
+{
+  "id": "m-le2-0632",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(ax + by = 30\\), where \\(a\\) and \\(b\\) are constants, passes through the points \\((5, 0)\\) and \\((2, 4)\\). What is the value of \\(b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "9/2"
+  ],
+  "solution": [
+    "Substitute \\((5, 0)\\): \\(5a = 30\\), so \\(a = 6\\).",
+    "Substitute \\((2, 4)\\): \\(6(2) + 4b = 30\\), so \\(4b = 18\\) and \\(b = \\frac{9}{2}\\)."
+  ],
+  "verify": "a, b = symbols('a b')\nsol = solve([Eq(5*a, 30), Eq(2*a + 4*b, 30)], [a, b])\nassert sol[b] == Rational(9, 2)\nassert [Rational(s) for s in spr_answers] == [sol[b]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "9/2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0619",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is equivalent to \\((3x + 2)(3x - 2) - (3x - 2)^{2}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-8\\)",
+    "B": "\\(12x\\)",
+    "C": "\\(12x - 8\\)",
+    "D": "\\(-12x - 8\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Expand: \\((3x + 2)(3x - 2) = 9x^{2} - 4\\) and \\((3x - 2)^{2} = 9x^{2} - 12x + 4\\).",
+    "Subtract: \\(9x^{2} - 4 - 9x^{2} + 12x - 4 = 12x - 8\\).",
+    "Shortcut: factor out \\((3x - 2)\\): \\((3x - 2)\\left[(3x + 2) - (3x - 2)\\right] = 4(3x - 2)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of expanding \\((3x - 2)^{2}\\) as \\(9x^{2} + 4\\), leaving out the middle term \\(-12x\\).",
+    "B": "Incorrect. This is the result of letting the two constants cancel; \\(-4 - 4 = -8\\), not 0.",
+    "C": "Correct. \\(9x^{2} - 4 - \\left(9x^{2} - 12x + 4\\right) = 12x - 8\\).",
+    "D": "Incorrect. This is the result of not changing the sign of \\(-12x\\) when subtracting the square."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "D": "sign_error"
+  },
+  "verify": "x = symbols('x')\nt = (3*x + 2)*(3*x - 2) - (3*x - 2)**2\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

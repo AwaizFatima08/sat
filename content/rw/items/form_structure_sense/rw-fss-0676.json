@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0676",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The titan arum, a plant native to the rainforests of Sumatra, produces one of the largest flowering structures in the world: a central spike that can rise nearly three meters, wrapped in a single frilled sheath that opens to reveal a deep red interior. The bloom lasts only a day or two, during which the plant releases a smell resembling rotting meat and warms the tip of its spike to roughly human body temperature, which helps carry the odor to the beetles and flies that pollinate it. The combination of rarity, scale, and stench ______ crowds to botanical gardens whenever a specimen is about to open.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "draws",
+    "B": "have drawn",
+    "C": "draw",
+    "D": "are drawing"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The subject of the final sentence is \"The combination,\" a singular noun; \"rarity, scale, and stench\" are inside the phrase \"of rarity, scale, and stench\" and are not the subject. A singular subject needs the singular verb \"draws.\"",
+    "A": "Correct. The singular verb \"draws\" agrees with the singular subject \"combination.\"",
+    "B": "Incorrect. \"Have drawn\" is plural, but the subject \"combination\" is singular.",
+    "C": "Incorrect. \"Draw\" is plural and seems to agree with \"rarity, scale, and stench,\" but those nouns are part of a prepositional phrase; the subject is the singular \"combination.\"",
+    "D": "Incorrect. \"Are drawing\" is plural, but the subject \"combination\" is singular."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

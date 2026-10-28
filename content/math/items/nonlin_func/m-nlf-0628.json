@@ -1,0 +1,46 @@
+{
+  "id": "m-nlf-0628",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The number of yeast cells in a sample doubles every hour, so the number of cells \\(h\\) hours after the start of an experiment is given by \\(N(h) = c(2)^{h}\\), where \\(c\\) is a constant. If there are 56 cells 3 hours after the start, how many cells will there be 5 hours after the start?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "224"
+  ],
+  "solution": [
+    "\\(N(3) = c(2)^{3} = 8c = 56\\), so \\(c = 7\\).",
+    "\\(N(5) = 7(2)^{5} = 7(32) = 224\\).",
+    "Shortcut: from \\(h = 3\\) to \\(h = 5\\) the number doubles twice, \\(56 \\cdot 4 = 224\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "h, c = symbols('h c')\ncv = solve(Eq(c*2**3, 56), c)[0]\nassert cv == 7\nassert [Rational(s) for s in spr_answers] == [cv*2**5]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "224",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

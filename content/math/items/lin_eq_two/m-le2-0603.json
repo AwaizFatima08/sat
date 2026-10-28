@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0603",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What is the slope of the graph of \\(7x = 2y + 10\\) in the \\(xy\\)-plane?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-\\frac{7}{2}\\)",
+    "B": "\\(\\frac{2}{7}\\)",
+    "C": "\\(7\\)",
+    "D": "\\(\\frac{7}{2}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Solve for \\(y\\): \\(2y = 7x - 10\\), so \\(y = \\frac{7}{2}x - 5\\).",
+    "The slope is the coefficient of \\(x\\): \\(\\frac{7}{2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Moving \\(7x\\) to the right side does not change its sign in \\(y = \\frac{7}{2}x - 5\\).",
+    "B": "Incorrect. This is the coefficient of \\(y\\) over the coefficient of \\(x\\); solve for \\(y\\) first.",
+    "C": "Incorrect. \\(7\\) is the coefficient of \\(x\\) before dividing both sides by \\(2\\).",
+    "D": "Correct. \\(2y = 7x - 10\\) gives \\(y = \\frac{7}{2}x - 5\\), so the slope is \\(\\frac{7}{2}\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "reciprocal",
+    "C": "stopped_early"
+  },
+  "verify": "x, y = symbols('x y')\nm = diff(solve(Eq(7*x, 2*y + 10), y)[0], x)\nassert m == Rational(7, 2)\nassert value(choices[answer]) == m\nassert all(value(choices[k]) != m for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

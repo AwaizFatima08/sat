@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0627",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A workshop in Sialkot makes footballs. Each football costs 480 rupees in materials and labor to produce and sells for 800 rupees. The workshop also pays 96,000 rupees per month in fixed costs. The owner wants the workshop's monthly profit to be at least 10% of its monthly sales revenue. What is the least number of footballs the workshop must sell in a month to meet this goal?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(300\\)",
+    "B": "\\(400\\)",
+    "C": "\\(1{,}200\\)",
+    "D": "\\(389\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "With \\(n\\) footballs sold, revenue is \\(800n\\) rupees and profit is \\(800n - 480n - 96{,}000 = 320n - 96{,}000\\).",
+    "The goal is \\(320n - 96{,}000 \\ge 0.1(800n) = 80n\\).",
+    "So \\(240n \\ge 96{,}000\\) and \\(n \\ge 400\\). Check: 400 footballs give revenue 320,000 and profit 32,000, exactly 10%."
+  ],
+  "explanation": {
+    "A": "Incorrect. 300 footballs is the break-even point (profit 0), which ignores the 10% requirement.",
+    "B": "Correct. \\(320n - 96{,}000 \\ge 80n\\) gives \\(n \\ge 400\\).",
+    "C": "Incorrect. This solves \\(80n \\ge 96{,}000\\), comparing 10% of revenue with the fixed costs alone instead of with the full profit.",
+    "D": "Incorrect. This requires profit to be at least 10% of total costs (\\(480n + 96{,}000\\)) rather than 10% of revenue."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "wrong_formula",
+    "D": "percent_add"
+  },
+  "verify": "n = symbols('n')\ns = solve_univariate_inequality(320*n - 96000 >= Rational(1, 10)*800*n, n, relational=False)\nassert s == Interval(400, oo)\nassert value(choices[answer]) == 400\nassert all(value(choices[k]) != 400 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

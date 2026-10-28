@@ -1,0 +1,58 @@
+{
+  "id": "m-lat-0602",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Two triangular tiles are congruent: triangle \\(ABC\\) is congruent to triangle \\(PQR\\), where \\(A\\), \\(B\\), and \\(C\\) correspond to \\(P\\), \\(Q\\), and \\(R\\), respectively. If \\(AB = 7\\) centimeters, \\(BC = 9\\) centimeters, and \\(CA = 12\\) centimeters, what is the length, in centimeters, of \\(\\overline{RP}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(7\\)",
+    "B": "\\(9\\)",
+    "C": "\\(28\\)",
+    "D": "\\(12\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Congruent triangles have equal corresponding sides.",
+    "\\(R\\) corresponds to \\(C\\) and \\(P\\) corresponds to \\(A\\), so \\(\\overline{RP}\\) corresponds to \\(\\overline{CA}\\).",
+    "\\(RP = CA = 12\\) centimeters."
+  ],
+  "explanation": {
+    "A": "Incorrect. 7 is \\(AB\\), which corresponds to \\(\\overline{PQ}\\), not \\(\\overline{RP}\\).",
+    "B": "Incorrect. 9 is \\(BC\\), which corresponds to \\(\\overline{QR}\\), not \\(\\overline{RP}\\).",
+    "C": "Incorrect. This is the perimeter \\(7 + 9 + 12\\); the question asks for one side.",
+    "D": "Correct. \\(\\overline{RP}\\) corresponds to \\(\\overline{CA}\\), so \\(RP = 12\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_quantity",
+    "C": "wrong_formula"
+  },
+  "verify": "AB,BC,CA=7,9,12\nans=CA\nassert value(choices[answer])==ans==12\nassert all(value(choices[k])!=ans for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

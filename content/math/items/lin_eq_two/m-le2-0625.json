@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0625",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A school has exactly \\$9,000 to spend on desks that cost \\$450 each and chairs that cost \\$150 each. The graph of \\(450x + 150y = 9{,}000\\) in the \\(xy\\)-plane shows the combinations of \\(x\\) desks and \\(y\\) chairs the school can buy with all of the money. Which of the following is the best interpretation of the \\(x\\)-intercept of the graph?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "If the school buys no desks, it can buy 60 chairs.",
+    "B": "If the school buys no desks, it can buy 20 chairs.",
+    "C": "If the school buys no chairs, it can buy 20 desks.",
+    "D": "Each desk costs 20 times as much as each chair."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "At the \\(x\\)-intercept, \\(y = 0\\), so no chairs are bought.",
+    "Then \\(450x = 9{,}000\\) and \\(x = 20\\): the money buys 20 desks."
+  ],
+  "explanation": {
+    "A": "Incorrect. This describes the \\(y\\)-intercept \\((0, 60)\\), where \\(x = 0\\).",
+    "B": "Incorrect. The \\(x\\)-intercept has \\(y = 0\\), so it is the number of desks, not chairs, when no chairs are bought.",
+    "C": "Correct. At the \\(x\\)-intercept, \\(y = 0\\): \\(450x = 9{,}000\\), so \\(x = 20\\) desks and 0 chairs.",
+    "D": "Incorrect. The intercept is a count of desks; a desk costs 3 times as much as a chair."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\nassert solve(Eq(450*x, 9000), x) == [20]\nassert choices[answer] == 'If the school buys no chairs, it can buy 20 desks.'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

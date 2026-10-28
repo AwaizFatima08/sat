@@ -1,0 +1,45 @@
+{
+  "id": "m-arv-0616",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A rectangular prism has a length of \\(10\\), a width of \\(6\\), and a volume of \\(360\\). What is the total surface area of the prism?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "312"
+  ],
+  "solution": [
+    "Height: \\(10 \\cdot 6 \\cdot h = 360\\), so \\(h = 6\\).",
+    "Surface area \\(= 2(lw + lh + wh) = 2(60 + 60 + 36) = 2(156) = 312\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "h=symbols('h')\nH=solve(Eq(10*6*h,360),h)[0]\nassert H==6\nans=2*(10*6+10*H+6*H)\nassert ans==312\nassert Rational(spr_answers[0])==ans\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "312",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

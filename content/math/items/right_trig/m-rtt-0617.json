@@ -1,0 +1,58 @@
+{
+  "id": "m-rtt-0617",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The side lengths of a right triangle are \\(x\\), \\(x + 7\\), and \\(x + 8\\), where \\(x\\) is a positive constant. What is the tangent of the smallest angle of the triangle?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{12}{5}\\)",
+    "B": "\\(\\frac{5}{13}\\)",
+    "C": "\\(\\frac{12}{13}\\)",
+    "D": "\\(\\frac{5}{12}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The longest side, \\(x + 8\\), is the hypotenuse: \\(x^{2} + (x + 7)^{2} = (x + 8)^{2}\\).",
+    "\\(2x^{2} + 14x + 49 = x^{2} + 16x + 64\\), so \\(x^{2} - 2x - 15 = 0\\) and \\((x - 5)(x + 3) = 0\\). Since \\(x > 0\\), \\(x = 5\\); the sides are 5, 12, 13.",
+    "The smallest angle is opposite the shortest side, 5, and its adjacent leg is 12: \\(\\tan = \\frac{5}{12}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(\\frac{12}{5}\\) is the tangent of the larger acute angle (opposite the side of length 12), the reciprocal of the required value.",
+    "B": "Incorrect. \\(\\frac{5}{13}\\) is the sine of the smallest angle, opposite over hypotenuse, not the tangent.",
+    "C": "Incorrect. \\(\\frac{12}{13}\\) is the cosine of the smallest angle.",
+    "D": "Correct. The sides are 5, 12, 13, and \\(\\tan\\) of the angle opposite 5 is \\(\\frac{5}{12}\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "wrong_formula",
+    "C": "concept"
+  },
+  "verify": "x=symbols('x',positive=True)\nxx=solve(Eq(x**2+(x+7)**2,(x+8)**2),x)\nassert xx==[5]\na,b,c=5,12,13\nassert a**2+b**2==c**2\nans=Rational(a,b)\nassert value(choices[answer])==ans\nassert value(choices['B'])==Rational(a,c) and value(choices['C'])==Rational(b,c)\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0630",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A store sells a sweater at a price of \\(p\\) dollars. During a sale, the store takes 20% off the price and then subtracts an \\$8 coupon from the reduced price. Jana paid \\$56 for the sweater during the sale. What is the value of \\(p\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(80\\)",
+    "B": "\\(78\\)",
+    "C": "\\(60\\)",
+    "D": "\\(64\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "After 20% off, the price is \\(0.8p\\). After the coupon, it is \\(0.8p - 8\\).",
+    "\\(0.8p - 8 = 56\\), so \\(0.8p = 64\\).",
+    "Then \\(p = 80\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(0.8p = 64\\) gives \\(p = 80\\). Check: \\(0.8(80) - 8 = 64 - 8 = 56\\).",
+    "B": "Incorrect. This is the result of applying the coupon before the 20% discount: \\(0.8(p - 8) = 56\\).",
+    "C": "Incorrect. This is the result of subtracting 8 from 56 instead of adding it: \\(0.8p = 48\\).",
+    "D": "Incorrect. This is the price after the 20% discount, \\(0.8p\\), not the original price \\(p\\)."
+  },
+  "traps": {
+    "B": "wrong_formula",
+    "C": "sign_error",
+    "D": "stopped_early"
+  },
+  "verify": "p = symbols('p')\ns = solve(Eq(Rational(4, 5)*p - 8, 56), p)[0]\nassert s == 80\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

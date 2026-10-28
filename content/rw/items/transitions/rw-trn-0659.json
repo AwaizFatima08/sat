@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0659",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "For four centuries after Gutenberg, every page of type was assembled by hand: a compositor picked metal letters one at a time from a case, arranged them in lines, and after printing returned each letter to its compartment so it could be used again. The Linotype machine, introduced in 1886, kept the metal letters but changed almost everything about how they were handled. ______ its operator typed at a keyboard; the machine assembled molds of the letters, cast the entire line as a single slug of fresh metal, and returned the molds to their magazine automatically, while the slugs themselves were simply melted down after the page was printed.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "By contrast,",
+    "B": "Specifically,",
+    "C": "Nevertheless,",
+    "D": "Likewise,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The second sentence makes a general claim: the Linotype \"changed almost everything\" about handling type. The last sentence spells out exactly what changed: keyboard, cast slugs, automatic return of molds. A transition that introduces the precise details of the claim is needed.",
+    "A": "Incorrect. The last sentence does contrast with hand-setting, but that contrast was already stated in the sentence before the blank. The blank sentence does not contrast with the sentence immediately before it; it elaborates on it. This is the most tempting trap.",
+    "B": "Correct. \"Specifically\" introduces the particular changes that the previous sentence summed up as \"almost everything.\"",
+    "C": "Incorrect. The details of the Linotype do not go against the claim that it changed everything; they support it.",
+    "D": "Incorrect. \"Likewise\" would introduce a parallel case, but the last sentence describes the same machine in more detail rather than a similar one."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

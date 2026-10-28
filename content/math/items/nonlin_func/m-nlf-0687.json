@@ -1,0 +1,57 @@
+{
+  "id": "m-nlf-0687",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = 3(2)^{x}\\). Which of the following is equivalent to \\(f(x + 2) - f(x)\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3(2)^{x}\\)",
+    "B": "\\(9(2)^{x}\\)",
+    "C": "\\(12(2)^{x}\\)",
+    "D": "\\(3(4)^{x}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "\\(f(x + 2) = 3(2)^{x + 2} = 3 \\cdot 2^{x} \\cdot 2^{2} = 12(2)^{x}\\).",
+    "So \\(f(x + 2) - f(x) = 12(2)^{x} - 3(2)^{x} = 9(2)^{x}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This treats \\(2^{x + 2}\\) as \\(2 \\cdot 2^{x}\\). Adding 2 to the exponent multiplies by \\(2^{2} = 4\\), not by 2.",
+    "B": "Correct. \\(f(x + 2) = 3 \\cdot 2^{x} \\cdot 4 = 12(2)^{x}\\), and \\(12(2)^{x} - 3(2)^{x} = 9(2)^{x}\\).",
+    "C": "Incorrect. This is \\(f(x + 2)\\) alone. The expression also subtracts \\(f(x) = 3(2)^{x}\\).",
+    "D": "Incorrect. \\(2^{x + 2}\\) is \\(4 \\cdot 2^{x}\\), not \\(4^{x}\\). Adding to an exponent multiplies by a constant; it does not change the base."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "stopped_early",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\nf = 3*2**x\nd = f.subs(x, x + 2) - f\nassert simplify(d/2**x) == 9\nassert simplify(value(choices[answer]) - d) == 0\nassert all(simplify(value(choices[k]) - d) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

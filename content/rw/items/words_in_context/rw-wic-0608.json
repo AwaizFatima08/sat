@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0608",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Ambergris is a waxy substance that forms in the digestive system of some sperm whales. When it is first expelled into the sea, it is dark and has an unpleasant smell. After floating in salt water and sunlight for years, however, it hardens, turns pale, and develops a sweet, earthy scent. Perfume makers once prized this ______ ambergris, which could make other fragrances last longer on the skin.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "fresh",
+    "B": "aged",
+    "C": "ordinary",
+    "D": "hidden"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The text contrasts newly expelled ambergris, which is \"dark\" with \"an unpleasant smell,\" with ambergris that has floated \"for years\" and developed \"a sweet, earthy scent.\" Perfume makers wanted the second kind, so the blank needs \"aged.\"",
+    "A": "Incorrect. Fresh ambergris is the dark, bad-smelling kind; perfume makers prized the kind that had changed after years at sea.",
+    "B": "Correct. Ambergris that has floated for years, or aged, develops the sweet scent that perfume makers wanted.",
+    "C": "Incorrect. Something that perfume makers \"prized\" is valued, not ordinary.",
+    "D": "Incorrect. Nothing in the text says the ambergris was concealed."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "wrong_logic",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

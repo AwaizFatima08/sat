@@ -1,0 +1,57 @@
+{
+  "id": "m-lfn-0631",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = 3x - 4\\). The function \\(g\\) is defined by \\(g(x) = f(x - 2)\\). Which equation defines \\(g\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(g(x) = 3x - 6\\)",
+    "B": "\\(g(x) = 3x + 2\\)",
+    "C": "\\(g(x) = 3x - 10\\)",
+    "D": "\\(g(x) = 3x - 2\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Replace \\(x\\) with \\(x - 2\\) in \\(f\\): \\(g(x) = 3(x - 2) - 4\\).",
+    "Expand: \\(3x - 6 - 4 = 3x - 10\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This subtracts 2 from the output \\(f(x)\\); \\(f(x - 2)\\) replaces the input \\(x\\) with \\(x - 2\\).",
+    "B": "Incorrect. This is \\(f(x + 2) = 3(x + 2) - 4\\); the input is \\(x - 2\\).",
+    "C": "Correct. \\(g(x) = 3(x - 2) - 4 = 3x - 6 - 4 = 3x - 10\\).",
+    "D": "Incorrect. This adds 2 to \\(f(x)\\) instead of substituting \\(x - 2\\) into \\(f\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "x = symbols('x')\nrhs = lambda s: value(s.split('=')[1])\nf = 3*x - 4\ng = f.subs(x, x - 2)\nok = [k for k in choices if simplify(rhs(choices[k]) - g) == 0]\nassert ok == [answer]\nassert simplify(g - (3*x - 10)) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

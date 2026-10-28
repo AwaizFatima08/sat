@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0655",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In many medieval European villages, a family's farmland was not a single block but a collection of narrow strips scattered across the village's great fields, sometimes dozens of strips lying far apart. Walking between them wasted hours, and historians have long asked why the arrangement persisted. One explanation is inheritance: holdings divided among heirs over many generations would naturally become fragmented. Economic historian Lucía Ortega argues that the scattering was instead a deliberate strategy for spreading risk: strips on different soils, slopes, and drainage meant that a frost, flood, or drought that ruined one part of the fields would spare another, so that a family rarely lost its whole harvest at once.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly weaken Ortega's argument?",
+  "choices": {
+    "A": "In villages where all the land lay on one uniform soil with no differences in flooding or frost risk, holdings were just as scattered as elsewhere.",
+    "B": "Because strips lay side by side in the same fields, villagers had to agree on common dates for plowing, sowing, and harvest each year.",
+    "C": "Families that traded strips with neighbors to consolidate their land into one block suffered total crop failures more often than families that kept their land scattered.",
+    "D": "The boundaries between neighboring strips were marked by narrow ridges of unplowed turf that were renewed each spring."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Ortega's explanation predicts that scattering should be found where it does some good: where land varies enough for different strips to face different risks. If holdings were equally scattered in villages whose land was uniform, where scattering could spread no risk, then risk-spreading cannot be what produced the pattern, and her argument loses its support.",
+    "A": "Correct. Scattering just as common where it brought no risk-spreading benefit indicates that something other than risk explains it.",
+    "B": "Incorrect. Coordinating field work is a consequence of the strip system, not evidence about why it arose.",
+    "C": "Incorrect. Consolidated families suffering more total failures is what Ortega's argument predicts, so this would support her.",
+    "D": "Incorrect. How the strips were marked off has no bearing on why holdings were scattered."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

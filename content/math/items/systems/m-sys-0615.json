@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0615",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[5x - 2y = 4\\] \\[3x + 4y = 18\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(2\\)",
+    "C": "\\(-3\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Multiply the first equation by 2: \\(10x - 4y = 8\\).",
+    "Add to the second equation: \\(13x = 26\\), so \\(x = 2\\).",
+    "Substitute: \\(6 + 4y = 18\\), so \\(y = 3\\)."
+  ],
+  "explanation": {
+    "A": "Correct. Doubling the first equation and adding gives \\(13x = 26\\), so \\(x = 2\\) and then \\(y = 3\\).",
+    "B": "Incorrect. This is the value of \\(x\\), not \\(y\\).",
+    "C": "Incorrect. This is the result of a sign slip when solving \\(4y = 18 - 6\\); the value of \\(y\\) is \\(3\\).",
+    "D": "Incorrect. This comes from \\(4y = 18 + 10\\), adding \\(3x\\) to 18 instead of subtracting it."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "x, y = symbols('x y')\nsol = solve([5*x - 2*y - 4, 3*x + 4*y - 18], [x, y])\nassert sol == {x: 2, y: 3}\nassert value(choices[answer]) == 3\nassert all(value(choices[k]) != 3 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

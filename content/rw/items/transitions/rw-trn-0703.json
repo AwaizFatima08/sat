@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0703",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Rooftop solar panels have become much cheaper across Pakistan in the past decade, and many households in Lahore and Karachi now use them to reduce their electricity bills. ______ the panels produce little power at night, and home battery storage remains expensive for most families, so the savings are uneven.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Granted,",
+    "B": "For instance,",
+    "C": "Therefore,",
+    "D": "Similarly,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The first sentence describes an advantage of rooftop solar. The blank sentence must accept that advantage before stating its limits, so a concessive transition is needed.",
+    "A": "Correct. \"Granted\" concedes the point that the panels are useful, then turns to their limits. The sentence accepts the benefit before stating the drawbacks that make the savings uneven.",
+    "B": "Incorrect. The sentence does not give a single case of the claim. It raises limits on that claim, so \"For instance\" does not fit.",
+    "C": "Incorrect. The drawbacks do not follow from the lower prices. \"Therefore\" would wrongly present the limits as a result of the price drop.",
+    "D": "Incorrect. \"Similarly\" introduces a point that agrees with the one before it. The sentence raises a drawback, which is a different kind of point."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

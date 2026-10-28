@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0620",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The horned lizards of the deserts of North America rely on several lines of defense. Their flattened bodies and mottled, sandy coloring make them hard to spot among stones and dry grass. If a predator finds one anyway, the lizard puffs itself up and tilts its crown of spines toward the attacker, making itself look larger and harder to swallow. ______ when a coyote or fox persists, some species can squirt a thin stream of blood from the corners of their eyes, a fluid that tastes so foul to these animals that they usually drop the lizard and leave.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Instead,",
+    "B": "For example,",
+    "C": "Similarly,",
+    "D": "Finally,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The text presents the lizard's defenses in the order in which they are used: first camouflage, then puffing up, and last, when the others fail, squirting blood. A transition that introduces the last step in this sequence is needed.",
+    "A": "Incorrect. \"Instead\" would mean squirting blood replaces the other defenses, but the text says it comes after they have been tried, when a predator \"persists.\"",
+    "B": "Incorrect. Squirting blood is not an example of puffing up and showing spines; it is a separate, later defense.",
+    "C": "Incorrect. \"Similarly\" signals a defense like the one just described, but squirting blood is a different kind of defense used only when the earlier ones fail.",
+    "D": "Correct. \"Finally\" marks squirting blood as the last of the several defenses the text lists."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

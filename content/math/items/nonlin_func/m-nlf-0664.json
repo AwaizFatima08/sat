@@ -1,0 +1,46 @@
+{
+  "id": "m-nlf-0664",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of the quadratic function \\(y = f(x)\\) in the \\(xy\\)-plane has \\(x\\)-intercepts \\((-4, 0)\\) and \\((10, 0)\\). The maximum value of \\(f(x)\\) is 49. What is the value of \\(f(0)\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "40"
+  ],
+  "solution": [
+    "Write \\(f(x) = a(x + 4)(x - 10)\\). The vertex is midway between the intercepts, at \\(x = 3\\).",
+    "\\(f(3) = a(7)(-7) = -49a = 49\\), so \\(a = -1\\).",
+    "\\(f(0) = -1(4)(-10) = 40\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, a = symbols('x a')\nf = a*(x + 4)*(x - 10)\nav = solve(Eq(f.subs(x, 3), 49), a)[0]\nassert av == -1 and solve(diff(f, x), x) == [3]\nassert f.subs({a: av, x: 0}) == 40\nassert Rational(spr_answers[0]) == 40",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "40",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

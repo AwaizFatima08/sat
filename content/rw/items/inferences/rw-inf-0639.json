@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0639",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Most fig species depend on a single species of tiny wasp for pollination, and the wasp in turn can breed only inside that fig's fruit. An adult female wasp lives for just a day or two after leaving the fig in which she developed, and in that time she must find a tree whose young figs are ready to receive her. Within a tropical forest, the trees of a given fig species do not all produce figs at the same time; different individuals come into fruit in different months, so that in a large population some tree is almost always receptive. Botanist Lucía Herrera points out that this arrangement has a serious consequence for a small, isolated stand of fig trees: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "it will be pollinated more reliably than a large forest, because the wasps have fewer trees to search.",
+    "B": "its wasps will live longer than wasps in large forests in order to survive the gaps between fruiting.",
+    "C": "if ever none of its trees has young figs, its wasps will die out and the trees will lose their pollinator.",
+    "D": "its trees will tend to produce figs all at once, since there are too few of them to spread fruiting across the year."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Wasps live one or two days and must find a receptive tree in that time. A large population always has some receptive tree, but a small stand may not. In any gap, every wasp dies before it can breed, and since the wasps breed only in figs and the figs depend only on this wasp, both partners are then stranded.",
+    "A": "Incorrect. Fewer trees means more gaps with no receptive figs, which makes pollination less reliable, not more.",
+    "B": "Incorrect. The text gives the wasp's lifespan as a fixed day or two and offers no reason it would lengthen.",
+    "C": "Correct. With only a few trees, there may be weeks when no tree is receptive; wasps live only a day or two, so none survive the gap, and no new wasps can arrive.",
+    "D": "Incorrect. The text says trees of a species fruit in different months; a small stand has fewer trees, but nothing suggests that they synchronize."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

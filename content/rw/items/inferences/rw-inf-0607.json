@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0607",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Chilika, a large lagoon on the east coast of India, is home to a small population of Irrawaddy dolphins. Tour boats take visitors out to see them, and most of the boats work in the channels nearest the tourist villages. Wildlife biologist Pratap Sahoo counted dolphins across the lagoon for a year and found that the fish the dolphins eat were about equally common in every channel he studied. Nevertheless, he recorded far fewer dolphins in the channels with the heaviest boat traffic. His findings suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "tour boats help visitors see dolphins that would otherwise stay hidden.",
+    "B": "the dolphins prefer channels where fish are most plentiful.",
+    "C": "the number of dolphins in the lagoon rose over the course of the year.",
+    "D": "boat traffic, rather than food supply, may explain where the dolphins gather."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Food was equally available everywhere, so food cannot explain why some channels had fewer dolphins. The channels that had fewer dolphins were exactly those with the most boats, so boat traffic is the likely explanation.",
+    "A": "Incorrect. The dolphins avoided the areas with the most boats; nothing suggests the boats help reveal them.",
+    "B": "Incorrect. Fish were about equally common in all the channels, so food supply cannot account for the differences.",
+    "C": "Incorrect. The text does not describe any change in dolphin numbers over the year.",
+    "D": "Correct. With food held roughly equal, the only difference the text offers is boat traffic, which matches the pattern."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "reversed",
+    "C": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

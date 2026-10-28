@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0628",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(x\\) and \\(y\\) are integers such that \\(x + y = 20\\) and \\(3x - 2y > 30\\), what is the least possible value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "15"
+  ],
+  "solution": [
+    "From \\(x + y = 20\\), \\(y = 20 - x\\). Substitute: \\(3x - 2(20 - x) > 30\\).",
+    "Simplify: \\(5x - 40 > 30\\), so \\(5x > 70\\) and \\(x > 14\\).",
+    "The inequality is strict, so \\(x = 14\\) fails (\\(42 - 12 = 30\\), not greater than 30). The least integer value is \\(x = 15\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\ns = solve_univariate_inequality(3*x - 2*(20 - x) > 30, x, relational=False)\nassert s == Interval.open(14, oo)\nleast = min(k for k in range(-50, 100) if k in s)\nassert least == 15 and [Rational(a) for a in spr_answers] == [least]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "15",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

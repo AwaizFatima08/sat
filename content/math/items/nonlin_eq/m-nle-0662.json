@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0662",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[y = x^{2} + 3x + 6\\] \\[y = mx + 2\\] In the system of equations above, \\(m\\) is a constant. For which of the following values of \\(m\\) does the system have exactly two distinct real solutions?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-1 < m < 7\\)",
+    "B": "\\(m > 7\\) only",
+    "C": "\\(m < -1\\) or \\(m > 7\\)",
+    "D": "\\(m < -7\\) or \\(m > 1\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Set the right sides equal: \\(x^{2} + 3x + 6 = mx + 2\\), so \\(x^{2} + (3 - m)x + 4 = 0\\).",
+    "Two distinct real solutions require a positive discriminant: \\((3 - m)^{2} - 16 > 0\\), so \\((m - 3)^{2} > 16\\).",
+    "Hence \\(m - 3 > 4\\) or \\(m - 3 < -4\\), that is, \\(m > 7\\) or \\(m < -1\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of requiring the discriminant to be negative; for \\(-1 < m < 7\\) the line misses the parabola entirely.",
+    "B": "Incorrect. This is the result of solving \\((m - 3)^{2} > 16\\) as \\(m - 3 > 4\\) only, forgetting the branch \\(m - 3 < -4\\).",
+    "C": "Correct. The quadratic \\(x^{2} + (3 - m)x + 4 = 0\\) has discriminant \\((m - 3)^{2} - 16\\), which is positive exactly when \\(m < -1\\) or \\(m > 7\\).",
+    "D": "Incorrect. This is the result of a sign slip in the \\(x\\)-coefficient, using \\((m + 3)^{2} > 16\\) instead of \\((m - 3)^{2} > 16\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "stopped_early",
+    "D": "sign_error"
+  },
+  "verify": "x, m = symbols('x m', real=True)\nq = x**2 + 3*x + 6 - (m*x + 2)\ncond = solve_univariate_inequality(discriminant(q, x) > 0, m, relational=False)\nassert cond == Union(Interval.open(-oo, -1), Interval.open(7, oo))\nassert 'm < -1' in choices[answer] and 'm > 7' in choices[answer]\nfor t in (-2, 0, 8):\n    assert (len(solve(q.subs(m, t), x)) == 2) == (t in cond)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0632",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Karachi's tramway opened in 1885, and its first cars were pulled by small steam engines running on rails laid along the city's streets. Residents soon complained that the engines were noisy and frightened horses, and within a few years the steam cars had been withdrawn in favor of trams drawn by horses. ______ the system kept growing: new lines spread through the city, and the trams stayed in service, later powered by gasoline engines, until 1975.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Therefore,",
+    "B": "For example,",
+    "C": "In other words,",
+    "D": "Nevertheless,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence describes a setback: the steam engines caused complaints and had to be withdrawn. The last sentence says the system kept growing anyway, with new lines and ninety years of service. A transition that signals something happened in spite of the setback is needed.",
+    "A": "Incorrect. \"Therefore\" would mean the complaints caused the system to grow, but the text presents the growth as happening despite the setback, not because of it. This is tempting because the sentence before does describe a cause and an effect.",
+    "B": "Incorrect. New lines and long service are not an example of the complaints or the withdrawal.",
+    "C": "Incorrect. The growth of the system does not restate the withdrawal of the steam cars; it is a different and contrasting development.",
+    "D": "Correct. \"Nevertheless\" shows that the tramway continued to grow despite the trouble with the steam engines."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

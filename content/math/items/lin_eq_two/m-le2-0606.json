@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0606",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A stationery shop in Karachi sells pencils for 15 rupees each and erasers for 25 rupees each. Hamza spends exactly 300 rupees on \\(x\\) pencils and \\(y\\) erasers. Which equation represents this situation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(25x + 15y = 300\\)",
+    "B": "\\(15x + 25y = 300\\)",
+    "C": "\\(x + y = 300\\)",
+    "D": "\\(40(x + y) = 300\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Cost of pencils: \\(15x\\). Cost of erasers: \\(25y\\).",
+    "The total is 300 rupees: \\(15x + 25y = 300\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. The prices are attached to the wrong items: pencils cost 15 rupees, not 25.",
+    "B": "Correct. \\(x\\) pencils cost \\(15x\\) rupees and \\(y\\) erasers cost \\(25y\\) rupees, and the total is 300 rupees.",
+    "C": "Incorrect. This says Hamza bought 300 items; the 300 is rupees, so each count must be multiplied by its price.",
+    "D": "Incorrect. This charges 40 rupees for every item; only a pencil and an eraser together cost 40 rupees."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "x, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\ngood = lambda s: simplify(eq(s) - (15*x + 25*y - 300)) == 0 or simplify(eq(s) + (15*x + 25*y - 300)) == 0\nok = [k for k in choices if good(choices[k])]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0603",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is equivalent to \\(\\left(-2x^{4}\\right)^{3}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-6x^{12}\\)",
+    "B": "\\(-8x^{12}\\)",
+    "C": "\\(8x^{12}\\)",
+    "D": "\\(-8x^{7}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Raise each factor to the third power: \\((-2)^{3} = -8\\) and \\(\\left(x^{4}\\right)^{3} = x^{12}\\).",
+    "The expression equals \\(-8x^{12}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of multiplying the coefficient \\(-2\\) by 3 instead of cubing it.",
+    "B": "Correct. \\((-2)^{3} = -8\\) and \\(x^{4 \\cdot 3} = x^{12}\\).",
+    "C": "Incorrect. This is the result of dropping the negative sign; an odd power of a negative number is negative.",
+    "D": "Incorrect. This is the result of adding the exponents 4 and 3 instead of multiplying them."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\nt = (-2*x**4)**3\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

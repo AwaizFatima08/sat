@@ -1,0 +1,79 @@
+{
+  "id": "rw-ceq-0640",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Roads divide hedgehog populations, and many hedgehogs are killed crossing them. In the Netherlands, wildlife tunnels beneath roads are usually built for badgers, and some ecologists doubted that hedgehogs, which are far smaller, would enter these wide tunnels. Ecologist Bram Vermeulen placed cameras at tunnel entrances and counted hedgehog crossings for a year along two stretches of road, one fitted with a few badger tunnels and one with small tunnels designed for hedgehogs. He argues that hedgehogs will use whatever tunnel is available, but that small tunnels placed close together serve them better than a few large ones do.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Hedgehog Use of Wildlife Tunnels along Two Stretches of Road",
+    "columns": [
+      "Road section",
+      "Tunnels",
+      "Average spacing between tunnels (m)",
+      "Hedgehog crossings recorded in one year"
+    ],
+    "rows": [
+      [
+        "Section 1 (badger tunnels)",
+        3,
+        900,
+        212
+      ],
+      [
+        "Section 2 (small hedgehog tunnels)",
+        8,
+        300,
+        655
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Vermeulen's argument?",
+  "choices": {
+    "A": "Hedgehogs crossed through the badger tunnels 212 times, but the section with small tunnels every 300 meters recorded 655 crossings.",
+    "B": "The badger tunnels were spaced three times as far apart as the small tunnels were.",
+    "C": "Hedgehogs used only the small tunnels, avoiding the badger tunnels entirely.",
+    "D": "Far fewer hedgehogs were killed on the road along Section 2 than along Section 1."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Vermeulen's argument has two parts: hedgehogs use even badger tunnels, and closely spaced small tunnels serve them better. The evidence must show substantial use of the badger tunnels (212 crossings) together with much heavier use of the closely spaced small tunnels (655 crossings).",
+    "A": "Correct. The 212 crossings show that hedgehogs do use badger tunnels, and the 655 crossings show that the closely spaced small tunnels serve far more animals.",
+    "B": "Incorrect. This is true (900 meters versus 300), but spacing alone says nothing about how many hedgehogs used either kind of tunnel.",
+    "C": "Incorrect. The badger tunnels recorded 212 crossings, so hedgehogs did not avoid them.",
+    "D": "Incorrect. This may be what Vermeulen hopes, but the table records tunnel crossings, not deaths on the road."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

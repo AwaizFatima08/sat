@@ -1,0 +1,79 @@
+{
+  "id": "rw-ceq-0609",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Sialkot, Pakistan, produces a large share of the world's hand-stitched soccer balls. Industrial researcher Farhan Qureshi visited a workshop that stitches balls both by hand and with sewing machines and recorded the output of each method over one week. He found that a worker using a machine finished far more balls in a day than a hand stitcher did: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Output of Two Stitching Methods at a Sialkot Workshop",
+    "columns": [
+      "Method",
+      "Balls finished per worker per day",
+      "Price per ball (rupees)",
+      "Balls rejected for flaws (%)"
+    ],
+    "rows": [
+      [
+        "Hand stitching",
+        4,
+        1800,
+        2
+      ],
+      [
+        "Machine stitching",
+        11,
+        1100,
+        5
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "5 percent of the machine-stitched balls were rejected for flaws.",
+    "B": "machine stitchers were paid more per day than hand stitchers.",
+    "C": "a hand stitcher finished 11 balls per day, compared with 4 for a machine stitcher.",
+    "D": "a machine stitcher finished 11 balls per day, compared with 4 for a hand stitcher."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The statement compares how many balls each kind of worker finished in a day, so look at the \"Balls finished per worker per day\" column. Machine stitching shows 11 and hand stitching shows 4.",
+    "A": "Incorrect. This is accurate, but it describes flaws rather than how many balls were finished.",
+    "B": "Incorrect. The table shows the price of each ball, not what the workers were paid.",
+    "C": "Incorrect. This swaps the two methods: the machine stitcher is the one who finished 11 balls a day.",
+    "D": "Correct. A machine stitcher finished 11 balls a day, nearly three times the 4 finished by a hand stitcher."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "not_in_text",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

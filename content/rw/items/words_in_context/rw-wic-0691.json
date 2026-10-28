@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0691",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "At hydrothermal vents on the deep-sea floor, the giant tubeworm Riftia pachyptila grows to more than a meter in length despite having, as an adult, neither a mouth nor a digestive tract. Its nourishment comes from bacteria housed in a specialized internal organ; they oxidize the hydrogen sulfide seeping from the vents and use the energy to build sugars from carbon dioxide. The worm, for its part, uses an unusual hemoglobin to collect sulfide and oxygen from the water and deliver both to its tenants. The partnership is so complete that the animal is able to ______ digestion altogether, drawing everything it needs from compounds the bacteria release.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "regulate",
+    "B": "forgo",
+    "C": "replicate",
+    "D": "accelerate"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The worm has \"neither a mouth nor a digestive tract,\" and the final clause says it draws \"everything it needs\" from its bacteria. The blank must therefore mean \"do without\": the animal gives up digestion entirely, which is what \"forgo\" means. The word \"altogether\" confirms that the process is absent, not changed.",
+    "A": "Incorrect. \"Regulate\" means control or adjust, which likewise assumes the worm digests food; the text says it does not.",
+    "B": "Correct. To forgo something is to do without it, which fits an animal that has no gut and gets all its nourishment from bacteria.",
+    "C": "Incorrect. \"Replicate\" means copy. Nothing in the text suggests the worm reproduces digestion in another form; it simply lacks it.",
+    "D": "Incorrect. An animal with no digestive tract cannot speed up digestion; \"accelerate\" assumes the process exists."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

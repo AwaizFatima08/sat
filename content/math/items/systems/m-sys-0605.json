@@ -1,0 +1,82 @@
+{
+  "id": "m-sys-0605",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graphs of \\(y = x + 1\\) and \\(y = -x + 7\\) are shown in the \\(xy\\)-plane. What is the solution \\((x, y)\\) to the system formed by these two equations?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      8
+    ],
+    "y": [
+      -2,
+      8
+    ],
+    "curves": [
+      {
+        "expr": "x + 1",
+        "label": "y = x + 1"
+      },
+      {
+        "expr": "-x + 7",
+        "label": "y = -x + 7"
+      }
+    ],
+    "points": [],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((4, 3)\\)",
+    "B": "\\((0, 1)\\)",
+    "C": "\\((0, 7)\\)",
+    "D": "\\((3, 4)\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The solution of the system is the point where the two lines intersect.",
+    "From the graph, the lines cross at \\(x = 3\\), \\(y = 4\\).",
+    "Check: \\(3 + 1 = 4\\) and \\(-3 + 7 = 4\\). The solution is \\((3, 4)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This reverses the coordinates of the intersection point \\((3, 4)\\).",
+    "B": "Incorrect. This is where \\(y = x + 1\\) crosses the \\(y\\)-axis; it is not on the other line.",
+    "C": "Incorrect. This is where \\(y = -x + 7\\) crosses the \\(y\\)-axis; it is not on the other line.",
+    "D": "Correct. The lines cross at \\((3, 4)\\): \\(3 + 1 = 4\\) and \\(-3 + 7 = 4\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "misread_graph",
+    "C": "misread_graph"
+  },
+  "verify": "pt = lambda s: [value(t) for t in s.strip('\\\\()').split(',')]\nx = symbols('x')\nf, g = [sympify(c['expr']) for c in figure['curves']]\nxs = solve(Eq(f, g), x)\nsol = [xs[0], f.subs(x, xs[0])]\nassert sol == [3, 4]\nassert pt(choices[answer]) == sol\nassert all(pt(choices[k]) != sol for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

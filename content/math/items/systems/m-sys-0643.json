@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0643",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[2x + 5y = 1\\] \\[kx + 3y = 4\\] In the system of equations above, \\(k\\) is a constant. If the graphs of the two equations in the \\(xy\\)-plane are perpendicular lines, what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{15}{2}\\)",
+    "B": "\\(\\frac{6}{5}\\)",
+    "C": "\\(-\\frac{15}{2}\\)",
+    "D": "\\(-\\frac{2}{15}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Write each equation in slope-intercept form: \\(y = -\\frac{2}{5}x + \\frac{1}{5}\\) and \\(y = -\\frac{k}{3}x + \\frac{4}{3}\\).",
+    "Perpendicular lines have slopes whose product is \\(-1\\): \\(\\left(-\\frac{2}{5}\\right)\\left(-\\frac{k}{3}\\right) = \\frac{2k}{15} = -1\\).",
+    "So \\(k = -\\frac{15}{2}\\). (The second slope is then \\(\\frac{5}{2}\\), the negative reciprocal of \\(-\\frac{2}{5}\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. With \\(k = \\frac{15}{2}\\) the second slope is \\(-\\frac{5}{2}\\), and \\(\\left(-\\frac{2}{5}\\right)\\left(-\\frac{5}{2}\\right) = 1\\), not \\(-1\\); the sign was dropped.",
+    "B": "Incorrect. This makes the slopes equal (\\(-\\frac{2}{5}\\) each), which gives parallel lines, not perpendicular ones.",
+    "C": "Correct. The slopes are \\(-\\frac{2}{5}\\) and \\(-\\frac{k}{3}\\); perpendicular lines need \\(\\left(-\\frac{2}{5}\\right)\\left(-\\frac{k}{3}\\right) = -1\\), so \\(k = -\\frac{15}{2}\\).",
+    "D": "Incorrect. This inverts the fraction; \\(\\frac{2k}{15} = -1\\) gives \\(k = -\\frac{15}{2}\\), not \\(-\\frac{2}{15}\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "D": "reciprocal"
+  },
+  "verify": "x, y, k = symbols('x y k')\nm1 = solve(2*x + 5*y - 1, y)[0].coeff(x)\nm2 = solve(k*x + 3*y - 4, y)[0].coeff(x)\nks = solve(Eq(m1*m2, -1), k)\nassert ks == [Rational(-15, 2)]\nassert value(choices[answer]) == ks[0]\nassert all(value(choices[k]) != ks[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

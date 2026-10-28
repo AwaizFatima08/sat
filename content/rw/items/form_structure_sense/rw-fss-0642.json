@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0642",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The bus pulled away before Rafael realized that his suitcase was still on the rack above the seat. He ran a few steps after it, waving, then stopped and laughed at himself; the driver could not possibly see him. At the ticket window, a clerk with tired eyes listened to his story and nodded as if she heard it every day. \"Lost luggage comes back to this office,\" she said, \"and I will set it aside for you when ______ arrives.\"",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "they",
+    "B": "them",
+    "C": "its",
+    "D": "it"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The thing that will arrive is Rafael's suitcase, referred to just before as \"it\" (\"set it aside\"). The blank is the subject of the singular verb \"arrives,\" so the singular subject pronoun \"it\" is needed.",
+    "A": "Incorrect. \"They\" is plural and does not agree with the singular verb \"arrives\" or the single suitcase.",
+    "B": "Incorrect. \"Them\" is an object pronoun and plural; the blank needs a singular subject.",
+    "C": "Incorrect. \"Its\" is a possessive and cannot stand alone as the subject of \"arrives.\"",
+    "D": "Correct. \"It\" is the singular subject pronoun, matching \"arrives\" and referring to the suitcase."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "C": "grammar_rule"
+  },
+  "grammar": "pronoun",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

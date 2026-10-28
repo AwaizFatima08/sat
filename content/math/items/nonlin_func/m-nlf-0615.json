@@ -1,0 +1,57 @@
+{
+  "id": "m-nlf-0615",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The volume \\(V(s)\\), in cubic centimeters, of a cube with edge length \\(s\\) centimeters is given by \\(V(s) = s^{3}\\). What is the edge length, in centimeters, of a cube with a volume of 343 cubic centimeters?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(49\\)",
+    "B": "\\(18.5\\)",
+    "C": "\\(114.3\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Solve \\(s^{3} = 343\\).",
+    "Since \\(7^{3} = 7 \\cdot 7 \\cdot 7 = 343\\), the edge length is \\(7\\) centimeters. (A calculator's cube root key gives the same result.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(49 = 7^{2}\\) is the area of one face, not the edge length; \\(49^{3}\\) is far more than \\(343\\).",
+    "B": "Incorrect. This is approximately \\(\\sqrt{343}\\), the square root; volume needs the cube root.",
+    "C": "Incorrect. This is \\(343 \\div 3\\); cubing is not multiplying by 3.",
+    "D": "Correct. \\(7^{3} = 343\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_formula",
+    "C": "wrong_formula"
+  },
+  "verify": "s = symbols('s', positive=True)\nsol = solve(Eq(s**3, 343), s)\nassert sol == [7]\nassert value(choices[answer]) == 7\nassert all(value(choices[k]) != 7 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

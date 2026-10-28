@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0617",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A pipe organ contains two main kinds of pipes. In a flue pipe, sound is produced by air vibrating inside the pipe, and because sound travels faster through warm air than through cold air, a flue pipe's pitch rises as the air around it warms. In a reed pipe, sound comes from a vibrating strip of metal whose pitch barely changes with temperature. Many large churches are cold in winter and warm in summer. A tuner who brings an organ's flue pipes and reed pipes into perfect agreement on a cold January morning should therefore expect that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the reed pipes will need retuning more often than the flue pipes.",
+    "B": "by a warm summer afternoon, the flue pipes will sound higher than the reed pipes.",
+    "C": "the organ will stay in tune as long as the church is heated in winter.",
+    "D": "by a warm summer afternoon, the reed pipes will sound higher than the flue pipes."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Flue-pipe pitch rises with temperature while reed-pipe pitch hardly changes. If the two agree in the cold, then when the church warms in summer the flue pipes will have risen in pitch and the reed pipes will not, so the flue pipes will sound higher.",
+    "A": "Incorrect. The reed pipes are the stable ones; it is the flue pipes that drift with temperature.",
+    "B": "Correct. Warming raises flue-pipe pitch but not reed-pipe pitch, so the flues end up higher.",
+    "C": "Incorrect. Heating in winter does not prevent the summer warmth that will push the flue pipes out of agreement.",
+    "D": "Incorrect. This reverses the relationship; it is the flue pipes, not the reed pipes, whose pitch rises with warmth."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

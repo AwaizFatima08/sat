@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0633",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Over the winter, Tomas and his younger brother Luis set out to build a telescope from a secondhand kit, grinding the mirror by hand with abrasive powder and water. The instructions promised a finished mirror after forty hours of work. ______ after sixty hours the glass still showed the faint scratches that the final polish was supposed to remove, and Luis began to ask whether a telescope from a shop would have been simpler. Tomas kept grinding, convinced that one more evening would do it.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Yet,",
+    "B": "Similarly,",
+    "C": "For example,",
+    "D": "In addition,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The second sentence sets an expectation: the instructions \"promised a finished mirror after forty hours.\" The next sentence reports what actually happened: after sixty hours the mirror was still scratched. The transition must signal that reality went against the promise.",
+    "A": "Correct. \"Yet\" signals a contrast between the promise of forty hours and the reality of sixty hours with the mirror still unfinished.",
+    "B": "Incorrect. The actual result is not similar to the promised result; it falls short of it.",
+    "C": "Incorrect. Sixty hours of grinding with scratches remaining is not an example of what the instructions promised.",
+    "D": "Incorrect. \"In addition\" would add a point of the same kind, but the scratches after sixty hours go against the promise rather than adding to it. This is tempting because the sentence does add new information."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

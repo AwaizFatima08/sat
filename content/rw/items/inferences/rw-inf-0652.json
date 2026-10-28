@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0652",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The Shahnama, the Persian epic completed by the poet Ferdowsi around 1010, was copied and illustrated for patrons across the Persian-speaking world for centuries, yet no two illustrated copies contain the same set of paintings. The poem has far more episodes than any manuscript could depict, so each workshop had to choose. Art historian Parvin Rostami compared the choices made in two copies produced in the same city within a decade of each other. The copy made for a ruling prince illustrates nearly every scene in which a king sits in judgment or receives tribute, while passing over famous battles that the second copy, made for a wealthy merchant, depicts in full. Workshop painters are known to have reused standard compositions, so Rostami does not take the difference as evidence of artistic originality. She does take it as evidence that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the choice of episodes could depend on what a patron wished to see, not only on what the poem offered.",
+    "B": "the prince's copy omitted battle scenes because its painters lacked standard compositions for them.",
+    "C": "the prince's workshop employed more skilled painters than the merchant's workshop could afford.",
+    "D": "patrons across the Persian-speaking world dictated every detail of the paintings in their copies."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Rostami holds the poem, the city, and the period constant and finds that the choice of scenes still differs between the two copies. The difference lines up with the patrons: kingship for the prince, battles for the merchant. Since she sets aside the painters' originality, the remaining explanation is that patrons' preferences shaped the selection.",
+    "A": "Correct. Same poem, same city, same decade, yet the prince's copy favors scenes of kingship and the merchant's favors battles; the patron is the variable that differs.",
+    "B": "Incorrect. The text says painters reused standard compositions, and the merchant's copy in the same city shows that battle compositions were available.",
+    "C": "Incorrect. The text compares which scenes were chosen, not how well they were painted.",
+    "D": "Incorrect. Two copies from one city show that patrons could influence the choice of scenes; the text does not extend this to every detail or every patron."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "not_in_text",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

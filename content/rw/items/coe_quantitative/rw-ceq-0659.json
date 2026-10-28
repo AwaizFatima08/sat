@@ -1,0 +1,85 @@
+{
+  "id": "rw-ceq-0659",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Elephants that leave protected areas in Kenya to feed on crops are a danger to farmers and, because of the conflicts that follow, to themselves. Since elephants avoid African honeybees, some farmers have hung beehives at intervals along a wire fence around their fields, so that an elephant pushing against the fence sets the hives swinging and the bees flying. Conservation biologist Naomi Wanjiru, who compared fields protected by beehive fences with nearby fields protected by thorn-bush barriers over three growing seasons, argues that the fences deter elephants substantially but not completely, and that their value depends on the hives actually being occupied: fences whose hives stood empty, she finds, were little better than thorn bushes.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Elephant Visits to Fields with Different Kinds of Protection",
+    "columns": [
+      "Field protection",
+      "Fields",
+      "Elephant visits per field per season",
+      "Visits in which crops were damaged (%)"
+    ],
+    "rows": [
+      [
+        "Thorn-bush barrier",
+        12,
+        9.4,
+        71
+      ],
+      [
+        "Beehive fence, hives occupied",
+        10,
+        2.1,
+        24
+      ],
+      [
+        "Beehive fence, hives empty",
+        6,
+        7.8,
+        65
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Wanjiru's argument?",
+  "choices": {
+    "A": "Occupied hives also provided the farmers with honey that they could sell.",
+    "B": "Fields with empty hives received more elephant visits per season than fields protected by thorn bushes.",
+    "C": "Fields fenced with occupied hives received 2.1 elephant visits per season against 9.4 for thorn-bush fields, while fields with empty hives received 7.8.",
+    "D": "Elephants damaged crops in fewer than a quarter of their visits to fields with occupied hives."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Wanjiru's argument has three parts: occupied beehive fences cut visits sharply, they do not stop visits altogether, and empty hives barely help. The evidence must compare all three rows: 2.1 visits with occupied hives (far fewer than 9.4, but not zero) and 7.8 with empty hives, close to the thorn-bush figure.",
+    "A": "Incorrect. Honey may be a real benefit, but the table records only elephant visits and damage.",
+    "B": "Incorrect. Fields with empty hives received 7.8 visits per season, fewer than the 9.4 for thorn-bush fields.",
+    "C": "Correct. It shows the large reduction with occupied hives, the visits that still occur, and the near-thorn-bush result for empty hives, supporting every part of the argument.",
+    "D": "Incorrect. This is true (24 percent), but it describes only what happened during visits to one kind of field; it cannot show that the fences reduced visits or that empty hives failed."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

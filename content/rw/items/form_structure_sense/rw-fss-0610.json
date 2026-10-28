@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0610",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "George Frideric Handel composed much of his music at great speed. Written in only about three weeks in the summer of 1741, ______ The piece soon became one of the most frequently performed works in English choral music.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "the first performance of Messiah took place in Dublin in April 1742.",
+    "B": "Dublin hosted the first performance of Messiah in April 1742.",
+    "C": "Handel first presented Messiah in Dublin in April 1742.",
+    "D": "his oratorio Messiah was first performed in Dublin in April 1742."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The opening phrase \"Written in only about three weeks\" describes the piece of music, so the music must be the subject right after the comma. Only choice D makes \"his oratorio Messiah\" the subject.",
+    "A": "Incorrect. The subject here is \"the first performance,\" but a performance is not written; the music is.",
+    "B": "Incorrect. The subject here is \"Dublin,\" but a city was not written in three weeks.",
+    "C": "Incorrect. The subject here is \"Handel,\" so the sentence wrongly says that Handel was written in three weeks.",
+    "D": "Correct. \"His oratorio Messiah\" is the thing that was written, and it directly follows the modifier."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "C": "grammar_rule"
+  },
+  "grammar": "modifier",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

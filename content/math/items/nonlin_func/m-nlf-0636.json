@@ -1,0 +1,45 @@
+{
+  "id": "m-nlf-0636",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The area of a patch of mold on a laboratory dish grows exponentially. The area \\(A(t)\\), in square millimeters, \\(t\\) days after the mold is first measured is given by \\(A(t) = a(b)^{t}\\), where \\(a\\) and \\(b\\) are positive constants. If \\(A(0) = 4\\) and \\(A(1) = 10\\), what is the value of \\(A(3)\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "62.5"
+  ],
+  "solution": [
+    "\\(a = A(0) = 4\\), and \\(A(1) = 4b = 10\\) gives \\(b = 2.5\\).",
+    "\\(A(3) = 4(2.5)^{3} = 4(15.625) = 62.5\\) square millimeters."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\na = 4\nb = Rational(10, 4)\nf = Lambda(x, a*b**x)\nassert f(0) == 4 and f(1) == 10\nassert [Rational(s) for s in spr_answers] == [f(3)] and f(3) == Rational(125, 2)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "62.5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

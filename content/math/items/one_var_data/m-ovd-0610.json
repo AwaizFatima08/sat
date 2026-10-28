@@ -1,0 +1,89 @@
+{
+  "id": "m-ovd-0610",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The histogram summarizes a data set of 50 values. Each interval includes its left endpoint but not its right endpoint. Which of the following could be the mean of the data set?",
+  "figure": {
+    "kind": "histogram",
+    "x_label": "Value",
+    "y_label": "Frequency",
+    "bins": [
+      [
+        10,
+        20,
+        5
+      ],
+      [
+        20,
+        30,
+        12
+      ],
+      [
+        30,
+        40,
+        18
+      ],
+      [
+        40,
+        50,
+        10
+      ],
+      [
+        50,
+        60,
+        5
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(34\\)",
+    "B": "\\(28\\)",
+    "C": "\\(41\\)",
+    "D": "\\(50\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The mean is smallest if every value is at the left endpoint of its interval: \\(\\frac{10(5) + 20(12) + 30(18) + 40(10) + 50(5)}{50} = \\frac{1{,}480}{50} = 29.6\\).",
+    "The mean is largest if every value is just below the right endpoint of its interval, which gives a mean just below \\(29.6 + 10 = 39.6\\).",
+    "So the mean must be at least 29.6 and less than 39.6. Of the choices, only 34 is in this range."
+  ],
+  "explanation": {
+    "A": "Correct. The mean must be between 29.6 and 39.6, and 34 is the only choice in that range.",
+    "B": "Incorrect. Even if every value were at the left endpoint of its interval, the mean would be 29.6, so the mean cannot be 28.",
+    "C": "Incorrect. Even if every value were at the top of its interval, the mean would be less than 39.6, so the mean cannot be 41.",
+    "D": "Incorrect. This is the number of values in the data set, not a possible mean."
+  },
+  "traps": {
+    "B": "misread_graph",
+    "C": "misread_graph",
+    "D": "wrong_formula"
+  },
+  "verify": "bins = figure['bins']\nn = sum(f for lo, hi, f in bins)\nassert n == 50\nlow = Rational(sum(lo * f for lo, hi, f in bins), n)\nhigh = Rational(sum(hi * f for lo, hi, f in bins), n)\nassert low == Rational('29.6') and high == Rational('39.6')\nok = [k for k in choices if low <= value(choices[k]) < high]\nassert ok == [answer] and value(choices[answer]) == 34",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

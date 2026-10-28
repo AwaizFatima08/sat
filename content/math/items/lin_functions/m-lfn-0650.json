@@ -1,0 +1,88 @@
+{
+  "id": "m-lfn-0650",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of the linear function \\(f\\) is shown in the \\(xy\\)-plane. The function \\(g\\) is defined by \\(g(x) = f(x) + 3\\). What is the \\(x\\)-coordinate of the \\(x\\)-intercept of the graph of \\(y = g(x)\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -2,
+      8
+    ],
+    "y": [
+      -2,
+      10
+    ],
+    "curves": [
+      {
+        "expr": "-1.5*x + 6",
+        "label": "y = f(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 6,
+        "label": "(0, 6)"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "label": "(4, 0)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(2\\)",
+    "B": "\\(7\\)",
+    "C": "\\(9\\)",
+    "D": "\\(6\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From the graph, \\(f\\) has \\(y\\)-intercept 6 and \\(x\\)-intercept 4, so its slope is \\(\\frac{0 - 6}{4 - 0} = -\\frac{3}{2}\\) and \\(f(x) = -\\frac{3}{2}x + 6\\).",
+    "Then \\(g(x) = -\\frac{3}{2}x + 9\\). Setting \\(g(x) = 0\\) gives \\(x = 6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the \\(x\\)-intercept of \\(y = f(x) - 3\\); adding 3 moves the graph up, which moves the \\(x\\)-intercept to the right, not the left.",
+    "B": "Incorrect. This adds 3 to the \\(x\\)-intercept of \\(f\\). Adding 3 to \\(f(x)\\) shifts the graph up by 3, and with slope \\(-\\frac{3}{2}\\) the \\(x\\)-intercept moves 2 units, not 3.",
+    "C": "Incorrect. This is the \\(y\\)-intercept of the graph of \\(g\\), \\(g(0) = 9\\), not its \\(x\\)-intercept.",
+    "D": "Correct. \\(g(x) = -\\frac{3}{2}x + 9 = 0\\) when \\(x = 6\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "x = symbols('x')\np = figure['points']\nm = Rational(p[1]['y'] - p[0]['y'], p[1]['x'] - p[0]['x'])\nf = m*x + p[0]['y']\nassert simplify(f - sympify(figure['curves'][0]['expr'])) == 0\nans = solve(Eq(f + 3, 0), x)[0]\nassert ans == 6\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

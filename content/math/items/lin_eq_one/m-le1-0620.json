@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0620",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The side length of an equilateral triangle is 2 centimeters greater than the side length of a square. The perimeter of the triangle is equal to the perimeter of the square. What is the side length, in centimeters, of the square?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "Let \\(s\\) be the side of the square. The triangle's side is \\(s + 2\\).",
+    "Equal perimeters: \\(4s = 3(s + 2)\\), so \\(4s = 3s + 6\\).",
+    "Then \\(s = 6\\). Check: both perimeters are 24 cm."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "s = symbols('s')\nsol = solve(Eq(4*s, 3*(s + 2)), s)\nassert sol == [6]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

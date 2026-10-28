@@ -1,0 +1,43 @@
+{
+  "id": "m-le2-0648",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the equations \\(2x + ky = 10\\) and \\(kx + 8y = c\\), where \\(k\\) and \\(c\\) are constants and \\(k > 0\\), represent the same line. What is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "20"
+  ],
+  "solution": [
+    "For the same line, the coefficients are proportional: \\(\\frac{2}{k} = \\frac{k}{8}\\), so \\(k^{2} = 16\\) and \\(k = 4\\) (since \\(k > 0\\)).",
+    "Then \\(kx + 8y = c\\) is \\(4x + 8y = c\\), which is 2 times \\(2x + 4y = 10\\). So \\(c = 2(10) = 20\\)."
+  ],
+  "verify": "k, c = symbols('k c', positive=True)\nkk = [s for s in solve(Eq(2*8, k*k), k) if s > 0][0]\nassert kk == 4\ncc = solve(Eq(10*kk/2, c), c)[0]\nassert cc == 20\nassert [Rational(s) for s in spr_answers] == [cc]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "20",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

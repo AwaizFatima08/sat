@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0636",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Visitors to Pompeii, the Roman town buried by the eruption of Mount Vesuvius in 79 CE, can still see dozens of shops called thermopolia, where hot food and drinks were sold to people who had no kitchen of their own. The row of large clay jars set into the counter of each shop ______ to hold the dishes on offer, a bit like the trays in a modern cafeteria. Many residents of the crowded town seem to have eaten most of their meals this way.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "was used",
+    "B": "were used",
+    "C": "are used",
+    "D": "have been used"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The subject of the blank is \"The row,\" a singular noun; \"jars,\" \"counter,\" and \"shop\" belong to phrases describing the row. The text also describes the shops in the past (\"were sold\"), so the singular past \"was used\" is needed.",
+    "A": "Correct. The singular past \"was used\" agrees with \"row\" and matches \"were sold.\"",
+    "B": "Incorrect. \"Were used\" is plural and seems to agree with \"jars,\" but the subject is the singular \"row.\"",
+    "C": "Incorrect. \"Are used\" is plural and in the present tense, but the subject is singular and the practice belongs to the past.",
+    "D": "Incorrect. \"Have been used\" is plural, and the present perfect does not fit a practice that ended in 79 CE."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

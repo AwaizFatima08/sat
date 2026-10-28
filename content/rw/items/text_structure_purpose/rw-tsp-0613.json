@@ -1,0 +1,56 @@
+{
+  "id": "rw-tsp-0613",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "text_structure_purpose",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many bats hunt at night by echolocation, sending out high-pitched calls and listening for the echoes that bounce back from flying insects. Some tiger moths answer those calls with ultrasonic clicks of their own. Scientists long assumed the clicks served as a warning, telling bats that the moth was foul-tasting, and for many species this appears to be true. But one North American tiger moth, Bertholdia trigona, produces clicks at a far higher rate, up to 4,500 per second. In laboratory experiments, bats repeatedly missed these moths in flight. The dense clicks seem to blur the bats' echoes, jamming their sonar.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice best describes the overall structure of the text?",
+  "choices": {
+    "A": "It explains how moths produce clicks and then describes the organs that make them.",
+    "B": "It describes how bats hunt and then argues that moths have no defense against them.",
+    "C": "It describes a defense moths use, gives its accepted explanation, and then presents a species for which a different explanation fits.",
+    "D": "It presents two competing explanations of moth clicks and concludes that neither is supported."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The text introduces the moths' clicks, states the long-held explanation (a warning of bad taste) and notes it holds \"for many species.\" The word \"But\" introduces Bertholdia trigona, whose far faster clicks do something different: they jam the bats' sonar. The structure is a defense, its usual explanation, and an exception.",
+    "A": "Incorrect. The text never explains how the clicks are physically produced.",
+    "B": "Incorrect. The text describes a moth defense that works; it does not argue that moths are defenseless.",
+    "C": "Correct. The text moves from the clicks, to the warning explanation that fits many species, to one species whose clicks instead jam bat sonar.",
+    "D": "Incorrect. The text says the warning explanation \"appears to be true\" for many species and that jamming fits Bertholdia trigona; both are supported, each for different moths."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

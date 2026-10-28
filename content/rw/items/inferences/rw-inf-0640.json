@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0640",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Stalagmites grow upward from cave floors as mineral-rich water drips from above, and many add a thin layer every year. In a dry year, less water seeps through the rock, the layer is thinner, and in a severe drought growth can stop altogether, leaving a gap in the sequence. A gap, however, has another possible cause: the crack feeding a particular drip can become blocked or shift, starving one stalagmite while its neighbors continue to grow. Geologist Anjali Rao examined six stalagmites from different chambers of a cave in Southeast Asia and found that all six stopped growing within a few years of one another about 1,100 years ago and resumed roughly a decade later. Rao argues that this pattern is best explained by ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "a steady increase in rainfall that lasted for roughly a decade.",
+    "B": "a drought that affected the whole region rather than a change in the path of any single drip.",
+    "C": "the blocking of six separate cracks, one above each stalagmite, at about the same time.",
+    "D": "the collapse of part of the cave's roof around 1,100 years ago."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The text offers two causes for a gap: drought, which cuts water to the whole cave, and a blocked crack, which affects one drip. Six stalagmites in different chambers stopped together and restarted together. A shared cause fits that pattern; six separate blockages happening at once would be an unlikely coincidence.",
+    "A": "Incorrect. More rain means more drip water and thicker layers, not a halt in growth.",
+    "B": "Correct. A shifted or blocked crack starves one stalagmite, but six in different chambers stopping and restarting together point to a cause that reached them all, such as a drought.",
+    "C": "Incorrect. A blocked crack affects a single drip; six blockages coinciding and then clearing together would be a remarkable coincidence, whereas a drought explains all six at once.",
+    "D": "Incorrect. The text never mentions a collapse; it offers drought and shifting drips as the two explanations for a gap."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "wrong_logic",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

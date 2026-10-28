@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0617",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Batik, a method of decorating cloth that is especially associated with the Indonesian island of Java, depends on wax. Using a small copper tool with a spout, the artist draws lines of hot wax onto plain fabric. When the cloth is dipped in dye, the waxed areas ______ the color, so they remain pale while the rest of the cloth darkens. Boiling the cloth afterward removes the wax and reveals the pattern.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "repel",
+    "B": "absorb",
+    "C": "brighten",
+    "D": "spread"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The waxed areas \"remain pale while the rest of the cloth darkens,\" so the wax must keep the dye out. A word meaning \"keep away\" is needed, and \"repel\" fits.",
+    "A": "Correct. The wax keeps the dye from reaching the cloth, so the waxed areas repel the color and stay pale.",
+    "B": "Incorrect. If the waxed areas absorbed the dye, they would darken like the rest of the cloth instead of staying pale.",
+    "C": "Incorrect. The waxed areas stay pale because the dye does not reach them, not because they make the color stronger.",
+    "D": "Incorrect. The waxed lines hold the dye back; they do not carry it farther across the cloth."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

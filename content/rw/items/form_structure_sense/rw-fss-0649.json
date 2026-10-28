@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0649",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the early 1800s, women were not admitted to the École Polytechnique in Paris, so the self-taught mathematician Sophie Germain obtained lecture notes from male students and submitted her own work under the name of a former student, Monsieur Le Blanc. She kept the pseudonym when she began writing to the German mathematician Carl Friedrich Gauss about number theory in 1804. Learning the true identity of his correspondent only in 1807, when Germain arranged for his protection during a French military occupation, ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "her courage and talent were praised by Gauss, whose letters took on a new tone of respect.",
+    "B": "a new tone of respect entered the letters of Gauss, who praised her courage and talent.",
+    "C": "the letters took on a new tone of respect, as Gauss praised her courage and talent.",
+    "D": "Gauss praised her courage and talent, and his letters took on a new tone of respect."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The introductory phrase \"Learning the true identity of his correspondent only in 1807\" describes the person who learned it: Gauss. The subject right after the comma must therefore be \"Gauss.\"",
+    "A": "Incorrect. The subject is \"her courage and talent,\" which could not have learned anything.",
+    "B": "Incorrect. The subject is \"a new tone of respect,\" not the person who learned the identity.",
+    "C": "Incorrect. The subject is \"the letters,\" so the sentence says the letters learned the identity; the modifier dangles.",
+    "D": "Correct. \"Gauss\" directly follows the modifier, so he is the one who learned his correspondent's identity."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "C": "grammar_rule"
+  },
+  "grammar": "modifier",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

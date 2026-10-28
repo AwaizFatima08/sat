@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0603",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "By the time Tomas finished clearing the snow from his own front steps, his gloves were soaked and his fingers had gone numb. The warm kitchen was only a few feet away, and he could smell the bread his mother had just taken out of the oven. ______ he picked up the shovel again and crossed the street to Mrs. Varga's house, because he knew that at eighty-three she could not clear her own path.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Even so,",
+    "B": "In other words,",
+    "C": "Therefore,",
+    "D": "For instance,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The first two sentences explain why Tomas would want to go inside: he is cold and wet, and warm bread is waiting. The last sentence says he kept working anyway. A transition that signals an action taken despite the reasons just given is needed.",
+    "A": "Correct. \"Even so\" shows that Tomas went on shoveling in spite of his numb fingers and the warm kitchen.",
+    "B": "Incorrect. \"In other words\" would restate the previous idea, but the last sentence describes a new action, not the same idea in different words.",
+    "C": "Incorrect. \"Therefore\" would mean the cold and the bread caused him to keep shoveling, but they are reasons to stop.",
+    "D": "Incorrect. Crossing the street to shovel is not an example of being cold or smelling bread."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

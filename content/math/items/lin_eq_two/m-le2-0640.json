@@ -1,0 +1,44 @@
+{
+  "id": "m-le2-0640",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(\\ell\\) has equation \\(2x + 3y = 18\\). Line \\(m\\) is parallel to line \\(\\ell\\) and passes through the point \\((6, 5)\\). What is the \\(y\\)-coordinate of the \\(y\\)-intercept of line \\(m\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "9"
+  ],
+  "solution": [
+    "Parallel lines have the same slope, so line \\(m\\) is \\(2x + 3y = c\\) for some constant \\(c\\).",
+    "Substitute \\((6, 5)\\): \\(12 + 15 = 27\\), so \\(2x + 3y = 27\\).",
+    "At \\(x = 0\\): \\(3y = 27\\), so \\(y = 9\\)."
+  ],
+  "verify": "x, y = symbols('x y')\nc = 2*6 + 3*5\nb = solve(Eq(2*0 + 3*y, c), y)[0]\nassert b == 9\nassert [Rational(s) for s in spr_answers] == [b]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "9",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

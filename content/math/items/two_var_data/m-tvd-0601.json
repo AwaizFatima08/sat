@@ -1,0 +1,100 @@
+{
+  "id": "m-tvd-0601",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The scatterplot shows the number of years \\(x\\) since each of 9 trees in a park was planted and the height \\(y\\), in meters, of the tree. The line of best fit is shown and has the equation \\(y = 0.6x + 1.2\\). Based on the line of best fit, what is the predicted height, in meters, of a tree that was planted 15 years ago?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Years since planting",
+    "y_label": "Height (meters)",
+    "points": [
+      [
+        2,
+        2.5
+      ],
+      [
+        4,
+        3.4
+      ],
+      [
+        5,
+        4.5
+      ],
+      [
+        7,
+        5.2
+      ],
+      [
+        8,
+        6.3
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        11,
+        8.1
+      ],
+      [
+        12,
+        8.2
+      ],
+      [
+        14,
+        9.9
+      ]
+    ],
+    "line": "0.6*x + 1.2"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9\\)",
+    "B": "\\(10.2\\)",
+    "C": "\\(7.8\\)",
+    "D": "\\(1.8\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(x = 15\\) into the equation of the line of best fit.",
+    "\\(y = 0.6(15) + 1.2 = 9 + 1.2 = 10.2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(0.6(15)\\) without adding the constant 1.2.",
+    "B": "Correct. \\(0.6(15) + 1.2 = 10.2\\).",
+    "C": "Incorrect. This is \\(0.6(15) - 1.2\\); the constant 1.2 is added, not subtracted.",
+    "D": "Incorrect. This is \\(0.6 + 1.2\\), which ignores the value \\(x = 15\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "sign_error",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\npred = nsimplify(sympify(figure['line']).subs(x, 15))\nassert pred == Rational(51, 5)\nassert value(choices[answer]) == pred\nassert all(value(choices[k]) != pred for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

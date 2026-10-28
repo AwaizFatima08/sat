@@ -1,0 +1,43 @@
+{
+  "id": "m-le2-0608",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A farmer at a weekend market sells pumpkins for \\$2.50 each and squash for \\$1.50 each. The equation \\(2.5p + 1.5g = 60\\) represents a day on which the farmer earned exactly \\$60 from \\(p\\) pumpkins and \\(g\\) squash. If the farmer sold 12 pumpkins that day, how many squash did the farmer sell?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "20"
+  ],
+  "solution": [
+    "With \\(p = 12\\): \\(2.5(12) + 1.5g = 60\\), so \\(30 + 1.5g = 60\\).",
+    "Then \\(1.5g = 30\\) and \\(g = 20\\)."
+  ],
+  "verify": "g = symbols('g')\nsol = solve(Eq(Rational(5, 2)*12 + Rational(3, 2)*g, 60), g)\nassert sol == [20]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h3-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "20",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

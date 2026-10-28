@@ -1,0 +1,121 @@
+{
+  "id": "rw-ceq-0626",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Smart electricity meters can send readings to a small display in the home that shows how much power is being used at that moment. Energy researcher Callum Reid wanted to know whether simply seeing this information leads households to use less electricity. In Glasgow, Scotland, he recruited 400 households with smart meters and gave half of them a display at the end of January 2024; the other half received none. He then compared the two groups' average monthly electricity use. Reid reported that the display produced a modest saving that persisted through the year: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average Monthly Electricity Use of Two Groups of Glasgow Households, 2024",
+    "x_label": "Month",
+    "y_label": "Electricity use (kilowatt-hours)",
+    "series": [
+      {
+        "name": "With display",
+        "points": [
+          [
+            "January",
+            310
+          ],
+          [
+            "March",
+            285
+          ],
+          [
+            "May",
+            230
+          ],
+          [
+            "July",
+            205
+          ],
+          [
+            "September",
+            225
+          ],
+          [
+            "November",
+            290
+          ]
+        ]
+      },
+      {
+        "name": "Without display",
+        "points": [
+          [
+            "January",
+            312
+          ],
+          [
+            "March",
+            305
+          ],
+          [
+            "May",
+            248
+          ],
+          [
+            "July",
+            222
+          ],
+          [
+            "September",
+            243
+          ],
+          [
+            "November",
+            311
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "households with a display used more electricity than households without one in every month after January.",
+    "B": "from March to November, households with a display used roughly 20 kilowatt-hours less per month than households without one.",
+    "C": "households with a display used about 310 kilowatt-hours in January, nearly the same as households without one.",
+    "D": "both groups used the most electricity in January and the least in July."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The statement needs a difference between the two groups that is modest and lasts through the year. Before the displays were installed (January) the groups were nearly equal; from March onward the \"with display\" line sits about 17 to 21 kilowatt-hours below the other line in every month shown.",
+    "A": "Incorrect. This reverses the graph: after January, households with a display used less electricity, not more.",
+    "B": "Correct. A steady gap of about 20 kilowatt-hours in every month from March to November is exactly a modest saving that persisted.",
+    "C": "Incorrect. This is accurate, but January is before the displays were handed out, so it shows no effect of the display.",
+    "D": "Incorrect. This is true, but it describes the seasonal pattern shared by both groups and says nothing about the difference between them."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "too_narrow",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

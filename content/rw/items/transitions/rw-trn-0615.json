@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0615",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "On Lake Titicaca, high in the Andes between Peru and Bolivia, the Uros people live on islands they have built themselves from thick layers of a reed called totora. The reeds float, but the bottom layers, which sit in the water, slowly rot and fall away. ______ the islanders must keep adding fresh reeds on top, a chore that is repeated every few weeks so that the island does not sink.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Similarly,",
+    "B": "However,",
+    "C": "For this reason,",
+    "D": "For example,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The second sentence explains a problem: the bottom layers of reeds rot and fall away. The last sentence describes what the islanders do about it: they keep adding new reeds. A transition that shows the action taken because of the problem is needed.",
+    "A": "Incorrect. \"Similarly\" signals a parallel idea, but adding reeds is the solution to the rotting, not another case of it.",
+    "B": "Incorrect. \"However\" signals a contrast, but adding reeds follows from the rotting rather than contrasting with it.",
+    "C": "Correct. \"For this reason\" shows that the islanders add new reeds because the lower layers rot away.",
+    "D": "Incorrect. Adding fresh reeds is not an example of the bottom layers rotting; it is the response to the rotting."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

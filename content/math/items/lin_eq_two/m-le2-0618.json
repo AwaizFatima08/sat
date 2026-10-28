@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0618",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A chemist mixes \\(x\\) liters of a 20% acid solution with \\(y\\) liters of a 50% acid solution. The equation \\(0.2x + 0.5y = 15\\) represents the combinations that contain exactly 15 liters of pure acid. The graph of this equation in the \\(xy\\)-plane has a \\(y\\)-intercept of \\((0, 30)\\). Which of the following is the best interpretation of this \\(y\\)-intercept?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "30 liters of the 20% solution, with none of the 50% solution, contain 15 liters of pure acid.",
+    "B": "30 liters of the 50% solution, with none of the 20% solution, contain 15 liters of pure acid.",
+    "C": "Every mixture on the graph has a total volume of 30 liters.",
+    "D": "Each liter of the 50% solution contains 30 milliliters of pure acid."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "At the \\(y\\)-intercept, \\(x = 0\\): no 20% solution is used.",
+    "Then \\(0.5y = 15\\), so \\(y = 30\\): 30 liters of the 50% solution alone contain 15 liters of acid."
+  ],
+  "explanation": {
+    "A": "Incorrect. The \\(y\\)-intercept has \\(x = 0\\), so it uses none of the 20% solution. (30 liters of the 20% solution contain only 6 liters of acid.)",
+    "B": "Correct. At \\(x = 0\\), \\(0.5y = 15\\) gives \\(y = 30\\): 30 liters of the 50% solution alone contain 15 liters of acid.",
+    "C": "Incorrect. The intercept is one point on the graph; other combinations, such as \\(x = 75, y = 0\\), have different total volumes.",
+    "D": "Incorrect. Each liter of the 50% solution contains 0.5 liter of acid; 30 is a number of liters of solution, not an amount per liter."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "y = symbols('y')\nassert solve(Eq(Rational(5, 10)*y, 15), y) == [30]\nassert choices[answer].startswith('30 liters of the 50% solution')",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

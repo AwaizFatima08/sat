@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0609",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The Pharos of Alexandria, a lighthouse built in Egypt in the third century BCE, stood more than 100 meters tall and was among the tallest structures of the ancient world. A fire burned at its top each night, and its light is said to have been visible far out at sea. The tower was so famous that in several languages the word for lighthouse still ______ its name.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "competes with",
+    "B": "derives from",
+    "C": "accounts for",
+    "D": "substitutes for"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The sentence explains a result of the tower being \"so famous\": the word for lighthouse in several languages still comes from the name Pharos. The blank needs \"derives from.\"",
+    "A": "Incorrect. A word and a name do not compete; the sentence is about where the word came from.",
+    "B": "Correct. Because the tower was so famous, its name became the word for lighthouse in several languages; those words derive from, or come from, \"Pharos.\"",
+    "C": "Incorrect. The word for lighthouse does not explain the tower's name. It is the tower's fame that explains the word.",
+    "D": "Incorrect. The tower's name was not replaced by the word for lighthouse; rather, the word grew out of the name."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

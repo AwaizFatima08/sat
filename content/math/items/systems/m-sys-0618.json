@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0618",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[x = 2y + 5\\] \\[3x + 4y = 35\\] What is the solution \\((x, y)\\) to the system of equations above?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((2, 9)\\)",
+    "B": "\\((7, 1)\\)",
+    "C": "\\((9, 2)\\)",
+    "D": "\\((15, 5)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(2y + 5\\) for \\(x\\) in the second equation: \\(3(2y + 5) + 4y = 35\\).",
+    "So \\(10y + 15 = 35\\), which gives \\(y = 2\\).",
+    "Then \\(x = 2(2) + 5 = 9\\). The solution is \\((9, 2)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This reverses the coordinates: \\(x = 9\\) and \\(y = 2\\).",
+    "B": "Incorrect. This point satisfies \\(x = 2y + 5\\) but not \\(3x + 4y = 35\\), since \\(21 + 4 = 25\\).",
+    "C": "Correct. Substituting \\(2y + 5\\) for \\(x\\) gives \\(10y + 15 = 35\\), so \\(y = 2\\) and \\(x = 9\\).",
+    "D": "Incorrect. This comes from \\(10y = 50\\) instead of \\(10y = 35 - 15 = 20\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "pt = lambda s: [value(t) for t in s.strip('\\\\()').split(',')]\nx, y = symbols('x y')\nsol = solve([x - (2*y + 5), 3*x + 4*y - 35], [x, y])\nassert sol == {x: 9, y: 2}\nassert pt(choices[answer]) == [9, 2]\nassert all(pt(choices[k]) != [9, 2] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

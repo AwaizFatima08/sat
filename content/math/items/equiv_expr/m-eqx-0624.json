@@ -1,0 +1,45 @@
+{
+  "id": "m-eqx-0624",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(\\left(x^{4}\\right)^{k} \\cdot x^{2} = x^{14}\\), \\(k\\) is a constant, and the equation is true for all \\(x > 0\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3"
+  ],
+  "solution": [
+    "A power of a power multiplies exponents: \\(\\left(x^{4}\\right)^{k} = x^{4k}\\).",
+    "Multiplying adds exponents: \\(x^{4k + 2} = x^{14}\\), so \\(4k + 2 = 14\\) and \\(k = 3\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "k = symbols('k')\nsol = solve(Eq(4*k + 2, 14), k)\nassert sol == [3]\nx = symbols('x', positive=True)\nassert simplify((x**4)**3 * x**2 - x**14) == 0\nassert [Rational(v) for v in spr_answers] == [3]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-ctc-0614",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many textbooks include a diagram called the tongue map. It shows the tongue divided into zones, each responsible for one taste: sweet at the tip, bitter at the back, and sour and salty along the sides. Generations of students have tested the map by touching sugar or salt to different parts of their tongues.",
+  "passage_b": "The tongue map is based on a misreading of a study published in Germany in 1901. That study found only slight differences in sensitivity between regions of the tongue, but a later summary turned the small differences into an all-or-nothing diagram. In fact, every region of the tongue that has taste buds can detect all of the basic tastes. The map persists because it is simple and easy to draw, not because it is accurate.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the diagram described in Text 1?",
+  "choices": {
+    "A": "By agreeing that each taste is detected in only one region of the tongue",
+    "B": "By claiming that there are more basic tastes than the diagram shows",
+    "C": "By explaining that the diagram rests on a misreading of an early study",
+    "D": "By arguing that bitter tastes cannot be detected anywhere on the tongue"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Text 1 describes the tongue map as a diagram found in textbooks. Text 2 says the map \"is based on a misreading of a study published in Germany in 1901,\" in which small differences were turned into \"an all-or-nothing diagram,\" and that every region can detect all the basic tastes. So the author of Text 2 would respond by explaining the map's mistaken origin.",
+    "A": "Incorrect. Text 2 says every region with taste buds detects all the basic tastes, so its author would not agree.",
+    "B": "Incorrect. Text 2 does not discuss how many basic tastes there are.",
+    "C": "Correct. Text 2 traces the map to a misreading of a 1901 study whose small differences were exaggerated.",
+    "D": "Incorrect. Text 2 says all basic tastes can be detected across the tongue."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

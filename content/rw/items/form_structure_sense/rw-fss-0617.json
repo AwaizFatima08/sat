@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0617",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Yusuf and his sister Lena reached the bakery just as the shutters were going up. The baker, who had known the two of them since they were small, handed ______ two warm loaves wrapped in paper and waved away the coins Yusuf held out.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "they",
+    "B": "it",
+    "C": "them",
+    "D": "him"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The baker handed the loaves to Yusuf and Lena, two people, so the pronoun must be plural. It is also the object of \"handed,\" so the plural object pronoun \"them\" is needed.",
+    "A": "Incorrect. \"They\" is a subject pronoun; after the verb \"handed,\" the object form \"them\" is needed.",
+    "B": "Incorrect. \"It\" is singular and is used for things, not for the two children.",
+    "C": "Correct. \"Them\" is plural, matching \"Yusuf and his sister Lena,\" and is the object form needed after \"handed.\"",
+    "D": "Incorrect. \"Him\" is singular and refers only to Yusuf, but the baker gave the loaves to both children."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "pronoun",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

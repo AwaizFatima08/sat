@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0641",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, which of the following equations represents a line that does not intersect the graph of \\(3x - 4y = 8\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6x - 8y = 16\\)",
+    "B": "\\(6x - 8y = 5\\)",
+    "C": "\\(4x + 3y = 8\\)",
+    "D": "\\(3x + 4y = 8\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Lines that never intersect are parallel: same slope, different intercepts.",
+    "\\(3x - 4y = 8\\) has slope \\(\\frac{3}{4}\\). \\(6x - 8y = 5\\) also has slope \\(\\frac{3}{4}\\) and is not the same line (it equals \\(3x - 4y = 2.5\\))."
+  ],
+  "explanation": {
+    "A": "Incorrect. Dividing by 2 gives \\(3x - 4y = 8\\): this is the same line, so every point is shared.",
+    "B": "Correct. Both lines have slope \\(\\frac{3}{4}\\), but \\(6x - 8y = 5\\) is \\(3x - 4y = 2.5\\), a different line, so they are parallel and never meet.",
+    "C": "Incorrect. This line has slope \\(-\\frac{4}{3}\\); it is perpendicular to the given line and crosses it at one point.",
+    "D": "Incorrect. This line has slope \\(-\\frac{3}{4}\\), not \\(\\frac{3}{4}\\), so the lines cross."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "x, y = symbols('x y')\neq = lambda s: value(s.split('=')[0]) - value(s.split('=')[1])\nbase = 3*x - 4*y - 8\nmb = -diff(base, x)/diff(base, y)\nslope = lambda e: -diff(e, x)/diff(e, y)\nsame = lambda e: simplify(e/base).is_number\ngood = lambda s: slope(eq(s)) == mb and not same(eq(s))\nok = [k for k in choices if good(choices[k])]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-lfn-0664",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the graph of \\(y = -2x + 8\\) and the two axes form a triangle. The graph of \\(y = -2x + c\\), where \\(c\\) is a positive constant, and the two axes form a triangle whose area is 4 times the area of the first triangle. What is the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "16"
+  ],
+  "solution": [
+    "The line \\(y = -2x + 8\\) has intercepts \\((4, 0)\\) and \\((0, 8)\\), so the first triangle has area \\(\\frac{1}{2}(4)(8) = 16\\).",
+    "The line \\(y = -2x + c\\) has intercepts \\(\\left(\\frac{c}{2}, 0\\right)\\) and \\((0, c)\\), so its triangle has area \\(\\frac{1}{2} \\cdot \\frac{c}{2} \\cdot c = \\frac{c^{2}}{4}\\).",
+    "Set \\(\\frac{c^{2}}{4} = 4 \\cdot 16 = 64\\): \\(c^{2} = 256\\), and since \\(c > 0\\), \\(c = 16\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, c = symbols('x c', positive=True)\narea = lambda b: Rational(1, 2) * solve(Eq(-2*x + b, 0), x)[0] * b\nA1 = area(8)\nassert A1 == 16\ncs = solve(Eq(area(c), 4*A1), c)\nassert cs == [16]\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == cs[0]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "16",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

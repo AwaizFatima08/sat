@@ -1,0 +1,46 @@
+{
+  "id": "m-tvd-0612",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Two models predict the number of subscribers, in thousands, to a streaming service \\(t\\) years from now. Model A predicts \\(200 + 20t\\) thousand subscribers, and Model B predicts \\(200(1.1)^{t}\\) thousand subscribers. How many thousand more subscribers does Model B predict than Model A for \\(t = 2\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "2"
+  ],
+  "solution": [
+    "Model A at \\(t = 2\\): \\(200 + 20(2) = 240\\).",
+    "Model B at \\(t = 2\\): \\(200(1.1)^{2} = 200(1.21) = 242\\).",
+    "Difference: \\(242 - 240 = 2\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t')\nA = 200 + 20*t\nBm = 200 * Rational(11, 10)**t\nd = Bm.subs(t, 2) - A.subs(t, 2)\nassert d == 2\nassert [Rational(s) for s in spr_answers] == [d]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

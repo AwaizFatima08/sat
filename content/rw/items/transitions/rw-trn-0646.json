@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0646",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Sea sapphires are tiny crustaceans, only a few millimeters long, that drift in warm oceans. The males carry layers of microscopic crystal plates just beneath the skin of their backs, and these layers reflect light so strongly that an animal can flash brilliant blue, gold, or violet, depending on the angle from which it is seen. At certain angles, the reflected color shifts beyond the range that eyes can detect. ______ when a male turns so that the plates face the light steeply, the reflection moves into the ultraviolet, invisible to humans and to many fish, and the animal seems to vanish.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Similarly,",
+    "B": "However,",
+    "C": "For example,",
+    "D": "Therefore,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The third sentence makes a general claim: at certain angles the color \"shifts beyond the range that eyes can detect.\" The last sentence describes one such angle and what happens: the reflection becomes ultraviolet and the animal seems to vanish. A transition that introduces an illustration of the claim is needed.",
+    "A": "Incorrect. \"Similarly\" would introduce a separate, parallel case, but the last sentence describes the very situation the sentence before refers to.",
+    "B": "Incorrect. Vanishing is not a contrast with the claim about invisible colors; it is what that claim looks like in practice. This is tempting because vanishing seems opposite to flashing, but that contrast was already made in the sentence before.",
+    "C": "Correct. \"For example\" introduces the steep-angle case as a specific instance of the color shifting beyond what eyes can see.",
+    "D": "Incorrect. The animal does not vanish because the color can shift out of view; the vanishing is that shift happening."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

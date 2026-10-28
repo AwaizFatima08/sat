@@ -1,0 +1,57 @@
+{
+  "id": "m-nlf-0655",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = (x - 6)^{2}\\). For what values of \\(x\\) is \\(f(x) = 25\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-1\\) and \\(11\\)",
+    "B": "\\(1\\) and \\(11\\)",
+    "C": "\\(-11\\) and \\(1\\)",
+    "D": "\\(11\\) only"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Set \\((x - 6)^{2} = 25\\). Taking square roots, \\(x - 6 = 5\\) or \\(x - 6 = -5\\).",
+    "So \\(x = 11\\) or \\(x = 1\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. From \\(x - 6 = -5\\), adding \\(6\\) gives \\(x = 1\\), not \\(-1\\).",
+    "B": "Correct. \\((11 - 6)^{2} = 25\\) and \\((1 - 6)^{2} = (-5)^{2} = 25\\).",
+    "C": "Incorrect. From \\(x - 6 = -5\\), \\(x = 1\\); and \\(-11\\) gives \\((-17)^{2} = 289\\), not \\(25\\).",
+    "D": "Incorrect. \\(x - 6\\) can be \\(-5\\) as well as \\(5\\), since \\((-5)^{2} = 25\\); the second solution, \\(x = 1\\), is missing."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "sign_error",
+    "D": "stopped_early"
+  },
+  "verify": "x = symbols('x')\nsols = sorted(solve(Eq((x - 6)**2, 25), x))\nassert sols == [1, 11]\nassert choices[answer] == r'\\(1\\) and \\(11\\)'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

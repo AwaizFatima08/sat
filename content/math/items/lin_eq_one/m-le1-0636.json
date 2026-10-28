@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0636",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "At a stationery shop, a pen costs 3 times as much as a pencil. Lin bought 4 pens and 7 pencils for a total of \\$19.95. What is the price, in dollars, of one pencil?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "1.05"
+  ],
+  "solution": [
+    "Let \\(c\\) be the price of a pencil; a pen costs \\(3c\\).",
+    "\\(4(3c) + 7c = 19.95\\), so \\(19c = 19.95\\).",
+    "Then \\(c = 1.05\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "c = symbols('c')\nsol = solve(Eq(4*(3*c) + 7*c, Rational(1995, 100)), c)\nassert sol == [Rational(21, 20)]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "1.05",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "m-lfn-0627",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of the linear function \\(g\\) is shown in the \\(xy\\)-plane. What is the value of \\(g(-3)\\)?",
+  "figure": {
+    "kind": "xy",
+    "x": [
+      -1,
+      5
+    ],
+    "y": [
+      -8,
+      4
+    ],
+    "curves": [
+      {
+        "expr": "-2*x + 1",
+        "label": "y = g(x)"
+      }
+    ],
+    "points": [
+      {
+        "x": 0,
+        "y": 1,
+        "label": "(0, 1)"
+      },
+      {
+        "x": 2,
+        "y": -3,
+        "label": "(2, -3)"
+      }
+    ],
+    "segments": [],
+    "x_label": "x",
+    "y_label": "y"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-5\\)",
+    "B": "\\(5\\)",
+    "C": "\\(4\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From the labeled points \\((0, 1)\\) and \\((2, -3)\\): slope \\(= \\frac{-3 - 1}{2 - 0} = -2\\), \\(y\\)-intercept 1, so \\(g(x) = -2x + 1\\).",
+    "\\(g(-3) = -2(-3) + 1 = 7\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(g(3)\\); the input is \\(-3\\), and \\(-2(-3) = 6\\).",
+    "B": "Incorrect. This computes \\(6 - 1\\); the \\(y\\)-intercept 1 is added, giving \\(6 + 1 = 7\\).",
+    "C": "Incorrect. This uses a slope of \\(-1\\); from \\((0, 1)\\) to \\((2, -3)\\) the graph falls 4 units over 2 units, a slope of \\(-2\\).",
+    "D": "Correct. The slope is \\(\\frac{-3 - 1}{2 - 0} = -2\\) and the \\(y\\)-intercept is 1, so \\(g(x) = -2x + 1\\) and \\(g(-3) = 6 + 1 = 7\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "arithmetic",
+    "C": "misread_graph"
+  },
+  "verify": "x = symbols('x')\ng = sympify(figure['curves'][0]['expr'])\nassert all(g.subs(x, q['x']) == q['y'] for q in figure['points'])\nans = g.subs(x, -3)\nassert ans == 7\nassert value(choices[answer]) == ans\nassert all(value(choices[k]) != ans for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

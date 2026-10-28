@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0638",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(c(2x - 1) + 4 = 6x + 3c\\), \\(c\\) is a constant. For which value of \\(c\\) does the equation have no solution?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(-3\\)",
+    "C": "\\(1\\)",
+    "D": "There is no such value of \\(c\\)."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Distribute: \\(2cx - c + 4 = 6x + 3c\\).",
+    "For no solution, the \\(x\\)-coefficients must match, \\(2c = 6\\), so \\(c = 3\\), and the constants must differ.",
+    "With \\(c = 3\\): left constant \\(-3 + 4 = 1\\), right constant \\(9\\). They differ, so there is no solution."
+  ],
+  "explanation": {
+    "A": "Correct. When \\(c = 3\\), the equation becomes \\(6x + 1 = 6x + 9\\), which is never true.",
+    "B": "Incorrect. This is the result of a sign slip in \\(2c = 6\\). With \\(c = -3\\), the \\(x\\)-coefficients are \\(-6\\) and \\(6\\), so there is exactly one solution.",
+    "C": "Incorrect. This is the value that makes the constants equal, \\(-c + 4 = 3c\\). With \\(c = 1\\) the \\(x\\)-coefficients differ, so there is exactly one solution.",
+    "D": "Incorrect. \\(c = 3\\) makes the \\(x\\)-terms cancel while the constants differ, so there is such a value."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "x, c = symbols('x c')\nd = expand(c*(2*x - 1) + 4 - (6*x + 3*c))\ns = solve(d.coeff(x, 1), c)[0]\nassert s == 3 and d.coeff(x, 0).subs(c, s) != 0\nassert value(choices[answer]) == 3\nassert all(k == 'D' or value(choices[k]) != 3 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

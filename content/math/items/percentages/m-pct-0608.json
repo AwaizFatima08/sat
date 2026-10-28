@@ -1,0 +1,45 @@
+{
+  "id": "m-pct-0608",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(x\\) is \\(12.5\\%\\) of \\(y\\), where \\(y > 0\\), then \\(y\\) is what percent of \\(x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "800"
+  ],
+  "solution": [
+    "\\(x = 0.125y\\), so \\(y = \\frac{x}{0.125} = 8x\\).",
+    "\\(8x\\) is \\(800\\%\\) of \\(x\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "y = symbols('y', positive=True)\nx = Rational('0.125')*y\nans = simplify(y/x) * 100\nassert ans == 800\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "800",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

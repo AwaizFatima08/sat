@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0671",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When the box came down from the top of the wardrobe, it held less than Nadia had hoped: a packet of letters tied with ribbon, a single photograph of her grandmother as a young woman, and a brass key that fit no lock in the house. Her mother said the key had been there as long as she could remember. Nadia read the letters twice through. Neither the letters nor the photograph ______ any help with the key, and in the end she hung it on a string around her neck, less because she thought it would open anything than because nobody could explain it.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "were",
+    "B": "was",
+    "C": "have been",
+    "D": "are"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "When two subjects are joined by \"neither … nor,\" the verb agrees with the subject closer to it. Here the closer subject is the singular \"photograph,\" and the story is told in the past tense, so the verb must be \"was.\"",
+    "A": "Incorrect. \"Were\" is plural and seems to agree with \"letters,\" but with \"neither … nor\" the verb agrees with the nearer subject, the singular \"photograph.\"",
+    "B": "Correct. \"Was\" is singular, agreeing with the nearer subject \"photograph,\" and past tense, matching the rest of the story.",
+    "C": "Incorrect. \"Have been\" is plural and present perfect; the nearer subject \"photograph\" is singular and the story is in the past tense.",
+    "D": "Incorrect. \"Are\" is plural and present tense; the nearer subject is singular and the story is in the past tense."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

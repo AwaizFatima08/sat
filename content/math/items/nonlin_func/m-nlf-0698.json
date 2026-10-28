@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0698",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = a(x - h)^{2} + k\\), where \\(a\\), \\(h\\), and \\(k\\) are constants with \\(a > 0\\) and \\(k > 0\\). Which of the following must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(f(x) > k\\) for every value of \\(x\\)",
+    "B": "\\(f(x) > 0\\) for every value of \\(x\\)",
+    "C": "The graph of \\(y = f(x)\\) has exactly two \\(x\\)-intercepts",
+    "D": "\\(f(0) = k\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Since \\((x - h)^{2} \\ge 0\\) and \\(a > 0\\), the term \\(a(x - h)^{2}\\) is at least 0, so \\(f(x) \\ge k\\) for every \\(x\\), with \\(f(h) = k\\).",
+    "Because \\(k > 0\\), it follows that \\(f(x) \\ge k > 0\\) for every value of \\(x\\).",
+    "Graphically: the parabola opens upward and its lowest point \\((h, k)\\) is above the \\(x\\)-axis, so the graph never touches the \\(x\\)-axis."
+  ],
+  "explanation": {
+    "A": "Incorrect. At \\(x = h\\), \\(f(h) = a(0)^{2} + k = k\\), so \\(f(x)\\) equals \\(k\\) there rather than exceeding it.",
+    "B": "Correct. \\(a(x - h)^{2} \\ge 0\\), so \\(f(x) \\ge k\\), and \\(k > 0\\). Every output is positive.",
+    "C": "Incorrect. The graph opens upward with its vertex \\((h, k)\\) above the \\(x\\)-axis, so it never reaches the \\(x\\)-axis and has no \\(x\\)-intercepts.",
+    "D": "Incorrect. \\(f(0) = ah^{2} + k\\), which equals \\(k\\) only if \\(h = 0\\). It is \\(f(h)\\), not \\(f(0)\\), that equals \\(k\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x', real=True)\na, k = symbols('a k', positive=True)\nh = symbols('h', real=True)\nf = a*(x - h)**2 + k\nassert f.is_positive and f.subs(x, h) == k\nassert len(solve(2*(x - 1)**2 + 3, x)) == 0\nassert choices[answer] == r'\\(f(x) > 0\\) for every value of \\(x\\)'\nassert len(set(choices.values())) == 4",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

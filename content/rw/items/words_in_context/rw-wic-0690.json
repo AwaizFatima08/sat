@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0690",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "My grandfather's model railway filled the attic, and visitors assumed it was a toy he had never outgrown. He did not correct them, but over several summers I learned that the railway was in fact ______ work: the gradients were calculated so that a loaded train would just make the climb, the bridges were built to scale from his own drawings, and when something failed he did not simply replace it but kept a notebook of why it had failed. The trains were the least of it. What he had built was a place where every problem was small enough to be solved completely.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "tedious",
+    "B": "playful",
+    "C": "exacting",
+    "D": "unfinished"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "\"In fact\" contrasts the truth with the visitors' assumption that the railway was \"a toy.\" The colon lists calculated gradients, scale drawings, and a notebook of failures, all signs of demanding, careful work. \"Exacting\" fits.",
+    "A": "Incorrect. The details show precision, not dullness; the narrator presents the work as absorbing, a place where problems \"could be solved completely.\"",
+    "B": "Incorrect. \"Playful\" belongs with the visitors' idea of \"a toy,\" which \"in fact\" signals the narrator is correcting.",
+    "C": "Correct. Calculated gradients, scale bridges, and a notebook of failures show work that demands precision and care, the opposite of a toy.",
+    "D": "Incorrect. Nothing in the text says the railway was incomplete; it describes how carefully it was built and maintained."
+  },
+  "traps": {
+    "A": "wrong_tone",
+    "B": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

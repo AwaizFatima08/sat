@@ -1,0 +1,58 @@
+{
+  "id": "m-rat-0614",
+  "section": "math",
+  "domain": "psda",
+  "type": "ratios_rates",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rooftop water tank in Karachi holds 9,000 liters and is full at 6:00 a.m. From then on, the building draws water from the tank at a constant rate of 1,200 liters per hour, while a pump adds water to the tank at a constant rate of 400 liters per hour. At what time will the tank become empty?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "5:15 p.m.",
+    "B": "5:25 p.m.",
+    "C": "11:38 a.m.",
+    "D": "1:30 p.m."
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The tank loses \\(1{,}200 - 400 = 800\\) liters per hour.",
+    "Time to empty: \\(\\frac{9{,}000}{800} = 11.25\\) hours \\(= 11\\) hours \\(15\\) minutes.",
+    "\\(11\\) hours \\(15\\) minutes after 6:00 a.m. is 5:15 p.m."
+  ],
+  "explanation": {
+    "A": "Correct. The net loss is 800 liters per hour, so the tank lasts \\(11.25\\) hours, until 5:15 p.m.",
+    "B": "Incorrect. This reads \\(11.25\\) hours as 11 hours 25 minutes. The \\(0.25\\) hour is a quarter of an hour, 15 minutes.",
+    "C": "Incorrect. This adds the pump's flow to the building's use, \\(\\frac{9{,}000}{1{,}600} \\approx 5.6\\) hours. The pump works against the drain, so the two rates must be subtracted.",
+    "D": "Incorrect. This ignores the pump: \\(\\frac{9{,}000}{1{,}200} = 7.5\\) hours after 6:00 a.m. The pump slows the emptying, so the net rate is only 800 liters per hour."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "hours = Rational(9000, 1200 - 400)\nassert hours == Rational(45, 4)\nh, m = 6 + int(hours), int((hours - int(hours)) * 60)\nassert (h, m) == (17, 15)\nassert '5:15' in choices[answer] and 'p.m.' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

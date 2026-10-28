@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0610",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "At a fruit stall in Hyderabad, 3 kilograms of mangoes and 2 kilograms of bananas cost a total of 540 rupees, and 1 kilogram of mangoes and 4 kilograms of bananas cost a total of 480 rupees. What is the price, in rupees, of 1 kilogram of mangoes?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(90\\)",
+    "B": "\\(60\\)",
+    "C": "\\(180\\)",
+    "D": "\\(120\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(m\\) and \\(b\\) be the prices per kilogram of mangoes and bananas: \\(3m + 2b = 540\\) and \\(m + 4b = 480\\).",
+    "From the second equation, \\(m = 480 - 4b\\). Substitute: \\(3(480 - 4b) + 2b = 540\\), so \\(1{,}440 - 10b = 540\\) and \\(b = 90\\).",
+    "Then \\(m = 480 - 4(90) = 120\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the price of 1 kilogram of bananas, not mangoes.",
+    "B": "Incorrect. This is \\(540 - 480\\); the difference of the totals is not a price, because the two purchases contain different amounts of fruit.",
+    "C": "Incorrect. This is \\(540 \\div 3\\), which ignores the bananas in the first purchase.",
+    "D": "Correct. With \\(m\\) and \\(b\\) the prices per kilogram, \\(3m + 2b = 540\\) and \\(m + 4b = 480\\) give \\(b = 90\\) and \\(m = 120\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "arithmetic",
+    "C": "concept"
+  },
+  "verify": "m, b = symbols('m b')\nsol = solve([3*m + 2*b - 540, m + 4*b - 480], [m, b])\nassert sol == {m: 120, b: 90}\nassert value(choices[answer]) == 120\nassert all(value(choices[k]) != 120 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

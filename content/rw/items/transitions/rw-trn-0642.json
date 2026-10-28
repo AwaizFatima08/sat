@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0642",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The jigsaw puzzle began as a teaching aid. Around 1766, John Spilsbury, a London engraver and mapmaker, glued maps onto thin boards and cut them apart along the borders of countries, so that children could learn geography by fitting the pieces back together. For most of the next century, puzzles kept this serious purpose, showing maps, royal family trees, and lessons from history. ______ by the late 1800s, makers had begun cutting up pictures chosen simply because they were pleasant to look at, and the puzzle became a pastime for adults as much as a lesson for children.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "However,",
+    "B": "Similarly,",
+    "C": "For instance,",
+    "D": "In other words,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The third sentence says that for a century puzzles kept a \"serious purpose\" as lessons. The last sentence describes a change: pictures chosen for pleasure, and puzzles as a pastime. A transition that signals a contrast with the earlier purpose is needed.",
+    "A": "Correct. \"However\" signals the shift from puzzles as lessons to puzzles as entertainment.",
+    "B": "Incorrect. \"Similarly\" would mean the later puzzles resembled the educational ones, but the text stresses that they were different. This is tempting because both sentences describe what puzzles showed.",
+    "C": "Incorrect. Pictures chosen for pleasure are not an example of the serious, educational purpose; they are a departure from it.",
+    "D": "Incorrect. The last sentence does not restate the sentence before; it describes a later and different state of affairs."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

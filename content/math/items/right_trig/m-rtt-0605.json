@@ -1,0 +1,57 @@
+{
+  "id": "m-rtt-0605",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A vertical cell tower in Dhaka is 42 meters tall. From a point on level ground, the angle of elevation of the top of the tower is \\(35^{\\circ}\\). What is the distance, in meters, from the point to the base of the tower, rounded to the nearest tenth?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(24.1\\)",
+    "B": "\\(29.4\\)",
+    "C": "\\(60.0\\)",
+    "D": "\\(73.2\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The tower (opposite the \\(35^{\\circ}\\) angle) and the ground distance \\(d\\) (adjacent) form a right triangle, so \\(\\tan 35^{\\circ} = \\frac{42}{d}\\).",
+    "\\(d = \\frac{42}{\\tan 35^{\\circ}} \\approx \\frac{42}{0.7002} \\approx 60.0\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(42 \\sin 35^{\\circ}\\); the tower height is not the hypotenuse.",
+    "B": "Incorrect. This is \\(42 \\tan 35^{\\circ}\\). The tangent ratio must be solved for the adjacent side: \\(d = \\frac{42}{\\tan 35^{\\circ}}\\).",
+    "C": "Correct. \\(d = \\frac{42}{\\tan 35^{\\circ}} \\approx 60.0\\).",
+    "D": "Incorrect. This is \\(\\frac{42}{\\sin 35^{\\circ}}\\), the distance from the point to the top of the tower, not to the base."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "reciprocal",
+    "D": "wrong_quantity"
+  },
+  "verify": "ans=N(42/tan(35*pi/180))\nassert abs(ans-59.98)<0.01\nassert abs(value(choices[answer])-ans)<0.05\nassert all(abs(value(choices[k])-ans)>0.5 for k in choices if k!=answer)\nassert abs(value(choices['D'])-42/sin(35*pi/180))<0.05 and abs(value(choices['B'])-42*tan(35*pi/180))<0.05\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

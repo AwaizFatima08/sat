@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0626",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A crane at a shipping port raises a container at a constant rate. The container is 11 meters above the dock 3 seconds after the lift begins and 26 meters above the dock 8 seconds after the lift begins. Which function gives the height \\(h(t)\\), in meters, of the container above the dock \\(t\\) seconds after the lift begins?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(h(t) = 3t + 11\\)",
+    "B": "\\(h(t) = 3t - 2\\)",
+    "C": "\\(h(t) = 3t + 2\\)",
+    "D": "\\(h(t) = 5t - 4\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Rate: \\(\\frac{26 - 11}{8 - 3} = \\frac{15}{5} = 3\\) meters per second.",
+    "\\(h(t) = 3t + b\\) with \\(11 = 3(3) + b\\), so \\(b = 2\\) and \\(h(t) = 3t + 2\\).",
+    "Check: \\(h(8) = 24 + 2 = 26\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses 11 as the starting height, but 11 meters is the height after 3 seconds, not at \\(t = 0\\).",
+    "B": "Incorrect. \\(11 = 3(3) + b\\) gives \\(b = 11 - 9 = 2\\), not \\(-2\\).",
+    "C": "Correct. The rate is \\(\\frac{26 - 11}{8 - 3} = 3\\) meters per second, and \\(11 = 3(3) + b\\) gives \\(b = 2\\).",
+    "D": "Incorrect. This uses the change in time, 5 seconds, as the rate; the rate is \\(\\frac{15}{5} = 3\\) meters per second."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "concept"
+  },
+  "verify": "t = symbols('t')\nrhs = lambda s: value(s.split('=')[1])\npts = [(3, 11), (8, 26)]\nok = [k for k in choices if all(rhs(choices[k]).subs(t, a) == b for a, b in pts)]\nassert ok == [answer]\nassert simplify(rhs(choices[answer]) - (3*t + 2)) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

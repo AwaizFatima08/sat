@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0628",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Foxfire is a faint greenish light given off by certain fungi that grow in rotting wood. The glow comes from a chemical reaction inside the fungus, and people have noticed it for a very long time: Aristotle wrote of glowing wood more than two thousand years ago. Why a fungus would spend energy on light is less clear. A night-flying insect drawn to the glow may land on the ______ then carry its spores away to fresh logs when it leaves, though some researchers suspect that the light is nothing more than a byproduct of the fungus's chemistry.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "fungus and",
+    "B": "fungus; and",
+    "C": "fungus. And",
+    "D": "fungus, and"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The subject \"A night-flying insect\" has two verbs: it \"may land on the fungus\" and \"then carry its spores away.\" When \"and\" joins two verbs that share one subject, no comma is placed before it, because the words after \"and\" do not form an independent clause.",
+    "A": "Correct. \"And\" joins the two verbs \"may land\" and \"carry,\" which share the subject \"A night-flying insect,\" so no punctuation is needed.",
+    "B": "Incorrect. A semicolon must have an independent clause on each side; \"and then carry its spores away\" is not one.",
+    "C": "Incorrect. \"And then carry its spores away to fresh logs\" has no subject and can't stand as a sentence; this creates a fragment.",
+    "D": "Incorrect. A comma before \"and\" is used when \"and\" joins two independent clauses; \"then carry its spores away\" has no subject of its own, so the comma wrongly splits the two verbs."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "punctuation",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

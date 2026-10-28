@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0612",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "My grandmother kept an album of pressed flowers that she had started as a girl. Each one lay flat between sheets of tissue paper, and over sixty years the bright petals had faded to shades of brown and gray, so that a rose and a poppy now looked almost the same. ______ when I turned the pages with her, she could name every flower and tell me the field, the garden, or the roadside where she had picked it.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Nevertheless,",
+    "B": "For example,",
+    "C": "As a result,",
+    "D": "Likewise,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The second sentence says the flowers have faded so much that different kinds \"looked almost the same.\" The last sentence says the grandmother could still identify every one. A transition that signals something true in spite of the previous point is needed.",
+    "A": "Correct. \"Nevertheless\" shows that the grandmother could name every flower even though the faded petals all looked alike.",
+    "B": "Incorrect. Naming each flower is not an example of the flowers fading; it goes against what the fading would lead you to expect.",
+    "C": "Incorrect. \"As a result\" would mean the fading caused her to know each flower, but her knowledge exists despite the fading.",
+    "D": "Incorrect. \"Likewise\" signals a similar idea, but being able to name the flowers is unlike their having become hard to tell apart."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0601",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[y = 3x + 2\\] \\[2x + y = 17\\] What is the solution \\((x, y)\\) to the system of equations above?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((11, 3)\\)",
+    "B": "\\((3, 9)\\)",
+    "C": "\\((1, 5)\\)",
+    "D": "\\((3, 11)\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(3x + 2\\) for \\(y\\) in the second equation: \\(2x + 3x + 2 = 17\\).",
+    "So \\(5x = 15\\) and \\(x = 3\\).",
+    "Then \\(y = 3(3) + 2 = 11\\). The solution is \\((3, 11)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This reverses the coordinates: \\(x = 3\\) and \\(y = 11\\), not the other way around.",
+    "B": "Incorrect. This computes \\(y = 3(3)\\) but forgets to add 2; the first equation gives \\(y = 3(3) + 2 = 11\\).",
+    "C": "Incorrect. This point satisfies \\(y = 3x + 2\\) but not \\(2x + y = 17\\), since \\(2(1) + 5 = 7\\).",
+    "D": "Correct. Substituting \\(y = 3x + 2\\) into the second equation gives \\(x = 3\\), and then \\(y = 11\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "stopped_early",
+    "C": "concept"
+  },
+  "verify": "pt = lambda s: [value(t) for t in s.strip('\\\\()').split(',')]\nx, y = symbols('x y')\nsol = solve([y - (3*x + 2), 2*x + y - 17], [x, y])\nassert sol == {x: 3, y: 11}\nassert pt(choices[answer]) == [3, 11]\nassert all(pt(choices[k]) != [3, 11] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

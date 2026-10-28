@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0635",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When threatened, many squids release a cloud of dark ink and jet away. Some species, however, release something more specific: a compact blob of ink, held together by mucus, that is roughly the size and shape of the squid itself. Marine biologist Daniel Okoro argues that this blob, called a pseudomorph, works as a decoy. On his account, a predator mistakes the blob for the squid and attacks it, buying the real squid a few seconds to escape; the ink's value in these cases lies in being mistaken for the animal, not in screening the animal from view the way a diffuse cloud would.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Okoro's argument?",
+  "choices": {
+    "A": "Squids released larger pseudomorphs when the approaching predator was larger and faster.",
+    "B": "In tank trials, fish that met a pseudomorph struck at the blob itself while the squid that released it escaped untouched.",
+    "C": "Fish that swam into a diffuse ink cloud usually lost track of the squid that had released it.",
+    "D": "In tank trials, fish ignored the pseudomorph entirely and pursued the fleeing squid instead."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Okoro's claim is that the pseudomorph works by being mistaken for the squid and attacked in its place. The most direct support is a predator actually treating the blob as the squid. Fish striking at the blob while the squid escapes is that behavior observed.",
+    "A": "Incorrect. Blob size changing with predator size does not show that predators mistake the blob for the squid.",
+    "B": "Correct. Predators attacking the blob while the squid gets away is the decoy effect Okoro describes.",
+    "C": "Incorrect. This shows how a diffuse cloud works by screening the squid, which is the mechanism Okoro says the pseudomorph does not rely on.",
+    "D": "Incorrect. Predators ignoring the blob is the opposite of a decoy working, so this would weaken Okoro's argument."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

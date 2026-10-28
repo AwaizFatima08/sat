@@ -1,0 +1,46 @@
+{
+  "id": "m-ineq-0608",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The sum of three consecutive integers is less than 40. What is the greatest possible value of the largest of the three integers?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "14"
+  ],
+  "solution": [
+    "Let the integers be \\(n\\), \\(n + 1\\) and \\(n + 2\\). Their sum is \\(3n + 3\\).",
+    "\\(3n + 3 < 40\\) gives \\(3n < 37\\), so \\(n < 12.33\\); the greatest integer \\(n\\) is 12.",
+    "The largest of the three integers is \\(n + 2 = 14\\). Check: \\(12 + 13 + 14 = 39 < 40\\), while \\(13 + 14 + 15 = 42\\) is too big."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "best = max(n for n in range(-100, 100) if 3*n + 3 < 40)\nassert best == 12 and best + 2 == 14\nassert [Rational(a) for a in spr_answers] == [14]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "14",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

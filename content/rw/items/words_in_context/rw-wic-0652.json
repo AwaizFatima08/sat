@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0652",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Coir, the stiff fiber that surrounds a coconut's hard shell, has been twisted into rope along the coast of Kerala, in southern India, for centuries. Preparing it is slow. Husks are soaked in shallow lagoons for months until the soft tissue around the fibers rots away, then beaten and combed by hand before the fiber can be spun. The effort was worth it to sailors because coir rope, unlike rope made from most plant fibers, does not ______ in seawater; a line that would quickly rot on a ship fitted with hemp could last for years when made of coir.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "stiffen",
+    "B": "soften",
+    "C": "deteriorate",
+    "D": "stretch"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The clause after the semicolon explains the blank: a hemp line \"would quickly rot\" at sea, while a coir line \"could last for years.\" So coir does not break down in seawater, which is what \"deteriorate\" means.",
+    "A": "Incorrect. Becoming stiff is not the problem the text describes; the problem with other fibers is that they rot.",
+    "B": "Incorrect. The comparison is about rotting and lasting, not about how soft the rope becomes.",
+    "C": "Correct. Hemp rots quickly in seawater and coir lasts for years, so coir does not deteriorate.",
+    "D": "Incorrect. Nothing in the text concerns the rope's length or stretch."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_tone",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

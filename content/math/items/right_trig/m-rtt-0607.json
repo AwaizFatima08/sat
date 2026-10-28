@@ -1,0 +1,58 @@
+{
+  "id": "m-rtt-0607",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rectangular field is 120 meters long and 50 meters wide. A farmer walks from one corner of the field to the opposite corner. Instead of walking along two sides of the field, she walks straight across the field along the diagonal. How many meters shorter is the straight walk?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(40\\)",
+    "B": "\\(70\\)",
+    "C": "\\(130\\)",
+    "D": "\\(170\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Along two sides: \\(120 + 50 = 170\\) meters.",
+    "Along the diagonal: \\(\\sqrt{120^{2} + 50^{2}} = \\sqrt{16{,}900} = 130\\) meters.",
+    "The straight walk is \\(170 - 130 = 40\\) meters shorter."
+  ],
+  "explanation": {
+    "A": "Correct. The diagonal is 130 meters and the two sides total 170 meters, a difference of 40 meters.",
+    "B": "Incorrect. This is \\(120 - 50\\), the difference between the two sides, which is not what was asked.",
+    "C": "Incorrect. This is the length of the diagonal itself, not how much shorter it is than the two-side route.",
+    "D": "Incorrect. This is the length of the two-side route; the diagonal still has to be subtracted."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "diag=sqrt(120**2+50**2)\nassert diag==130\nans=120+50-diag\nassert ans==40\nassert value(choices[answer])==ans\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

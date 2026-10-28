@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0651",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In her first month at Madame Verlaine's dressmaking establishment, Odile was permitted to do nothing but sew hems in the back room, where the only sounds were the scissors and the clock. She had expected, after all her training, to be trusted with at least a sleeve. ______ she took a certain pride in the work, for every hem that came back from Madame's inspection without a single pulled thread was, she decided, a quiet argument for her promotion, and she sewed each one as though a customer's eye were already upon it.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Rather,",
+    "B": "Consequently,",
+    "C": "Even so,",
+    "D": "Likewise,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The second sentence expresses Odile's disappointment: she expected more than hems. The last sentence says she took pride in the hems anyway, treating them as a case for promotion. The transition must signal that her pride existed despite her disappointment.",
+    "A": "Incorrect. \"Rather\" corrects a statement that has just been denied, but nothing in the sentence before is denied; Odile really did expect more. Her pride is not a correction of that expectation but a response that coexists with it. This is the most tempting trap.",
+    "B": "Incorrect. Her disappointed expectation did not cause her pride; the pride arose in spite of it.",
+    "C": "Correct. \"Even so\" shows that Odile took pride in the hems despite having hoped for more important work.",
+    "D": "Incorrect. Taking pride in the hems is not similar to expecting to sew a sleeve; the two attitudes pull in opposite directions."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0632",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "For more than a century, a music publisher in Vienna, Austria, has sold printed sheet music for piano, much of it to students and amateur players. When the firm began selling digital downloads of the same scores in 2018, some employees feared that downloads would simply replace printed sales, leaving total sales unchanged. Business historian Lukas Pichler, who examined the firm's records, argues otherwise: in his view, the downloads reached customers whom the printed scores had never reached, so that total sales grew substantially while printed sales held nearly steady.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Piano Scores Sold by a Viennese Music Publisher",
+    "columns": [
+      "Year",
+      "Printed scores sold (thousands)",
+      "Downloads sold (thousands)"
+    ],
+    "rows": [
+      [
+        "2017",
+        62,
+        0
+      ],
+      [
+        "2019",
+        60,
+        21
+      ],
+      [
+        "2021",
+        58,
+        44
+      ],
+      [
+        "2023",
+        59,
+        57
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Pichler's argument?",
+  "choices": {
+    "A": "In 2023, downloads outsold printed scores for the first time.",
+    "B": "Between 2017 and 2023, downloads grew from zero to 57 thousand while printed sales changed by only 3 thousand, so total sales nearly doubled.",
+    "C": "Downloads sold rose in every period shown, reaching 57 thousand in 2023.",
+    "D": "Most customers who bought downloads had never bought a printed score from the firm."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Pichler's argument is that downloads added sales rather than replacing printed ones. Supporting it requires both columns: printed sales must stay roughly level while downloads grow. Printed sales went from 62 to 59 thousand, downloads from 0 to 57 thousand, so total sales rose from 62 to 116 thousand.",
+    "A": "Incorrect. In 2023 downloads (57 thousand) were still slightly below printed scores (59 thousand), so this misreads the table.",
+    "B": "Correct. Nearly steady printed sales alongside strong download growth is exactly the pattern that shows downloads added to total sales rather than replacing printed ones.",
+    "C": "Incorrect. This is true, but growth in downloads alone is consistent with the employees' fear; only the printed column shows that downloads did not replace printed sales.",
+    "D": "Incorrect. This is Pichler's explanation, but the table reports only numbers sold, not who the buyers were."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "true_irrelevant",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

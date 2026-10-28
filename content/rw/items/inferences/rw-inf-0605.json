@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0605",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When a traditional Dutch windmill is not working, the miller can stop its four sails in any position. Over the centuries, millers in the Netherlands developed a code based on where the sails came to rest: an upright cross meant a short break, a diagonal cross a longer stop, sails stopped just before the top a celebration, and sails stopped just past the top mourning. Since a mill's sails can be seen from far across the flat countryside, this code allowed ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the sails to turn in strong winds without being damaged.",
+    "B": "people at a distance to learn the mill's news without visiting it.",
+    "C": "each miller to keep the events of the household private.",
+    "D": "millers to grind grain more quickly during busy seasons."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The code is read from the resting position of sails that can be seen from far away. A signal that is visible across the countryside is useful because people do not need to come to the mill to learn what it says.",
+    "A": "Incorrect. The text concerns stopped sails and messages, not protecting the sails from wind.",
+    "B": "Correct. Visible sails plus an agreed code let distant people read the mill's messages.",
+    "C": "Incorrect. This reverses the purpose: the code announces events such as celebrations and mourning rather than hiding them.",
+    "D": "Incorrect. The code applies when the mill is stopped; it has nothing to do with the speed of grinding."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

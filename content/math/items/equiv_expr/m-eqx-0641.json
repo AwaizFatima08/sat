@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0641",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(a \\neq 0\\) and \\(b \\neq 0\\), which of the following is equivalent to \\(\\frac{a}{b} - \\frac{b}{a}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{a^{2} - b^{2}}{ab}\\)",
+    "B": "\\(\\frac{a^{2} + b^{2}}{ab}\\)",
+    "C": "\\(\\frac{a - b}{a + b}\\)",
+    "D": "\\(\\frac{a - b}{ab}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Use the common denominator \\(ab\\): \\(\\frac{a \\cdot a}{ab} - \\frac{b \\cdot b}{ab}\\).",
+    "Subtract the numerators: \\(\\frac{a^{2} - b^{2}}{ab}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(\\frac{a^{2}}{ab} - \\frac{b^{2}}{ab} = \\frac{a^{2} - b^{2}}{ab}\\).",
+    "B": "Incorrect. This is \\(\\frac{a}{b} + \\frac{b}{a}\\); the sign between the fractions is a minus.",
+    "C": "Incorrect. This is the result of canceling \\((a + b)\\) from \\(\\frac{(a - b)(a + b)}{ab}\\), but \\(ab\\) is not \\((a + b)\\).",
+    "D": "Incorrect. This is the result of subtracting the original numerators without first rewriting each fraction over \\(ab\\)."
+  },
+  "traps": {
+    "D": "concept",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "a, b = symbols('a b')\nt = a/b - b/a\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

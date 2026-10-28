@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0606",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rectangular banner has a length of \\((3x + 2)\\) feet and a width of \\(x\\) feet. Which expression represents the perimeter, in feet, of the banner?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(8x + 4\\)",
+    "B": "\\(4x + 2\\)",
+    "C": "\\(3x^{2} + 2x\\)",
+    "D": "\\(8x + 2\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Perimeter is twice the length plus twice the width: \\(2(3x + 2) + 2x\\).",
+    "Distribute and combine: \\(6x + 4 + 2x = 8x + 4\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(2(3x + 2) + 2(x) = 8x + 4\\).",
+    "B": "Incorrect. This is the length plus the width, \\((3x + 2) + x\\), counted only once each.",
+    "C": "Incorrect. This is the area, \\(x(3x + 2)\\), not the perimeter.",
+    "D": "Incorrect. This is the result of doubling \\(3x\\) and \\(x\\) but not doubling the 2."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_formula",
+    "D": "arithmetic"
+  },
+  "verify": "x = symbols('x')\nt = 2*(3*x + 2) + 2*x\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

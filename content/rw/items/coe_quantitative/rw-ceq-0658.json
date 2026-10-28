@@ -1,0 +1,91 @@
+{
+  "id": "rw-ceq-0658",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Repair cafés, where volunteers help visitors mend broken household items free of charge, are often praised for keeping goods out of landfills. Skeptics counter that the items brought in are mostly cheap and simple, so the cafés fix little that would not otherwise be replaced for a few dollars, while the complex electronics that make up much of discarded household waste are rarely repaired successfully. Sociologist Hanna Berglund, who recorded every item brought to a repair café in Gothenburg, Sweden, over two years, argues that the skeptics underestimate the cafés' reach: electrical appliances and electronics, she reports, were the most common category brought in, and most of them left working.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Items Brought to a Gothenburg Repair Café over Two Years",
+    "columns": [
+      "Item category",
+      "Items brought in",
+      "Repaired successfully",
+      "Average cost to replace (kronor)"
+    ],
+    "rows": [
+      [
+        "Electrical appliances and electronics",
+        412,
+        268,
+        1150
+      ],
+      [
+        "Clothing and textiles",
+        236,
+        214,
+        350
+      ],
+      [
+        "Furniture and wooden items",
+        118,
+        91,
+        1800
+      ],
+      [
+        "Bicycles",
+        97,
+        84,
+        2900
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Berglund's argument?",
+  "choices": {
+    "A": "Electrical appliances and electronics were brought in more often than any other category, with 412 items.",
+    "B": "Electrical appliances and electronics were the largest category, 412 of 863 items, and 268 of them, about 65 percent, were repaired successfully.",
+    "C": "Fewer than half of the electrical appliances and electronics brought in were repaired successfully.",
+    "D": "Clothing and textiles had the highest repair success rate of any category, at about 91 percent."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Berglund's reply to the skeptics has two parts: electronics were the most common category, and most of them were fixed. The evidence must give both the count (412 of 863 items) and the success rate for that category (268 of 412, about 65 percent).",
+    "A": "Incorrect. This is true, but it supports only the first half of the argument; the skeptics could grant it and still say electronics are rarely fixed.",
+    "B": "Correct. It shows electronics as the largest category and shows that most of them were repaired successfully, answering both halves of the skeptics' claim.",
+    "C": "Incorrect. 268 of 412 electrical items were repaired, which is about 65 percent, well over half.",
+    "D": "Incorrect. This is true (214 of 236), but the dispute is about electronics, not clothing; this choice says nothing about the category the skeptics doubt."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0601",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The frilled lizard of northern Australia and New Guinea has a wide flap of skin around its neck that usually lies folded flat. When a predator comes close, the lizard opens its mouth, hisses, and spreads the frill so that its head suddenly looks several times larger. The frill is made only of thin skin supported by slender rods of cartilage, and it cannot bite, cut, or sting. If the display fails, the lizard turns and runs for the nearest tree. This suggests that the frill protects the lizard by ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "startling predators rather than by causing them any physical harm.",
+    "B": "injuring any predator that tries to attack the lizard's neck.",
+    "C": "making the lizard appear smaller and harder for predators to notice.",
+    "D": "helping the lizard climb trees faster than its predators can."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The text says the frill cannot bite, cut, or sting, so it cannot hurt a predator. What it does is make the lizard's head look suddenly much larger. The frill must therefore work by frightening predators, not by harming them.",
+    "A": "Correct. A sudden, harmless increase in apparent size can only protect the lizard by scaring the predator off.",
+    "B": "Incorrect. The text states that the frill is thin skin that cannot bite, cut, or sting, so it cannot injure anything.",
+    "C": "Incorrect. This reverses the text, which says the frill makes the head look several times larger, not smaller.",
+    "D": "Incorrect. The lizard runs to a tree only after the display fails; the text does not connect the frill to climbing."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0641",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In the hot, dry spring of interior Sindh, in Pakistan, chili growers raise seedlings in open nursery beds before transplanting them to the fields, and many seedlings wither under the midday sun. Horticulturist Saba Khaskheli compared open beds with beds covered by shade nets that block 30 percent or 50 percent of sunlight, recording how many seedlings survived to transplanting and how thick their stems grew, since thin-stemmed seedlings often fail after transplanting. She concludes that moderate shade is best: the 30 percent net raised survival at almost no cost to stem thickness, she argues, whereas the denser net saved about as many seedlings but left them noticeably thinner and weaker.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Chili Seedlings Raised under Different Levels of Shade",
+    "columns": [
+      "Nursery bed",
+      "Seedlings surviving to transplanting (%)",
+      "Average stem thickness (mm)"
+    ],
+    "rows": [
+      [
+        "Open bed",
+        61,
+        3.1
+      ],
+      [
+        "30 percent shade net",
+        84,
+        3.0
+      ],
+      [
+        "50 percent shade net",
+        86,
+        2.2
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Khaskheli's conclusion?",
+  "choices": {
+    "A": "Stem thickness was greatest under the 30 percent net.",
+    "B": "The 30 percent net raised survival from 61 to 84 percent while stem thickness barely changed, but under the 50 percent net stems were nearly a millimeter thinner.",
+    "C": "Both shade nets raised survival well above the 61 percent recorded in the open bed.",
+    "D": "Seedlings under the 50 percent net survived at the highest rate of the three beds."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Khaskheli's conclusion weighs two measures against each other: survival and stem thickness. The 30 percent net raised survival from 61 to 84 percent while thickness fell only from 3.1 to 3.0 mm; the 50 percent net raised survival only slightly further, to 86 percent, but thickness dropped to 2.2 mm. Only a choice using both columns for both nets can support this trade-off.",
+    "A": "Incorrect. Stems were thickest in the open bed (3.1 mm), slightly above the 30 percent net (3.0 mm).",
+    "B": "Correct. It shows the gain in survival with little loss of thickness under moderate shade and the sharp loss of thickness under dense shade.",
+    "C": "Incorrect. This is true, but it covers only survival; without stem thickness it cannot show why the 30 percent net is preferable.",
+    "D": "Incorrect. This is true (86 percent), but survival alone makes the denser net look best, which is the opposite of what Khaskheli concludes."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "too_narrow",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

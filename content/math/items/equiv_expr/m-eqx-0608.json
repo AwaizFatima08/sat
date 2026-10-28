@@ -1,0 +1,45 @@
+{
+  "id": "m-eqx-0608",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Lena buys 2 boxes that each contain \\((x + 3)\\) pens and 4 boxes that each contain \\((x - 1)\\) pens. The total number of pens she buys is \\(ax + b\\), where \\(a\\) and \\(b\\) are constants. What is the value of \\(a + b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "8"
+  ],
+  "solution": [
+    "The total is \\(2(x + 3) + 4(x - 1) = 2x + 6 + 4x - 4\\).",
+    "Combine like terms: \\(6x + 2\\), so \\(a = 6\\), \\(b = 2\\), and \\(a + b = 8\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\np = Poly(expand(2*(x + 3) + 4*(x - 1)), x)\na, b = p.coeff_monomial(x), p.coeff_monomial(1)\nassert (a, b) == (6, 2)\nassert [Rational(v) for v in spr_answers] == [a + b]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "8",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

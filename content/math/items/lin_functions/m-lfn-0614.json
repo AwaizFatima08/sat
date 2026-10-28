@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0614",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The graph of the linear function \\(f\\) in the \\(xy\\)-plane passes through the points \\((-1, 7)\\) and \\((3, -1)\\). Which equation defines \\(f\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(f(x) = -2x + 7\\)",
+    "B": "\\(f(x) = 2x + 5\\)",
+    "C": "\\(f(x) = -2x + 5\\)",
+    "D": "\\(f(x) = -\\frac{1}{2}x + \\frac{13}{2}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Slope: \\(\\frac{-1 - 7}{3 - (-1)} = \\frac{-8}{4} = -2\\).",
+    "Use \\((-1, 7)\\): \\(7 = -2(-1) + b\\), so \\(b = 5\\) and \\(f(x) = -2x + 5\\).",
+    "Check: \\(f(3) = -6 + 5 = -1\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This uses the \\(y\\)-coordinate 7 as the \\(y\\)-intercept, but 7 is the value at \\(x = -1\\), not at \\(x = 0\\).",
+    "B": "Incorrect. The function decreases as \\(x\\) increases, so the slope is negative: \\(\\frac{-8}{4} = -2\\).",
+    "C": "Correct. The slope is \\(\\frac{-1 - 7}{3 - (-1)} = -2\\), and \\(7 = -2(-1) + b\\) gives \\(b = 5\\).",
+    "D": "Incorrect. This inverts the slope ratio; the slope is \\(\\frac{\\Delta y}{\\Delta x} = \\frac{-8}{4}\\), not \\(\\frac{4}{-8}\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "reciprocal"
+  },
+  "verify": "x = symbols('x')\nrhs = lambda s: value(s.split('=')[1])\npts = [(-1, 7), (3, -1)]\nok = [k for k in choices if all(rhs(choices[k]).subs(x, a) == b for a, b in pts)]\nassert ok == [answer]\nassert simplify(rhs(choices[answer]) - (-2*x + 5)) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

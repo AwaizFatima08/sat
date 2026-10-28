@@ -1,0 +1,56 @@
+{
+  "id": "rw-ctc-0607",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "According to a popular legend, coffee was discovered by an Ethiopian goatherd named Kaldi. He noticed that his goats became lively after eating the red berries of a certain shrub, tried the berries himself, and felt the same energy. The story is repeated in countless cafés and coffee histories as the origin of the drink.",
+  "passage_b": "The Kaldi story first appears in print in 1671, in a book by a European writer, several centuries after coffee drinking was already well established. The earliest reliable records show Sufi communities in Yemen drinking coffee in the 1400s to stay awake during night prayers. The legend is charming, but it tells us more about Europeans' curiosity about the new drink than about where coffee actually came from.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the legend in Text 1?",
+  "choices": {
+    "A": "By noting that the story was written down long after coffee drinking was established",
+    "B": "By arguing that coffee was first drunk in Europe rather than in Africa or Arabia",
+    "C": "By claiming that goats are not affected by eating coffee berries",
+    "D": "By accepting the story as the most reliable account of coffee's discovery"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Text 1 presents the Kaldi legend as the usual story of coffee's origin. Text 2 says the story \"first appears in print in 1671,\" centuries after coffee drinking \"was already well established\" in Yemen, and that it reveals Europeans' curiosity rather than coffee's origins. So the author of Text 2 would respond by pointing to the late date of the story.",
+    "A": "Correct. Text 2 dates the first printed version to 1671, centuries after coffee was already being drunk.",
+    "B": "Incorrect. Text 2 places the earliest coffee drinking in Yemen, not Europe.",
+    "C": "Incorrect. Text 2 says nothing about the effect of coffee berries on goats.",
+    "D": "Incorrect. Text 2 says the \"earliest reliable records\" are from Yemen and treats the legend as a later European tale, so it would not call the story reliable."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "rw-ceq-0654",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Mangrove planting projects along the north coast of Java, Indonesia, often report success by counting seedlings planted, yet many seedlings die within a year, usually because they are set out on mudflats too low and exposed for the species chosen. Restoration ecologist Dewi Rahayu tested two approaches on adjacent sites: dense planting of nursery-raised seedlings of a single fast-growing species, and sparse planting behind low brushwood fences that trap sediment and calm the water, allowing seedlings of several species to establish on their own as well. She argues that the fenced approach is the more productive one, even though it begins with far fewer seedlings in the ground, because after three years it supports more living trees and a wider range of species.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Two Mangrove Restoration Approaches on the North Coast of Java",
+    "columns": [
+      "Approach",
+      "Seedlings planted per hectare",
+      "Living trees per hectare after 3 years",
+      "Tree species present after 3 years"
+    ],
+    "rows": [
+      [
+        "Dense planting, no fences",
+        10000,
+        1400,
+        1
+      ],
+      [
+        "Sparse planting behind brushwood fences",
+        2500,
+        3100,
+        4
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Rahayu's argument?",
+  "choices": {
+    "A": "The dense approach began with four times as many seedlings per hectare as the fenced approach.",
+    "B": "Although the fenced site began with 2,500 seedlings per hectare against 10,000, after three years it held 3,100 living trees of four species, compared with 1,400 trees of one species.",
+    "C": "Only 14 percent of the densely planted seedlings were still alive after three years.",
+    "D": "After three years, the fenced site held more trees per hectare than the dense site but fewer species."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Rahayu's argument contrasts a modest starting point with a better outcome on two counts, trees and species. The evidence must compare the two sites on all three columns: 2,500 planted against 10,000, yet 3,100 living trees against 1,400, and four species against one.",
+    "A": "Incorrect. This is true, but it is the point Rahayu concedes; on its own it suggests the dense approach was the larger effort, not the less productive one.",
+    "B": "Correct. It acknowledges the smaller start and then shows the fenced site ahead in both living trees and species, which is the whole of Rahayu's argument.",
+    "C": "Incorrect. This is true (1,400 of 10,000), but it shows only that dense planting fared badly; it says nothing about how the fenced site did.",
+    "D": "Incorrect. The fenced site had four species against one, so it had more species, not fewer."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "too_narrow",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

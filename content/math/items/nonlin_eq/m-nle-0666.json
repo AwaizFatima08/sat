@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0666",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "An amount of money deposited in a savings scheme in Karachi grows by the same percent each year. The amount was 36,000 rupees one year after the deposit and 51,840 rupees three years after the deposit. How many rupees were deposited?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(25{,}000\\)",
+    "B": "\\(28{,}080\\)",
+    "C": "\\(28{,}800\\)",
+    "D": "\\(30{,}000\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let the yearly growth factor be \\(g\\). From year 1 to year 3 the amount is multiplied by \\(g^{2}\\): \\(36{,}000 g^{2} = 51{,}840\\), so \\(g^{2} = 1.44\\).",
+    "Since \\(g > 0\\), \\(g = 1.2\\) (a 20% yearly increase).",
+    "The deposit \\(P\\) satisfies \\(1.2P = 36{,}000\\), so \\(P = 30{,}000\\) rupees."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of dividing \\(36{,}000\\) by \\(1.44\\), using the two-year growth factor as if it were the one-year factor.",
+    "B": "Incorrect. This is the result of assuming the same number of rupees is added each year: \\((51{,}840 - 36{,}000) \\div 2 = 7{,}920\\), then \\(36{,}000 - 7{,}920\\). The growth is by a constant percent, not a constant amount.",
+    "C": "Incorrect. This is the result of subtracting 20% of \\(36{,}000\\) instead of dividing \\(36{,}000\\) by \\(1.2\\); the 20% applies to the deposit, not to the year-1 amount.",
+    "D": "Correct. \\(g^{2} = \\frac{51{,}840}{36{,}000} = 1.44\\), so \\(g = 1.2\\) and the deposit was \\(\\frac{36{,}000}{1.2} = 30{,}000\\)."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "C": "percent_add"
+  },
+  "verify": "g = symbols('g', positive=True)\ngv = solve(Eq(36000*g**2, 51840), g)\nassert gv == [Rational(6, 5)]\nP = Rational(36000) / gv[0]\nassert P == 30000\nassert value(choices[answer]) == P\nassert all(value(choices[k]) != P for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

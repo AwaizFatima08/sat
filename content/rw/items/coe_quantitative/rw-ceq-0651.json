@@ -1,0 +1,91 @@
+{
+  "id": "rw-ceq-0651",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Each spring, great crested newts leave the woodland where they overwinter and travel to ponds to breed, and where a road lies between the two, many are crushed. A common remedy is a low fence along the road that guides the animals to tunnels passing beneath it. Herpetologist Jonas Albrecht, who monitored a fenced crossing in Bavaria, Germany, for four springs, cautions that the usual measure of success, the number of newts recorded using the tunnels, can mislead. The relevant question, he argues, is what share of the migrating population gets through: at his site, tunnel use grew impressively over the four years, but so did the number of newts found dead on the road, and the fraction of the population completing the crossing through the tunnels hardly improved at all.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Spring Newt Migration at a Fenced Road Crossing in Bavaria",
+    "columns": [
+      "Year",
+      "Newts counted leaving the woodland",
+      "Newts recorded using the tunnels",
+      "Newts found dead on the road"
+    ],
+    "rows": [
+      [
+        "2020",
+        620,
+        180,
+        95
+      ],
+      [
+        "2021",
+        780,
+        240,
+        130
+      ],
+      [
+        "2022",
+        910,
+        280,
+        150
+      ],
+      [
+        "2023",
+        1050,
+        320,
+        175
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Albrecht's argument?",
+  "choices": {
+    "A": "The number of newts recorded using the tunnels rose in every year of the study.",
+    "B": "Newts using the tunnels rose from 180 to 320 between 2020 and 2023, but the population leaving the woodland grew almost as fast, so the share crossing through the tunnels stayed near 30 percent.",
+    "C": "Newts found dead on the road made up a smaller share of the migrating population each year.",
+    "D": "In 2023, more newts used the tunnels than were found dead on the road."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Albrecht's point is that raw tunnel counts rose only because the population rose, so the share getting through did not improve. The evidence must set tunnel use against the migrating population: 180 of 620 in 2020 is 29 percent, 240 of 780 is 31 percent, 280 of 910 is 31 percent, and 320 of 1,050 is 30 percent.",
+    "A": "Incorrect. This is true, but a rising count of tunnel users is the very measure Albrecht says is misleading; on its own it suggests the crossing is improving.",
+    "B": "Correct. Dividing tunnel use by the migrating population shows that the share stayed at about 30 percent despite the growth in raw numbers, which is exactly the contrast Albrecht draws.",
+    "C": "Incorrect. The share found dead was about 15, 17, 16, and 17 percent, which did not shrink each year, so this misreads the table.",
+    "D": "Incorrect. This is true (320 against 175), but a single year's comparison of two columns says nothing about whether the share getting through improved over time."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

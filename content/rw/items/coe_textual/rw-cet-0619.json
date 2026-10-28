@@ -1,0 +1,60 @@
+{
+  "id": "rw-cet-0619",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Robert Frost's 1916 poem \"The Road Not Taken\" is often read as a celebration of bold, independent choices. The speaker, standing where two roads split in a wood, picks one and later says that the choice changed his life. But a closer reading shows that the speaker himself admits, in the middle of the poem, that the two roads were in fact nearly identical.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which quotation from \"The Road Not Taken\" most effectively illustrates the claim?",
+  "choices": {
+    "A": "\"I shall be telling this with a sigh / Somewhere ages and ages hence:\"",
+    "B": "\"I took the one less traveled by, / And that has made all the difference.\"",
+    "C": "\"Two roads diverged in a yellow wood, / And sorry I could not travel both\"",
+    "D": "\"Though as for that the passing there / Had worn them really about the same,\""
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The claim is that the speaker admits the two roads were nearly the same. The quotation must contain that admission. Only the lines saying the roads had been worn \"really about the same\" do so; the famous closing lines insist on a difference, which is the opposite.",
+    "A": "Incorrect. These lines look ahead to the speaker retelling the story; they say nothing about how similar the roads were.",
+    "B": "Incorrect. These lines claim that one road was \"less traveled,\" which is the opposite of admitting that the roads were nearly identical.",
+    "C": "Incorrect. These lines set the scene and express regret, but they do not say that the roads were alike.",
+    "D": "Correct. Here the speaker concedes that the two roads had been worn \"really about the same,\" which is the admission that they were nearly identical."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "public_domain",
+    "author": "Robert Frost",
+    "work": "The Road Not Taken (Mountain Interval)",
+    "year": 1916,
+    "url": "https://www.gutenberg.org/ebooks/29345"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0618",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Bronze is made by mixing copper with a small amount of tin, and in the late Bronze Age both metals were shipped around the eastern Mediterranean in the form of ingots. Archaeologist Nikos Alexandrou catalogued the cargo of a merchant ship that sank off the coast of southern Turkey around 1300 BCE. He argued that the ship was carrying metal in roughly the proportions needed to make bronze, rather than whatever metal its crew happened to obtain, since bronze typically contains about ten parts copper to one part tin.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Cargo Recovered from a Late Bronze Age Shipwreck",
+    "columns": [
+      "Cargo item",
+      "Number of pieces",
+      "Total mass (kg)"
+    ],
+    "rows": [
+      [
+        "Copper ingots",
+        220,
+        5200
+      ],
+      [
+        "Tin ingots",
+        48,
+        520
+      ],
+      [
+        "Glass ingots",
+        60,
+        110
+      ],
+      [
+        "Jars of resin",
+        95,
+        380
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Alexandrou's argument?",
+  "choices": {
+    "A": "The ship carried nearly five times as many copper ingots as tin ingots.",
+    "B": "The ship carried 220 copper ingots, more pieces than of any other item in its cargo.",
+    "C": "The ship carried about 5,200 kilograms of copper and about 520 kilograms of tin, a ratio of roughly ten to one.",
+    "D": "The glass ingots on the ship weighed more in total than the tin ingots did."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Alexandrou's argument rests on the proportion of copper to tin matching the ten-to-one recipe for bronze. Proportions of metal are a matter of mass, so compare the \"Total mass\" figures: 5,200 kilograms of copper to 520 kilograms of tin is exactly ten to one.",
+    "A": "Incorrect. This is accurate, but the ratio of pieces (220 to 48) is about 4.6 to 1, not 10 to 1; the ingots differ in size, so only their mass shows the proportion of metal.",
+    "B": "Incorrect. This is accurate, but counting copper ingots against glass and resin says nothing about the ratio of copper to tin.",
+    "C": "Correct. The masses of copper and tin stand in a ten-to-one ratio, which is the proportion bronze requires, just as Alexandrou claims.",
+    "D": "Incorrect. This misreads the table: the glass ingots weighed 110 kilograms in total and the tin ingots 520 kilograms."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

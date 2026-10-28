@@ -1,0 +1,103 @@
+{
+  "id": "m-lat-0620",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, point \\(D\\) lies on \\(\\overline{BC}\\) so that \\(AD = BD\\). The measure of angle \\(BAC\\) is \\(84^{\\circ}\\), and the measure of angle \\(ABC\\) is \\(38^{\\circ}\\). What is the measure, in degrees, of angle \\(ADC\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        6.72,
+        5.25
+      ],
+      "B": [
+        0.0,
+        0.0
+      ],
+      "C": [
+        10.0,
+        0.0
+      ],
+      "D": [
+        5.411,
+        0.0
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "A",
+        "D"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          6.442,
+          3.674
+        ],
+        "text": "84°"
+      },
+      {
+        "at": [
+          1.607,
+          0.553
+        ],
+        "text": "38°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "76"
+  ],
+  "solution": [
+    "Because \\(AD = BD\\), triangle \\(ABD\\) is isosceles and angle \\(BAD\\) = angle \\(ABD = 38^{\\circ}\\).",
+    "Angle \\(ADC\\) is an exterior angle of triangle \\(ABD\\), so it equals the sum of the two interior angles not next to it: \\(38 + 38 = 76^{\\circ}\\).",
+    "Check: angle \\(DAC = 84 - 38 = 46^{\\circ}\\), angle \\(C = 180 - 84 - 38 = 58^{\\circ}\\), and \\(46 + 58 + 76 = 180\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['B'][1]==P['C'][1]==P['D'][1] and P['B'][0]<P['D'][0]<P['C'][0]\nassert abs(d('A','D')-d('B','D'))<0.01 and abs(ang('B','A','C')-84)<0.1 and abs(ang('A','B','C')-38)<0.1\nans=38+38\nassert abs(ang('A','D','C')-ans)<0.1\nassert Rational(spr_answers[0])==ans==76\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "76",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

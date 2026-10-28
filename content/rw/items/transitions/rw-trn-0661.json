@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0661",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Eighteenth-century chemists explained burning by means of phlogiston, a substance that every combustible material was supposed to release as it burned. The theory had a well-known weakness: metals heated in air gain weight rather than lose it, which is hard to reconcile with the departure of anything. A few defenders of the theory responded by proposing that phlogiston possessed negative weight, so that losing it made a substance heavier. ______ Antoine Lavoisier argued in the 1770s that no such exotic property was required: the heated metal had simply combined with a portion of the surrounding air, the component he would later name oxygen, and the added weight was the weight of that air.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "By contrast,",
+    "B": "In other words,",
+    "C": "Likewise,",
+    "D": "Consequently,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The third sentence describes one response to the theory's weakness: some defenders invented a substance with negative weight. The last sentence presents a different, opposing response from Lavoisier, who rejected the need for any exotic property. The transition must set his explanation against theirs.",
+    "A": "Correct. \"By contrast\" sets Lavoisier's explanation (the metal combined with air) against the defenders' explanation (phlogiston had negative weight).",
+    "B": "Incorrect. Lavoisier's explanation does not restate the negative-weight proposal in different terms; it rejects it.",
+    "C": "Incorrect. \"Likewise\" would make Lavoisier's view parallel to the negative-weight idea, but the text presents the two as opposed.",
+    "D": "Incorrect. Lavoisier's argument was not a result of the defenders' proposal; it was a rival to it."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

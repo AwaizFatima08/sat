@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0661",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The hairy frog of Central Africa owes its name to the hair-like strands of skin that males grow along their flanks during the breeding season, but its most remarkable feature is hidden in its hind feet. When the frog is threatened, the tips of its toe bones break away from the rest of the skeleton and push out through the skin, forming sharp claws. The questions of how the bones return to their original position afterward and whether the skin heals completely ______ unanswered, since no one has yet observed a frog recovering in the wild.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "has remained",
+    "B": "remains",
+    "C": "is",
+    "D": "remain"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Strip away the modifiers and the sentence reads \"The questions … remain unanswered.\" The subject is the plural noun \"questions\"; \"position\" and \"skin\" sit inside the phrases that describe those questions. A plural subject needs the plural verb \"remain.\"",
+    "A": "Incorrect. \"Has remained\" is singular, but the subject \"questions\" is plural.",
+    "B": "Incorrect. \"Remains\" is singular and seems to agree with the nearby \"skin,\" but the subject of the sentence is the plural \"questions.\"",
+    "C": "Incorrect. \"Is\" is singular, but the subject \"questions\" is plural.",
+    "D": "Correct. The plural verb \"remain\" agrees with the plural subject \"questions.\""
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "C": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "m-lfn-0615",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A submarine descends at a constant rate. The table shows the depth \\(D(t)\\), in meters, of the submarine below the surface \\(t\\) minutes after it begins to descend. Which function gives \\(D(t)\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "Depth of submarine",
+    "columns": [
+      "t (minutes)",
+      "D(t) (meters)"
+    ],
+    "rows": [
+      [
+        "2",
+        "36"
+      ],
+      [
+        "5",
+        "90"
+      ],
+      [
+        "8",
+        "144"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(D(t) = 18t + 36\\)",
+    "B": "\\(D(t) = 54t\\)",
+    "C": "\\(D(t) = 36t\\)",
+    "D": "\\(D(t) = 18t\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From \\(t = 2\\) to \\(t = 5\\), the depth rises from 36 to 90 meters: 54 meters in 3 minutes, or 18 meters per minute.",
+    "\\(D(t) = 18t + b\\) with \\(36 = 18(2) + b\\) gives \\(b = 0\\), so \\(D(t) = 18t\\).",
+    "Check: \\(D(8) = 144\\), matching the table."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds the first depth as a starting value, but \\(D(2) = 36\\) already includes 2 minutes of descent; \\(D(0) = 0\\).",
+    "B": "Incorrect. 54 meters is the change over 3 minutes, not over 1 minute; the rate is \\(\\frac{54}{3} = 18\\).",
+    "C": "Incorrect. This reads the first row as a rate; 36 meters is the depth after 2 minutes, so the rate is 18 meters per minute.",
+    "D": "Correct. The depth increases by 54 meters every 3 minutes, which is 18 meters per minute, and \\(18(2) = 36\\) matches the table."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "misread_graph"
+  },
+  "verify": "t = symbols('t')\nr = [[int(c) for c in row] for row in figure['rows']]\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if all(rhs(choices[k]).subs(t, a) == d for a, d in r)]\nassert ok == [answer]\nassert simplify(rhs(choices[answer]) - 18*t) == 0",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

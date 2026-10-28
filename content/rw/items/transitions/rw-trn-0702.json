@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0702",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many plants respond to their surroundings in ways that can be measured within minutes. ______ the sundew, a small carnivorous plant, bends its sticky leaf hairs toward an insect within minutes of contact, then releases digestive fluid to break down its prey.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Still,",
+    "B": "In addition,",
+    "C": "Therefore,",
+    "D": "For example,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The first sentence makes a general claim about plant responses. The second sentence gives one specific plant that shows the claim, so the blank must introduce an example.",
+    "A": "Incorrect. \"Still\" would signal a contrast, but the sundew's response supports the claim that plants respond quickly rather than opposing it.",
+    "B": "Incorrect. \"In addition\" would add a second, similar point. The sentence gives a specific case that illustrates the general claim in the previous sentence.",
+    "C": "Incorrect. The sundew's behavior does not follow as a result of the general claim. The sentence illustrates that claim with a specific plant.",
+    "D": "Correct. The sundew is a specific case of a plant responding within minutes, which is the claim made in the first sentence. \"For example\" introduces that illustration."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

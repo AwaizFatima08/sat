@@ -1,0 +1,81 @@
+{
+  "id": "rw-ceq-0638",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "White storks that nest in Portugal once flew to Africa every autumn, but since open landfills began offering food all year, many have stopped migrating. Some ornithologists suspected that the birds which stay behind are those too weak for the journey and that they fare poorly in winter. Ecologist Inês Carvalho, who tracked storks fitted with transmitters over three winters, proposes the opposite: storks that winter in Portugal near landfills, she argues, survive the season about as well as migrants do and begin breeding earlier in spring, which gives them an advantage.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Winter Survival and Breeding of Tracked White Storks",
+    "columns": [
+      "Group",
+      "Winter survival (%)",
+      "Average date of first egg"
+    ],
+    "rows": [
+      [
+        "Migrated to Africa",
+        91,
+        "April 2"
+      ],
+      [
+        "Stayed in Portugal, near a landfill",
+        90,
+        "March 14"
+      ],
+      [
+        "Stayed in Portugal, far from landfills",
+        78,
+        "March 30"
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Carvalho's proposal?",
+  "choices": {
+    "A": "Storks that migrated to Africa survived the winter at a higher rate than either group that stayed in Portugal.",
+    "B": "Storks near landfills laid their first eggs earlier than migrants because they did not need to recover from a long flight.",
+    "C": "Storks near landfills laid their first eggs about two weeks later than migrants did.",
+    "D": "Storks wintering near landfills survived at 90%, nearly matching the migrants' 91%, and laid their first eggs almost three weeks earlier."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Carvalho's proposal concerns one group, storks near landfills, and makes two claims about it: survival about equal to migrants' and earlier breeding. The evidence must compare that row with the migrants' row in both columns: 90% versus 91% survival, and March 14 versus April 2, about 19 days earlier.",
+    "A": "Incorrect. This is true (91% against 90% and 78%), but it stresses the migrants' advantage; the one-point gap with landfill storks is what Carvalho calls 'about as well,' and the choice ignores breeding dates.",
+    "B": "Incorrect. The earlier egg date is in the table, but the table gives no reason for it; the explanation about recovering from a flight is not shown by the data.",
+    "C": "Incorrect. Storks near landfills laid on March 14, before the migrants' April 2, so this reverses the table.",
+    "D": "Correct. It compares the landfill group with the migrants on both survival and breeding date, supporting both parts of the proposal."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "not_in_text",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

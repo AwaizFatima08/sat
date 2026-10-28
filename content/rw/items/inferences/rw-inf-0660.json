@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0660",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A census counts each person at the place where they are found on a single reference night, and it is often the only source for how a district's population has changed. Demographer Luis Carvalho studied an upland farming district whose recorded population fell by 12 percent between two national censuses taken twenty years apart. The first census had been held in midwinter, the second in late spring. From other records, Carvalho established that each spring a large share of the district's young men left for several months to work the harvests of the lowland plains, and that enumerators were instructed to count people only where they were found on census night. Carvalho argues that, before the decline is accepted as real, ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the district's records of seasonal migration should be checked to confirm that the young men ever returned.",
+    "B": "it should be assumed that the men who left for the harvest settled permanently in the lowlands.",
+    "C": "the first census should be set aside, since people counted in midwinter were likely visitors rather than residents.",
+    "D": "allowance must be made for residents who were present at the first census but away at the second."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The two censuses were taken in different seasons. In midwinter the young men were at home and were counted; in late spring many were working in the lowlands and were counted there, if at all. Part of the 12 percent fall could therefore be a matter of timing, so the absent workers must be accounted for before the decline is treated as genuine.",
+    "A": "Incorrect. Whether the men returned matters, but Carvalho's point is that the second census was timed to miss them; the problem lies in the census, not in the migration records.",
+    "B": "Incorrect. The text says the men left for several months each spring; nothing suggests they settled elsewhere.",
+    "C": "Incorrect. Midwinter is when the district's own young men were at home; the text gives no reason to think visitors were present.",
+    "D": "Correct. A midwinter count would include the seasonal workers; a late-spring count would miss them, which could produce an apparent drop without anyone leaving for good."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "not_in_text",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

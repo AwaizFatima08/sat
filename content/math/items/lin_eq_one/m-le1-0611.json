@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0611",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A ferry company charges one price for an adult ticket, and a child ticket costs \\$7 less than an adult ticket. A family bought 3 adult tickets and 4 child tickets for a total of \\$105. What is the price, in dollars, of an adult ticket?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(19\\)",
+    "B": "\\(12\\)",
+    "C": "\\(15\\)",
+    "D": "\\(11\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(a\\) be the adult price; a child ticket is \\(a - 7\\).",
+    "\\(3a + 4(a - 7) = 105\\), so \\(7a - 28 = 105\\).",
+    "Then \\(7a = 133\\) and \\(a = 19\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(7a - 28 = 105\\) gives \\(7a = 133\\), so \\(a = 19\\). Check: \\(3(19) + 4(12) = 57 + 48 = 105\\).",
+    "B": "Incorrect. This is the price of a child ticket, not an adult ticket.",
+    "C": "Incorrect. This is the result of ignoring the \\$7 difference and dividing \\$105 by 7 tickets.",
+    "D": "Incorrect. This is the result of adding 28 instead of subtracting it: \\(7a + 28 = 105\\)."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "wrong_formula",
+    "D": "sign_error"
+  },
+  "verify": "a = symbols('a')\ns = solve(Eq(3*a + 4*(a - 7), 105), a)[0]\nassert s == 19\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

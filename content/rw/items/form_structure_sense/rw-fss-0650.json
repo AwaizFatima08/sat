@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0650",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A tandoor is a tall clay oven, open at the top, used across South and Central Asia to bake flatbreads such as naan. A fire at the bottom heats the thick walls to well over 400°C, and the bread is slapped directly onto the inside surface, where it bakes in under two minutes. The ______ ability to hold heat explains both the speed and the texture of the result: the clay radiates steadily even as the fire dies down, so the bread puffs quickly and develops a blistered crust that a metal oven rarely produces.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "ovens'",
+    "B": "ovens's",
+    "C": "ovens",
+    "D": "oven's"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The ability to hold heat belongs to the oven, which the passage treats as one singular thing (\"A tandoor is a tall clay oven\"). A singular noun shows possession with an apostrophe and s: \"oven's.\"",
+    "A": "Incorrect. \"Ovens'\" is a plural possessive, but the text is about one oven (\"a tandoor,\" \"the inside surface\").",
+    "B": "Incorrect. \"Ovens's\" is not a standard form, and the owner is singular in any case.",
+    "C": "Incorrect. \"Ovens\" is a plain plural without an apostrophe, so it cannot show that the ability belongs to the oven.",
+    "D": "Correct. \"Oven's\" is the singular possessive, matching the single oven the passage describes."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "C": "grammar_rule"
+  },
+  "grammar": "plural_possessive",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

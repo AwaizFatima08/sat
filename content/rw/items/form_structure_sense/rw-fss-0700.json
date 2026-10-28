@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0700",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The collection of amber fragments from Myanmar, which includes several insect species that were previously unknown to science, ______ held in a university vault for decades before anyone catalogued it.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "are",
+    "B": "were",
+    "C": "have been",
+    "D": "has been"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The sentence's subject is \"collection,\" a singular noun. The long phrase that follows contains plural nouns, but they do not change the verb's number. The sentence needs the singular \"has been.\"",
+    "A": "Incorrect. \"Are\" is a plural present-tense verb and cannot follow a singular subject here. The passage describes an event that began in the past.",
+    "B": "Incorrect. The subject is \"collection,\" which is singular. The plural \"were\" agrees with the nearby plural noun \"species,\" not with the true subject.",
+    "C": "Incorrect. \"Have\" is plural. It agrees with \"species\" in the nonessential phrase, but the verb must agree with the singular subject \"collection.\"",
+    "D": "Correct. The subject is the singular noun \"collection,\" and the phrase \"which includes several insect species\" only adds information. The singular helping verb \"has\" agrees with it."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "C": "grammar_rule"
+  },
+  "grammar": "subject_verb",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

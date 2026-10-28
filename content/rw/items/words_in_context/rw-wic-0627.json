@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0627",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In 1927, a physics professor at the University of Queensland in Australia poured heated pitch, a tar-like material, into a glass funnel and left it to settle. Pitch at room temperature seems unmistakably solid; a hammer blow will shatter it into sharp pieces. Yet over the decades the pitch in the funnel has slowly formed drops that stretch, thin, and finally fall into a beaker below, at a rate of roughly one drop every ten years. The experiment demonstrates that the ______ of pitch can be deceiving: a substance that breaks like glass is nevertheless, over long enough stretches of time, a flowing liquid.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "weight",
+    "B": "temperature",
+    "C": "appearance",
+    "D": "age"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Pitch \"seems unmistakably solid\" and shatters like glass, yet it slowly flows. What is deceiving is how the pitch looks and behaves at first glance, so the blank needs \"appearance.\"",
+    "A": "Incorrect. The text never discusses how heavy the pitch is.",
+    "B": "Incorrect. The pitch's temperature is stated plainly as room temperature and is not misleading; what misleads is that the material seems solid.",
+    "C": "Correct. Pitch looks and feels like a solid, but it is really a very slow liquid, so its appearance is deceiving.",
+    "D": "Incorrect. The experiment has run for decades, but nothing about the pitch's age is misleading; the point is that a solid-looking material flows."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "wrong_logic",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0626",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The smallest of three consecutive even integers is \\(2n\\), where \\(n\\) is a positive integer. Which expression represents the sum of the three integers?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6n + 3\\)",
+    "B": "\\(6n + 2\\)",
+    "C": "\\(6n + 6\\)",
+    "D": "\\(8n + 6\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Consecutive even integers differ by 2, so the integers are \\(2n\\), \\(2n + 2\\), and \\(2n + 4\\).",
+    "Add them: \\(2n + 2n + 2 + 2n + 4 = 6n + 6\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the sum of three consecutive integers starting at \\(2n\\), which differ by 1 rather than 2.",
+    "B": "Incorrect. This is the result of adding the second integer's \\(+2\\) but forgetting the third integer's \\(+4\\), or of adding 2 only once.",
+    "C": "Correct. \\(2n + (2n + 2) + (2n + 4) = 6n + 6\\).",
+    "D": "Incorrect. This is the result of counting \\(2n\\) four times instead of three."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "arithmetic",
+    "D": "arithmetic"
+  },
+  "verify": "n = symbols('n')\nt = 2*n + (2*n + 2) + (2*n + 4)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0697",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Around 1025, the Italian monk and music teacher Guido of Arezzo faced a practical problem: choirboys took years to memorize the chants they sang, because no reliable way existed to teach them to read an unfamiliar melody. Guido noticed that the six opening phrases of a well-known hymn each began one step higher than the last, on the syllables ut, re, mi, fa, sol, and la. By having singers associate each pitch with its syllable, he gave them a ______ that could be applied to any new tune: a singer who had the hymn by heart could locate every note of an unknown melody by recalling the corresponding phrase.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "mnemonic",
+    "B": "ornament",
+    "C": "transcription",
+    "D": "repertoire"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The colon explains what Guido gave his singers: a way to find \"every note of an unknown melody by recalling the corresponding phrase\" of a hymn they already knew. A device that helps the memory in this way is a \"mnemonic.\" The text stresses recall (\"had the hymn by heart,\" \"recalling\"), not writing or decoration.",
+    "A": "Correct. A mnemonic is a memory aid; associating each pitch with a syllable from a familiar hymn let singers recall the right note for any tune.",
+    "B": "Incorrect. In music an ornament is a decorative added note. The syllables help singers find pitches; they do not decorate the melody.",
+    "C": "Incorrect. A transcription is a written copy of music. The text says the problem was reading unfamiliar melodies, and the solution works by memory, not by writing anything down.",
+    "D": "Incorrect. A repertoire is the collection of pieces a performer knows. Guido gave the singers a tool for learning new pieces, not the pieces themselves."
+  },
+  "traps": {
+    "B": "wrong_tone",
+    "C": "wrong_logic",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

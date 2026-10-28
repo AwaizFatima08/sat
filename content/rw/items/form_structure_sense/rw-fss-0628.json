@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0628",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The element iridium was identified in 1803 by the English chemist Smithson Tennant, who found it in the residue left after platinum ore was dissolved in acid. Named for Iris, the Greek goddess of the rainbow, because of the many colors of its compounds, ______ It is also one of the densest elements known and resists corrosion better than almost any other metal.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "iridium's compounds were a striking sight to early chemists.",
+    "B": "chemists prize iridium for its hardness and brittleness.",
+    "C": "the hardness and brittleness of iridium make it difficult to work.",
+    "D": "iridium is a hard, brittle, silvery-white metal."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The opening phrase \"Named for Iris\" describes the element, so \"iridium\" must be the subject right after the comma. Only choice D makes iridium the subject of the main clause.",
+    "A": "Incorrect. The subject here is \"compounds,\" but it was the element, not its compounds, that was named for Iris.",
+    "B": "Incorrect. The subject here is \"chemists,\" so the sentence wrongly says the chemists were named for Iris.",
+    "C": "Incorrect. The subject here is \"the hardness and brittleness,\" which were not named for Iris.",
+    "D": "Correct. \"Iridium\" directly follows the phrase that describes it, so the modifier is not dangling."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "C": "grammar_rule"
+  },
+  "grammar": "modifier",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

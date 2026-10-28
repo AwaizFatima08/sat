@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0616",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Sana bought a laptop in Islamabad for a total of 109,000 rupees. She paid 25,000 rupees at the time of purchase and will pay the rest in 12 equal monthly payments. What is the amount, in rupees, of each monthly payment?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7000"
+  ],
+  "solution": [
+    "Let \\(p\\) be the monthly payment: \\(25{,}000 + 12p = 109{,}000\\).",
+    "Subtract 25,000: \\(12p = 84{,}000\\).",
+    "Divide by 12: \\(p = 7{,}000\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "p = symbols('p')\nsol = solve(Eq(25000 + 12*p, 109000), p)\nassert sol == [7000]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "7000",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0605",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Male silk moths find females by following a scent that the females release into the air. The males detect the scent with their large, feathery antennae. Entomologist Rosa Delgado hypothesizes that a male does not simply fly toward wherever the scent is strongest. Instead, once he detects any scent at all, he turns to face the wind and flies upwind, because the scent must be coming from that direction.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Delgado's hypothesis?",
+  "choices": {
+    "A": "Males with larger antennae detected the scent at much lower concentrations than males with smaller antennae did.",
+    "B": "Males always flew toward the spot where the scent was most concentrated, even when that meant flying downwind.",
+    "C": "In a wind tunnel, males flew upwind as soon as they detected the scent and circled in place when the fan was turned off.",
+    "D": "Female moths release the scent mostly at night, when the air is usually calmer and the scent spreads more slowly."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Delgado's hypothesis is that the wind, not the strength of the scent, tells a male which way to fly. The clearest support is an experiment showing that males head upwind after detecting scent and lose direction when there is no wind. A finding that males follow the strongest scent would contradict her.",
+    "A": "Incorrect. This concerns how sensitive the antennae are, not how a male chooses which way to fly.",
+    "B": "Incorrect. This is the behavior Delgado argues against: following the strongest scent instead of the wind.",
+    "C": "Correct. The moths used the wind to choose a direction and lost their way without wind, which is just what Delgado predicts.",
+    "D": "Incorrect. When the scent is released does not show how males navigate toward it."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

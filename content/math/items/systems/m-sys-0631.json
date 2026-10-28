@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0631",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[y = 2(x + 3) - 1\\] \\[4x - 2y = -10\\] How many solutions does the system of equations above have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Exactly one",
+    "B": "Infinitely many",
+    "C": "No solution",
+    "D": "Exactly two"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Simplify the first equation: \\(y = 2x + 6 - 1 = 2x + 5\\).",
+    "Solve the second for \\(y\\): \\(-2y = -10 - 4x\\), so \\(y = 2x + 5\\).",
+    "The equations describe the same line, so every point on it is a solution: infinitely many."
+  ],
+  "explanation": {
+    "A": "Incorrect. Both lines have slope 2 and \\(y\\)-intercept 5, so they are the same line, not two lines that cross once.",
+    "B": "Correct. The first equation simplifies to \\(y = 2x + 5\\), and the second to \\(y = 2x + 5\\) as well, so the equations describe the same line.",
+    "C": "Incorrect. The lines have the same slope, but they also have the same \\(y\\)-intercept, 5, so they are not parallel and distinct.",
+    "D": "Incorrect. Two linear equations cannot have exactly two solutions: the lines coincide, are parallel, or cross once."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "x, y = symbols('x y')\nS = linsolve([y - (2*(x + 3) - 1), 4*x - 2*y + 10], [x, y])\nassert S != EmptySet and len(S.free_symbols) > 0\nassert choices[answer] == 'Infinitely many'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

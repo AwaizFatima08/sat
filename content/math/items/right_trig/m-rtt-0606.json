@@ -1,0 +1,123 @@
+{
+  "id": "m-rtt-0606",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, \\(\\overline{BD}\\) is perpendicular to \\(\\overline{AC}\\), \\(AB = 15\\), \\(AD = 9\\), and \\(BC = 37\\). What is the length of \\(\\overline{DC}\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "D": [
+        9,
+        0
+      ],
+      "C": [
+        44,
+        0
+      ],
+      "B": [
+        9,
+        12
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "B",
+        "D"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          3.2,
+          6.9
+        ],
+        "text": "15"
+      },
+      {
+        "at": [
+          4.5,
+          -1.3
+        ],
+        "text": "9"
+      },
+      {
+        "at": [
+          27.5,
+          7.0
+        ],
+        "text": "37"
+      }
+    ],
+    "right_angles": [
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(25\\)",
+    "B": "\\(35\\)",
+    "C": "\\(44\\)",
+    "D": "\\(\\sqrt{1{,}513}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "In right triangle \\(ABD\\): \\(BD = \\sqrt{15^{2} - 9^{2}} = \\sqrt{144} = 12\\).",
+    "In right triangle \\(BDC\\): \\(DC = \\sqrt{37^{2} - 12^{2}} = \\sqrt{1{,}225} = 35\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(37 - 12\\). The legs and hypotenuse of triangle \\(BDC\\) are related by \\(DC^{2} + 12^{2} = 37^{2}\\), not by subtraction.",
+    "B": "Correct. \\(BD = 12\\), and then \\(DC = \\sqrt{37^{2} - 12^{2}} = 35\\).",
+    "C": "Incorrect. This is the whole length \\(AC = 9 + 35\\), not \\(DC\\).",
+    "D": "Incorrect. This is \\(\\sqrt{37^{2} + 12^{2}}\\); in triangle \\(BDC\\), 37 is the hypotenuse, so the squares must be subtracted."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_quantity",
+    "D": "wrong_formula"
+  },
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('A','B')==15 and d('A','D')==9 and d('B','C')==37 and abs(ang('A','D','B')-90)<0.1\nbd=sqrt(15**2-9**2)\nans=sqrt(37**2-bd**2)\nassert bd==12 and ans==35 and d('D','C')==ans\nassert value(choices[answer])==ans\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

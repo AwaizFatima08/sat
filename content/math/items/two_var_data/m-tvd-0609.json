@@ -1,0 +1,57 @@
+{
+  "id": "m-tvd-0609",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "For a group of students, the line of best fit \\(y = 4x + 40\\) models the score \\(y\\) on a quiz for a student who studied \\(x\\) hours. One student studied 2 hours and scored 54. This student's actual score is what percent greater than the score predicted by the line of best fit?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(6\\%\\)",
+    "B": "\\(12.5\\%\\)",
+    "C": "\\(112.5\\%\\)",
+    "D": "\\(12\\%\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Predicted score: \\(4(2) + 40 = 48\\).",
+    "The actual score is \\(54 - 48 = 6\\) points higher, and \\(\\frac{6}{48} = 0.125 = 12.5\\%\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. 6 is the difference in points, \\(54 - 48\\), not a percent of the predicted score.",
+    "B": "Correct. \\(\\frac{54 - 48}{48} = \\frac{6}{48} = 12.5\\%\\).",
+    "C": "Incorrect. \\(\\frac{54}{48} = 112.5\\%\\) is the actual score as a percent of the predicted score; the question asks how much greater, which is the extra \\(12.5\\%\\).",
+    "D": "Incorrect. This is \\(\\frac{6}{50}\\); the base must be the predicted score, 48."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "concept",
+    "D": "arithmetic"
+  },
+  "verify": "x = symbols('x')\npred = (4*x + 40).subs(x, 2)\nassert pred == 48\npct = Rational(54 - pred, pred)\nassert pct == Rational(1, 8)\nassert value(choices[answer]) == pct\nassert all(value(choices[k]) != pct for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

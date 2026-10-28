@@ -1,0 +1,56 @@
+{
+  "id": "rw-tsp-0609",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "text_structure_purpose",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The light, finely woven straw hats known as Panama hats have never been made in Panama. They are woven in Ecuador from the leaves of the toquilla palm, a craft practiced there for centuries, especially in the towns of Montecristi and Cuenca. In the 1800s, however, the hats were shipped north to Panama, where travelers crossing between the Atlantic and Pacific bought them in large numbers. Those travelers named the hats for the place where they had bought them, and the name has stuck ever since.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice best describes the overall structure of the text?",
+  "choices": {
+    "A": "It describes how a hat is woven and then compares it with hats made in other countries.",
+    "B": "It describes the travelers who crossed Panama in the 1800s.",
+    "C": "It corrects a mistaken idea about where a product comes from and then explains how the mistake arose.",
+    "D": "It argues that the hats should be renamed for the country that makes them."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The opening sentence corrects a common assumption: Panama hats \"have never been made in Panama.\" The second sentence says where they really come from, and the last two explain how the misleading name came about. The text corrects an error and then accounts for it.",
+    "A": "Incorrect. The text names the material and the towns but does not explain the weaving process or compare the hats with others.",
+    "B": "Incorrect. The travelers are mentioned only to explain the name; the text does not describe them.",
+    "C": "Correct. The text states that the hats come from Ecuador, not Panama, and then explains that travelers named them for the place they bought them.",
+    "D": "Incorrect. The text explains the name but never suggests changing it."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "too_narrow",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

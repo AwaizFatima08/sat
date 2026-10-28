@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0609",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[2x + 4y = 8\\] \\[x + 2y = 6\\] How many solutions does the system of equations above have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Exactly one",
+    "B": "Exactly two",
+    "C": "No solution",
+    "D": "Infinitely many"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Divide the first equation by 2: \\(x + 2y = 4\\).",
+    "The second equation says \\(x + 2y = 6\\). The same expression cannot equal both 4 and 6.",
+    "The lines are parallel (same slope \\(-\\frac{1}{2}\\)) with different intercepts, so the system has no solution."
+  ],
+  "explanation": {
+    "A": "Incorrect. The lines have the same slope, \\(-\\frac{1}{2}\\), so they never cross; two lines intersect in one point only if their slopes differ.",
+    "B": "Incorrect. Two different lines can meet in at most one point; a system of two linear equations never has exactly two solutions.",
+    "C": "Correct. Dividing the first equation by 2 gives \\(x + 2y = 4\\), which contradicts \\(x + 2y = 6\\); the lines are parallel.",
+    "D": "Incorrect. The left sides match after dividing by 2, but the right sides \\(4\\) and \\(6\\) do not, so the lines are parallel and distinct, not the same line."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "x, y = symbols('x y')\nassert linsolve([2*x + 4*y - 8, x + 2*y - 6], [x, y]) == EmptySet\nassert choices[answer] == 'No solution'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

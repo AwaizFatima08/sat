@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0638",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[5x + 3y = 27\\] \\[2x - 3y = -6\\] If \\((x, y)\\) is the solution to the system of equations above, what is the value of \\(x - y\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1\\)",
+    "B": "\\(7\\)",
+    "C": "\\(-1\\)",
+    "D": "\\(3\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Add the equations to eliminate \\(y\\): \\(7x = 21\\), so \\(x = 3\\).",
+    "Substitute into the first equation: \\(15 + 3y = 27\\), so \\(y = 4\\).",
+    "Then \\(x - y = 3 - 4 = -1\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(y - x\\); the question asks for \\(x - y = 3 - 4\\).",
+    "B": "Incorrect. This is \\(x + y\\), not \\(x - y\\).",
+    "C": "Correct. Adding the equations gives \\(7x = 21\\), so \\(x = 3\\); then \\(y = 4\\), and \\(x - y = -1\\).",
+    "D": "Incorrect. This is the value of \\(x\\) alone; the work stops before finding \\(y\\) and subtracting."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "wrong_quantity",
+    "D": "stopped_early"
+  },
+  "verify": "x, y = symbols('x y')\nsol = solve([5*x + 3*y - 27, 2*x - 3*y + 6], [x, y])\nassert sol == {x: 3, y: 4}\nv = sol[x] - sol[y]\nassert value(choices[answer]) == v == -1\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

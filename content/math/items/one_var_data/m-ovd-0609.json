@@ -1,0 +1,78 @@
+{
+  "id": "m-ovd-0609",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The dot plot shows a data set of 15 values. The mean of the data set is how much less than the median?",
+  "figure": {
+    "kind": "dotplot",
+    "x_label": "Value",
+    "values": [
+      5,
+      6,
+      6,
+      7,
+      7,
+      7,
+      7,
+      8,
+      8,
+      8,
+      8,
+      9,
+      9,
+      9,
+      10
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(0\\)",
+    "B": "\\(0.1\\)",
+    "C": "\\(0.4\\)",
+    "D": "\\(0.6\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Mean: \\(\\frac{5 + 6(2) + 7(4) + 8(4) + 9(3) + 10}{15} = \\frac{114}{15} = 7.6\\).",
+    "Median: with 15 values, the 8th value in order, which is 8.",
+    "The mean is \\(8 - 7.6 = 0.4\\) less than the median."
+  ],
+  "explanation": {
+    "A": "Incorrect. The dot plot is not symmetric, so the mean and the median are not equal; the mean is 7.6 and the median is 8.",
+    "B": "Incorrect. This uses 7.5 as the median, averaging the 7th and 8th values. With 15 values (an odd number), the median is the single 8th value, 8.",
+    "C": "Correct. The mean is \\(\\frac{114}{15} = 7.6\\), the median is 8, and \\(8 - 7.6 = 0.4\\).",
+    "D": "Incorrect. This is the mean minus the mode, \\(7.6 - 7\\). The question asks about the median, 8."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "v = sorted(figure['values'])\nassert len(v) == 15\nm, med = Rational(sum(v), 15), v[7]\nd = med - m\nassert d == Rational(2, 5)\nassert value(choices[answer]) == d\nassert all(value(choices[k]) != d for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

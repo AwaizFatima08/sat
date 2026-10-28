@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0610",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A phone plan costs 20 dollars per month plus \\(c\\) dollars for each gigabyte of data used beyond the monthly limit. A customer uses 3 gigabytes beyond the limit in each of 2 months. Which expression represents the total cost, in dollars, for the 2 months?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(40 + 6c\\)",
+    "B": "\\(40 + 3c\\)",
+    "C": "\\(20 + 6c\\)",
+    "D": "\\(46c\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "One month costs \\(20 + 3c\\) dollars.",
+    "Two months cost \\(2(20 + 3c) = 40 + 6c\\) dollars."
+  ],
+  "explanation": {
+    "A": "Correct. \\(2(20 + 3c) = 40 + 6c\\).",
+    "B": "Incorrect. This is the result of doubling the monthly fee but not the extra-data charge.",
+    "C": "Incorrect. This is the result of doubling the extra-data charge but not the monthly fee.",
+    "D": "Incorrect. This is the result of multiplying \\(c\\) by \\(40 + 6\\); the 40 dollars is a fixed amount, not a number of gigabytes."
+  },
+  "traps": {
+    "B": "arithmetic",
+    "C": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "c = symbols('c')\nt = 2*(20 + 3*c)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

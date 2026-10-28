@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0601",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Radishes grow quickly, which makes them useful for testing how much water a crop needs. Gardener Hanna Virtanen planted 40 radish seeds in each of four raised beds in Tampere, Finland, and watered each bed on a different schedule for five weeks. She then weighed all the radishes harvested from each bed. In her trial, the heaviest total harvest came from the bed watered ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Radish Harvest under Four Watering Schedules (40 seeds per bed)",
+    "columns": [
+      "Watering schedule",
+      "Total harvest (kg)",
+      "Radishes harvested"
+    ],
+    "rows": [
+      [
+        "Every day",
+        3.1,
+        36
+      ],
+      [
+        "Every 2 days",
+        3.9,
+        38
+      ],
+      [
+        "Every 4 days",
+        2.6,
+        33
+      ],
+      [
+        "Every 7 days",
+        1.4,
+        25
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "every 7 days, which produced the smallest number of radishes.",
+    "B": "every 3 days, which produced the heaviest radishes.",
+    "C": "every 2 days, which produced 3.9 kilograms of radishes.",
+    "D": "every day, when 36 radishes were harvested."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The statement is about the heaviest total harvest, so look at the \"Total harvest (kg)\" column and find the largest value. The largest is 3.9 kilograms, in the \"Every 2 days\" row.",
+    "A": "Incorrect. The bed watered every 7 days gave the lightest harvest (1.4 kilograms), not the heaviest.",
+    "B": "Incorrect. The table has no bed watered every 3 days.",
+    "C": "Correct. The bed watered every 2 days produced 3.9 kilograms, more than any other bed.",
+    "D": "Incorrect. This number is accurate, but it counts radishes rather than weighing them, and the daily-watered bed's 3.1 kilograms is less than 3.9."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0601",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Elena has \\$40 to spend on apples that cost \\$2.50 per pound. The inequality \\(2.5p \\le 40\\) represents the possible numbers of pounds \\(p\\) of apples Elena can buy. Which of the following is the best interpretation of the number 2.5 in this inequality?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The cost, in dollars, of one pound of apples",
+    "B": "The greatest number of pounds of apples Elena can buy",
+    "C": "The amount of money, in dollars, Elena has to spend",
+    "D": "The number of pounds of apples Elena buys"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "The total cost is (cost per pound) \\(\\times\\) (number of pounds), so \\(2.5p\\) is the cost of \\(p\\) pounds.",
+    "The factor 2.5 multiplies the number of pounds, so it is the cost of one pound, \\$2.50.",
+    "The 40 on the right is the money available; \\(p \\le 16\\) is the solution, not the meaning of 2.5."
+  ],
+  "explanation": {
+    "A": "Correct. \\(2.5p\\) is the cost of \\(p\\) pounds, so 2.5 is the cost in dollars of one pound.",
+    "B": "Incorrect. The greatest number of pounds is the solution of the inequality, \\(40 \\div 2.5 = 16\\), not the coefficient 2.5.",
+    "C": "Incorrect. The money Elena has to spend is the 40 on the right side of the inequality.",
+    "D": "Incorrect. The number of pounds Elena buys is the variable \\(p\\), not the constant 2.5."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_quantity",
+    "D": "concept"
+  },
+  "verify": "p = symbols('p')\ns = solve_univariate_inequality(Rational('2.5')*p <= 40, p, relational=False)\nassert s.sup == 16\nassert 'one pound' in choices[answer]\nassert all('one pound' not in choices[k] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

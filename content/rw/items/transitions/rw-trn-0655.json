@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0655",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Army ants of Central and South America are nearly blind, and a colony on the move navigates almost entirely by scent: each ant follows the chemical trail laid down by the ants ahead of it and adds its own. The method works remarkably well, steering columns of hundreds of thousands of ants across the forest floor and back to the nest without a map or a leader. ______ a column that happens to curve back onto its own trail can begin to circle, each ant faithfully following the one in front; one such mill described in the 1920s was more than a hundred meters around and kept turning until most of the ants in it had died.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "However,",
+    "B": "Specifically,",
+    "C": "Instead,",
+    "D": "Indeed,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The second sentence praises the trail-following method as working \"remarkably well.\" The last sentence describes a situation in which the same method fails disastrously. A transition that signals a contrast with the method's success is needed.",
+    "A": "Correct. \"However\" signals that, despite its usual success, the method can trap a colony in a deadly circle.",
+    "B": "Incorrect. The mill is not a more precise description of the method working well; it is a case in which it works badly.",
+    "C": "Incorrect. \"Instead\" would mean the ants circle in place of following trails, but circling is what trail-following produces when the trail loops.",
+    "D": "Incorrect. \"Indeed\" would strengthen the claim that the method works well, but the circling column shows it failing. This is the most tempting trap because the mill is a vivid illustration of how faithfully the ants follow the trail."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

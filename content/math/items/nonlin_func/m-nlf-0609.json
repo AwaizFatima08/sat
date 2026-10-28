@@ -1,0 +1,78 @@
+{
+  "id": "m-nlf-0609",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(f\\) is defined by \\(f(x) = x^{2} + c\\), where \\(c\\) is a constant. The table shows three values of \\(x\\) and the corresponding values of \\(f(x)\\). What is the value of \\(c\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "Values of f",
+    "columns": [
+      "x",
+      "f(x)"
+    ],
+    "rows": [
+      [
+        "1",
+        "4"
+      ],
+      [
+        "2",
+        "7"
+      ],
+      [
+        "3",
+        "12"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(4\\)",
+    "B": "\\(2\\)",
+    "C": "\\(3\\)",
+    "D": "\\(1\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Use any row of the table. For \\(x = 1\\), \\(f(1) = 1^{2} + c = 4\\), so \\(c = 3\\).",
+    "Check with another row: \\(2^{2} + 3 = 7\\) and \\(3^{2} + 3 = 12\\), as in the table."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(4\\) is the value of \\(f(1)\\) read from the table, not the constant \\(c\\); \\(f(1) = 1 + c\\).",
+    "B": "Incorrect. This is the result of subtracting the wrong square, \\(4 - 2 = 2\\); \\(c = 4 - 1^{2} = 3\\).",
+    "C": "Correct. \\(c = f(1) - 1^{2} = 4 - 1 = 3\\), and this value also fits the other rows.",
+    "D": "Incorrect. \\(1\\) is an \\(x\\)-value from the table; the constant is \\(c = f(x) - x^{2} = 3\\) for every row."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "arithmetic",
+    "D": "concept"
+  },
+  "verify": "rows = [(int(r[0]), int(r[1])) for r in figure['rows']]\ncs = {b - a**2 for a, b in rows}\nassert cs == {3}\nassert value(choices[answer]) == 3\nassert all(value(choices[k]) != 3 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

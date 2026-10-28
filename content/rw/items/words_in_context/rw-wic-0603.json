@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0603",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The sand cat lives in the deserts of North Africa and Central Asia, where the ground can become hot enough to burn an animal's feet. Unlike most cats, the sand cat has thick fur growing across the pads of its paws. This fur ______ the cat's feet from the scorching sand and also hides its footprints, which makes it harder for predators to follow.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "lifts",
+    "B": "shields",
+    "C": "cools",
+    "D": "warms"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The ground is \"hot enough to burn an animal's feet,\" and the fur sits between the paw pads and the sand. The blank needs a verb meaning \"protects,\" and \"shields\" is the word that fits with \"from the scorching sand.\"",
+    "A": "Incorrect. Fur on the paw pads does not raise the cat's feet off the ground; it covers them.",
+    "B": "Correct. The fur protects, or shields, the feet from the burning sand, just as it hides the footprints.",
+    "C": "Incorrect. Fur cannot lower the temperature of the sand or the feet; it only keeps the heat from reaching the skin, and \"cools ... from\" does not make sense.",
+    "D": "Incorrect. The problem is that the sand is already too hot. The fur protects the feet from heat, so warming them is the opposite of what is needed."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

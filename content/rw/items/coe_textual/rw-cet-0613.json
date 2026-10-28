@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0613",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Some damselfish that live on coral reefs tend small patches of algae, chasing away other fish that try to graze there. These patches are dominated by a single kind of fine red algae that the damselfish eat. Marine ecologist Hana Yoshida hypothesizes that the damselfish actively weed their patches, removing other kinds of algae so that the red algae can thrive, rather than the red algae simply growing best in the spots the fish happen to defend.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Yoshida's hypothesis?",
+  "choices": {
+    "A": "Red algae growing inside the patches contain more protein than the same algae growing outside the territories do.",
+    "B": "Damselfish defend their patches far more fiercely against large grazing fish than against small ones that eat little.",
+    "C": "The red algae grow faster than other kinds of algae in the sunny, shallow spots where damselfish usually set up their territories.",
+    "D": "Damselfish were observed pulling up other kinds of algae that sprouted in their patches and carrying them beyond their territories."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The passage sets up two explanations for the red algae patches: the fish weed them, or the red algae simply grow best there. Yoshida favors weeding, so the best support is a direct observation of the fish removing other algae. A finding that the red algae naturally outgrow other algae in those spots would favor the rival explanation.",
+    "A": "Incorrect. The quality of the algae does not show how the patches came to be dominated by it.",
+    "B": "Incorrect. How hard the fish defend their patches against grazers says nothing about whether they remove unwanted algae.",
+    "C": "Incorrect. This supports the alternative explanation that the red algae simply grow best in those spots, so it works against Yoshida's hypothesis.",
+    "D": "Correct. The fish deliberately removing other algae is weeding, exactly the behavior Yoshida proposes."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0648",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A school has 180 students in grade 10, each of whom is either a boy or a girl. Exactly \\(\\frac{2}{3}\\) of the boys and exactly \\(\\frac{3}{4}\\) of the girls went on a field trip, and 128 students went in all. How many girls are in grade 10 at the school?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "96"
+  ],
+  "solution": [
+    "Let \\(b\\) and \\(g\\) be the numbers of boys and girls: \\(b + g = 180\\) and \\(\\frac{2}{3}b + \\frac{3}{4}g = 128\\).",
+    "Multiply the second equation by 12: \\(8b + 9g = 1{,}536\\). Multiply the first by 8: \\(8b + 8g = 1{,}440\\).",
+    "Subtract: \\(g = 96\\). (Then \\(b = 84\\); check \\(\\frac{2}{3}(84) + \\frac{3}{4}(96) = 56 + 72 = 128\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "b, g = symbols('b g')\nsol = solve([b + g - 180, Rational(2, 3)*b + Rational(3, 4)*g - 128], [b, g])\nassert sol == {b: 84, g: 96}\nassert [Rational(s) for s in spr_answers] == [sol[g]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "96",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

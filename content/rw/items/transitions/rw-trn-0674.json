@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0674",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Jaipur, founded in 1727 by the ruler Jai Singh II, is often presented as an ancient Indian design faithfully carried out, and its plan does follow the scheme of nine squares prescribed in classical treatises on architecture, with the palace occupying the central sector and broad streets dividing the rest. Yet the planners altered the scheme wherever the ground required: one of the nine sectors was moved out of its prescribed position because hills blocked the northeastern corner of the site. ______ the city's famous pink is not ancient at all: the buildings along the main streets were painted that color in 1876 to welcome a visiting British prince, and the color was later kept by regulation.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Similarly,",
+    "B": "Nevertheless,",
+    "C": "For instance,",
+    "D": "Consequently,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The second sentence gives one way in which Jaipur departs from the image of an ancient design faithfully applied: the plan was adjusted for the terrain. The last sentence gives another way: the pink color is a nineteenth-century addition. A transition that adds a parallel point is needed.",
+    "A": "Correct. \"Similarly\" introduces a second respect in which the city is less purely ancient than it is presented: its color, like its plan, was shaped by later decisions.",
+    "B": "Incorrect. The point about the pink color does not oppose the point about the altered plan; both point the same way.",
+    "C": "Incorrect. The 1876 painting is not an example of the planners altering the plan for the terrain; it is a separate, parallel case.",
+    "D": "Incorrect. The painting of the city in 1876 was not a result of the sector being moved for the hills."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": "A",
+        "note": "Both the pattern-following and the pink-as-example readings fit the transition; \"Similarly\" is defensible too.",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

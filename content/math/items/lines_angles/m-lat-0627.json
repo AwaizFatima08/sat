@@ -1,0 +1,148 @@
+{
+  "id": "m-lat-0627",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, line \\(\\ell\\) is parallel to line \\(m\\). Point \\(A\\) lies on \\(\\ell\\), point \\(B\\) lies on \\(m\\), and point \\(P\\) lies between the two lines. Which of the following expressions gives \\(x\\) in terms of \\(a\\) and \\(b\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "L1": [
+        -3.0,
+        6.0
+      ],
+      "L2": [
+        9.0,
+        6.0
+      ],
+      "M1": [
+        -3.0,
+        0.0
+      ],
+      "M2": [
+        9.0,
+        0.0
+      ],
+      "A": [
+        0.0,
+        6.0
+      ],
+      "B": [
+        1.5,
+        0.0
+      ],
+      "P": [
+        4.0,
+        3.0
+      ]
+    },
+    "segments": [
+      [
+        "L1",
+        "L2"
+      ],
+      [
+        "M1",
+        "M2"
+      ],
+      [
+        "A",
+        "P"
+      ],
+      [
+        "P",
+        "B"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          1.518,
+          5.495
+        ],
+        "text": "a°"
+      },
+      {
+        "at": [
+          2.949,
+          0.679
+        ],
+        "text": "b°"
+      },
+      {
+        "at": [
+          2.709,
+          2.848
+        ],
+        "text": "x°"
+      },
+      {
+        "at": [
+          9.5,
+          6.4
+        ],
+        "text": "ℓ"
+      },
+      {
+        "at": [
+          9.5,
+          0.4
+        ],
+        "text": "m"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(180 - a - b\\)",
+    "B": "\\(360 - a - b\\)",
+    "C": "\\(b - a\\)",
+    "D": "\\(a + b\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Draw a line through \\(P\\) parallel to \\(\\ell\\) and \\(m\\). It splits angle \\(APB\\) into two parts.",
+    "The upper part and the \\(a^{\\circ}\\) angle at \\(A\\) are alternate interior angles, so the upper part measures \\(a^{\\circ}\\). Likewise the lower part and the \\(b^{\\circ}\\) angle at \\(B\\) are alternate interior angles, so it measures \\(b^{\\circ}\\).",
+    "Therefore \\(x = a + b\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(180 - a - b\\) would be the third angle if \\(A\\), \\(P\\), and \\(B\\) formed a triangle with the marked angles, but \\(\\overline{AB}\\) is not drawn and the marked angles are not angles of one triangle.",
+    "B": "Incorrect. \\(360^{\\circ}\\) is the full angle around point \\(P\\); the reflex angle at \\(P\\) is \\(360 - x\\), not \\(x\\) itself.",
+    "C": "Incorrect. The parallel line through \\(P\\) splits \\(x\\) into parts equal to \\(a\\) and \\(b\\), which add rather than subtract.",
+    "D": "Correct. A line through \\(P\\) parallel to \\(\\ell\\) splits angle \\(APB\\) into an \\(a^{\\circ}\\) part and a \\(b^{\\circ}\\) part."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "wrong_formula",
+    "C": "sign_error"
+  },
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['L1'][1]==P['L2'][1]==P['A'][1] and P['M1'][1]==P['M2'][1]==P['B'][1] and P['M1'][1]<P['P'][1]<P['L1'][1]\nav=ang('L2','A','P'); bv=ang('M2','B','P'); xv=ang('A','P','B')\nassert abs(xv-(av+bv))<0.1 and abs(xv-(180-av-bv))>5 and abs(xv-(360-av-bv))>5 and abs(xv-(bv-av))>5\nassert choices[answer]=='\\\\(a + b\\\\)'\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

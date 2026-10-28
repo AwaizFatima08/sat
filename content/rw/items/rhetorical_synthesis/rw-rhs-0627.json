@@ -1,0 +1,62 @@
+{
+  "id": "rw-rhs-0627",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "The Nilgiri Mountain Railway in Tamil Nadu, India, runs about 46 kilometers from Mettupalayam to the hill town of Udhagamandalam (Ooty).",
+    "Along the way it climbs from about 330 meters to about 2,200 meters above sea level.",
+    "Ordinary trains rely on friction between smooth wheels and smooth rails, which is not enough on very steep slopes.",
+    "On its steepest section, the railway uses a rack system: a toothed rail laid between the tracks, which a cogwheel under the locomotive grips to pull the train up.",
+    "The line was completed in 1908 and was added to the UNESCO World Heritage List in 2005."
+  ],
+  "data": null,
+  "stem": "The student wants to explain how the railway manages its steep climb. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "Because ordinary trains cannot rely on wheel friction alone on steep slopes, the Nilgiri Mountain Railway uses a toothed rail between its tracks, gripped by a cogwheel under the locomotive, on its steepest section.",
+    "B": "The Nilgiri Mountain Railway climbs from about 330 meters to about 2,200 meters above sea level over a distance of about 46 kilometers.",
+    "C": "Completed in 1908, the Nilgiri Mountain Railway in Tamil Nadu, India, was added to the UNESCO World Heritage List in 2005.",
+    "D": "On its steepest section, the Nilgiri Mountain Railway uses a rack system with a toothed rail laid between the tracks."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The goal asks how the climb is managed, so the key must describe the mechanism and show why it is needed. The third and fourth notes supply this: friction alone fails on steep slopes, so a cogwheel grips a toothed rail. Only one choice explains both the problem and the working of the solution.",
+    "A": "Correct. It states why ordinary wheels are not enough and then explains how the toothed rail and cogwheel pull the train up.",
+    "B": "Incorrect. This shows how steep the climb is but says nothing about how the train makes it.",
+    "C": "Incorrect. This gives dates and recognition, not the method of climbing.",
+    "D": "Incorrect. This names the rack system but does not say how it works or why it is needed, so it only half explains the climb."
+  },
+  "traps": {
+    "B": "misses_goal",
+    "C": "true_irrelevant",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

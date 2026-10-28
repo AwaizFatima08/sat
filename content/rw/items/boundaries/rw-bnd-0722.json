@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0722",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Engineers designing a suspension bridge must balance the forces on its cables. Each main cable carries the weight of the deck along its length, and the towers transfer that load into the foundations ______ who test scale models can find weak points before any steel is ordered.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": ", engineers",
+    "B": " engineers",
+    "C": "; engineers",
+    "D": "; and engineers"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Both sides of the blank are independent clauses, so a boundary that joins two of them is needed. A semicolon links them correctly, while a comma alone makes a splice and no punctuation makes a run-on.",
+    "A": "Incorrect. A comma cannot join two independent clauses. Both \"the towers transfer that load\" and \"engineers ... can find weak points\" are complete clauses, so the comma creates a comma splice.",
+    "B": "Incorrect. Two independent clauses with no punctuation between them form a run-on sentence. A semicolon or period is needed.",
+    "C": "Correct. A semicolon can join two closely related independent clauses. The first clause is complete, and the second begins with its own subject, \"engineers.\"",
+    "D": "Incorrect. A semicolon can be used with a coordinating conjunction only in special cases, and it does not belong before \"and\" here. A comma is the usual mark before \"and\" joining clauses."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "linking_clauses",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

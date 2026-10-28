@@ -1,0 +1,89 @@
+{
+  "id": "rw-ceq-0657",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Teachers who ask children to learn poems by heart often favor rhymed verse on the grounds that rhyme makes lines easier to remember. Literary scholar Beatriz Cardoso, who studied memorization in classrooms in Porto, Portugal, suggests that this belief runs together two distinct effects. In her study, children aged nine and ten learned either a rhymed or an unrhymed poem of equal length and were tested on word-for-word recall after one day and again after four weeks. Rhyme, she argues, chiefly protects what has already been learned against forgetting: it offered the children little advantage when they were tested the next day, but a substantial one a month later.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Word-for-Word Recall of a Rhymed and an Unrhymed Poem",
+    "x_label": "Time of test",
+    "y_label": "Lines recalled word for word (%)",
+    "series": [
+      {
+        "name": "Rhymed poem",
+        "points": [
+          [
+            "After 1 day",
+            74
+          ],
+          [
+            "After 4 weeks",
+            61
+          ]
+        ]
+      },
+      {
+        "name": "Unrhymed poem",
+        "points": [
+          [
+            "After 1 day",
+            70
+          ],
+          [
+            "After 4 weeks",
+            38
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Cardoso's argument?",
+  "choices": {
+    "A": "Recall of the unrhymed poem fell by 32 percentage points over the four weeks.",
+    "B": "Children recalled the rhymed poem better than the unrhymed poem at both tests.",
+    "C": "After one day the rhymed poem led by only 4 percentage points, but after four weeks it led by 23 points, because recall of the rhymed poem fell far less.",
+    "D": "After four weeks, children recalled the unrhymed poem almost as well as they had after one day."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Cardoso's argument is about the difference between the two poems at each test: small after a day, large after a month. The evidence must compare both bars at both times: 74 against 70 after one day (a 4-point gap) and 61 against 38 after four weeks (a 23-point gap), with the rhymed poem losing 13 points and the unrhymed poem 32.",
+    "A": "Incorrect. This is true (70 to 38), but it describes only the unrhymed poem, so it cannot show how rhyme changed the pattern.",
+    "B": "Incorrect. This is true, but saying rhyme helped both times is the ordinary belief; Cardoso's point is that the help was negligible at first and large later.",
+    "C": "Correct. A tiny initial gap that grows to a large one, driven by the rhymed poem's smaller loss, shows rhyme working mainly against forgetting.",
+    "D": "Incorrect. Recall of the unrhymed poem dropped from 70 to 38 percent, so this misreads the graph."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

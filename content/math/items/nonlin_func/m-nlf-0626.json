@@ -1,0 +1,57 @@
+{
+  "id": "m-nlf-0626",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A plot of land near Multan, Pakistan, was valued at 5,000,000 rupees in 2024. The value of the plot is expected to increase by \\(10\\%\\) each year. According to this expectation, what will the value of the plot be, in rupees, in 2026?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(5{,}500{,}000\\)",
+    "B": "\\(6{,}000{,}000\\)",
+    "C": "\\(6{,}100{,}000\\)",
+    "D": "\\(6{,}050{,}000\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "A \\(10\\%\\) increase each year multiplies the value by \\(1.1\\) each year.",
+    "From 2024 to 2026 is 2 years: \\(5{,}000{,}000(1.1)^{2} = 5{,}000{,}000(1.21) = 6{,}050{,}000\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value after only 1 year, \\(5{,}000{,}000(1.1)\\).",
+    "B": "Incorrect. This adds \\(10\\%\\) of the original value twice (\\(20\\%\\) in all). The second year's \\(10\\%\\) is taken of the larger 2025 value.",
+    "C": "Incorrect. This uses a factor of \\(1.22\\) instead of \\(1.1^{2} = 1.21\\).",
+    "D": "Correct. \\(5{,}000{,}000(1.1)^{2} = 6{,}050{,}000\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "percent_add",
+    "C": "arithmetic"
+  },
+  "verify": "v = 5000000*Rational(11, 10)**2\nassert v == 6050000\nassert value(choices[answer]) == v\nassert all(value(choices[k]) != v for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

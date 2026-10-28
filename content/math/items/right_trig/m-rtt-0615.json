@@ -1,0 +1,57 @@
+{
+  "id": "m-rtt-0615",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A conical tent has a circular base on level ground. Each straight edge of the fabric from the top of the tent to the ground is 5 meters long and makes a \\(50^{\\circ}\\) angle with the ground. What is the radius, in meters, of the base of the tent, rounded to the nearest tenth?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3.8\\)",
+    "B": "\\(6.0\\)",
+    "C": "\\(3.2\\)",
+    "D": "\\(7.8\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "A fabric edge, the height of the tent, and a radius of the base form a right triangle. The edge (5 meters) is the hypotenuse, and the radius is adjacent to the \\(50^{\\circ}\\) angle.",
+    "\\(r = 5 \\cos 50^{\\circ} \\approx 5(0.6428) \\approx 3.2\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(5 \\sin 50^{\\circ}\\), the height of the tent, not the radius.",
+    "B": "Incorrect. This is \\(5 \\tan 50^{\\circ}\\); tangent does not involve the hypotenuse, and 5 is the hypotenuse.",
+    "C": "Correct. The radius is the leg adjacent to the \\(50^{\\circ}\\) angle: \\(5 \\cos 50^{\\circ} \\approx 3.2\\).",
+    "D": "Incorrect. This is \\(\\frac{5}{\\cos 50^{\\circ}}\\); it treats 5 as the adjacent leg instead of the hypotenuse."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_formula",
+    "D": "reciprocal"
+  },
+  "verify": "ans=N(5*cos(50*pi/180))\nassert abs(ans-3.214)<0.001\nassert abs(value(choices[answer])-ans)<0.05\nassert all(abs(value(choices[k])-ans)>0.3 for k in choices if k!=answer)\nassert abs(value(choices['A'])-5*sin(50*pi/180))<0.05 and abs(value(choices['D'])-5/cos(50*pi/180))<0.05\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

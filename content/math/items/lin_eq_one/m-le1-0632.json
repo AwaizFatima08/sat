@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0632",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "If \\(0.2(x - 5) + 0.5x = 0.3(x + 10)\\), what is the value of \\(x\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "10"
+  ],
+  "solution": [
+    "Distribute: \\(0.2x - 1 + 0.5x = 0.3x + 3\\), so \\(0.7x - 1 = 0.3x + 3\\).",
+    "Subtract \\(0.3x\\) and add 1: \\(0.4x = 4\\).",
+    "Then \\(x = 10\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x = symbols('x')\nsol = solve(Eq(Rational(1, 5)*(x - 5) + Rational(1, 2)*x, Rational(3, 10)*(x + 10)), x)\nassert sol == [10]\nassert [Rational(a) for a in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "10",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

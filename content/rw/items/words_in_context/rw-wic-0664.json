@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0664",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Large volcanic eruptions inject sulfur gases into the stratosphere, where they form sulfate particles that eventually settle onto polar ice sheets. Because snow accumulates in annual layers, the sulfate spike from an eruption can be dated by counting layers downward from the surface. Such records are not ______, however. Layer counting accumulates small errors with depth, and a spike shows that an eruption occurred, not which volcano produced it, so researchers often match ice-core dates against tree rings and written accounts before assigning a sulfate layer to a particular event.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "definitive",
+    "B": "reliable",
+    "C": "recent",
+    "D": "continuous"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "\"However\" signals a limit on the method just described. The limit is that the records have small dating errors and cannot identify the volcano, so researchers check them against other evidence \"before assigning\" a layer to an event. The records are useful but not final, so they are not \"definitive.\"",
+    "A": "Correct. Because of small dating errors and the inability to identify the volcano, an ice-core record cannot settle the matter by itself; researchers confirm it with tree rings and written accounts.",
+    "B": "Incorrect. This goes too far. Researchers still use the ice-core dates, matching them against other evidence; the text says the records need confirmation, not that they cannot be trusted.",
+    "C": "Incorrect. Nothing in the text concerns how old or new the records are.",
+    "D": "Incorrect. The text says snow \"accumulates in annual layers\" and that layers are counted downward, which assumes the record is unbroken; the stated problem is precision and attribution, not gaps."
+  },
+  "traps": {
+    "B": "wrong_tone",
+    "C": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": "B",
+        "note": "\"Reliable\" also fits the blank, though \"definitive\" matches the caveats better.",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

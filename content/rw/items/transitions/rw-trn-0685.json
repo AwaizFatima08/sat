@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0685",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In 1856, William Perkin, an eighteen-year-old student in London, tried to synthesize quinine, the antimalarial drug extracted from cinchona bark, from a derivative of coal tar, reasoning from the rough chemical formulas then available that the two substances might be converted one into the other. The attempt was doomed by the limited understanding of molecular structure at the time, and it produced only a dark residue at the bottom of his flask. ______ the failure proved more valuable than success would have been: dissolved in alcohol, the residue yielded a purple dye that clung to silk and did not fade in light or washing, qualities that no natural purple possessed and that soon made Perkin a wealthy man.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "In other words,",
+    "B": "Consequently,",
+    "C": "Nonetheless,",
+    "D": "Specifically,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The second sentence describes the attempt as a failure that left only a dark residue. The last sentence says that the failure turned out to be worth more than success. The transition must signal that the positive outcome stands in spite of the failure just described.",
+    "A": "Incorrect. The last sentence does not restate the failure in other terms; it reverses its significance.",
+    "B": "Incorrect. The value of the dye was not a result of the attempt being doomed; it emerged in spite of the failure.",
+    "C": "Correct. \"Nonetheless\" signals that, although the experiment failed in its aim, the failure turned out to be valuable.",
+    "D": "Incorrect. \"Specifically\" would introduce a more precise account of the failure, but the last sentence turns from the failure to its unexpected reward."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

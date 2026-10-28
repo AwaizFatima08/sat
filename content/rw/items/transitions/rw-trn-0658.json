@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0658",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The coconut crab of Indian Ocean and Pacific islands is the largest land-dwelling arthropod, weighing up to four kilograms and spanning nearly a meter from claw to claw. It is a land animal in every practical sense: it climbs trees, cracks fallen coconuts with its claws, and breathes air through organs that must be kept moist but cannot draw oxygen from water, so that an adult held underwater for long will drown. ______ the species cannot do without the sea. A female carries her eggs to the shoreline and releases them into the surf, and the larvae drift in the open ocean for weeks before settling on a beach and crawling ashore.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Consequently,",
+    "B": "In other words,",
+    "C": "Conversely,",
+    "D": "Even so,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence establishes, with several details, that the crab is a land animal that would drown in water. The next sentence states something true in spite of that: the species still depends on the sea. A transition that concedes the previous point while asserting the new one is needed.",
+    "A": "Incorrect. The crab's dependence on the sea is not a result of its being a land animal that drowns; it is a fact that holds despite it.",
+    "B": "Incorrect. Needing the sea does not restate being a land animal; it limits that idea.",
+    "C": "Incorrect. \"Conversely\" introduces a reversed relationship between two things, but the sentence does not reverse anything; it adds a qualification to a single description. This is the most tempting trap because the word is contrast-like.",
+    "D": "Correct. \"Even so\" shows that, although the crab is thoroughly a land animal, it cannot do without the sea."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

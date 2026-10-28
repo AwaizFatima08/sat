@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0647",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Before mechanical refrigeration, wealthy households in cool climates stored ice in ice houses: brick-lined pits, roofed and shaded, that were packed each winter with blocks cut from a frozen pond and covered with straw. Even in the best-built ice house, the stored ice slowly melted from its outer surfaces inward. The amount lost in a given period depends mainly on the area of ice exposed to the air, whereas the amount stored depends on its volume, and doubling every dimension of a block of ice quadruples its surface but multiplies its volume by eight. Historian Olivia Brandt notes that the ice houses of great estates were often several times the size of those at ordinary farms, and that estate records mention ice in August while farm diaries rarely do. Brandt's observations suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "farms harvested their ice later in the winter than estates did and so stored less of it.",
+    "B": "a large store of ice lasted longer because a smaller share of it was exposed to melting.",
+    "C": "the ice in a large ice house melted more slowly because its straw covering was thicker.",
+    "D": "estates stored ice because they could afford the labor of cutting it, which farms could not."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The text gives a rule: melting depends on surface, storage on volume, and volume grows much faster than surface as a block gets bigger. A large store therefore loses a smaller fraction of itself each day than a small one. That explains why estates, with their far larger ice houses, still had ice in August when farms did not.",
+    "A": "Incorrect. The text says nothing about when ice was cut; it contrasts the size of the stores.",
+    "B": "Correct. Volume grows faster than surface, so a big store loses a smaller fraction each day and survives into late summer, as the estate records show.",
+    "C": "Incorrect. The text ties melting to the exposed surface of the ice, not to the thickness of the straw.",
+    "D": "Incorrect. The text says farms did store ice; the difference is how long it lasted, and labor is never mentioned."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "wrong_logic",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

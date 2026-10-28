@@ -1,0 +1,57 @@
+{
+  "id": "m-stc-0603",
+  "section": "math",
+  "domain": "psda",
+  "type": "stat_claims",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A hospital in Dhaka, Bangladesh, has 900 nurses, 300 of whom work night shifts. A researcher selected 80 nurses at random from the night-shift nurses and randomly assigned 40 of them to take a scheduled 20-minute rest break during each shift; the other 40 took no scheduled break. After one month, the nurses who took the scheduled break reported less fatigue, on average. Which of the following is the most appropriate conclusion?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "For all 900 nurses at the hospital, taking the scheduled break likely causes less reported fatigue.",
+    "B": "Taking the scheduled break is associated with less reported fatigue among the night-shift nurses, but no cause-and-effect conclusion can be drawn, because only 80 nurses took part.",
+    "C": "Taking the scheduled break likely caused less reported fatigue for the 40 nurses who took it, but the result cannot be applied to any other nurses.",
+    "D": "For the hospital's night-shift nurses, taking the scheduled break likely causes less reported fatigue."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The 40 nurses who took the break were assigned at random, so a cause-and-effect conclusion is supported.",
+    "The 80 nurses were selected at random from the 300 night-shift nurses, not from all 900 nurses, so the conclusion can be generalized to the hospital's night-shift nurses only."
+  ],
+  "explanation": {
+    "A": "Incorrect. The sample was drawn only from the night-shift nurses, so the result cannot be generalized to all 900 nurses.",
+    "B": "Incorrect. The treatment was assigned at random, which supports a cause-and-effect conclusion; a sample of 80 does not prevent that.",
+    "C": "Incorrect. Because the 80 nurses were a random sample of the night-shift nurses, the causal conclusion applies to the night-shift nurses, not just the 40 in the treatment group.",
+    "D": "Correct. Random assignment supports cause and effect, and random selection from the night-shift nurses allows generalization to that group."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "design = {'random_sample_from': 'night-shift nurses', 'random_assignment': True}\nassert design['random_assignment']\nkey = choices[answer]\nassert answer == 'D' and design['random_sample_from'] in key and 'causes' in key and '900' not in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

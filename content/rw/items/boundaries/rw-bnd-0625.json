@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0625",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The roving coral grouper, a reef fish of the Red Sea and the Indian ______ sometimes hunts with a partner of a different species. When prey hides in a crevice too narrow for the grouper to enter, the grouper may swim to a nearby moray eel and shake its head in a signal that researchers have described as an invitation; the eel then follows it to the hiding place and flushes the prey out. Biologists regard this as a rare example of cooperation across species in the wild.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "Ocean,",
+    "B": "Ocean, and",
+    "C": "Ocean",
+    "D": "Ocean;"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "\"A reef fish of the Red Sea and the Indian Ocean\" is extra information that renames the grouper. It opens with a comma after \"grouper,\" so it must close with a comma too, before the verb \"hunts.\" The semicolon later in the text joins two independent clauses and has no bearing on this boundary.",
+    "A": "Correct. The closing comma matches the opening comma after \"grouper\" and completes the pair around the extra information.",
+    "B": "Incorrect. Once the comma closes the extra information, \"and sometimes hunts\" is left with nothing to join to; the subject needs \"hunts\" as its own verb, not as a second item after \"and.\"",
+    "C": "Incorrect. Without a closing comma, the extra information is never set off and runs straight into the verb \"hunts.\"",
+    "D": "Incorrect. A semicolon can't separate the subject \"The roving coral grouper\" from its verb \"hunts.\""
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "supplements",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

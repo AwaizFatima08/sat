@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0656",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A laboratory has a 400-gram sample of a radioactive substance. The mass \\(M\\), in grams, of the substance remaining after \\(t\\) days is modeled by \\(M = 400\\left(\\frac{1}{2}\\right)^{\\frac{t}{6}}\\). According to the model, after how many days will 50 grams of the substance remain?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "18"
+  ],
+  "solution": [
+    "Set \\(M = 50\\): \\(400\\left(\\frac{1}{2}\\right)^{\\frac{t}{6}} = 50\\), so \\(\\left(\\frac{1}{2}\\right)^{\\frac{t}{6}} = \\frac{50}{400} = \\frac{1}{8}\\).",
+    "Since \\(\\frac{1}{8} = \\left(\\frac{1}{2}\\right)^{3}\\), the exponents must be equal: \\(\\frac{t}{6} = 3\\).",
+    "So \\(t = 18\\) days."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t')\nsols = solve(Eq(400*Rational(1, 2)**(t/6), 50), t)\nassert sols == [18]\nassert Rational(spr_answers[0]) == 18",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "3",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

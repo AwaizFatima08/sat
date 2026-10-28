@@ -1,0 +1,85 @@
+{
+  "id": "rw-ceq-0639",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Before railways, long-distance travelers in England rode stagecoaches on turnpike roads, which were maintained by trusts that collected tolls at gates. Historians have often assumed that a railway's arrival ruined the turnpikes in its path almost at once. Transport historian Eleanor Whitcombe, who studied the account books of one turnpike trust in the English Midlands, offers a more gradual picture: in her reading, the trust's income from stagecoaches collapsed within a few years of the railway's opening in 1838, but tolls from farm wagons and local carts held up, so total receipts declined far more slowly than the stagecoach figures alone would suggest.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Annual Toll Receipts of a Midlands Turnpike Trust",
+    "columns": [
+      "Year",
+      "Tolls from stagecoaches (£)",
+      "Tolls from wagons and carts (£)",
+      "Total tolls (£)"
+    ],
+    "rows": [
+      [
+        "1836",
+        1420,
+        2050,
+        3470
+      ],
+      [
+        "1840",
+        610,
+        2110,
+        2720
+      ],
+      [
+        "1844",
+        180,
+        2030,
+        2210
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Whitcombe's reading?",
+  "choices": {
+    "A": "Stagecoach tolls fell from £1,420 in 1836 to £180 in 1844, yet total tolls fell by only about a third, because wagon and cart tolls stayed near £2,000.",
+    "B": "By 1844, stagecoach tolls made up less than a tenth of the trust's total receipts.",
+    "C": "Tolls from wagons and carts declined steadily as farmers shifted their goods to the railway.",
+    "D": "Total tolls were lower in each year shown than in the year before the railway opened."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Whitcombe's reading combines three facts: stagecoach tolls collapsed, wagon and cart tolls held up, and so total receipts fell only slowly. The evidence must draw on all three columns. Stagecoach tolls fell from £1,420 to £180; wagon and cart tolls stayed between £2,030 and £2,110; total tolls fell from £3,470 to £2,210, about 36 percent.",
+    "A": "Correct. It shows the collapse in stagecoach tolls, the steadiness of wagon and cart tolls, and the resulting modest fall in the total, supporting the whole reading.",
+    "B": "Incorrect. This is true (£180 of £2,210), but it shows only how far stagecoach tolls had collapsed, not that other tolls held up.",
+    "C": "Incorrect. Wagon and cart tolls went £2,050, £2,110, £2,030, which is not a steady decline, so this misreads the table.",
+    "D": "Incorrect. This is true, but a falling total is also what the 'immediate ruin' view predicts; without the breakdown by traffic it cannot show that the decline was gradual."
+  },
+  "traps": {
+    "B": "too_narrow",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

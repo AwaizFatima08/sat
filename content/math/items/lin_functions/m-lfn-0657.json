@@ -1,0 +1,58 @@
+{
+  "id": "m-lfn-0657",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For the linear function \\(f\\), \\(f(6) = 2f(3)\\). Which of the following must be true?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The graph of \\(y = f(x)\\) in the \\(xy\\)-plane passes through the origin.",
+    "B": "The slope of the graph of \\(y = f(x)\\) in the \\(xy\\)-plane is 2.",
+    "C": "\\(f(9) = 2f(6)\\)",
+    "D": "\\(f(3) = 3\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(f(x) = mx + b\\). Then \\(f(6) = 6m + b\\) and \\(2f(3) = 6m + 2b\\).",
+    "Setting them equal gives \\(b = 0\\), so \\(f(x) = mx\\) and \\(f(0) = 0\\): the graph passes through the origin.",
+    "The slope \\(m\\) can be any number, so the other statements need not hold. For example, \\(f(x) = 5x\\) satisfies \\(f(6) = 2f(3)\\), but its slope is 5, \\(f(3) = 15\\), and \\(f(9) = 45\\) while \\(2f(6) = 60\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(6m + b = 2(3m + b)\\) forces \\(b = 0\\), so \\(f(0) = 0\\) for every such function.",
+    "B": "Incorrect. The condition fixes the \\(y\\)-intercept, not the slope; \\(f(x) = 5x\\) also satisfies \\(f(6) = 2f(3)\\).",
+    "C": "Incorrect. With \\(f(x) = mx\\), \\(f(9) = 9m\\) but \\(2f(6) = 12m\\); these are equal only when \\(m = 0\\), so this need not be true.",
+    "D": "Incorrect. \\(f(3) = 3m\\), which equals 3 only when \\(m = 1\\); for \\(f(x) = 5x\\), \\(f(3) = 15\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "x, m, b = symbols('x m b')\nf = lambda u: m*u + b\nassert solve(Eq(f(6), 2*f(3)), b) == [0]\ng = lambda u: 5*u\nassert g(6) == 2*g(3) and g(0) == 0\nassert diff(g(x), x) != 2 and g(9) != 2*g(6) and g(3) != 3\nassert answer == 'A' and 'origin' in choices['A']",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

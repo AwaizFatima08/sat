@@ -1,0 +1,124 @@
+{
+  "id": "m-rtt-0614",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, point \\(D\\) lies on \\(\\overline{AC}\\) and \\(\\overline{BD}\\) is perpendicular to \\(\\overline{AC}\\). \\(AB = 10\\), \\(BC = 17\\), and \\(BD = 8\\). What is the value of \\(\\cos(\\angle ACB)\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "D": [
+        6,
+        0
+      ],
+      "C": [
+        21,
+        0
+      ],
+      "B": [
+        6,
+        8
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "B",
+        "D"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          2.0,
+          4.6
+        ],
+        "text": "10"
+      },
+      {
+        "at": [
+          14.2,
+          4.9
+        ],
+        "text": "17"
+      },
+      {
+        "at": [
+          7.0,
+          4.0
+        ],
+        "text": "8"
+      }
+    ],
+    "right_angles": [
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{8}{17}\\)",
+    "B": "\\(\\frac{15}{17}\\)",
+    "C": "\\(\\frac{3}{5}\\)",
+    "D": "\\(\\frac{15}{8}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Angle \\(ACB\\) is an acute angle of right triangle \\(BDC\\), whose hypotenuse is \\(BC = 17\\).",
+    "\\(DC = \\sqrt{17^{2} - 8^{2}} = \\sqrt{225} = 15\\).",
+    "\\(\\cos(\\angle ACB) = \\frac{DC}{BC} = \\frac{15}{17}\\). (The length \\(AB = 10\\) is not needed.)"
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(\\frac{8}{17}\\) is \\(\\sin(\\angle ACB)\\), the opposite leg \\(BD\\) over the hypotenuse.",
+    "B": "Correct. \\(DC = 15\\), so \\(\\cos(\\angle ACB) = \\frac{15}{17}\\).",
+    "C": "Incorrect. \\(\\frac{3}{5} = \\frac{6}{10}\\) is \\(\\cos(\\angle BAC)\\), the cosine of the angle at \\(A\\), not at \\(C\\).",
+    "D": "Incorrect. \\(\\frac{15}{8}\\) is \\(\\frac{DC}{BD}\\), the adjacent leg over the opposite leg; a cosine uses the hypotenuse and cannot exceed 1."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "C": "wrong_quantity",
+    "D": "reciprocal"
+  },
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert d('A','B')==10 and d('B','C')==17 and d('B','D')==8 and abs(ang('B','D','C')-90)<0.1\ndc=sqrt(17**2-8**2)\nans=dc/17\nassert dc==15 and ans==Rational(15,17) and abs(cos(ang('A','C','B')*pi/180)-ans)<1e-6\nassert value(choices[answer])==ans\nassert value(choices['C'])==d('A','D')/d('A','B')\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

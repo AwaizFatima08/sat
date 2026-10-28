@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0648",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the days of the telegraph, every message was tapped out by hand as a series of short and long signals. The code was the same for everyone, yet experienced operators insisted that no two people sent it quite alike. One would leave slightly longer pauses between words; another would clip the long signals short. Operators called this personal style a \"fist,\" and a seasoned listener could often ______ a colleague at a distant station by sound alone, long before the message included a name.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "identify",
+    "B": "contact",
+    "C": "correct",
+    "D": "imitate"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Each operator had a recognizable personal style, and the listener could tell who was sending \"by sound alone, long before the message included a name.\" Knowing who someone is from a clue is to \"identify\" them.",
+    "A": "Correct. The personal \"fist\" let a listener work out which colleague was sending before any name appeared.",
+    "B": "Incorrect. Reaching a colleague is not something done \"by sound alone\"; the sentence is about recognizing who is sending.",
+    "C": "Incorrect. Nothing in the text is about fixing mistakes in a colleague's sending.",
+    "D": "Incorrect. The sentence is about recognizing another operator, not copying that operator's style."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "not_in_text",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

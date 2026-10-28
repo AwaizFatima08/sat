@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0633",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Nimal leaves his home in Colombo and walks along a straight road at a constant speed of 5 kilometers per hour. Thirty minutes later, his sister leaves the same home and cycles along the same road at a constant speed of 15 kilometers per hour. How many minutes after she leaves will his sister catch up with Nimal?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(45\\)",
+    "B": "\\(10\\)",
+    "C": "\\(30\\)",
+    "D": "\\(15\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(t\\) be the number of hours after the sister leaves. By then Nimal has walked for \\(t + 0.5\\) hours.",
+    "Equal distances: \\(5(t + 0.5) = 15t\\), so \\(2.5 = 10t\\) and \\(t = 0.25\\) hour.",
+    "\\(0.25\\) hour is 15 minutes."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the number of minutes after Nimal leaves, \\(30 + 15\\), not after his sister leaves.",
+    "B": "Incorrect. This is the result of dividing Nimal's 2.5-kilometer head start by the sister's speed alone, \\(\\frac{2.5}{15}\\) hour, instead of by the difference in speeds.",
+    "C": "Incorrect. This assumes the sister needs as long as Nimal's head start; her speed is three times his, so she needs less.",
+    "D": "Correct. \\(5(t + 0.5) = 15t\\) gives \\(t = 0.25\\) hour, which is 15 minutes."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "wrong_formula",
+    "C": "concept"
+  },
+  "verify": "t = symbols('t')\nth = solve(Eq(5*(t + Rational(1, 2)), 15*t), t)[0]\ns = th*60\nassert s == 15\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

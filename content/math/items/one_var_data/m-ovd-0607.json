@@ -1,0 +1,58 @@
+{
+  "id": "m-ovd-0607",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A data set consists of 9 values and has a median of 15. Each of the three smallest values is decreased by 2, and the other values are not changed. What is the median of the new data set?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(13\\)",
+    "B": "\\(15\\)",
+    "C": "\\(\\frac{43}{3}\\)",
+    "D": "It cannot be determined from the information given."
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "With 9 values in order, the median is the 5th value, 15.",
+    "The three smallest values are already at or below the 5th value. Decreasing them keeps them below it, and the 4th through 9th values do not change.",
+    "So the 5th value is still 15, and the median is 15."
+  ],
+  "explanation": {
+    "A": "Incorrect. This subtracts 2 from the median, but the median value itself was not changed; only the three smallest values were.",
+    "B": "Correct. The three smallest values stay in the lower half after they are decreased, so the middle value is still 15.",
+    "C": "Incorrect. This treats the median like a mean, subtracting \\(\\frac{3 \\times 2}{9}\\) from 15. The median is a position, not an average of all values.",
+    "D": "Incorrect. Although the data values are unknown, the three smallest values stay below the middle value, so the median can be determined: it is 15."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "import itertools\nfor s in [[1,2,3,10,15,16,20,30,40], [15,15,15,15,15,15,15,15,15], [0,14,14,14,15,15,15,15,15], [14,14,14,15,15,100,101,102,103]]:\n    s = sorted(s)\n    assert s[4] == 15\n    t = sorted([v - 2 for v in s[:3]] + s[3:])\n    assert t[4] == 15\nassert value(choices[answer]) == 15\nassert all(k == 'D' or value(choices[k]) != 15 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

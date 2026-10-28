@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0611",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "True cinnamon comes from the inner bark of a small tree grown mainly in the southwest of Sri Lanka, near the town of Galle. Harvesting it is delicate work. The outer bark must be scraped away and the thin inner bark peeled off in long strips without tearing it. ______ most of the harvest is still done by hand, by skilled peelers who learn the craft from their parents and grandparents.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Similarly,",
+    "B": "In contrast,",
+    "C": "For example,",
+    "D": "Consequently,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The third sentence explains that the inner bark must be removed carefully \"without tearing it.\" The last sentence states what follows from this: the work is still done by hand by skilled peelers. A cause-and-effect transition is needed.",
+    "A": "Incorrect. \"Similarly\" signals a parallel point, but the last sentence is a consequence of the delicate work, not a point like it.",
+    "B": "Incorrect. \"In contrast\" signals a difference, but hand peeling follows from the careful work the text describes rather than contrasting with it.",
+    "C": "Incorrect. Peeling by hand is not an example of scraping away the outer bark; it is the result of the work being so delicate.",
+    "D": "Correct. \"Consequently\" shows that the harvest is done by hand because the peeling is so delicate."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

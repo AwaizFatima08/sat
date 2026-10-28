@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0655",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Some orchids produce no nectar; instead, their flowers mimic the shape and scent of a female bee, and male bees that attempt to mate with the flowers carry pollen from one plant to the next. Deception of this kind works only until the males learn. Entomologist Gael Monnier tracked marked male bees at a site where the orchids grew in a dense patch and at a second site where plants of the same species stood dozens of meters apart. At the dense patch, most males visited one or two flowers, flew off, and were never seen at the orchids again, while plants at the scattered site were visited repeatedly and set roughly three times as much fruit. Monnier suggests that for an orchid relying on this strategy, ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "growing far from others of its kind may be an advantage rather than a handicap.",
+    "B": "offering a small amount of nectar would persuade deceived males to keep returning.",
+    "C": "a dense patch attracts more males than a scattered population and is therefore pollinated more reliably.",
+    "D": "the males at the scattered site were unable to learn because they met the flowers too rarely."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Males learn to avoid the orchids after being fooled. In a dense patch, each male is fooled once or twice and then abandons the whole cluster, so the remaining flowers lose him. Scattered plants, each met by a male who has not yet encountered the species nearby, keep receiving visits and set more fruit. For a plant that most species would expect to suffer from isolation, isolation here helps.",
+    "A": "Correct. A fooled male avoids the orchids afterward, so a dense patch quickly runs out of naive visitors, while scattered plants keep meeting males that have not yet been deceived.",
+    "B": "Incorrect. The text describes nectarless orchids and never considers what nectar would do.",
+    "C": "Incorrect. The scattered plants set about three times as much fruit, so they were pollinated more reliably, not less.",
+    "D": "Incorrect. The text shows that scattered plants received repeated visits; it does not show that the males there could not learn, only that each had fewer chances to be fooled."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

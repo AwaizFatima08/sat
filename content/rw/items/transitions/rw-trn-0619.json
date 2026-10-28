@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0619",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In the 1950s, the geologist Marie Tharp set out to map the floor of the Atlantic Ocean, but at the time women were not permitted aboard the research ships that measured ocean depths. ______ she worked on land, turning the long lists of depth readings that her colleagues sent back from each voyage into detailed profiles of the seabed. As the profiles accumulated, she noticed a deep valley running down the center of the Mid-Atlantic Ridge, a feature that later proved crucial to the theory of plate tectonics.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "In addition,",
+    "B": "For instance,",
+    "C": "Instead,",
+    "D": "Nevertheless,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The first sentence says Tharp could not go to sea to gather depth readings. The second sentence describes what she did in place of going to sea: she worked on land with readings others collected. A transition that introduces an alternative to the thing that was not possible is needed.",
+    "A": "Incorrect. \"In addition\" would add working on land to going to sea, but the text says she could not go to sea at all.",
+    "B": "Incorrect. Working on land is not an example of women being kept off the ships; it is Tharp's response to that rule.",
+    "C": "Correct. \"Instead\" shows that, since she could not work at sea, Tharp did her mapping on land with readings sent to her.",
+    "D": "Incorrect. \"Nevertheless\" is tempting because Tharp overcame an obstacle, but the sentence does not say she went to sea despite the ban; it describes the different method she used in its place."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

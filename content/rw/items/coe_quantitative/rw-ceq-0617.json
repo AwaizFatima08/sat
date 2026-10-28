@@ -1,0 +1,105 @@
+{
+  "id": "rw-ceq-0617",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "City beekeeping is sometimes dismissed as a hobby that cannot produce much honey. Beekeeper and researcher Jonas Weber weighed the honey taken each month from hives on rooftops in Berlin, Germany, and from hives on a farm outside the city during one summer. He argued that rooftop hives are as productive over a season as rural ones, because the city's gardens and street trees keep flowering through late summer, after farm fields have finished blooming.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Honey Harvested per Hive from Rooftop and Farm Hives, One Summer",
+    "x_label": "Month",
+    "y_label": "Honey per hive (kg)",
+    "series": [
+      {
+        "name": "Rooftop hives",
+        "points": [
+          [
+            "May",
+            8
+          ],
+          [
+            "June",
+            10
+          ],
+          [
+            "July",
+            9
+          ],
+          [
+            "August",
+            7
+          ]
+        ]
+      },
+      {
+        "name": "Farm hives",
+        "points": [
+          [
+            "May",
+            9
+          ],
+          [
+            "June",
+            11
+          ],
+          [
+            "July",
+            4
+          ],
+          [
+            "August",
+            2
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Weber's argument?",
+  "choices": {
+    "A": "Farm hives produced slightly more honey per hive than rooftop hives did in both May and June.",
+    "B": "Rooftop hives produced less honey per hive than farm hives did in July and August.",
+    "C": "Rooftop hives produced their largest monthly harvest, 10 kilograms per hive, in June.",
+    "D": "Although farm hives produced slightly more honey in May and June, rooftop hives produced far more in July and August, when farm hives yielded only 4 and 2 kilograms."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Weber argues two things: rooftop hives match rural ones over the season, and the reason is that the city keeps flowering into late summer. Support must show the rooftop hives holding up in July and August while the farm hives drop off. Rooftop hives gave 9 and 7 kilograms in those months against 4 and 2 for the farm, which more than makes up for the farm's slight lead in May and June (totals: 34 kilograms rooftop, 26 farm).",
+    "A": "Incorrect. This is true, but it shows the farm hives doing better, so by itself it works against Weber rather than for him.",
+    "B": "Incorrect. This reverses the graph: in July and August the rooftop hives produced more, not less.",
+    "C": "Incorrect. This describes only one month for the rooftop hives and makes no comparison with the farm hives.",
+    "D": "Correct. This shows the rooftop hives pulling well ahead in late summer, which is both why their season total matches the farm's and the pattern Weber's explanation predicts."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "reversed",
+    "C": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

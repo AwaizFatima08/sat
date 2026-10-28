@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0661",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "How many distinct real solutions does the equation \\((x^{2} + 4)(x^{2} - 4x + 4)(x^{2} + x - 6) = 0\\) have?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3\\)",
+    "B": "\\(4\\)",
+    "C": "\\(6\\)",
+    "D": "\\(2\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "A product is \\(0\\) when a factor is \\(0\\). \\(x^{2} + 4 = 0\\) has no real solutions, since \\(x^{2} \\ge 0\\).",
+    "\\(x^{2} - 4x + 4 = (x - 2)^{2} = 0\\) gives \\(x = 2\\). \\(x^{2} + x - 6 = (x + 3)(x - 2) = 0\\) gives \\(x = -3\\) or \\(x = 2\\).",
+    "The distinct real solutions are \\(2\\) and \\(-3\\): exactly \\(2\\) of them."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of counting \\(x = 2\\) twice, once from \\((x - 2)^{2}\\) and once from \\((x + 3)(x - 2)\\); distinct solutions are counted once.",
+    "B": "Incorrect. This is the result of counting the real roots with multiplicity: \\((x - 2)^{2}\\) contributes a double root and \\(x^{2} + x - 6\\) two roots, but only \\(2\\) and \\(-3\\) are distinct.",
+    "C": "Incorrect. This is the degree of the polynomial, not the number of distinct real solutions; \\(x^{2} + 4 = 0\\) has no real solutions and \\(x = 2\\) repeats.",
+    "D": "Correct. The only real solutions are \\(x = 2\\) (from two of the factors) and \\(x = -3\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\nexpr = (x**2 + 4)*(x**2 - 4*x + 4)*(x**2 + x - 6)\nreal = {r for r in roots(Poly(expr, x)) if r.is_real}\nassert real == {2, -3}\nassert value(choices[answer]) == len(real) == 2\nassert all(value(choices[k]) != 2 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

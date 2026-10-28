@@ -1,0 +1,58 @@
+{
+  "id": "m-arv-0627",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The surface area of a sphere is increased by \\(44\\%\\). By what percent does the volume of the sphere increase?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(44\\%\\)",
+    "B": "\\(66\\%\\)",
+    "C": "\\(72.8\\%\\)",
+    "D": "\\(20\\%\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Surface area scales by \\(k^{2}\\) when the radius scales by \\(k\\). So \\(k^{2} = 1.44\\) and \\(k = 1.2\\): the radius increases by \\(20\\%\\).",
+    "Volume scales by \\(k^{3} = 1.2^{3} = 1.728\\).",
+    "That is an increase of \\(72.8\\%\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This assumes volume grows by the same percent as surface area, but volume scales by \\(k^{3}\\) while surface area scales by \\(k^{2}\\).",
+    "B": "Incorrect. This is \\(1.5 \\cdot 44\\%\\); scale factors multiply, they do not add, so the volume factor is \\(1.44^{3/2} = 1.728\\), not \\(1 + 1.5(0.44)\\).",
+    "C": "Correct. \\(k = \\sqrt{1.44} = 1.2\\), and \\(1.2^{3} = 1.728\\), a \\(72.8\\%\\) increase.",
+    "D": "Incorrect. \\(20\\%\\) is the increase in the radius, not the volume."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "percent_add",
+    "D": "stopped_early"
+  },
+  "verify": "k=sqrt(Rational(144,100))\nassert k==Rational(6,5)\nans=k**3-1\nassert ans==Rational(728,1000)\nassert abs(N(value(choices[answer])-ans))<1e-9\nassert all(abs(N(value(c)-ans))>1e-6 for k2,c in choices.items() if k2!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

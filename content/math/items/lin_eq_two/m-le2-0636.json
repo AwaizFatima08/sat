@@ -1,0 +1,44 @@
+{
+  "id": "m-le2-0636",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, line \\(k\\) passes through the points \\((-2, 8)\\) and \\((6, -4)\\). Line \\(k\\) crosses the \\(x\\)-axis at \\((a, 0)\\) and the \\(y\\)-axis at \\((0, b)\\). What is the value of \\(a + b\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "25/3"
+  ],
+  "solution": [
+    "Slope \\(= \\frac{-4 - 8}{6 - (-2)} = -\\frac{3}{2}\\). Through \\((-2, 8)\\): \\(y = -\\frac{3}{2}x + 5\\), so \\(b = 5\\).",
+    "Set \\(y = 0\\): \\(x = \\frac{10}{3}\\), so \\(a = \\frac{10}{3}\\).",
+    "\\(a + b = \\frac{10}{3} + 5 = \\frac{25}{3}\\)."
+  ],
+  "verify": "x = symbols('x')\nm = Rational(-4 - 8, 6 - (-2))\nline = m*(x + 2) + 8\nb = line.subs(x, 0)\na = solve(line, x)[0]\nassert a + b == Rational(25, 3)\nassert [Rational(s) for s in spr_answers] == [a + b]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "25/3",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

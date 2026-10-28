@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0611",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 1,
+  "b": -1.5,
+  "subject": "literature",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Arif's father ran the tea stall on platform three of the railway station. Every evening Arif stacked the day's coins into neat ______ he carried the full tin to his father at the back of the stall. He was too young to pour the tea himself, but he was proud to be trusted with the money.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "towers then",
+    "B": "towers, and then",
+    "C": "towers and then",
+    "D": "towers, then"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "\"Every evening Arif stacked the day's coins into neat towers\" is a complete sentence, and \"he carried the full tin to his father\" is another. Two independent clauses can be joined by a comma followed by a coordinating conjunction such as \"and.\" \"Then\" alone is not a conjunction and can't do that job.",
+    "A": "Incorrect. With no punctuation, the two independent clauses run together (a run-on sentence).",
+    "B": "Correct. A comma followed by the coordinating conjunction \"and\" joins the two independent clauses.",
+    "C": "Incorrect. When \"and\" joins two independent clauses, a comma is needed before it.",
+    "D": "Incorrect. \"Then\" is an adverb, not a conjunction, so a comma plus \"then\" joins two independent clauses with only a comma—a comma splice."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "linking_clauses",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "claude-opus-review",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "solver objection reviewed: key confirmed (a comma is required before 'and' joining two independent clauses)",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

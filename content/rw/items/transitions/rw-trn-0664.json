@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0664",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Mr. Haldane had kept the accounts of the Penrose shipping office for twenty-two years, and in all that time not a single ledger had gone astray, a record he mentioned to no one and thought about a good deal. When the volume for 1874 could not be found on its shelf one morning in March, he searched the strong room, the clerks' desks, and the cupboard under the stairs, and he said nothing to the partners. ______ he knew that the fault, if there was one, would be laid at his door whether he had caused it or not, and he preferred to find the book before anyone had occasion to ask for it.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "In short,",
+    "B": "Meanwhile,",
+    "C": "Even so,",
+    "D": "After all,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence says that Mr. Haldane searched for the ledger and told the partners nothing. The last sentence gives his reason: he knew he would be blamed and wanted to find the book first. A transition that introduces a justification for the action just described is needed.",
+    "A": "Incorrect. The last sentence does not summarize the search; it explains the motive behind the silence.",
+    "B": "Incorrect. \"Meanwhile\" introduces an event happening at the same time, but the last sentence states a reason, not a simultaneous event.",
+    "C": "Incorrect. \"Even so\" would mean that he knew he would be blamed in spite of keeping quiet, but his expectation of blame is the reason for his silence, not something that holds against it.",
+    "D": "Correct. \"After all\" introduces the reason that explains why Mr. Haldane kept quiet: he expected to be blamed."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

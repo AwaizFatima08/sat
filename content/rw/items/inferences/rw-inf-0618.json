@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0618",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Transportation economist Marcus Ellefsen studied what happened after a city began charging a toll on the highway that carried most commuters into its center. In the year after the toll began, the number of cars on the highway during the morning rush fell by nearly a third. Over the same period, traffic on the older, slower streets running parallel to the highway rose sharply, and the total number of cars entering the center each morning was almost unchanged. Ellefsen's data suggest that most drivers who left the highway ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "began paying the toll after a few months once the novelty wore off.",
+    "B": "switched from driving to taking buses or trains into the center.",
+    "C": "changed their route rather than giving up driving into the center.",
+    "D": "stopped traveling into the city center during the morning rush."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Highway traffic fell, but traffic on the parallel streets rose and the total number of cars entering the center stayed about the same. The cars that left the highway therefore still arrived in the center, just by a different road.",
+    "A": "Incorrect. The text describes the full year after the toll began and gives no sign that highway traffic recovered.",
+    "B": "Incorrect. The total number of cars entering the center was almost unchanged, so drivers did not abandon their cars.",
+    "C": "Correct. Falling highway traffic, rising parallel-street traffic, and a steady total point to drivers rerouting.",
+    "D": "Incorrect. This contradicts the nearly unchanged total number of cars entering the center each morning."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

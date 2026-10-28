@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0625",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A school canteen in Lahore sells samosas for 30 rupees each and juice boxes for 40 rupees each. On Monday the canteen sold a total of 50 items and collected 1,700 rupees. The system of equations \\(s + j = 50\\) and \\(30s + 40j = 1{,}700\\) models this situation, where \\(s\\) is the number of samosas and \\(j\\) is the number of juice boxes sold. What does the number 50 in the equation \\(s + j = 50\\) represent?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The price, in rupees, of one juice box",
+    "B": "The total amount, in rupees, collected on Monday",
+    "C": "The number of juice boxes sold on Monday",
+    "D": "The total number of samosas and juice boxes sold on Monday"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "In \\(s + j = 50\\), \\(s\\) and \\(j\\) are numbers of items, so their sum is the total number of items sold: 50.",
+    "The price of a juice box, 40 rupees, appears as the coefficient of \\(j\\) in \\(30s + 40j = 1{,}700\\), where the constant 1,700 is the amount collected.",
+    "(Solving gives \\(s = 30\\) and \\(j = 20\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. A juice box costs 40 rupees, which appears as the coefficient of \\(j\\) in the second equation; \\(s + j\\) counts items, so its constant is a number of items.",
+    "B": "Incorrect. The total collected is 1,700 rupees, the constant in the second equation.",
+    "C": "Incorrect. The number of juice boxes is \\(j\\), which the system gives as 20, not 50.",
+    "D": "Correct. \\(s + j\\) counts all the items sold, so the equation \\(s + j = 50\\) says that 50 items were sold in all."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "wrong_quantity"
+  },
+  "verify": "s, j = symbols('s j')\nsol = solve([s + j - 50, 30*s + 40*j - 1700], [s, j])\nassert sol == {s: 30, j: 20}\nassert (s + j).subs(sol) == 50\nassert choices[answer].startswith('The total number of samosas and juice boxes')",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

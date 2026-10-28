@@ -1,0 +1,45 @@
+{
+  "id": "m-pct-0612",
+  "section": "math",
+  "domain": "psda",
+  "type": "percentages",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A metalworker has 400 grams of an alloy that is \\(10\\%\\) tin by mass. The metalworker melts the alloy and adds 50 grams of pure tin. What percent of the new alloy is tin by mass?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "20"
+  ],
+  "solution": [
+    "Tin at the start: \\(0.10 \\cdot 400 = 40\\) grams. After adding: \\(40 + 50 = 90\\) grams of tin.",
+    "New total mass: \\(400 + 50 = 450\\) grams. Percent tin: \\(\\frac{90}{450} = 0.20 = 20\\%\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "ans = Rational(Rational(10, 100)*400 + 50, 400 + 50) * 100\nassert ans == 20\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "20",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

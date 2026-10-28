@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0654",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Diatoms are single-celled algae whose glassy shells survive in lake mud for thousands of years, and each species tolerates only a certain range of acidity. By identifying the diatoms in successive layers of a sediment core, scientists can reconstruct how a lake's acidity has changed. A lake in a mountain valley became markedly acidic during the twentieth century, and local opinion blames a smelter that opened on the valley floor in 1924. Limnologist Rhona McAllister's core shows acid-tolerant diatom species gradually replacing acid-sensitive ones beginning in layers that date, with an uncertainty of about a decade, to the 1870s, with the pace of change quickening after about 1930. If the dating is sound, McAllister's results suggest that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the acid-sensitive diatoms were displaced by species better suited to colder water.",
+    "B": "the smelter may have hastened the lake's acidification but cannot have started it.",
+    "C": "the smelter bore no responsibility for any of the change in the lake's acidity.",
+    "D": "the lake's acidity began to change only after the smelter opened in 1924."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The acid-tolerant species began taking over in the 1870s, and even allowing a decade of dating error, that is decades before 1924. Whatever began the acidification therefore predates the smelter. The quickening after about 1930, however, fits the smelter adding to a process already under way.",
+    "A": "Incorrect. The text links the species to acidity, not temperature, and never mentions cooling.",
+    "B": "Correct. The shift began some fifty years before the smelter existed, so the smelter cannot be the origin; the faster change after 1930 leaves room for it to have made things worse.",
+    "C": "Incorrect. The change sped up soon after the smelter opened, so the results leave open a role for it; they rule out only that it began the process.",
+    "D": "Incorrect. The core shows the change starting in the 1870s, well before the smelter."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "too_broad",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

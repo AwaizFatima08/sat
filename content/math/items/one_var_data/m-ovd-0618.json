@@ -1,0 +1,74 @@
+{
+  "id": "m-ovd-0618",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 4,
+  "b": 1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The dot plot shows the ages, in years, of the 11 students in a tabla class in Kolkata. Two of the students leave the class. The mean and the median of the ages of the remaining 9 students are the same as the mean and the median of the ages of all 11 students. Which of the following could be the ages of the two students who left?",
+  "figure": {
+    "kind": "dotplot",
+    "x_label": "Age (years)",
+    "values": [
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(14\\) and \\(20\\)",
+    "B": "\\(10\\) and \\(12\\)",
+    "C": "\\(15\\) and \\(16\\)",
+    "D": "\\(13\\) and \\(19\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The 11 ages add to 176, so the mean is 16; the median (6th value) is also 16.",
+    "For the mean to stay 16, the two ages removed must add to \\(2 \\times 16 = 32\\). For the median to stay 16, one age must be below 16 and one above, so the value 16 remains in the middle.",
+    "Only 13 and 19 satisfy both: \\(13 + 19 = 32\\), with 13 below and 19 above 16."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\(14 + 20 = 34 \\ne 32\\), so removing these two lowers the total too much: the new mean would be \\(\\frac{142}{9}\\), not 16.",
+    "B": "Incorrect. These two ages add to 22, not 32, so the mean would rise, and removing two values from below the median moves the median up to 18.",
+    "C": "Incorrect. \\(15 + 16 = 31\\), so the mean changes, and removing the value 16 itself changes the median to 17.",
+    "D": "Correct. \\(13 + 19 = 32\\), so the mean stays 16, and with one value removed from each side of the median the 5th of the remaining 9 values is still 16."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "v = sorted(figure['values'])\nm0, d0 = Rational(sum(v), 11), v[5]\nassert (m0, d0) == (16, 16)\npairs = {'A': (14, 20), 'B': (10, 12), 'C': (15, 16), 'D': (13, 19)}\ndef ok(p):\n    w = list(v); w.remove(p[0]); w.remove(p[1]); w.sort()\n    return Rational(sum(w), 9) == m0 and w[4] == d0\nassert [k for k in pairs if ok(pairs[k])] == [answer] == ['D']\nassert '13' in choices[answer] and '19' in choices[answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

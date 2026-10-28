@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0616",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The Sundarbans, a vast mangrove forest where the Ganges delta meets the Bay of Bengal, is crossed by countless channels. Some, fed by river water, are nearly fresh; others, close to the sea, are about as salty as the ocean. The saltwater crocodile, the largest reptile in the forest, has special glands on its tongue that remove excess salt from its body. Herpetologist Farida Rahman surveyed crocodiles in both the freshest and the saltiest channels and found them in similar numbers in both. Rahman's findings suggest that, within the Sundarbans, ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the saltiest channels offer crocodiles more food than the freshest ones do.",
+    "B": "crocodiles rely on river water to flush salt from their bodies.",
+    "C": "crocodiles are more abundant than in any other mangrove forest.",
+    "D": "the saltiness of the water is not what decides where the crocodiles live."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The crocodiles have glands that handle excess salt, and the survey found them equally common in the saltiest and the freshest channels. If salt levels were controlling their distribution, the numbers would differ; since they do not, something other than salinity must determine where the crocodiles are.",
+    "A": "Incorrect. The text gives no information about food in either type of channel.",
+    "B": "Incorrect. The text says the crocodiles remove salt with glands on the tongue, and they live equally well in salty channels.",
+    "C": "Incorrect. The survey compared channels within the Sundarbans, not different forests.",
+    "D": "Correct. Equal numbers in fresh and salty water mean salinity is not the deciding factor."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "C": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

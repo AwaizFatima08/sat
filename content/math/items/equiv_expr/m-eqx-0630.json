@@ -1,0 +1,58 @@
+{
+  "id": "m-eqx-0630",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A kayaker paddles 10 kilometers downstream at an average speed of \\((x + 2)\\) kilometers per hour and then paddles the 10 kilometers back upstream at an average speed of \\((x - 2)\\) kilometers per hour, where \\(x > 2\\). Which expression represents the total time, in hours, for the trip?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{10}{x}\\)",
+    "B": "\\(\\frac{40}{x^{2} - 4}\\)",
+    "C": "\\(\\frac{20x}{x^{2} - 4}\\)",
+    "D": "\\(\\frac{20x}{x^{2} + 4}\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Time is distance divided by speed: \\(\\frac{10}{x + 2} + \\frac{10}{x - 2}\\).",
+    "Common denominator \\((x + 2)(x - 2) = x^{2} - 4\\): the numerator is \\(10(x - 2) + 10(x + 2) = 20x\\).",
+    "The total time is \\(\\frac{20x}{x^{2} - 4}\\) hours."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of adding the two denominators, \\((x + 2) + (x - 2) = 2x\\), and writing \\(\\frac{20}{2x}\\); fractions cannot be added that way.",
+    "B": "Incorrect. This is the result of a sign slip in the numerator: \\(10(x - 2) + 10(x + 2) = 20x\\), not 40.",
+    "C": "Correct. \\(\\frac{10}{x + 2} + \\frac{10}{x - 2} = \\frac{20x}{x^{2} - 4}\\).",
+    "D": "Incorrect. This is the result of expanding \\((x + 2)(x - 2)\\) as \\(x^{2} + 4\\); the product is \\(x^{2} - 4\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "x = symbols('x')\nt = 10/(x + 2) + 10/(x - 2)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0611",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "On the Greek island of Crete, olives are picked from late autumn into winter, and growers debate when to harvest. Agronomist Eleni Papadakis pressed olives picked from the same grove on four dates during one season and recorded how much oil each 100 kilograms of olives produced. A tasting panel also rated the oil from each date. Her results show that the oil yield was greatest for olives picked in ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Oil Yield and Taste Rating of Olives Picked on Four Dates",
+    "columns": [
+      "Harvest date",
+      "Oil per 100 kg of olives (liters)",
+      "Taste rating (1–10)"
+    ],
+    "rows": [
+      [
+        "October 20",
+        14,
+        8.5
+      ],
+      [
+        "November 15",
+        18,
+        8.0
+      ],
+      [
+        "December 10",
+        21,
+        6.5
+      ],
+      [
+        "January 5",
+        20,
+        5.5
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "February, after the olives had fully ripened on the trees.",
+    "B": "January, when each 100 kilograms of olives yielded 20 liters of oil.",
+    "C": "December, when each 100 kilograms of olives yielded 21 liters of oil.",
+    "D": "October, when the oil received the highest taste rating."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The statement asks when the oil yield was greatest, so look for the largest number in the \"Oil per 100 kg\" column. That is 21 liters, for the December 10 harvest.",
+    "A": "Incorrect. The table does not include a February harvest.",
+    "B": "Incorrect. January's yield of 20 liters was close, but December's 21 liters was higher.",
+    "C": "Correct. Olives picked on December 10 yielded 21 liters per 100 kilograms, more than on any other date.",
+    "D": "Incorrect. October's oil did get the best taste rating, but its yield of 14 liters was the lowest in the table."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

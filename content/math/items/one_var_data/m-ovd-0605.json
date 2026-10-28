@@ -1,0 +1,88 @@
+{
+  "id": "m-ovd-0605",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The histogram summarizes the waiting times, in minutes, of the 40 customers served at a pharmacy on one morning. Each interval includes its left endpoint but not its right endpoint. What fraction of the customers waited less than 15 minutes?",
+  "figure": {
+    "kind": "histogram",
+    "x_label": "Waiting time (minutes)",
+    "y_label": "Number of customers",
+    "bins": [
+      [
+        0,
+        5,
+        6
+      ],
+      [
+        5,
+        10,
+        10
+      ],
+      [
+        10,
+        15,
+        12
+      ],
+      [
+        15,
+        20,
+        8
+      ],
+      [
+        20,
+        25,
+        4
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{2}{5}\\)",
+    "B": "\\(\\frac{3}{10}\\)",
+    "C": "\\(\\frac{9}{10}\\)",
+    "D": "\\(\\frac{7}{10}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The customers who waited less than 15 minutes are in the first three bars: \\(6 + 10 + 12 = 28\\).",
+    "The fraction is \\(\\frac{28}{40} = \\frac{7}{10}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(\\frac{16}{40}\\), the fraction who waited less than 10 minutes. The 10-to-15 bar also counts.",
+    "B": "Incorrect. This is \\(\\frac{12}{40}\\), the fraction who waited 15 minutes or more, not less than 15 minutes.",
+    "C": "Incorrect. This is \\(\\frac{36}{40}\\), the fraction who waited less than 20 minutes. The 15-to-20 bar should not be counted.",
+    "D": "Correct. \\(6 + 10 + 12 = 28\\) of the 40 customers waited less than 15 minutes, and \\(\\frac{28}{40} = \\frac{7}{10}\\)."
+  },
+  "traps": {
+    "A": "misread_graph",
+    "B": "wrong_quantity",
+    "C": "misread_graph"
+  },
+  "verify": "n = sum(f for lo, hi, f in figure['bins'])\nassert n == 40\nfr = Rational(sum(f for lo, hi, f in figure['bins'] if hi <= 15), n)\nassert fr == Rational(7, 10)\nassert value(choices[answer]) == fr\nassert all(value(choices[k]) != fr for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

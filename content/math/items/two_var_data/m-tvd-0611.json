@@ -1,0 +1,81 @@
+{
+  "id": "m-tvd-0611",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The table shows the number of electric three-wheelers registered in a town in Sri Lanka at the end of each year from 2020 to 2023. The number of registered three-wheelers can be modeled by an exponential function of the number of years after 2020. According to the model, how many electric three-wheelers will be registered in the town at the end of 2025?",
+  "figure": {
+    "kind": "table",
+    "columns": [
+      "Year",
+      "Registered three-wheelers"
+    ],
+    "rows": [
+      [
+        "2020",
+        "32"
+      ],
+      [
+        "2021",
+        "48"
+      ],
+      [
+        "2022",
+        "72"
+      ],
+      [
+        "2023",
+        "108"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(243\\)",
+    "B": "\\(180\\)",
+    "C": "\\(162\\)",
+    "D": "\\(216\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Each year the number is multiplied by the same factor: \\(\\frac{48}{32} = \\frac{72}{48} = \\frac{108}{72} = 1.5\\).",
+    "From 2023 to 2025 is 2 more years: \\(108 \\times 1.5 \\times 1.5 = 243\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The growth factor is 1.5 per year, and \\(108(1.5)^{2} = 243\\).",
+    "B": "Incorrect. This adds 36 for each of the two years, as if the growth were linear. The differences (16, 24, 36) are not constant; the ratios are.",
+    "C": "Incorrect. This is the prediction for 2024, \\(108 \\times 1.5\\). The question asks about 2025, two years after 2023.",
+    "D": "Incorrect. This doubles 108. The growth factor is 1.5 per year, so two years multiply by \\(1.5^{2} = 2.25\\), not 2."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "stopped_early",
+    "D": "arithmetic"
+  },
+  "verify": "v = [Integer(r[1]) for r in figure['rows']]\nratios = {v[i + 1] / v[i] for i in range(3)}\nassert ratios == {Rational(3, 2)}\npred = v[-1] * Rational(3, 2)**2\nassert pred == 243\nassert value(choices[answer]) == pred\nassert all(value(choices[k]) != pred for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

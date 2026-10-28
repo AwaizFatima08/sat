@@ -1,0 +1,46 @@
+{
+  "id": "m-rtt-0612",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "right_trig",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In right triangle \\(ABC\\), angle \\(C\\) is a right angle and \\(\\sin A = \\frac{3}{5}\\). The area of the triangle is 54. What is the length of \\(\\overline{AB}\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "15"
+  ],
+  "solution": [
+    "\\(\\sin A = \\frac{3}{5}\\), so the sides are in the ratio \\(3 : 4 : 5\\): let \\(BC = 3k\\), \\(AC = 4k\\), \\(AB = 5k\\).",
+    "Area: \\(\\frac{1}{2}(3k)(4k) = 6k^{2} = 54\\), so \\(k = 3\\).",
+    "\\(AB = 5k = 15\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "k=symbols('k',positive=True)\nkk=solve(Eq(Rational(1,2)*(3*k)*(4*k),54),k)[0]\nassert kk==3\nans=5*kk\nassert ans==15 and (3*kk)**2+(4*kk)**2==ans**2 and Rational(3*kk,ans)==Rational(3,5)\nassert all(Rational(s)==ans for s in spr_answers)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "15",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

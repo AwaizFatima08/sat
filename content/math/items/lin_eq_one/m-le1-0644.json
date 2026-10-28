@@ -1,0 +1,46 @@
+{
+  "id": "m-le1-0644",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Container A holds 2 liters more than twice the amount of water in container B. If 3 liters of water were poured from container A into container B, container A would then hold \\(\\frac{4}{3}\\) of the amount in container B. How many liters of water does container B hold?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7.5"
+  ],
+  "solution": [
+    "Let \\(v\\) be the liters in container B; container A holds \\(2v + 2\\).",
+    "After pouring: A has \\(2v - 1\\) and B has \\(v + 3\\). Then \\(2v - 1 = \\frac{4}{3}(v + 3)\\).",
+    "Multiply by 3: \\(6v - 3 = 4v + 12\\), so \\(2v = 15\\) and \\(v = 7.5\\). Check: A holds 17; after pouring, 14 and 10.5, and \\(14 = \\frac{4}{3}(10.5)\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "v = symbols('v')\nsol = solve(Eq((2*v + 2) - 3, Rational(4, 3)*(v + 3)), v)\nassert sol == [Rational(15, 2)]\nassert all(Rational(a) == Rational(15, 2) for a in spr_answers)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "7.5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

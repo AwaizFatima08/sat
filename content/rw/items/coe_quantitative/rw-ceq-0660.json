@@ -1,0 +1,85 @@
+{
+  "id": "rw-ceq-0660",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In eighteenth-century English towns, a boy entering a trade signed an indenture binding him to a master for a term of years, and the town's guild recorded each agreement, noting where the apprentice's father lived. Historians have used these records to ask how far young people traveled for training. Social historian Anne Fairley, who examined indentures from one county town across the century, argues that the familiar story of a widening catchment, in which towns drew apprentices from ever farther afield as roads improved, does not hold for the most prestigious trades. Among apprentices to the lucrative trades of goldsmith and mercer, she finds, the share coming from distant parishes barely changed, while among apprentices to humbler trades it grew markedly.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Apprentices from Parishes More Than 30 Miles Away, by Trade Group",
+    "columns": [
+      "Trade group",
+      "1700–1729 (%)",
+      "1730–1759 (%)",
+      "1760–1789 (%)"
+    ],
+    "rows": [
+      [
+        "Goldsmiths and mercers",
+        38,
+        40,
+        39
+      ],
+      [
+        "Carpenters and blacksmiths",
+        9,
+        17,
+        28
+      ],
+      [
+        "All trades combined",
+        19,
+        25,
+        32
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Fairley's argument?",
+  "choices": {
+    "A": "Across all trades, the share of apprentices from more than 30 miles away rose from 19 to 32 percent over the century.",
+    "B": "Prestigious trades charged higher fees, which only wealthy families from distant parishes could afford.",
+    "C": "The share of distant apprentices among goldsmiths and mercers stayed between 38 and 40 percent, while among carpenters and blacksmiths it tripled from 9 to 28 percent.",
+    "D": "Goldsmiths and mercers drew a smaller share of their apprentices from distant parishes than carpenters and blacksmiths did in every period."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Fairley accepts the widening-catchment story for humbler trades but denies it for prestigious ones, so the evidence must contrast the two trade rows across the periods. Goldsmiths and mercers moved only from 38 to 40 to 39 percent; carpenters and blacksmiths went from 9 to 17 to 28 percent.",
+    "A": "Incorrect. This is true, but the combined figure is the familiar story itself; it hides the difference between trades that is Fairley's point.",
+    "B": "Incorrect. The table records where apprentices came from, not what trades charged or what families could afford.",
+    "C": "Correct. A flat line for the prestigious trades beside a sharp rise for the humbler ones is exactly the contrast Fairley describes.",
+    "D": "Incorrect. Goldsmiths and mercers drew a larger share from distant parishes in every period (38, 40, 39 percent against 9, 17, 28), so this reverses the table."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

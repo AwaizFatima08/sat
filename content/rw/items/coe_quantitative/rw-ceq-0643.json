@@ -1,0 +1,105 @@
+{
+  "id": "rw-ceq-0643",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "In Ladakh, in the high mountains of northern India, herders move their yaks between pastures through the year. In some villages, families have long rotated among several high summer pastures, grazing each for only a few weeks; in others, herds remain on a single large summer pasture. Rangeland scientist Tsering Dolkar surveyed grass cover at the end of the grazing season on summer pastures of both kinds over four years. She argues that rotation protects the land: pastures grazed in rotation keep more of their grass cover and, unlike pastures under continuous grazing, show no steady decline from one year to the next.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Grass Cover on Summer Pastures at the End of the Grazing Season",
+    "x_label": "Year",
+    "y_label": "Grass cover (%)",
+    "series": [
+      {
+        "name": "Rotated pastures",
+        "points": [
+          [
+            "2019",
+            68
+          ],
+          [
+            "2020",
+            66
+          ],
+          [
+            "2021",
+            69
+          ],
+          [
+            "2022",
+            67
+          ]
+        ]
+      },
+      {
+        "name": "Continuously grazed pastures",
+        "points": [
+          [
+            "2019",
+            61
+          ],
+          [
+            "2020",
+            57
+          ],
+          [
+            "2021",
+            52
+          ],
+          [
+            "2022",
+            48
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to support Dolkar's argument?",
+  "choices": {
+    "A": "Rotated pastures kept grass cover between 66 and 69 percent in every year, while continuously grazed pastures fell from 61 to 48 percent.",
+    "B": "Grass cover on rotated pastures rose steadily from 2019 to 2022.",
+    "C": "Yaks on rotated pastures gained more weight over the summer than yaks on continuously grazed pastures.",
+    "D": "In 2022, grass cover on continuously grazed pastures was 19 points lower than on rotated pastures."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Dolkar's argument has two parts: rotated pastures keep more cover, and they show no steady decline, unlike continuously grazed ones. The evidence must describe both lines across the years. The rotated line stays within 66–69 percent; the continuous line falls every year, from 61 to 48 percent.",
+    "A": "Correct. It shows the rotated pastures holding steady and the continuously grazed pastures declining year after year, which supports both parts of the argument.",
+    "B": "Incorrect. The rotated line goes 68, 66, 69, 67, which is level, not a steady rise.",
+    "C": "Incorrect. The graph shows grass cover only; it records nothing about the animals' weight.",
+    "D": "Incorrect. This is true (67 against 48), but a single year's gap cannot show that one kind of pasture is declining and the other is not."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "not_in_text",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

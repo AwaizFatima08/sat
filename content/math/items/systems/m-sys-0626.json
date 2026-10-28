@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0626",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[4x + ky = 10\\] \\[6x - 9y = 15\\] In the system of equations above, \\(k\\) is a constant. If the system has infinitely many solutions, what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(-6\\)",
+    "B": "\\(6\\)",
+    "C": "\\(-9\\)",
+    "D": "\\(-\\frac{27}{2}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Infinitely many solutions means the two equations describe the same line, so one is a multiple of the other.",
+    "Comparing \\(x\\)-coefficients and constants: \\(6 = \\frac{3}{2}(4)\\) and \\(15 = \\frac{3}{2}(10)\\), so the second equation is \\(\\frac{3}{2}\\) times the first.",
+    "Then \\(-9 = \\frac{3}{2}k\\), so \\(k = -6\\)."
+  ],
+  "explanation": {
+    "A": "Correct. The second equation is \\(\\frac{3}{2}\\) times the first (\\(6 = \\frac{3}{2} \\cdot 4\\), \\(15 = \\frac{3}{2} \\cdot 10\\)), so \\(-9 = \\frac{3}{2}k\\) and \\(k = -6\\).",
+    "B": "Incorrect. This drops the sign of \\(-9\\); with \\(k = 6\\) the slopes are \\(-\\frac{2}{3}\\) and \\(\\frac{2}{3}\\), so the lines cross once.",
+    "C": "Incorrect. This copies the \\(y\\)-coefficient of the second equation, but the first equation must be scaled by \\(\\frac{2}{3}\\) to match: \\(-9 \\cdot \\frac{2}{3} = -6\\).",
+    "D": "Incorrect. This scales \\(-9\\) by \\(\\frac{3}{2}\\) instead of \\(\\frac{2}{3}\\); the factor from the second equation to the first is \\(\\frac{4}{6} = \\frac{2}{3}\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "concept",
+    "D": "reciprocal"
+  },
+  "verify": "x, y = symbols('x y')\nok = [k for k in choices if len(linsolve([4*x + value(choices[k])*y - 10, 6*x - 9*y - 15], [x, y]).free_symbols) > 0]\nassert ok == [answer]\nassert value(choices[answer]) == -6",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

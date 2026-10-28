@@ -1,0 +1,79 @@
+{
+  "id": "m-nle-0653",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The table gives three values of the function \\(f\\) defined by \\(f(x) = x^{2} + bx + c\\), where \\(b\\) and \\(c\\) are constants. How many distinct real solutions does the equation \\(f(x) = 0\\) have?",
+  "figure": {
+    "kind": "table",
+    "title": "",
+    "columns": [
+      "x",
+      "f(x)"
+    ],
+    "rows": [
+      [
+        "0",
+        "5"
+      ],
+      [
+        "1",
+        "2"
+      ],
+      [
+        "2",
+        "1"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "Exactly one",
+    "B": "Zero",
+    "C": "Exactly two",
+    "D": "More than two"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "From \\(f(0) = 5\\), \\(c = 5\\). From \\(f(1) = 2\\), \\(1 + b + 5 = 2\\), so \\(b = -4\\). (Check: \\(f(2) = 4 - 8 + 5 = 1\\).)",
+    "So \\(f(x) = x^{2} - 4x + 5\\). Its discriminant is \\((-4)^{2} - 4(1)(5) = -4 < 0\\), so \\(f(x) = 0\\) has no real solutions.",
+    "Equivalently, \\(f(x) = (x - 2)^{2} + 1 \\ge 1\\), so \\(f(x)\\) is never \\(0\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of reading the smallest table value, \\(f(2) = 1\\), as the graph touching the \\(x\\)-axis; the minimum value of \\(f\\) is \\(1\\), not \\(0\\).",
+    "B": "Correct. \\(f(x) = x^{2} - 4x + 5\\) has discriminant \\(16 - 20 = -4\\), so there are no real solutions.",
+    "C": "Incorrect. This is the result of assuming every quadratic equation has two real solutions; here the discriminant is negative.",
+    "D": "Incorrect. This is the result of counting the three rows of the table as solutions; none of the listed values of \\(f(x)\\) is \\(0\\)."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "misread_graph"
+  },
+  "verify": "x, b, c = symbols('x b c', real=True)\nrows = {int(r[0]): int(r[1]) for r in figure['rows']}\nbc = solve([Eq(c, rows[0]), Eq(1 + b + c, rows[1])], [b, c])\nassert bc == {b: -4, c: 5}\nf = x**2 + bc[b]*x + bc[c]\nassert f.subs(x, 2) == rows[2]\nassert discriminant(f, x) < 0\nassert solve(f, x) == []\nassert choices[answer] == 'Zero'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

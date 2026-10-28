@@ -1,0 +1,105 @@
+{
+  "id": "rw-ceq-0607",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Chitwan National Park in southern Nepal is home to greater one-horned rhinoceroses. Park ranger Bikram Tamang recorded rhino sightings in two sectors of the park during monthly patrols in early 2024, making one patrol in each sector every month. He reported that the riverside sector consistently produced more sightings than the hill sector: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Rhino Sightings per Monthly Patrol in Two Sectors of Chitwan National Park, 2024",
+    "x_label": "Month",
+    "y_label": "Rhinos sighted",
+    "series": [
+      {
+        "name": "Riverside sector",
+        "points": [
+          [
+            "January",
+            14
+          ],
+          [
+            "February",
+            17
+          ],
+          [
+            "March",
+            15
+          ],
+          [
+            "April",
+            19
+          ]
+        ]
+      },
+      {
+        "name": "Hill sector",
+        "points": [
+          [
+            "January",
+            6
+          ],
+          [
+            "February",
+            5
+          ],
+          [
+            "March",
+            8
+          ],
+          [
+            "April",
+            7
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "sightings in the hill sector rose from 6 in January to 8 in March.",
+    "B": "in every month, the riverside sector produced at least 14 sightings, while the hill sector never produced more than 8.",
+    "C": "rhinos in the riverside sector were drawn by the tall grass growing along the water.",
+    "D": "in April, the patrol recorded 19 sightings in the hill sector and 7 in the riverside sector."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The statement says the riverside sector consistently had more sightings, so the choice must compare the two sectors across all the months. The riverside bars are 14, 17, 15 and 19, and the hill bars are 6, 5, 8 and 7, so the riverside sector was higher every month.",
+    "A": "Incorrect. This is accurate, but it describes a change within the hill sector and does not compare the two sectors.",
+    "B": "Correct. The lowest riverside count (14) is higher than the highest hill count (8), so the riverside sector led in every month.",
+    "C": "Incorrect. The graph records only how many rhinos were seen, not why they were there.",
+    "D": "Incorrect. This swaps the sectors: the riverside sector had 19 sightings in April, and the hill sector had 7."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

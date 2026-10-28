@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0623",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Having waited all year for the first real snow, ______ Their mother called after them that breakfast was on the table, but by then the two of them were already halfway up the hill behind the house, the sled bumping along behind.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "Teo and his sister's sled was out of the shed before breakfast.",
+    "B": "Teo and his sister had the sled out of the shed before breakfast.",
+    "C": "the sled was dragged out of the shed by Teo and his sister before breakfast.",
+    "D": "breakfast could not keep Teo and his sister from the shed where the sled was stored."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The opening phrase \"Having waited all year for the first real snow\" describes the people who waited, so they must be the subject right after the comma. Only choice B makes \"Teo and his sister\" the subject.",
+    "A": "Incorrect. The subject here is \"sled\" (Teo and his sister's sled), not the children who waited.",
+    "B": "Correct. \"Teo and his sister\" directly follow the phrase that describes them, so the modifier is not dangling.",
+    "C": "Incorrect. The subject here is \"the sled,\" so the sentence wrongly says the sled waited all year for snow.",
+    "D": "Incorrect. The subject here is \"breakfast,\" which cannot have waited for snow."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "modifier",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

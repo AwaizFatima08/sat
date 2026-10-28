@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0675",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Beginning in the 1970s, millions of shallow tube wells were sunk across Bangladesh so that households could draw groundwater instead of surface water, which carried the bacteria responsible for cholera and other diarrheal diseases. In the 1990s, testing revealed that the groundwater in many districts contained arsenic, released from sediments carried down from the Himalayas, at levels far above those considered safe, and that a large share of the population had been drinking it for years. ______ the program is not easily dismissed as a failure: the shift away from surface water sharply reduced deaths from waterborne disease, and the problem lay not in the design of the wells but in the chemistry of the aquifer no one had tested.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Specifically,",
+    "B": "Nevertheless,",
+    "C": "In other words,",
+    "D": "Consequently,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The second sentence describes a serious harm that the tube wells caused: arsenic exposure. The last sentence argues that the program nonetheless had real benefits and that its flaw was unforeseen. The transition must concede the harm while asserting the benefit.",
+    "A": "Incorrect. \"Specifically\" would introduce a more detailed statement of the arsenic problem, but the last sentence turns away from the problem to the program's merits.",
+    "B": "Correct. \"Nevertheless\" signals that, despite the arsenic contamination, the program cannot simply be called a failure.",
+    "C": "Incorrect. The last sentence does not restate the arsenic finding in other terms; it weighs it against the program's successes.",
+    "D": "Incorrect. The program's benefits are not a result of the arsenic discovery."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

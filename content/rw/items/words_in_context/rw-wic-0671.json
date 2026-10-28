@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0671",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The dry zone of Sri Lanka holds thousands of small reservoirs, known as tanks, many of them built more than a thousand years ago. Engineers once studied each tank as an independent structure. Recent surveys instead treat the tanks as ______ systems: those along a single valley are linked in a cascade, so that water spilling from one feeds the next, and the fields, forests, and silt-trapping ponds between them perform functions that no single reservoir could perform alone. Restoring one tank while ignoring its neighbors, on this view, can shift problems downstream rather than solve them.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "equivalent",
+    "B": "obsolete",
+    "C": "self-contained",
+    "D": "interdependent"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "\"Instead\" contrasts the new approach with studying each tank \"as an independent structure.\" The colon explains: the tanks are linked, water from one feeds the next, and restoring one in isolation affects others. The tanks depend on one another, so they are \"interdependent.\"",
+    "A": "Incorrect. The text stresses that the tanks are connected, not that they are alike; a cascade in which one feeds the next is a relationship of dependence, not sameness.",
+    "B": "Incorrect. The tanks are still being restored and used; nothing in the text says they are out of date.",
+    "C": "Incorrect. This describes the older view, each tank \"as an independent structure,\" which \"instead\" signals the new surveys reject.",
+    "D": "Correct. The tanks are \"linked in a cascade,\" each affecting the next, so they must be studied as parts of one connected system."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "not_in_text",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

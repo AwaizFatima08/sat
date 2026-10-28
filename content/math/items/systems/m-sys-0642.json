@@ -1,0 +1,58 @@
+{
+  "id": "m-sys-0642",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[y = kx - 6\\] \\[2x + y = 10\\] In the system of equations above, \\(k\\) is a constant. If the solution \\((x, y)\\) to the system lies on the \\(x\\)-axis, what is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{5}{6}\\)",
+    "B": "\\(\\frac{6}{5}\\)",
+    "C": "\\(-\\frac{6}{5}\\)",
+    "D": "\\(\\frac{16}{5}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "A point on the \\(x\\)-axis has \\(y = 0\\).",
+    "Put \\(y = 0\\) in the second equation: \\(2x = 10\\), so \\(x = 5\\). The solution is \\((5, 0)\\).",
+    "It must also satisfy the first equation: \\(0 = 5k - 6\\), so \\(k = \\frac{6}{5}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This inverts the fraction; from \\(5k = 6\\), \\(k = \\frac{6}{5}\\), not \\(\\frac{5}{6}\\).",
+    "B": "Correct. On the \\(x\\)-axis, \\(y = 0\\), so \\(2x = 10\\) and \\(x = 5\\); then \\(0 = 5k - 6\\) gives \\(k = \\frac{6}{5}\\).",
+    "C": "Incorrect. This is the result of a sign slip: \\(0 = 5k - 6\\) gives \\(5k = 6\\), not \\(5k = -6\\).",
+    "D": "Incorrect. This solves \\(5k - 6 = 10\\), using the constant 10 as the value of \\(y\\); on the \\(x\\)-axis, \\(y = 0\\)."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "C": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "x, y, k = symbols('x y k')\nsol = solve([y - (k*x - 6), 2*x + y - 10], [x, y])\nks = solve(Eq(sol[y], 0), k)\nassert ks == [Rational(6, 5)]\nassert value(choices[answer]) == ks[0]\nassert all(value(choices[k]) != ks[0] for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

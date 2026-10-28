@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0646",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The temples of Khajuraho, in central India, were built between about 950 and 1050 CE from a pale sandstone that does not occur at the site; the nearest outcrops lie well to the east, beyond the Ken River, so every block had to be hauled overland and across the water. The temple walls are covered with sculpted figures, many of which run across the joints between neighboring blocks: a dancer's arm carved on one block continues without a break onto the next. A sculptor carving a block before it was set in place could not have aligned such details so exactly. Art historian Rekha Nair observes that this feature, taken together with the distance to the quarries, implies that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the sculptors traveled to the quarries to carve the blocks before they were shipped to the site.",
+    "B": "the builders chose the distant sandstone because it was easier to carve than any local stone.",
+    "C": "each sculpted figure was carved by a single artist working on a single block.",
+    "D": "the blocks were transported as plain stone and carved only after they had been fitted into the walls."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Two observations combine. Details that flow unbroken across joints could not have been aligned if the blocks were carved separately, so the carving was done after the blocks were set. And since the quarries lay far away across a river, the blocks made that journey before they were carved, as plain stone.",
+    "A": "Incorrect. Carving before placement is precisely what the unbroken figures rule out.",
+    "B": "Incorrect. The text explains why the stone had to be hauled, not why that stone was chosen.",
+    "C": "Incorrect. The text says figures spread across several blocks, so a figure was not confined to one block.",
+    "D": "Correct. Figures that continue perfectly across joints must have been carved after the blocks were in place, and the long haul from the quarries means the stone arrived plain."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

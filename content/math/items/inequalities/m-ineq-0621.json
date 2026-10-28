@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0621",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A textile mill in Faisalabad produces \\(x\\) bolts of pure cotton fabric and \\(y\\) bolts of blended fabric each week. Each cotton bolt requires 3 hours of loom time, and each blended bolt requires 2 hours. The mill has at most 480 hours of loom time available each week and must produce at least 40 blended bolts. Which of the following systems of inequalities represents this situation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3x + 2y \\ge 480\\) and \\(y \\ge 40\\)",
+    "B": "\\(2x + 3y \\le 480\\) and \\(y \\ge 40\\)",
+    "C": "\\(3x + 2y \\le 480\\) and \\(y \\ge 40\\)",
+    "D": "\\(3x + 2y \\le 480\\) and \\(y \\le 40\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Loom time used is \\(3x\\) hours for cotton bolts plus \\(2y\\) hours for blended bolts; \"at most 480 hours\" gives \\(3x + 2y \\le 480\\).",
+    "\"At least 40 blended bolts\" gives \\(y \\ge 40\\).",
+    "Together: \\(3x + 2y \\le 480\\) and \\(y \\ge 40\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \"At most 480 hours\" means the loom time used is less than or equal to 480, not greater than or equal to it.",
+    "B": "Incorrect. The coefficients are swapped: cotton bolts (\\(x\\)) take 3 hours each and blended bolts (\\(y\\)) take 2 hours each.",
+    "C": "Correct. Loom time \\(3x + 2y \\le 480\\) and blended bolts \\(y \\ge 40\\).",
+    "D": "Incorrect. \"At least 40\" means \\(y \\ge 40\\); \\(y \\le 40\\) would be \"at most 40\"."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "concept",
+    "D": "sign_error"
+  },
+  "verify": "P = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nx, y = symbols('x y')\ngood = lambda a, b: 3*a + 2*b <= 480 and b >= 40\npred = lambda c, a, b: all(bool(P(part).subs({x: a, y: b})) for part in c.split(' and '))\npts = [(100, 40), (100, 39), (140, 40), (133, 41), (120, 60), (0, 240), (0, 241), (160, 0)]\nassert all(pred(choices[answer], a, b) == good(a, b) for a, b in pts)\nassert all(any(pred(c, a, b) != good(a, b) for a, b in pts) for k, c in choices.items() if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

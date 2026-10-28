@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0618",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the \\(xy\\)-plane, the point \\((2, 9)\\) is a solution to the inequality \\(y > kx + 3\\), where \\(k\\) is a constant, but the point \\((4, 9)\\) is not a solution. Which of the following must be true about \\(k\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{3}{2} \\le k < 3\\)",
+    "B": "\\(\\frac{3}{2} < k \\le 3\\)",
+    "C": "\\(k < 3\\)",
+    "D": "\\(k < \\frac{3}{2}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "\\((2, 9)\\) is a solution: \\(9 > 2k + 3\\), so \\(2k < 6\\) and \\(k < 3\\).",
+    "\\((4, 9)\\) is not a solution: \\(9 \\le 4k + 3\\), so \\(4k \\ge 6\\) and \\(k \\ge \\frac{3}{2}\\).",
+    "Both must hold: \\(\\frac{3}{2} \\le k < 3\\). Check: at \\(k = \\frac{3}{2}\\), \\(9 > 6\\) is true and \\(9 > 9\\) is false, as required."
+  ],
+  "explanation": {
+    "A": "Correct. \\(k < 3\\) from the first point and \\(k \\ge \\frac{3}{2}\\) from the second.",
+    "B": "Incorrect. The strict and non-strict signs are swapped. At \\(k = 3\\), \\(9 > 9\\) is false, so \\((2, 9)\\) would not be a solution.",
+    "C": "Incorrect. This uses only the point \\((2, 9)\\). For example, \\(k = 0\\) makes \\((4, 9)\\) a solution too, which is not allowed.",
+    "D": "Incorrect. The condition from \\((4, 9)\\) is \\(9 \\le 4k + 3\\), which gives \\(k \\ge \\frac{3}{2}\\), not \\(k < \\frac{3}{2}\\)."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "stopped_early",
+    "D": "sign_error"
+  },
+  "verify": "k = symbols('k')\ns = solve_univariate_inequality(9 > 2*k + 3, k, relational=False).intersect(solve_univariate_inequality(9 <= 4*k + 3, k, relational=False))\nassert s == Interval.Ropen(Rational(3, 2), 3)\nc = choices[answer]\nassert value(c.split('\\\\le')[0]) == s.inf and c.endswith('k < 3\\\\)') and '\\\\le k' in c\nassert all(choices[j] != c for j in choices if j != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

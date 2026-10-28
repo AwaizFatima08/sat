@@ -1,0 +1,105 @@
+{
+  "id": "rw-ceq-0604",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Seabird biologists count penguin nests each year to track how colonies are changing. Biologist Rafael Benítez surveyed Magellanic penguin colonies on two small islands off the coast of Argentina every breeding season from 2020 to 2023. He noted that the two colonies did not follow the same trend over those years: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Magellanic Penguin Nests Counted on Two Islands, 2020–2023",
+    "x_label": "Year",
+    "y_label": "Nests counted",
+    "series": [
+      {
+        "name": "Isla Norte",
+        "points": [
+          [
+            "2020",
+            1450
+          ],
+          [
+            "2021",
+            1520
+          ],
+          [
+            "2022",
+            1610
+          ],
+          [
+            "2023",
+            1690
+          ]
+        ]
+      },
+      {
+        "name": "Isla Sur",
+        "points": [
+          [
+            "2020",
+            980
+          ],
+          [
+            "2021",
+            940
+          ],
+          [
+            "2022",
+            905
+          ],
+          [
+            "2023",
+            870
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "the Isla Sur colony shrank because fish became scarcer in the waters around the island.",
+    "B": "Isla Norte had more nests than Isla Sur in every year from 2020 to 2023.",
+    "C": "the number of nests on Isla Sur grew each year, while the number on Isla Norte fell each year.",
+    "D": "the number of nests on Isla Norte grew each year, while the number on Isla Sur fell each year."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The statement says the two colonies did not follow the same trend, so the choice must describe how each colony changed over time. The Isla Norte line rises every year (1,450 to 1,690), while the Isla Sur line falls every year (980 to 870).",
+    "A": "Incorrect. The graph shows nest counts only; it says nothing about the fish supply.",
+    "B": "Incorrect. This is true, but it compares the sizes of the colonies rather than their trends, so it does not show that they changed differently.",
+    "C": "Incorrect. This swaps the two islands: Isla Norte is the colony that grew, and Isla Sur is the one that shrank.",
+    "D": "Correct. Isla Norte rose from 1,450 to 1,690 nests while Isla Sur fell from 980 to 870, so the two colonies moved in opposite directions."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

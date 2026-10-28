@@ -1,0 +1,56 @@
+{
+  "id": "rw-tsp-0621",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "text_structure_purpose",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A sundial is useless at night and on cloudy days, so ancient societies that wanted to measure time in all conditions turned to water. The simplest water clock, or clepsydra, was a bowl with a small hole near the bottom; as water drained out, marks inside showed how much time had passed. Such clocks had a flaw: water flows faster from a full vessel than from a nearly empty one, so the early hours ran short and the later hours ran long. Around 250 BCE, the Greek inventor Ctesibius addressed this by keeping a supply tank filled to a constant level, so that water dripped into the measuring vessel at a steady rate.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice best describes the overall structure of the text?",
+  "choices": {
+    "A": "It presents a problem with water clocks and concludes that it was never solved.",
+    "B": "It compares two inventors and argues that one deserves more credit than the other.",
+    "C": "It explains why a device was needed, describes a simple version and its flaw, and then describes an improvement.",
+    "D": "It describes the uses of sundials and then explains why they were abandoned."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The text starts with the need (sundials fail at night), describes the simplest clepsydra, identifies its flaw (uneven flow), and ends with Ctesibius's fix (a constant-level tank). The structure is need, simple solution, flaw, improvement.",
+    "A": "Incorrect. The final sentence describes how Ctesibius \"addressed\" the flaw, so the problem was solved.",
+    "B": "Incorrect. Only one inventor is named, and no question of credit is raised.",
+    "C": "Correct. The text moves from the need for an all-conditions clock, to the basic bowl, to its uneven flow, to Ctesibius's constant-level design.",
+    "D": "Incorrect. Sundials appear only in the first sentence to explain why water clocks were wanted; the text never says they were abandoned."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

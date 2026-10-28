@@ -1,0 +1,46 @@
+{
+  "id": "m-nlf-0676",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A T-shirt is launched upward from a cannon at a stadium event. Its height above the ground, in meters, \\(t\\) seconds after launch is modeled by \\(h(t) = -5t^{2} + 30t\\). For how many seconds is the T-shirt at a height of 25 meters or more?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4"
+  ],
+  "solution": [
+    "Solve \\(-5t^{2} + 30t = 25\\): \\(t^{2} - 6t + 5 = 0\\), so \\((t - 1)(t - 5) = 0\\) and \\(t = 1\\) or \\(t = 5\\).",
+    "The parabola opens downward, so the height is 25 meters or more between these times, from \\(t = 1\\) to \\(t = 5\\).",
+    "That is \\(5 - 1 = 4\\) seconds."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t', real=True)\nroots = sorted(solve(Eq(-5*t**2 + 30*t, 25), t))\nassert roots == [1, 5] and (-5*3**2 + 30*3) > 25\nassert Rational(spr_answers[0]) == roots[1] - roots[0] == 4",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

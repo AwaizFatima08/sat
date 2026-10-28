@@ -1,0 +1,79 @@
+{
+  "id": "m-nle-0670",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The table shows the braking distance \\(d\\), in meters, of a certain car for three speeds \\(v\\), in kilometers per hour. The braking distance is modeled by \\(d = av^{2} + bv\\), where \\(a\\) and \\(b\\) are constants. According to the model, at what speed, in kilometers per hour, is the braking distance 96 meters?",
+  "figure": {
+    "kind": "table",
+    "title": "",
+    "columns": [
+      "Speed v (km/h)",
+      "Braking distance d (m)"
+    ],
+    "rows": [
+      [
+        "20",
+        "16"
+      ],
+      [
+        "40",
+        "48"
+      ],
+      [
+        "50",
+        "70"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(70\\)",
+    "B": "\\(60\\)",
+    "C": "\\(40\\sqrt{3}\\)",
+    "D": "\\(120\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Use two rows to find \\(a\\) and \\(b\\): \\(400a + 20b = 16\\) and \\(1{,}600a + 40b = 48\\). Doubling the first and subtracting gives \\(800a = 16\\), so \\(a = 0.02\\) and \\(b = 0.4\\). (Check: \\(0.02(2{,}500) + 0.4(50) = 70\\).)",
+    "Set \\(d = 96\\): \\(0.02v^{2} + 0.4v = 96\\). Multiply by 50: \\(v^{2} + 20v - 4{,}800 = 0\\).",
+    "Factor: \\((v + 80)(v - 60) = 0\\). Speed is positive, so \\(v = 60\\) km/h."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of extending the first two rows as a straight line (\\(d = 1.6v - 16\\)); the model is quadratic, not linear.",
+    "B": "Correct. With \\(a = 0.02\\) and \\(b = 0.4\\), \\(0.02v^{2} + 0.4v = 96\\) gives \\(v = 60\\).",
+    "C": "Incorrect. This is the result of dropping the \\(bv\\) term and solving \\(0.02v^{2} = 96\\) alone.",
+    "D": "Incorrect. This is the result of assuming \\(d\\) is proportional to \\(v\\) using the first row (\\(16 \\div 20 = 0.8\\) meters per km/h); the table itself shows the ratio \\(d \\div v\\) is not constant."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "a, b, v = symbols('a b v')\nrows = [(int(r[0]), int(r[1])) for r in figure['rows']]\nab = solve([Eq(a*s**2 + b*s, dd) for s, dd in rows[:2]], [a, b])\nassert ab == {a: Rational(1, 50), b: Rational(2, 5)}\nassert all(ab[a]*s**2 + ab[b]*s == dd for s, dd in rows)\nsols = [s for s in solve(Eq(ab[a]*v**2 + ab[b]*v, 96), v) if s > 0]\nassert sols == [60]\nassert value(choices[answer]) == 60\nassert all(value(choices[k]) != 60 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

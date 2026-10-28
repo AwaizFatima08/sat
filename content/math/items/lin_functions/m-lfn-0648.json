@@ -1,0 +1,45 @@
+{
+  "id": "m-lfn-0648",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A bathtub contains some water when its tap is opened. The volume \\(V(t)\\), in liters, of water in the bathtub \\(t\\) seconds after the tap is opened is given by \\(V(t) = 0.8t + 12\\). How many minutes after the tap is opened will the bathtub contain 180 liters of water?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7/2"
+  ],
+  "solution": [
+    "Solve \\(0.8t + 12 = 180\\): \\(0.8t = 168\\), so \\(t = 210\\) seconds.",
+    "Since \\(t\\) is in seconds, convert: \\(\\frac{210}{60} = 3.5\\) minutes."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t = symbols('t')\nsec = solve(Eq(Rational('0.8')*t + 12, 180), t)\nassert sec == [210]\nans = Rational(sec[0], 60)\nassert ans == Rational(7, 2)\nassert len(spr_answers) == 1 and Rational(spr_answers[0]) == ans",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "3.5",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

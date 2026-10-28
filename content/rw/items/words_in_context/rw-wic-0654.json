@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0654",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When plans for the Eiffel Tower were announced in 1887, a group of prominent writers and artists published a letter calling it a useless and monstrous iron shaft that would disgrace Paris. The engineer Gustave Eiffel answered the aesthetic objection with an engineering one. The tower's sweeping curve, he explained, was not a decoration; it was the shape that the wind demanded. He had calculated the pressure a gale would exert at every height and ______ the width of the structure accordingly, so that the tower's form was, in his view, a kind of beauty produced by necessity.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "ignored",
+    "B": "doubled",
+    "C": "adjusted",
+    "D": "disguised"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Eiffel calculated wind pressure \"at every height\" and set the width \"accordingly,\" that is, to match those calculations. The curve is \"the shape that the wind demanded.\" Changing the width to fit the calculation at each height is to \"adjust\" it.",
+    "A": "Incorrect. Eiffel based the width on his calculations; he did not ignore it.",
+    "B": "Incorrect. \"Accordingly\" means the width followed the wind calculation at each height; it was not simply doubled everywhere.",
+    "C": "Correct. He set the width at each height to match the wind pressure he had calculated, which is adjusting it.",
+    "D": "Incorrect. Eiffel insisted the curve was \"not a decoration\"; he was explaining the structure, not hiding it."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "m-nle-0608",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The volume \\(V\\) of a right circular cylinder with radius \\(r\\) and height \\(h\\) is given by \\(V = \\pi r^{2}h\\). A cylindrical rain barrel has a height of 5 feet and a volume of \\(80\\pi\\) cubic feet. What is the radius of the barrel, in feet?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4"
+  ],
+  "solution": [
+    "Substitute \\(V = 80\\pi\\) and \\(h = 5\\): \\(80\\pi = \\pi r^{2}(5)\\).",
+    "Divide both sides by \\(5\\pi\\): \\(r^{2} = 16\\), so \\(r = 4\\) feet."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "r = symbols('r', positive=True)\nsol = solve(Eq(pi*r**2*5, 80*pi), r)\nassert sol == [4]\nassert [Rational(s) for s in spr_answers] == sol",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h3-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "4",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

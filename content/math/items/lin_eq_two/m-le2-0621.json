@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0621",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "An apple orchard packs apples into boxes that hold 6 kilograms and crates that hold 15 kilograms. The equation \\(6b + 15c = 1{,}800\\) represents a truckload of exactly 1,800 kilograms of apples in \\(b\\) boxes and \\(c\\) crates. Which equation gives \\(b\\) in terms of \\(c\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(b = 300 + 2.5c\\)",
+    "B": "\\(b = 1{,}800 - 15c\\)",
+    "C": "\\(b = 300 - 2.5c\\)",
+    "D": "\\(b = 120 - 0.4c\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "Subtract \\(15c\\): \\(6b = 1{,}800 - 15c\\).",
+    "Divide by 6: \\(b = 300 - 2.5c\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. Subtracting \\(15c\\) from both sides gives \\(6b = 1{,}800 - 15c\\), so the \\(c\\) term is negative.",
+    "B": "Incorrect. This is \\(6b\\), not \\(b\\); both sides still need to be divided by 6.",
+    "C": "Correct. \\(6b = 1{,}800 - 15c\\); dividing by 6 gives \\(b = 300 - 2.5c\\).",
+    "D": "Incorrect. This is \\(c\\) in terms of \\(b\\) (with the letters swapped): \\(c = 120 - 0.4b\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "stopped_early",
+    "D": "wrong_quantity"
+  },
+  "verify": "b, c = symbols('b c')\nexpr = solve(Eq(6*b + 15*c, 1800), b)[0]\nrhs = lambda s: value(s.split('=')[1])\nok = [k for k in choices if simplify(rhs(choices[k]).subs(symbols('c'), c) - expr) == 0]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

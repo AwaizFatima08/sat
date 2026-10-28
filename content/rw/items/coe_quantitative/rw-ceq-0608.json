@@ -1,0 +1,105 @@
+{
+  "id": "rw-ceq-0608",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Coastal sand dunes protect the land behind them from storms, but foot traffic can flatten them. In 2021, a town on the west coast of Denmark fenced off one section of its beach dunes while leaving a neighboring section open to walkers. Geographer Mette Sørensen measured the average height of the dunes in each section every summer. Her measurements suggest that the fence helped the dunes grow: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "line",
+    "title": "Average Dune Height in Two Sections of a Danish Beach, 2021–2024",
+    "x_label": "Year",
+    "y_label": "Average dune height (meters)",
+    "series": [
+      {
+        "name": "Fenced section",
+        "points": [
+          [
+            "2021",
+            2.1
+          ],
+          [
+            "2022",
+            2.4
+          ],
+          [
+            "2023",
+            2.8
+          ],
+          [
+            "2024",
+            3.1
+          ]
+        ]
+      },
+      {
+        "name": "Open section",
+        "points": [
+          [
+            "2021",
+            2.0
+          ],
+          [
+            "2022",
+            1.9
+          ],
+          [
+            "2023",
+            1.9
+          ],
+          [
+            "2024",
+            1.7
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "the fenced dunes rose from 2.1 meters to 3.1 meters between 2021 and 2024, while the open dunes fell from 2.0 meters to 1.7 meters.",
+    "B": "the fenced dunes and the open dunes were almost exactly the same height in 2021, the year the fence was put up.",
+    "C": "beach grass spread across the fenced dunes within two years, holding the sand in place.",
+    "D": "the open dunes rose from 2.0 meters to 3.1 meters between 2021 and 2024, while the fenced dunes stayed the same."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "To suggest that the fence helped, the choice must show the fenced dunes growing while the unfenced dunes did not. The fenced line climbs from 2.1 to 3.1 meters, and the open line drops from 2.0 to 1.7 meters.",
+    "A": "Correct. The fenced section grew by a full meter while the open section lost height, which is what the statement needs.",
+    "B": "Incorrect. This is true, but it describes the starting point only and says nothing about what happened after the fence went up.",
+    "C": "Incorrect. The graph measures only dune height; it says nothing about grass.",
+    "D": "Incorrect. This swaps the two sections: it was the fenced dunes that rose to 3.1 meters, and the open dunes that stayed low."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

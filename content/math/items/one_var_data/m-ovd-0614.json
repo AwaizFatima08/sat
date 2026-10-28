@@ -1,0 +1,58 @@
+{
+  "id": "m-ovd-0614",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "For the 10 houses sold on a street last year, the mean selling price was 300 thousand dollars and the median selling price was 240 thousand dollars. Which of the following is the most likely explanation for the difference between the mean and the median?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "A few of the houses sold for much less than the others.",
+    "B": "Most of the houses sold for about 300 thousand dollars.",
+    "C": "Exactly half of the houses sold for 240 thousand dollars.",
+    "D": "A few of the houses sold for much more than the others."
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The median is the middle price, so half the houses sold for 240 thousand dollars or less.",
+    "For the mean to be 60 thousand dollars higher than the median, some prices must be far above the rest; a few very large values pull the mean up but leave the median alone.",
+    "Very low prices would pull the mean below the median, not above it."
+  ],
+  "explanation": {
+    "A": "Incorrect. A few very low prices would pull the mean below the median, but here the mean is above the median.",
+    "B": "Incorrect. If most houses sold for about 300 thousand dollars, the median would also be close to 300 thousand dollars, not 240.",
+    "C": "Incorrect. The median being 240 does not mean half the houses sold for exactly that price; it means half sold for 240 or less. This also does not explain why the mean is higher.",
+    "D": "Correct. A few very expensive houses raise the mean well above the median, which is not affected by how large the largest values are."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "hi = [200, 210, 220, 230, 240, 240, 250, 260, 520, 630]\nlo = [20, 60, 230, 235, 240, 240, 245, 250, 260, 270]\nst = lambda d: (Rational(sum(d), 10), Rational(sorted(d)[4] + sorted(d)[5], 2))\nassert st(hi) == (300, 240)\nm, med = st(lo)\nassert m < med\nassert choices[answer] == 'A few of the houses sold for much more than the others.'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

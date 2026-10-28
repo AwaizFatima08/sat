@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0629",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Mice rely on their whiskers to find their way in the dark, sweeping them back and forth to sense walls and objects. To test how much the animals depend on this sense, a research team trimmed the ______ whiskers on one side of the face and then watched them explore a dim maze. The mice bumped into obstacles on the trimmed side far more often than before.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "mouse's",
+    "B": "mice's",
+    "C": "mices'",
+    "D": "mice"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The whiskers belong to the mice, so a possessive form is needed. \"Mice\" is already plural and does not end in s, so its possessive is formed by adding an apostrophe and s: \"mice's.\"",
+    "A": "Incorrect. \"Mouse's\" is singular, but the team worked with several mice (\"the animals,\" \"them\").",
+    "B": "Correct. \"Mice's\" is the correct possessive of the irregular plural \"mice.\"",
+    "C": "Incorrect. \"Mices'\" wrongly treats \"mice\" as if it ended in s; the plural does not take an added s.",
+    "D": "Incorrect. \"Mice\" has no apostrophe, so \"the mice whiskers\" does not show whose whiskers they are."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "plural_possessive",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

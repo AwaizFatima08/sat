@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0657",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Quinoa, a grain-like seed grown in the Andes for thousands of years, arrives at the market with a problem built in. Each seed is coated in saponins, bitter compounds that foam in water and taste soapy. The coating is not a flaw from the plant's point of view: it ______ birds and insects that would otherwise strip a field of its seeds. For cooks, though, it is a nuisance, and quinoa must be rinsed or rubbed thoroughly before it is edible. Plant breeders have developed varieties with little saponin, but these, predictably, suffer more damage from birds.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "attracts",
+    "B": "repels",
+    "C": "conceals",
+    "D": "poisons"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The bitter coating is useful to the plant because of its effect on \"birds and insects that would otherwise strip a field.\" The last sentence confirms it: varieties with little saponin \"suffer more damage from birds.\" So the coating keeps the animals away, which is what \"repels\" means.",
+    "A": "Incorrect. This reverses the logic: a coating that drew birds in would not protect the field.",
+    "B": "Correct. The bitter, soapy taste drives birds and insects away, protecting the seeds.",
+    "C": "Incorrect. The coating does not hide the seeds; the birds avoid them because of the taste.",
+    "D": "Incorrect. The text describes the coating as bitter and soapy, not deadly; the effect is that animals avoid the seeds, not that they die."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "wrong_tone"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

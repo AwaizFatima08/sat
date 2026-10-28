@@ -1,0 +1,56 @@
+{
+  "id": "rw-ctc-0612",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "During the 1990s, populations of several vulture species in India and Pakistan fell by more than 95 percent. Vultures had been a familiar sight at cattle carcasses for centuries, and their sudden disappearance alarmed farmers and conservationists. Many observers assumed that the cause was the usual one: loss of habitat, combined with poisoning from agricultural pesticides.",
+  "passage_b": "Researchers who examined dead vultures found no sign of pesticide poisoning. Instead, nearly all of the birds had died of kidney failure, and the cause was traced to diclofenac, a painkiller that veterinarians had begun giving to cattle. When a treated animal died and vultures ate its remains, the drug killed them within days. The drug's use in cattle was banned in several South Asian countries, and vulture numbers have since begun to stabilize.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, how would the author of Text 2 most likely respond to the assumption in Text 1?",
+  "choices": {
+    "A": "By agreeing that pesticides were the main reason for the decline",
+    "B": "By identifying a drug given to cattle, rather than habitat loss or pesticides, as the cause",
+    "C": "By arguing that the decline in vultures was smaller than first reported",
+    "D": "By suggesting that cattle, not vultures, were harmed by the drug"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Text 1 says observers assumed the decline came from habitat loss and pesticides. Text 2 reports that dead vultures showed \"no sign of pesticide poisoning\" and that the deaths were traced to diclofenac, a painkiller given to cattle whose remains the vultures ate. So the author of Text 2 would respond by naming a different cause.",
+    "A": "Incorrect. Text 2 says the birds showed no sign of pesticide poisoning.",
+    "B": "Correct. Text 2 identifies diclofenac in cattle carcasses as the cause of the vultures' deaths.",
+    "C": "Incorrect. Text 2 does not question the size of the decline; it explains the cause.",
+    "D": "Incorrect. Text 2 says the drug was given to cattle as a painkiller and killed the vultures that ate treated animals."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

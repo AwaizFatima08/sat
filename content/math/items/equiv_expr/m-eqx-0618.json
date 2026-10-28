@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0618",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Mara's monthly income is \\(m\\) dollars. She spends \\(\\frac{m}{3}\\) dollars on rent and \\(\\frac{m}{4}\\) dollars on food. Which expression represents the amount, in dollars, that remains after these two expenses?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{7m}{12}\\)",
+    "B": "\\(\\frac{m}{12}\\)",
+    "C": "\\(\\frac{5m}{7}\\)",
+    "D": "\\(\\frac{5m}{12}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Write all terms over 12: \\(m - \\frac{m}{3} - \\frac{m}{4} = \\frac{12m}{12} - \\frac{4m}{12} - \\frac{3m}{12}\\).",
+    "Combine: \\(\\frac{12m - 4m - 3m}{12} = \\frac{5m}{12}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the amount spent, \\(\\frac{m}{3} + \\frac{m}{4}\\), not the amount that remains.",
+    "B": "Incorrect. This is \\(\\frac{m}{3} \\cdot \\frac{m}{4}\\) with \\(m\\) treated as 1; the two expenses must be added, then subtracted from \\(m\\).",
+    "C": "Incorrect. This is the result of adding the denominators 3 and 4 to get 7 instead of using the common denominator 12.",
+    "D": "Correct. \\(m - \\frac{m}{3} - \\frac{m}{4} = \\frac{5m}{12}\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "C": "arithmetic"
+  },
+  "verify": "m = symbols('m')\nt = m - m/3 - m/4\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

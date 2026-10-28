@@ -1,0 +1,57 @@
+{
+  "id": "m-smp-0605",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A hotel in Kathmandu, Nepal, claims that at least 70% of its guests would recommend the hotel to a friend. A random sample of 300 of the hotel's guests was surveyed. Based on the sample, 66% of the hotel's guests are estimated to be willing to recommend it, with a margin of error of 3 percentage points. Which of the following is the best evaluation of the hotel's claim?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The data support the claim, because the sample percent is within 5 percentage points of 70%.",
+    "B": "The claim cannot be evaluated, because only 300 of the hotel's guests were surveyed.",
+    "C": "The data do not support the claim, because every plausible value, from 63% to 69%, is less than 70%.",
+    "D": "The data do not support the claim, because the sample percent, 66%, is less than 70%; the margin of error is not needed."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The plausible values for the percent of all guests who would recommend the hotel are \\(66\\% - 3\\% = 63\\%\\) to \\(66\\% + 3\\% = 69\\%\\).",
+    "Every value in this range is below 70%, so the data do not support the claim that the percent is at least 70%."
+  ],
+  "explanation": {
+    "A": "Incorrect. The margin of error is 3 percentage points, not 5; the plausible range, 63% to 69%, does not reach 70%.",
+    "B": "Incorrect. A random sample of 300 guests is exactly what allows an estimate, with a margin of error, for all of the hotel's guests.",
+    "C": "Correct. The plausible values, 63% to 69%, all lie below 70%, so the claim of at least 70% is not supported.",
+    "D": "Incorrect. The conclusion happens to be right, but the reason is not: the margin of error is needed, because if it had been, say, 6 points, 70% would have been plausible and the claim could not be rejected."
+  },
+  "traps": {
+    "A": "concept",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "lo, hi = 66 - 3, 66 + 3\nassert (lo, hi) == (63, 69) and hi < 70\nassert 70 - 66 > 3\nkey = choices[answer]\nassert answer == 'C' and 'do not support' in key and '63%' in key and '69%' in key",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

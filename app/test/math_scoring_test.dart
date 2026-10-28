@@ -16,8 +16,8 @@ void main() {
   ).withMath(_json('assets/data/math_bank.json'));
   final forms = bank.formsOf('math');
 
-  test('10 Math papers, 3 modules of 22', () {
-    expect(forms.length, 10);
+  test('20 Math papers, 3 modules of 22', () {
+    expect(forms.length, 20);
     for (final f in forms) {
       expect(f.section, 'math');
       for (final ids in [f.module1, ...ModuleRoute.values.map(f.module2)]) {

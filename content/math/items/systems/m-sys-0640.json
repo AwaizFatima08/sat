@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0640",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A cricket academy in Peshawar charges every junior member the same monthly fee and every senior member the same monthly fee. In one month, 12 junior members and 8 senior members paid a total of 76,000 rupees. In another month, 10 junior members and 15 senior members paid a total of 100,000 rupees. What is the monthly fee, in rupees, for a senior member?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "4400"
+  ],
+  "solution": [
+    "Let \\(j\\) and \\(s\\) be the junior and senior fees: \\(12j + 8s = 76{,}000\\) and \\(10j + 15s = 100{,}000\\).",
+    "Multiply the first equation by 5 and the second by 6: \\(60j + 40s = 380{,}000\\) and \\(60j + 90s = 600{,}000\\).",
+    "Subtract: \\(50s = 220{,}000\\), so \\(s = 4{,}400\\). (Then \\(j = 3{,}400\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "j, s = symbols('j s')\nsol = solve([12*j + 8*s - 76000, 10*j + 15*s - 100000], [j, s])\nassert sol == {j: 3400, s: 4400}\nassert [Rational(v) for v in spr_answers] == [sol[s]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "4400",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

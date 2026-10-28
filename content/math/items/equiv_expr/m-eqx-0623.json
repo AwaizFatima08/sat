@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0623",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "For \\(x \\neq 0\\) and \\(x \\neq -1\\), which of the following is equivalent to \\(\\frac{x^{2} - 1}{x} \\div \\frac{x + 1}{x^{2}}\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x^{2} + x\\)",
+    "B": "\\(\\frac{x - 1}{x}\\)",
+    "C": "\\(\\frac{(x - 1)(x + 1)^{2}}{x^{3}}\\)",
+    "D": "\\(x^{2} - x\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Dividing by a fraction is multiplying by its reciprocal: \\(\\frac{x^{2} - 1}{x} \\cdot \\frac{x^{2}}{x + 1}\\).",
+    "Factor \\(x^{2} - 1 = (x - 1)(x + 1)\\) and cancel \\((x + 1)\\) and one \\(x\\): \\((x - 1) \\cdot x = x^{2} - x\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of canceling \\((x + 1)\\) against \\((x - 1)\\) and keeping \\((x + 1)\\); the common factor is \\((x + 1)\\), which leaves \\((x - 1)\\).",
+    "B": "Incorrect. This is the result of canceling \\(x^{2}\\) in the numerator against \\(x\\) in the denominator as if they were equal; \\(\\frac{x^{2}}{x} = x\\), not 1.",
+    "C": "Incorrect. This is the result of multiplying the two fractions without flipping the second one.",
+    "D": "Correct. \\(\\frac{(x - 1)(x + 1)}{x} \\cdot \\frac{x^{2}}{x + 1} = x(x - 1) = x^{2} - x\\)."
+  },
+  "traps": {
+    "A": "sign_error",
+    "B": "arithmetic",
+    "C": "concept"
+  },
+  "verify": "x = symbols('x')\nt = ((x**2 - 1)/x) / ((x + 1)/x**2)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

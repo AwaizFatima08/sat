@@ -1,0 +1,158 @@
+{
+  "id": "m-nle-0659",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A rectangular courtyard is \\(2x\\) meters long and \\(x + 3\\) meters wide. A square fountain with side length \\(x\\) meters is built inside the courtyard, as shown. The part of the courtyard outside the fountain is paved and has an area of 91 square meters. What is the value of \\(x\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        0,
+        0
+      ],
+      "B": [
+        14,
+        0
+      ],
+      "C": [
+        14,
+        10
+      ],
+      "D": [
+        0,
+        10
+      ],
+      "E": [
+        3,
+        1.5
+      ],
+      "F": [
+        10,
+        1.5
+      ],
+      "G": [
+        10,
+        8.5
+      ],
+      "H": [
+        3,
+        8.5
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "F",
+        "G"
+      ],
+      [
+        "G",
+        "H"
+      ],
+      [
+        "H",
+        "E"
+      ]
+    ],
+    "labels": [
+      {
+        "at": [
+          7,
+          -1
+        ],
+        "text": "2x"
+      },
+      {
+        "at": [
+          -1.8,
+          5
+        ],
+        "text": "x + 3"
+      },
+      {
+        "at": [
+          6.5,
+          9.3
+        ],
+        "text": "x"
+      }
+    ],
+    "right_angles": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "not_to_scale": false
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10\\)",
+    "B": "\\(13\\)",
+    "C": "\\(\\sqrt{91}\\)",
+    "D": "\\(7\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "Paved area = courtyard area − fountain area: \\(2x(x + 3) - x^{2} = 91\\).",
+    "Simplify: \\(x^{2} + 6x = 91\\). Complete the square: \\((x + 3)^{2} = 100\\), so \\(x + 3 = \\pm 10\\).",
+    "Since \\(x\\) is a length, \\(x + 3 = 10\\) and \\(x = 7\\). (Check: \\(14 \\cdot 10 - 49 = 91\\).)"
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the value of \\(x + 3\\) from \\((x + 3)^{2} = 100\\); the last step of subtracting \\(3\\) was skipped.",
+    "B": "Incorrect. This is the size of the rejected root \\(x = -13\\) with its sign dropped; a length cannot come from the negative root.",
+    "C": "Incorrect. This is the result of setting \\(x^{2} = 91\\), treating the paved area as if it were the area of the fountain.",
+    "D": "Correct. \\(2x(x + 3) - x^{2} = x^{2} + 6x = 91\\) gives \\((x + 3)^{2} = 100\\), so \\(x = 7\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "sign_error",
+    "C": "concept"
+  },
+  "verify": "x = symbols('x')\nsols = solve(Eq(2*x*(x + 3) - x**2, 91), x)\nassert sorted(sols) == [-13, 7]\nassert value(choices[answer]) == 7\nassert all(value(choices[k]) != 7 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

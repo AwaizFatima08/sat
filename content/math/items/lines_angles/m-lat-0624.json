@@ -1,0 +1,96 @@
+{
+  "id": "m-lat-0624",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "lines_angles",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the figure, \\(\\overline{AD}\\) bisects angle \\(BAC\\), and point \\(D\\) lies on \\(\\overline{BC}\\). Angle \\(BAC\\) measures \\(50^{\\circ}\\), and the measure of angle \\(ADC\\) is \\(24^{\\circ}\\) greater than the measure of angle \\(ADB\\). What is the measure, in degrees, of angle \\(ACB\\)?",
+  "figure": {
+    "kind": "geometry",
+    "points": {
+      "A": [
+        2.345,
+        10.158
+      ],
+      "B": [
+        0.0,
+        0.0
+      ],
+      "C": [
+        10.0,
+        0.0
+      ],
+      "D": [
+        4.504,
+        0.0
+      ]
+    },
+    "segments": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "A"
+      ],
+      [
+        "A",
+        "D"
+      ]
+    ],
+    "circles": [],
+    "labels": [
+      {
+        "at": [
+          2.74,
+          8.3
+        ],
+        "text": "50°"
+      }
+    ],
+    "right_angles": [],
+    "not_to_scale": false
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "53"
+  ],
+  "solution": [
+    "Each half of the bisected angle measures \\(25^{\\circ}\\). Angle \\(ADC\\) is an exterior angle of triangle \\(ABD\\), so angle \\(ADC = 25 + B\\). Likewise angle \\(ADB = 25 + C\\).",
+    "The difference is \\((25 + B) - (25 + C) = B - C = 24\\).",
+    "Also \\(B + C = 180 - 50 = 130\\). Adding the two equations: \\(2B = 154\\), so \\(B = 77\\) and \\(C = 130 - 77 = 53\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "P=figure['points']\nd=lambda a,b: sqrt((P[a][0]-P[b][0])**2+(P[a][1]-P[b][1])**2)\nang=lambda a,v,b: N(acos(((P[a][0]-P[v][0])*(P[b][0]-P[v][0])+(P[a][1]-P[v][1])*(P[b][1]-P[v][1]))/(d(a,v)*d(b,v)))*180/pi)\nassert P['B'][1]==P['C'][1]==P['D'][1] and P['B'][0]<P['D'][0]<P['C'][0]\nassert abs(ang('B','A','C')-50)<0.1 and abs(ang('B','A','D')-ang('D','A','C'))<0.1\nassert abs((ang('A','D','C')-ang('A','D','B'))-24)<0.1\nBs,Cs=symbols('Bs Cs')\nsol=solve([Eq(Bs+Cs,130),Eq((180-25-Cs)-(180-25-Bs),24)],[Bs,Cs])\nans=sol[Cs]\nassert abs(ang('A','C','B')-ans)<0.1\nassert Rational(spr_answers[0])==ans==53\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "53",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

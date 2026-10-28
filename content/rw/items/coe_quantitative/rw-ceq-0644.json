@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0644",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many primary schools in Glasgow, Scotland, run breakfast clubs that open before the school day and serve a free meal. The clubs are usually justified on grounds of nutrition, but education researcher Callum Fraser suspected that they also change when children arrive. At four schools that opened clubs in the autumn of 2022, he compared the share of pupils arriving late in the term before the clubs opened with the share in the following term, and he did the same at four similar schools without clubs. He argues that the clubs reduced lateness and that the change cannot be explained by a general trend affecting all schools that year.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Pupils Arriving Late at Eight Glasgow Primary Schools",
+    "columns": [
+      "School group",
+      "Pupils late, term before clubs opened (%)",
+      "Pupils late, following term (%)"
+    ],
+    "rows": [
+      [
+        "Schools with new breakfast clubs",
+        14.2,
+        8.1
+      ],
+      [
+        "Comparison schools without clubs",
+        13.8,
+        13.5
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Fraser's argument?",
+  "choices": {
+    "A": "In the term after the clubs opened, 8.1 percent of pupils at those schools arrived late, compared with 13.5 percent at the comparison schools.",
+    "B": "Pupils who attended the breakfast clubs performed better in reading tests than pupils who did not.",
+    "C": "Lateness at schools with new clubs fell from 14.2 to 8.1 percent, while at the comparison schools it barely changed, from 13.8 to 13.5 percent.",
+    "D": "Lateness fell at both groups of schools by similar amounts across the two terms."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Fraser makes two claims: lateness fell at the club schools, and the fall was not part of a general trend. Showing both requires the change over time in each group. Club schools dropped 6.1 points (14.2 to 8.1); comparison schools dropped only 0.3 points (13.8 to 13.5).",
+    "A": "Incorrect. This is true, but comparing the two groups in one term alone cannot show that lateness fell; the club schools might simply have had less lateness all along.",
+    "B": "Incorrect. The table records lateness only; it says nothing about reading tests.",
+    "C": "Correct. A large drop at the club schools beside an almost flat line at similar schools supports both the reduction and the ruling out of a general trend.",
+    "D": "Incorrect. The comparison schools' lateness changed by only 0.3 points against 6.1 points at the club schools, so the amounts were not similar."
+  },
+  "traps": {
+    "A": "too_narrow",
+    "B": "not_in_text",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

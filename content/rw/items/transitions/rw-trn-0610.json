@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0610",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A zeer is a simple cooler made from two clay pots, one placed inside the other, with the gap between them filled with wet sand. As water in the sand slowly evaporates through the outer pot, it carries heat away from the inner pot. ______ the zeer works on the same principle that cools a person's skin when sweat dries. In a dry climate, vegetables kept inside can stay fresh for days longer than they would in open air.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For instance,",
+    "B": "In other words,",
+    "C": "Nevertheless,",
+    "D": "Afterward,"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The second sentence explains how the cooler works: evaporating water carries heat away. The third sentence explains the same idea again in a more familiar way, by comparing it to sweat drying on skin. A transition that introduces a restatement is needed.",
+    "A": "Incorrect. Sweat cooling the skin is not an example of the zeer; it is a comparison used to restate how the zeer works.",
+    "B": "Correct. \"In other words\" introduces the sweat comparison as a simpler way of saying how the evaporating water cools the pot.",
+    "C": "Incorrect. \"Nevertheless\" signals a contrast, but the comparison to sweat agrees with the explanation just given.",
+    "D": "Incorrect. \"Afterward\" signals the next event in time, but the sentence does not describe a later step."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

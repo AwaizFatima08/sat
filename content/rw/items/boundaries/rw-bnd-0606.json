@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0606",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A bolt of lightning heats the air around it to an astonishing ______ roughly 30,000 degrees Celsius, several times hotter than the surface of the sun. The heated air expands so violently that it sends out a shock wave, which we hear as thunder.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "temperature:",
+    "B": "temperature;",
+    "C": "temperature, and",
+    "D": "temperature"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "\"A bolt of lightning heats the air around it to an astonishing temperature\" is a complete sentence. \"Roughly 30,000 degrees Celsius\" is not a clause but a phrase that states exactly what that temperature is. A colon placed after a complete sentence introduces such an explanation or detail.",
+    "A": "Correct. A colon after the complete sentence introduces the phrase that specifies the temperature.",
+    "B": "Incorrect. A semicolon must have an independent clause on each side; \"roughly 30,000 degrees Celsius\" is only a phrase.",
+    "C": "Incorrect. \"And\" would join \"temperature\" and \"roughly 30,000 degrees Celsius\" as if they were two separate things, which makes no sense; the second phrase explains the first.",
+    "D": "Incorrect. With no punctuation, the phrase \"roughly 30,000 degrees Celsius\" runs into the sentence with nothing to connect it."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "punctuation",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

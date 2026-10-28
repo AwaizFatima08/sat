@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0629",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The Latin word vomitorium is often explained, in jokes and even in some older reference books, as the name of a room where wealthy Romans emptied their stomachs between courses so that they could go on feasting. No such rooms existed, and no Roman writer describes one. ______ a vomitorium was a passageway in a theater or amphitheater through which crowds poured out at the end of a performance; the word comes from the same root as \"vomit\" only because the building seemed to spew its audience into the street.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For example,",
+    "B": "In other words,",
+    "C": "Consequently,",
+    "D": "Rather,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence rejects the popular explanation of the word. The third sentence gives the correct meaning in its place. A transition that replaces a rejected idea with the right one is needed.",
+    "A": "Incorrect. The passageway is not an example of a room that never existed; it is the correct meaning that replaces that idea.",
+    "B": "Incorrect. \"In other words\" is tempting because the sentence explains the word, but it does not restate the previous sentence; it gives a different meaning after the previous one was rejected.",
+    "C": "Incorrect. \"Consequently\" would mean the real meaning follows from the fact that no such rooms existed, but the real meaning is a separate fact, not a result.",
+    "D": "Correct. \"Rather\" introduces the true meaning of vomitorium in place of the false one the author has just rejected."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

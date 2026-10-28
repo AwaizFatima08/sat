@@ -1,0 +1,57 @@
+{
+  "id": "m-nlf-0625",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The function \\(g\\) is defined by \\(g(x) = 2^{x} - 8\\). What is the \\(x\\)-intercept of the graph of \\(y = g(x)\\) in the \\(xy\\)-plane?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((0, -7)\\)",
+    "B": "\\((8, 0)\\)",
+    "C": "\\((3, 0)\\)",
+    "D": "\\((-7, 0)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "At the \\(x\\)-intercept, \\(y = 0\\): \\(2^{x} - 8 = 0\\), so \\(2^{x} = 8\\).",
+    "Since \\(2^{3} = 8\\), \\(x = 3\\). The \\(x\\)-intercept is \\((3, 0)\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. \\((0, -7)\\) is the \\(y\\)-intercept, found by setting \\(x = 0\\): \\(2^{0} - 8 = -7\\).",
+    "B": "Incorrect. \\(8\\) is the value that \\(2^{x}\\) must equal, not the value of \\(x\\); \\(2^{3} = 8\\).",
+    "C": "Correct. \\(g(3) = 2^{3} - 8 = 0\\).",
+    "D": "Incorrect. \\(-7\\) is the \\(y\\)-intercept value \\(g(0)\\) placed on the \\(x\\)-axis; the \\(x\\)-intercept has \\(y = 0\\)."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "concept"
+  },
+  "verify": "x = symbols('x')\nsol = solve(Eq(2**x - 8, 0), x)\nassert sol == [3]\nassert choices[answer] == r'\\((3, 0)\\)'",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

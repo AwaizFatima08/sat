@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0605",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A sheet of paper is 0.1 millimeter thick. Each time the sheet is folded in half, the thickness of the folded stack doubles. Which of the following functions gives the thickness \\(T(n)\\), in millimeters, of the stack after \\(n\\) folds?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(T(n) = 0.1 + 2n\\)",
+    "B": "\\(T(n) = 2(0.1)^{n}\\)",
+    "C": "\\(T(n) = 0.1n^{2}\\)",
+    "D": "\\(T(n) = 0.1(2)^{n}\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "The thickness starts at \\(0.1\\) millimeter and is multiplied by \\(2\\) for each fold.",
+    "Repeated multiplication by the same factor is an exponential function: \\(T(n) = 0.1(2)^{n}\\).",
+    "Check: \\(T(1) = 0.2\\), \\(T(2) = 0.4\\), \\(T(3) = 0.8\\), doubling each time."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds \\(2\\) millimeters per fold, a linear change, but the thickness doubles each fold.",
+    "B": "Incorrect. This swaps the starting thickness and the growth factor; it gives \\(T(0) = 2\\), not \\(0.1\\).",
+    "C": "Incorrect. Squaring \\(n\\) does not double the thickness with every fold; for example \\(T(1) = 0.1\\) and \\(T(2) = 0.4\\), which is 4 times \\(T(1)\\).",
+    "D": "Correct. Starting value \\(0.1\\), multiplied by \\(2\\) for each of the \\(n\\) folds."
+  },
+  "traps": {
+    "A": "wrong_formula",
+    "B": "concept",
+    "C": "concept"
+  },
+  "verify": "n = symbols('n')\nexp = Rational(1, 10)*2**n\nrhs = {k: value(v.split('=')[1]) for k, v in choices.items()}\nok = [k for k in choices if all(abs(rhs[k].subs(n, i) - exp.subs(n, i)) < 1e-9 for i in range(4))]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

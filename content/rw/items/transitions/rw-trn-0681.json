@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0681",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The composer Steve Reich discovered the technique he called phasing by accident in the mid-1960s, when two tape recorders playing identical loops of a recorded voice drifted slowly out of step, so that the same words overlapped at ever-changing intervals. The effect depended on the mechanical indifference of the machines, which drifted apart through tiny inconsistencies in their motors and without any decision by anyone. ______ in Piano Phase, completed in 1967, Reich asked two pianists to reproduce the drift deliberately, one holding a steady tempo while the other edged ahead by barely perceptible degrees, a task that demands precisely the control the tape machines lacked.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For example,",
+    "B": "Similarly,",
+    "C": "Consequently,",
+    "D": "Nevertheless,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence says that phasing originally depended on machines drifting without anyone's control. The last sentence says that Reich then asked human performers to produce the drift on purpose, with great control. The transition must show that this move ran against the nature of the original effect.",
+    "A": "Incorrect. Two pianists controlling their tempo is not an example of machines drifting without anyone's decision.",
+    "B": "Incorrect. \"Similarly\" would make the piano piece a parallel case to the tape machines, but the sentence stresses how it differs: deliberate control instead of mechanical accident.",
+    "C": "Incorrect. Reich's decision to use pianists was not a result of the machines' indifference; it departed from it.",
+    "D": "Correct. \"Nevertheless\" signals that, although the effect had depended on uncontrolled machines, Reich transferred it to performers who had to control it exactly."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

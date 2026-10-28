@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0665",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "In the equation \\(x^{2} - 6x + c = 0\\), \\(c\\) is a constant. The equation has two distinct real solutions, and both solutions are positive. Which of the following could be the value of \\(c\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(9\\)",
+    "B": "\\(5\\)",
+    "C": "\\(-7\\)",
+    "D": "\\(12\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Two distinct real solutions require a positive discriminant: \\(36 - 4c > 0\\), so \\(c < 9\\).",
+    "The product of the solutions is \\(c\\) and their sum is \\(6\\). Both solutions positive means the product is positive: \\(c > 0\\).",
+    "So \\(0 < c < 9\\). Of the choices, only \\(5\\) works: \\(x^{2} - 6x + 5 = (x - 1)(x - 5)\\), with solutions \\(1\\) and \\(5\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. With \\(c = 9\\) the discriminant is \\(0\\): \\((x - 3)^{2} = 0\\) has only one solution, \\(3\\), not two distinct solutions.",
+    "B": "Correct. \\(c = 5\\) gives \\((x - 1)(x - 5) = 0\\): two distinct positive solutions.",
+    "C": "Incorrect. This is the result of checking only the discriminant (\\(36 + 28 > 0\\)); with \\(c = -7\\) the product of the solutions is negative, so one solution is negative.",
+    "D": "Incorrect. This is the result of checking only that the sum and product are positive; with \\(c = 12\\) the discriminant is \\(36 - 48 < 0\\), so there are no real solutions."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "x = symbols('x')\ndef ok(cv):\n    r = solve(x**2 - 6*x + cv, x)\n    return len(r) == 2 and all(s.is_real and s > 0 for s in r)\nassert ok(value(choices[answer])) and value(choices[answer]) == 5\nassert all(not ok(value(choices[k])) for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

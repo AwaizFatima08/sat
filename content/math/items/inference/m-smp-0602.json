@@ -1,0 +1,57 @@
+{
+  "id": "m-smp-0602",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A school has 1,500 students. In a random sample of the school's students, 36% walk to school, and the margin of error for this estimate is 4 percentage points. Which of the following is a plausible value for the number of students at the school who walk to school?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(450\\)",
+    "B": "\\(540\\)",
+    "C": "\\(630\\)",
+    "D": "\\(60\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "The plausible values for the percent of all students who walk are \\(36\\% - 4\\% = 32\\%\\) to \\(36\\% + 4\\% = 40\\%\\).",
+    "Applied to 1,500 students, this gives \\(0.32 \\cdot 1{,}500 = 480\\) to \\(0.40 \\cdot 1{,}500 = 600\\) students. Of the choices, only 540 lies in this range."
+  ],
+  "explanation": {
+    "A": "Incorrect. 450 students is 30% of 1,500, which is below the least plausible value of 32%.",
+    "B": "Correct. 540 is 36% of 1,500, the estimate itself, and lies between the plausible limits of 480 and 600 students.",
+    "C": "Incorrect. 630 students is 42% of 1,500, which is above the greatest plausible value of 40%.",
+    "D": "Incorrect. This is 4% of 1,500; the margin of error is not a count of students but a range around the estimate."
+  },
+  "traps": {
+    "A": "arithmetic",
+    "C": "wrong_formula",
+    "D": "concept"
+  },
+  "verify": "lo, hi = Rational(36 - 4, 100) * 1500, Rational(36 + 4, 100) * 1500\nassert (lo, hi) == (480, 600)\nok = [k for k in choices if lo <= value(choices[k]) <= hi]\nassert ok == [answer] and value(choices[answer]) == 540",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

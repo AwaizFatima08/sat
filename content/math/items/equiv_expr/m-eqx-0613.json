@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0613",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A bookshop in Karachi sells \\(n\\) copies of a novel at 850 rupees each and \\((n + 12)\\) copies of a cookbook at 600 rupees each. Which expression represents the total amount, in rupees, the shop receives for these books?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1{,}450n + 12\\)",
+    "B": "\\(1{,}450n + 7{,}200\\)",
+    "C": "\\(1{,}450n + 17{,}400\\)",
+    "D": "\\(1{,}462n\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Novels bring in \\(850n\\) rupees; cookbooks bring in \\(600(n + 12) = 600n + 7{,}200\\) rupees.",
+    "Add: \\(850n + 600n + 7{,}200 = 1{,}450n + 7{,}200\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the result of not multiplying the extra 12 cookbooks by their price of 600 rupees.",
+    "B": "Correct. \\(850n + 600(n + 12) = 1{,}450n + 7{,}200\\).",
+    "C": "Incorrect. This is \\((850 + 600)(n + 12)\\), which charges both prices for every book, including the 12 extra cookbooks at the novel's price.",
+    "D": "Incorrect. This is the result of adding 12 to the combined price instead of treating it as 12 extra cookbooks."
+  },
+  "traps": {
+    "A": "concept",
+    "C": "concept",
+    "D": "concept"
+  },
+  "verify": "n = symbols('n')\nt = 850*n + 600*(n + 12)\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "m-le2-0609",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A freight elevator can carry at most 1,200 kilograms. The equation \\(50x + 80y = 1{,}200\\) represents a full load of \\(x\\) boxes of tiles and \\(y\\) bags of cement. Which of the following is the best interpretation of the number 80 in this equation?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "The elevator can carry 80 bags of cement.",
+    "B": "Each box of tiles weighs 80 kilograms.",
+    "C": "Each bag of cement weighs 80 kilograms.",
+    "D": "The total weight of the cement is 80 kilograms."
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "\\(80y\\) is the total weight of \\(y\\) bags of cement.",
+    "So 80 is the weight of one bag, in kilograms."
+  ],
+  "explanation": {
+    "A": "Incorrect. 80 is multiplied by the number of bags, so it is a weight per bag, not a number of bags. (With no tiles, the elevator carries 15 bags.)",
+    "B": "Incorrect. The coefficient of \\(x\\), the number of boxes of tiles, is 50; 80 goes with \\(y\\), the bags of cement.",
+    "C": "Correct. \\(80y\\) is the weight of \\(y\\) bags, so 80 is the weight, in kilograms, of one bag of cement.",
+    "D": "Incorrect. The total weight of the cement is \\(80y\\) kilograms, which depends on the number of bags."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "B": "concept",
+    "D": "wrong_formula"
+  },
+  "verify": "assert 'bag of cement weighs 80' in choices[answer]\nassert 1200 - 50*0 == 80*15",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

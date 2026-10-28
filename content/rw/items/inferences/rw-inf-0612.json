@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0612",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A shark's skin feels rough because it is covered with millions of tiny tooth-shaped scales called denticles. Engineers who studied the scales wondered whether they affect how easily a shark moves through water. They built two model surfaces of the same size and shape, one perfectly smooth and the other covered with a pattern copied from the denticles, and pulled both through a tank of water at the same speed. The surface with the denticle pattern met less resistance from the water than the smooth one did. This result suggests that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the shape of a shark's body matters more than the texture of its skin.",
+    "B": "sharks swim faster than any other kind of fish.",
+    "C": "a textured surface can move through water more easily than a smooth one.",
+    "D": "a rough surface always meets more resistance in water than a smooth one."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The two surfaces differed only in texture, and the one with the denticle pattern met less resistance. So the textured surface, not the smooth one, slipped through the water more easily.",
+    "A": "Incorrect. Body shape was held the same in the experiment, so no comparison with texture was made.",
+    "B": "Incorrect. The experiment compared two surfaces, not sharks with other fish.",
+    "C": "Correct. With size and shape equal, the denticle texture reduced resistance.",
+    "D": "Incorrect. This reverses the result; the textured surface met less resistance, not more."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "too_broad",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "rw-ceq-0642",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Graphic designers are often told that a poster with strong contrast between lettering and background is remembered better than one in subtle, low-contrast colors. Design researcher Ewa Lisowska suspected that this rule ignores how posters are actually seen. She showed volunteers posters for an imaginary concert in two versions, high contrast and low contrast, either for a glance of two seconds or for a full twenty seconds, and later tested their recall of the concert's date and venue. She argues that contrast matters only for brief exposure: given time to read, she contends, viewers remember a low-contrast poster about as well as a high-contrast one.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Recall of Poster Details by Contrast and Viewing Time",
+    "columns": [
+      "Viewing time",
+      "High-contrast poster: details recalled (%)",
+      "Low-contrast poster: details recalled (%)"
+    ],
+    "rows": [
+      [
+        "2 seconds",
+        58,
+        31
+      ],
+      [
+        "20 seconds",
+        81,
+        78
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Lisowska's argument?",
+  "choices": {
+    "A": "At 2 seconds the high-contrast poster led by 27 percentage points, but at 20 seconds the gap shrank to 3 points.",
+    "B": "At 20 seconds, the low-contrast poster was recalled slightly better than the high-contrast one.",
+    "C": "Viewers recalled more details from the high-contrast poster than from the low-contrast one at both viewing times.",
+    "D": "Recall of the low-contrast poster more than doubled when viewing time rose from 2 to 20 seconds."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Lisowska's argument is about how the gap between the two posters changes with viewing time: large at a glance, nearly gone with time to read. The evidence must compare the gap at each time: 58 minus 31 is 27 points at 2 seconds, while 81 minus 78 is 3 points at 20 seconds.",
+    "A": "Correct. A 27-point gap after a glance and a 3-point gap after twenty seconds shows contrast mattering only for brief exposure.",
+    "B": "Incorrect. At 20 seconds the high-contrast poster was recalled slightly better (81 versus 78 percent), so this reverses the table.",
+    "C": "Incorrect. This is true, but stating that high contrast won both times leaves out the size of each gap, which is what distinguishes her view from the usual rule.",
+    "D": "Incorrect. This is true (31 to 78 percent), but it describes the low-contrast poster alone; it does not compare the two posters at 20 seconds."
+  },
+  "traps": {
+    "B": "reversed",
+    "C": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

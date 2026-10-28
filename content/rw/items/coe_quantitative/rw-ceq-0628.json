@@ -1,0 +1,96 @@
+{
+  "id": "rw-ceq-0628",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Obsidian, a volcanic glass that can be chipped into sharp blades, was prized by ancient toolmakers, and each volcanic source has a chemical signature that lets archaeologists trace a tool back to its origin. Archaeologist Rosa Mendieta analyzed obsidian tools from a settlement in central Mexico across four periods of its occupation. She argued that the settlement's trade links reached farther over time, as tools made from distant sources made up a growing share of the total.",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Origin of Obsidian Tools from a Settlement in Central Mexico, by Period",
+    "columns": [
+      "Period",
+      "Tools analyzed",
+      "From sources within 100 km (%)",
+      "From sources 100–300 km away (%)",
+      "From sources over 300 km away (%)"
+    ],
+    "rows": [
+      [
+        "1 (earliest)",
+        120,
+        88,
+        10,
+        2
+      ],
+      [
+        "2",
+        150,
+        76,
+        18,
+        6
+      ],
+      [
+        "3",
+        140,
+        61,
+        27,
+        12
+      ],
+      [
+        "4 (latest)",
+        160,
+        52,
+        29,
+        19
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to support Mendieta's argument?",
+  "choices": {
+    "A": "Obsidian from distant sources was of higher quality than obsidian from sources near the settlement.",
+    "B": "Tools from sources within 100 kilometers made up the majority of the tools analyzed in every period.",
+    "C": "The share of tools from sources within 100 kilometers rose steadily across the four periods.",
+    "D": "The share of tools from sources more than 300 kilometers away rose from 2 percent in the earliest period to 19 percent in the latest."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Mendieta's argument is that distant sources supplied a growing share of tools over time. The support must track a far-source share across the periods: the share from sources over 300 kilometers away rose from 2 to 6 to 12 to 19 percent (and the 100–300 kilometer share also grew).",
+    "A": "Incorrect. The table shows where tools came from, not how good the obsidian was.",
+    "B": "Incorrect. This is true, but it emphasizes how much local obsidian was used and says nothing about whether distant sources grew.",
+    "C": "Incorrect. This reverses the data: the local share fell from 88 percent to 52 percent; it did not rise.",
+    "D": "Correct. A share rising from 2 percent to 19 percent across the four periods shows distant sources becoming more important, as Mendieta argues."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

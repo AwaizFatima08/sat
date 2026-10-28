@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0610",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Visitors to medieval European cathedrals sometimes notice small symbols cut into the stones: an arrow, a star, a letter-like shape. Each stonemason who worked on a building chose a personal symbol and cut it into the blocks he had shaped. On many building sites, masons were paid not by the day but for each finished stone, and the site's overseer kept the accounts. The presence of these marks suggests that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "masons carved the symbols to show visitors how the cathedral had been built.",
+    "B": "the marks let the overseer tell which mason had shaped each stone and pay him accordingly.",
+    "C": "masons were paid more for stones that carried their symbol than for stones without it.",
+    "D": "every stone in a cathedral was shaped by the same small group of masons."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Each mason had his own mark and was paid per finished stone, while an overseer kept the accounts. To pay the right mason for the right stones, the overseer had to know who shaped each one, and the personal marks provide exactly that information.",
+    "A": "Incorrect. The text links the marks to the masons' pay, not to any message for visitors.",
+    "B": "Correct. Personal marks plus payment per stone point to the marks as a record of who shaped what.",
+    "C": "Incorrect. The text does not compare pay for marked and unmarked stones; the marks identify the mason, not a higher rate.",
+    "D": "Incorrect. The text implies many masons with different marks, not one small group shaping every stone."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

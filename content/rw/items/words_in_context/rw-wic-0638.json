@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0638",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Common cranes migrating between northern Europe and Spain are large birds, and flapping their broad wings for hours is costly. On long stretches over land, they therefore rely on thermals, columns of warm air rising from sun-heated ground. A flock circles inside one column, gaining height almost without moving its wings, then glides for kilometers to the next. This strategy ______ the energy the birds spend on each day's flight, but it also ties them to the sun: thermals weaken in the evening, so cranes generally land before dusk and wait for the next morning's heat.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "reduces",
+    "B": "replaces",
+    "C": "increases",
+    "D": "measures"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "Flapping \"is costly,\" and the cranes use thermals to gain height \"almost without moving\" their wings. The strategy therefore lowers the energy cost of flight, and the \"but\" that follows introduces its drawback. \"Reduces\" states the benefit precisely.",
+    "A": "Correct. Soaring on thermals instead of flapping lowers the energy spent on each day's flight.",
+    "B": "Incorrect. A strategy cannot replace energy; the cranes still spend energy, just less of it.",
+    "C": "Incorrect. This reverses the point: the cranes use thermals because flapping is costly, so their method saves energy.",
+    "D": "Incorrect. The birds are not measuring anything; the sentence is about how much energy they use."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "reversed",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0626",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Marta drove 420 kilometers in 4.8 hours. She drove part of the distance at an average speed of 70 kilometers per hour and the rest at an average speed of 100 kilometers per hour. How many kilometers did Marta drive at 100 kilometers per hour?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(140\\)",
+    "B": "\\(280\\)",
+    "C": "\\(2.8\\)",
+    "D": "\\(240\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Let \\(d\\) be the distance at 100 km/h; the other \\(420 - d\\) kilometers were at 70 km/h.",
+    "Total time: \\(\\frac{d}{100} + \\frac{420 - d}{70} = 4.8\\). Multiply by 700: \\(7d + 10(420 - d) = 3{,}360\\).",
+    "So \\(4{,}200 - 3d = 3{,}360\\), giving \\(3d = 840\\) and \\(d = 280\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the distance driven at 70 km/h, \\(420 - 280\\).",
+    "B": "Correct. \\(d = 280\\). Check: \\(\\frac{280}{100} + \\frac{140}{70} = 2.8 + 2 = 4.8\\) hours.",
+    "C": "Incorrect. This is the number of hours driven at 100 km/h, not the distance.",
+    "D": "Incorrect. This is the result of assuming she spent half the time, 2.4 hours, at each speed: \\(2.4 \\cdot 100 = 240\\). The times are not equal."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "wrong_quantity",
+    "D": "wrong_formula"
+  },
+  "verify": "d = symbols('d')\ns = solve(Eq(d/100 + (420 - d)/70, Rational(24, 5)), d)[0]\nassert s == 280\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

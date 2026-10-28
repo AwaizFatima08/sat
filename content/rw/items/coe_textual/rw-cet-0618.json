@@ -1,0 +1,60 @@
+{
+  "id": "rw-cet-0618",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "\"Ozymandias\" is an 1818 sonnet by Percy Bysshe Shelley. In it, a traveler describes the ruined statue of an ancient king lying in an empty desert. The king's power is long gone, and his boastful inscription now seems absurd. Yet the poem suggests that something has outlasted the king: the skill of the sculptor, whose carving still conveys the king's arrogance and cruelty centuries after the king himself and everything he ruled have vanished.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which quotation from \"Ozymandias\" most effectively illustrates the claim?",
+  "choices": {
+    "A": "\"'My name is Ozymandias, king of kings: / Look on my works, ye Mighty, and despair!'\"",
+    "B": "\"Tell that its sculptor well those passions read / Which yet survive, stamped on these lifeless things,\"",
+    "C": "\"Two vast and trunkless legs of stone / Stand in the desert.\"",
+    "D": "\"Nothing beside remains. Round the decay / Of that colossal wreck, boundless and bare / The lone and level sands stretch far away.\""
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The claim is that the sculptor's skill has outlasted the king by preserving the king's character in stone. The right quotation must mention the sculptor and the survival of what he captured. Only the lines about the sculptor reading the king's \"passions,\" which \"yet survive, stamped on these lifeless things,\" do both.",
+    "A": "Incorrect. This is the king's boast. It shows his arrogance but does not say that the sculptor's art has survived.",
+    "B": "Correct. These lines say that the sculptor understood the king's \"passions\" and that they \"yet survive\" in the stone, which is the claim that the sculptor's skill outlasted the king.",
+    "C": "Incorrect. These lines describe the broken statue but say nothing about the sculptor or what his work preserved.",
+    "D": "Incorrect. These lines show that the king's empire has vanished, which is only part of the claim; they do not mention the sculptor's skill surviving."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "true_irrelevant",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "public_domain",
+    "author": "Percy Bysshe Shelley",
+    "work": "Ozymandias",
+    "year": 1818,
+    "url": "https://www.gutenberg.org/ebooks/4800"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

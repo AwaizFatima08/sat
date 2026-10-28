@@ -1,0 +1,43 @@
+{
+  "id": "m-le2-0604",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_two",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A juice bar makes 48 liters of fruit punch for an event and pours all of it into \\(x\\) cartons that hold 3 liters each and \\(y\\) jugs that hold 8 liters each, so that \\(3x + 8y = 48\\). If the juice bar uses no cartons, how many jugs does it fill?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "6"
+  ],
+  "solution": [
+    "With no cartons, \\(x = 0\\): \\(8y = 48\\).",
+    "So \\(y = 6\\) jugs."
+  ],
+  "verify": "y = symbols('y')\nb = solve(Eq(3*0 + 8*y, 48), y)[0]\nassert b == 6\nassert [Rational(s) for s in spr_answers] == [b]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "6",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

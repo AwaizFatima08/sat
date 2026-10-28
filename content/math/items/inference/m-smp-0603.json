@@ -1,0 +1,83 @@
+{
+  "id": "m-smp-0603",
+  "section": "math",
+  "domain": "psda",
+  "type": "inference",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A factory has 2,000 workers. The histogram summarizes the one-way commute times, in minutes, of a random sample of 50 of the workers; each bar includes its left endpoint but not its right endpoint. Based on the sample, which of the following is the best estimate of the number of the factory's workers whose commute time is 30 minutes or more?",
+  "figure": {
+    "kind": "histogram",
+    "x_label": "Commute time (minutes)",
+    "y_label": "Number of workers",
+    "bins": [
+      [
+        0,
+        15,
+        8
+      ],
+      [
+        15,
+        30,
+        17
+      ],
+      [
+        30,
+        45,
+        15
+      ],
+      [
+        45,
+        60,
+        10
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(1{,}000\\)",
+    "B": "\\(25\\)",
+    "C": "\\(600\\)",
+    "D": "\\(1{,}400\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "In the sample, \\(15 + 10 = 25\\) of the 50 workers have a commute of 30 minutes or more, a proportion of \\(\\frac{25}{50} = \\frac{1}{2}\\).",
+    "Applying this proportion to all 2,000 workers gives \\(\\frac{1}{2} \\cdot 2{,}000 = 1{,}000\\) workers."
+  ],
+  "explanation": {
+    "A": "Correct. Half of the sampled workers (\\(15 + 10 = 25\\) of 50) commute 30 minutes or more, so about \\(\\frac{1}{2} \\cdot 2{,}000 = 1{,}000\\) of all workers do.",
+    "B": "Incorrect. 25 is the number of sampled workers with such a commute; the question asks for the estimated number among all 2,000 workers.",
+    "C": "Incorrect. This uses only the 30-to-45 bar (15 of 50); the 45-to-60 bar also counts as 30 minutes or more.",
+    "D": "Incorrect. This is \\(\\frac{35}{50} \\cdot 2{,}000\\), which counts the 15-to-30 bar instead of the 45-to-60 bar."
+  },
+  "traps": {
+    "B": "concept",
+    "C": "misread_graph",
+    "D": "wrong_quantity"
+  },
+  "verify": "bins = figure['bins']\nn = sum(c for _, _, c in bins)\nassert n == 50\nk = sum(c for lo, _, c in bins if lo >= 30)\nest = Rational(k, n) * 2000\nassert est == 1000\nassert value(choices[answer]) == est\nassert all(value(choices[c]) != est for c in choices if c != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

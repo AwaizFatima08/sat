@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0630",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The regatta was the first race in which Daniel would sit in the stroke seat, setting the pace for the seven rowers behind him. His coach had warned him that the first ten strokes would feel hopeless, as if the oar were catching nothing but air, and that the rhythm would come only if he refused to rush. ______ for the first stretch of the course the boat felt heavy and slow, and Daniel had to fight the urge to shorten his strokes; then, almost without his noticing, the oars began to bite and the boat settled into its run.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "However,",
+    "B": "Instead,",
+    "C": "In addition,",
+    "D": "Indeed,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence reports the coach's prediction: the first strokes would feel hopeless, and the rhythm would come later. The last sentence describes the race going exactly as predicted. A transition that confirms that the prediction came true is needed.",
+    "A": "Incorrect. \"However\" would mean the race went differently from the coach's warning, but it went just as he said. This is the closest near miss, since the sentence also contains a turn marked by \"then.\"",
+    "B": "Incorrect. \"Instead\" would mean something replaced the predicted experience, but the predicted experience is exactly what Daniel had.",
+    "C": "Incorrect. \"In addition\" would add a new point to the coach's warning, but the sentence describes the race, which bears out the warning rather than adding to it.",
+    "D": "Correct. \"Indeed\" confirms that the coach's warning proved accurate: the boat felt heavy at first, and the rhythm came later."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

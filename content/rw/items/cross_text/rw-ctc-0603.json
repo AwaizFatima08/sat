@@ -1,0 +1,56 @@
+{
+  "id": "rw-ctc-0603",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "cross_text",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Ostriches are often seen with their heads held low, close to the ground. A common story says that a frightened ostrich buries its head in the sand, as if not seeing danger would make it go away. The phrase \"burying your head in the sand\" comes from this idea.",
+  "passage_b": "An ostrich with its head buried in sand could not breathe. What people see is something else: ostriches dig shallow nests in the sand and lower their heads to turn their eggs, and they bend down to swallow pebbles that help them grind food. A frightened ostrich does not hide; it runs, or it lies flat with its neck stretched out.",
+  "notes": null,
+  "data": null,
+  "stem": "Based on the texts, both authors would most likely agree with which statement?",
+  "choices": {
+    "A": "An ostrich's best defense against danger is its sharp eyesight.",
+    "B": "Ostriches can hold their breath for several minutes while underground.",
+    "C": "Ostriches bury their heads in order to hide from danger.",
+    "D": "Ostriches sometimes lower their heads close to the ground."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Text 1 opens by saying ostriches \"are often seen with their heads held low, close to the ground.\" Text 2 explains that they \"lower their heads to turn their eggs\" and \"bend down to swallow pebbles.\" Both authors accept that ostriches put their heads near the ground; they differ only on why.",
+    "A": "Incorrect. Neither text mentions eyesight.",
+    "B": "Incorrect. Neither text says anything about holding breath; Text 2 says a buried ostrich could not breathe at all.",
+    "C": "Incorrect. Text 1 calls this \"a common story,\" and Text 2 rejects it, saying a frightened ostrich \"does not hide\" and could not breathe with its head buried.",
+    "D": "Correct. Text 1 says ostriches are seen with heads held low, and Text 2 describes them bending down to tend eggs and swallow pebbles."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "not_in_text",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

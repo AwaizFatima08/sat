@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0640",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Himalayan balsam, a tall plant with pink flowers, was brought to Britain from the mountains of South Asia in 1839 as an ornamental garden plant. Its ripe seed pods burst at the slightest touch, flinging seeds several meters in every direction, and the seeds float, so any that land in a stream are carried downstream. ______ the plant did not stay in gardens for long; it now lines the banks of rivers across much of Britain and northern Europe, crowding out native plants.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Specifically,",
+    "B": "Nevertheless,",
+    "C": "Likewise,",
+    "D": "Consequently,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The second sentence describes how the plant spreads: pods fling seeds, and the seeds float downstream. The last sentence describes the outcome: the plant escaped gardens and spread along rivers. A cause-and-effect transition is needed.",
+    "A": "Incorrect. The plant's spread along rivers is not a more specific statement of how the pods burst; it is what the bursting led to. This is tempting because the last sentence names specific places.",
+    "B": "Incorrect. \"Nevertheless\" would mean the plant spread despite its seed dispersal, but it spread because of it.",
+    "C": "Incorrect. \"Likewise\" would introduce a parallel case, but the last sentence continues the same chain of events.",
+    "D": "Correct. \"Consequently\" shows that the plant's escape from gardens is the result of its exploding pods and floating seeds."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": "B",
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

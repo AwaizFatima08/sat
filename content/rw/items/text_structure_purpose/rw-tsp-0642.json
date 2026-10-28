@@ -1,0 +1,56 @@
+{
+  "id": "rw-tsp-0642",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "text_structure_purpose",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Periodical cicadas of eastern North America spend thirteen or seventeen years underground as nymphs and then emerge together over a few weeks. Why these particular intervals? Both are prime numbers, and one hypothesis holds that this is no accident. A predator whose own population peaked every two, three, or four years would coincide with a seventeen-year emergence only rarely, far less often than with a twelve- or sixteen-year cycle. A second hypothesis points instead to the cicadas themselves: broods on prime-number cycles overlap rarely, which may have kept neighboring populations from interbreeding and losing their synchrony. The two explanations are not exclusive, and direct tests are difficult, since no experiment can run over seventeen-year generations. The prime intervals remain one of the more elegant puzzles in evolutionary biology.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice best states the main purpose of the text?",
+  "choices": {
+    "A": "To show that evolutionary hypotheses about long-lived insects can never be tested",
+    "B": "To explain how billions of cicadas manage to emerge within the same few weeks",
+    "C": "To argue that periodical cicadas evolved prime-number cycles in order to avoid predators",
+    "D": "To present two possible explanations for a puzzling feature of cicada life cycles and note why neither has been confirmed"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The text poses a question (\"Why these particular intervals?\"), offers one hypothesis about predators, then a second about interbreeding, and closes by noting that the two are compatible, that tests are difficult, and that the question \"remain[s]\" a puzzle. Its purpose is to lay out the candidate explanations and explain why the matter is unresolved.",
+    "A": "Incorrect. The text says direct tests of this particular puzzle are difficult; it makes no sweeping claim about all such hypotheses.",
+    "B": "Incorrect. The mass emergence is stated as a fact in the first sentence; the text never explains how the cicadas coordinate it.",
+    "C": "Incorrect. Predator avoidance is only the first of two hypotheses, and the text presents it as a possibility rather than arguing for it.",
+    "D": "Correct. The text gives the predator hypothesis and the interbreeding hypothesis, then explains that direct tests are impractical."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "not_in_text",
+    "C": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

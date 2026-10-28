@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0622",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "What value of \\(x\\) satisfies the equation \\(0.3x - 4 = 0.1x + 7\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(55\\)",
+    "B": "\\(11\\)",
+    "C": "\\(7.5\\)",
+    "D": "\\(15\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Subtract \\(0.1x\\) from both sides: \\(0.2x - 4 = 7\\).",
+    "Add 4: \\(0.2x = 11\\).",
+    "Divide by 0.2: \\(x = 55\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(0.2x = 11\\), so \\(x = 55\\). Check: \\(16.5 - 4 = 12.5 = 5.5 + 7\\).",
+    "B": "Incorrect. This is the value of \\(0.2x\\), not \\(x\\).",
+    "C": "Incorrect. This is the result of adding \\(0.1x\\) and subtracting 4: \\(0.4x = 3\\).",
+    "D": "Incorrect. This is the result of subtracting 4 from 7 instead of adding it: \\(0.2x = 3\\)."
+  },
+  "traps": {
+    "B": "stopped_early",
+    "C": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "x = symbols('x')\ns = solve(Eq(Rational(3, 10)*x - 4, Rational(1, 10)*x + 7), x)[0]\nassert s == 55\nassert value(choices[answer]) == s\nassert all(value(choices[k]) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

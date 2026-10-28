@@ -1,0 +1,56 @@
+{
+  "id": "rw-bnd-0619",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "boundaries",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The electric eel of South America is not a true eel but a kind of knifefish. The thousands of specialized cells stacked along the length of its ______ a small voltage each, like batteries connected in a row, and together they can deliver a shock of several hundred volts to stun prey or drive off a predator.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "body: produce",
+    "B": "body produce",
+    "C": "body, produce",
+    "D": "body; produce"
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The subject of the second sentence is \"The thousands of specialized cells stacked along the length of its body,\" and its verb is \"produce.\" No punctuation should separate a subject from its verb, even when the subject is long, so nothing goes between \"body\" and \"produce.\"",
+    "A": "Incorrect. A colon must follow a complete sentence; \"The thousands of specialized cells stacked along the length of its body\" is not one.",
+    "B": "Correct. The long subject \"The thousands of specialized cells … its body\" flows straight into its verb \"produce\" with no punctuation.",
+    "C": "Incorrect. A single comma can't separate a subject from its verb.",
+    "D": "Incorrect. A semicolon joins two independent clauses; here it would cut the subject off from its verb."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "punctuation",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

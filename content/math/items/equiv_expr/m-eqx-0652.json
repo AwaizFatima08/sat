@@ -1,0 +1,45 @@
+{
+  "id": "m-eqx-0652",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The equation \\(5^{n + 2} - 5^{n} = k \\cdot 5^{n}\\), where \\(k\\) is a constant, is true for all values of \\(n\\). What is the value of \\(k\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "24"
+  ],
+  "solution": [
+    "Write \\(5^{n + 2}\\) as \\(5^{n} \\cdot 5^{2} = 25 \\cdot 5^{n}\\).",
+    "Factor out \\(5^{n}\\): \\(25 \\cdot 5^{n} - 5^{n} = 24 \\cdot 5^{n}\\), so \\(k = 24\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "n = symbols('n', real=True)\nk = simplify((5**(n + 2) - 5**n)/5**n)\nassert k == 24\nassert [Rational(v) for v in spr_answers] == [24]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "24",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

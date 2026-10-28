@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0636",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When a conifer's trunk is pushed off vertical, the tree does not straighten the part that already leans. Instead, it begins laying down a dense tissue called compression wood on the lower side of the lean, which gradually pushes the newer growth back toward upright. Compression wood is easy to recognize in a cross-section of the trunk: on the lower side of the lean, the annual rings are wider and darker than those on the upper side. Forest ecologist Jiro Hasegawa cut a cross-section from a pine on a hillside and found evenly spaced, uniform rings in the inner 40 years of growth, followed by 25 outer rings that were markedly wider and darker on the downhill side. Hasegawa's observations indicate that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the pine began to lean as a seedling and has been straightening itself ever since.",
+    "B": "the soil on the downhill side became richer about 25 years ago, allowing faster growth on that side.",
+    "C": "the pine will fall within a few decades because compression wood cannot support a leaning trunk.",
+    "D": "the pine grew upright for about 40 years and has been leaning downhill for roughly the past 25."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Compression wood forms only on the lower side of a lean, and it shows as wider, darker rings on that side. The inner 40 rings are uniform, so the tree was upright then. The outer 25 rings are wider and darker on the downhill side, so the trunk has leaned downhill during those years.",
+    "A": "Incorrect. The inner 40 rings are uniform, which shows that the tree was not leaning in its early years.",
+    "B": "Incorrect. The text explains wider, darker rings on one side as compression wood caused by a lean; it does not connect them to soil.",
+    "C": "Incorrect. The text describes compression wood as pushing growth back toward upright; it says nothing about the tree failing.",
+    "D": "Correct. Uniform inner rings mean no lean during the first 40 years; compression wood on the downhill side of the last 25 rings means the trunk has been tilted downhill since then."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "wrong_logic",
+    "C": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

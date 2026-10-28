@@ -1,0 +1,58 @@
+{
+  "id": "m-nlf-0613",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 1,
+  "b": -1.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A fruit seller in Peshawar finds that when mangoes are priced at \\(p\\) rupees per kilogram, the daily revenue, in rupees, is given by \\(R(p) = p(400 - 2p)\\). What is the daily revenue when the price is 50 rupees per kilogram?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(20{,}000\\)",
+    "B": "\\(15{,}000\\)",
+    "C": "\\(17{,}500\\)",
+    "D": "\\(300\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Substitute \\(50\\) for \\(p\\): \\(R(50) = 50(400 - 2 \\cdot 50)\\).",
+    "Inside the parentheses: \\(400 - 100 = 300\\).",
+    "So \\(R(50) = 50(300) = 15{,}000\\) rupees."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is \\(50 \\cdot 400\\); the subtraction of \\(2p = 100\\) inside the parentheses was skipped.",
+    "B": "Correct. \\(R(50) = 50(400 - 100) = 50(300) = 15{,}000\\).",
+    "C": "Incorrect. This is \\(50(400 - 50)\\); the price must be doubled before subtracting, since the factor is \\(400 - 2p\\).",
+    "D": "Incorrect. \\(300\\) is the value of \\(400 - 2p\\), the number of kilograms sold, not the revenue \\(p(400 - 2p)\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "arithmetic",
+    "D": "wrong_quantity"
+  },
+  "verify": "p = symbols('p')\nR = Lambda(p, p*(400 - 2*p))\nassert R(50) == 15000\nassert value(choices[answer]) == 15000\nassert all(value(choices[k]) != 15000 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

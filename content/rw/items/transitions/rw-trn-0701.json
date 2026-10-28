@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0701",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Critics once described the painter's late canvases as careless, with loose brushwork and unfinished corners. ______ a team of conservators examined the paintings under infrared light and found that the looseness was deliberate, with underdrawings that show each stroke had been planned.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Instead,",
+    "B": "Similarly,",
+    "C": "Consequently,",
+    "D": "For example,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The first sentence states the critics' judgment. The second sentence gives a different finding that replaces that judgment, so the blank must signal replacement rather than cause, example, or agreement.",
+    "A": "Correct. The conservators do not accept the critics' verdict. They offer a replacement reading based on evidence, which is what \"Instead\" signals.",
+    "B": "Incorrect. \"Similarly\" would introduce an agreeing point. The conservators' finding contradicts the critics, so the relationship is one of replacement, not similarity.",
+    "C": "Incorrect. The conservators did not examine the paintings as a result of the critics' view. Their work offers a different reading of the same canvases, so the sentence is not a consequence of the criticism.",
+    "D": "Incorrect. The conservators' finding is not an illustration of the critics' claim. It replaces that claim with a different conclusion."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h5-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

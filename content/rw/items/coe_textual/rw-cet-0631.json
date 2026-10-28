@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0631",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Some sea urchins pick up shell fragments, pebbles, and scraps of seaweed with their tube feet and hold them over their bodies like a loose coat. The behavior has usually been explained as a disguise that hides the urchin from fish and other predators. Marine biologist Ines Carvalho hypothesizes instead that the covering mainly shields urchins from strong sunlight, which can damage their tissues in shallow water. In her view, an urchin decides how much to cover itself based on how much light reaches it, not on whether predators are nearby.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Carvalho's hypothesis?",
+  "choices": {
+    "A": "Urchins in tanks covered themselves more heavily within minutes of predator scent being added to the water.",
+    "B": "Urchins graze mainly on algae that grow on the sunlit rocks of shallow reefs.",
+    "C": "Urchins in brightly lit tanks covered themselves far more than urchins in dim tanks, whether or not a predator was present.",
+    "D": "Urchins that had covered themselves moved across the tank floor as quickly as uncovered urchins."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Carvalho's hypothesis is that urchins cover themselves in response to light, not to predators. A finding supports it if covering rises with brightness and does not depend on predators. Urchins covering more in bright tanks than in dim ones, regardless of whether a predator was present, shows exactly that.",
+    "A": "Incorrect. Covering up in response to predator scent would support the disguise explanation that Carvalho rejects.",
+    "B": "Incorrect. What urchins eat says nothing about why they cover themselves.",
+    "C": "Correct. Covering tracked light level and was unaffected by predators, which is what Carvalho's hypothesis predicts.",
+    "D": "Incorrect. How fast covered urchins move does not reveal what the covering is for."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

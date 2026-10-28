@@ -1,0 +1,58 @@
+{
+  "id": "m-le1-0643",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_eq_one",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The equations \\(2x + a = 7\\) and \\(3x - b = 5\\), where \\(a\\) and \\(b\\) are constants, have the same solution. Which expression gives \\(a\\) in terms of \\(b\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(\\frac{11 - 2b}{3}\\)",
+    "B": "\\(\\frac{11 + 2b}{3}\\)",
+    "C": "\\(\\frac{2b - 11}{3}\\)",
+    "D": "\\(\\frac{31 - 2b}{3}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Solve each equation for \\(x\\): \\(x = \\frac{7 - a}{2}\\) and \\(x = \\frac{5 + b}{3}\\).",
+    "Set them equal and cross-multiply: \\(3(7 - a) = 2(5 + b)\\), so \\(21 - 3a = 10 + 2b\\).",
+    "Then \\(3a = 11 - 2b\\), so \\(a = \\frac{11 - 2b}{3}\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\(21 - 3a = 10 + 2b\\) gives \\(a = \\frac{11 - 2b}{3}\\).",
+    "B": "Incorrect. This is the result of solving the second equation as \\(x = \\frac{5 - b}{3}\\), a sign slip with \\(-b\\).",
+    "C": "Incorrect. This is the result of a sign slip when dividing by \\(-3\\): the numerator should be \\(11 - 2b\\), not \\(2b - 11\\).",
+    "D": "Incorrect. This is the result of adding 10 to 21 instead of subtracting: \\(3a = 31 - 2b\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "sign_error",
+    "D": "sign_error"
+  },
+  "verify": "x, a, b = symbols('x a b')\nx1 = solve(Eq(2*x + a, 7), x)[0]\nx2 = solve(Eq(3*x - b, 5), x)[0]\nsol = solve(Eq(x1, x2), a)[0]\nassert simplify(value(choices[answer]) - sol) == 0\nassert all(simplify(value(choices[k]) - sol) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

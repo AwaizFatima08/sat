@@ -1,0 +1,96 @@
+{
+  "id": "rw-ceq-0605",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Quito, Ecuador, is built on steep hillsides, and residents of some high neighborhoods ride cable cars to reach the city center. Transportation researcher Lucía Andrade recorded how many passengers rode one cable car line on each day of a week in March 2024. She observed that the line carried far more passengers on weekdays than on the weekend: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "bar",
+    "title": "Daily Passengers on a Quito Cable Car Line, One Week in March 2024",
+    "x_label": "Day",
+    "y_label": "Passengers",
+    "series": [
+      {
+        "name": "Passengers",
+        "points": [
+          [
+            "Monday",
+            9800
+          ],
+          [
+            "Tuesday",
+            10100
+          ],
+          [
+            "Wednesday",
+            9900
+          ],
+          [
+            "Thursday",
+            10300
+          ],
+          [
+            "Friday",
+            9600
+          ],
+          [
+            "Saturday",
+            5200
+          ],
+          [
+            "Sunday",
+            4100
+          ]
+        ]
+      }
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the graph to complete the statement?",
+  "choices": {
+    "A": "ridership on Sunday was about 4,100, more than on any weekday.",
+    "B": "about 10,000 passengers rode on each weekday, compared with about 5,200 on Saturday and 4,100 on Sunday.",
+    "C": "ridership was highest on Thursday, when about 10,300 passengers rode the line.",
+    "D": "most weekday passengers were traveling to jobs in the city center."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The statement compares weekdays with the weekend, so the choice must give figures for both. The bars for Monday through Friday are all close to 10,000, while Saturday is about 5,200 and Sunday about 4,100.",
+    "A": "Incorrect. Sunday was the lowest day on the graph, not the highest.",
+    "B": "Correct. Every weekday bar is near 10,000 passengers, roughly double Saturday's 5,200 and more than double Sunday's 4,100.",
+    "C": "Incorrect. This is accurate, but it describes only one day and does not compare weekdays with the weekend.",
+    "D": "Incorrect. The graph shows how many people rode, not where they were going."
+  },
+  "traps": {
+    "A": "reversed",
+    "C": "true_irrelevant",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

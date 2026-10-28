@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0622",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "In late spring, patches of mountain snow sometimes turn pink or red. The color comes from microscopic algae that live in the snow and produce a red pigment. Biologist Marek Nowak hypothesizes that the pigment acts as a sunscreen, shielding the algae's cells from the intense sunlight reflected by the snow, and that the algae make more of it when the light is stronger.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Nowak's hypothesis?",
+  "choices": {
+    "A": "The red pigment absorbs some of the sun's energy, warming the surrounding snow and causing it to melt slightly faster.",
+    "B": "The algae are green during the winter and turn red only after the snow begins to melt in the spring, when they multiply.",
+    "C": "Algae from snow on shaded, north-facing slopes contained far less red pigment than algae from nearby sunlit slopes.",
+    "D": "Algae from shaded slopes contained just as much red pigment as algae from slopes that lay in full sun all day."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Nowak predicts that pigment production rises with the strength of sunlight. The cleanest support compares algae in bright and shaded places and finds more pigment in the bright ones. Equal pigment in both places would weaken the hypothesis, and effects of the pigment on the snow do not test it.",
+    "A": "Incorrect. This describes an effect of the pigment on the snow, not whether the algae make more of it in stronger light.",
+    "B": "Incorrect. The timing of the color change could have many causes and does not link pigment to the strength of light.",
+    "C": "Correct. Less pigment where there is less light is what Nowak's hypothesis predicts.",
+    "D": "Incorrect. Equal pigment regardless of light would go against the idea that the algae make more pigment when light is stronger."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "B": "true_irrelevant",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

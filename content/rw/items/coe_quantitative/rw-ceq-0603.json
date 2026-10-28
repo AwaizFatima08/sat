@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0603",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Potters know that the temperature inside a kiln affects how finished pieces turn out. Ceramics instructor Teodora Ilić fired 30 identical clay bowls at each of four temperatures in her studio in Belgrade, Serbia, and counted how many bowls came out cracked. She also noted how the glaze looked on the bowls that survived. According to her results, the fewest bowls cracked when the kiln was set to ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Results of Firing 30 Clay Bowls at Four Kiln Temperatures",
+    "columns": [
+      "Kiln temperature",
+      "Bowls cracked (of 30)",
+      "Glaze finish"
+    ],
+    "rows": [
+      [
+        "900°C",
+        7,
+        "Dull"
+      ],
+      [
+        "1,000°C",
+        4,
+        "Slightly glossy"
+      ],
+      [
+        "1,100°C",
+        2,
+        "Glossy"
+      ],
+      [
+        "1,200°C",
+        6,
+        "Glossy"
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "1,100°C, where only 2 of the 30 bowls cracked.",
+    "B": "1,300°C, the highest temperature in the test.",
+    "C": "900°C, where 7 of the 30 bowls cracked.",
+    "D": "1,200°C, which produced a glossy finish on the bowls."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The statement asks for the temperature at which the fewest bowls cracked, so find the smallest number in the \"Bowls cracked\" column. That number is 2, in the 1,100°C row.",
+    "A": "Correct. Only 2 bowls cracked at 1,100°C, fewer than at any other temperature in the table.",
+    "B": "Incorrect. The table does not include a firing at 1,300°C; the highest temperature tested was 1,200°C.",
+    "C": "Incorrect. The most bowls cracked at 900°C, so this is the opposite of what the statement needs.",
+    "D": "Incorrect. The glaze at 1,200°C was glossy, but 6 bowls cracked at that temperature, more than the 2 that cracked at 1,100°C."
+  },
+  "traps": {
+    "B": "not_in_text",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0629",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 2,
+  "b": -0.5,
+  "subject": "humanities",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The tappa is the shortest form of Pashto folk poetry, spoken across much of Pakistan and Afghanistan: two lines, the first shorter than the second, sung or recited at gatherings. Tappas are anonymous and have been passed down by word of mouth for generations. A large share of them speak in a woman's voice, about longing for an absent husband, the labor of the household, or a daughter's reluctance to leave her village. The written Pashto literature of the same centuries, by contrast, was produced almost entirely by men. These facts suggest that the tappa ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "was composed mainly by the same poets who wrote the formal literature.",
+    "B": "has been recorded in writing more carefully than longer forms of Pashto poetry.",
+    "C": "preserves perspectives that the written literature of the time largely leaves out.",
+    "D": "was originally sung only by women and later taken up by men."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Written Pashto literature came almost entirely from men, while a large share of anonymous tappas speak with a woman's voice about women's lives. So the oral tappa carries viewpoints that the written record of the period mostly lacks.",
+    "A": "Incorrect. The text contrasts anonymous oral tappas with the written literature of men; nothing links the two sets of authors.",
+    "B": "Incorrect. Tappas were passed down by word of mouth, so nothing suggests careful written recording.",
+    "C": "Correct. Women's voices common in tappas but nearly absent from male-authored written literature make the tappa a record of what the written works omit.",
+    "D": "Incorrect. The text says many tappas speak in a woman's voice, not that only women sang them or that men took them up later."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "reversed",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

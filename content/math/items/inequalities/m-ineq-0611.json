@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0611",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is the solution set of the inequality \\(\\frac{x}{2} - \\frac{x - 3}{5} > 2\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(x > \\frac{26}{3}\\)",
+    "B": "\\(x > \\frac{14}{3}\\)",
+    "C": "\\(x > 2\\)",
+    "D": "\\(x < \\frac{14}{3}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Multiply every term by 10: \\(5x - 2(x - 3) > 20\\).",
+    "Distribute: \\(5x - 2x + 6 > 20\\), so \\(3x > 14\\).",
+    "Divide by 3 (positive, so the sign stays): \\(x > \\frac{14}{3}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This distributes the \\(-2\\) as \\(-2x - 6\\); the correct product is \\(-2x + 6\\).",
+    "B": "Correct. \\(5x - 2(x - 3) > 20\\) simplifies to \\(3x > 14\\).",
+    "C": "Incorrect. This adds the \\(x\\)-terms, \\(5x + 2x\\), instead of subtracting \\(2x\\) from \\(5x\\).",
+    "D": "Incorrect. Dividing by the positive number 3 does not reverse the inequality sign."
+  },
+  "traps": {
+    "A": "sign_error",
+    "C": "arithmetic",
+    "D": "sign_error"
+  },
+  "verify": "P = lambda s: value(s.replace('\\\\le', '<=').replace('\\\\ge', '>='))\nx = symbols('x')\ns = solve_univariate_inequality(x/2 - (x - 3)/5 > 2, x, relational=False)\nassert s == Interval.open(Rational(14, 3), oo)\nassert solve_univariate_inequality(P(choices[answer]), x, relational=False) == s\nassert all(solve_univariate_inequality(P(choices[k]), x, relational=False) != s for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

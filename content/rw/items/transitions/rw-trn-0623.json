@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0623",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "literature",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "Zainab's uncle sold embroidered cloth from a narrow stall in Anarkali Bazaar in Lahore, and that summer he asked her to help him with the foreign visitors who stopped to look. On her first afternoon, a couple from Germany asked to see a particular shade of blue, and her uncle vanished into the storeroom at the back to search through his bolts of fabric. ______ Zainab was left alone at the counter, answering questions about stitches and dyes that she had never thought to ask him herself, in an English she had used only in class.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "For example,",
+    "B": "Afterward,",
+    "C": "Meanwhile,",
+    "D": "In contrast,"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The second sentence describes the uncle going into the storeroom to search. The last sentence describes what Zainab did during that same time, while he was gone. A transition that signals two things happening at the same time is needed.",
+    "A": "Incorrect. Zainab answering questions is not an example of her uncle searching for fabric; it is a separate event happening at the same time.",
+    "B": "Incorrect. \"Afterward\" is tempting because the text moves from one event to the next, but Zainab is at the counter while her uncle is still searching, not after he returns.",
+    "C": "Correct. \"Meanwhile\" shows that Zainab handled the customers at the same time as her uncle searched the storeroom.",
+    "D": "Incorrect. \"In contrast\" signals opposing ideas, but the uncle searching and Zainab answering questions are not opposites; they happen at once."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind-2",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

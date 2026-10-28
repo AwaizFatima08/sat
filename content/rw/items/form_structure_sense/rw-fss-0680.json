@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0680",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 4,
+  "b": 1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "When the ship Victoria reached Spain in September 1522, it was the only one of the five vessels that had sailed three years earlier under Ferdinand Magellan to return, with only eighteen of the original crew aboard. Magellan had been killed in the Philippines in 1521, and command had passed to Juan Sebastián Elcano. The survivors brought back a puzzle along with their cargo of cloves: their log, kept carefully day by day throughout the voyage, ______ one full day behind the calendar in Spain, because each day of sailing westward around the globe had been slightly longer than twenty-four hours, and the extra minutes had added up.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "having fallen",
+    "B": "falls",
+    "C": "had fallen",
+    "D": "has fallen"
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The sentence describes the state of the log when the survivors \"brought back\" the puzzle, a past event, and the log had drifted behind before that moment; the rest of the sentence uses \"had been\" and \"had added up.\" An action completed before a past event takes the past perfect: \"had fallen.\"",
+    "A": "Incorrect. \"Having fallen\" is a participle, not a main verb, so the clause after the colon would have no verb.",
+    "B": "Incorrect. The present tense \"falls\" does not fit a sentence about a voyage that ended in 1522.",
+    "C": "Correct. The past perfect \"had fallen\" shows that the log was already a day behind by the time the survivors returned, matching \"had been\" and \"had added up.\"",
+    "D": "Incorrect. The present perfect \"has fallen\" links the action to the present, but the passage describes events of 1522 in the past tense."
+  },
+  "traps": {
+    "A": "grammar_rule",
+    "B": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "verb_form",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": "D",
+        "note": "had fallen and has fallen both fit; the narration is in the past, so had fallen is the tighter choice.",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft",
+    "shuffled": true
+  }
+}

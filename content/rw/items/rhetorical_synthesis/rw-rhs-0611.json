@@ -1,0 +1,61 @@
+{
+  "id": "rw-rhs-0611",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 1,
+  "b": -1.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "The Golden Gate Bridge spans the entrance to San Francisco Bay in California and opened in 1937.",
+    "The bridge is painted a reddish-orange color known as International Orange.",
+    "Irving Morrow, the consulting architect, chose the color because it stood out clearly in the area's frequent fog and blended with the surrounding hills.",
+    "The bridge's paint is touched up continuously to protect the steel from salt air."
+  ],
+  "data": null,
+  "stem": "The student wants to explain why the Golden Gate Bridge was painted its orange color. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "The paint on the Golden Gate Bridge is touched up continuously to protect its steel from the salt air.",
+    "B": "The Golden Gate Bridge was painted International Orange because architect Irving Morrow found that the color stood out in the area's frequent fog and blended with the surrounding hills.",
+    "C": "Consulting architect Irving Morrow chose the color of the Golden Gate Bridge, which opened in 1937.",
+    "D": "The Golden Gate Bridge, which spans the entrance to San Francisco Bay, is painted a reddish-orange color known as International Orange."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The goal asks for the reason behind the color. The third note gives two reasons: the color shows up in fog and matches the hills. The key must state at least these reasons, not just the color or the person who chose it.",
+    "A": "Incorrect. This is about maintaining the paint, not about why the color was chosen.",
+    "B": "Correct. \"Because\" introduces Morrow's reasons: visibility in fog and harmony with the hills.",
+    "C": "Incorrect. This says who chose the color but not why.",
+    "D": "Incorrect. This names the color but gives no reason for it."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "misses_goal",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

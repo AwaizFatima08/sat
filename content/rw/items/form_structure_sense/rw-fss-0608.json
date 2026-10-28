@@ -1,0 +1,56 @@
+{
+  "id": "rw-fss-0608",
+  "section": "rw",
+  "domain": "conventions",
+  "type": "form_structure_sense",
+  "level": 1,
+  "b": -1.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The toco toucan of South America has a bright orange beak that can be a third as long as the bird itself. Although it looks heavy, a ______ beak is mostly hollow and surprisingly light. Scientists have found that the bird also uses it to release heat, sending extra blood into the beak when its body gets too warm.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+  "choices": {
+    "A": "toucan's",
+    "B": "toucans",
+    "C": "toucans'",
+    "D": "toucan"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The beak belongs to a toucan, so a possessive is needed. The article \"a\" shows that one bird is meant, so the singular possessive \"toucan's\" is correct.",
+    "A": "Correct. \"Toucan's\" is the singular possessive that fits \"a.\"",
+    "B": "Incorrect. \"Toucans\" is a plain plural with no apostrophe and does not show possession; it also does not fit after \"a.\"",
+    "C": "Incorrect. \"Toucans'\" is a plural possessive, but \"a\" shows that a single bird is meant.",
+    "D": "Incorrect. \"Toucan\" has no apostrophe, so \"a toucan beak\" does not show that the beak belongs to the bird."
+  },
+  "traps": {
+    "B": "grammar_rule",
+    "C": "grammar_rule",
+    "D": "grammar_rule"
+  },
+  "grammar": "plural_possessive",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-nlf-0704",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_func",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The mass, in grams, of a yeast culture \\(t\\) hours after it is started is modeled by the exponential function \\(f(t) = a(b)^{t}\\), where \\(a\\) and \\(b\\) are positive constants. According to the model, \\(f(5)\\) is 16 times \\(f(3)\\), and \\(f(2) = 12\\). What was the mass of the culture, in grams, when it was started?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "3/4"
+  ],
+  "solution": [
+    "\\(\\frac{f(5)}{f(3)} = b^{2} = 16\\), so \\(b = 4\\) (since \\(b > 0\\)).",
+    "\\(f(2) = a(4)^{2} = 16a = 12\\), so \\(a = \\frac{12}{16} = \\frac{3}{4}\\).",
+    "The starting mass is \\(f(0) = a = \\frac{3}{4}\\) gram, or 0.75 gram."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "t, a, b = symbols('t a b', positive=True)\ns = solve([a*b**5 - 16*a*b**3, a*b**2 - 12], [a, b], dict=True)\nassert len(s) == 1 and s[0][b] == 4 and s[0][a] == Rational(3, 4)\nassert Rational(spr_answers[0]) == Rational(3, 4)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "0.75",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0608",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Three identical boxes and one bag have a total mass of 19 kilograms. The three boxes together have a mass 5 kilograms greater than the mass of the bag. What is the mass, in kilograms, of the bag?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7"
+  ],
+  "solution": [
+    "Let \\(b\\) be the mass of one box and \\(g\\) the mass of the bag: \\(3b + g = 19\\) and \\(3b - g = 5\\).",
+    "Subtract the second equation from the first: \\(2g = 14\\), so \\(g = 7\\).",
+    "(Then \\(3b = 12\\), so each box has a mass of 4 kilograms.)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "b, g = symbols('b g')\nsol = solve([3*b + g - 19, 3*b - g - 5], [b, g])\nassert sol == {b: 4, g: 7}\nassert [Rational(s) for s in spr_answers] == [sol[g]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "7",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

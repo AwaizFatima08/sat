@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0637",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "south_asia",
+  "pool": "paper",
+  "passage": "The Indian pangolin, found across much of Pakistan, India, and Sri Lanka, feeds almost entirely on ants and termites, which it laps up with a long, sticky tongue after tearing open their nests with its claws. The animal has no teeth at all. ______ it cannot chew its food, so it swallows small stones along with the insects, and the muscular walls of its stomach grind the meal against them, much as a bird's gizzard does.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "Consequently,",
+    "B": "For instance,",
+    "C": "Even so,",
+    "D": "Similarly,"
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The second sentence states a fact: the pangolin \"has no teeth at all.\" The last sentence describes what follows from that fact: it cannot chew, so it swallows stones and grinds its food in its stomach. A cause-and-effect transition is needed.",
+    "A": "Correct. \"Consequently\" shows that the inability to chew, and the stone-swallowing habit, result from the lack of teeth.",
+    "B": "Incorrect. Swallowing stones is not an example of having no teeth; it is a consequence of it. This is tempting because the sentence does give specific detail.",
+    "C": "Incorrect. \"Even so\" would mean the pangolin manages to chew despite having no teeth, but the text says it cannot chew.",
+    "D": "Incorrect. \"Similarly\" would introduce a parallel case, but the last sentence continues the same animal's story rather than comparing it with another."
+  },
+  "traps": {
+    "B": "wrong_logic",
+    "C": "wrong_logic",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

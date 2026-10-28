@@ -1,0 +1,58 @@
+{
+  "id": "m-ineq-0625",
+  "section": "math",
+  "domain": "algebra",
+  "type": "inequalities",
+  "level": 3,
+  "b": 0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "Kavya earns 350 rupees per hour working as a cashier and 600 rupees per hour working as a tutor. In one week she works \\(x\\) hours as a cashier and \\(y\\) hours as a tutor. She works at most 30 hours in total that week and earns at least 13,000 rupees. Which of the following could be \\((x, y)\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((20, 8)\\)",
+    "B": "\\((10, 22)\\)",
+    "C": "\\((12, 15)\\)",
+    "D": "\\((15, 12)\\)"
+  },
+  "answer": "C",
+  "spr_answers": null,
+  "solution": [
+    "The conditions are \\(x + y \\le 30\\) and \\(350x + 600y \\ge 13{,}000\\).",
+    "For \\((12, 15)\\): \\(12 + 15 = 27 \\le 30\\), and \\(350(12) + 600(15) = 4{,}200 + 9{,}000 = 13{,}200 \\ge 13{,}000\\). Both hold.",
+    "\\((20, 8)\\) earns only 11,800 rupees, \\((10, 22)\\) is 32 hours, and \\((15, 12)\\) earns only 12,450 rupees."
+  ],
+  "explanation": {
+    "A": "Incorrect. The hours fit (28), but the earnings are \\(350(20) + 600(8) = 11{,}800\\) rupees, below 13,000. Swapping the two rates would give 14,800, which is where this choice comes from.",
+    "B": "Incorrect. The earnings (16,700 rupees) are enough, but \\(10 + 22 = 32\\) hours exceeds the 30-hour limit.",
+    "C": "Correct. 27 hours in total and 13,200 rupees earned.",
+    "D": "Incorrect. The hours fit, but \\(350(15) + 600(12) = 12{,}450\\) rupees is below 13,000. This reverses the coordinates of the correct pair."
+  },
+  "traps": {
+    "A": "reciprocal",
+    "B": "stopped_early",
+    "D": "concept"
+  },
+  "verify": "good = lambda a, b: a + b <= 30 and 350*a + 600*b >= 13000\nok = [k for k, c in choices.items() if good(*value(c))]\nassert ok == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

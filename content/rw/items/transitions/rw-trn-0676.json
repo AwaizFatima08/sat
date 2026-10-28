@@ -1,0 +1,56 @@
+{
+  "id": "rw-trn-0676",
+  "section": "rw",
+  "domain": "expression",
+  "type": "transitions",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The eruption of Krakatoa, in the strait between Java and Sumatra, in August 1883 produced what is generally considered the loudest sound in recorded history. On the island of Rodrigues, nearly 4,800 kilometers to the west, the police chief entered in his log that heavy guns were being fired somewhere to the east, and similar reports came from across the Indian Ocean. Far beyond the range of hearing, the eruption left traces of a different kind. ______ barographs in cities as distant as London and Toronto registered a sudden jump in air pressure hours after the eruption and recorded it again on its return trips, as the pressure wave circled the globe several times in the following days.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical transition?",
+  "choices": {
+    "A": "As a result,",
+    "B": "In contrast,",
+    "C": "Nevertheless,",
+    "D": "For instance,"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The third sentence makes a general statement: the eruption left traces beyond the range of hearing. The last sentence supplies a specific case of such a trace, the barograph records in London and Toronto. A transition that introduces an example of the general statement is needed.",
+    "A": "Incorrect. The barograph jumps were caused by the eruption, not by the fact that the eruption \"left traces\"; the records are the traces themselves, not a consequence of them.",
+    "B": "Incorrect. The barograph records do not contrast with the statement that the eruption left traces beyond hearing; they illustrate it.",
+    "C": "Incorrect. Nothing in the last sentence holds in spite of the previous one; the two agree.",
+    "D": "Correct. \"For instance\" introduces the barograph recordings as an example of the traces the eruption left far beyond the range of hearing."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "B": "wrong_logic",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

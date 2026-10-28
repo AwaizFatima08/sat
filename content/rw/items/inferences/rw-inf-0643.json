@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0643",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Handmade paper of the fifteenth and sixteenth centuries carries a watermark, a faint design left by a wire figure sewn onto the mold on which each sheet was formed. Because the wires bent and broke with use, a mold usually lasted only a year or two before its watermark was replaced, and no two molds left exactly the same mark. If an undated manuscript's watermark matches, flaw for flaw, the watermark in a letter dated 1521, the two sheets were formed on the same mold at about the same time. Paper historian Luc Moreau cautions, however, that a stack of paper might sit in a stationer's shop or a scribe's chest for years before anyone wrote on it. A matching watermark therefore ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "proves that the manuscript and the dated letter were written by the same person.",
+    "B": "dates the manuscript's paper but gives only the earliest time the manuscript could have been written.",
+    "C": "shows that the manuscript was written in 1521 and not in any other year.",
+    "D": "is of no use for dating, because paper could be stored for an unlimited time before use."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The watermark ties the manuscript's sheet to a mold used around 1521, so the paper is dated. But Moreau's caution adds a second step: paper could wait years before being used. The writing therefore happened at 1521 or later, never earlier, and the match fixes only that lower limit.",
+    "A": "Incorrect. Two sheets from the same mold could be bought by anyone; the text says nothing about who wrote on them.",
+    "B": "Correct. The mold dates the sheet to about 1521, but since paper could be stored for years, the writing may be later; it cannot be earlier than the paper.",
+    "C": "Incorrect. The paper was made about then, but Moreau's point is that the writing could have come years later.",
+    "D": "Incorrect. The match still fixes the earliest possible date of the writing and the date of the paper; Moreau qualifies the method rather than dismissing it."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "C": "too_broad",
+    "D": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

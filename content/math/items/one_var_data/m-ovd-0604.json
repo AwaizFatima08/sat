@@ -1,0 +1,60 @@
+{
+  "id": "m-ovd-0604",
+  "section": "math",
+  "domain": "psda",
+  "type": "one_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The dot plot shows the number of laps completed by 9 of the 10 swimmers at a practice. The number of laps completed by the 10th swimmer is not shown. The mean number of laps for all 10 swimmers is 6.5. How many laps did the 10th swimmer complete?",
+  "figure": {
+    "kind": "dotplot",
+    "x_label": "Number of laps",
+    "values": [
+      3,
+      4,
+      5,
+      5,
+      6,
+      7,
+      7,
+      8,
+      9
+    ]
+  },
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "11"
+  ],
+  "solution": [
+    "The total for all 10 swimmers is \\(10 \\times 6.5 = 65\\) laps.",
+    "The 9 values shown add to \\(3 + 4 + 5 + 5 + 6 + 7 + 7 + 8 + 9 = 54\\).",
+    "The 10th swimmer completed \\(65 - 54 = 11\\) laps."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "v = figure['values']\nassert len(v) == 9\nx = 10 * Rational('6.5') - sum(v)\nassert x == 11\nassert [Rational(s) for s in spr_answers] == [x]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-04",
+        "date": "2026-10-28",
+        "answer": "11",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

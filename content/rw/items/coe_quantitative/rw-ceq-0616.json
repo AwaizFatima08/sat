@@ -1,0 +1,86 @@
+{
+  "id": "rw-ceq-0616",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_quantitative",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Seed vaults keep crop seeds in cold storage so that old varieties can be regrown decades later. Plant scientist Yusuf Demir tested wheat seeds that had been stored at a research institute in Ankara, Turkey, for different lengths of time, some at 4°C and some at −18°C. He planted 100 seeds from each batch and counted how many sprouted. Demir concluded that the colder storage, which costs more to maintain, is worth the expense mainly for seeds kept for very long periods: ______",
+  "passage_b": null,
+  "notes": null,
+  "data": {
+    "kind": "table",
+    "title": "Wheat Seeds That Sprouted after Storage at Two Temperatures (100 seeds planted per batch)",
+    "columns": [
+      "Years in storage",
+      "Sprouted after storage at 4°C",
+      "Sprouted after storage at −18°C"
+    ],
+    "rows": [
+      [
+        "5",
+        96,
+        97
+      ],
+      [
+        "15",
+        91,
+        95
+      ],
+      [
+        "30",
+        74,
+        93
+      ],
+      [
+        "45",
+        42,
+        90
+      ]
+    ]
+  },
+  "stem": "Which choice most effectively uses data from the table to complete the statement?",
+  "choices": {
+    "A": "seeds stored at −18°C sprouted several days sooner after planting than seeds stored at 4°C.",
+    "B": "seeds stored at −18°C sprouted in greater numbers than seeds stored at 4°C after every length of storage.",
+    "C": "after 45 years in storage, 90 of the seeds kept at 4°C sprouted, compared with only 42 of the seeds kept at −18°C.",
+    "D": "the gap between the two temperatures was only 1 seed after 5 years of storage but grew to 48 seeds after 45 years."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "Demir's conclusion is that the colder storage matters mainly for long storage periods, so the choice must show a small difference for short periods and a large one for long periods. After 5 years the difference is 97 − 96 = 1 seed; after 45 years it is 90 − 42 = 48 seeds.",
+    "A": "Incorrect. The table counts how many seeds sprouted, not how quickly they did so.",
+    "B": "Incorrect. This is true, but it suggests that colder storage helps at every period, which does not support the idea that it is worth the cost mainly for long storage.",
+    "C": "Incorrect. This swaps the two temperatures: it was the seeds at −18°C that sprouted 90 times after 45 years.",
+    "D": "Correct. A difference of 1 seed after 5 years versus 48 seeds after 45 years shows that the colder storage pays off mainly over very long periods."
+  },
+  "traps": {
+    "A": "not_in_text",
+    "B": "true_irrelevant",
+    "C": "reversed"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0632",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Certain crust-forming lichens grow outward across bare rock at a slow and fairly steady rate, so the largest lichen on a boulder offers a rough measure of how long the rock has been exposed. Geologists use this method to date moraines, the ridges of rubble that a glacier leaves at its edge, after first calibrating the growth rate on gravestones and old walls of known age in the same valley. The method assumes that lichens settled on the rock soon after it was exposed and have grown undisturbed ever since. A lichen that was buried under snow for years, scraped off by a rockfall, or killed by drought would, however, restart the clock. Geologist Hanna Lindqvist therefore notes that the largest lichen on a moraine ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "is likely to be younger than the moraine only in valleys where no gravestones are available for calibration.",
+    "B": "indicates the least time that can have passed since the moraine formed, not the exact time.",
+    "C": "would have grown faster than usual if it had spent several years buried under snow.",
+    "D": "shows exactly how many years ago the moraine formed, provided the growth rate was calibrated nearby."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "The lichen's size shows how long it has been growing. If nothing has disturbed it, that is also how long the rock has been exposed; if something has, the lichen is younger than the rock. Either way, the moraine is at least as old as the lichen, and possibly older.",
+    "A": "Incorrect. Whether a lichen was disturbed has nothing to do with whether dated gravestones exist nearby; calibration and disturbance are separate issues.",
+    "B": "Correct. Disturbances can make a lichen younger than its rock but never older, so the lichen's age is a minimum for the moraine's age.",
+    "C": "Incorrect. The text lists burial under snow as something that restarts the clock, that is, sets growth back, not something that speeds it up.",
+    "D": "Incorrect. Calibration fixes the growth rate, but it cannot rule out a disturbance that restarted the lichen's growth after the moraine formed."
+  },
+  "traps": {
+    "A": "wrong_logic",
+    "C": "reversed",
+    "D": "too_broad"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

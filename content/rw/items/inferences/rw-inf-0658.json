@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0658",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "A chromolithographic poster of the 1890s was printed one color at a time, each from its own slab of limestone on which an artist had drawn only the parts of the design that were to appear in that color. A poster using eight colors passed through the press eight times, and the sheet had to be positioned precisely each time so that the colors lined up. Printers routinely pulled proofs partway through to check the alignment before continuing. Curator Simone Laurent examined a poster in a museum collection, long displayed as a finished work, that shows a woman in a yellow dress against a pale sky. The sheet carries only three colors and bears small alignment marks in its corners, and the printer's archive lists eight stones for the design. Laurent concludes that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the yellow dress and pale sky were the only colors the artist originally intended.",
+    "B": "the printer abandoned the design after three colors because the stones could not be aligned.",
+    "C": "the museum's sheet was printed from different stones than those listed in the printer's archive.",
+    "D": "the museum's sheet is probably a proof pulled partway through printing rather than a finished poster."
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The design needed eight stones, one per color, yet the sheet shows only three colors. Printers pulled proofs partway through to check alignment, and the sheet carries alignment marks. A three-color sheet of an eight-color design is therefore most likely one of those proofs, and the finished poster would have looked different.",
+    "A": "Incorrect. Eight stones were prepared for the design, so eight colors were intended, not three.",
+    "B": "Incorrect. The text gives no sign that the design was abandoned; the archive lists all eight stones.",
+    "C": "Incorrect. Fewer colors on the sheet are explained by printing having stopped partway, not by a different set of stones.",
+    "D": "Correct. Three of eight colors, plus the alignment marks that printers used on proofs, point to a sheet pulled before the printing was complete."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "not_in_text",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

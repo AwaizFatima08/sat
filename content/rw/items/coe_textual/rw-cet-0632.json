@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0632",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Many insect-eating bats hunt around streetlamps, where moths and other insects gather in dense swarms. Two explanations have been offered for why the lamps help the bats. One is that the light itself makes individual insects easier to catch, since moths dazzled by the glare perform fewer of the evasive dives and loops they use in darkness. Ecologist Tomasz Wrona favors a different explanation: in his view, lamps benefit bats mainly by concentrating prey in a small space, so that a bat spends far less time and energy searching for its next meal, while the difficulty of catching any single insect is unchanged.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Wrona's explanation?",
+  "choices": {
+    "A": "Moths captured by bats near lamps were larger on average than moths captured in dark areas.",
+    "B": "Bats hunting at lamps made far fewer passes between captures than bats in dark areas, but the share of attacks that succeeded was the same in both places.",
+    "C": "Bats hunting at lamps succeeded on a larger share of their attacks than bats in dark areas, while the time between captures was unchanged.",
+    "D": "Insect numbers around lamps were highest during the first hour after dark and fell steadily afterward."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Wrona says lamps help by shortening the search for prey, not by making each capture easier. The two explanations predict different things: his predicts less searching with no change in success per attack; the rival predicts more success per attack. A finding of fewer passes between captures and the same success rate matches Wrona's prediction and not the rival's.",
+    "A": "Incorrect. The size of the moths caught does not show whether lamps shorten the search or make captures easier.",
+    "B": "Correct. Less searching between captures with no change in capture success is exactly what Wrona's explanation predicts.",
+    "C": "Incorrect. Higher success per attack with no change in search time is what the rival explanation predicts, so this would count against Wrona.",
+    "D": "Incorrect. When insects are most numerous around lamps says nothing about which explanation is right."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

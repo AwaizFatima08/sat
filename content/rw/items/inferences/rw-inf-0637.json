@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0637",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "history_social",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Before governments began registering deaths, parish burial registers are often the only surviving record of when people died, and historians use them to trace the seasonal rhythm of mortality in past communities. Demographer Ewa Kowalczyk compiled monthly burial counts from the registers of several upland villages in northern Europe for the years 1700 to 1750 and found that burials peaked sharply in April each year, with relatively few recorded in January and February. She also notes that the registers give the date of burial, not of death, and that in these villages the ground was usually frozen too hard for grave digging from midwinter until the thaw in early spring. Kowalczyk cautions that the April peak ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "shows that April was consistently the deadliest month in these villages throughout the period.",
+    "B": "indicates that villagers were less likely to die in winter than in spring.",
+    "C": "may partly reflect burials delayed from the winter months rather than a true rise in deaths in April.",
+    "D": "cannot be explained, since no burials at all could take place while the ground was frozen."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The registers record burials, not deaths, and burials were impossible while the ground was frozen. Winter deaths would therefore be recorded only after the thaw, piling up in the first month when digging was possible. The April peak may thus be an artifact of frozen ground rather than of April deaths.",
+    "A": "Incorrect. This takes the burial counts as death counts, which is exactly the reading Kowalczyk's note about frozen ground calls into question.",
+    "B": "Incorrect. The low winter counts may reflect the impossibility of burial, not fewer deaths, so no such conclusion follows.",
+    "C": "Correct. If graves could not be dug until the thaw, people who died in winter were buried in spring, so April's burials include winter's deaths.",
+    "D": "Incorrect. The frozen ground explains the peak rather than making it mysterious: delayed burials would naturally cluster at the thaw."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "reversed",
+    "D": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-01",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

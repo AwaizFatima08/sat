@@ -1,0 +1,58 @@
+{
+  "id": "m-nle-0657",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "A small workshop makes \\(x\\) wooden stools per week. The workshop's weekly cost, in dollars, is \\(C = x^{2} + 10x + 200\\), and its weekly revenue, in dollars, is \\(R = 40x\\). There are two values of \\(x\\) for which the weekly cost equals the weekly revenue. What is the greater of these two values?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(10\\)",
+    "B": "\\(20\\)",
+    "C": "\\(15\\)",
+    "D": "\\(30\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Set cost equal to revenue: \\(x^{2} + 10x + 200 = 40x\\).",
+    "Rearrange: \\(x^{2} - 30x + 200 = 0\\), so \\((x - 10)(x - 20) = 0\\).",
+    "The two values are \\(10\\) and \\(20\\); the greater is \\(20\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the smaller of the two values of \\(x\\) at which cost equals revenue, not the greater.",
+    "B": "Correct. \\(x^{2} - 30x + 200 = (x - 10)(x - 20)\\), so cost equals revenue at \\(x = 10\\) and \\(x = 20\\).",
+    "C": "Incorrect. This is the \\(x\\)-coordinate of the vertex of \\(y = x^{2} - 30x + 200\\), where cost exceeds revenue by the least; cost does not equal revenue there.",
+    "D": "Incorrect. This is the sum of the two values of \\(x\\), read from the coefficient \\(-30\\), not either value itself."
+  },
+  "traps": {
+    "A": "wrong_quantity",
+    "C": "concept",
+    "D": "stopped_early"
+  },
+  "verify": "x = symbols('x')\nsols = solve(Eq(x**2 + 10*x + 200, 40*x), x)\nassert sorted(sols) == [10, 20]\nassert value(choices[answer]) == 20\nassert all(value(choices[k]) != 20 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

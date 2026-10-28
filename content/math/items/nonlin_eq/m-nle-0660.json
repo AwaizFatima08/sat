@@ -1,0 +1,46 @@
+{
+  "id": "m-nle-0660",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "nonlin_eq",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "\\[xy = 12\\] \\[x - y = 1\\] If \\((x, y)\\) is a solution to the system of equations above and \\(x > 0\\), what is the value of \\(x + y\\)?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "7"
+  ],
+  "solution": [
+    "From the second equation, \\(y = x - 1\\). Substitute into the first: \\(x(x - 1) = 12\\), so \\(x^{2} - x - 12 = 0\\).",
+    "Factor: \\((x - 4)(x + 3) = 0\\). Since \\(x > 0\\), \\(x = 4\\), and then \\(y = 3\\).",
+    "So \\(x + y = 7\\)."
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "x, y = symbols('x y')\nsols = solve([Eq(x*y, 12), Eq(x - y, 1)], [x, y])\nassert sorted(sols) == [(-3, -4), (4, 3)]\npos = [s for s in sols if s[0] > 0]\nassert len(pos) == 1 and sum(pos[0]) == 7\nassert Rational(spr_answers[0]) == 7",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-03",
+        "date": "2026-10-28",
+        "answer": "3",
+        "second": null,
+        "note": "",
+        "result": "disagree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "draft"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0608",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 1,
+  "b": -1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Ancient Egyptian craftworkers made beads and small figures from faience, a paste of crushed quartz that develops a shiny blue-green glaze when it is fired. Archaeologist Mariam Haddad is studying a workshop site where thousands of unfinished beads were found. She hypothesizes that the workers shaped the beads by pressing the paste into molds rather than rolling each bead by hand.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Haddad's hypothesis?",
+  "choices": {
+    "A": "The beads from the site vary widely in size, and many of them bear fingerprints pressed into the paste.",
+    "B": "The workshop also produced faience bowls, amulets, and small figures of animals in a range of sizes.",
+    "C": "The beads from the site are nearly identical in size and shape, and clay molds with bead-shaped hollows were found nearby.",
+    "D": "The blue-green color of the beads came from a small amount of copper mixed into the quartz paste before firing."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "Haddad's hypothesis is about a method: molds instead of hand-rolling. Molds would produce beads that look alike, and the molds themselves might survive. A finding that reports both uniform beads and actual molds supports her directly, while varied, fingerprinted beads would suggest hand-rolling instead.",
+    "A": "Incorrect. Varied sizes and fingerprints point to beads rolled by hand, the opposite of what Haddad proposes.",
+    "B": "Incorrect. Other products of the workshop do not show how the beads were shaped.",
+    "C": "Correct. Identical beads and molds found at the site are exactly what molding, rather than hand-rolling, would leave behind.",
+    "D": "Incorrect. The source of the color has nothing to do with whether molds were used."
+  },
+  "traps": {
+    "A": "reversed",
+    "B": "true_irrelevant",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "fable-blind",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

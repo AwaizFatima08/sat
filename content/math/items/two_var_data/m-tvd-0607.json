@@ -1,0 +1,97 @@
+{
+  "id": "m-tvd-0607",
+  "section": "math",
+  "domain": "psda",
+  "type": "two_var_data",
+  "level": 2,
+  "b": -0.5,
+  "context": "south_asia",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "The scatterplot shows the amount of fertilizer \\(x\\), in kilograms per hectare, used on each of 8 wheat farms in Punjab and the wheat yield \\(y\\), in kilograms per hectare, of the farm. The line of best fit passes through the points \\((20, 3{,}400)\\) and \\((60, 4{,}200)\\). According to the line of best fit, what is the predicted yield, in kilograms per hectare, for a farm that uses no fertilizer?",
+  "figure": {
+    "kind": "scatter",
+    "x_label": "Fertilizer (kg per hectare)",
+    "y_label": "Yield (kg per hectare)",
+    "points": [
+      [
+        10,
+        3150
+      ],
+      [
+        20,
+        3450
+      ],
+      [
+        25,
+        3480
+      ],
+      [
+        35,
+        3650
+      ],
+      [
+        40,
+        3850
+      ],
+      [
+        50,
+        3950
+      ],
+      [
+        55,
+        4150
+      ],
+      [
+        65,
+        4250
+      ]
+    ],
+    "line": "20*x + 3000"
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(3{,}000\\)",
+    "B": "\\(3{,}400\\)",
+    "C": "\\(2{,}600\\)",
+    "D": "\\(3{,}200\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Slope: \\(\\frac{4{,}200 - 3{,}400}{60 - 20} = \\frac{800}{40} = 20\\) kilograms of yield per kilogram of fertilizer.",
+    "Going back from \\(x = 20\\) to \\(x = 0\\) lowers \\(y\\) by \\(20 \\times 20 = 400\\): \\(3{,}400 - 400 = 3{,}000\\).",
+    "So the predicted yield with no fertilizer, the \\(y\\)-intercept, is 3,000 kilograms per hectare."
+  ],
+  "explanation": {
+    "A": "Correct. The slope is 20, so \\(y = 20x + 3{,}000\\), and the prediction at \\(x = 0\\) is 3,000.",
+    "B": "Incorrect. This is the yield at \\(x = 20\\), a point on the line, not at \\(x = 0\\).",
+    "C": "Incorrect. This moves the wrong way along the line: \\(3{,}400 - 2(400)\\). Going from \\(x = 20\\) to \\(x = 0\\) lowers \\(y\\) by \\(20 \\times 20 = 400\\) only once.",
+    "D": "Incorrect. This uses a slope of 10 instead of 20; the slope is \\(\\frac{800}{40} = 20\\)."
+  },
+  "traps": {
+    "B": "wrong_quantity",
+    "C": "sign_error",
+    "D": "arithmetic"
+  },
+  "verify": "x = symbols('x')\nm = Rational(4200 - 3400, 60 - 20)\nline = sympify(figure['line'])\nassert diff(line, x) == m and line.subs(x, 20) == 3400 and line.subs(x, 60) == 4200\nb = line.subs(x, 0)\nassert b == 3000\nassert value(choices[answer]) == b\nassert all(value(choices[k]) != b for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "m-lfn-0662",
+  "section": "math",
+  "domain": "algebra",
+  "type": "lin_functions",
+  "level": 4,
+  "b": 1.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "The table shows three values of \\(x\\) and the corresponding values of \\(f(x)\\) for the linear function \\(f\\), where \\(a\\) is a constant. What is the value of \\(f(11)\\) in terms of \\(a\\)?",
+  "figure": {
+    "kind": "table",
+    "title": "Values of f",
+    "columns": [
+      "x",
+      "f(x)"
+    ],
+    "rows": [
+      [
+        "2",
+        "a"
+      ],
+      [
+        "5",
+        "a + 6"
+      ],
+      [
+        "11",
+        "?"
+      ]
+    ]
+  },
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(a + 12\\)",
+    "B": "\\(a + 17\\)",
+    "C": "\\(a + 22\\)",
+    "D": "\\(a + 18\\)"
+  },
+  "answer": "D",
+  "spr_answers": null,
+  "solution": [
+    "From \\(x = 2\\) to \\(x = 5\\), \\(f(x)\\) increases by \\((a + 6) - a = 6\\) over 3 units of \\(x\\), so the slope is 2.",
+    "From \\(x = 5\\) to \\(x = 11\\) is 6 units of \\(x\\), so \\(f(x)\\) increases by \\(2 \\cdot 6 = 12\\): \\(f(11) = a + 6 + 12 = a + 18\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This adds 6 once more, as if the step from \\(x = 5\\) to \\(x = 11\\) were also 3 units; it is 6 units, so \\(f(x)\\) rises by 12, not 6.",
+    "B": "Incorrect. This adds the \\(x\\)-value 11 to \\(a + 6\\) instead of adding the change in \\(f(x)\\), which is \\(2 \\cdot 6 = 12\\).",
+    "C": "Incorrect. This is \\(a + 2 \\cdot 11\\), treating \\(f(x)\\) as \\(a + 2x\\); but \\(f(2) = a\\), so \\(f(x) = a + 2(x - 2)\\).",
+    "D": "Correct. The slope is 2, so \\(f(11) = f(5) + 2(11 - 5) = a + 18\\)."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "B": "arithmetic",
+    "C": "concept"
+  },
+  "verify": "x, a = symbols('x a')\nm = ((a + 6) - a) / (5 - 2)\nassert m == 2\nf = a + m*(x - 2)\nassert f.subs(x, 5) == a + 6\nans = expand(f.subs(x, 11))\nassert ans == a + 18\nassert [k for k in choices if simplify(value(choices[k]) - ans) == 0] == [answer]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-02",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

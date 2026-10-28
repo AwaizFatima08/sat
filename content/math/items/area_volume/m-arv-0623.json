@@ -1,0 +1,58 @@
+{
+  "id": "m-arv-0623",
+  "section": "math",
+  "domain": "geometry_trig",
+  "type": "area_volume",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "A closed box is shaped like a rectangular prism with a square base of side length \\(x\\) and a height of \\(3x\\). Which expression represents the total surface area of the box?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\(12x^{2}\\)",
+    "B": "\\(14x^{2}\\)",
+    "C": "\\(13x^{2}\\)",
+    "D": "\\(3x^{3}\\)"
+  },
+  "answer": "B",
+  "spr_answers": null,
+  "solution": [
+    "Top and bottom: \\(2 \\cdot x^{2} = 2x^{2}\\).",
+    "Four side faces, each \\(x\\) by \\(3x\\): \\(4 \\cdot 3x^{2} = 12x^{2}\\).",
+    "Total: \\(2x^{2} + 12x^{2} = 14x^{2}\\)."
+  ],
+  "explanation": {
+    "A": "Incorrect. This is the area of the four side faces only; a closed box also has a top and a bottom.",
+    "B": "Correct. \\(2x^{2}\\) for the top and bottom plus \\(4(3x^{2}) = 12x^{2}\\) for the sides gives \\(14x^{2}\\).",
+    "C": "Incorrect. This counts only one square face; a closed box has both a top and a bottom.",
+    "D": "Incorrect. This is \\(x \\cdot x \\cdot 3x\\), the volume of the box, not its surface area."
+  },
+  "traps": {
+    "A": "stopped_early",
+    "C": "wrong_formula",
+    "D": "wrong_quantity"
+  },
+  "verify": "x=symbols('x')\nans=2*x**2+4*x*3*x\nassert expand(ans-14*x**2)==0\nassert simplify(value(choices[answer])-ans)==0\nassert all(simplify(value(choices[k])-ans)!=0 for k in choices if k!=answer)\n",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

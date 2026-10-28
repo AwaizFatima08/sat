@@ -1,0 +1,62 @@
+{
+  "id": "rw-rhs-0619",
+  "section": "rw",
+  "domain": "expression",
+  "type": "rhetorical_synthesis",
+  "level": 2,
+  "b": -0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": null,
+  "passage_b": null,
+  "notes": [
+    "Amber is fossilized resin, a sticky substance that some trees release when their bark is damaged.",
+    "Insects and other small creatures that landed on the fresh resin were often trapped and then covered by more resin.",
+    "Buried under sediment for millions of years, the resin slowly hardened into amber, sealing the trapped creatures away from air and water.",
+    "Baltic amber, found around the Baltic Sea, is about 40 million years old and contains thousands of species of insects.",
+    "Amber has been carved into jewelry since prehistoric times."
+  ],
+  "data": null,
+  "stem": "The student wants to explain how insects came to be preserved in amber. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+  "choices": {
+    "A": "Insects were preserved in amber when they became stuck in fresh tree resin, were covered by more resin, and were then sealed away from air and water as the buried resin hardened over millions of years.",
+    "B": "Baltic amber, found around the Baltic Sea, is about 40 million years old and contains thousands of species of insects.",
+    "C": "Amber forms when tree resin, buried under sediment for millions of years, slowly hardens.",
+    "D": "Insects and other small creatures that landed on fresh tree resin were often trapped and then covered by more resin."
+  },
+  "answer": "A",
+  "explanation": {
+    "why": "The goal asks for the full process by which insects ended up preserved. The notes give it in two stages: the insect is trapped and covered by resin, and the resin then hardens into amber that seals the insect away. The key must include both stages.",
+    "A": "Correct. It traces the whole process, from the insect sticking to fresh resin to the hardened amber sealing it in.",
+    "B": "Incorrect. This gives an example of amber rich in insects but does not explain how the insects got there.",
+    "C": "Incorrect. This explains how amber forms but never mentions insects.",
+    "D": "Incorrect. This gives the first stage, trapping, but stops before the resin hardens and seals the insect, so the preservation is not explained."
+  },
+  "traps": {
+    "B": "true_irrelevant",
+    "C": "misses_goal",
+    "D": "too_narrow"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

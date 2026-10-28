@@ -1,0 +1,56 @@
+{
+  "id": "rw-wic-0665",
+  "section": "rw",
+  "domain": "craft_structure",
+  "type": "words_in_context",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "The sundew captures insects with sticky droplets on hair-like tentacles, and when prey touches one tentacle, its neighbors bend inward over several minutes. Botanists once treated this bending as a purely mechanical response to pressure. Experiments complicate that picture. Tentacles bend far more strongly when touched by a nitrogen-rich object, such as a fragment of insect, than by an equally heavy grain of sand, suggesting that the plant ______ among stimuli: it responds to the chemical signature of food, not merely to contact.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice completes the text with the most logical and precise word or phrase?",
+  "choices": {
+    "A": "vacillates",
+    "B": "deliberates",
+    "C": "intervenes",
+    "D": "discriminates"
+  },
+  "answer": "D",
+  "explanation": {
+    "why": "The experiments show that equally heavy objects produce different responses depending on whether they are nitrogen-rich. The colon restates the idea: the plant \"responds to the chemical signature of food, not merely to contact.\" So the plant tells stimuli apart, which is what \"discriminates\" means.",
+    "A": "Incorrect. To vacillate is to waver between options. The plant's response is consistent, strong for food and weak for sand, not undecided.",
+    "B": "Incorrect. Deliberating means thinking something over, which implies conscious reasoning the text never attributes to the plant. It responds to chemistry, not to thought.",
+    "C": "Incorrect. The plant does not step in between stimuli; it reacts to them. The sentence is about telling food from non-food, not about interrupting anything.",
+    "D": "Correct. The plant responds differently to an insect fragment and to a grain of sand of the same weight, so it distinguishes between kinds of stimuli."
+  },
+  "traps": {
+    "A": "wrong_tone",
+    "B": "wrong_tone",
+    "C": "wrong_logic"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-03",
+        "date": "2026-10-28",
+        "answer": "D",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

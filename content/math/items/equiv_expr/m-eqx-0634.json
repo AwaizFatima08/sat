@@ -1,0 +1,57 @@
+{
+  "id": "m-eqx-0634",
+  "section": "math",
+  "domain": "advanced_math",
+  "type": "equiv_expr",
+  "level": 3,
+  "b": 0.5,
+  "context": "global",
+  "in_context": false,
+  "pool": "paper",
+  "stem": "Which of the following is equivalent to \\(x^{3} + 2x^{2} - 9x - 18\\)?",
+  "figure": null,
+  "answer_type": "mcq",
+  "choices": {
+    "A": "\\((x + 2)(x - 3)(x + 3)\\)",
+    "B": "\\((x + 2)\\left(x^{2} + 9\\right)\\)",
+    "C": "\\((x - 2)(x - 3)(x + 3)\\)",
+    "D": "\\((x + 2)(x - 3)^{2}\\)"
+  },
+  "answer": "A",
+  "spr_answers": null,
+  "solution": [
+    "Group: \\(x^{2}(x + 2) - 9(x + 2) = (x + 2)\\left(x^{2} - 9\\right)\\).",
+    "Factor the difference of squares: \\((x + 2)(x - 3)(x + 3)\\)."
+  ],
+  "explanation": {
+    "A": "Correct. \\((x + 2)\\left(x^{2} - 9\\right) = (x + 2)(x - 3)(x + 3)\\).",
+    "B": "Incorrect. This is the result of factoring \\(-9\\) out of \\(-9x - 18\\) as \\(+9\\); the second factor is \\(x^{2} - 9\\), not \\(x^{2} + 9\\).",
+    "C": "Incorrect. This is the result of grouping \\(x^{3} + 2x^{2}\\) as \\(x^{2}(x - 2)\\); the correct common factor is \\((x + 2)\\).",
+    "D": "Incorrect. This expands to \\(x^{3} - 4x^{2} - 3x + 18\\); \\(x^{2} - 9\\) factors as \\((x - 3)(x + 3)\\), not \\((x - 3)^{2}\\)."
+  },
+  "traps": {
+    "B": "sign_error",
+    "C": "sign_error",
+    "D": "concept"
+  },
+  "verify": "x = symbols('x')\nt = x**3 + 2*x**2 - 9*x - 18\nassert simplify(value(choices[answer]) - t) == 0\nassert all(simplify(value(choices[k]) - t) != 0 for k in choices if k != answer)",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-00",
+        "date": "2026-10-28",
+        "answer": "A",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}

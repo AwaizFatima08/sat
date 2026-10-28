@@ -57,3 +57,17 @@ were unsure about. Tick or fix each one during review.
 | rw-trn-0553, 0560, rw-rhs-0560 | Close transition distinctions; 1890 census timing worded loosely. |
 | rw-trn-0167, 0175, 0179, 0184, 0185, 0189 | Deliberate fine transition distinctions (Specifically vs For example etc.). |
 | rw-rhs-0546 | Key B rewritten to use only note facts (was adding an unstated reason). |
+- rw-wic-0646 key 'comprehensive' vs 'accurate' (confirm); rw-wic-0649 'bank' as verb.
+- rw-trn-0613 'Along the way,' as key; rw-trn-0616 Instead vs As a result; rw-trn-0630 Indeed vs However.
+- rw-wic-0613 "within hours" (real margin under an hour); rw-inf-0630 distractor A tempting; rw-inf-0629 Pashto tappa claim; rw-fss-0625 "whose" for a thing; rw-ceq-0618 count-vs-mass distractor; rw-ceq-0617 heavier inference step.
+- rw-bnd-0629 subtle two-step trap (D); rw-bnd-0611 soft comma-before-and rule; rw-tsp-0625 khipu overlaps rw-cid-0008 subject; rw-tsp-0620 bowhead ages and rw-tsp-0628 eel tracking 2022 need a fact check.
+- rw-cid-0615 Harappa ballast wording; rw-cid-0625 juniper ages hedged.
+- rw-cet-0618/0619 confirm Gutenberg ebook numbers in source.url; rw-cet-0627 mild weakener distractor.
+- Set 2 repeated topics (check before assembly): sand cat paws rw-trn-0601 / rw-wic-0603; Newar carved windows rw-trn-0605 / rw-wic-0616; Galle rw-trn-0611 / rw-wic-0611; Mr. Haddad rw-tsp-0618 / rw-wic-0632; Tariq rw-wic-0623 / rw-wic-0634.
+- Set 2 wic-0680 'routine' and wic-0669 'avert' flagged by writer; fss-0651, fss-0659, fss-0648 glance.
+- Set 2 ctc: rw-ctc-0630 key may need explicit fossil statement in Text 2; rw-ctc-0620 'theatre' rewording; 9 unused claims on paper2-ctc-1.
+- Set 2 rhs: rw-rhs-0601 distractor C too tempting; rw-rhs-0624 Herschel 'one of the first women paid' hedged claim (Homi to confirm).
+- Set 2 inf-2: rw-inf-0655 near-miss distractor; rw-inf-0660 'ever returned' tempting; rw-inf-0645 premise in text.
+- Set 2 trn-3: rw-trn-0686 Granted vs In contrast; rw-trn-0680 In other words vs Consequently; rw-trn-0678 Instead fine.
+- Set 2 rhs-2: rw-rhs-0643 and 0655 key is longest choice; 0641/0659 real researchers (check); 0660 Buddha reference.
+- Set 2 trn-2: rw-trn-0650 Accordingly weakest distractor; rw-trn-0633 In addition trap; topic_claims.tsv has 'Indian pangolin? no' line to tidy.

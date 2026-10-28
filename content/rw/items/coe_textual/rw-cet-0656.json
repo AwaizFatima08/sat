@@ -1,0 +1,56 @@
+{
+  "id": "rw-cet-0656",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "coe_textual",
+  "level": 4,
+  "b": 1.5,
+  "subject": "humanities",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Bronze bells cast in China more than two thousand years ago have a cross section shaped like an almond rather than a circle, and each bell can sound two distinct notes, one when struck at the center of its face and another when struck near the edge. Some scholars regard the second note as an accident of the shape, which the casters neither intended nor controlled. Musicologist Wei Lin argues that the two-tone property was understood, planned, and tuned: casters, in her view, shaped each bell so that its two notes would stand at a chosen interval, and adjusted the bells after casting to bring that interval into line.",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which finding, if true, would most directly support Lin's argument?",
+  "choices": {
+    "A": "Bells of the same almond shape cast with the same bronze produce two notes, while round bells cast in the same workshops with the same bronze produce only one.",
+    "B": "On bells buried together as a set, the inner surfaces show grinding marks at exactly the spots where removing metal alters the second note, and the interval between the two notes is the same on nearly every bell.",
+    "C": "Written texts of the period refer to each bell by a single note name and give no name to any second note.",
+    "D": "Bells found together as a set vary widely in size and weight, from a few kilograms to well over a hundred."
+  },
+  "answer": "B",
+  "explanation": {
+    "why": "Lin's claim has two parts: the two tones were controlled by adjustment, and they were set to a chosen interval. Grinding marks at the spots that change the second note show adjustment, and a consistent interval across a set shows a chosen target. Together they support both parts of her claim.",
+    "A": "Incorrect. This shows that the shape produces two notes, which the accidental view already accepts; it does not show that casters planned or tuned the second note.",
+    "B": "Correct. Marks of deliberate adjustment at the second-note spots, together with a consistent interval across the set, show that the two tones were planned and tuned.",
+    "C": "Incorrect. Naming each bell by one note suggests that the second note was not treated as part of the design, which works against Lin.",
+    "D": "Incorrect. Differences in size are expected in any set of bells of different pitches and say nothing about the second note."
+  },
+  "traps": {
+    "A": "true_irrelevant",
+    "C": "reversed",
+    "D": "true_irrelevant"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-00",
+        "date": "2026-10-28",
+        "answer": "B",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

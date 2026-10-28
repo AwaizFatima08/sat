@@ -1,0 +1,56 @@
+{
+  "id": "rw-inf-0648",
+  "section": "rw",
+  "domain": "information_ideas",
+  "type": "inferences",
+  "level": 3,
+  "b": 0.5,
+  "subject": "science",
+  "context": "global",
+  "pool": "paper",
+  "passage": "Animals in zoos sometimes develop repetitive behaviors such as pacing the same route for hours, and zoos try to reduce such behaviors through \"enrichment\": new objects, scents, or puzzles that give the animal something to investigate. Zoologist Ibrahim Haddad measured pacing in a group of bears before and after keepers began placing scented logs and food puzzles in their enclosure, and found that pacing fell by roughly half. A second group of bears received no enrichment but, so that the two groups could be compared fairly, had keepers enter and move about their enclosure for the same amount of time each day. Pacing in the second group fell by nearly as much. Haddad concluded that ______",
+  "passage_b": null,
+  "notes": null,
+  "data": null,
+  "stem": "Which choice most logically completes the text?",
+  "choices": {
+    "A": "the enrichment objects were useless and the bears had paced only because keepers ignored them.",
+    "B": "bears in zoos pace because their enclosures are too small to allow natural movement.",
+    "C": "the drop in pacing in the first group cannot be confidently attributed to the enrichment objects themselves.",
+    "D": "the bears in the first group would have paced even less if keepers had also spent time in their enclosure."
+  },
+  "answer": "C",
+  "explanation": {
+    "why": "The first group received two things at once: enrichment objects and keepers spending time in the enclosure. The second group received only the keepers' time and improved nearly as much. Whatever reduced the pacing was present in both groups, so the objects cannot be singled out as the cause.",
+    "A": "Incorrect. The results leave the objects' effect uncertain; they do not show that the objects did nothing, nor that neglect was the cause of pacing.",
+    "B": "Incorrect. The text never discusses enclosure size as a cause of pacing.",
+    "C": "Correct. The bears that got only keeper visits improved almost as much, so the visits, not the objects, may account for most of the change.",
+    "D": "Incorrect. The keepers did spend time in the first group's enclosure when placing the objects; the text offers no basis for predicting a further drop."
+  },
+  "traps": {
+    "A": "too_broad",
+    "B": "not_in_text",
+    "D": "not_in_text"
+  },
+  "grammar": null,
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-solver-02",
+        "date": "2026-10-28",
+        "answer": "C",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked",
+    "shuffled": true
+  }
+}

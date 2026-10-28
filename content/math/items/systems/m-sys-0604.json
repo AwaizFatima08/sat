@@ -1,0 +1,46 @@
+{
+  "id": "m-sys-0604",
+  "section": "math",
+  "domain": "algebra",
+  "type": "systems",
+  "level": 1,
+  "b": -1.5,
+  "context": "global",
+  "in_context": true,
+  "pool": "paper",
+  "stem": "At a bookshop, every notebook costs \\$3 and every pen costs \\$2. Zoe buys a total of 5 notebooks and pens for \\$13. How many pens does Zoe buy?",
+  "figure": null,
+  "answer_type": "spr",
+  "choices": null,
+  "answer": null,
+  "spr_answers": [
+    "2"
+  ],
+  "solution": [
+    "Let \\(n\\) and \\(p\\) be the numbers of notebooks and pens: \\(n + p = 5\\) and \\(3n + 2p = 13\\).",
+    "Substitute \\(n = 5 - p\\): \\(3(5 - p) + 2p = 13\\), so \\(15 - p = 13\\) and \\(p = 2\\).",
+    "(Then \\(n = 3\\); check \\(3(3) + 2(2) = 13\\).)"
+  ],
+  "explanation": null,
+  "traps": null,
+  "verify": "n, p = symbols('n p')\nsol = solve([n + p - 5, 3*n + 2*p - 13], [n, p])\nassert sol == {n: 3, p: 2}\nassert [Rational(s) for s in spr_answers] == [sol[p]]",
+  "source": {
+    "kind": "original"
+  },
+  "provenance": {
+    "written_by": "claude-fable-5-1",
+    "written": "2026-10-28",
+    "checks": [
+      {
+        "by": "h2-math-solver-05",
+        "date": "2026-10-28",
+        "answer": "2",
+        "second": null,
+        "note": "",
+        "result": "agree"
+      }
+    ],
+    "reviewed_by": null,
+    "status": "checked"
+  }
+}
